@@ -1,10 +1,10 @@
-# Current checkpoint: M26 maintainer onboarding
+# Current checkpoint: M26 complete
 
 This Git repository and its origin are the canonical maintenance source. Owner approved a permanent checkout, local commit identity, shared agent instructions and archive preservation; [decision and scope](notes/m26-maintainer-onboarding.md). Initial private publication is complete: source release e8bcf604 contains the exact checked 261-file projection, MIT and a fresh one-commit baseline. This record supersedes the preparation-time M25B handoff.
 
-## Current action and gate
+## Accepted result and next action
 
-The permanent checkout is clean on main with machine-local author and authenticated-origin configuration. The onboarding branch updates AGENTS, README and the four durable records; source code, package bytes, schema/version and original Local use remain unchanged. Local validation passed: 33 existing regressions, both private self scans, all three adapters and independent scope/link/identity verification; see the decision note. The checked branch is delivered as origin draft PR #1. Owner acceptance of the concrete result is required before main integration and final archive-entry promotion. Do not develop new features or recreate an export as a substitute.
+The permanent checkout is clean on main with machine-local author and authenticated-origin configuration. The onboarding branch updates AGENTS, README and the four durable records; source code, package bytes, schema/version and original Local use remain unchanged. Local validation passed: 33 existing regressions, both private self scans, all three adapters and independent scope/link/identity verification; see the decision note. Owner accepted the concrete result on 2026-10-13 ("yes"); origin PR #1 is merged at 86946f9. Permanent main is synchronized; earlier preparation entry/current records are marked archival with a machine-local canonical pointer. M26 is complete. Select the next bounded scope from the retained route; no new implementation scope is opened by this closure. Do not develop new features or recreate an export as a substitute.
 
 ## Continue in any harness
 

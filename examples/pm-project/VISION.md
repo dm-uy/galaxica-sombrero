@@ -6,7 +6,7 @@ Maintain one coherent, harness-neutral methodology and its complete Codex and Cl
 
 Neutral1.0.0 has71 owners/67drafts/four stubs and28capabilities/sevenparameters. Codex2.0.0/schema2 has47 members,23topics,sixroles/twohelpers; Claude1.0.0 has59 members,28skills,sixagents/hooks/Workflow/protocolhelpers. Complete co-located explicit-source/in-place loading remains the supported profile. MIT and the tested runtime/role/flow/gate/schema contracts are unchanged.
 
-The owner selected this repository as the sole development source and a permanent clean main checkout for package loading. Earlier preparation repositories and audit packets retain historical context without becoming a second maintained branch. [M26](notes/m26-maintainer-onboarding.md) establishes other-agent entry and machine-local Git identity/access, with result integration pending. Configuration is local to each clone; it is not a credential or identity embedded in shared rules.
+The owner selected this repository as the sole development source and a permanent clean main checkout for package loading. Earlier preparation repositories and audit packets retain historical context without becoming a second maintained branch. [M26](notes/m26-maintainer-onboarding.md) establishes other-agent entry and machine-local Git identity/access, accepted and integrated through origin PR #1 on 2026-10-13. Configuration is local to each clone; it is not a credential or identity embedded in shared rules.
 
 ## Evidence and deliberate limits
 
