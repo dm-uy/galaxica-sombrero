@@ -1,0 +1,2 @@
+Generic existing architecture fixture; no executable product is supplied.
+store_lookup_FUNC: stable record lookup from store; returns records unchanged.

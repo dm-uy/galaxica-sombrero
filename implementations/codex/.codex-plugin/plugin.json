@@ -1,0 +1,17 @@
+{
+  "name": "methodology-codex",
+  "version": "2.0.0",
+  "description": "Native source-bound Codex PM and approved development workflow.",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Methodology Codex",
+    "shortDescription": "Source-bound native PM and development",
+    "longDescription": "Reconnaissance, exact specification gates, independent verification and durable project state.",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Use $pm to resume the current checkpoint.",
+      "Use $feature-dev with the exact approved specification."
+    ]
+  }
+}

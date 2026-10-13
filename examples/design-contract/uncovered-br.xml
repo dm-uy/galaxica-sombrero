@@ -1,0 +1,18 @@
+<DraftCodeGraph>
+  <RecordOrder_1_0_Info TYPE="PROJECT_INFO">
+    <keywords>records, ordering</keywords><terms>plan, fixture</terms><annotation>Illustrate a bounded generic record-ordering design.</annotation>
+    <BusinessScenarios><Scenario NAME="OrderRecords">Operator -> order records -> receive ordered records.</Scenario></BusinessScenarios>
+  </RecordOrder_1_0_Info>
+  <reader_py FILE="src/reader.py" TYPE="BUSINESS_LOGIC" satisfies="BR-1">
+    <keywords>records, order</keywords><terms>deterministic, fixture</terms><annotation>Keep the approved record ordering behavior.</annotation>
+    <CrossLinks><Link TARGET="order_py" TYPE="SUPPLIES_DATA"/></CrossLinks>
+  </reader_py>
+  <order_py FILE="src/order.py" TYPE="BUSINESS_LOGIC" satisfies="BR-1">
+    <keywords>records, order</keywords><terms>deterministic, fixture</terms><annotation>Keep the approved record ordering behavior.</annotation>
+    <CrossLinks><Link TARGET="writer_py" TYPE="SUPPLIES_DATA"/></CrossLinks>
+  </order_py>
+  <writer_py FILE="src/writer.py" TYPE="BUSINESS_LOGIC" satisfies="BR-3">
+    <keywords>records, order</keywords><terms>deterministic, fixture</terms><annotation>Keep the approved record ordering behavior.</annotation>
+    
+  </writer_py>
+</DraftCodeGraph>

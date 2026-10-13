@@ -1,0 +1,18 @@
+{
+  "id": "store-map",
+  "mapPath": "existing-map.xml",
+  "sha256": "f3d8dd5bba7668b0fe85024a3db7de0f425735ea869bdf9fb7d82e8af851bf57",
+  "sourceIdentity": {
+    "path": "existing-store.txt",
+    "sha256": "41138cbf71255bca75f344fb8f28b03a65d38fc3237474e7a329ac4bbaec6fd2"
+  },
+  "lookupEvidence": [
+    {
+      "entity": "store_lookup_FUNC",
+      "mapElement": "store_py/store_lookup_FUNC",
+      "sourceLine": 2,
+      "sourceText": "store_lookup_FUNC: stable record lookup from store; returns records unchanged."
+    }
+  ],
+  "limitation": "Generic fixture identity/lookup only; real caller authenticates actual source association and freshness."
+}

@@ -1,0 +1,415 @@
+{
+  "harness": "methodology-claude",
+  "owner": "Methodology Claude package maintainers",
+  "spec_version": "1.0.0",
+  "spec_root": "../../",
+  "parameters": {
+    "dialog-language": "Russian unless controlling owner or project instructions select otherwise",
+    "owner-label": "owner",
+    "model-mechanical": "haiku (Claude Code alias for the current Haiku model); used for marker scans, inventories, counting and recorder steps",
+    "model-routine": "sonnet (Claude Code alias for the current Sonnet model); used for reconnaissance of a named area, code from an approved plan, QA and debugging with a clear trace",
+    "model-judgment": "opus (Claude Code alias for the current Opus model); used for architecture, plans, specifications, Review, Finalize and synthesis",
+    "gate-cadence": "per-change exact specification; an approved batch scope where the owner expressly granted it; the result decision stays separate",
+    "debug-entry-cap": "4"
+  },
+  "capabilities": {
+    "ask-owner-structured": {
+      "mechanism": "AskUserQuestion: a structured question with explicit options; the answer, the artifact identity and the scope are recorded verbatim in the project record before dependent work.",
+      "fallback": "Only where AskUserQuestion is genuinely unavailable (a headless print session): an explicit chat approval recorded verbatim with actor, date, artifact identity and scope under GATE-203; silence, timeouts, defaults, agent output and tool results are never consent."
+    },
+    "plan-mode": {
+      "mechanism": "Claude Code plan mode (EnterPlanMode / ExitPlanMode); leaving it requires the owner's explicit approval of the presented plan.",
+      "fallback": "Without plan mode the root restricts itself to design-only paths and dispatches no Code before the ready-plan predicate holds; this is a behavioral boundary, not a hard mode."
+    },
+    "spawn-role-isolated": {
+      "mechanism": "Agent tool or Workflow agent() with subagent_type/agentType methodology-claude:<role>: a fresh context whose system prompt is the package carrier agents/<role>.md; the parent passes self-contained absolute inputs.",
+      "fallback": "If the plugin agents are not registered, a general-purpose subagent receives the full carrier text and resolved absolute paths; if no subagent tool exists, work is labelled sequential self-review and any required independence is BLOCKED."
+    },
+    "model-tier": {
+      "mechanism": "Each carrier pins its tier in frontmatter (opus judgment, sonnet routine, haiku mechanical) and every delegation passes model explicitly, classified by the task's hardest step; requested models are recorded, observed models only when exposed.",
+      "fallback": "Where a model override is unavailable the inherited session model is used and recorded as inherited; no provider or settings change and no savings claim."
+    },
+    "role-permissions": {
+      "mechanism": "Carrier tools lists: qa, reviewer and searcher have no Edit, Write or NotebookEdit; no inner role has the Agent tool. The PreToolUse guard denies tree-changing Bash commands to read-only agent types.",
+      "fallback": "Plugin agents ignore permissionMode, so Bash writes by judges outside the guard's recognized commands remain behavioral restrictions; the root audits scope with git status before and after every dispatch."
+    },
+    "pre-tool-guard": {
+      "mechanism": "Plugin PreToolUse hook on Bash (hooks/guard_destructive.py): asks before commands that would lose unrecoverable state and denies tree-changing commands to read-only agent types.",
+      "fallback": "If hooks are disabled (for example --bare) the root checks scope, authority and effects before each operation; no hard interception is claimed."
+    },
+    "run-state-persist": {
+      "mechanism": "skills/feature-dev/scripts/run_state.py: single root writer, schema 2, atomic UTF-8 state at <target>/.methodology/runs/<run-id>/state.json with locked input identities, complete accepted and refused history and the cumulative Debug spend.",
+      "fallback": "An unreadable, corrupt, mismatched or old-schema ledger blocks dependent continuation; no fabricated replacement and no reset."
+    },
+    "workflow-orchestration": {
+      "mechanism": "Plugin Workflow workflows/feature-dev.js (/methodology-claude:feature-dev-workflow), run only on the owner's explicit opt-in: deterministic Bootstrap, Architect, Code, QA, Review, Debug and Finalize routing with schemas and a recorder step for run state.",
+      "fallback": "The root follows skills/feature-dev and dispatches each phase with the Agent tool, recording every verified return through run_state.py; no hidden daemon."
+    },
+    "structured-output": {
+      "mechanism": "Workflow agent() schema (StructuredOutput validation) per phase status; the interactive root extracts the final JSON object and validates shape, conditional fields and identities before run_state.py record.",
+      "fallback": "Manual JSON extraction with one bounded response correction per phase attempt; a second unusable return ends BLOCKED, or ESCALATED_FINALIZE in Finalize."
+    },
+    "skill-loading": {
+      "mechanism": "Skill tool with plugin skills methodology-claude:<topic>; each entry names its neutral owners as ${CLAUDE_PLUGIN_ROOT}/../../<path>, read in full with Read before dependent action.",
+      "fallback": "Without the Skill tool the actor reads the SKILL.md and its owners by path; a missing, stub, truncated or unread required owner blocks dependent work."
+    },
+    "rules-injection": {
+      "mechanism": "SessionStart hook injects the binding status and the six-core reading duty; every carrier lists the six core owners and its role owners for full reading; the target's CLAUDE.md and AGENTS.md load natively.",
+      "fallback": "Plugins cannot ship CLAUDE.md: where the hook is disabled the root supplies the full core content or exact resolved paths in each assignment."
+    },
+    "session-start-hook": {
+      "mechanism": "Plugin SessionStart hook (startup, resume, clear, compact) runs hooks/session_start.py: verifies the in-place neutral binding and reports the target's durable records for Orient.",
+      "fallback": "With hooks disabled the arriving root performs Orient manually under checks/orient.md and states that no hook ran."
+    },
+    "background-command": {
+      "mechanism": "Bash run_in_background with completion notifications, Monitor for streamed events; the locator, complete streams and exit status are retained.",
+      "fallback": "A bounded foreground run where safe, with the absent background capacity disclosed."
+    },
+    "web-research": {
+      "mechanism": "WebSearch and WebFetch for external facts, primary documentation for technical identifiers.",
+      "fallback": "Missing access leaves the claim unverified or BLOCKED; internal evidence is used only where it settles the claim."
+    },
+    "browser": {
+      "mechanism": "The built-in browser pane or Claude in Chrome: read_page accessibility tree for role, name and state; screenshots only for visual claims.",
+      "fallback": "Component and controller tests within scope; a mandatory live-browser criterion stays BLOCKED, never an invented snapshot."
+    },
+    "worktree": {
+      "mechanism": "git worktree on an owned branch (EnterWorktree or Workflow isolation: worktree) preserving foreign changes, one writer per path.",
+      "fallback": "An owned complete copy without .git; judges never create worktrees or carry .git into scratch."
+    },
+    "schedule": {
+      "mechanism": "Scheduled tasks or routines only on an explicit matching owner request.",
+      "fallback": "No scheduling in the package or its smoke; the owner runs the action manually."
+    },
+    "memory": {
+      "mechanism": "Project files are the durable memory (five records, decisions, notes); Claude auto-memory and installed memory plugins are session aids outside the repository. The knowledge layer is an external OKF-format bundle maintained outside this repository.",
+      "fallback": "Without a memory tool the session relies on the five records and HANDOFF; no external memory write without an explicit request."
+    },
+    "todo-list": {
+      "mechanism": "TodoWrite or the session task tools for the run's own checklist.",
+      "fallback": "The run checklist is kept in the assignment text and the run-state history."
+    },
+    "goal": {
+      "mechanism": "TASKS.md current task and HANDOFF next action carry the persistent goal across turns and sessions.",
+      "fallback": "Without the records the goal is restated from the approved specification at each entry."
+    },
+    "code-map-build": {
+      "mechanism": "doxygen Doxyfile in the target via Bash; XML output read back for entity associations.",
+      "fallback": "Missing doxygen or Doxyfile is owed bootstrap work and reported, never an exemption; only an explicit written host prohibition is NOT_APPLICABLE."
+    },
+    "check-runner": {
+      "mechanism": "Bash runs the target's declared test, lint, map and probe commands with complete streams and exit codes retained.",
+      "fallback": "An unavailable command leaves its criterion BLOCKED with the reason."
+    },
+    "run-record-access": {
+      "mechanism": "The run-state ledger (run_state.py show), Workflow journals, session transcripts in the user-level Claude projects directory and the target's notes, read-only.",
+      "fallback": "Missing records are reported as missing; no reconstruction presented as fact."
+    },
+    "packaging-install": {
+      "mechanism": "claude --plugin-dir <repo>/implementations/claude for one session, CLAUDE_CODE_PLUGIN_DIRS set to that path in the user settings env for every session, or a local directory marketplace whose root contains the package, loads the package in place; claude plugin validate --strict checks it.",
+      "fallback": "Copied installs (git marketplace, cache) are unsupported: the SessionStart hook reports the missing neutral binding as BLOCKED and dependent work stops. A symlinked skills-directory plugin is unsupported too: its neutral references miss although the hook reports it bound."
+    },
+    "launch-environment": {
+      "mechanism": "The session working directory, added directories, the owner's permission mode and environment define roots and autonomy; credentials follow policies/credentials.md.",
+      "fallback": "Unknown roots or permissions are discovered and stated before effects; no settings change."
+    },
+    "capability-discovery": {
+      "mechanism": "The session's tool list and deferred-tool search, the registered agent types, and claude plugin details for the package inventory.",
+      "fallback": "An undiscoverable capability is treated as absent and its fallback applies."
+    },
+    "context-management": {
+      "mechanism": "Automatic compaction, subagents for context isolation, and the SessionStart hook on compact re-orienting from the records.",
+      "fallback": "HANDOFF and the run-state ledger restore the state after a lost context."
+    },
+    "tracker-integration": {
+      "mechanism": "An issue-tracker connector only on an explicit owner request for that project.",
+      "fallback": "TASKS.md is the tracker."
+    }
+  },
+  "files": {
+    "AGENTS.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "FORMAT.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "checks/conform.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "checks/lints.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "checks/orient.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "checks/preflight.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "checks/qa-scans.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "checks/run-audit.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "code/ax-ui.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "code/data.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "code/doxygen.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "code/exoskeleton.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "code/ldd.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "code/navigation.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "code/tests.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "concepts/glossary.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "concepts/principles.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "documents/conventions.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "documents/templates/AGENTS.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "documents/templates/HANDOFF.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "documents/templates/INDEX.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "documents/templates/ROADMAP.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "documents/templates/TASKS.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "documents/templates/VISION.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "flow/delegation.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "flow/finalize.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "flow/phases.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "flow/run-state.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "policies/autonomy.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "policies/credentials.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "policies/language.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "policies/models.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/batch.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/bootstrap.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/code-review.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/decisions.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/gates.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/git.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/learning.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/lifecycle.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/publication.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/reconnaissance.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/review.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/safety.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/session.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/specification.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "prompting/agent-prompt-design.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "prompting/brainstorm.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "prompting/decomposition.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "prompting/grace.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "prompting/prompt-markup.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "prompting/solution-design.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "prompting/superposition-collapse.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "prompting/verification.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "protocols/dev-plan.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "protocols/document.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "protocols/graph.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "protocols/role-returns.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "protocols/spec-brownfield.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "protocols/spec-greenfield.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "roles/_base.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "roles/architect.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "roles/coder.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "roles/debugger.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "roles/pm.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "roles/qa.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "roles/reviewer.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "roles/searcher.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "runtime/adapters.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "runtime/capabilities.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "runtime/parameters.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    }
+  }
+}

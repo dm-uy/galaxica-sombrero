@@ -1,0 +1,10 @@
+{
+  "name": "methodology-claude",
+  "version": "1.0.0",
+  "description": "Native Claude Code binding of the harness-neutral agent methodology: PM lifecycle, gated feature development with independent QA and Review, role subagents, session and safety hooks, loaded in place from the methodology repository.",
+  "author": {
+    "name": "Methodology maintainers"
+  },
+  "license": "MIT",
+  "keywords": ["methodology", "agents", "feature-dev", "project-management", "qa", "review"]
+}

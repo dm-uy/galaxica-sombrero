@@ -1,0 +1,47 @@
+# Doxyfile - the code map of this repository.
+# The output is rebuilt, never committed: doxygen_output/ is in .gitignore.
+# Doxygen creates only the last level of OUTPUT_DIRECTORY, so it is a single level here.
+PROJECT_NAME           = "methodology-claude"
+OUTPUT_DIRECTORY       = doxygen_output
+CREATE_SUBDIRS         = NO
+OPTIMIZE_OUTPUT_JAVA   = YES
+PYTHON_DOCSTRING       = YES
+INPUT                  = hooks skills/feature-dev/scripts skills/devplan-protocol/scripts tests
+FILE_PATTERNS          = *.py
+EXTENSION_MAPPING      = no_extension=Python
+RECURSIVE              = YES
+EXCLUDE_PATTERNS       = */.venv/* */venv/* */node_modules/* */doxygen_output/* */__pycache__/* */.pytest_cache/*
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+GENERATE_XML           = YES
+XML_OUTPUT             = xml
+XML_PROGRAMLISTING     = NO
+GENERATE_HTML          = NO
+GENERATE_LATEX         = NO
+QUIET                  = YES
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = NO
+WARN_IF_DOC_ERROR      = YES
+HAVE_DOT               = NO
+# A block tag whose content starts on the next "##" line (modulemap, invariants, usecases, rationale, changes)
+# carries no trailing ^^, so its paragraph keeps the content and its links instead of closing empty. A same-line tag
+# (purpose, uses, links, links_to_spec, ...) keeps ^^, so its own text does not become the paragraph's title.
+ALIASES                = "tags=@par Tags:^^" \
+                         "uses=@par Uses API:^^" \
+                         "complexity=@par Complexity Score:^^" \
+                         "io=@par I/O:^^" \
+                         "modulecontract=@par <b>Module Contract</b>^^" \
+                         "purpose=@par Purpose:^^" \
+                         "scope=@par Scope:^^" \
+                         "input=@par Input:^^" \
+                         "output=@par Output:^^" \
+                         "links=@par Links:^^" \
+                         "invariants=@par Invariants:" \
+                         "rationale=@par Rationale:" \
+                         "changes=@par Change Summary:" \
+                         "modulemap=@par Module Map:" \
+                         "usecases=@par Use Cases:" \
+                         "links_to_spec=@par Links to Specification:^^" \
+                         "GREP_SUMMARY=@par Grep Summary:^^" \
+                         "STRUCTURE=@par Structure:^^"

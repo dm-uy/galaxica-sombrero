@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+# region MODULE_CONTRACT [DOMAIN(8): Conformance, Launcher; CONCEPT(7): EntryPoint, PathResolution; TECH(6): sys.path, os.path.realpath]
+## @modulecontract
+## @purpose To let the owner, a hook or an agent run the conform tool from any working directory, and through a symbolic
+## link, without installing anything: the launcher finds the tools directory beside itself and hands the arguments to the
+## frontend.
+## @scope Resolving the repository from this file's real path, putting its tools directory first on the module path,
+## calling the frontend's main.
+## @input argv: the arguments after the program name.
+## @output The frontend's exit code, returned to the shell.
+## @links [USES_API(9): conform.main; READS_DATA_FROM(4): __file__]
+## @links_to_spec BR-9, AC-9
+## @invariants
+## - The tools directory is resolved from the real path of this file, never from the working directory.
+## - The launcher prints nothing itself: the frontend owns stdout and stderr.
+## @rationale
+## Q: Why realpath and not the path as invoked?
+## A: A harness links this file into its own bin directory; only the resolved path leads back to the repository.
+## @changes
+## LAST_CHANGE: [v0.1.0 - Initial creation of the launcher.]
+## @modulemap
+## FUNC 6[Find the tools directory and run the frontend] => launch
+## @usecases
+## - [launch]: Owner (any directory) -> bin/conform self --deny-list FILE -> the same report as the frontend
+def _module_contract():
+    pass
+# endregion MODULE_CONTRACT
+# GREP_SUMMARY: conform launcher, entry point, realpath, sys.path, tools directory, symbolic link, shebang, exit code
+# STRUCTURE: ▶ ┌argv┐ → ⊕ realpath(__file__) → ◇ tools dir exists ? T/F → ⊕ sys.path[0] → ⚡ conform.main(argv) → ⎋ exit code
+
+import logging
+import os
+import sys
+from typing import List
+
+logger = logging.getLogger("conform.launcher")
+
+
+# region FUNC_launch [DOMAIN(8): Launcher; CONCEPT(8): PathResolution; TECH(6): sys.path, realpath]
+## @purpose Put the repository's tools directory first on the module path and run the frontend with the given arguments, so
+## the command works from any directory and through a symbolic link.
+## @uses os.path.realpath, conform.main
+## @io List[str] -> int
+## @complexity 3
+def launch(argv: List[str]) -> int:
+    tools_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), "tools")
+    found = os.path.isdir(tools_dir)
+    logger.info("[IMP:4][launch][PATH] tools_dir_found=%s", found)
+    sys.path.insert(0, tools_dir)
+    import conform
+    return conform.main(argv)
+# endregion FUNC_launch
+
+
+if __name__ == "__main__":
+    sys.exit(launch(sys.argv[1:]))

@@ -1,0 +1,341 @@
+{
+  "harness": "example-harness",
+  "owner": "the maintainers of the example harness",
+  "spec_version": "1.0.0",
+  "spec_root": "..",
+  "parameters": {
+    "dialog-language": "English",
+    "owner-label": "owner",
+    "model-mechanical": "the harness's fastest model",
+    "model-routine": "the harness's mid-tier model",
+    "model-judgment": "the harness's strongest model",
+    "gate-cadence": "per-change",
+    "debug-entry-cap": "4"
+  },
+  "capabilities": {
+    "ask-owner-structured": {
+      "mechanism": "the example harness asks the owner through a form and records the answer in the run record"
+    },
+    "plan-mode": {
+      "mechanism": "the example harness starts every design task in a mode where the agent may read but not write"
+    },
+    "spawn-role-isolated": {
+      "mechanism": "the example harness starts each role as a separate process with its own instructions"
+    },
+    "model-tier": {
+      "mechanism": "the example harness selects an adequate model for the task's hardest necessary step through the three model parameters under explicit selection authority; concrete configuration declares supported effort/settings and distinguishes requested from exposed observed identity"
+    },
+    "role-permissions": {
+      "mechanism": "the example harness gives a role a list of tools it may call and refuses the rest"
+    },
+    "pre-tool-guard": {
+      "mechanism": "the example harness runs a guard script before every tool call and blocks a call the guard rejects"
+    },
+    "run-state-persist": {
+      "mechanism": "the example harness writes the run state to a file after every step and resumes from it"
+    },
+    "workflow-orchestration": {
+      "mechanism": "the example harness sequences the phases with a small script rather than with the agent's judgment"
+    },
+    "structured-output": {
+      "mechanism": "the example harness asks a role for one object and rejects an answer that does not match the schema"
+    },
+    "skill-loading": {
+      "mechanism": "the example harness loads a protocol file into the context when a role names it"
+    },
+    "rules-injection": {
+      "mechanism": "the example harness places its rules file at the start of every session"
+    },
+    "session-start-hook": {
+      "mechanism": "the example harness runs an orientation script whenever a session opens"
+    },
+    "background-command": {
+      "mechanism": "the example harness starts a long command as a detached process and reads its output later"
+    },
+    "web-research": {
+      "mechanism": "the example harness lets a research role call a search tool and a page fetcher"
+    },
+    "browser": {
+      "mechanism": "the example harness lets a verifier role drive a headless browser and read the page structure"
+    },
+    "worktree": {
+      "mechanism": "the example harness gives each parallel task its own checkout of the repository"
+    },
+    "schedule": {
+      "fallback": "the owner starts scheduled work by hand"
+    },
+    "memory": {
+      "mechanism": "the example harness keeps memory in the project's handoff and notes files and names no external knowledge source"
+    },
+    "todo-list": {
+      "mechanism": "the example harness keeps the agent's task list in a file that the agent updates during the run"
+    },
+    "goal": {
+      "fallback": "the goal is kept in the project's task file"
+    },
+    "code-map-build": {
+      "mechanism": "the example harness builds the code map with the documentation generator before a task begins"
+    },
+    "check-runner": {
+      "mechanism": "the example harness runs the target project's own test command and reads its exit code"
+    },
+    "run-record-access": {
+      "mechanism": "the example harness stores every run as a folder of records that a reviewer can open afterwards"
+    },
+    "packaging-install": {
+      "mechanism": "the example harness copies the methodology into its own repository with one script and records the version"
+    },
+    "launch-environment": {
+      "mechanism": "the example harness starts each run in a clean directory with its own environment variables"
+    },
+    "capability-discovery": {
+      "fallback": "this adapter lists every capability"
+    },
+    "context-management": {
+      "fallback": "the session ends and resumes from the handoff file"
+    },
+    "tracker-integration": {
+      "fallback": "tasks are kept in the project's task file"
+    }
+  },
+  "files": {
+    "FORMAT.md": {
+      "mode": "reference"
+    },
+    "checks/conform.md": {
+      "mode": "vendored",
+      "path": "harness/conform.md",
+      "sha256": "f15fc066db9b2d8b3826380ad7af75a684bd0f25794443675effa9e1fde90266",
+      "overrides": [
+        {
+          "anchor": "checks.conform.run",
+          "reason": "the example harness runs conform through its own task runner",
+          "owner": "the maintainers of the example harness",
+          "until": "2999-12-31"
+        },
+        {
+          "anchor": "checks.conform.logs",
+          "reason": "the example harness keeps its own log settings",
+          "owner": "the maintainers of the example harness",
+          "trigger": "when the harness forwards --log-level to conform"
+        }
+      ]
+    },
+    "checks/lints.md": {
+      "mode": "reference"
+    },
+    "checks/orient.md": {
+      "mode": "reference"
+    },
+    "checks/preflight.md": {
+      "mode": "reference"
+    },
+    "checks/qa-scans.md": {
+      "mode": "reference"
+    },
+    "checks/run-audit.md": {
+      "mode": "reference"
+    },
+    "code/ax-ui.md": {
+      "mode": "reference"
+    },
+    "code/data.md": {
+      "mode": "reference"
+    },
+    "code/doxygen.md": {
+      "mode": "reference"
+    },
+    "code/exoskeleton.md": {
+      "mode": "reference"
+    },
+    "code/ldd.md": {
+      "mode": "reference"
+    },
+    "code/navigation.md": {
+      "mode": "reference"
+    },
+    "code/tests.md": {
+      "mode": "reference"
+    },
+    "concepts/glossary.md": {
+      "mode": "reference"
+    },
+    "concepts/principles.md": {
+      "mode": "reference"
+    },
+    "documents/conventions.md": {
+      "mode": "reference"
+    },
+    "documents/templates/INDEX.md": {
+      "mode": "reference"
+    },
+    "flow/delegation.md": {
+      "mode": "reference"
+    },
+    "flow/finalize.md": {
+      "mode": "reference"
+    },
+    "flow/phases.md": {
+      "mode": "reference"
+    },
+    "flow/run-state.md": {
+      "mode": "reference"
+    },
+    "policies/autonomy.md": {
+      "mode": "reference"
+    },
+    "policies/credentials.md": {
+      "mode": "not-applied",
+      "reason": "the example harness launches no runs, so it holds no credentials"
+    },
+    "policies/language.md": {
+      "mode": "reference"
+    },
+    "policies/models.md": {
+      "mode": "reference"
+    },
+    "process/batch.md": {
+      "mode": "reference"
+    },
+    "process/bootstrap.md": {
+      "mode": "reference"
+    },
+    "process/code-review.md": {
+      "mode": "reference"
+    },
+    "process/decisions.md": {
+      "mode": "reference"
+    },
+    "process/gates.md": {
+      "mode": "reference"
+    },
+    "process/git.md": {
+      "mode": "reference"
+    },
+    "process/learning.md": {
+      "mode": "reference"
+    },
+    "process/lifecycle.md": {
+      "mode": "reference"
+    },
+    "process/publication.md": {
+      "mode": "reference"
+    },
+    "process/reconnaissance.md": {
+      "mode": "reference"
+    },
+    "process/review.md": {
+      "mode": "reference"
+    },
+    "process/safety.md": {
+      "mode": "reference"
+    },
+    "process/session.md": {
+      "mode": "reference"
+    },
+    "process/specification.md": {
+      "mode": "reference"
+    },
+    "prompting/agent-prompt-design.md": {
+      "mode": "reference"
+    },
+    "prompting/brainstorm.md": {
+      "mode": "reference"
+    },
+    "prompting/decomposition.md": {
+      "mode": "reference"
+    },
+    "prompting/grace.md": {
+      "mode": "reference"
+    },
+    "prompting/prompt-markup.md": {
+      "mode": "reference"
+    },
+    "prompting/solution-design.md": {
+      "mode": "reference"
+    },
+    "prompting/superposition-collapse.md": {
+      "mode": "reference"
+    },
+    "prompting/verification.md": {
+      "mode": "reference"
+    },
+    "protocols/dev-plan.md": {
+      "mode": "reference"
+    },
+    "protocols/document.md": {
+      "mode": "reference"
+    },
+    "protocols/graph.md": {
+      "mode": "reference"
+    },
+    "protocols/role-returns.md": {
+      "mode": "reference"
+    },
+    "protocols/spec-brownfield.md": {
+      "mode": "reference"
+    },
+    "protocols/spec-greenfield.md": {
+      "mode": "reference"
+    },
+    "roles/_base.md": {
+      "mode": "reference",
+      "via": "harness/AGENTS.md"
+    },
+    "roles/architect.md": {
+      "mode": "reference"
+    },
+    "roles/coder.md": {
+      "mode": "reference"
+    },
+    "roles/debugger.md": {
+      "mode": "reference"
+    },
+    "roles/pm.md": {
+      "mode": "reference"
+    },
+    "roles/qa.md": {
+      "mode": "reference",
+      "via": "harness/AGENTS.md"
+    },
+    "roles/reviewer.md": {
+      "mode": "reference"
+    },
+    "roles/searcher.md": {
+      "mode": "reference"
+    },
+    "runtime/adapters.md": {
+      "mode": "reference"
+    },
+    "runtime/capabilities.md": {
+      "mode": "reference"
+    },
+    "runtime/parameters.md": {
+      "mode": "reference"
+    },
+    "AGENTS.md": {
+      "mode": "not-applied",
+      "reason": "Repository-specific maintainer entry; consuming harness has its own project records."
+    },
+    "documents/templates/AGENTS.md": {
+      "mode": "not-applied",
+      "reason": "This example accounts for the general PM form but does not demonstrate runtime adoption."
+    },
+    "documents/templates/VISION.md": {
+      "mode": "not-applied",
+      "reason": "This example accounts for the general PM form but does not demonstrate runtime adoption."
+    },
+    "documents/templates/ROADMAP.md": {
+      "mode": "not-applied",
+      "reason": "This example accounts for the general PM form but does not demonstrate runtime adoption."
+    },
+    "documents/templates/TASKS.md": {
+      "mode": "not-applied",
+      "reason": "This example accounts for the general PM form but does not demonstrate runtime adoption."
+    },
+    "documents/templates/HANDOFF.md": {
+      "mode": "not-applied",
+      "reason": "This example accounts for the general PM form but does not demonstrate runtime adoption."
+    }
+  }
+}

@@ -1,0 +1,415 @@
+{
+  "harness": "methodology-codex",
+  "owner": "Methodology Codex package maintainers",
+  "spec_version": "1.0.0",
+  "spec_root": "../../",
+  "parameters": {
+    "dialog-language": "Russian unless controlling owner/project instructions select otherwise",
+    "owner-label": "owner",
+    "model-mechanical": "current inherited Codex model configuration; mechanical task classification recorded",
+    "model-routine": "current inherited Codex model configuration; routine task classification recorded",
+    "model-judgment": "current inherited Codex model configuration; hardest judgment requirement and actual capability assessed",
+    "gate-cadence": "per-change exact specification; authentic approved batch scope where expressly granted; result gate separate",
+    "debug-entry-cap": "4"
+  },
+  "capabilities": {
+    "ask-owner-structured": {
+      "mechanism": "Use actual structured owner channel and retain real action/artifact/scope evidence.",
+      "fallback": "Only actual governing absent-mechanism or authentically authorized effective-undelivered session fallback, anchored reason/authority/end trigger; expiry on structured delivery. No generic chat waiver."
+    },
+    "plan-mode": {
+      "mechanism": "Use actual host planning mode when explicitly selected.",
+      "fallback": "Absent host mode: root enforces design-only declared paths and no Code before ready predicate; behavioral boundary, no hard-mode claim."
+    },
+    "spawn-role-isolated": {
+      "mechanism": "Authorized parent uses exposed native collaboration with narrow self-contained role inputs within actual slots.",
+      "fallback": "Missing actor capability: label sequential self-review; required independence BLOCKED, never invented worker."
+    },
+    "model-tier": {
+      "mechanism": "Classify hardest necessary step; use inherited current owner-configured model/effort, leave overrides unset without selection authority; record requested/exposed observed facts.",
+      "fallback": "Unavailable observation/control stays unknown; no settings/provider mutation or claimed model savings."
+    },
+    "role-permissions": {
+      "mechanism": "Use actual host filesystem/tool sandbox where exposed plus explicit exact role paths; judges original source/Git readonly and owned scratch without .git.",
+      "fallback": "Behavioral role restrictions and root scope audit where hard per-role denial absent; disclose gaps rather than claim enforcement."
+    },
+    "pre-tool-guard": {
+      "mechanism": "Parent checks scope, authority/effects and denied commands before operations.",
+      "fallback": "No new executable hook shipped; behavioral tripwire/manual audit cannot claim hard interception."
+    },
+    "run-state-persist": {
+      "mechanism": "Single root writer candidate run_state.py schema2 atomic UTF8 .methodology/runs with complete accepted/refused history/current locks.",
+      "fallback": "Unreadable/corrupt/old schema ledger blocks dependent continuation; no fabricated replacement/reset."
+    },
+    "workflow-orchestration": {
+      "mechanism": "Explicitly authorized root PM/feature-dev dispatches and validates native phases; helper deterministic guards before accepted record.",
+      "fallback": "No hidden daemon/model launcher; missing required orchestration evidence BLOCKED; inner roles never dispatch."
+    },
+    "structured-output": {
+      "mechanism": "Role returns one full current canonical object; parent extraction/type/conditional/semantic checks, package wrapper preserves result unchanged.",
+      "fallback": "If no schema tool, actual JSON extraction/manual validation with one bounded correction; JSON-looking prose alone not enforcement."
+    },
+    "skill-loading": {
+      "mechanism": "Explicit full reads of candidate entries and adapter-resolved current owner subjects, complete injection accepted.",
+      "fallback": "Path reads allowed when skill API absent; missing/truncated/stale/stub/unread required content blocks; no old-cache substitution."
+    },
+    "rules-injection": {
+      "mechanism": "Parent supplies full current six-core/role/runtime/target content or exact resolved paths and identity/read conditions.",
+      "fallback": "Assigned reader fetches missing authoritative bodies; hashes/cards/summaries do not satisfy full adoption."
+    },
+    "session-start-hook": {
+      "mechanism": "Arriving parent/role performs explicit Orient against actual target records and declared profile.",
+      "fallback": "No automatic hook installation; manual entry/closure assessment with limits and artifacts, not silent-hook proof."
+    },
+    "background-command": {
+      "mechanism": "Use exposed yielding execution session for long authorized commands; retain locator/complete streams/exit.",
+      "fallback": "Permitted foreground bounded run only if safe, disclose absent background capacity; no scheduler installed."
+    },
+    "web-research": {
+      "mechanism": "Available search/page tools for required external facts, primary docs for technical identifiers.",
+      "fallback": "Missing access leaves required claims unverified/BLOCKED; internal evidence only where it actually settles claim."
+    },
+    "browser": {
+      "mechanism": "Actual documented browser/AX tool for authorized runnable UI; role/name/state readback separate visual review.",
+      "fallback": "Component/controller tests within true scope; unavailable mandatory live browser criterion remains BLOCKED, no invented snapshot."
+    },
+    "worktree": {
+      "mechanism": "Root may obtain authorized isolated implementation checkout preserving existing dirt and one writer per path.",
+      "fallback": "Owned complete source copy/export; judges cannot create worktrees or carry .git; isolation claims match observed mechanism."
+    },
+    "schedule": {
+      "mechanism": "Only explicit matching owner recurring-work request through an available supported scheduling tool.",
+      "fallback": "No scheduling in default package/native smoke; manual requested action without claiming automatic followup."
+    },
+    "memory": {
+      "mechanism": "Relevant project records/notes provide pointers; separately authorized external knowledge source only if actually declared and available.",
+      "fallback": "External knowledge content remains external; no invented local engine or automatic curation/ingest; honest no-match/access limit."
+    },
+    "todo-list": {
+      "mechanism": "Track scoped task progress in actual project plan/TASKS through assigned writer.",
+      "fallback": "No extra tracker/system needed; inner actors return evidence to custodian, absent tool does not waive current records."
+    },
+    "goal": {
+      "mechanism": "Only explicit owner goal request and available supported goal API.",
+      "fallback": "Ordinary task outcome resides in project task/plan records; no automatic tool goal or invented revision fields."
+    },
+    "code-map-build": {
+      "mechanism": "Actual target Doxyfile/tool build plus current covered-source/config/full own XML/location inspection; separate package map.",
+      "fallback": "Missing prerequisite owed/BLOCKED; only actual explicit written target prohibition exception, never configured-only waiver."
+    },
+    "check-runner": {
+      "mechanism": "Permitted exec with exact plan argv/cwd/resources and full outputs/exit/log audit, direct logic plus real shipped CLI/artifact controls.",
+      "fallback": "Unavailable required runtime proof BLOCKED; command strings/capture/old results not execution."
+    },
+    "run-record-access": {
+      "mechanism": "Read actual authorized immutable run artifacts, role originals, receipts/streams/state/identity chronology.",
+      "fallback": "Missing/truncated/access gaps explicit; do not reconstruct truth or zero costs from absence."
+    },
+    "packaging-install": {
+      "mechanism": "First profile explicitly loads actual complete co-located candidate files only; inventory/adapter/tests/maps are owned here.",
+      "fallback": "Detached/global installation/publication unsupported and require matching later decisions/provenance; no installer or discovery claim."
+    },
+    "launch-environment": {
+      "mechanism": "Root names actual allowed target/framework/evidence roots, host permissions, autonomy, owned resources and permitted credential-presence checks.",
+      "fallback": "Missing granted write/tool/resource prerequisite blocks; no credential payload read/provider install/shared teardown."
+    },
+    "capability-discovery": {
+      "mechanism": "Read actual exposed tool schemas, concurrency and permissions at entry/each changed host condition.",
+      "fallback": "Adapter declarations are a capability map only; no invented host API or observed mechanism from availability."
+    },
+    "context-management": {
+      "mechanism": "Sufficient relevant context, complete current required bodies, stable artifact handoff and same-run checkpoint before continuation.",
+      "fallback": "After compaction revalidate identities/evidence/ledger; absent content fetched, no run/budget reset or mental-adoption proof."
+    },
+    "tracker-integration": {
+      "mechanism": "Only explicitly authorized actual tracker action/capability with retained source provenance.",
+      "fallback": "Default tasks remain in actual TASKS/plan; no external message/issue update from package adoption."
+    }
+  },
+  "files": {
+    "FORMAT.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "checks/conform.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "checks/lints.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "checks/orient.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "checks/preflight.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "checks/qa-scans.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "checks/run-audit.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "code/ax-ui.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "code/data.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "code/doxygen.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "code/exoskeleton.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "code/ldd.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "code/navigation.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "code/tests.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "concepts/glossary.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "concepts/principles.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "documents/conventions.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "documents/templates/INDEX.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "flow/delegation.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "flow/finalize.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "flow/phases.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "flow/run-state.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "policies/autonomy.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "policies/credentials.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "policies/language.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "policies/models.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/batch.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/bootstrap.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/code-review.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/decisions.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/gates.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/git.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/learning.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/lifecycle.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/publication.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/reconnaissance.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/review.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/safety.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/session.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "process/specification.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "prompting/agent-prompt-design.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "prompting/brainstorm.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "prompting/decomposition.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "prompting/grace.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "prompting/prompt-markup.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "prompting/solution-design.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "prompting/superposition-collapse.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "prompting/verification.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "protocols/dev-plan.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "protocols/document.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "protocols/graph.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "protocols/role-returns.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "protocols/spec-brownfield.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "protocols/spec-greenfield.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "roles/_base.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "roles/architect.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "roles/coder.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "roles/debugger.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "roles/pm.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "roles/qa.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "roles/reviewer.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "roles/searcher.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "runtime/adapters.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "runtime/capabilities.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "runtime/parameters.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "AGENTS.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "documents/templates/AGENTS.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "documents/templates/VISION.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "documents/templates/ROADMAP.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "documents/templates/TASKS.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    },
+    "documents/templates/HANDOFF.md": {
+      "mode": "reference",
+      "via": "references/adoption.md"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+<KnowledgeGraph SOURCE_PATH="existing-store.txt" SOURCE_SHA256="41138cbf71255bca75f344fb8f28b03a65d38fc3237474e7a329ac4bbaec6fd2" GENERATED="fixture-source-identity">
+  <Store_Info TYPE="PROJECT_INFO"><keywords>store</keywords><terms>fixture</terms><annotation>Actual existing fixture map.</annotation><BusinessScenarios><Scenario NAME="Lookup">Operator -> lookup -> records.</Scenario></BusinessScenarios></Store_Info>
+  <store_py FILE="existing-store.txt" TYPE="BUSINESS_LOGIC"><keywords>store</keywords><terms>records</terms><annotation>Keep lookup identity stable.</annotation><store_lookup_FUNC NAME="lookup" TYPE="IS_FUNCTION_OF_MODULE" SOURCE_LINE="2"><keywords>lookup</keywords><terms>records</terms><annotation>Return stored records.</annotation></store_lookup_FUNC></store_py>
+</KnowledgeGraph>

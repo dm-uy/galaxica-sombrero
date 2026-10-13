@@ -1,0 +1,30 @@
+---
+name: pm-handoff
+description: "Owner-invoked command: close a working session so the next one continues from the files without loss. Reconciles task states and evidence, rewrites HANDOFF, runs the orient check and reports what waits for the owner."
+argument-hint: "[closing note]"
+disable-model-invocation: true
+---
+
+# pm-handoff
+
+Leave a baton that a reader with no chat can pick up: the goal, the current task, the next authorized action, the owner-only decisions and the latest evidence.
+
+Owners — read in full before acting:
+- `${CLAUDE_PLUGIN_ROOT}/../../process/session.md`
+- `${CLAUDE_PLUGIN_ROOT}/../../documents/templates/HANDOFF.md`
+- `${CLAUDE_PLUGIN_ROOT}/../../checks/orient.md`
+- `${CLAUDE_PLUGIN_ROOT}/../../process/gates.md`
+- `${CLAUDE_PLUGIN_ROOT}/references/claude-runtime.md`
+
+Route:
+1. Compare each task's state and finish claim with the real artifacts. Keep the original packet and its results before replacing current work; keep blocked, deferred, failed and unfinished rows with their next disposition. Reconcile the route's achieved outcomes, focus and diagram together.
+2. Audit this session for facts that no record carries yet (a decision made only in chat, an ignored file the next step needs, a changed configuration, a defect, a stale number, an unrecorded uncertainty) and route each to its one owning record. This is fact recording, not learning ingestion.
+3. Move an expired live hazard to dated history with its proof and recheck condition; drop only its warning.
+4. Rewrite HANDOFF from its template: the owner blockers first (name each pending decision and the action needed, or say nothing), then the present and previous state with the checked revision and what is uncommitted, the next authorized action pointing at TASKS, and the live traps.
+5. Run the orient check at closure (read-only) and fix what is in scope; keep every unexplained or unavailable result with its recovery action. Commit only the named files this session owns and only if committing was granted; report foreign changes without bundling them.
+6. Read the baton as a newcomer would. The final message leads with what waits for the owner, then the concrete changes and checked result, then the confirmed findings and limits, and states whether anything was saved but not committed.
+
+Limits:
+- Do not report a merge, publication or adoption that did not happen.
+- A status-only request edits nothing.
+- A missing, stub or unread required owner is BLOCKED; no installation follows, and an inner role never delegates or commits.
