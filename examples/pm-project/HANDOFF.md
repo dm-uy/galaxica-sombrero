@@ -4,7 +4,7 @@ This Git repository and its origin are the canonical maintenance source. Owner a
 
 ## Current action and gate
 
-The permanent checkout is clean on main with machine-local author and authenticated-origin configuration. The onboarding branch updates AGENTS, README and the four durable records; source code, package bytes, schema/version and original Local use remain unchanged. Local validation passed: 33 existing regressions, both private self scans, all three adapters and independent scope/link/identity verification; see the decision note. Deliver this checked branch as the onboarding PR. Owner acceptance of the concrete result is required before main integration and final archive-entry promotion. Do not develop new features or recreate an export as a substitute.
+The permanent checkout is clean on main with machine-local author and authenticated-origin configuration. The onboarding branch updates AGENTS, README and the four durable records; source code, package bytes, schema/version and original Local use remain unchanged. Local validation passed: 33 existing regressions, both private self scans, all three adapters and independent scope/link/identity verification; see the decision note. The checked branch is delivered as origin draft PR #1. Owner acceptance of the concrete result is required before main integration and final archive-entry promotion. Do not develop new features or recreate an export as a substitute.
 
 ## Continue in any harness
 

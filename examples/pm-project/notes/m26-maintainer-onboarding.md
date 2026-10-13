@@ -20,4 +20,6 @@ Preserve discovered errors with context. The first attempted account-specific cr
 
 The existing interface, code-core, PM-role and both package assembly regressions passed: 33 tests in 22.67 seconds. Both unchanged private-deny-list self scans and all three adapters passed. Independent read-only verification confirmed the seven-document scope, all other 255 baseline files and modes, exact REPO-101 through REPO-104 and README Local use preservation, 91 document links/anchors, clean permanent main, local author configuration, actual origin access and preservation of the old tree’s four foreign changes. These are onboarding checks, not a new native consumer run. Private receipts remain outside tracked source.
 
+Delivery: origin draft PR #1 contains the seven-document result on the isolated onboarding branch. Main remains at the initial release until owner result acceptance.
+
 Next: accept the concrete onboarding PR, then promote these current records on main and mark the preparation source archive. Public visibility and the later API/database → frontend → Telegram → MCP route remain separately scoped; systematic learning/measurement remains deferred.

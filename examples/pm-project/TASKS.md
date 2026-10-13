@@ -2,7 +2,7 @@
 
 ## M26 Establish permanent canonical maintenance
 
-State: owner-approved scope, implementation complete and local validation passed; PR delivery and result integration pending; [decision](notes/m26-maintainer-onboarding.md). This supersedes the initial release's preparation-only task record. Initial private upload and accepted M25B source projection are complete.
+State: owner-approved scope, implementation complete and local validation passed; delivered as origin draft PR #1; result integration pending; [decision](notes/m26-maintainer-onboarding.md). This supersedes the initial release's preparation-only task record. Initial private upload and accepted M25B source projection are complete.
 
 Deliverable: clean permanent main checkout with local owner-approved commit identity and authenticated origin access; source-controlled AGENTS startup and README entry; four consistent current records; tested PR; retained preparation archive after integration. No credentials or machine-private destination identifiers enter tracked source.
 
