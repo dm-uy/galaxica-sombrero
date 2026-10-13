@@ -8,6 +8,8 @@ Independent read-only lanes completed inspection of the current native PM, proje
 
 Do not start Code, modify guards/versions or global loaders from this preparation record. After recon, produce the exact implementable specification; reuse the already accepted outcome and ask only for the genuinely ungranted scope/action. Source bodies, failures, role/flow/gate/schema contracts, README Local use and foreign research remain protected.
 
+Delivery: origin draft PR #2 on `codex/m27-coverage-plan` contains the seven-record preparation result. Main integration is pending; the accepted outcome does not imply acceptance of changed implementation or an active loader.
+
 ## Recovery and proof
 
 Start from AGENTS and current records; inspect real branch/status and original lane receipts before advancing. Main remains the clean stable package checkout; preparation edits live in an isolated scoped worktree. Private source identities/locations and raw comparison receipts stay outside tracked public source, with reproducible source-ID accounting retained in the synthesis. The original preparation repository is archival.

@@ -12,6 +12,8 @@ MAY EDIT: four current PM records, the M27 contract, reconnaissance/synthesis an
 
 Done when: all current methodology comparison populations are inventoried and hash-bound, findings verified against bodies and mechanisms, every applicable duty mapped or a concrete gap retained, and the next exact slice is reviewable. Missing or partial evidence is named; no unsupported FULL disposition or silent omission.
 
+Delivery: origin draft PR #2 on `codex/m27-coverage-plan`; preparation-result main integration is pending.
+
 Next: approve the exact resulting implementation specification before Architect/Code. Prepare and review the concrete implementation before its separate main/activation action. Existing clear matching consent counts; the accepted outcome is not re-asked.
 
 ## Retained completed checkpoint
