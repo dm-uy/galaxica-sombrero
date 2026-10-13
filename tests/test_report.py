@@ -15,7 +15,7 @@
 ## Q: Why run each input twice, once per form?
 ## A: The claim is that the two forms cannot drift; only two real runs of the same input can show that they do not.
 ## @changes
-## LAST_CHANGE: [v1.0.0 - Reconcile current M19 boundary/release facts and paired source operands; preserve original assertions/pins/refusals/restoration; runtime checks pending.]
+## LAST_CHANGE: [1.1.0 - Reconcile current M19 boundary/release facts and paired source operands; preserve original assertions/pins/refusals/restoration; runtime checks pending.]
 ## @modulemap
 ## FUNC 6[Run the same arguments as a table and as JSON] => _both_forms
 ## FUNC 6[The clean, one-FAIL and refusal inputs of the two-form tests] => _self_inputs
@@ -269,7 +269,7 @@ def test_summary_states_population_and_probes_self(run_cli, repo_copy, deny_list
     assert code == 0
     assert list(population) == POPULATION_KEYS_SELF
     assert population["neutral-files"] == 71
-    assert population["norms"] == 1220
+    assert population["norms"] == 1234
     assert population["capabilities"] == 28
     assert population["parameters"] == 7
     assert population["anchors"] >= 25
@@ -312,7 +312,7 @@ def test_summary_states_population_and_probes_adapter(run_cli, repo_root):
     assert list(population) == POPULATION_KEYS_ADAPTER
     assert population["neutral-files"] == 71
     assert population["anchors"] == anchors
-    assert population["norms"] == 1220
+    assert population["norms"] == 1234
     assert population["capabilities"] == 28
     assert population["parameters"] == 7
     assert population["spec-version"] == version

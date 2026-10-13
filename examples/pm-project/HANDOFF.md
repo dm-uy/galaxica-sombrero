@@ -1,23 +1,21 @@
-# Current checkpoint: M28-C1 exact specification prepared
+# Current checkpoint: M28-C1 verified result for review
 
-Owner on 2026-10-13 requires this canonical framework and its Codex adaptation to cover at least all currently used in-house methodology, with no necessary external in-house skills/plugins. [Accepted outcome and coverage contract](specs/m27-self-contained-coverage.md). M26 is complete; its source handover did not switch the active installed skill catalogue.
+The owner selected this canonical framework and its Codex adaptation as the complete source for the currently used in-house methodology. [Accepted outcome](specs/m27-self-contained-coverage.md). The bounded [C1 specification](specs/m28-c1-required-owners-routing.md) and [three-card signature amendment](notes/m28-c1-amendment-01.md) were separately approved on 2026-10-13; no new Code approval is needed.
 
-## Next eligible action
+## Result and next eligible action
 
-Owner requested continuation along the selected route. [Exact C1 specification](specs/m28-c1-required-owners-routing.md) and [focused reconnaissance](notes/RECON_2026-10-13_c1-required-owners.md) cover two required stub promotions, existing native prompt routing and the tight neutral-version bridge. This precise Code/version/fixture scope has not yet been accepted; present it for the missing decision, then run the approved implementation workflow. Do not re-ask the already accepted consolidation outcome. No protected source/helper/guard, runtime version or user settings have changed in preparation.
+C1 completes the two required review owners and the existing Codex one-shot external-agent prompt route. Neutral source is1.1.0, Codex source2.1.0 with wire2.0.0/schema2 unchanged; Claude source/wire1.0.0 now binds neutral1.1.0. [Checked result and evidence limits](notes/m28-c1-result.md). Full fresh suites597/101/526, eight QA scan judgments, current native author/reader/refusal proofs, actual helper CLI controls, whole independent Review and assigned Architect Finalize are verified. This is a result for integration review, not an active installed source or all-methodology parity.
 
-## Retained M27 work
+Main integration remains held for the matching owner decision. The C1 delivery includes the unmerged M27 preparation records; its cumulative main delta is reviewed. Earlier draft PR #2 remains the preparation-only delivery. Do not merge either branch, switch loaders or change repository visibility from a phase verdict. After C1 result acceptance/integration, the next slice is C2 consumer PM profile/check/map/migration reconnaissance and exact specification; C2 Code needs its matching scope decision.
 
-Independent read-only lanes completed inspection of the current native PM, project-methodology and prompting-methodology inputs against actual neutral owners and Codex carriers/helpers. Root synthesized [source accounting](notes/RECON_2026-10-13_self-contained-coverage.md), distinguishes complete duties from missing mechanisms or wiring, and proposed bounded closure slices C1–C6. Independent static verification passed for the seven-document preparation result, source/matrix accounting, links, preserved baseline and both privacy/self scans. The next work is the exact implementation specification, beginning with required-owner/routing closure. Same topic names and earlier test counts are not full-transfer proof.
+## Recovery and retained history
 
-Do not start Code, modify guards/versions or global loaders from this preparation record. After recon, produce the exact implementable specification; reuse the already accepted outcome and ask only for the genuinely ungranted scope/action. Source bodies, failures, role/flow/gate/schema contracts, README Local use and foreign research remain protected.
+Start from root AGENTS and these four current records, then the result note and only relevant links. Recover private producer reports, raw command streams, snapshots, maps and saved helper states from the machine-local Git evidence archive described in the result note. The manual native semantic ledger controls this run; the older construction ledger cannot represent partial Code and eight-scan Review and remains unchanged historical bookkeeping. No Code SUCCESS or candidate-engine phase advancement is invented.
 
-Delivery: origin draft PR #2 on `codex/m27-coverage-plan` contains the seven-record preparation result. Main integration is pending; the accepted outcome does not imply acceptance of changed implementation or an active loader.
+Debug1–4 and every prior QA refusal remain retained; cumulative spend4/4 is exhausted. Any later actionable source repair needs a matching continuation decision, preserves that spend and renews QA/affected Review. The first overwritten privacy-failure stream remains unavailable; later green checks do not recover it. A descriptive CLI counter header retains earlier1/4 wording with an append-only clarification to the actual controlling4/4; fixture counters0/0 are separate.
 
-## Recovery and proof
+Permanent main remains the clean stable loading checkout until authorized integration. Archived preparation source, foreign working changes and original delivery packets are preserved. Active installed sources/settings are unchanged.
 
-Start from AGENTS and current records; inspect real branch/status and original lane receipts before advancing. Main remains the clean stable package checkout; preparation edits live in an isolated scoped worktree. Private source identities/locations and raw comparison receipts stay outside tracked public source, with reproducible source-ID accounting retained in the synthesis. The original preparation repository is archival.
+## Remaining route and boundaries
 
-## Boundaries
-
-Available method capability and routine activation are distinct. Lightweight error recording remains selected, and consolidation must not erase source-supplied capacity just because systematic learning/measurement is deferred. A useful fresh native cycle and controlled no-old-plugin source-binding proof are required for eventual completion; helper simulations or this existing chat do not certify them. Multiple parallel feature writers, public visibility and later client stages remain separate. M26's acceptance/history is retained in its note.
+C2 PM consumer profile, C3 native enforcement, C4 SDK/import/candidate capacity, C5 fresh autonomous/resume/isolation proof and C6 actual source-loader handover remain owed. Protected legacy GRACE stub commentary is disclosed for later prompting reconciliation. Lightweight error recording remains selected; systematic learning, target evaluation and comparative measurement are deferred. Public visibility, multiple feature writers and API/database → frontend → Telegram → MCP consumer stages remain separate scopes.

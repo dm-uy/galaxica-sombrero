@@ -18,7 +18,7 @@
 ## Q: Why check the critical event set exactly?
 ## A: A refusal that fires for the wrong reason, or that fires an unrelated error as well, would pass a text-only assertion while hiding a broken check.
 ## @changes
-## LAST_CHANGE: [1.0.0 - Initial suite for the first native Claude Code package: bound path, ten single-defect refusals, detached package, combined defects, bad payloads, closed input, record presence without content, bounds, internal error and the hooks.json command.]
+## LAST_CHANGE: [1.1.0 - Initial suite for the first native Claude Code package: bound path, ten single-defect refusals, detached package, combined defects, bad payloads, closed input, record presence without content, bounds, internal error and the hooks.json command.]
 ## @modulemap
 ## FUNC 2[Attach full module documentation with no runtime effects] => test_session_start._module_contract
 ## FUNC 8[Copy the package and the neutral files it needs into an owned tree] => test_session_start.make_checkout
@@ -79,7 +79,7 @@ NO_FALLBACK = "never fall back to another installed copy"
 COMMON_CRITICAL = {("check_binding", "BLOCKED"), ("render_context", "BLOCKED_TEXT")}
 CASES = [
     ("missing_spec_version", ["SPEC_VERSION is missing at the neutral root"], {("_check_neutral_version", "READ_FAILURE")}),
-    ("wrong_spec_version", ["SPEC_VERSION 2.0.0 differs from adapter spec_version 1.0.0"], {("_check_neutral_version", "VERSION_MISMATCH")}),
+    ("wrong_spec_version", ["SPEC_VERSION 2.0.0 differs from adapter spec_version 1.1.0"], {("_check_neutral_version", "VERSION_MISMATCH")}),
     ("missing_core_file", ["core owner missing: code/tests.md"], {("_check_core_owners", "OWNER_MISSING")}),
     ("stub_core_card", ["core owner card is not status draft: code/ldd.md (status stub)"], {("_check_core_owners", "OWNER_NOT_DRAFT")}),
     ("wrong_layout_package", ["package-layout package is methodology-codex, expected methodology-claude"], {("_check_layout", "IDENTITY_MISMATCH")}),
@@ -240,7 +240,7 @@ def show_records(records):
 ## @purpose Verify that the real co-located package is bound, that the context states the neutral version, the absolute neutral root and the reading duty, and that the owned trajectory of a successful check is complete and error free.
 ## @uses test_session_start.run_hook, test_session_start.answer, test_session_start.trace_events, test_session_start.show_trace
 ## @io Input: tmp_path of an owned project directory. Output: None after the assertions. Side effects: one real hook process with tracing on; no writes to the package. Guarantees: the success events appear once each in order and no importance 10 event or unrelated stderr text appears.
-##   Raises: AssertionError when the answer or the trace differs. System importance: 9. Example: the sentence methodology-claude 1.0.0 bound in place to neutral methodology 1.0.0 at the real neutral root is present.
+##   Raises: AssertionError when the answer or the trace differs. System importance: 9. Example: the sentence methodology-claude 1.0.0 bound in place to neutral methodology 1.1.0 at the real neutral root is present.
 ## @complexity 5
 def test_real_package_binds_and_states_duty(tmp_path):
     project = tmp_path / "project"
@@ -251,7 +251,7 @@ def test_real_package_binds_and_states_duty(tmp_path):
     context = answer(stdout)
     events = trace_events(stderr)
     assert code == 0
-    sentence = "methodology-claude 1.0.0 bound in place to neutral methodology 1.0.0 at %s" % os.path.realpath(NEUTRAL)
+    sentence = "methodology-claude 1.0.0 bound in place to neutral methodology 1.1.0 at %s" % os.path.realpath(NEUTRAL)
     assert context.startswith(sentence)
     assert "Before any methodology role or skill work, read %s/references/claude-runtime.md and the six core owners in full; Orient by checks/orient.md" % os.path.realpath(PACKAGE) in context
     for owner in CORE:
@@ -499,7 +499,7 @@ def test_package_root_resolution_and_symlink(tmp_path, caplog):
     assert by_empty_environment == by_location == Path(os.path.realpath(package))
     assert ok is True and reasons == []
     assert facts["neutral_root"] == os.path.realpath(root) and facts["package_root"] == os.path.realpath(package)
-    assert facts["spec_version"] == "1.0.0" and facts["package_version"] == "1.0.0"
+    assert facts["spec_version"] == "1.1.0" and facts["package_version"] == "1.0.0"
 # endregion FUNC_test_package_root_resolution_and_symlink
 
 

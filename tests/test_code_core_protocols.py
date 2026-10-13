@@ -17,7 +17,7 @@
 ## A: Exact clause recognition has a finite literal boundary and cannot certify arbitrary semantic equivalence.
 ## @changes
 ## Debug1: PRE01 ordered comment containment; PRE02 actual relations; PRE03/04 isolated source-bound related sets; PRE05 conditional relation overview; PRE06 full own field content; PRE07 safe owned failures.
-## LAST_CHANGE: [v1.0.0 - Reconcile current M19 boundary/release facts and paired source operands; preserve original assertions/pins/refusals/restoration; runtime checks pending.]
+## LAST_CHANGE: [1.1.0 - Reconcile current M19 boundary/release facts and paired source operands; preserve original assertions/pins/refusals/restoration; runtime checks pending.]
 ## @modulemap
 ## FUNC 9[Bind genuine comment containers, ordered logical steps and complete own field continuations to current source definitions.] => test_code_core_protocols._source_entity_contracts
 ## FUNC 8[Bind complete sources to exact byte/mode identity before any fixture judgment.] => test_code_core_protocols._read_core_sources
@@ -1270,7 +1270,7 @@ def test_core_promotions_and_remaining_homes(repo_root):
         for relative in CORE_FILES[:3]:
             assert "status: draft" in sources[relative]
         readme = sources["README.md"]
-        assert "67 drafts and 4 stubs" in readme and "1.0.0" in readme
+        assert "69 drafts and 2 stubs" in readme and "1.1.0" in readme
         for path in ("code/ldd.md", "code/tests.md"):
             assert "status: draft" in (repo_root / path).read_text(encoding="utf-8")
         for path in ("code/ax-ui.md", "code/data.md", "checks/lints.md"):

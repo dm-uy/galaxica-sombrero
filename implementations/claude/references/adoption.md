@@ -1,16 +1,16 @@
-# Pointwise adoption — neutral 1.0.0 / methodology-claude 1.0.0
+# Pointwise adoption — neutral 1.1.0 / methodology-claude 1.0.0
 
 This file is the `via` carrier of all 71 `reference` entries in [adapter.json](../adapter.json). The adapter and this file resolve `spec_root` (`../../`) from the adapter's own directory, independent of the caller's working directory. Inside Claude Code the same location is `${CLAUDE_PLUGIN_ROOT}/../../`.
 
 ## Loading procedure
 
-1. Resolve the package root (`${CLAUDE_PLUGIN_ROOT}`, or the directory of this file's parent) and the neutral root two levels above it. Check that `SPEC_VERSION` equals the adapter's `spec_version` (1.0.0). A missing or different neutral root is BLOCKED; never substitute an older installed copy.
+1. Resolve the package root (`${CLAUDE_PLUGIN_ROOT}`, or the directory of this file's parent) and the neutral root two levels above it. Check that `SPEC_VERSION` equals the adapter's `spec_version` (1.1.0). A missing or different neutral root is BLOCKED; never substitute an older installed copy.
 2. Before any software role acts, read the six core owners in full: `concepts/principles.md`, `roles/_base.md`, `code/exoskeleton.md`, `code/ldd.md`, `code/doxygen.md`, `code/tests.md`. Identity-unchanged content read earlier in the same run may be reused; changed content is read again.
 3. Read the assigned role owner, `protocols/role-returns.md` and every owner the applicable skill names, in full. Specialized owners load on their actual trigger, not by following every link.
 4. Record what was read (path, revision or byte identity, read condition) in the existing phase evidence. A card, a hash, a link, a summary or a stub is not a read; a required owner that is missing, a stub, truncated or unread blocks dependent action.
 5. The target project's own instructions win on the code surface (style, tooling, logging idiom); the neutral process layer applies within that authority. This adapter declares no overrides.
 
-Reading an owner assigns no role. The four stub owners (`process/code-review.md`, `process/git.md`, `process/publication.md`, `process/review.md`) are explicitly incomplete: their present duties come from the substantive owners named in their rows, and no carrier claims their bodies.
+Reading an owner assigns no role. The two stub owners (`process/git.md`, `process/publication.md`) are explicitly incomplete: their present duties come from the substantive owners named in their rows, and no carrier claims their bodies.
 
 ## Owner table
 
@@ -50,7 +50,7 @@ Reading an owner assigns no role. The four stub owners (`process/code-review.md`
 | `policies/models.md` | Hardest-step classification, adequate strength/context, actual authority/settings/requested versus observed facts; no automatic provider change or savings claim. | `references/claude-runtime.md`, `agents/*.md (model frontmatter)` |
 | `process/batch.md` | Plan/approve/activate/track/assess actual batch, preserve carryover/decisions and distinct result consent. | `skills/durable-layer/SKILL.md`, `skills/pm/SKILL.md`, `skills/pm-plan-batch/SKILL.md`, `skills/pm-run-batch/SKILL.md` |
 | `process/bootstrap.md` | Arrival criterion and actual project shape before granted five-record initialization; missing records alone not greenfield. | `skills/greenfield-bootstrap/SKILL.md`, `skills/pm-bootstrap/SKILL.md` |
-| `process/code-review.md` | Disclosed stub; use substantive current roles/reviewer and full actual review evidence, never claim this body completed. | `skills/code-review/SKILL.md` |
+| `process/code-review.md` | Complete stable-candidate independent assignment/judgment and existing counted repair/QA/Review/Finalize continuation; no repair or integration authority. | `skills/code-review/SKILL.md` |
 | `process/decisions.md` | Real authority/evidence for open alternatives, hold/collapse/PM decision profiles and retained reopening/history. | `skills/brainstorm/SKILL.md` |
 | `process/gates.md` | Authentic exact specification/run and concrete-result decisions, structured channel/default and qualified authorized fallback, no silence consent. | `skills/feature-dev/SKILL.md`, `skills/hitl-gates/SKILL.md`, `skills/pm/SKILL.md`, `skills/pm-plan-batch/SKILL.md` |
 | `process/git.md` | Disclosed stub; current gates/base/PM/safety own actual preservation and parent commit boundaries, no invented Git procedure. | `references/claude-runtime.md` |
@@ -58,7 +58,7 @@ Reading an owner assigns no role. The four stub owners (`process/code-review.md`
 | `process/lifecycle.md` | Actual meaningful tracks/checkpoints/task plan/order/replanning/backlog/snapshot, complete roles and owner-selected route. | `skills/durable-layer/SKILL.md`, `skills/pm/SKILL.md`, `skills/roadmap/SKILL.md` |
 | `process/publication.md` | Disclosed stub; no publication/install claimed or authorized by local package, residual procedure/license evidence required before that future action. | `references/claude-runtime.md` |
 | `process/reconnaissance.md` | Original requirements plus actual independent Code/Data/Decisions/conditional Legacy/Web, populations/citations/contradictions/unchecked limits before spec. | `skills/pm/SKILL.md`, `skills/prod-log-vacuum/SKILL.md`, `skills/spec-recon/SKILL.md` |
-| `process/review.md` | Disclosed stub; existing Reviewer/run-audit provide scoped present duties; no deferred comparison engine inferred. | `skills/analyzer/SKILL.md`, `skills/pm-review-run/SKILL.md` |
+| `process/review.md` | Complete explicit run/window review, original commitments and reachable record/provenance judgment; findings, limits and unsent continuation only, no deferred measurement/import/ingest engine inferred. | `skills/analyzer/SKILL.md`, `skills/pm-review-run/SKILL.md` |
 | `process/safety.md` | Action-conditioned complete preservation/ownership/unknown effect, granted metadata snapshots and actual refs/objects limits, no destructive cleanup. | `skills/feature-dev/SKILL.md`, `skills/prod-log-vacuum/SKILL.md`, `hooks/guard_destructive.py` |
 | `process/session.md` | Layer-aware entry/current artifacts, five records and recoverable closure/HANDOFF with actual evidence/commit authority. | `skills/durable-layer/SKILL.md`, `skills/pm/SKILL.md`, `skills/roadmap/SKILL.md`, `skills/pm-handoff/SKILL.md` |
 | `process/specification.md` | Original measured intent/RECON/constraints, all AC and delivery/scope, contradiction and deficiency handling without silent narrowing. | `skills/brownfield-spec-template/SKILL.md`, `skills/greenfield-bootstrap/SKILL.md` |

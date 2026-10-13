@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0
+
+- Complete run-review and code-review owning draft procedures, reusable forms and fictional positive/boundary/refusal cases under existing audit/Reviewer/QA/Finalize authority.
+- Route native Codex one-shot and loop external-agent prompt authoring to the full three-artifact owner; evaluation inputs remain DRAFT/NOT_RUN.
+- Advance Codex source2.1.0 and neutral1.1.0 tight bindings; preserve Codex wire2.0/schema2, Claude source/wire1.0, package membership, helper algorithms and all guards. Two remaining stubs and later consolidation/activation/publication duties stay explicit.
+
 ## 1.0.0
 
 - Amend only FMT-1/FMT-26/REPO-102 for the typed implementation-package namespace and co-located owned adapter; unchanged FMT-23 requires this MAJOR. All other existing neutral norms/interfaces/schema/registries retain their meanings and lines; cards retain draft/stub maturity.

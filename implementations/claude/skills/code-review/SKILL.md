@@ -10,7 +10,7 @@ Obtain an independent judgment of the whole current delta, with located findings
 Owners — read in full before acting:
 - `${CLAUDE_PLUGIN_ROOT}/../../roles/reviewer.md`
 - `${CLAUDE_PLUGIN_ROOT}/../../flow/finalize.md`
-- `${CLAUDE_PLUGIN_ROOT}/../../process/code-review.md` (a disclosed stub: it supplies no procedure, the substantive reviewer role and the Finalize evidence apply)
+- `${CLAUDE_PLUGIN_ROOT}/../../process/code-review.md` (complete stable-candidate review procedure; the Reviewer and Finalize evidence remain authoritative)
 - `${CLAUDE_PLUGIN_ROOT}/references/claude-runtime.md`
 
 Route:

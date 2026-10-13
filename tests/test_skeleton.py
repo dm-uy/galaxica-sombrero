@@ -1,8 +1,8 @@
 # region MODULE_CONTRACT [DOMAIN(9): Skeleton, Registries; CONCEPT(8): LayoutCount, StubSet, Draft; TECH(6): pytest, pathlib]
 ## @modulecontract
 ## @purpose To prove that the repository is the skeleton it claims to be: the amended layout of 67 files exists with valid
-## cards, exactly 4 of them are stubs, the sixty-seven drafts are the ones named, the registries declare what they must and the
-## version files say 1.0.0.
+## cards, exactly 2 of them are stubs, the sixty-nine drafts are the ones named, the registries declare what they must and the
+## version files say 1.1.0.
 ## @scope The file tree, the cards, the stubs, the index of templates, the documentation of the tool, the registries, the
 ## version files and the README. No tool code is run here.
 ## @input The repository on disk; the constant of the 74 files of the inventory's layout.
@@ -14,7 +14,7 @@
 ## - The stub set is compared to the computed set exactly, not by count alone.
 ## - The tests read files with their own small reader, independent of the tool they help check.
 ## @rationale
-## Q: Why compute 74, 67 and 4 in the test?
+## Q: Why compute 74, 67 and 2 in the test?
 ## A: The specification says the count of stubs equals the layout's count after the amendments; a typed number would
 ## hide a wrong amendment, a computed one shows it.
 ## @changes
@@ -30,12 +30,12 @@
 ## FUNC 5[No knowledge directory; five primary templates] => test_no_knowledge_directory_and_five_primary_templates
 ## FUNC 4[The index lists five templates] => test_index_lists_the_five_templates
 ## FUNC 6[The tool's file documents it with its anchors] => test_checks_conform_documents_the_tool_with_its_anchors
-## FUNC 6[71 neutral files, sixty-seven drafts] => test_neutral_files_match_pm_release
+## FUNC 6[71 neutral files, sixty-nine drafts] => test_neutral_files_match_pm_release
 ## FUNC 6[Read the declarations of one registry, name to meaning] => _declarations
 ## FUNC 6[The 28 capabilities with meanings] => test_capabilities_registry_declares_the_28_with_meanings
 ## FUNC 4[The memory capability names an external source] => test_memory_capability_names_an_external_source
 ## FUNC 5[The seven parameters] => test_parameters_registry_declares_the_seven
-## FUNC 3[The version is 1.0.0] => test_spec_version_is_0_19_0
+## FUNC 3[The version is 1.1.0] => test_spec_version_is_0_19_0
 ## FUNC 4[The changelog entry] => test_changelog_entry_names_skeleton_format_registries_tool
 ## FUNC 7[The README explains adoption and the tool] => test_readme_explains_adoption_and_conform
 ## FUNC 5[The README names the MIT licence] => test_readme_states_mit_licence
@@ -43,8 +43,8 @@
 ## - [test_layout_counts_pm_release]: QA agent -> recompute the counts -> the skeleton matches the amendment
 ## - [test_stub_set_equals_amended_layout_minus_filled_files]: Maintainer -> deletes a stub -> the set differs and the test names it
 ## - [test_readme_explains_adoption_and_conform]: New harness author -> opens the README -> finds the four ways, the registries and the commands
-## @GREP_SUMMARY skeleton, layout 74 67 4, stub set, cards, drafts, neutral files 71, capabilities 28, parameters 7, SPEC_VERSION, CHANGELOG
-## @STRUCTURE ▶ LAYOUT(74) → ⊕ amend(-knowledge -templates +INDEX+five forms)=67 → ◇ minus filled=4 → ⚡ walk repo *.md → ∑ compare sets → ⎋ assert
+## @GREP_SUMMARY skeleton, layout 74 67 2, stub set, cards, drafts, neutral files 71, capabilities 28, parameters 7, SPEC_VERSION, CHANGELOG
+## @STRUCTURE ▶ LAYOUT(74) → ⊕ amend(-knowledge -templates +INDEX+five forms)=67 → ◇ minus filled=2 → ⚡ walk repo *.md → ∑ compare sets → ⎋ assert
 def _module_contract():
     pass
 # endregion MODULE_CONTRACT
@@ -133,8 +133,8 @@ LAYOUT = [
     "runtime/capabilities.md",
 ]
 
-FILLED = {'concepts/principles.md', 'concepts/glossary.md', 'checks/orient.md', 'checks/preflight.md', 'checks/run-audit.md', 'process/safety.md', 'protocols/document.md', 'protocols/spec-greenfield.md', 'protocols/spec-brownfield.md', 'process/specification.md', 'process/reconnaissance.md', 'process/lifecycle.md', 'documents/templates/INDEX.md', 'documents/templates/AGENTS.md', 'roles/reviewer.md', 'protocols/dev-plan.md', 'flow/finalize.md', 'roles/architect.md', 'runtime/adapters.md', 'process/session.md', 'flow/run-state.md', 'process/bootstrap.md', 'roles/_base.md', 'code/ax-ui.md', 'code/data.md', 'documents/templates/ROADMAP.md', 'protocols/role-returns.md', 'code/exoskeleton.md', 'process/decisions.md', 'process/learning.md', 'protocols/graph.md', 'checks/qa-scans.md', 'code/doxygen.md', 'roles/searcher.md', 'process/gates.md', 'roles/qa.md', 'flow/phases.md', 'documents/templates/TASKS.md', 'roles/debugger.md', 'code/tests.md', 'process/batch.md', 'checks/lints.md', 'documents/conventions.md', 'policies/models.md', 'runtime/capabilities.md', 'documents/templates/HANDOFF.md', 'flow/delegation.md', 'code/ldd.md', 'roles/pm.md', 'roles/coder.md', 'documents/templates/VISION.md', 'code/navigation.md', 'prompting/agent-prompt-design.md', 'prompting/brainstorm.md', 'prompting/decomposition.md', 'prompting/grace.md', 'prompting/prompt-markup.md', 'prompting/solution-design.md', 'prompting/superposition-collapse.md', 'prompting/verification.md', 'policies/autonomy.md', 'policies/credentials.md', 'policies/language.md'}
-DRAFTS = {'concepts/principles.md', 'concepts/glossary.md', 'checks/orient.md', 'checks/preflight.md', 'checks/run-audit.md', 'process/safety.md', 'protocols/document.md', 'protocols/spec-greenfield.md', 'protocols/spec-brownfield.md', 'process/specification.md', 'process/reconnaissance.md', 'documents/templates/INDEX.md', 'process/lifecycle.md', 'documents/templates/AGENTS.md', 'roles/reviewer.md', 'protocols/dev-plan.md', 'runtime/parameters.md', 'flow/finalize.md', 'roles/architect.md', 'flow/run-state.md', 'AGENTS.md', 'runtime/adapters.md', 'process/session.md', 'process/bootstrap.md', 'roles/_base.md', 'code/ax-ui.md', 'code/data.md', 'documents/templates/ROADMAP.md', 'protocols/role-returns.md', 'code/exoskeleton.md', 'process/decisions.md', 'process/learning.md', 'protocols/graph.md', 'checks/qa-scans.md', 'code/doxygen.md', 'roles/searcher.md', 'process/gates.md', 'roles/coder.md', 'roles/qa.md', 'documents/templates/TASKS.md', 'flow/phases.md', 'FORMAT.md', 'roles/debugger.md', 'checks/conform.md', 'process/batch.md', 'code/tests.md', 'checks/lints.md', 'documents/conventions.md', 'policies/models.md', 'runtime/capabilities.md', 'flow/delegation.md', 'code/ldd.md', 'roles/pm.md', 'documents/templates/HANDOFF.md', 'documents/templates/VISION.md', 'code/navigation.md', 'prompting/agent-prompt-design.md', 'prompting/brainstorm.md', 'prompting/decomposition.md', 'prompting/grace.md', 'prompting/prompt-markup.md', 'prompting/solution-design.md', 'prompting/superposition-collapse.md', 'prompting/verification.md', 'policies/autonomy.md', 'policies/credentials.md', 'policies/language.md'}
+FILLED = {'process/review.md', 'process/code-review.md', 'concepts/principles.md', 'concepts/glossary.md', 'checks/orient.md', 'checks/preflight.md', 'checks/run-audit.md', 'process/safety.md', 'protocols/document.md', 'protocols/spec-greenfield.md', 'protocols/spec-brownfield.md', 'process/specification.md', 'process/reconnaissance.md', 'process/lifecycle.md', 'documents/templates/INDEX.md', 'documents/templates/AGENTS.md', 'roles/reviewer.md', 'protocols/dev-plan.md', 'flow/finalize.md', 'roles/architect.md', 'runtime/adapters.md', 'process/session.md', 'flow/run-state.md', 'process/bootstrap.md', 'roles/_base.md', 'code/ax-ui.md', 'code/data.md', 'documents/templates/ROADMAP.md', 'protocols/role-returns.md', 'code/exoskeleton.md', 'process/decisions.md', 'process/learning.md', 'protocols/graph.md', 'checks/qa-scans.md', 'code/doxygen.md', 'roles/searcher.md', 'process/gates.md', 'roles/qa.md', 'flow/phases.md', 'documents/templates/TASKS.md', 'roles/debugger.md', 'code/tests.md', 'process/batch.md', 'checks/lints.md', 'documents/conventions.md', 'policies/models.md', 'runtime/capabilities.md', 'documents/templates/HANDOFF.md', 'flow/delegation.md', 'code/ldd.md', 'roles/pm.md', 'roles/coder.md', 'documents/templates/VISION.md', 'code/navigation.md', 'prompting/agent-prompt-design.md', 'prompting/brainstorm.md', 'prompting/decomposition.md', 'prompting/grace.md', 'prompting/prompt-markup.md', 'prompting/solution-design.md', 'prompting/superposition-collapse.md', 'prompting/verification.md', 'policies/autonomy.md', 'policies/credentials.md', 'policies/language.md'}
+DRAFTS = {'process/review.md', 'process/code-review.md', 'concepts/principles.md', 'concepts/glossary.md', 'checks/orient.md', 'checks/preflight.md', 'checks/run-audit.md', 'process/safety.md', 'protocols/document.md', 'protocols/spec-greenfield.md', 'protocols/spec-brownfield.md', 'process/specification.md', 'process/reconnaissance.md', 'documents/templates/INDEX.md', 'process/lifecycle.md', 'documents/templates/AGENTS.md', 'roles/reviewer.md', 'protocols/dev-plan.md', 'runtime/parameters.md', 'flow/finalize.md', 'roles/architect.md', 'flow/run-state.md', 'AGENTS.md', 'runtime/adapters.md', 'process/session.md', 'process/bootstrap.md', 'roles/_base.md', 'code/ax-ui.md', 'code/data.md', 'documents/templates/ROADMAP.md', 'protocols/role-returns.md', 'code/exoskeleton.md', 'process/decisions.md', 'process/learning.md', 'protocols/graph.md', 'checks/qa-scans.md', 'code/doxygen.md', 'roles/searcher.md', 'process/gates.md', 'roles/coder.md', 'roles/qa.md', 'documents/templates/TASKS.md', 'flow/phases.md', 'FORMAT.md', 'roles/debugger.md', 'checks/conform.md', 'process/batch.md', 'code/tests.md', 'checks/lints.md', 'documents/conventions.md', 'policies/models.md', 'runtime/capabilities.md', 'flow/delegation.md', 'code/ldd.md', 'roles/pm.md', 'documents/templates/HANDOFF.md', 'documents/templates/VISION.md', 'code/navigation.md', 'prompting/agent-prompt-design.md', 'prompting/brainstorm.md', 'prompting/decomposition.md', 'prompting/grace.md', 'prompting/prompt-markup.md', 'prompting/solution-design.md', 'prompting/superposition-collapse.md', 'prompting/verification.md', 'policies/autonomy.md', 'policies/credentials.md', 'policies/language.md'}
 ROOT_EXCLUDED = {"README.md", "CHANGELOG.md"}
 SKIPPED_DIRS = {".git", "doxygen_output", "__pycache__", ".pytest_cache", "tests", "examples", "implementations"}
 TEMPLATE_NAMES = ["AGENTS.md", "VISION.md", "ROADMAP.md", "TASKS.md", "HANDOFF.md"]
@@ -213,7 +213,7 @@ def neutral_paths(root: pathlib.Path) -> List[str]:
 
 
 # region FUNC_test_layout_counts_pm_release [DOMAIN(8): Skeleton; CONCEPT(9): LayoutCount; TECH(4): pytest]
-## @purpose Prove the arithmetic of the amendment: 74 files in the constant, 67 after the amendment, 4 stubs.
+## @purpose Prove the arithmetic of the amendment: 74 files in the constant, 67 after the amendment, 2 stubs.
 ## @io None -> None
 ## @complexity 2
 def test_layout_counts_pm_release():
@@ -222,7 +222,7 @@ def test_layout_counts_pm_release():
     print("[IMP:9][test_layout_counts][COUNT] layout=%d amended=%d stubs=%d" % (len(LAYOUT), len(amended), len(stubs)))
     assert len(LAYOUT) == 74 and len(set(LAYOUT)) == 74
     assert len(amended) == 67
-    assert len(stubs) == 4
+    assert len(stubs) == 2
 # endregion FUNC_test_layout_counts_pm_release
 
 
@@ -331,7 +331,7 @@ def test_checks_conform_documents_the_tool_with_its_anchors(repo_root, read_card
 
 
 # region FUNC_test_neutral_files_match_pm_release [DOMAIN(8): Skeleton; CONCEPT(9): NeutralCount; TECH(4): pathlib]
-## @purpose Prove the totals: 71 neutral files, of which 4 stubs, 67 drafts and no stable file, the drafts being the named sixty-seven.
+## @purpose Prove the totals: 71 neutral files, of which 2 stubs, 69 drafts and no stable file, the drafts being the named sixty-nine.
 ## @io (pathlib.Path, Callable) -> None
 ## @complexity 4
 def test_neutral_files_match_pm_release(repo_root, read_card):
@@ -343,7 +343,7 @@ def test_neutral_files_match_pm_release(repo_root, read_card):
     stubs = {p for p, s in statuses.items() if s == "stub"}
     print("[IMP:9][test_neutral_files][COUNT] neutral=%d stubs=%d drafts=%d" % (len(statuses), len(stubs), len(drafts)))
     assert len(statuses) == 71
-    assert len(stubs) == 4
+    assert len(stubs) == 2
     assert drafts == DRAFTS
 # endregion FUNC_test_neutral_files_match_pm_release
 
@@ -399,13 +399,13 @@ def test_parameters_registry_declares_the_seven(repo_root):
 
 
 # region FUNC_test_spec_version_is_0_19_0 [DOMAIN(7): Version; CONCEPT(8): SpecVersion; TECH(4): bytes]
-## @purpose Prove that the version file holds the line 1.0.0 and a newline, and nothing else.
+## @purpose Prove that the version file holds the line 1.1.0 and a newline, and nothing else.
 ## @io pathlib.Path -> None
 ## @complexity 1
 def test_spec_version_is_0_19_0(repo_root):
     data = (repo_root / "SPEC_VERSION").read_bytes()
     print("[IMP:9][test_spec_version][RESULT] bytes=%d" % len(data))
-    assert data == b"1.0.0\n"
+    assert data == b"1.1.0\n"
 # endregion FUNC_test_spec_version_is_0_19_0
 
 

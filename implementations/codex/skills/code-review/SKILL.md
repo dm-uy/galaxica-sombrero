@@ -11,6 +11,6 @@ Trigger: A stable completed candidate needs independent cumulative review.
 
 Full owners: `roles/reviewer.md`, `flow/finalize.md`, `process/code-review.md`.
 
-Use the separately assigned read-only Reviewer. Inspect complete baseline-to-result delta including new files and surrounding source; assess correctness, regressions, contracts, concurrency/data loss/security and real side effects. Return actionable located findings with trigger/impact/verification or evidenced no findings and limits. The process/code-review stub supplies no extra procedure; current Reviewer is substantive. Never repair or approve integration.
+Use the separately assigned read-only Reviewer. Inspect complete baseline-to-result delta including new files and surrounding source; assess correctness, regressions, contracts, concurrency/data loss/security and real side effects. Return actionable located findings with trigger/impact/verification or evidenced no findings and limits. The complete process/code-review owner supplies the stable-candidate assignment, judgment and parent-owned continuation procedure; current Reviewer retains every substantive duty. Never repair or approve integration.
 
 Return the actual scoped artifact/evidence and limitations to the assigning parent. A command, template, hash or producer SUCCESS never certifies execution, independence or concrete-result acceptance.

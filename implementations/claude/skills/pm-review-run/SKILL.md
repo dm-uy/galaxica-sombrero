@@ -11,7 +11,7 @@ Answer one question from the records: what did the agents actually do, and what 
 
 Owners — read in full before acting:
 - `${CLAUDE_PLUGIN_ROOT}/../../checks/run-audit.md`
-- `${CLAUDE_PLUGIN_ROOT}/../../process/review.md` (a disclosed stub: it supplies no procedure, the present duties come from the run audit)
+- `${CLAUDE_PLUGIN_ROOT}/../../process/review.md` (complete read-only run review; original audit obligations and learning limits remain authoritative)
 - `${CLAUDE_PLUGIN_ROOT}/../../process/learning.md`
 - `${CLAUDE_PLUGIN_ROOT}/../../policies/models.md`
 - `${CLAUDE_PLUGIN_ROOT}/references/claude-runtime.md`

@@ -11,6 +11,6 @@ Trigger: Explicit analysis of a completed run; proposals only; comparative measu
 
 Full owners: `process/learning.md`, `process/review.md`, `checks/run-audit.md`.
 
-Read original phase failures, retries, costs, gates, scope and delivery evidence. Distinguish missing telemetry from zero. Return evidence-backed findings and, only within a matching analysis grant, one-variable hypotheses with predicted true/false observations, cost and success measure. Preserve the original run. Do not apply proposals, manufacture statistics, run experiments or create a learning system.
+Use the complete read-only run-review procedure and return its evidence-backed report plus an unsent owner-ready continuation draft. Read original phase failures, retries, costs, gates, scope and delivery evidence. Distinguish missing telemetry from zero. Return evidence-backed findings and, only within a matching analysis grant, one-variable hypotheses with predicted true/false observations, cost and success measure. Preserve the original run. Do not apply proposals, manufacture statistics, run experiments or create a learning system.
 
 Return the actual scoped artifact/evidence and limitations to the assigning parent. A command, template, hash or producer SUCCESS never certifies execution, independence or concrete-result acceptance.

@@ -2,33 +2,28 @@
 
 ## M28-C1 Required owners and native prompt routing
 
-State: owner selected route continuation; focused reconnaissance and exact implementation specification prepared, Code decision pending. [Specification](specs/m28-c1-required-owners-routing.md), [focused reconnaissance](notes/RECON_2026-10-13_c1-required-owners.md).
+State: exact implementation and signature-only amendment approved; implementation, renewed independent QA05, whole Review and assigned Architect Finalize verified. Result delivery is for review; main integration and installed activation remain held. [Specification](specs/m28-c1-required-owners-routing.md), [amendment](notes/m28-c1-amendment-01.md), [result](notes/m28-c1-result.md).
 
-Goal: complete the two blocking required-owner bodies and the existing one-shot external-agent prompt route. Tight coherent version compatibility is explicit in the specification; schema/wire/guards remain protected. No source change, test/native flow, install or loader switch was performed during preparation.
+Delivered: substantive run-review and code-review owners; complete native one-shot/loop prompt selection; exact neutral1.1/Codex source2.1 compatibility with unchanged wire/schema/algorithms and Claude source1.0. Full current suites597/101/526 and candidate-native/CLI/map proof are bounded evidence. The original partial Code BUG_REPORT and four counted repairs remain retained; no manufactured Code SUCCESS or autonomous-engine advancement.
 
-Next: owner decision on this exact C1 spec, then scope-bound Architect → Code → independent QA/Review → assigned Architect Finalize. Main merge and activation remain separate. Preparation delivery continues in origin draft PR #2; its main integration remains ungranted.
-
+Next: present the concrete cumulative C1/M27 branch for the distinct owner integration decision. No main merge, publication or loader change follows automatically. The next exact implementation slice is C2 after current result acceptance/integration, with reconnaissance and specification before Code. A later source defect cannot silently consume Debug5: this run spent4/4.
 
 ## M27 Consolidate coverage before native-source activation
 
-State: owner-approved outcome; M27 preparation complete and independently checked; exact implementation specifications remain next. [Coverage contract](specs/m27-self-contained-coverage.md), [source accounting](notes/RECON_2026-10-13_self-contained-coverage.md).
+State: owner-approved outcome; preparation complete and independently checked. [Coverage contract](specs/m27-self-contained-coverage.md), [source accounting](notes/RECON_2026-10-13_self-contained-coverage.md), [matrix](notes/m27-coverage-matrix.json). The preparation-only draft PR #2 remains unmerged; its records are included in the cumulative C1 result for review.
 
-Goal: the framework and its native Codex adaptation cover at least the currently used in-house methodology and require no external in-house skill/plugin source. Whole-duty behavioral parity is owed; equal entry names are insufficient.
+Whole-duty behavioral parity is still owed. C1 closes only the first measured gaps; equal topic names, finite helper tests and this construction chat do not establish full coverage or active loading. Preserve available capacity even when its routine activation is deliberately deferred.
 
-Deliverable: measured source population and duty/converse matrix, native mechanisms and loading gaps, explicit applicable/deferred-capacity distinction, and exact bounded implementation slice proposal with meaningful checks.
+## Next bounded slices
 
-MAY EDIT: four current PM records, the M27 contract, reconnaissance/synthesis and its public duty matrix `notes/m27-coverage-matrix.json`. Source packages, neutral norms, checkers/tests/guards/versions and global configuration remain read-only during preparation. Root owns these records; independent source lanes own only private evidence directories. Permanent main remains clean; old preparation archive and foreign research are preserved.
+- C2: consumer PM profile, conventions checks, map and migration.
+- C3: native safeguards and hooks.
+- C4: SDK prompt carriers, transcript import and candidate-processing capacity; reconcile protected prompting commentary in its appropriate scope.
+- C5: fresh canonical-source autonomous development, resume and isolation proof.
+- C6: actual source-loader handover after the matching owner decision.
 
-Done when: all current methodology comparison populations are inventoried and hash-bound, findings verified against bodies and mechanisms, every applicable duty mapped or a concrete gap retained, and the next exact slice is reviewable. Missing or partial evidence is named; no unsupported FULL disposition or silent omission.
+These remain route selections, not approved Code or environment changes. Each new exact scope requires reconnaissance and its matching specification decision.
 
-Delivery: origin draft PR #2 on `codex/m27-coverage-plan`; preparation-result main integration is pending.
+## Retained completion and separate scopes
 
-Next: approve the exact resulting implementation specification before Architect/Code. Prepare and review the concrete implementation before its separate main/activation action. Existing clear matching consent counts; the accepted outcome is not re-asked.
-
-## Retained completed checkpoint
-
-M26 is complete: permanent canonical checkout and maintainer onboarding; origin PR #1 integrated, current records synchronized and preparation entry marked historical. [Acceptance and proof](notes/m26-maintainer-onboarding.md).
-
-## Deferred activation and separate scopes
-
-Public visibility, new concurrent feature writers and later frontend/Telegram/MCP work remain separately scoped. Systematic learning, experiments and comparative measurement are not started; their source-supplied capacity must still be accounted for. Native live proof and environment source binding belong to the resulting exact specification and matching activation decision, not this preparation task. Built-in host tools remain available environment dependencies.
+M26 onboarding is complete and integrated through PR #1. [Record](notes/m26-maintainer-onboarding.md). Preserve clean permanent main, archival source, foreign work and held/failed history. Public visibility, concurrent feature writers and later frontend/Telegram/MCP work remain separate. Systematic learning, experiments and comparative measurement are not activated; built-in host tools remain environment dependencies.
