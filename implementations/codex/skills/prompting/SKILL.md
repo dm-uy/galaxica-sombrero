@@ -11,6 +11,6 @@ Trigger: Author or review a prompt contract for another role/agent; never execut
 
 Full owners: `prompting/grace.md`, `prompting/solution-design.md`, `policies/language.md`.
 
-Write explicit goal, context, constraints/tool authority, output schema, success checks and useful expected examples under the full applicable GRACE profile. Critical obligations early, concrete task after context, instructions separated from data. Route long mixed content to markup, factual checking to verify, phases to decompose and tool loops to agent-design. Preserve native message/schema surface; no invented neuroscience, universal attention figures or mental-reading proof.
+Write explicit goal, context, constraints/tool authority, output schema, success checks and useful expected examples under the full applicable GRACE profile. Critical obligations early, concrete task after context, instructions separated from data. Route long mixed content to markup, factual checking to verify and phases to decompose. For another agent's system prompt, one-shot or loop, load the full prompting-agent-design entry and its neutral agent-prompt-design owner before authoring; ordinary short human-read prose keeps the simple profile. Preserve native message/schema surface; no invented neuroscience, universal attention figures or mental-reading proof.
 
 Return the actual scoped artifact/evidence and limitations to the assigning parent. A command, template, hash or producer SUCCESS never certifies execution, independence or concrete-result acceptance.

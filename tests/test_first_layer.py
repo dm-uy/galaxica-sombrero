@@ -12,7 +12,7 @@
 ## Q: Why a separate reader and synthetic negative cases?
 ## A: A checker must reject weakening independently of the production conformance parser.
 ## @changes
-## LAST_CHANGE: [v1.0.0 - Reconcile current M19 boundary/release facts and paired source operands; preserve original assertions/pins/refusals/restoration; runtime checks pending.]
+## LAST_CHANGE: [1.1.0 - Reconcile current M19 boundary/release facts and paired source operands; preserve original assertions/pins/refusals/restoration; runtime checks pending.]
 ## @modulemap
 ## FUNC 7[read subject] => read_subject
 ## FUNC 7[require rule] => require_rule
@@ -283,7 +283,7 @@ def test_release_and_example_adapter_are_current(repo_root):
     adapter = json.loads((repo_root / "examples/adapter.example.json").read_text(encoding="utf-8"))
     changes = (repo_root / "CHANGELOG.md").read_text(encoding="utf-8").split("## 0.2.0", 1)
     print("[IMP:9][test_release_and_example_adapter_are_current][CHECK] version bytes=%d" % len(version))
-    assert version == b"1.0.0\n" and adapter["spec_version"] == "1.0.0"
+    assert version == b"1.1.0\n" and adapter["spec_version"] == "1.1.0"
     assert adapter["parameters"]["gate-cadence"] == "per-change"
     assert len(changes) == 2
     entry = changes[1].split("## ", 1)[0]

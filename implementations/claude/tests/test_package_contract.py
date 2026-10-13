@@ -23,7 +23,7 @@
 ## Q: Why a line parser for frontmatter instead of PyYAML?
 ## A: The package is stdlib-only; carrier and skill frontmatter is deliberately flat, and the parser refuses nesting.
 ## @changes
-## LAST_CHANGE: [v1.0.0 - Initial M22 package contract oracle.]
+## LAST_CHANGE: [1.1.0 - Initial M22 package contract oracle.]
 ## @modulemap
 ## FUNC 6[Read flat frontmatter and body of a Markdown carrier] => _frontmatter
 ## FUNC 8[Recompute the neutral Markdown population under FMT-1] => _neutral_population
@@ -192,7 +192,7 @@ def test_manifest_and_adapter(caplog):
     assert plugin["name"] == "methodology-claude" and plugin["version"] == "1.0.0" and plugin["license"] == "MIT"
     assert not plugin["name"].startswith(("claude", "anthropic"))
     assert adapter["harness"] == "methodology-claude" and adapter["spec_root"] == "../../"
-    assert adapter["spec_version"] == (NEUTRAL / "SPEC_VERSION").read_text().strip() == "1.0.0"
+    assert adapter["spec_version"] == (NEUTRAL / "SPEC_VERSION").read_text().strip() == "1.1.0"
     assert set(adapter["files"]) == neutral and len(neutral) == 71
     assert all(rule == {"mode": "reference", "via": "references/adoption.md"} for rule in adapter["files"].values())
     assert unnamed == []

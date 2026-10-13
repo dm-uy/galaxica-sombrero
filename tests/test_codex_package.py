@@ -78,13 +78,13 @@ def _package_assembly(root):
             raise ValueError("regular owned co-located package directory required")
         if set(p.name for p in package.parent.iterdir() if p.name != ".DS_Store") != DECLARED_PACKAGES:
             raise ValueError("unknown sibling package")
-        if not (root / "SPEC_VERSION").is_file() or (root / "SPEC_VERSION").read_text() != "1.0.0\n":
+        if not (root / "SPEC_VERSION").is_file() or (root / "SPEC_VERSION").read_text() != "1.1.0\n":
             raise ValueError("unsupported detached neutral dependency")
         if not all((root / rel).is_file() and "status: draft\n" in (root / rel).read_text() for rel in CORE):
             raise ValueError("missing substantive neutral core")
         operation = "Layout"
         layout = json.loads((package / "references/package-layout.json").read_text())
-        if not isinstance(layout, dict) or set(layout) != {"package", "version", "profile", "files", "roles"} or layout.get("package") != "methodology-codex" or layout.get("version") != "2.0.0" or layout.get("profile") != "colocated-explicit-source" or layout.get("roles") != ROLES:
+        if not isinstance(layout, dict) or set(layout) != {"package", "version", "profile", "files", "roles"} or layout.get("package") != "methodology-codex" or layout.get("version") != "2.1.0" or layout.get("profile") != "colocated-explicit-source" or layout.get("roles") != ROLES:
             raise ValueError("unsupported package profile")
         rows = layout.get("files")
         if not isinstance(rows, list) or not rows:
@@ -123,7 +123,7 @@ def _package_assembly(root):
             raise ValueError("missing or undeclared actual package member")
         operation = "Metadata"
         plugin = json.loads((package / ".codex-plugin/plugin.json").read_text())
-        if plugin.get("name") != "methodology-codex" or plugin.get("version") != "2.0.0":
+        if plugin.get("name") != "methodology-codex" or plugin.get("version") != "2.1.0":
             raise ValueError("native metadata identity mismatch")
         LOGGER.info("[IMP:9][_package_assembly][VALIDATION_SUCCESS] members=%d", len(actual))
         return declared
@@ -149,7 +149,7 @@ def _show_trace(records):
 # region FUNC_test_neutral_boundary_and_complete_package [DOMAIN(9): Boundary; CONCEPT(10): RealFilesystem; TECH(7): pytest]
 ## @purpose Verify the actual complete shipped package and scoped neutral boundary through real source and the actual common checker.
 ## @uses test_codex_package._package_assembly, test_codex_package._show_trace, conformlib.markdown.list_neutral_files, run_cli
-## @io Input: current canonical repo_root, owned repo_copy/tmp_path and actual caplog/runner/deny fixture. Output: None after exact47/71/67/4 and malformed ordinary-root refusal.
+## @io Input: current canonical repo_root, owned repo_copy/tmp_path and actual caplog/runner/deny fixture. Output: None after exact47/71/69/2 and malformed ordinary-root refusal.
 ##   Side effects: only owned bad Markdown created then removed; real checker output and visible critical trace. Guarantees: original tree untouched; expected membership is independent. Raises: AssertionError for incorrect source/boundary/verdict. System importance:9. Example: native SKILL cards are excluded, ordinary bad card fails.
 ## @complexity 5
 def test_neutral_boundary_and_complete_package(repo_root, repo_copy, caplog, run_cli, deny_list):
@@ -165,7 +165,7 @@ def test_neutral_boundary_and_complete_package(repo_root, repo_copy, caplog, run
     assert any("[VALIDATION_SUCCESS]" in r.getMessage() for r in caplog.records)
     assert not [r for r in caplog.records if r.levelno >= logging.ERROR]
     statuses = [(repo_root / p).read_text().split("status: ", 1)[1].split("\n", 1)[0] for p in expected]
-    assert statuses.count("draft") == 67 and statuses.count("stub") == 4
+    assert statuses.count("draft") == 69 and statuses.count("stub") == 2
     control_code, control_out, _ = run_cli(["self", "--root", str(repo_copy), "--deny-list", str(deny_list[0]), "--json"])
     print("[IMP:9][test_neutral_boundary_and_complete_package][CONTROL] exit=%d" % control_code)
     assert control_code == 0

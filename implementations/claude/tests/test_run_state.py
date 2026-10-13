@@ -30,7 +30,7 @@
 ## Q: Why does the visible-runner probe start a child pytest instead of inspecting the source?
 ## A: TST-301 is about what the documented visible runner shows; only a child process under -s -v shows what a reader of the test run sees, and a source scan would pass a print that never executes.
 ## @changes
-## LAST_CHANGE: [1.0.0 - Port of the sibling package suite to the Claude Code package: pending-member placeholders, member completeness check, package identity and layout refusals, adapter Debug allowance refusals. Debug repair of independent Review round 2: candidate exclusion follows git ignore rules with a declared fallback list and keeps the generated build and cache names excluded by name in git targets; 19 cases over real git repositories. Debug repair of independent Review and QA round 3: hermetic git probes (marker core.fsmonitor program never runs during init, show, record, inventory and baseline; foreign GIT_DIR, GIT_INDEX_FILE and GIT_WORK_TREE leave the candidate and baseline unchanged), the ambient .DS_Store file in the package, literal membership diagnostics naming offending paths, and the printed trace of test_real_package_complete with its child-runner probe.]
+## LAST_CHANGE: [1.1.0 - Port of the sibling package suite to the Claude Code package: pending-member placeholders, member completeness check, package identity and layout refusals, adapter Debug allowance refusals. Debug repair of independent Review round 2: candidate exclusion follows git ignore rules with a declared fallback list and keeps the generated build and cache names excluded by name in git targets; 19 cases over real git repositories. Debug repair of independent Review and QA round 3: hermetic git probes (marker core.fsmonitor program never runs during init, show, record, inventory and baseline; foreign GIT_DIR, GIT_INDEX_FILE and GIT_WORK_TREE leave the candidate and baseline unchanged), the ambient .DS_Store file in the package, literal membership diagnostics naming offending paths, and the printed trace of test_real_package_complete with its child-runner probe.]
 ## @modulemap
 ## FUNC 2[Attach full module documentation with no runtime effects] => test_run_state._module_contract
 ## FUNC 8[List the member paths the real layout declares] => test_run_state.layout_declared
@@ -552,7 +552,7 @@ def test_package_binding_identity_and_layout_refusals(tmp_path, caplog, damage):
 # region FUNC_test_layout_driven_count_and_identity [DOMAIN(9): NativeMethodology; CONCEPT(10): PackageIdentity, LayoutDrivenCount; TECH(7): pytest, json]
 ## @purpose Verify the positive side of the binding: the run contract is methodology-claude/1.0.0 at schema 2, hook-config and workflow member kinds are accepted, and the package member count follows the declared layout instead of a literal.
 ## @uses run_state.initialize, test_run_state.build_tree, test_run_state.edit_json, test_run_state.expose
-## @io Input: tmp_path owned Path, caplog LogCaptureFixture. The test removes one declared example member from both the layout and the owned tree, then initializes. Output: None after asserting the contract version, schema 2, a package row count equal to the shortened layout, the dropped member absent from the rows, the layout containing hook-config and workflow kinds, 71 neutral rows, neutral version 1.0.0, and the six core names. Side effects: owned copy only. Errors: AssertionError. Example: a layout shorter by one member binds with one row fewer and no error record.
+## @io Input: tmp_path owned Path, caplog LogCaptureFixture. The test removes one declared example member from both the layout and the owned tree, then initializes. Output: None after asserting the contract version, schema 2, a package row count equal to the shortened layout, the dropped member absent from the rows, the layout containing hook-config and workflow kinds, 71 neutral rows, neutral version 1.1.0, and the six core names. Side effects: owned copy only. Errors: AssertionError. Example: a layout shorter by one member binds with one row fewer and no error record.
 ## @complexity 5
 def test_layout_driven_count_and_identity(tmp_path, caplog):
     logger.info('[IMP:4][test_layout_driven_count_and_identity][START] owned behavioral verification')
@@ -571,7 +571,7 @@ def test_layout_driven_count_and_identity(tmp_path, caplog):
     assert state['schema_version'] == 2 and state['contract_version'] == 'methodology-claude/1.0.0'
     assert len(rows) == len(layout['files']) and dropped not in {row['path'] for row in rows}
     assert {'hook-config', 'workflow'} <= kinds
-    assert len(state['bindings']['neutral']) == 71 and state['bindings']['neutral_version'] == '1.0.0'
+    assert len(state['bindings']['neutral']) == 71 and state['bindings']['neutral_version'] == '1.1.0'
     assert state['bindings']['core'] == list(run_state.CORE) and path.is_file()
     logger.info('[IMP:9][test_layout_driven_count_and_identity][RESULT] behavioral assertions completed')
     # END_BLOCK_BusinessLogic

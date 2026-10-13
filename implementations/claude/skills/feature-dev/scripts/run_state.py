@@ -36,7 +36,7 @@
 ## Q: Why does every git call force core.fsmonitor off and drop the caller's repository-redirecting environment?
 ## A: Round 3 reproduced two failures. git ls-files --others --ignored and git status run the program a target repository configures as core.fsmonitor, so observing a repository executed code it owns; and an inherited GIT_DIR or GIT_INDEX_FILE made the enumeration read a foreign index, which silently dropped a tracked file from the candidate (fail open). A command-line -c value outranks repository, environment and global configuration, and removing the redirecting variables makes git discover the repository of the target path itself.
 ## @changes
-## LAST_CHANGE: [1.0.0 - Claude Code package binding of the schema2 helper: package methodology-claude, profile colocated-in-place, roles under agents, hook-config and workflow member kinds, member count from the declared layout. Debug repair of independent Review round 2: the target candidate follows git ignore rules (STATE-102) with a declared fallback list otherwise, the candidate records exclusion_mode, ignored trees are skipped before any link check, candidate comparison uses files and digest, and the generated directory names stay excluded by name in git mode as a deliberate superset. Debug repair of independent Review and QA round 3: every git call is hermetic (core.fsmonitor off, repository-redirecting environment dropped), the package exclusion covers the ambient .DS_Store file, and the package membership refusal names the offending paths.]
+## LAST_CHANGE: [1.0.0 - Neutral1.1.0 compatibility; Claude Code package binding of the schema2 helper: package methodology-claude, profile colocated-in-place, roles under agents, hook-config and workflow member kinds, member count from the declared layout. Debug repair of independent Review round 2: the target candidate follows git ignore rules (STATE-102) with a declared fallback list otherwise, the candidate records exclusion_mode, ignored trees are skipped before any link check, candidate comparison uses files and digest, and the generated directory names stay excluded by name in git mode as a deliberate superset. Debug repair of independent Review and QA round 3: every git call is hermetic (core.fsmonitor off, repository-redirecting environment dropped), the package exclusion covers the ambient .DS_Store file, and the package membership refusal names the offending paths.]
 ## @modulemap
 ## FUNC 2[Attach full module documentation with no runtime effects] => run_state._module_contract
 ## FUNC 4[Stamp a chronological observation in UTC.] => run_state._stamp
@@ -483,7 +483,7 @@ def _bindings(framework, adapter, spec):
         _expect(binding.get('spec_root') == '../../', 'co-located spec_root must be ../../')
         neutral = (adapter.parent / _text(binding.get('spec_root'), 'neutral binding missing')).resolve()
         _expect(neutral.is_dir() and neutral == framework.parents[1], 'unsupported detached neutral binding')
-        _expect((neutral / 'SPEC_VERSION').read_text().strip() == binding.get('spec_version') == '1.0.0', 'neutral version mismatch')
+        _expect((neutral / 'SPEC_VERSION').read_text().strip() == binding.get('spec_version') == '1.1.0', 'neutral version mismatch')
         profile_cap = _decimal_cap(binding['parameters']['debug-entry-cap'])
         _expect(profile_cap <= 4, 'BLOCKED: adapter Debug extension unsupported')
         declared = binding.get('files')
@@ -504,7 +504,7 @@ def _bindings(framework, adapter, spec):
         neutral_rows = [_file(neutral / _relative(relative)) for relative in sorted(declared)]
         for row, relative in zip(neutral_rows, sorted(declared)):
             row['path'] = relative
-        result = {'framework': str(framework), 'adapter': _file(adapter), 'package': package, 'neutral_root': str(neutral), 'neutral_version': '1.0.0', 'neutral': neutral_rows, 'spec': _file(spec), 'core': list(CORE), 'debug_cap_profile': profile_cap, 'layout': _file(layout_path)}
+        result = {'framework': str(framework), 'adapter': _file(adapter), 'package': package, 'neutral_root': str(neutral), 'neutral_version': '1.1.0', 'neutral': neutral_rows, 'spec': _file(spec), 'core': list(CORE), 'debug_cap_profile': profile_cap, 'layout': _file(layout_path)}
         result['digest'] = _digest(result)
         logger.info('[IMP:9][_bindings][RESULT] package=%d neutral=%d', len(expected), len(neutral_rows))
         return result
