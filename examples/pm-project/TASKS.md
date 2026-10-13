@@ -1,5 +1,14 @@
 # Current maintainer task
 
+## M28-C1 Required owners and native prompt routing
+
+State: owner selected route continuation; focused reconnaissance and exact implementation specification prepared, Code decision pending. [Specification](specs/m28-c1-required-owners-routing.md), [focused reconnaissance](notes/RECON_2026-10-13_c1-required-owners.md).
+
+Goal: complete the two blocking required-owner bodies and the existing one-shot external-agent prompt route. Tight coherent version compatibility is explicit in the specification; schema/wire/guards remain protected. No source change, test/native flow, install or loader switch was performed during preparation.
+
+Next: owner decision on this exact C1 spec, then scope-bound Architect → Code → independent QA/Review → assigned Architect Finalize. Main merge and activation remain separate. Preparation delivery continues in origin draft PR #2; its main integration remains ungranted.
+
+
 ## M27 Consolidate coverage before native-source activation
 
 State: owner-approved outcome; M27 preparation complete and independently checked; exact implementation specifications remain next. [Coverage contract](specs/m27-self-contained-coverage.md), [source accounting](notes/RECON_2026-10-13_self-contained-coverage.md).

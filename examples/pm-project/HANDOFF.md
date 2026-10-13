@@ -1,8 +1,12 @@
-# Current checkpoint: M27 consolidation preparation
+# Current checkpoint: M28-C1 exact specification prepared
 
 Owner on 2026-10-13 requires this canonical framework and its Codex adaptation to cover at least all currently used in-house methodology, with no necessary external in-house skills/plugins. [Accepted outcome and coverage contract](specs/m27-self-contained-coverage.md). M26 is complete; its source handover did not switch the active installed skill catalogue.
 
-## Current work
+## Next eligible action
+
+Owner requested continuation along the selected route. [Exact C1 specification](specs/m28-c1-required-owners-routing.md) and [focused reconnaissance](notes/RECON_2026-10-13_c1-required-owners.md) cover two required stub promotions, existing native prompt routing and the tight neutral-version bridge. This precise Code/version/fixture scope has not yet been accepted; present it for the missing decision, then run the approved implementation workflow. Do not re-ask the already accepted consolidation outcome. No protected source/helper/guard, runtime version or user settings have changed in preparation.
+
+## Retained M27 work
 
 Independent read-only lanes completed inspection of the current native PM, project-methodology and prompting-methodology inputs against actual neutral owners and Codex carriers/helpers. Root synthesized [source accounting](notes/RECON_2026-10-13_self-contained-coverage.md), distinguishes complete duties from missing mechanisms or wiring, and proposed bounded closure slices C1–C6. Independent static verification passed for the seven-document preparation result, source/matrix accounting, links, preserved baseline and both privacy/self scans. The next work is the exact implementation specification, beginning with required-owner/routing closure. Same topic names and earlier test counts are not full-transfer proof.
 

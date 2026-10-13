@@ -12,6 +12,8 @@ The owner selected this repository as the sole development source and a permanen
 
 Owner selected complete native coverage on 2026-10-13: this repository and its Codex adaptation must cover at least the currently used in-house methodology and operate without external in-house skills/plugins as necessary sources. [M27 contract](specs/m27-self-contained-coverage.md) defines duty-level accounting and behavioral proof. M27 prepares the measured matrix and exact implementation slices; no full-transfer or active-loader claim is made yet. Preserve available capability even where its routine activation remains deliberately deferred.
 
+First continuation is [M28-C1](specs/m28-c1-required-owners-routing.md): required-owner and prompt routing closure with explicit compatible version bindings. Its specification is prepared; implementation and activation are not yet claimed.
+
 ## Evidence and deliberate limits
 
 The initial private source release is the checked 261-file projection. Export full tests594/101/526, independent QA/Review/Finalize, GitHub private metadata and exact remote-clone comparisons are original bounded evidence, not proof of future changes. Every new change needs its own applicable validation. Consumer projects follow their own instructions and approval; maintaining this framework creates no grant to alter them.
