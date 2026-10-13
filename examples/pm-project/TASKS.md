@@ -1,5 +1,13 @@
 # Current maintainer task
 
+## M28-C2 Consumer PM profile and commands
+
+State: exact specification prepared for owner approval; no Code grant. [Specification](specs/m28-c2-consumer-profile.md), [reconnaissance](notes/RECON_2026-10-13_c2-consumer-profile.md), [delivery contract](notes/m28-c2-delivery-contract.json).
+
+Proposed: opt-in native consumer profile,13 seeds/four PM entries/three commands plus one shared resolver/four test modules;26 added members. Codex source2.2/member73/skill27/helper6 is prospective; current source2.1/member47 stays unchanged. Neutral1.1, wire2.0/schema2, six roles, Claude bytes and framework current-document format remain protected. Original-source missing-amendment/input-coverage/alias-corruption findings receive corrected native controls.
+
+Next: exact owner specification decision → Bootstrap/Architect with graph/visual gate → scope-bound Code → full independent QA/Review → assigned Finalize → separate result integration. C3 hooks, C4 SDK/import/ledger, C5 autonomous proof and C6 active loading remain later; no automatic installation/learning/consumer migration.
+
 ## M28-C1 Required owners and native prompt routing
 
 State: exact implementation and signature-only amendment approved; implementation, renewed independent QA05, whole Review and assigned Architect Finalize verified. Owner accepted and merged PR #3 at4a718d7 on 2026-10-13; installed activation remains held. [Specification](specs/m28-c1-required-owners-routing.md), [amendment](notes/m28-c1-amendment-01.md), [result](notes/m28-c1-result.md).
@@ -16,7 +24,7 @@ Whole-duty behavioral parity is still owed. C1 closes only the first measured ga
 
 ## Current C2 preparation
 
-Owner requested continuation after C1 merge. Account for current consumer PM templates, orientation/check commands, code-map utility and safe markup migration against their actual source mechanisms and neutral owners. Produce measured reconnaissance and an exact scoped specification before Code. Framework/package/checker/runtime source remains read-only during preparation. Root owns current records and public recon/spec; independent lanes write private evidence only.
+Owner requested continuation after C1 merge. Account for current consumer PM templates, orientation/check commands, code-map utility and safe markup migration against their actual source mechanisms and neutral owners. Measured reconnaissance and the exact scoped specification are prepared before Code. Framework/package/checker/runtime source remains read-only during preparation. Root owns current records and public recon/spec; independent lanes write private evidence only.
 
 ## Next bounded slices
 

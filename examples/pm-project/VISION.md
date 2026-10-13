@@ -12,7 +12,7 @@ The owner selected this repository as the sole development source and a permanen
 
 Owner selected complete native coverage on 2026-10-13: this repository and its Codex adaptation must cover at least the currently used in-house methodology and operate without external in-house skills/plugins as necessary sources. [M27 contract](specs/m27-self-contained-coverage.md) defines duty-level accounting and behavioral proof. M27 prepared the measured matrix and exact implementation slices; no full-transfer or active-loader claim is made yet. Preserve available capability even where its routine activation remains deliberately deferred.
 
-First continuation is [M28-C1](specs/m28-c1-required-owners-routing.md): required-owner and prompt routing closure with explicit compatible version bindings. Its exact implementation specification was accepted on 2026-10-13; the bounded result passed independent QA/Review and assigned Architect Finalize and is integrated through owner-approved PR #3. [Result and limits](notes/m28-c1-result.md). Installed-source activation remains separately held; current work is C2 preparation.
+First continuation is [M28-C1](specs/m28-c1-required-owners-routing.md): required-owner and prompt routing closure with explicit compatible version bindings. Its exact implementation specification was accepted on 2026-10-13; the bounded result passed independent QA/Review and assigned Architect Finalize and is integrated through owner-approved PR #3. [Result and limits](notes/m28-c1-result.md). Installed-source activation remains separately held; current work is the prepared [C2 consumer-profile specification](specs/m28-c2-consumer-profile.md), awaiting its exact Code decision.
 
 ## Evidence and deliberate limits
 

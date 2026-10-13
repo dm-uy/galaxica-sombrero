@@ -1,6 +1,6 @@
 # Methodology project route
 
-## Current: C1 integrated; C2 preparation
+## Current: C1 integrated; C2 specification ready
 
 Owner approved one permanent canonical checkout with local author/access configuration, shared agent instructions and project records, and archival retention of preparation source. [Decision and verification scope](notes/m26-maintainer-onboarding.md). Owner accepted the concrete result on 2026-10-13; origin PR #1 is merged at 86946f9. Permanent main is synchronized and preparation archive routing is established. Existing stable IDs and held history are retained.
 
@@ -15,7 +15,7 @@ Owner approved one permanent canonical checkout with local author/access configu
 | M25C | Held: separate native consumer decision. |
 | M26 | Complete: permanent canonical checkout, verified maintainer onboarding and owner-approved PR #1 integration. Preparation records are archival. |
 | M27 | Preparation complete and independently checked: frozen source inventory, duty/converse matrix and C1–C6 gap route. Owner accepted the self-contained non-regression outcome; preparation PR #2 is MERGED through owner-approved cumulative PR #3. |
-| M28 | C1 technical result verified: required review owners, native prompt route and neutral1.1/Codex source2.1 bridge; owner-approved PR #3 integrated at4a718d7. C2 preparation is active; C2–C4 Code requires the exact next specification decisions. |
+| M28 | C1 technical result verified: required review owners, native prompt route and neutral1.1/Codex source2.1 bridge; owner-approved PR #3 integrated at4a718d7. C2 reconnaissance/specification is prepared; C2–C4 Code requires the exact next specification decisions. |
 | M29 | Proposed: validate a fresh canonical-source autonomous run and controlled source binding; configure the owner environment only after the matching result/activation decision. |
 | Public visibility | Held: separate owner instruction to change the private repository to public. |
 
@@ -28,3 +28,5 @@ C1 intentionally changes the approved source bodies/routing and version signatur
 ## Selected continuation after C1 integration
 
 C2 consumer PM profile/check/map/migration → C3 native safeguards/hooks → C4 SDK prompt carriers/import/candidate capacity → C5 fresh autonomous/resume/isolation proof → C6 actual source-loader handover. Each exact slice begins with reconnaissance and its bounded specification. C1 construction is manual native role orchestration; candidate helper CLI proof does not substitute for C5. Systematic learning/measurement stays deferred without discarding its source-supplied capacity.
+
+Current proposed deliverable: [C2 exact specification](specs/m28-c2-consumer-profile.md) and [measured source evidence](notes/RECON_2026-10-13_c2-consumer-profile.md). Approval applies to its frozen26new-member scope and source2.2 proposal, not loader trust/public visibility or a new framework document format.

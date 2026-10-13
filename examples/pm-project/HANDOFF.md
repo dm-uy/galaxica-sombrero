@@ -1,4 +1,4 @@
-# Current checkpoint: C1 integrated; C2 preparation
+# Current checkpoint: C1 integrated; C2 specification ready
 
 The owner selected this canonical framework and its Codex adaptation as the complete source for the currently used in-house methodology. [Accepted outcome](specs/m27-self-contained-coverage.md). The bounded [C1 specification](specs/m28-c1-required-owners-routing.md) and [three-card signature amendment](notes/m28-c1-amendment-01.md) were separately approved on 2026-10-13; no new Code approval is needed.
 
@@ -8,7 +8,7 @@ C1 completes the two required review owners and the existing Codex one-shot exte
 
 Owner requested merge and route continuation on 2026-10-13. Origin PR #3 is MERGED at4a718d7; the pending M27 records are included and origin PR #2 is also recorded MERGED. Permanent main is synchronized and its complete271 source bytes/modes match the judged C1 delivery. Implementation78d4190 and delivery721226f remain retained.
 
-Next: C2 consumer PM profile/check/map/migration reconnaissance and exact specification, prepared on `codex/m28-c2-profile`. Continuation authorizes this preparation; C2 Code needs its matching specification decision. Preserve the C1 outcome and its exhausted budget rather than reopening it. Installed sources, loader trust/configuration and public visibility are unchanged.
+Next: review and approve the [exact C2 specification](specs/m28-c2-consumer-profile.md), based on [measured reconnaissance](notes/RECON_2026-10-13_c2-consumer-profile.md) and [frozen delivery scope](notes/m28-c2-delivery-contract.json), prepared on `codex/m28-c2-profile`. Independent source lanes verified original template/helper inputs and six owned original-mechanism probes; no C2 native implementation/probe is claimed. Continuation authorized this preparation; C2 Code needs its matching specification decision. Preserve the C1 outcome and its exhausted budget rather than reopening it. Installed sources, loader trust/configuration and public visibility are unchanged.
 
 ## Recovery and retained history
 
