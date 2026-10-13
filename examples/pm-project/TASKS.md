@@ -2,17 +2,21 @@
 
 ## M28-C1 Required owners and native prompt routing
 
-State: exact implementation and signature-only amendment approved; implementation, renewed independent QA05, whole Review and assigned Architect Finalize verified. Result delivery is for review; main integration and installed activation remain held. [Specification](specs/m28-c1-required-owners-routing.md), [amendment](notes/m28-c1-amendment-01.md), [result](notes/m28-c1-result.md).
+State: exact implementation and signature-only amendment approved; implementation, renewed independent QA05, whole Review and assigned Architect Finalize verified. Owner accepted and merged PR #3 at4a718d7 on 2026-10-13; installed activation remains held. [Specification](specs/m28-c1-required-owners-routing.md), [amendment](notes/m28-c1-amendment-01.md), [result](notes/m28-c1-result.md).
 
 Delivered: substantive run-review and code-review owners; complete native one-shot/loop prompt selection; exact neutral1.1/Codex source2.1 compatibility with unchanged wire/schema/algorithms and Claude source1.0. Full current suites597/101/526 and candidate-native/CLI/map proof are bounded evidence. The original partial Code BUG_REPORT and four counted repairs remain retained; no manufactured Code SUCCESS or autonomous-engine advancement.
 
-Next: present the concrete cumulative C1/M27 branch for the distinct owner integration decision. No main merge, publication or loader change follows automatically. The next exact implementation slice is C2 after current result acceptance/integration, with reconnaissance and specification before Code. A later source defect cannot silently consume Debug5: this run spent4/4.
+Next: C2 reconnaissance and exact specification on `codex/m28-c2-profile`, followed by its matching Code decision. Main merge of C1 does not activate loaders or grant C2 implementation. The C1 record stays complete with spent4/4; no later source repair can silently become Debug5.
 
 ## M27 Consolidate coverage before native-source activation
 
-State: owner-approved outcome; preparation complete and independently checked. [Coverage contract](specs/m27-self-contained-coverage.md), [source accounting](notes/RECON_2026-10-13_self-contained-coverage.md), [matrix](notes/m27-coverage-matrix.json). The preparation-only draft PR #2 remains unmerged; its records are included in the cumulative C1 result for review.
+State: owner-approved outcome; preparation complete and independently checked. [Coverage contract](specs/m27-self-contained-coverage.md), [source accounting](notes/RECON_2026-10-13_self-contained-coverage.md), [matrix](notes/m27-coverage-matrix.json). Preparation PR #2 is MERGED through the owner-approved cumulative PR #3; its records are integrated without a full-coverage claim.
 
 Whole-duty behavioral parity is still owed. C1 closes only the first measured gaps; equal topic names, finite helper tests and this construction chat do not establish full coverage or active loading. Preserve available capacity even when its routine activation is deliberately deferred.
+
+## Current C2 preparation
+
+Owner requested continuation after C1 merge. Account for current consumer PM templates, orientation/check commands, code-map utility and safe markup migration against their actual source mechanisms and neutral owners. Produce measured reconnaissance and an exact scoped specification before Code. Framework/package/checker/runtime source remains read-only during preparation. Root owns current records and public recon/spec; independent lanes write private evidence only.
 
 ## Next bounded slices
 

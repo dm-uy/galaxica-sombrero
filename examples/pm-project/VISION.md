@@ -4,7 +4,7 @@ Maintain one coherent, harness-neutral methodology and its complete Codex and Cl
 
 ## Current product and maintenance boundary
 
-The verified C1 candidate has neutral1.1.0 with71 owners/69 drafts/two stubs,1234 norms/444 anchors and unchanged28 capabilities/seven parameters. Codex source2.1.0 retains wire2.0.0/schema2,47 members,23 topics and six roles/two helpers; Claude source/wire1.0.0 retains59 members,28 skills,six agents/hooks/Workflow/protocol helpers and binds neutral1.1.0. Stable main remains neutral1.0/Codex2.0 until the matching integration decision. Complete co-located explicit-source/in-place loading remains the supported profile. MIT and the tested runtime/role/flow/gate/schema contracts are unchanged.
+Integrated C1 has neutral1.1.0 with71 owners/69 drafts/two stubs,1234 norms/444 anchors and unchanged28 capabilities/seven parameters. Codex source2.1.0 retains wire2.0.0/schema2,47 members,23 topics and six roles/two helpers; Claude source/wire1.0.0 retains59 members,28 skills,six agents/hooks/Workflow/protocol helpers and binds neutral1.1.0. Owner accepted PR #3 on 2026-10-13; stable main now contains neutral1.1/Codex source2.1. Complete co-located explicit-source/in-place loading remains the supported profile. MIT and the tested runtime/role/flow/gate/schema contracts are unchanged.
 
 The owner selected this repository as the sole development source and a permanent clean main checkout for package loading. Earlier preparation repositories and audit packets retain historical context without becoming a second maintained branch. [M26](notes/m26-maintainer-onboarding.md) establishes other-agent entry and machine-local Git identity/access, accepted and integrated through origin PR #1 on 2026-10-13. Configuration is local to each clone; it is not a credential or identity embedded in shared rules.
 
@@ -12,7 +12,7 @@ The owner selected this repository as the sole development source and a permanen
 
 Owner selected complete native coverage on 2026-10-13: this repository and its Codex adaptation must cover at least the currently used in-house methodology and operate without external in-house skills/plugins as necessary sources. [M27 contract](specs/m27-self-contained-coverage.md) defines duty-level accounting and behavioral proof. M27 prepared the measured matrix and exact implementation slices; no full-transfer or active-loader claim is made yet. Preserve available capability even where its routine activation remains deliberately deferred.
 
-First continuation is [M28-C1](specs/m28-c1-required-owners-routing.md): required-owner and prompt routing closure with explicit compatible version bindings. Its exact implementation specification was accepted on 2026-10-13; the bounded result passed independent QA/Review and assigned Architect Finalize and is delivered for review. [Result and limits](notes/m28-c1-result.md). Main integration and activation remain separately held.
+First continuation is [M28-C1](specs/m28-c1-required-owners-routing.md): required-owner and prompt routing closure with explicit compatible version bindings. Its exact implementation specification was accepted on 2026-10-13; the bounded result passed independent QA/Review and assigned Architect Finalize and is integrated through owner-approved PR #3. [Result and limits](notes/m28-c1-result.md). Installed-source activation remains separately held; current work is C2 preparation.
 
 ## Evidence and deliberate limits
 
