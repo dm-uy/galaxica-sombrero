@@ -1,21 +1,23 @@
 # Current maintainer task
 
-## M26 Establish permanent canonical maintenance
+## M27 Consolidate coverage before native-source activation
 
-State: complete. Owner accepted the result on 2026-10-13; origin PR #1 is merged at 86946f9 and permanent main is synchronized; [decision](notes/m26-maintainer-onboarding.md). This supersedes the initial release's preparation-only task record. Initial private upload and accepted M25B source projection are complete.
+State: owner-approved outcome; M27 preparation complete and independently checked; exact implementation specifications remain next. [Coverage contract](specs/m27-self-contained-coverage.md), [source accounting](notes/RECON_2026-10-13_self-contained-coverage.md).
 
-Deliverable: clean permanent main checkout with local owner-approved commit identity and authenticated origin access; source-controlled AGENTS startup and README entry; four consistent current records; tested PR; retained preparation archive after integration. No credentials or machine-private destination identifiers enter tracked source.
+Goal: the framework and its native Codex adaptation cover at least the currently used in-house methodology and require no external in-house skill/plugin source. Whole-duty behavioral parity is owed; equal entry names are insufficient.
 
-May edit: root AGENTS operational onboarding prose while preserving exact REPO-101..104 lines; README maintenance entry while preserving entire Local use; these four current records and the M26 decision note. Git author/helper and archive pointer are machine-local configuration, not source. No executable, package, licence, version, norm/anchor/call registry, schema, role/flow/gate or guard change.
+Deliverable: measured source population and duty/converse matrix, native mechanisms and loading gaps, explicit applicable/deferred-capacity distinction, and exact bounded implementation slice proposal with meaningful checks.
 
-Done when: actual configured identity/author and private origin access are verified independent of generic CLI login; permanent main stays clean; relevant existing root/interface/assembly tests, self/private lists/adapters and full local-link/scope/byte-mode preservation pass; independent review verifies the concrete PR; owner accepts main integration before archive entry promotion. Old source history, foreign changes and private delivery evidence remain intact.
+MAY EDIT: four current PM records, the M27 contract, reconnaissance/synthesis and its public duty matrix `notes/m27-coverage-matrix.json`. Source packages, neutral norms, checkers/tests/guards/versions and global configuration remain read-only during preparation. Root owns these records; independent source lanes own only private evidence directories. Permanent main remains clean; old preparation archive and foreign research are preserved.
 
-Other agents resume from AGENTS and current VISION/ROADMAP/HANDOFF/TASKS, preserve actual task grants and stop at an ungranted integration/publication action. No broad full-history scan, source duplication or inferred installed-plugin fallback. Record actual checks and rewrite HANDOFF at closure.
+Done when: all current methodology comparison populations are inventoried and hash-bound, findings verified against bodies and mechanisms, every applicable duty mapped or a concrete gap retained, and the next exact slice is reviewable. Missing or partial evidence is named; no unsupported FULL disposition or silent omission.
 
-## Next action
+Next: approve the exact resulting implementation specification before Architect/Code. Prepare and review the concrete implementation before its separate main/activation action. Existing clear matching consent counts; the accepted outcome is not re-asked.
 
-Select the next bounded scope from the retained route. No new feature, native consumer run, public visibility or loader activation is authorized by closing M26.
+## Retained completed checkpoint
 
-## Deferred scopes
+M26 is complete: permanent canonical checkout and maintainer onboarding; origin PR #1 integrated, current records synchronized and preparation entry marked historical. [Acceptance and proof](notes/m26-maintainer-onboarding.md).
 
-Public visibility, M25C native consumer, detached/global loading, user-level harness configuration and frontend → Telegram → MCP each need separate scope/decisions. Four process stubs and wider source accounting remain incomplete. Lightweight error recording remains; systematic learning and comparative improvement measurement are deferred. Historical spec scopes and examples are not present execution authority.
+## Deferred activation and separate scopes
+
+Public visibility, new concurrent feature writers and later frontend/Telegram/MCP work remain separately scoped. Systematic learning, experiments and comparative measurement are not started; their source-supplied capacity must still be accounted for. Native live proof and environment source binding belong to the resulting exact specification and matching activation decision, not this preparation task. Built-in host tools remain available environment dependencies.

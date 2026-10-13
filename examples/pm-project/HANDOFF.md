@@ -1,13 +1,17 @@
-# Current checkpoint: M26 complete
+# Current checkpoint: M27 consolidation preparation
 
-This Git repository and its origin are the canonical maintenance source. Owner approved a permanent checkout, local commit identity, shared agent instructions and archive preservation; [decision and scope](notes/m26-maintainer-onboarding.md). Initial private publication is complete: source release e8bcf604 contains the exact checked 261-file projection, MIT and a fresh one-commit baseline. This record supersedes the preparation-time M25B handoff.
+Owner on 2026-10-13 requires this canonical framework and its Codex adaptation to cover at least all currently used in-house methodology, with no necessary external in-house skills/plugins. [Accepted outcome and coverage contract](specs/m27-self-contained-coverage.md). M26 is complete; its source handover did not switch the active installed skill catalogue.
 
-## Accepted result and next action
+## Current work
 
-The permanent checkout is clean on main with machine-local author and authenticated-origin configuration. The onboarding branch updates AGENTS, README and the four durable records; source code, package bytes, schema/version and original Local use remain unchanged. Local validation passed: 33 existing regressions, both private self scans, all three adapters and independent scope/link/identity verification; see the decision note. Owner accepted the concrete result on 2026-10-13 ("yes"); origin PR #1 is merged at 86946f9. Permanent main is synchronized; earlier preparation entry/current records are marked archival with a machine-local canonical pointer. M26 is complete. Select the next bounded scope from the retained route; no new implementation scope is opened by this closure. Do not develop new features or recreate an export as a substitute.
+Independent read-only lanes completed inspection of the current native PM, project-methodology and prompting-methodology inputs against actual neutral owners and Codex carriers/helpers. Root synthesized [source accounting](notes/RECON_2026-10-13_self-contained-coverage.md), distinguishes complete duties from missing mechanisms or wiring, and proposed bounded closure slices C1–C6. Independent static verification passed for the seven-document preparation result, source/matrix accounting, links, preserved baseline and both privacy/self scans. The next work is the exact implementation specification, beginning with required-owner/routing closure. Same topic names and earlier test counts are not full-transfer proof.
 
-## Continue in any harness
+Do not start Code, modify guards/versions or global loaders from this preparation record. After recon, produce the exact implementable specification; reuse the already accepted outcome and ask only for the genuinely ungranted scope/action. Source bodies, failures, role/flow/gate/schema contracts, README Local use and foreign research remain protected.
 
-Start at root AGENTS and these current records, inspect real Git state and continue the current authorized task. Read relevant shared owners and the co-located package through its supported profile. Keep stable main clean; use isolated worktrees and scoped branches for edits. Verify local author before committing, keep credentials out of source, submit tested changes through a PR and preserve existing owner decisions. At closure reconcile evidence and rewrite HANDOFF.
+## Recovery and proof
 
-The four process stubs, broader source accounting, detached installation and model-effectiveness limits remain. M25C native consumer, public visibility and later frontend/Telegram/MCP steps need separate decisions. Lightweight error notes remain selected; systematic learning/improvement measurement stays deferred. Original source failures and export timing correction are retained outside this repo's public source; no earlier PASS becomes onboarding evidence.
+Start from AGENTS and current records; inspect real branch/status and original lane receipts before advancing. Main remains the clean stable package checkout; preparation edits live in an isolated scoped worktree. Private source identities/locations and raw comparison receipts stay outside tracked public source, with reproducible source-ID accounting retained in the synthesis. The original preparation repository is archival.
+
+## Boundaries
+
+Available method capability and routine activation are distinct. Lightweight error recording remains selected, and consolidation must not erase source-supplied capacity just because systematic learning/measurement is deferred. A useful fresh native cycle and controlled no-old-plugin source-binding proof are required for eventual completion; helper simulations or this existing chat do not certify them. Multiple parallel feature writers, public visibility and later client stages remain separate. M26's acceptance/history is retained in its note.

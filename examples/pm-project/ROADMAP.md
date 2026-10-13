@@ -1,6 +1,6 @@
 # Methodology project route
 
-## Current: M26 complete; next scope selection
+## Current: M27 source accounting and consolidation contract
 
 Owner approved one permanent canonical checkout with local author/access configuration, shared agent instructions and project records, and archival retention of preparation source. [Decision and verification scope](notes/m26-maintainer-onboarding.md). Owner accepted the concrete result on 2026-10-13; origin PR #1 is merged at 86946f9. Permanent main is synchronized and preparation archive routing is established. Existing stable IDs and held history are retained.
 
@@ -14,7 +14,12 @@ Owner approved one permanent canonical checkout with local author/access configu
 | M25B | Independently checked projection and owner acceptance complete; private GitHub upload of 261 files with fresh history verified. |
 | M25C | Held: separate native consumer decision. |
 | M26 | Complete: permanent canonical checkout, verified maintainer onboarding and owner-approved PR #1 integration. Preparation records are archival. |
+| M27 | Active preparation: frozen current-source inventory, duty/converse matrix, verified gaps and exact implementation slice proposal. Owner accepted the self-contained non-regression outcome. |
+| M28 | Proposed: close measured neutral/native coverage gaps and prove behavior; exact scope/specification required before Code. |
+| M29 | Proposed: validate a fresh canonical-source autonomous run and controlled source binding; configure the owner environment only after the matching result/activation decision. |
 | Public visibility | Held: separate owner instruction to change the private repository to public. |
+
+Current work: [M27 contract](specs/m27-self-contained-coverage.md) and source reconnaissance. Do not reopen M26 or change installed loading while preparation is active. M28/M29 are route proposals, not grants to run their code or activate settings.
 
 Other agents start in a complete clone at root AGENTS, read current records, develop isolated scoped branches, verify actual changes and deliver PRs. Do not regenerate a temporary publication project or synchronize development into the archived preparation source. Stable main remains clean for package loading.
 
