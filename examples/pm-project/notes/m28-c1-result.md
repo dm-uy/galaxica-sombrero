@@ -2,6 +2,8 @@
 
 Status: technical result verified for review; owner integration decision, main merge and installed activation remain pending. The exact [specification](../specs/m28-c1-required-owners-routing.md) and [version-signature amendment](m28-c1-amendment-01.md) were approved separately on 2026-10-13. [Development plan](../plans/m28-c1-required-owners-routing.md). The approved specification remains byte-identical; its proposal-era pending wording is historical, not a revocation of the recorded grant.
 
+Delivery: implementation commit78d4190 was locally created and pushed; origin draft PR #3 on `codex/m28-c1` is open against unchanged main. It includes the pending M27 records from preparation PR #2. A separate delivery-only bookkeeping commit records this pointer without changing judged framework/test/package source. Repository visibility and installed sources are unchanged.
+
 ## Delivered behavior and preserved boundaries
 
 The required run-review and code-review owners now have operative procedures, reusable forms and fictional positive/boundary/refusal cases. They retain existing roles, record provenance, independent judgment, read-only authority, six-field defect returns, eight QA scans, counted repair and terminal Finalize rules. Run review proposes an unsent continuation and reports missing telemetry as unknown; it does not execute learning or change the methodology.
