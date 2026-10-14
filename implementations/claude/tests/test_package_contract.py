@@ -245,7 +245,7 @@ def test_agent_carriers(caplog):
 ## @complexity 6
 def test_skill_entries(caplog):
     caplog.set_level(logging.INFO, logger=LOGGER.name)
-    parity = sorted(p.name for p in (NEUTRAL / "implementations/codex/skills").iterdir() if p.is_dir())
+    parity = sorted(p.name for p in (NEUTRAL / "implementations/codex/skills").iterdir() if p.is_dir() and p.name not in LIFECYCLE)
     topics = sorted(p.name for p in (PACKAGE / "skills").iterdir() if p.is_dir())
     problems = []
     for topic in topics:

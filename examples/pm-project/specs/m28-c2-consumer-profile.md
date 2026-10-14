@@ -1,8 +1,16 @@
+---
+status: approved
+approved-at: 2026-10-13T20:54:12Z
+approval-mechanism: request_user_input_async
+approved-original-sha256: b4b41ec3086bbf1efe4ae1a79e4e78c961b8c86a64e815cc24f1e53ae547e626
+approval-record: ../notes/m28-c2-code-approval.md
+---
+
 $START_DOC_M28_C2
 # M28-C2 self-contained native consumer PM profile
 
 **PURPOSE:** Let the Codex package bootstrap, orient, check, navigate and safely migrate a consumer project without external in-house methodology.
-**SCOPE:** Exact proposed second consolidation slice; Code approval pending.
+**SCOPE:** Exact approved second consolidation slice; Code authorized by the recorded owner decision.
 **KEYWORDS:** explicit adoption, PM records, batch, code map, safe migration, exact source bridge
 
 $START_DOCUMENT_PLAN

@@ -14,3 +14,5 @@ Full owners: `roles/pm.md`, `process/lifecycle.md`, `process/batch.md`, `process
 Read project entry plus VISION/ROADMAP/TASKS/HANDOFF in actual homes, relevant decisions and real artifacts. State focus and owner outcome; reconstruct missing records without false greenfield classification. Use brainstorm only for open forks, RECON before spec, appropriate full spec profile and exact gate before feature-dev. Explicitly authorized root PM may orchestrate; inner PM cannot dispatch/commit. Present current QA/Review/Finalize/probe result for its separate decision and recoverable handoff. Deferred learning and production triage need matching grants.
 
 Return the actual scoped artifact/evidence and limitations to the assigning parent. A command, template, hash or producer SUCCESS never certifies execution, independence or concrete-result acceptance.
+
+Explicit selected consumer profile routes onboarding to pm-bootstrap, proposed packet to pm-plan-batch, exact approved packet to pm-run-batch and closure to pm-handoff. Read full references/consumer-pm-profile.md; ordinary short work stays bounded.

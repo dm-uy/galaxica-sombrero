@@ -1,0 +1,7 @@
+# C2 approved amendment continuation after root metadata correction
+
+Existing human approval “Меняй без проблем.” for amendment01 remains governing; no new source-feature scope or integration grant. The exact one-line Claude test is already applied and verified. Root corrected its own public blocked-result archive pointer under REPO-104/original C2-AC8: private home/repository identity stays in private evidence, public locator is relative to the Git common directory. No scanner/list/assertion/exclusion changed.
+
+Original M28-C2-20261013 is BLOCKED/spent1/cap4; M28-C2-A1-20261013 is BLOCKED/spent1/cap3 after its authentic publication failure. Both terminal states, inputs, failed streams and contaminated package-copy resources remain immutable. M28-C2-A2-20261013 starts from the known completed one-line and root-record correction, cap2/spent0; parent sums1+1+successor, maximum4. No refund/reset, previous Code SUCCESS or atomic helper cross-run enforcement claim.
+
+The already-approved amended specification stays immutable. Fresh bound plan retains original full C2 acceptance. Bootstrap/Architect/Code verification then independent QA/Review/assigned Finalize are required. Code need not re-edit a correct baseline. Use fresh suite copies and external basetemps; complete suites before map audit, keep map receipts out of active package-test copies. Root current-record closure and independent metadata audit precede local review commit. Main merge/install/publication/C3–C6 remain separate.

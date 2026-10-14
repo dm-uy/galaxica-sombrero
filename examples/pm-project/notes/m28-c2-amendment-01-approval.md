@@ -1,0 +1,7 @@
+# C2 amendment01 approval and execution contract
+
+Human owner replied “Меняй без проблем.” to the pending one-line Claude parity proposal after original C2 was terminal BLOCKED/spent1 of4. Root accepts this as the exact proposed amendment and local continuation grant. Original C2 approval and all BR/AC stay operative except the single protected-path exception below.
+
+Only implementations/claude/tests/test_package_contract.py may additionally change, exactly filtering declared LIFECYCLE names from the Codex shared parity comprehension. Preserve23 shared topics/all29 assertions/Claude28 entries/invocation/owner/reference guards; no other Claude bytes/runtime/versions change. Apply the verified one-line diff, with before7bbf6d631b6a33606c7dc39f872dce34afb8738de176a434d5616b7e73f4593b and after97f3cf86c3751406a1ba40160115a00a347099bddc4a302bd1f9184c9262e435.
+
+Run M28-C2-A1-20261013 uses completed original candidate/current records as its honest baseline, immutable original construction framework and a new amended spec/plan/approval binding. Native Bootstrap→Architect→Code→fresh independent QA→Review→assigned Architect Finalize is required. Original run M28-C2-20261013 remains BLOCKED/spent1/cap4. Successor cap3; parent sums both spends, cumulative maximum4, no refund/reset or claim of helper-atomic cross-run accounting. Old spec/plan/history remain immutable. Reuse prior unaffected proofs as provenance, renew actual current full suites/scans/maps and amendment regression. Main merge, installation/publication and C3–C6 remain separate.

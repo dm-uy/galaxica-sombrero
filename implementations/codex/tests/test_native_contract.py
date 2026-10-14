@@ -1,7 +1,7 @@
 # region MODULE_CONTRACT [DOMAIN(9): NativeMethodology; CONCEPT(9): SourceIdentity, BoundedVerification; TECH(8): Python, StandardLibrary]
 ## @modulecontract
 ## @purpose Check independent actual package populations and operative carrier prerequisites without claiming semantic completeness.
-## @scope Exact23entry/sixrole/47member/71owner/28capability/sevenparameter structural coverage; full independent SOURCE and native smoke remain required.
+## @scope Exact27entry/sixrole/73member/71owner/28capability/sevenparameter structural coverage; full independent SOURCE and native smoke remain required.
 ## @input Explicit owned source/target paths and current canonical records; pytest fixtures supply owned temporary paths for tests. No credentials or provider state.
 ## @output Importable declared functions, actual CLI answer/diagnostic/exit where applicable, and meaningful test outcomes with actual trace. No fabricated native acceptance.
 ## @links [USES_API(8): pathlib.Path; USES_API(8): logging; READS_DATA_FROM(9): explicit path inputs; no environment secrets]
@@ -15,7 +15,7 @@
 ## Q: Why preserve unavailable/unsupported limits?
 ## A: Same-author fixtures and bounded recognizers cannot replace independent source meaning, current maps or actual native smoke.
 ## @changes
-## LAST_CHANGE: [2.1.0 - Current bounded source package and permanent behavioral refusal controls.]
+## LAST_CHANGE: [2.2.0 - Current bounded source package and permanent behavioral refusal controls.]
 ## @modulemap
 ## FUNC 2[Attach full module documentation with no runtime effects] => test_native_contract._module_contract
 ## FUNC 9[Verify shipped native contracts] => test_native_contract.test_shipped_native_contracts
@@ -38,7 +38,7 @@ import re
 
 logger=logging.getLogger(__name__)
 PACKAGE=Path(__file__).resolve().parents[1]
-TOPICS={'analyzer','ax-ui-contract','brainstorm','brownfield-spec-template','code-review','data-transform','devplan-protocol','document-protocol','durable-layer','feature-dev','graph-protocol','greenfield-bootstrap','hitl-gates','pm','prod-log-vacuum','prompting','prompting-agent-design','prompting-decompose','prompting-markup','prompting-verify','roadmap','semantic-exoskeleton','spec-recon'}
+TOPICS={'pm-bootstrap','pm-plan-batch','pm-run-batch','pm-handoff','analyzer','ax-ui-contract','brainstorm','brownfield-spec-template','code-review','data-transform','devplan-protocol','document-protocol','durable-layer','feature-dev','graph-protocol','greenfield-bootstrap','hitl-gates','pm','prod-log-vacuum','prompting','prompting-agent-design','prompting-decompose','prompting-markup','prompting-verify','roadmap','semantic-exoskeleton','spec-recon'}
 
 
 # region FUNC_test_shipped_native_contracts [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
@@ -83,7 +83,7 @@ def test_shipped_native_contracts(caplog):
 # region FUNC_test_actual_layout_and_adapter_contract [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Verify actual layout and adapter contract over actual owned inputs.
 ## @uses json.loads
-## @io Input: caplog: pytest.LogCaptureFixture. Cases: no parametrized inputs. Output: None after these concrete checks: layout['package'] == 'methodology-codex' and layout['version'] == '2.1.0' and (layout['profile'] == 'colocated-explicit-source'); len(layout['files']) == 47 and len(adapter['files']) == 71 and (len(adapter['capabilities']) == 28) and (len(adapter['parameters']) == 7); adapter['spec_root'] == '../../' and adapter['spec_version'] == '1.1.0'; names == sorted(set(names)); set(layout['roles']) == {'architect', 'coder', 'debugger', 'qa', 'reviewer', 'searcher'}; not any((r.levelno 〉= logging.ERROR for r in caplog.records)). AssertionError denotes a failed promised check; expected refusals are explicitly caught in this test body. Side effects: only the actual owned fixture writes/child processes in this body; shared package and neutral corpus reads stay read-only. No native acceptance is inferred. Example: python3 -m pytest tests/test_native_contract.py::test_actual_layout_and_adapter_contract executes these exact cases. Importance:9.
+## @io Input: caplog: pytest.LogCaptureFixture. Cases: no parametrized inputs. Output: None after these concrete checks: layout['package'] == 'methodology-codex' and layout['version'] == '2.2.0' and (layout['profile'] == 'colocated-explicit-source'); len(layout['files']) == 73 and len(adapter['files']) == 71 and (len(adapter['capabilities']) == 28) and (len(adapter['parameters']) == 7); adapter['spec_root'] == '../../' and adapter['spec_version'] == '1.1.0'; names == sorted(set(names)); set(layout['roles']) == {'architect', 'coder', 'debugger', 'qa', 'reviewer', 'searcher'}; not any((r.levelno 〉= logging.ERROR for r in caplog.records)). AssertionError denotes a failed promised check; expected refusals are explicitly caught in this test body. Side effects: only the actual owned fixture writes/child processes in this body; shared package and neutral corpus reads stay read-only. No native acceptance is inferred. Example: python3 -m pytest tests/test_native_contract.py::test_actual_layout_and_adapter_contract executes these exact cases. Importance:9.
 ## @complexity 5
 def test_actual_layout_and_adapter_contract(caplog):
     logger.info('[IMP:4][test_actual_layout_and_adapter_contract][START] owned behavioral verification')
@@ -91,8 +91,8 @@ def test_actual_layout_and_adapter_contract(caplog):
     caplog.set_level(logging.INFO)
     layout=json.loads((PACKAGE/'references/package-layout.json').read_text());adapter=json.loads((PACKAGE/'adapter.json').read_text())
     print('Actual layout/adapter populations:',len(layout['files']),len(adapter['files']),len(adapter['capabilities']),len(adapter['parameters']))
-    assert layout['package']=='methodology-codex' and layout['version']=='2.1.0' and layout['profile']=='colocated-explicit-source'
-    assert len(layout['files'])==47 and len(adapter['files'])==71 and len(adapter['capabilities'])==28 and len(adapter['parameters'])==7
+    assert layout['package']=='methodology-codex' and layout['version']=='2.2.0' and layout['profile']=='colocated-explicit-source'
+    assert len(layout['files'])==73 and len(adapter['files'])==71 and len(adapter['capabilities'])==28 and len(adapter['parameters'])==7
     assert adapter['spec_root']=='../../' and adapter['spec_version']=='1.1.0'
     names=[row['path'] for row in layout['files']];assert names==sorted(set(names))
     assert set(layout['roles'])=={'architect','coder','debugger','qa','reviewer','searcher'}

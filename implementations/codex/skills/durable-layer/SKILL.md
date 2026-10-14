@@ -14,3 +14,5 @@ Full owners: `process/session.md`, `process/lifecycle.md`, `process/batch.md`, `
 Read actual entry and five record roles including TASKS in their declared homes, then relevant notes and actual work/run artifacts. Files are durable authority; chat supplies pointers. Preserve route IDs, decisions, failures, pending gates and spent resources. At closure reconcile evidence, rewrite HANDOFF and commit only named authorized files through the root. Goals require explicit request; compaction never resets a run.
 
 Return the actual scoped artifact/evidence and limitations to the assigning parent. A command, template, hash or producer SUCCESS never certifies execution, independence or concrete-result acceptance.
+
+For an explicitly adopted methodology-consumer-pm/1.0.0 target, read references/consumer-pm-profile.md and actual declared homes, packet and baton; pm-handoff owns granted closure. Never impose it on maintainer records.

@@ -1,6 +1,6 @@
 {
   "checkpoint": "M28-C2",
-  "status": "PROPOSED_NOT_CODE_APPROVED",
+  "status": "CODE_APPROVED_RESULT_INTEGRATION_PENDING",
   "baseline": "8d984ed5644f097b3e0ea6b7930abae4b91b6588",
   "native_profile": "methodology-consumer-pm/1.0.0",
   "proposed_codex_source": "2.2.0",
@@ -76,5 +76,6 @@
   ],
   "scope_rule": "Every existing-path edit is purpose-bound to C2 consumer routing/profile/commands, exact package source/member bridge, paired current facts/necessary discriminators; no blanket file rewrite or arbitrary regression rebaseline.",
   "test_fixture_policy": "Four listed new test modules contain explicit synthetic inputs and create only owned temporary fixtures; no undeclared tracked fixture tree.",
-  "root_records": "Root may update current4, C2 reconnaissance/spec/result/evidence notes. Original C1 approved specs/plans/history and M27 matrix remain immutable."
+  "root_records": "Root may update current4, C2 reconnaissance/spec/result/evidence notes. Original C1 approved specs/plans/history and M27 matrix remain immutable.",
+  "approval_record": "m28-c2-code-approval.md"
 }

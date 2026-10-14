@@ -14,3 +14,5 @@ Full owners: `process/lifecycle.md`, `process/session.md`, `documents/templates/
 Keep one actual route at existing home and preserve its IDs/marker convention, checkboxes and matching dependency Mermaid. Derive tracks/session-to-week checkpoints from outcome; task todos stay in plan. Status is read-only against artifacts. Close only achieved criteria, distinguish implementation/integration, explain non-obvious ordering/defer/re-open conditions, retain backlog/snapshot distinct pointers. Replan only within granted direction; meaningful changes need actual owner decision.
 
 Return the actual scoped artifact/evidence and limitations to the assigning parent. A command, template, hash or producer SUCCESS never certifies execution, independence or concrete-result acceptance.
+
+For a selected native consumer profile read references/consumer-pm-profile.md; apply its actual homes/stable ids/one marker/Mermaid/inclusive budgets and preserve held reasons. Existing project declarations win.
