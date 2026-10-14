@@ -1,15 +1,15 @@
-# Current: M31 release and installation authorized
+# Current: M31 merged, released and installed
 
-## Current state
+## Completed
 
-The owner authorized merge, reissue and package installation of the accepted lightweight PM direction. Release identities: neutral3.0.0, Codex3.0.0 and Claude2.0.0. QA applies to new features/substantial fixes; documentation and small corrections use relevant local checks. Synchronize affected agent state on material changes, grouped progress and before planned compaction/handoff. [Decision and release scope](notes/pm-lightweight-direction.md).
+Owner-authorized lightweight PM change merged through PR8 at3dd4d626. Release v3.0.0 is published in the private repository with the complete co-located archive and SHA256SUMS. Versions: neutral3.0.0 / Codex3.0.0 / Claude2.0.0. [Decision and actual installation receipt](notes/pm-lightweight-direction.md).
 
-Bounded release checks: current-version/package assertions, original helper algorithm pins, package inventories, Claude SessionStart and strict manifest validation. Codex installation uses a complete repository snapshot and a generated root transport manifest; Claude uses the canonical checkout in place. User settings must be backed up before activation; retain the superseded personal Codex package for rollback. See the release receipt appended to the decision note for actual completion.
+Codex CLI installed methodology-codex from a complete snapshot of3dd4d626. Its actual app-server discovers all27 enabled skills, including methodology-codex:pm and methodology-codex:feature-dev at the nested package paths. All tracked installed bytes match that release commit. Old personal codex-pm1.0 is disabled and retained. Claude global settings now point to the canonical main package; strict manifest validation and actual SessionStart binding pass against neutral3.0.0. Prior settings and global entry were backed up for rollback. The global fallback entry points at canonical source. Receipt-only maintainer changes after the release do not change the frozen installed snapshot.
 
 ## Next action
 
-Finish the authorized release/installation and read back installed identities and neutral bindings. New sessions must load the new package; this existing conversation is not proof of refreshed discovery. No full software QA for this documentation release.
+Use a fresh session to consume the new discovery catalog. Continue with a separately bounded single-stream API/database consumer trial when selected; observe actual friction before adding process. QA belongs to new features/substantial bug fixes, while docs and small corrections use relevant local checks. Synchronize only affected agent state on material changes, grouped progress and before planned compaction/handoff.
 
 ## Retained boundaries
 
-M30 source integration is complete; actual native Claude behavioral acceptance remains explicitly deferred. C3 remains separate exhausted/unaccepted. Original failed/held run histories and counters are unchanged; no C3 continuation, new behavioral acceptance, public visibility change or automatic proof of C4–C6. Later single-stream API/database trial remains separately scoped. Preserve foreign archival work and clean canonical main.
+M30 live native Claude behavioral acceptance remains explicitly deferred; installation and binding checks do not close it. C3 remains exhausted/unaccepted and unmerged; no continuation or counter reset. C4–C6 full proof remains separately scoped. No public visibility change, live Claude model run, full feature-dev or new QA ledger was performed. Original failure/held history and foreign archival work remain intact. Canonical main is the development home; cached Codex snapshots require reinstallation after accepted releases.
