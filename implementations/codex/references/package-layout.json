@@ -1,6 +1,6 @@
 {
   "package": "methodology-codex",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "profile": "colocated-explicit-source",
   "files": [
     {
@@ -22,6 +22,14 @@
     {
       "path": "examples/smoke-spec.md",
       "kind": "example"
+    },
+    {
+      "path": "hooks/guard_destructive.py",
+      "kind": "helper"
+    },
+    {
+      "path": "hooks/hooks.json",
+      "kind": "config"
     },
     {
       "path": "pytest.ini",
@@ -46,6 +54,10 @@
     {
       "path": "references/package-layout.json",
       "kind": "layout"
+    },
+    {
+      "path": "references/safeguards.md",
+      "kind": "documentation"
     },
     {
       "path": "references/source-disposition.md",
@@ -273,6 +285,10 @@
     },
     {
       "path": "tests/test_consumer_pm.py",
+      "kind": "test"
+    },
+    {
+      "path": "tests/test_guard.py",
       "kind": "test"
     },
     {

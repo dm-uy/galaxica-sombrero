@@ -30,7 +30,7 @@ that a particular harness already enforces it.
 
 ## Native Codex source package
 
-[methodology-codex](implementations/codex/README.md) is the first co-located native source package at version2.2.0, with candidate state schema2. Historical neutral version1.0.0 recorded exactly the FMT-1/FMT-26/REPO-102 boundary changes under unchanged MAJOR policy; current1.1.0 retains all71 neutral paths/69drafts/2stubs and28capabilities/sevenparameters remain. Package native documents use their own declared format and independently checked73-member inventory. Every intended public member, including package Markdown/JSON/Python/extensionless/nested files, remains in the unchanged publication/privacy traversal. Ordinary Markdown outside the declared exceptions is still neutral.
+[methodology-codex](implementations/codex/README.md) is the first co-located native source package at version2.3.0, with candidate state schema2. Historical neutral version1.0.0 recorded exactly the FMT-1/FMT-26/REPO-102 boundary changes under unchanged MAJOR policy; current1.1.0 retains all71 neutral paths/69drafts/2stubs and28capabilities/sevenparameters remain. Package native documents use their own declared format and independently checked77-member inventory. Every intended public member, including package Markdown/JSON/Python/extensionless/nested files, remains in the unchanged publication/privacy traversal. Ordinary Markdown outside the declared exceptions is still neutral.
 
 Supported profile: complete co-located checkout and explicit loading of the current candidate entry/roles/protocols/runtime/adapter and full neutral core. The [package adapter](implementations/codex/adapter.json) resolves `../../` from its own directory. Missing/stale/incomplete required binding blocks dependent work; another caller cwd does not alter it. Detached cached/offline installation and automatic discovery are unsupported. Source packaging grants no installed-plugin replacement, activation, publication or integration claim. Actual native smoke and source checks have their own current evidence and limits.
 
@@ -47,7 +47,7 @@ doxygen Doxyfile
 
 Run the package map separately with `doxygen Doxyfile` from `implementations/codex/`. Read all real findings and current source/config/XML associations. These are commands, not executed results; the [test guide](tests/test_guide.md) separates actual measurements, pending native execution and preserved historical evidence.
 
-Codex2.2 additionally supplies an explicit opt-in consumer PM profile,13 seeds/four PM entries and three commands over one shared reader. C3 automatic safeguards, C4 SDK/import/ledger, C5 autonomous proof and C6 loader handover remain held; no installation follows.
+Codex2.2 additionally supplies an explicit opt-in consumer PM profile,13 seeds/four PM entries and three commands over one shared reader. C3 source-stage guard is available through the [safeguards contract](implementations/codex/references/safeguards.md), with77members/27skills/sevenhelpers/sixroles; native AC7/trust/activation remains HELD/UNFULFILLED. C4 SDK/import/ledger, C5 autonomous proof and C6 loader handover remain held; no installation follows.
 
 ## Native Claude Code package
 

@@ -6,7 +6,7 @@ OUTPUT_DIRECTORY       = doxygen_output
 CREATE_SUBDIRS         = NO
 OPTIMIZE_OUTPUT_JAVA   = YES
 PYTHON_DOCSTRING       = YES
-INPUT                  = skills/feature-dev/scripts skills/devplan-protocol/scripts tests
+INPUT                  = hooks skills/feature-dev/scripts skills/devplan-protocol/scripts tests
 INPUT                 += skills/pm/scripts
 FILE_PATTERNS          = *.py
 EXTENSION_MAPPING      = no_extension=Python

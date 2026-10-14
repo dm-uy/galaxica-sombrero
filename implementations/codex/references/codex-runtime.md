@@ -1,4 +1,4 @@
-# Native Codex runtime — package2.2.0
+# Native Codex runtime — package2.3.0
 
 Supported profile: `colocated-explicit-source` with current neutral1.1.0. The explicitly authorized parent resolves FRAMEWORK_ROOT to this actual package, reads its PM/feature-dev/runtime/adapter/adoption and supplies each native agent its exact carrier and complete resolved current inputs. Do not execute an installed older plugin and relabel it candidate execution. No global installation or automatic discovery is supplied; detached cached/offline dependency is unsupported/BLOCKED.
 
@@ -34,4 +34,8 @@ Current project files govern continuity; actual five records/notes plus original
 
 ## Explicit C2 consumer route
 
-Source2.2 adds the opt-in methodology-consumer-pm/1.0.0 carrier at references/consumer-pm-profile.md,13 seeds/four entries/shared consumer_files + orient/codemap/markup_migrate (six total helpers,27skills/73members/sixroles). Read full current owners and selected profile before native effects. Historical47/23/two input capacity remains historical; no input-lock migration. Explicit commands/grammars/authority/receipt/unknown-effect contracts live in the profile and package README. C3 automatic hooks/trust, C4 SDK/import/ingest/ledger comparison, C5 autonomous/resume proof and C6 loader activation remain held. Wire2.0/schema2/neutral1.1 remain unchanged. Claude runtime/version and the other58 of its59 package files remain unchanged; the sole source exception is the exact owner-approved one-line parity predicate in implementations/claude/tests/test_package_contract.py. Its shared23/Claude28 and all29 assertions are retained.
+Source2.3 retains the C2 opt-in methodology-consumer-pm/1.0.0 carrier at references/consumer-pm-profile.md,13 seeds/four entries/shared consumer_files + orient/codemap/markup_migrate (seven total helpers,27skills/77members/sixroles). Read full current owners and selected profile before native effects. Historical47/23/two input capacity remains historical; no input-lock migration. Explicit commands/grammars/authority/receipt/unknown-effect contracts live in the profile and package README. C3 automatic hooks/trust, C4 SDK/import/ingest/ledger comparison, C5 autonomous/resume proof and C6 loader activation remain held. Wire2.0/schema2/neutral1.1 remain unchanged. Claude runtime/version and the other58 of its59 package files remain unchanged; the sole source exception is the exact owner-approved one-line parity predicate in implementations/claude/tests/test_package_contract.py. Its shared23/Claude28 and all29 assertions are retained.
+
+## C3 source-stage safeguards
+
+Source2.3.0 contains77 members/27skills/sevenhelpers/sixroles. The [safeguards contract](safeguards.md) supplies the pinned session-wide policy, deterministic guard and synchronous opt-in source definition. Native AC7 remains HELD/UNFULFILLED: no claimed per-agent identity, complete interception, trust/load/fault prevention or installed activation. Existing role/flow/helper algorithms, wire2.0/schema2 and neutral1.1 are unchanged. S2.tool.guard/S2.QA/S1-OP-7 remain PARTIAL or UNVERIFIED, not whole-methodology closure.

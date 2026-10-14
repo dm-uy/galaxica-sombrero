@@ -1,21 +1,21 @@
-# Current checkpoint: C2 integrated; C3 preparation next
+# Current checkpoint: C3 A2 BLOCKED at Review; do not merge
 
-## Blocked on the owner
+## Current result and authority
 
-No decision blocks C3 reconnaissance/specification. C3 Code requires its exact specification approval. External installation, publication and C4–C6 Code remain separate decisions.
+The owner approved the exact extra C1 oracle and paired plan on2026-10-14. Both were applied: test630527/plan713318, original specification0ef unchanged. C3 source2.3 has77members/27skills/sevenhelpers/sixroles in the branch; canonical main remains accepted C2/source2.2 at bafec417. The source result is unaccepted and PR5 stays draft.
 
-## Current and previous state
+## Evidence and unresolved work
 
-The owner accepted C2 and instructed merge on2026-10-14. PR #4 is MERGED at8161e03a23a2d81a7a0ad4c6d3fa183eba285324; the canonical main was fast-forward synchronized and its309 source bytes/modes matched the verified delivery. [Integration record](notes/m28-c2-integration.md) distinguishes this from subsequent root-only record reconciliation.
+A2 Code was accepted; independent QA found a false git_read contract, then a HIGH heredoc provenance bypass. Counted Debug1 and Debug2 corrected them. Current independent QA3 passed root597/Codex157/Claude526, both private self checks/three adapters,50own XML associations and22independent child cases on candidate3a3979afec0c4e2af447e7186ab18ca33248356b321b242fce37e6665cc9d181.
 
-Main now contains neutral1.1/Codex source2.2:73 members/27 skills/six helpers/six roles. Current independent QA3, whole Review and assigned Architect Finalize bind the308-file software candidate;597/146/526 suites, real CLI/migration/log controls and maps passed. Separate309-file root documentation closure/privacy and committed delivery verification passed. [Result, history and recovery](notes/m28-c2-result.md) remains the evidence home.
+Whole Review reported another command-boundary defect, then its native agent terminated with a host cybersecurity-risk error before delivering a canonical verdict. Parent read-only lexical diagnosis confirms a comment can merge the next command into echo arguments. No candidate command was executed. Actual run is now terminal BLOCKED/review; no Review SUCCESS or Finalize occurred. [Full history/current result](notes/m28-c3-result.md).
 
-Original C2 and A1 are terminal BLOCKED/spent1 each; A2 spent2/cap2, cumulative4/max4. Preserve these and C1 spent4/4; integration does not reset budgets or manufacture original Code SUCCESS. Eleven older map field mismatches plus one launcher association ambiguity remain outside C2; current Codex has no new map problem.
+## Next action
 
-## Next authorized action
+Present the bounded linked-continuation decision. Proposed repair stays inside guard_destructive.py and test_guard.py: preserve command boundaries across comments or refuse ambiguous syntax, add contrary controls, then renew independent QA/whole Review/assigned Architect Finalize. Preserve original/A1 terminals, historical response correction1 and cumulative Debug2/max4; no silent retry, reset or third repair dispatch. Private continuation proposal and typed host error live in A2 parent-closure evidence.
 
-Read AGENTS and VISION/ROADMAP/TASKS, then only relevant links. Prepare C3 safeguards/hooks reconnaissance and bounded specification; do not begin C3 Code or change installed loading before matching decisions. Preserve clean permanent main, historical preparation source, foreign changes and all retained evidence. The canonical repository remains the development source.
+## Limitations and direction
 
-## Held boundaries
+Debug2 unintentionally overwrote20 earlier Code privacy/adapter/tool evidence files; their current bytes and exact ledger survive, original bytes are not claimed preserved. QA3 supplies fresh current evidence. Protected Claude tests also created/cleaned temporary resources outside the exact QA3 root;46creations are inferred from executed test code, only3random names directly retained. Claude sources are outside this C3 grant. No exact resource/OS confinement or all-Git purity claim follows.
 
-Installed sources/settings and private visibility are unchanged. C4 SDK/import/candidates → C5 fresh autonomy/resume/isolation → C6 loader handover remain the selected route. Full methodology parity, active loading and C5 autonomy are unproven. Multiple feature writers and later API/database → frontend → Telegram → MCP are separate scopes. Lightweight error notes remain selected; systematic learning/measurement is deferred.
+Finish minimal C3, then prepare a bounded single-stream Python API/database consumer trial before optional further infrastructure. C4–C6 remain owed/held. NativeAC7/trust/runtime proof, install/activation, main merge/publication remain separate decisions. Lightweight error recording stays selected; systematic learning/measurement deferred. Preserve foreign/archive work.

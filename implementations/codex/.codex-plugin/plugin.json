@@ -1,6 +1,6 @@
 {
   "name": "methodology-codex",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Native source-bound Codex PM and approved development workflow.",
   "skills": "./skills/",
   "interface": {
@@ -15,5 +15,6 @@
       "Use $pm-bootstrap only for explicitly granted consumer onboarding.",
       "Use $pm-plan-batch, $pm-run-batch and $pm-handoff at their exact selected consumer triggers."
     ]
-  }
+  },
+  "hooks": "./hooks/hooks.json"
 }

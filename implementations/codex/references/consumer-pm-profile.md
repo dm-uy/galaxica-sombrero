@@ -1,6 +1,6 @@
 # Native consumer PM profile 1.0.0
 
-Identity: `methodology-consumer-pm/1.0.0`; opt-in only, source package2.2.0 over neutral1.1.0. Wire methodology-codex/2.0.0/schema2 remains unchanged. This carrier composes existing full owners; it creates neither consumer consent nor a replacement constitution.
+Identity: `methodology-consumer-pm/1.0.0`; opt-in only, source package2.3.0 over neutral1.1.0. Wire methodology-codex/2.0.0/schema2 remains unchanged. This carrier composes existing full owners; it creates neither consumer consent nor a replacement constitution.
 
 ## Adoption and homes
 
@@ -143,3 +143,7 @@ Rows below retain privacy-redacted source excerpts from the approved design, not
 | CHECK-20 | Every `notes/candidate-*.md` has `status` `pending`, `ingested` or `rejected`, and none the methodology's ledger has decided is still `pending` (CV-73). | orient.run_checks; local statuses inspect; required external ledger comparison unavailable C4, never PASS/no-history. |
 | CHECK-21 | The State of each layer's `HANDOFF.md` holds at most two items that open with a date (CV-25). | orient.run_checks; native structural row through actual shared metadata/population with unavailable coverage explicit; independent full semantics remain owed. |
 | CHECK-22 | No Python source file the root `Doxyfile` covers has a line that opens with `# GREP_SUMMARY:` or `# STRUCTURE:`, and no block-tag alias of that `Doxyfile` ends in `^^` (CV-75). | orient.run_checks; native structural row through actual shared metadata/population with unavailable coverage explicit; independent full semantics remain owed. |
+
+## C3 source-stage safeguards
+
+Source2.3.0 contains77 members/27skills/sevenhelpers/sixroles. The [safeguards contract](safeguards.md) supplies the pinned session-wide policy, deterministic guard and synchronous opt-in source definition. Native AC7 remains HELD/UNFULFILLED: no claimed per-agent identity, complete interception, trust/load/fault prevention or installed activation. Existing role/flow/helper algorithms, wire2.0/schema2 and neutral1.1 are unchanged. S2.tool.guard/S2.QA/S1-OP-7 remain PARTIAL or UNVERIFIED, not whole-methodology closure.

@@ -1,0 +1,11 @@
+# M28-C3 preparation result
+
+C3 reconnaissance and the [source-stage specification](../specs/m28-c3-safeguards.md) are prepared for owner review; Code is unapproved. [Input and source limits](m28-c3-recon.md). Baseline main bafec417 remains the accepted source. This branch changes only six project records plus this preparation note; implementation/neutral/Claude/README source is unchanged.
+
+Independent preparation verification read the complete six initial records and original source obligations. It checked complete312-file candidate bytes/modes (baseline310 plus two new input records), paired content/links, existing scope and proposed77=73+4 inventory. Both unchanged original private deny lists passed full-source self checks24/24; all three adapter commands exited0, with the example's disclosed INFO row. These initial receipts bind the initial draft, not automatically the repaired text.
+
+One preparation finding required explicit parent-authenticated policy/handler/definition identities and protected containment: read-only policy path alone does not prove authority. Root repaired only that invariant, its actual CLI flags and AC1, preserving the partial stage, path population and held native criteria. Separate final readback must verify the changed spec and complete candidate before its review commit. Spec SHA256: 0ef5cf14b56f2504cc584b3d752fe806274dd6ae2ec9c0f0d519cecb590440f9.
+
+The native hook event population remains zero; no trust, model, installation or native prevention probe occurred. Proposed source2.3/77members/27skills/sevenhelpers/sixroles is a target, not current delivered composition. Native AC7/full C3/M27 coverage remain unfulfilled. Actual source-stage Code approval must accept this staged partial disposition and the exact scope; native run, result integration, C4–C6 and publication remain separately held. C1/C2 accepted integration and exhausted repair histories are unchanged.
+
+Complete raw lane reports, initial finding, before-status, CLI/docs observations, checks and final review receipts are retained privately with this preparation. Limits include Code lane navigation timing, incomplete Claude test-body population, documented rather than measured native ABI and CLI PATH-alias warning. No new technical suites/maps are claimed for project-only edits.

@@ -1,6 +1,10 @@
 # Changelog
 
 
+## Codex source2.3.0 (neutral1.1.0 unchanged)
+
+Add bounded deterministic safeguards, explicit pinned session-wide policy and synchronous opt-in source binding. Exact77members/27skills/sevenhelpers/sixroles; wire2.0/schema2 and protected algorithms remain unchanged. This is PARTIAL source capacity: native AC7, trust, actual interception/fault proof and activation remain HELD/UNFULFILLED; full M27 remains owed. Preserve corrected .git-free scratch duty and retained donor limits.
+
 ## Codex source2.2.0 (neutral1.1.0 unchanged)
 
 Add the explicitly adopted consumer PM profile,13 seeds/four PM entries and shared reader/orient/codemap/safe migration. Exact73 members/27skills/sixhelpers/sixroles; preserve wire2.0/schema2/full original helper algorithms/Claude. C3–C6 and installed activation remain held; actual current validation belongs to its delivery evidence.

@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -B \"$PLUGIN_ROOT/hooks/guard_destructive.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

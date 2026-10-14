@@ -18,7 +18,7 @@
 ## Q: Why preserve unavailable/unsupported limits?
 ## A: Same-author fixtures and bounded recognizers cannot replace independent source meaning, current maps or actual native smoke.
 ## @changes
-## LAST_CHANGE: [2.2.0 - Exact C2 source/member constants; preserved full original algorithms. Earlier: M25A target Gitignore/tracked priority and hermetic coupled baseline; explicit package/schema unchanged.]
+## LAST_CHANGE: [2.3.0 - Exact C3 census only;  Exact C2 source/member constants; preserved full original algorithms. Earlier: M25A target Gitignore/tracked priority and hermetic coupled baseline; explicit package/schema unchanged.]
 ## @modulemap
 ## FUNC 2[Attach full module documentation with no runtime effects] => run_state._module_contract
 ## FUNC 4[Stamp a chronological observation in UTC.] => run_state._stamp
@@ -427,7 +427,7 @@ def inventory(root, excluded=None):
 # region FUNC__bindings [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Pin actual complete co-located package, adapter, neutral and spec identities.
 ## @uses run_state.read_json, run_state.inventory, run_state._file, run_state._relative, run_state._digest, run_state._expect
-## @io framework directory, adapter exact framework/adapter.json, spec actual file. Returns resolved path records, full73 package rows,71 neutral rows, six core names, layout/adapter/spec byte identities and binding digest. Requires package2.2.0, co-located1.1.0 profile, exact roles/kinds/sorted membership; missing/stub/basic malformed core refuses. Full-content meaning/initial truncation authenticity remains parent judgment; later drift changes locked digest. Raises OSError/ValueError/KeyError/TypeError on unavailable or invalid binding. Reads only; no provider/Git writes. Example: relocated complete co-located tree binds independently of cwd. Importance:9.
+## @io framework directory, adapter exact framework/adapter.json, spec actual file. Returns resolved path records, full77 package rows,71 neutral rows, six core names, layout/adapter/spec byte identities and binding digest. Requires package2.3.0, co-located1.1.0 profile, exact roles/kinds/sorted membership; missing/stub/basic malformed core refuses. Full-content meaning/initial truncation authenticity remains parent judgment; later drift changes locked digest. Raises OSError/ValueError/KeyError/TypeError on unavailable or invalid binding. Reads only; no provider/Git writes. Example: relocated complete co-located tree binds independently of cwd. Importance:9.
 ## @complexity 9
 def _bindings(framework, adapter, spec):
     framework, adapter, spec = Path(framework).resolve(), Path(adapter).resolve(), Path(spec).resolve()
@@ -436,13 +436,13 @@ def _bindings(framework, adapter, spec):
         _expect(framework.is_dir() and adapter == framework / 'adapter.json', 'framework/adapter binding mismatch')
         layout_path = framework / 'references/package-layout.json'
         layout = read_json(layout_path)
-        _expect(layout.get('package') == 'methodology-codex' and layout.get('version') == '2.2.0', 'package identity mismatch')
+        _expect(layout.get('package') == 'methodology-codex' and layout.get('version') == '2.3.0', 'package identity mismatch')
         _expect(set(layout) == {'package', 'version', 'profile', 'files', 'roles'} and layout.get('profile') == 'colocated-explicit-source', 'unsupported package profile')
         _expect(layout.get('roles') == {role: 'roles/'+role+'.md' for role in ('architect','coder','debugger','qa','reviewer','searcher')}, 'package role locations mismatch')
         declarations = layout.get('files')
         _expect(type(declarations) is list and bool(declarations), 'package file population missing')
         expected = [_relative(row['path']) for row in declarations if type(row) is dict and set(row) == {'path', 'kind'}]
-        _expect(len(expected) == len(declarations) and len(set(expected)) == len(expected) == 73 and expected == sorted(expected) and all(row['kind'] in KINDS for row in declarations), 'invalid package member declarations')
+        _expect(len(expected) == len(declarations) and len(set(expected)) == len(expected) == 77 and expected == sorted(expected) and all(row['kind'] in KINDS for row in declarations), 'invalid package member declarations')
         package = inventory(framework, PACKAGE_GENERATED)
         _expect(set(expected) == {row['path'] for row in package['files']}, 'package membership mismatch')
         binding = read_json(adapter)

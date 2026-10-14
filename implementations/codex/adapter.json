@@ -34,8 +34,8 @@
       "fallback": "Behavioral role restrictions and root scope audit where hard per-role denial absent; disclose gaps rather than claim enforcement."
     },
     "pre-tool-guard": {
-      "mechanism": "Parent checks scope, authority/effects and denied commands before operations.",
-      "fallback": "No new executable hook shipped; behavioral tripwire/manual audit cannot claim hard interception."
+      "mechanism": "Parent authenticates explicit immutable session-wide policy/handler/definition pins; conditional synchronous hooks/guard_destructive.py rejects recognized ungranted effects before supported calls. Host permissions remain independent.",
+      "fallback": "Source-stage guard requires actual opt-in hash-specific trust and interception proof; AC7 HELD/UNFULFILLED. Unhooked continuation, per-agent identity and hook load/fault boundaries remain unproven; manual audit cannot claim hard interception."
     },
     "run-state-persist": {
       "mechanism": "Single root writer candidate run_state.py schema2 atomic UTF8 .methodology/runs with complete accepted/refused history/current locks.",
