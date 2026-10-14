@@ -5,6 +5,8 @@ description: "Use on an explicit request to run the full native flow (Bootstrap,
 
 # feature-dev
 
+Applicability: new features and substantial bug fixes under the shared `flow/phases.md` entry boundary. Documentation-only work and small local corrections stay in lightweight PM; do not initialize this run or dispatch QA for them. The phase sequence below remains controlling for an actual selected development slice. A later document-only update preserves original implementation evidence and does not relabel it as a fresh whole-candidate QA result.
+
 One approved change goes through the whole methodology flow. The root session alone dispatches the roles, accepts their returns, counts Debug entries and decides the next transition; no role orchestrates another.
 
 Owners — read in full before acting:

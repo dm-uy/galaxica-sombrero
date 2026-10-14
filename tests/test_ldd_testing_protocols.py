@@ -1734,11 +1734,11 @@ def _allocation_failures(root):
             failures.add("census")
         operation = 'Read'
         LOGGER.info("[IMP:7][_allocation_failures][READ] resource=release_adapter_allocation")
-        if (root / "SPEC_VERSION").read_text(encoding="utf-8") != "2.0.0\n":
+        if (root / "SPEC_VERSION").read_text(encoding="utf-8") != "3.0.0\n":
             failures.add("version")
         operation = 'Read'
         LOGGER.info("[IMP:7][_allocation_failures][READ] read actual owned text ordinal=%d", ordinal)
-        if json.loads((root / "examples/adapter.example.json").read_text(encoding="utf-8"))["spec_version"] != "2.0.0":
+        if json.loads((root / "examples/adapter.example.json").read_text(encoding="utf-8"))["spec_version"] != "3.0.0":
             failures.add("adapter")
         operation = 'Read'
         LOGGER.info("[IMP:7][_allocation_failures][READ] read actual owned text ordinal=%d", ordinal)
@@ -1798,7 +1798,7 @@ def test_protocol_promotions_and_remaining_homes(repo_root, repo_copy, caplog):
         sibling_bytes, sibling_mode = sibling.read_bytes(), stat.S_IMODE(sibling.stat().st_mode)
         changes = (
             ("code/ldd.md", b"status: draft", b"status: stub", {"status:code/ldd.md", "census"}),
-            ("SPEC_VERSION", b"2.0.0\n", b"0.14.0\n", {"version"}),
+            ("SPEC_VERSION", b"3.0.0\n", b"0.14.0\n", {"version"}),
             ("README.md", b"general decision lifecycle (DEC01) and full graph are current F4 bodies; confirmed conventions, lifecycle, batch and session procedures and five project forms are current bounded F4 drafts; eight prompting F5 and three autonomy/credentials/language policy bodies are current bounded drafts; six neutral readiness contracts for principles, glossary, Orient, preflight, run audit and conditional safety/recovery are current bounded drafts; wider F4 duties, learning F8, source completeness, operational adoption and publication remain explicit later or unresolved homes.", b"general decision lifecycle (DEC01) and full graph, prompting F5 and learning F8 subjects are complete.", {"allocation"}),
         )
         for ordinal, (relative, old, new, expected) in enumerate(changes):

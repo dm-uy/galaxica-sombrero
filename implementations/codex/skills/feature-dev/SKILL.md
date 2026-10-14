@@ -5,6 +5,8 @@ description: "Explicit native flow invocation with an exact approved specificati
 
 # feature-dev
 
+Applicability: new features and substantial bug fixes under the shared `flow/phases.md` entry boundary. Documentation-only work and small local corrections stay in lightweight PM; do not initialize this run or dispatch QA for them. The phase sequence below remains controlling for an actual selected development slice. A later document-only update preserves original implementation evidence and does not relabel it as a fresh whole-candidate QA result.
+
 Read the complete [runtime](../../references/codex-runtime.md) and [adoption procedure](../../references/adoption.md) first. Resolve neutral owners through the actual package adapter spec_root/files, never a cached installed constitution. Read every required applicable owner body in full and record its current identity/read limits before dependent action. Missing, stub, stale, truncated or unread required content is BLOCKED; complete current injection may be reused. This entry supplies the native trigger and route, not a duplicate neutral protocol or role assignment. Preserve current project instructions, settled grants and exact path scope. An inner role never delegates, commits, merges or changes authoritative state.
 
 Trigger: Explicit native flow invocation with an exact approved specification or batch.

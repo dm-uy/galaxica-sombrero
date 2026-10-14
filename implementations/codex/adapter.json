@@ -1,7 +1,7 @@
 {
   "harness": "methodology-codex",
   "owner": "Methodology Codex package maintainers",
-  "spec_version": "2.0.0",
+  "spec_version": "3.0.0",
   "spec_root": "../../",
   "parameters": {
     "dialog-language": "Russian unless controlling owner/project instructions select otherwise",
@@ -106,8 +106,8 @@
       "fallback": "Missing/truncated/access gaps explicit; do not reconstruct truth or zero costs from absence."
     },
     "packaging-install": {
-      "mechanism": "First profile explicitly loads actual complete co-located candidate files only; inventory/adapter/tests/maps are owned here.",
-      "fallback": "Detached/global installation/publication unsupported and require matching later decisions/provenance; no installer or discovery claim."
+      "mechanism": "Explicit complete co-located source loading, or an authorized complete-repository snapshot installed by Codex plugin CLI with a generated root transport manifest whose skills path is ./implementations/codex/skills/. FRAMEWORK_ROOT is the nested implementations/codex directory; the adapter and neutral owners keep their original relative layout.",
+      "fallback": "Detached package-only cache copies remain unsupported/BLOCKED. Reinstall a complete accepted snapshot to update a cached install; discovery and binding checks do not prove native behavioral acceptance."
     },
     "launch-environment": {
       "mechanism": "Root names actual allowed target/framework/evidence roots, host permissions, autonomy, owned resources and permitted credential-presence checks.",

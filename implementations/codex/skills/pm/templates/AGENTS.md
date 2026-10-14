@@ -12,11 +12,11 @@ Owner/project instructions win. Authenticate exact settled action/artifact/path 
 
 ## Code and evidence
 
-Read complete current six-core/assigned role/runtime/owners; full new rich module/entity contracts and edit-local existing changes, own LDD critical success9/failure10, direct meaningful native tests/full guide and real delivery. Actual final Doxygen build/current own XML absent explicit written prohibition; missing config is owed. Codemap answers bounded own evidence or labelled source fallback, never executes consumer code. Inherited model/effort, actual exposed observations only.
+For new features and substantial bug fixes, read complete current six-core/assigned role/runtime/owners; full new rich module/entity contracts and edit-local existing changes, own LDD critical success9/failure10, direct meaningful native tests/full guide and real delivery. Actual final Doxygen build/current own XML absent explicit written prohibition; missing config is owed. Codemap answers bounded own evidence or labelled source fallback, never executes consumer code. Inherited model/effort, actual exposed observations only.
 
 ## Closure
 
-Reconcile TASKS/statuses/evidence/decisions and route; rewrite four-heading HANDOFF (Blocked on the owner, State, Queue, Traps), preserve failures/held work and run orient --check. Fix only granted defects; otherwise name owning blocker. Commit/integration only under matching authority. Final message: Blocked on the owner / Changed / Found; unconfirmed claims name source/access limit. Generated actors/timestamps from actual clock, never reusable fixture facts. External lessons stay local candidate notes; C4 comparison unavailable if required, routine learning dormant.
+Documentation and small local corrections use bounded edits/relevant local checks without QA. State primarily serves the next agent; synchronize only affected records after material changes, grouped routine progress and before planned compaction/handoff. Reuse current records; when needed update the four-heading HANDOFF (Blocked on the owner, State, Queue, Traps), preserve failures/held work and run orient --check. Fix only granted defects; otherwise name owning blocker. Commit/integration only under matching authority. Final message: Blocked on the owner / Changed / Found; unconfirmed claims name source/access limit. Generated actors/timestamps from actual clock, never reusable fixture facts. External lessons stay local candidate notes; C4 comparison unavailable if required, routine learning dormant.
 
 ## Important open decisions
 

@@ -40,7 +40,7 @@ Inspect current revision, uncommitted work and artifact ownership before writing
 
 ## Recording and closure
 
-Record meaningful facts in results, binding choices in decisions and current action in work. Keep uncertain action completion explicit and check actual effects before retry. At session end retain unfinished work, reconcile route/work, rewrite handoff and preserve records under the project's commit/storage rules. Execution methods are selected per work type; this profile does not prescribe code development.
+Record meaningful facts in results, binding choices in decisions and current action in work. Keep uncertain action completion explicit and check actual effects before retry. Synchronize affected records on material changes, grouped routine progress and before planned compaction/handoff; reuse already current records. Preserve unfinished work under the project's commit/storage rules. Execution methods are selected per work type; this profile does not prescribe code development.
 
 ## Project profile (keep short)
 

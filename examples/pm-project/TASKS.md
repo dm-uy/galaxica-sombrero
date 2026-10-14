@@ -47,3 +47,9 @@ Status: selected into the approved M30 contract below; this earlier observation 
 - **Held/UNFULFILLED:** actual native Claude AC4/ClaudeAC5 under explicit deferral. Terminal BLOCKED/qa; whole Review/assigned Finalize/full checkpoint acceptance incomplete. Owner-approved source integration through PR6 is complete; [record](notes/m30-integration.md). No Claude auth/engine retry now.
 - [Result/history](notes/m30-result.md), [approved spec](specs/m30-independent-decisions.md), [operative plan](plans/m30-independent-decisions-i2.md), [input correction](notes/m30-input-correction.md). Four current records plus result note are a separate closure after judged source.
 - Next: required Claude proof only after owner changes deferral, then independent acceptance/Review/Finalize. INTAKE-01 remains separately proposed; C4–C6/trial route/C3 history retained. M30 source merge is complete; no installation/public visibility change or C3 merge.
+
+## M31 — owner-directed lightweight PM (current)
+
+Direction and merge/reissue/installation accepted by the owner; [decision/scope](notes/pm-lightweight-direction.md). Shared and both native carriers reflect the lightweight boundary. Release identities: neutral3.0.0, Codex3.0.0, Claude2.0.0; only exact executable binding constants/current-version assertions change, original algorithm pins/wire/schema/inventories remain.
+
+Bounded release checks and actual installation readback apply; no feature-dev/QA role or new run ledger for this documentation release. Codex uses a complete repository snapshot; Claude loads canonical main in place. The decision note carries actual completion. Retain M30 deferred Claude proof and exhausted C3 separately; installation is not their acceptance.

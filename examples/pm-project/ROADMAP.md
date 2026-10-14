@@ -1,6 +1,6 @@
 # Methodology project route
 
-## Current: M30 independent-decision rule; C3 retained separately
+## Current: M31 lightweight PM clarification; earlier proof gaps retained
 
 One canonical checkout is the development source; preparation repositories are archival. Canonical main now includes M30 source through owner-approved PR6, neutral2.0/Codex2.4/Claude1.1; accepted C2/bafec417 is its foundation. C3 is not ready for merge. [Current C3 history/result](notes/m28-c3-result.md).
 
@@ -21,6 +21,7 @@ One canonical checkout is the development source; preparation repositories are a
 | M28-C4 | SDK/import/candidate capacity owed/held after the selected practical consumer trial. |
 | M29/C5–C6 | Autonomy/resume/isolation proof and actual source-loader handover owed/held after matching decisions. |
 | M30 | Source integrated through PR6; BLOCKED/qa Debug1/4 retained; native Claude required/deferred, Review/Finalize/full acceptance pending. |
+| M31 | Owner-directed lightweight PM documentation prepared locally; no QA, release/merge/activation not performed. |
 | Public visibility | Held; repository remains private. |
 
 ## Retained C3 escalation
@@ -40,3 +41,9 @@ The owner-approved exact46b7ccc push/private draft PR5 update is complete. Subse
 Shared owner/PM/Architect/both-carrier source delivered from accepted C2 and independently checked after counted Debug1. Actual Codex important/two-generators/HOLD/evaluator/root-decision/task and trivial/settled controls supported;600/146/526ordinary tests and privacy/adapters/maps pass. [Current result](notes/m30-result.md), [operative plan](plans/m30-independent-decisions-i2.md).
 
 Terminal BLOCKED/qa retains Debug1/4. The owner deferred native Claude; AC4/ClaudeAC5 remain unfulfilled, no auth/retry/waiver. Resume those current-source proofs after that deferral changes, then renew independent QA, whole Review and assigned Finalize before full checkpoint acceptance; owner-authorized source integration through PR6 is complete. INTAKE-01 stays separately scoped; accepted smaller safeguard → single-stream API/database trial → optional C4 → C5/C6 route remains. [Integration record](notes/m30-integration.md). No C3 budget reset, installation or public visibility change.
+
+## M31 — lightweight PM state and development boundary
+
+The owner settled the direction after the PM reflection: state for agents, QA for features/substantial bug fixes, no QA for documentation/small corrections, and affected-record synchronization on material change/grouped progress/before planned compaction. [Decision and scope](notes/pm-lightweight-direction.md). Local shared/native documentation changes are unreleased; next integration needs its owner decision and release-version binding. No new implementation run or experiment. Existing M30 Claude deferral, C3 exhausted history and later trial/C4–C6 route remain retained.
+
+M31 release update: the owner authorized merge, reissue and installation of the accepted lightweight PM direction (neutral3.0.0 / Codex3.0.0 / Claude2.0.0). Actual completion is recorded in [the decision receipt](notes/pm-lightweight-direction.md); deferred native Claude acceptance and C3 remain separate.

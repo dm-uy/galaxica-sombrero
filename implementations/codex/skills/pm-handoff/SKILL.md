@@ -1,6 +1,6 @@
 ---
 name: pm-handoff
-description: "Close/rewrite current baton and retained state at an actually adopted consumer home."
+description: "Synchronize changed state for the next agent at an actually adopted consumer home."
 ---
 
 # pm-handoff
@@ -13,6 +13,6 @@ Done when: actual scoped artifacts/checks/evidence and recoverable next action p
 
 1. Compare actual TASKS/statuses/artifacts/grants/check evidence; done is real verified output, not template facts. Preserve failed/held/blocked/dropped and unfinished carryover.
 2. Binding decisions use actual accepted human source, authentic provenance, ordered reservation; never alter accepted body. Open alternatives remain open questions, local lessons stay candidate notes. Required missing C4 comparison unavailable; no old ledger fallback.
-3. Reconcile actual route/marker/Mermaid and current scope. Rewrite Blocked on the owner, State, Queue, Traps exactly once in order. Current/previous evidence only; overflow retained by linked notes, no silent deletion.
+3. Follow the shared process/session.md material-change/grouped-progress/pre-compaction cadence. Reconcile only changed route/current scope. When continuation state changed, rewrite Blocked on the owner, State, Queue, Traps exactly once in order; reuse an already current baton. Current/previous evidence only; overflow retained by linked notes, no silent deletion.
 4. Queue names actual current TASKS and next task; state names revision/check identity/uncommitted reason, traps retain causes. Actual generated clock/actor, no imagined gates.
-5. Run orient --check and inspect every row/full diagnostics. Fix only granted defects or name rule/resolver under owner block. Return exact current paths/bytes/modes/identity and withheld decisions; separately authorized root commit/integration, no inner Git effects.
+5. For the adopted consumer profile, use its existing read-only orient --check and inspect relevant diagnostics; this is not a QA phase or a new document-review workflow. Fix only granted defects or name rule/resolver under owner block. Return exact current paths/bytes/modes/identity and withheld decisions; separately authorized root commit/integration, no inner Git effects.

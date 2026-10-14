@@ -15,7 +15,7 @@ Owners — read in full before acting:
 
 Route:
 1. Act only as the assigned Architect, at the plan path the assignment dictates. Read the original approved specification and RECON in full first.
-2. Stamp the neutral METHODOLOGY_VERSION (2.0.0) and the identities in play: package methodology-claude 1.1.0, the adapter and the specification.
+2. Stamp the neutral METHODOLOGY_VERSION (3.0.0) and the identities in play: package methodology-claude 2.0.0, the adapter and the specification.
 3. Write sections 1 to 6 in order, each with purpose, rationale and verification. Cut independently implementable slices with their tests, record MAY EDIT and DO NOT TOUCH, attach each acceptance threshold to its criterion, and name the delivery sinks and the exact Runtime Commands. Preserve all four applicable patterns: Layer Isolation, Plugin API plus Direct Integration, Backend Tests plus LDD, Headless UI Testing.
 4. Run the visual gate when the plan has three or more new or changed component definitions and is not tests-only: `python3 "${CLAUDE_PLUGIN_ROOT}/skills/devplan-protocol/scripts/visual_gate_lint.py" PLAN --spec SPEC`. Record the command, output, exit code and recognized node count. Supported suffixes are `_py`, `_ts`, `_tsx`, `_js`, `_jsx`, `_CLASS`, `_FUNC`, `_METHOD`; zero recognized nodes exits 2, findings exit 1, a clean supported result exits 0.
 5. Read all unsupported or mixed carriers manually and disclose the extent; never rename nodes to manufacture coverage. The linter is finite, so also inspect diagram, XML and data-flow fidelity yourself.

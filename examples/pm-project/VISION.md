@@ -2,6 +2,8 @@
 
 Maintain one coherent, harness-neutral methodology and complete Codex and Claude adaptations in one canonical Git repository. Other agents start from root AGENTS and the four current project records, follow authentic scope/ownership and leave recoverable evidence. Preparation repositories are archival, not additional development sources.
 
+The owner clarified the operating goal: lightweight state for the next agent/session, with QA reserved for new features and substantial bug fixes. Human presentations are on demand. Only affected records synchronize after material changes, grouped routine progress and before planned compaction/handoff. [Accepted direction](notes/pm-lightweight-direction.md).
+
 ## Selected outcome and accepted baseline
 
 The owner selected this repository as the sole source of truth for the in-house methodology. The Codex adaptation must cover at least the currently used in-house practices without external in-house skills/plugins as necessary sources. [M27 coverage contract](specs/m27-self-contained-coverage.md) accounts for duties and behavioral proof; matching names or this construction chat do not establish parity.
@@ -29,3 +31,5 @@ Lightweight error recording remains active. Systematic learning, comparative mea
 Owner-approved shared-owner/PM/Architect/both-carrier contract delivered locally as neutral2.0/Codex2.4/Claude1.1 from accepted C2, without C3 guard source. Important genuinely open choices require independent proposals, saved HOLD, separate evaluation and durable authorized decision; routine/forced/settled choices remain bounded. Existing roles/wires/schemas/registries/pins/Local use remain protected.
 
 Independent QA2 supports source and bounded actual Codex behavior,600/146/526ordinary tests, private checks/adapters/maps and42own XML contracts. Overall M30 remains BLOCKED/qa, Debug1/4: required native Claude AC4/ClaudeAC5 is owner-deferred, not waived. Whole Review/assigned Finalize/full checkpoint acceptance remain incomplete; the owner separately approved source integration through PR6. [Result and limits](notes/m30-result.md). Current main includes M30 source; [integration evidence](notes/m30-integration.md). No global installation/activation/public visibility change.
+
+M31 release update: the owner authorized merge, reissue and installation of the accepted lightweight PM direction (neutral3.0.0 / Codex3.0.0 / Claude2.0.0). Actual completion is recorded in [the decision receipt](notes/pm-lightweight-direction.md); deferred native Claude acceptance and C3 remain separate.

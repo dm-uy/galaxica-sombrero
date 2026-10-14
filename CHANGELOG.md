@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.0
+
+- Record the owner-directed lightweight PM boundary: QA belongs to new features/substantial bug fixes; documentation and small corrections use bounded local checks. Agent-first project state synchronizes on material change, grouped progress and before planned compaction/handoff, updating affected records only.
+- Reissue neutral3.0.0, Codex3.0.0 and Claude2.0.0 for the changed normative applicability. Preserve helper algorithms, wire/schema, original fixed algorithm pins and package membership. The Codex installation carries a complete co-located repository snapshot; Claude loads the canonical checkout in place. Installation receipts do not certify deferred native Claude behavior.
+
 ## 2.0.0
 
 - Require independent generation, durable HOLD and separate evaluation for consequential open decisions, through one shared owner and mandatory PM/Architect/native call sites. Routine, settled and forced choices remain bounded.

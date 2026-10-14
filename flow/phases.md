@@ -12,6 +12,10 @@ The flow defines functional boundaries. A harness binds these boundaries to its 
 
 ## Entry
 
+Select this software cycle for a new feature or a substantial bug fix. Substantiality follows behavioral consequences and uncertainty, not line count. Architect → Code → independent QA belongs to that development slice. Documentation-only work and small local corrections stay outside this cycle: inspect the affected result and use only directly relevant checks; do not create a flow run, specification, independent QA/Review/Finalize assignment or evidence archive just to process them. A documentation edit does not become feature work merely because it lives in a code repository.
+
+A substantial implementation change still receives its required QA even when its slice also contains documentation. Preserve existing frozen-run evidence and report its original scope honestly; a later document-only correction is a separate lightweight update, not a reason to relabel an old verdict or restart QA over unchanged implementation.
+
 - **PHASE-101** MUST: Begin only from an explicitly authorized flow invocation and approved specification or approved batch scope under [the gate contract](../process/gates.md). Resolve the actual task, target, framework and specification identities before dispatch; an approval for another scope is insufficient.
 - **PHASE-102** MUST: Acquire and record the actual repository baseline before any mutating phase. Verify the repository and its current branch, HEAD and dirty/untracked state; a stated baseline or a worker report is not acquisition. Preserve existing changes and isolate work when necessary within authorization.
 - **PHASE-103** MUST: Discover the available runtime operations through {{cap:capability-discovery}} and establish role permissions, isolation, persistence, verification commands, autonomy and resource limits before starting. Refuse an unavailable required mechanism unless its declared fallback preserves the obligation.

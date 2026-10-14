@@ -109,7 +109,7 @@ GIT_PROGRAMLESS = ('--no-optional-locks', '-c', 'core.fsmonitor=false')
 # GIT_PROGRAMLESS is the fixed argument prefix of every git call: no optional locks, and the repository-configured core.fsmonitor program is switched off (a command-line value outranks repository, environment and global configuration).
 KINDS = {'skill', 'role', 'helper', 'test', 'test-guide', 'config', 'plugin-manifest', 'adapter', 'layout', 'example', 'documentation', 'hook-config', 'workflow'}
 PACKAGE_NAME = 'methodology-claude'
-PACKAGE_VERSION = '1.1.0'
+PACKAGE_VERSION = '2.0.0'
 PACKAGE_PROFILE = 'colocated-in-place'
 CONTRACT_VERSION = 'methodology-claude/1.0.0'
 ROLES = ('architect', 'coder', 'debugger', 'qa', 'reviewer', 'searcher')
@@ -483,7 +483,7 @@ def _bindings(framework, adapter, spec):
         _expect(binding.get('spec_root') == '../../', 'co-located spec_root must be ../../')
         neutral = (adapter.parent / _text(binding.get('spec_root'), 'neutral binding missing')).resolve()
         _expect(neutral.is_dir() and neutral == framework.parents[1], 'unsupported detached neutral binding')
-        _expect((neutral / 'SPEC_VERSION').read_text().strip() == binding.get('spec_version') == '2.0.0', 'neutral version mismatch')
+        _expect((neutral / 'SPEC_VERSION').read_text().strip() == binding.get('spec_version') == '3.0.0', 'neutral version mismatch')
         profile_cap = _decimal_cap(binding['parameters']['debug-entry-cap'])
         _expect(profile_cap <= 4, 'BLOCKED: adapter Debug extension unsupported')
         declared = binding.get('files')
@@ -504,7 +504,7 @@ def _bindings(framework, adapter, spec):
         neutral_rows = [_file(neutral / _relative(relative)) for relative in sorted(declared)]
         for row, relative in zip(neutral_rows, sorted(declared)):
             row['path'] = relative
-        result = {'framework': str(framework), 'adapter': _file(adapter), 'package': package, 'neutral_root': str(neutral), 'neutral_version': '2.0.0', 'neutral': neutral_rows, 'spec': _file(spec), 'core': list(CORE), 'debug_cap_profile': profile_cap, 'layout': _file(layout_path)}
+        result = {'framework': str(framework), 'adapter': _file(adapter), 'package': package, 'neutral_root': str(neutral), 'neutral_version': '3.0.0', 'neutral': neutral_rows, 'spec': _file(spec), 'core': list(CORE), 'debug_cap_profile': profile_cap, 'layout': _file(layout_path)}
         result['digest'] = _digest(result)
         logger.info('[IMP:9][_bindings][RESULT] package=%d neutral=%d', len(expected), len(neutral_rows))
         return result
