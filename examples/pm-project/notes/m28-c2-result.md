@@ -1,6 +1,6 @@
 # C2 consumer PM profile: verified result for integration
 
-C2 is implemented and verified by current independent QA3, renewed whole Review and separately assigned Architect Finalize. Result acceptance/main integration through draft PR #4 remains the owner's decision under REPO-103. Original Code and exact Claude-test scope decisions are already settled. Installation, publication and C3–C6 Code are separate scopes.
+C2 is implemented and verified by current independent QA3, renewed whole Review and separately assigned Architect Finalize. The owner accepted the result and instructed merge on2026-10-14; PR #4 is merged. [Integration record](m28-c2-integration.md) records canonical synchronization and root-only reconciliation. Original Code and exact Claude-test scope decisions are already settled. Installation, publication and C3–C6 Code are separate scopes.
 
 ## Delivered behavior and protected boundaries
 
@@ -10,7 +10,7 @@ The exact approved Code scope is original58 paths plus one Claude test exception
 
 ## Acceptance evidence
 
-Current software source is308 files, digest f1d3250169ea098abfc5f40df1241a9f39a309a4ea25a3e8a8d867296d416dca; input eb0e2f9d73059bb755865743875c0b6426c611e481c2f2aa66c61051bb4a3829. Compared with main8d984ed it has37 additions/30 modifications/zero deletions. Root's later four-document reconciliation and this new result note add one public record without changing executable, neutral, package or Doxygen input/configuration source. That309-file publication population receives separate independent metadata/privacy/scope verification and committed-byte readback; software QA/Finalize is not relabeled as judging changed documentation bytes.
+Current software source is308 files, digest f1d3250169ea098abfc5f40df1241a9f39a309a4ea25a3e8a8d867296d416dca; input eb0e2f9d73059bb755865743875c0b6426c611e481c2f2aa66c61051bb4a3829. Compared with main8d984ed it has37 additions/30 modifications/zero deletions. Root's later four-document reconciliation and this new result note add one public record without changing executable, neutral, package or Doxygen input/configuration source. That309-file review delivery received separate independent metadata/privacy/scope verification and committed-byte readback; software QA/Finalize is not relabeled as judging changed documentation bytes.
 
 Fresh suites: common597, Codex146 and Claude526 PASS, no skips. Original two privacy lists, three adapters and50 flow cases pass. Python3.9.6/3.12.13 parse57 Python sources and import all six helpers; actual floor CLI operations pass. Independent QA judges75 source duties/22 mechanisms/26 new-member converse, complete expected-only traces and all eight named scans; infrastructure deployment is inapplicable to this local CLI/profile slice.
 
@@ -28,8 +28,8 @@ All genuine red runs, protected Claude conflict, purpose defect, owned resource/
 
 ## Recovery and route
 
-Machine-local private recovery locator: Git-common-directory-relative `methodology-evidence/M28-C2/continuation-a2-20261014/INDEX.json`. Restore the completed-external resource archive and final A2 run/constructor/recorder supplement; final-records is the root closure/committed-readback supplement, to be sealed after authorized local review delivery. Read the actual index for its current completion state. SHA-256 and readable-tar/copy checks are retained in the index. Original C2/A1/C1 archives remain separate and unchanged. These private resources are not publication files.
+Machine-local private recovery locator: Git-common-directory-relative `methodology-evidence/M28-C2/continuation-a2-20261014/INDEX.json`. Restore the completed-external resource archive and final A2 run/constructor/recorder supplement; final-records was sealed for the verified pre-merge review delivery. The subsequent integration supplement is sealed after main record synchronization; read the actual index for its current completion state. SHA-256 and readable-tar/copy checks are retained in the index. Original C2/A1/C1 archives remain separate and unchanged. These private resources are not publication files.
 
 Execution packet: `.methodology/runs/M28-C2-A2-20261013`. Read qa3/result.json and report.md, review2/result.json and report.md, finalize/result.json and report.md, then authoritative state and root-final evidence. Accepted software input/candidate bindings stay fixed even after root documentation closure. Current project records, Git content and this result note are the maintainer entry after local review delivery.
 
-Next is concrete result acceptance/main integration, then canonical synchronization and C3 reconnaissance/specification. C3 safeguards → C4 SDK/import/candidates → C5 autonomy/resume/isolation → C6 actual loader handover remains the route. Public visibility and later frontend/Telegram/MCP work are held. Error notes remain lightweight; learning/measurement is deferred.
+Result acceptance/main integration is complete; next is C3 reconnaissance/specification. C3 safeguards → C4 SDK/import/candidates → C5 autonomy/resume/isolation → C6 actual loader handover remains the route. Public visibility and later frontend/Telegram/MCP work are held. Error notes remain lightweight; learning/measurement is deferred.

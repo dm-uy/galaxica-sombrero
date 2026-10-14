@@ -1,21 +1,21 @@
-# Current checkpoint: C2 verified; result integration pending
+# Current checkpoint: C2 integrated; C3 preparation next
 
 ## Blocked on the owner
 
-Accept the concrete [C2 result](notes/m28-c2-result.md) and decide its main integration through draft PR #4. C2 specification and the exact Claude test amendment are already approved; no second Code approval is needed. Main merge, publication, external installation and C3–C6 Code remain separate decisions.
+No decision blocks C3 reconnaissance/specification. C3 Code requires its exact specification approval. External installation, publication and C4–C6 Code remain separate decisions.
 
 ## Current and previous state
 
-Permanent main contains integrated C1 at8d984ed: neutral1.1/Codex source2.1. Branch codex/m28-c2-profile delivers source2.2 with73 members/27 skills/six helpers/six roles. Current independent QA3, renewed whole Review and separately assigned Architect Finalize verify the same308-file software candidate f1d3250169ea098abfc5f40df1241a9f39a309a4ea25a3e8a8d867296d416dca. Fresh suites597/146/526 pass without skips; real consumer, migration, error-oracle and final code-map evidence are retained. Subsequent root-only reconciliation of these four documents and the result note is checked separately; it does not change executable, neutral or package source.
+The owner accepted C2 and instructed merge on2026-10-14. PR #4 is MERGED at8161e03a23a2d81a7a0ad4c6d3fa183eba285324; the canonical main was fast-forward synchronized and its309 source bytes/modes matched the verified delivery. [Integration record](notes/m28-c2-integration.md) distinguishes this from subsequent root-only record reconciliation.
 
-Original C2 and amendment A1 remain terminal BLOCKED/spent1 each; current A2 has spent2/cap2, cumulative4/max4. Preserve failed and held history and C1's spent4/4 record. No reset, fifth Debug entry or old-code SUCCESS is inferred. Detailed limitations and durable private recovery locators are in the result note.
+Main now contains neutral1.1/Codex source2.2:73 members/27 skills/six helpers/six roles. Current independent QA3, whole Review and assigned Architect Finalize bind the308-file software candidate;597/146/526 suites, real CLI/migration/log controls and maps passed. Separate309-file root documentation closure/privacy and committed delivery verification passed. [Result, history and recovery](notes/m28-c2-result.md) remains the evidence home.
+
+Original C2 and A1 are terminal BLOCKED/spent1 each; A2 spent2/cap2, cumulative4/max4. Preserve these and C1 spent4/4; integration does not reset budgets or manufacture original Code SUCCESS. Eleven older map field mismatches plus one launcher association ambiguity remain outside C2; current Codex has no new map problem.
 
 ## Next authorized action
 
-The current gate is concrete owner result review/main integration. Verified local review delivery precedes that decision. After matching main approval, synchronize the canonical main and prepare C3 reconnaissance/specification along the route; C3 Code needs its exact decision. Read this entry and VISION/ROADMAP/TASKS before relevant links. Do not rebuild the temporary publication project or edit archived preparation work.
+Read AGENTS and VISION/ROADMAP/TASKS, then only relevant links. Prepare C3 safeguards/hooks reconnaissance and bounded specification; do not begin C3 Code or change installed loading before matching decisions. Preserve clean permanent main, historical preparation source, foreign changes and all retained evidence. The canonical repository remains the development source.
 
-## Current traps and held work
+## Held boundaries
 
-The protected Claude parity conflict was resolved only by the approved one-line test exception; Claude runtime/version and remaining58 members are unchanged. Eleven older root/Claude map field mismatches plus one launcher association ambiguity remain outside C2 scope; there are no new Codex map problems. Three formerly reported initializer members actually resolve. Historical raw failures and the interrupted QA handback remain recoverable.
-
-Explicit co-located loading remains supported; installed sources/settings are unchanged. C5 fresh autonomy/resume/isolation, C6 loader handover, public visibility and later API/database → frontend → Telegram → MCP development are separate scopes. Lightweight error notes remain selected; systematic learning and comparative measurement are deferred. Preserve the clean permanent main and foreign archived working changes.
+Installed sources/settings and private visibility are unchanged. C4 SDK/import/candidates → C5 fresh autonomy/resume/isolation → C6 loader handover remain the selected route. Full methodology parity, active loading and C5 autonomy are unproven. Multiple feature writers and later API/database → frontend → Telegram → MCP are separate scopes. Lightweight error notes remain selected; systematic learning/measurement is deferred.

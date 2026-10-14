@@ -6,11 +6,11 @@ Maintain one coherent, harness-neutral methodology and its complete Codex and Cl
 
 The owner selected this repository as the sole development source, with a permanent clean main checkout for package loading. The Codex adaptation must cover at least the currently used in-house methodology and operate without external in-house skills/plugins as necessary sources. [M27 coverage contract](specs/m27-self-contained-coverage.md) defines duty-level accounting and behavioral proof. Topic names and this construction chat do not establish whole-methodology parity.
 
-[M26 onboarding](notes/m26-maintainer-onboarding.md) is integrated through PR #1; preparation repositories are archival. Author/access configuration is machine-local to each clone, not an embedded credential or shared identity. [C1 result](notes/m28-c1-result.md) is accepted and integrated through PR #3. Stable main8d984ed has neutral1.1 and Codex source2.1.
+[M26 onboarding](notes/m26-maintainer-onboarding.md) is integrated through PR #1; preparation repositories are archival. Author/access configuration is machine-local to each clone, not an embedded credential or shared identity. [C1 result](notes/m28-c1-result.md) is accepted and integrated through PR #3. C1 established neutral1.1/Codex source2.1; owner-approved C2 integration now advances canonical main to Codex source2.2.
 
 ## Current bounded product
 
-[C2](notes/m28-c2-result.md) is implemented and independently verified for result review, pending owner integration. Its source2.2 package has73 members,27 skills,six helpers and six roles: opt-in consumer PM profile,13 templates,four lifecycle entries, a shared resolver and orientation/check, code-map and safe markup-migration commands. The only Claude change is the approved shared-topic parity-test exception; runtime/source1.0, remaining58 members,28 skills and all29 assertions are protected.
+[C2](notes/m28-c2-result.md) is independently verified, owner-accepted and integrated through PR #4; [integration record](notes/m28-c2-integration.md). Its source2.2 package has73 members,27 skills,six helpers and six roles: opt-in consumer PM profile,13 templates,four lifecycle entries, a shared resolver and orientation/check, code-map and safe markup-migration commands. The only Claude change is the approved shared-topic parity-test exception; runtime/source1.0, remaining58 members,28 skills and all29 assertions are protected.
 
 Neutral1.1 retains71 owners/69 drafts/two stubs,1234 norms/444 anchors,28 capabilities/seven parameters. Codex wire2.0/schema2 and established roles/gates/check guards remain unchanged. Complete co-located explicit-source loading is the supported profile. MIT remains the license; no installation or public visibility change occurred.
 
