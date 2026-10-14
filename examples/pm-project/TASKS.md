@@ -53,3 +53,7 @@ Status: selected into the approved M30 contract below; this earlier observation 
 Direction and merge/reissue/installation accepted by the owner; [decision/scope](notes/pm-lightweight-direction.md). Shared and both native carriers reflect the lightweight boundary. Release identities: neutral3.0.0, Codex3.0.0, Claude2.0.0; only exact executable binding constants/current-version assertions change, original algorithm pins/wire/schema/inventories remain.
 
 Bounded release checks and actual installation readback apply; no feature-dev/QA role or new run ledger for this documentation release. Codex uses a complete repository snapshot; Claude loads canonical main in place. The decision note carries actual completion. Retain M30 deferred Claude proof and exhausted C3 separately; installation is not their acceptance.
+
+### M31 completion receipt
+
+PR8 merged at3dd4d626; private release v3.0.0 includes the complete archive and checksum. Codex3.0.0 installed/enabled and all27 skills actually discovered through app-server; old personal codex-pm disabled/retained. Claude2.0.0 configured in place; manifest and actual SessionStart binding pass. Configuration backup retained. Installed source stays frozen at the release commit; subsequent maintainer receipt changes are not repackaged source. Start a fresh session for the new catalog; see [HANDOFF](HANDOFF.md). M30 live Claude deferral and C3 remain unchanged.
