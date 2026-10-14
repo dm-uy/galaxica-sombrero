@@ -22,4 +22,8 @@ The original261-file private release and its594/101/526 test evidence remain his
 
 ## C3 preparation — staged proposal
 
-[C3 reconnaissance](notes/m28-c3-recon.md) and [exact draft specification](specs/m28-c3-safeguards.md) propose a source-only guard and synchronous opt-in binding as PARTIAL capacity. No C3 Code approval exists yet. Native role identity, continuation/interception and hook-fault boundaries remain unproven; native proof needs its later concrete grant and full M27 coverage remains owed. C4–C6, permanent activation, publication and main integration remain held. C1/C2 accepted history and budgets are unchanged.
+[C3 reconnaissance](notes/m28-c3-recon.md) and [exact draft specification](specs/m28-c3-safeguards.md) propose a source-only guard and synchronous opt-in binding as PARTIAL capacity. The owner approved the exact partial source-stage C3 specification on2026-10-14; Architect/Code and independent source-stage verification may proceed. Native role identity, continuation/interception and hook-fault boundaries remain unproven; native proof needs its later concrete grant and full M27 coverage remains owed. C4–C6, permanent activation, publication and main integration remain held. C1/C2 accepted history and budgets are unchanged.
+
+## C3 execution checkpoint
+
+The exact partial source-stage scope is owner-approved. Bootstrap completed and a ready single-slice plan exists, but parent acceptance failed before Code due to the root-supplied stale candidate binding after one response correction. Run is BLOCKED, Debug0/4; no guard implementation or native proof exists. [Failure/result and continuation](notes/m28-c3-result.md). Preserve the ledger and require matching bounded continuation; C1/C2 and held native/install/merge boundaries remain unchanged.

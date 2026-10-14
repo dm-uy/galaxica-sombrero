@@ -1,0 +1,15 @@
+# M28-C3 source-stage run: BLOCKED before Code
+
+The owner approved the exact PARTIAL source-stage specification on2026-10-14, SHA0ef5cf14b56f2504cc584b3d752fe806274dd6ae2ec9c0f0d519cecb590440f9. Native AC7/trust/runtime probes, installation, main integration/publication and C4–C6 remain held. [Specification](../specs/m28-c3-safeguards.md), [reconnaissance](m28-c3-recon.md), [technical plan](../plans/m28-c3-safeguards.md).
+
+Actual Bootstrap completed and was accepted. Architect produced a single-slice plan and actual visual lint PASS7recognized nodes/7BRs; three additional definitions require disclosed manual review. Plan preserves exact23software paths, complete original scope and both deficiency blocks. These are design receipts, not implementation or source-stage acceptance.
+
+Parent acceptance found duplicate AC7 in the first return. The same Architect corrected this once, preserving original output. A later real helper record refused the candidate identity: root had instructed the producer to use the pre-plan digest, but the helper requires the actual post-plan candidate. This is a root assignment/acceptance error, not evidence that the guard code failed. The corrected return still followed that wrong instruction.
+
+Run is terminal BLOCKED at Architect. One response correction consumed, Debug0/4; original C1/C2 budgets/history are untouched. No Code, guard implementation, new technical tests/maps, native hook/model-runtime proof, trust, installation or merge occurred. Current implementation remains2.2/73members/27skills/sixhelpers/sixroles; source2.3/77 is only proposed.
+
+Preserved privately: authentic owner grant, source2.2 immutable construction snapshot, initial init refusal/recovery, Bootstrap, full plan/read/map/visual receipts, original/corrected Architect output, exact plan delta, helper refusal, terminal ledger and observed-vs-last-accepted candidate inventories. Pending plan is observed but not accepted; no source/reset/deletion disguises the mismatch.
+
+Next requires matching bounded continuation under existing terminal rules: correct the parent-supplied candidate binding, retain every failed record and consumed correction, then proceed within the already approved source scope. Do not silently issue another correction, reset the run or call the source stage complete. The useful safeguard goal remains valid; its process overhead and this parent binding defect are recorded as findings without activating systematic learning/measurement.
+
+Independent closure verification confirms all protected software is unchanged and both original privacy lists/three adapters pass on the complete315-file source. It also identifies the plan's pre-plan-identity sentence as factually wrong: the design record is quarantined until the exact binding metadata correction and matching bounded continuation. A private one-sentence proposed amendment preserves graph/scope/AC/deficiencies; no actual plan/source repair has been applied. Current state uses the terminal ledger/result, not the superseded early private RUNNING checkpoint.

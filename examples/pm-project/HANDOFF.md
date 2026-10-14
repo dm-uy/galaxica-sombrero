@@ -1,21 +1,21 @@
-# Current checkpoint: C2 integrated; C3 specification proposed
+# Current checkpoint: C3 BLOCKED before Code
 
 ## Blocked on the owner
 
-C3 reconnaissance is complete with disclosed limits; the source-stage specification is proposed for owner review. C3 Code requires exact approval of the partial disposition and scope. External installation, publication and C4–C6 Code remain separate decisions.
+C3 source stage is approved, but its run stopped at Architect acceptance. A bounded continuation is needed to correct the root-supplied candidate binding while retaining the failed ledger and spent correction. [Result](notes/m28-c3-result.md). No repeated approval of the original scope is needed; terminal continuation is separate. Native AC7/trust/model-runtime proof, installation, main merge/publication and C4–C6 remain held.
 
 ## Current and previous state
 
-The owner accepted C2 and instructed merge on2026-10-14. PR #4 is MERGED at8161e03a23a2d81a7a0ad4c6d3fa183eba285324; the canonical main was fast-forward synchronized and its309 source bytes/modes matched the verified delivery. [Integration record](notes/m28-c2-integration.md) distinguishes this from subsequent root-only record reconciliation.
+Canonical accepted main bafec417 still contains C2/neutral1.1/Codex2.2,73members/27skills/sixhelpers/sixroles. C2 owner integration through PR4 and C1 through PR3 are unchanged. C1 spent4/4; C2 original/A1/A2 cumulative4/max4 remain historical and exhausted. This C3 guard scope is distinct, Debug0/4.
 
-Main now contains neutral1.1/Codex source2.2:73 members/27 skills/six helpers/six roles. Current independent QA3, whole Review and assigned Architect Finalize bind the308-file software candidate;597/146/526 suites, real CLI/migration/log controls and maps passed. Separate309-file root documentation closure/privacy and committed delivery verification passed. [Result, history and recovery](notes/m28-c2-result.md) remains the evidence home.
+C3 draft PR5 preparation head dc9a079 is separate from uncommitted current approval/failure records and the new plan. Bootstrap SUCCESS was real/accepted. The unaccepted Architect design record preserves four new plus19 existing software paths, complete scope and deficiencies; real visual lint7recognized nodes/7BRs with three manually reviewed definitions. No Code began. Source2.3/77 is proposed, not delivered.
 
-Original C2 and A1 are terminal BLOCKED/spent1 each; A2 spent2/cap2, cumulative4/max4. Preserve these and C1 spent4/4; integration does not reset budgets or manufacture original Code SUCCESS. Eleven older map field mismatches plus one launcher association ambiguity remain outside C2; current Codex has no new map problem.
+The first Architect return duplicated AC7; one same-actor response correction fixed that. Root had also instructed a pre-plan candidate identity, contrary to helper acceptance of the observed post-plan digest. The real record refused this remaining binding. Run is terminal BLOCKED; original/corrected outputs, refused record and observed/last-accepted inventories remain private. No third reask/reset or false acceptance occurred.
 
-## Next authorized action
+## Next authorized preparation
 
-Read AGENTS and VISION/ROADMAP/TASKS, then only relevant links. Review [C3 reconnaissance](notes/m28-c3-recon.md) and the [staged specification](specs/m28-c3-safeguards.md). Proposed source2.3 guard/binding is PARTIAL capacity: native AC7 and complete safeguard proof remain unfulfilled. Do not begin C3 Code or change installed loading before matching decisions. Preserve clean permanent main, historical preparation source, foreign changes and all retained evidence. The canonical repository remains the development source.
+Read AGENTS/VISION/ROADMAP/TASKS and [result](notes/m28-c3-result.md), then original immutable [spec](specs/m28-c3-safeguards.md) and [plan](plans/m28-c3-safeguards.md). The helper binds the actual post-plan candidate; the plan sentence claiming a pre-plan exception is wrong and quarantined. Prepare/apply only the exact proposed metadata correction after matching bounded continuation, rather than changing protected helper algorithms or repeating unrelated recon. Preserve clean permanent main, frozen constructor and all foreign/archive work.
 
 ## Held boundaries
 
-Installed sources/settings and private visibility are unchanged. C4 SDK/import/candidates → C5 fresh autonomy/resume/isolation → C6 loader handover remain the selected route. Full methodology parity, active loading and C5 autonomy are unproven. Multiple feature writers and later API/database → frontend → Telegram → MCP are separate scopes. Lightweight error notes remain selected; systematic learning/measurement is deferred.
+Native events remain0, AC7/full C3/M27 coverage unfulfilled. C4 SDK/import/candidates → C5 full autonomy/resume/isolation → C6 loader activation remain later decisions. Private visibility, one feature writer, MIT/English artifacts and lightweight error recording remain selected; systematic learning/measurement and later consumer API/frontend/Telegram/MCP are separate.
