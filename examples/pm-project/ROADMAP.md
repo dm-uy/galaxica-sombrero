@@ -28,3 +28,7 @@ C2 consumer PM profile/check/map/migration → C3 safeguards/hooks → C4 SDK pr
 C2 [original approval](notes/m28-c2-code-approval.md), [amendment](notes/m28-c2-amendment-01-approval.md) and [continuation](notes/m28-c2-amendment-02-continuation.md) are settled. The owner accepted and merged PR #4 on2026-10-14. Current action is C3 reconnaissance/specification. Do not ask again for the same Code grant or silently proceed into later Code.
 
 Other agents start at root AGENTS in a complete clone, read the current records, use isolated scoped branches and deliver verified PRs. Keep permanent main clean for loading and preserve foreign work. Multiple feature writers, installed-loader changes, detached discovery, public visibility, systematic learning/measurement and later consumer frontend/Telegram/MCP are separate scopes. Lightweight error recording remains selected.
+
+## C3 preparation — staged proposal
+
+[C3 reconnaissance](notes/m28-c3-recon.md) and [exact draft specification](specs/m28-c3-safeguards.md) propose a source-only guard and synchronous opt-in binding as PARTIAL capacity. No C3 Code approval exists yet. Native role identity, continuation/interception and hook-fault boundaries remain unproven; native proof needs its later concrete grant and full M27 coverage remains owed. C4–C6, permanent activation, publication and main integration remain held. C1/C2 accepted history and budgets are unchanged.

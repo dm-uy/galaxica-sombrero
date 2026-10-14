@@ -1,8 +1,8 @@
-# Current checkpoint: C2 integrated; C3 preparation next
+# Current checkpoint: C2 integrated; C3 specification proposed
 
 ## Blocked on the owner
 
-No decision blocks C3 reconnaissance/specification. C3 Code requires its exact specification approval. External installation, publication and C4–C6 Code remain separate decisions.
+C3 reconnaissance is complete with disclosed limits; the source-stage specification is proposed for owner review. C3 Code requires exact approval of the partial disposition and scope. External installation, publication and C4–C6 Code remain separate decisions.
 
 ## Current and previous state
 
@@ -14,7 +14,7 @@ Original C2 and A1 are terminal BLOCKED/spent1 each; A2 spent2/cap2, cumulative4
 
 ## Next authorized action
 
-Read AGENTS and VISION/ROADMAP/TASKS, then only relevant links. Prepare C3 safeguards/hooks reconnaissance and bounded specification; do not begin C3 Code or change installed loading before matching decisions. Preserve clean permanent main, historical preparation source, foreign changes and all retained evidence. The canonical repository remains the development source.
+Read AGENTS and VISION/ROADMAP/TASKS, then only relevant links. Review [C3 reconnaissance](notes/m28-c3-recon.md) and the [staged specification](specs/m28-c3-safeguards.md). Proposed source2.3 guard/binding is PARTIAL capacity: native AC7 and complete safeguard proof remain unfulfilled. Do not begin C3 Code or change installed loading before matching decisions. Preserve clean permanent main, historical preparation source, foreign changes and all retained evidence. The canonical repository remains the development source.
 
 ## Held boundaries
 

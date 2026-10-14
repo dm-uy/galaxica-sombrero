@@ -26,3 +26,7 @@ Complete and integrated through owner-approved PR #3 at4a718d7; then-main8d984ed
 - C6: actual source-loader handover after matching result/activation decisions.
 
 These are route selections, not new Code or environment grants. Public visibility, concurrent feature writers and later API/database → frontend → Telegram → MCP consumer work remain separate. Lightweight error recording remains active; systematic learning, experiments and comparative measurement are deferred. Host-native tools remain environment dependencies.
+
+## C3 preparation — staged proposal
+
+[C3 reconnaissance](notes/m28-c3-recon.md) and [exact draft specification](specs/m28-c3-safeguards.md) propose a source-only guard and synchronous opt-in binding as PARTIAL capacity. No C3 Code approval exists yet. Native role identity, continuation/interception and hook-fault boundaries remain unproven; native proof needs its later concrete grant and full M27 coverage remains owed. C4–C6, permanent activation, publication and main integration remain held. C1/C2 accepted history and budgets are unchanged.
