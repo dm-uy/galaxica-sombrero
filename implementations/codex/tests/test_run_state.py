@@ -96,7 +96,7 @@ NAMES = ('green-test-trap', 'quantitative-ac', 'semantic-trace', 'infra-dod', 's
 # region FUNC_make_fixture [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Create an owned realistic copied package/neutral corpus for structural helper tests.
 ## @uses shutil.copytree, shutil.copyfile, pathlib.Path.write_text, run_state.initialize
-## @io tmp_path owned Path, cap object deliberately exercised as valid/invalid Debug input, pending/initial_source bool flags and optional prohibition str create actual controlled fixture rules before initialization. Returns (state Path,state dict,evidence Path) using actual complete package47 and neutral71 bytes. Writes only test-owned source/target and ledger; no donor/real tree writes. OSError for unavailable source; ValueError/TypeError from helper input refusal. Example: cap0 yields an initialized owned zero-budget fixture. Importance:9.
+## @io tmp_path owned Path, cap object deliberately exercised as valid/invalid Debug input, pending/initial_source bool flags and optional prohibition str create actual controlled fixture rules before initialization. Returns (state Path,state dict,evidence Path) using actual complete package73 and neutral71 bytes. Writes only test-owned source/target and ledger; no donor/real tree writes. OSError for unavailable source; ValueError/TypeError from helper input refusal. Example: cap0 yields an initialized owned zero-budget fixture. Importance:9.
 ## @complexity 5
 def make_fixture(tmp_path, cap=4, pending=False, initial_source=False, prohibition=None):
     logger.info('[IMP:4][make_fixture][START] owned behavioral verification')

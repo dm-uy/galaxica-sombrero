@@ -14,3 +14,5 @@ Full owners: `process/bootstrap.md`, `protocols/spec-greenfield.md`, `process/sp
 Inspect hidden instructions, briefs, source and settled stack. Establish audience, first falsifiable value, arrival criterion, constraints, stack rationale, MVP and authorized transport. Run RECON; distinguish fixtures from live data. Author full current A1 form and five durable records at granted homes, preserving existing Git/ignores. Route matching spec gate then feature-dev; no incidental auth/billing/environment or bootstrap authority.
 
 Return the actual scoped artifact/evidence and limitations to the assigning parent. A command, template, hash or producer SUCCESS never certifies execution, independence or concrete-result acceptance.
+
+Explicit consumer onboarding uses pm-bootstrap even for an existing project; missing preferred records alone never means greenfield. Preserve existing homes/links and authenticate exact adoption.

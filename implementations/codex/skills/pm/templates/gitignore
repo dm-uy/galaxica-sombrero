@@ -1,0 +1,14 @@
+# code maps are rebuilt, never committed (CV-69)
+doxygen_output/
+# secrets and local configuration
+.env
+.env.*
+!.env.example
+# Python and tooling
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+tests/.test_counter.json
+.DS_Store

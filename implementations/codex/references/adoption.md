@@ -1,4 +1,4 @@
-# Pointwise source adoption — neutral1.1.0 / package2.1.0
+# Pointwise source adoption — neutral1.1.0 / package2.2.0
 
 ## Operative loading procedure
 
@@ -132,3 +132,7 @@ These28 rows match adapter declarations. Each actor discovers actual exposed too
 Debug text parses as strict decimal nonnegative plain integer; default4, zero valid. Boolean, fraction, negative or ambiguous coercion refuses. Candidate supports lowering through actual granted initialization; extension above4 is explicitly unsupported/BLOCKED and arbitrary human-looking text grants none. Spend before causal Debug entry, failure/resume retains it; response/transport/test counters are separate. Model values point to actual inherited configuration, not promises of a dynamic selector or hidden observed provider. Classify adequate strength/context per hardest step; missing required capability blocks rather than changing settings silently.
 
 Structural conform adapter validates membership/reference spelling and declared fields; independent source/converse/full-current ordinary meaning review and actual native smoke are separate required proofs. No full-source transfer percentage, installed enforcement, sandbox efficacy, model resilience/savings, license or publication acceptance is inferred.
+
+## Explicit C2 consumer route
+
+Source2.2 adds the opt-in methodology-consumer-pm/1.0.0 carrier at references/consumer-pm-profile.md,13 seeds/four entries/shared consumer_files + orient/codemap/markup_migrate (six total helpers,27skills/73members/sixroles). Read full current owners and selected profile before native effects. Historical47/23/two input capacity remains historical; no input-lock migration. Explicit commands/grammars/authority/receipt/unknown-effect contracts live in the profile and package README. C3 automatic hooks/trust, C4 SDK/import/ingest/ledger comparison, C5 autonomous/resume proof and C6 loader activation remain held. Wire2.0/schema2/neutral1.1 remain unchanged. Claude runtime/version and the other58 of its59 package files remain unchanged; the sole source exception is the exact owner-approved one-line parity predicate in implementations/claude/tests/test_package_contract.py. Its shared23/Claude28 and all29 assertions are retained.

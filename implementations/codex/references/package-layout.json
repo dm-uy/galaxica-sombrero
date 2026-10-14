@@ -1,6 +1,6 @@
 {
   "package": "methodology-codex",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "profile": "colocated-explicit-source",
   "files": [
     {
@@ -33,6 +33,10 @@
     },
     {
       "path": "references/codex-runtime.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "references/consumer-pm-profile.md",
       "kind": "documentation"
     },
     {
@@ -132,8 +136,92 @@
       "kind": "skill"
     },
     {
+      "path": "skills/pm-bootstrap/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/pm-handoff/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/pm-plan-batch/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/pm-run-batch/SKILL.md",
+      "kind": "skill"
+    },
+    {
       "path": "skills/pm/SKILL.md",
       "kind": "skill"
+    },
+    {
+      "path": "skills/pm/scripts/codemap.py",
+      "kind": "helper"
+    },
+    {
+      "path": "skills/pm/scripts/consumer_files.py",
+      "kind": "helper"
+    },
+    {
+      "path": "skills/pm/scripts/markup_migrate.py",
+      "kind": "helper"
+    },
+    {
+      "path": "skills/pm/scripts/orient.py",
+      "kind": "helper"
+    },
+    {
+      "path": "skills/pm/templates/AGENTS.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/CLAUDE.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/CONVENTIONS.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/DEC.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/Doxyfile",
+      "kind": "config"
+    },
+    {
+      "path": "skills/pm/templates/HANDOFF.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/OPEN_QUESTIONS.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/RECON.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/ROADMAP.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/SPEC.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/TASKS.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/VISION.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/gitignore",
+      "kind": "config"
     },
     {
       "path": "skills/prod-log-vacuum/SKILL.md",
@@ -176,8 +264,24 @@
       "kind": "test"
     },
     {
+      "path": "tests/test_codemap.py",
+      "kind": "test"
+    },
+    {
+      "path": "tests/test_consumer_files.py",
+      "kind": "test"
+    },
+    {
+      "path": "tests/test_consumer_pm.py",
+      "kind": "test"
+    },
+    {
       "path": "tests/test_guide.md",
       "kind": "test-guide"
+    },
+    {
+      "path": "tests/test_markup_migrate.py",
+      "kind": "test"
     },
     {
       "path": "tests/test_native_contract.py",

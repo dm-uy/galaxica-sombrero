@@ -11,11 +11,11 @@
 ## - Finite source checks do not certify complete prose, native authoring, independence or target evaluation.
 ## @rationale
 ## Q: Why freeze normalized AST beside existing helper regressions?
-## A: Only five current identity constants may change; any unrelated executable edit must refuse even if suites are green.
+## A: Original five bridge sites plus exact C2 membership site may change; any unrelated executable edit must refuse even if suites are green.
 ## Q: Why inspect contrary forms?
 ## A: Removing a required report boundary or substantive draft must fail the same predicate that accepts current source.
 ## @changes
-## LAST_CHANGE: [1.1.0 - C1 required owners, direct external-agent route and fixed original helper algorithm controls.]
+## LAST_CHANGE: [1.1.0 - C2 exact source/member normalization; fixed original pins retained. Earlier: C1 required owners, direct external-agent route and fixed original helper algorithm controls.]
 ## @modulemap
 ## FUNC 1[Metadata anchor] => test_c1_review_and_routing._module_contract
 ## FUNC 8[Read complete source with owned safe trace] => test_c1_review_and_routing._read
@@ -137,20 +137,31 @@ def test_external_agent_route_requires_full_current_owner(repo_root, caplog, tmp
 # region FUNC__algorithm_identity [DOMAIN(8): Compatibility; CONCEPT(9): AlgorithmFreeze; TECH(7): ast, hashlib]
 ## @purpose Compare whole helper algorithms after only their approved binding constant normalization.
 ## @uses ast.parse, ast.walk, ast.dump, hashlib.sha256, logging.Logger.info
-## @io Input: full helper str and engine codex/claude. Output: SHA256 hex of AST with only exact 3/2 approved current constants restored. Invariants: input unchanged. Side effects: safe count/result trace. Raises: AssertionError on wrong permitted site population or value. Importance:9. Example: unrelated initialized counter change yields a different identity.
+## @io Input: full helper str and engine codex/claude. Output: SHA256 hex of AST with only exact original3/2 bridge sites and unique C2 membership73 restored. Invariants: input unchanged. Side effects: safe count/result trace. Raises: AssertionError on wrong permitted site population or value. Importance:9. Example: unrelated initialized counter change yields a different identity.
 ## @complexity 5
 def _algorithm_identity(text, engine):
     # START_BLOCK_Validation
     tree = ast.parse(text)
     binding = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "_bindings")
-    counts = {"1.1.0": 0, "2.1.0": 0}
+    counts = {"1.1.0": 0, "2.2.0": 0}
     for node in ast.walk(binding):
         if isinstance(node, ast.Constant) and node.value in counts:
             counts[node.value] += 1
             node.value = "1.0.0" if node.value == "1.1.0" else "2.0.0"
-    if counts != {"1.1.0": 2, "2.1.0": 1 if engine == "codex" else 0}:
+    if counts != {"1.1.0": 2, "2.2.0": 1 if engine == "codex" else 0}:
         LOGGER.error("[IMP:10][_algorithm_identity][REFUSED] permitted site population mismatch")
         raise AssertionError("permitted site population mismatch")
+    if engine == "codex":
+        # Exact authorized chained membership comparison only; unrelated73 values remain pinned.
+        members = [n for n in ast.walk(binding) if isinstance(n, ast.Compare)
+                   and ast.dump(n.left, include_attributes=False) == "Call(func=Name(id='len', ctx=Load()), args=[Call(func=Name(id='set', ctx=Load()), args=[Name(id='expected', ctx=Load())], keywords=[])], keywords=[])"
+                   and len(n.ops) == 2 and all(isinstance(op, ast.Eq) for op in n.ops)
+                   and ast.dump(n.comparators[0], include_attributes=False) == "Call(func=Name(id='len', ctx=Load()), args=[Name(id='expected', ctx=Load())], keywords=[])"
+                   and isinstance(n.comparators[1], ast.Constant) and n.comparators[1].value == 73]
+        if len(members) != 1:
+            LOGGER.error("[IMP:10][_algorithm_identity][REFUSED] exact C2 member site mismatch")
+            raise AssertionError("exact C2 member site mismatch")
+        members[0].comparators[1].value = 47
     identity = hashlib.sha256(ast.dump(tree, include_attributes=False).encode()).hexdigest()
     LOGGER.info("[IMP:9][_algorithm_identity][RESULT] exact permitted sites and whole algorithm identity computed")
     return identity
@@ -166,7 +177,7 @@ def test_release_bridge_keeps_wire_and_helper_algorithms(repo_root, caplog):
     # START_BLOCK_BusinessLogic
     caplog.set_level(logging.INFO, logger=LOGGER.name)
     assert _read(repo_root, "SPEC_VERSION") == "1.1.0\n"
-    for engine, version in (("codex", "2.1.0"), ("claude", "1.0.0")):
+    for engine, version in (("codex", "2.2.0"), ("claude", "1.0.0")):
         base = "implementations/" + engine
         layout = json.loads(_read(repo_root, base + "/references/package-layout.json"))
         adapter = json.loads(_read(repo_root, base + "/adapter.json"))

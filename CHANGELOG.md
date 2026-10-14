@@ -1,5 +1,10 @@
 # Changelog
 
+
+## Codex source2.2.0 (neutral1.1.0 unchanged)
+
+Add the explicitly adopted consumer PM profile,13 seeds/four PM entries and shared reader/orient/codemap/safe migration. Exact73 members/27skills/sixhelpers/sixroles; preserve wire2.0/schema2/full original helper algorithms/Claude. C3–C6 and installed activation remain held; actual current validation belongs to its delivery evidence.
+
 ## 1.1.0
 
 - Complete run-review and code-review owning draft procedures, reusable forms and fictional positive/boundary/refusal cases under existing audit/Reviewer/QA/Finalize authority.
