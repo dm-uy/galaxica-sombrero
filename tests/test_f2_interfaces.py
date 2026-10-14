@@ -20,7 +20,8 @@
 ## Q: Why separate typed facts, physical records and expectations?
 ## A: Fenced scenario labels yield no observation; expected status and an origin label cannot supply real prerequisite evidence.
 ## @changes
-## LAST_CHANGE: [v1.0.0 - Reconcile current M19 boundary/release facts and paired source operands; preserve original assertions/pins/refusals/restoration; runtime checks pending.]
+## LAST_CHANGE: [2.0.0 - M30 exact51 role-read receipt metadata normalization; ORIGINAL whole-byte pins and contrary guards retained.]
+## Earlier: [v1.0.0 - Reconcile current M19 boundary/release facts and paired source operands; preserve original assertions/pins/refusals/restoration; runtime checks pending.]
 ## BUG_FIX_CONTEXT: QA found fenced labels discarded before evaluation and three one-literal negatives with surviving equivalent duties.
 ## BUG_FIX_CONTEXT: Reviewed source supports and independent related reasons distinguish redundant removal from actual loss; typed records expose absent versus unmet triggers.
 ## BUG_FIX_CONTEXT: Public prose and fixed policy stay unchanged; renewed independent semantic judgment and actual formal checks remain required.
@@ -5995,15 +5996,54 @@ def test_f2_complete_current_interfaces(repo_root):
 
 
 # region FUNC_test_f2_unchanged_contract_boundaries [DOMAIN(8): F2; CONCEPT(9): ActualEvidence, FixedIntent; TECH(6): pathlib, json]
-## @purpose Retain protected bytes and same-version current rules beyond the optional QA repeat economy.
-## @uses pathlib, json, hashlib, reviewed contract helpers
-## @io actual source or owned factual fixture inputs -> observed data or assertions
-## @complexity 7
+## @purpose Retain every ORIGINAL protected byte pin, admitting only51 authorized current Architect read-receipt SHA scalars.
+## @uses pathlib.Path.read_bytes, json.loads, re.search, hashlib.sha256, test_f2_interfaces._read_surfaces
+## @io Input: repo_root Path of actual source. Output: None after whole protected-byte and contrary controls.
+##   Invariants: original PROTECTED_PINS unchanged; only51 current path-bound receipt SHA values normalize to fixed originals.
+##   Guarantees: actual owner hash matches; wrong/missing/duplicate receipts refuse; any other case/event/byte corruption stays pinned.
+##   Side effects: safe count/identity and owning success9/expected refusal10 trace only; candidate and control bytes stay in memory.
+##   Raises: AssertionError on scope/hash/duty mismatch, JSONDecodeError on malformed fixture, OSError on unavailable source.
+##   Importance:9. Example: changing first-success case ID still differs after permitted SHA normalization.
+## @complexity 9
+## Complexity9 reflects the fixed original/contrary fixture profiles and exact population checks, not a general migration engine.
 def test_f2_unchanged_contract_boundaries(repo_root):
     print("[IMP:4][test_f2_unchanged_contract_boundaries][ENTRY] current protected producer and consumer bytes")
     surfaces, identities = _read_surfaces(repo_root)
     for relative, expected in PROTECTED_PINS.items():
-        actual = hashlib.sha256((repo_root / relative).read_bytes()).hexdigest()
+        data = (repo_root / relative).read_bytes()
+        if relative == "examples/flow-contract/cases.json":
+            # BUG_FIX_CONTEXT: exact authorized role-read receipts changed, while the original whole-fixture pin must remain.
+            # Normalize only current path-bound receipt SHA scalars; every other ordered byte stays under the original oracle.
+            old_owner = "d7ecb56452d6c20ca04938fcf16a8b786a0ac851762e27e0ac860d97b6035d23"
+            current_owner = "44763ab7afa836e5533e45075a66decc8a55b5ac9caddd8c2ff85b26678a8d61"
+            assert hashlib.sha256((repo_root / "roles/architect.md").read_bytes()).hexdigest() == current_owner
+            current_bytes = current_owner.encode()
+            row_match = re.search(rb'\{\s*"path":\s*"roles/architect\.md",\s*"sha256":\s*"' + current_bytes + rb'"\s*\}', data)
+            assert row_match is not None and b'first-success' in data
+            controls = [("current", data, True),
+                        ("case-byte", data.replace(b'first-success', b'first-succesx', 1), False),
+                        ("wrong-sha", data.replace(current_bytes, b'0' * 64, 1), False),
+                        ("missing-owner", data.replace(b'"path": "roles/architect.md"', b'"path": "roles/other.md"', 1), False),
+                        ("duplicate-row", data[:row_match.end()] + b',' + row_match.group() + data[row_match.end():], False)]
+            for label, candidate, expected_valid in controls:
+                pending = [json.loads(candidate)]
+                selected = []
+                while pending:
+                    item = pending.pop()
+                    if isinstance(item, dict):
+                        if "readEvidence" in item:
+                            selected.extend(row for row in item["readEvidence"] if row.get("path") == "roles/architect.md")
+                        pending.extend(item.values())
+                    elif isinstance(item, list):
+                        pending.extend(item)
+                exact = len(selected) == 51 and all(row.get("sha256") == current_owner for row in selected) and candidate.count(current_bytes) == 51
+                normalized = candidate.replace(current_bytes, old_owner.encode()) if exact else candidate
+                valid = exact and hashlib.sha256(normalized).hexdigest() == expected
+                print("[IMP:%d][test_f2_unchanged_contract_boundaries][RECEIPT_%s] control=%s selected=%d" % (9 if valid else 10, "VALID" if valid else "REFUSED", label, len(selected)))
+                assert valid is expected_valid
+                if label == "current":
+                    data = normalized
+        actual = hashlib.sha256(data).hexdigest()
         print("[IMP:8][test_f2_unchanged_contract_boundaries][READ] public=%s sha=%s" % (relative, actual))
         assert actual == expected
     masked = "\n".join(line for line in surfaces["roles/_base.md"].splitlines() if not line.startswith(("- **ROLE-105**", "- **ROLE-204**")))

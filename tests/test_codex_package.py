@@ -15,7 +15,8 @@
 ## Q: Why retain an outside-namespace negative?
 ## A: The native exception is typed and scoped; an ordinary malformed Markdown file must still fail the actual common checker.
 ## @changes
-## LAST_CHANGE: [v1.0.1 - M22: the declared sibling set is {codex, claude} (an ambient, git-ignored macOS .DS_Store beside them is not a sibling); an unknown sibling is still refused. Earlier: exact M19 package/boundary checks with independent73-path oracle and restored contrary inputs.]
+## LAST_CHANGE: [2.0.0 - M30 exact current release/census coupling; all prior cases/assertions/refusals retained.]
+## Earlier: [v1.0.1 - M22: the declared sibling set is {codex, claude} (an ambient, git-ignored macOS .DS_Store beside them is not a sibling); an unknown sibling is still refused. Earlier: exact M19 package/boundary checks with independent73-path oracle and restored contrary inputs.]
 ## @modulemap
 ## FUNC 9[Independent actual package assembly/profile/path judgment] => test_codex_package._package_assembly
 ## FUNC 8[Expose owning important captured records before assertions] => test_codex_package._show_trace
@@ -78,13 +79,13 @@ def _package_assembly(root):
             raise ValueError("regular owned co-located package directory required")
         if set(p.name for p in package.parent.iterdir() if p.name != ".DS_Store") != DECLARED_PACKAGES:
             raise ValueError("unknown sibling package")
-        if not (root / "SPEC_VERSION").is_file() or (root / "SPEC_VERSION").read_text() != "1.1.0\n":
+        if not (root / "SPEC_VERSION").is_file() or (root / "SPEC_VERSION").read_text() != "2.0.0\n":
             raise ValueError("unsupported detached neutral dependency")
         if not all((root / rel).is_file() and "status: draft\n" in (root / rel).read_text() for rel in CORE):
             raise ValueError("missing substantive neutral core")
         operation = "Layout"
         layout = json.loads((package / "references/package-layout.json").read_text())
-        if not isinstance(layout, dict) or set(layout) != {"package", "version", "profile", "files", "roles"} or layout.get("package") != "methodology-codex" or layout.get("version") != "2.2.0" or layout.get("profile") != "colocated-explicit-source" or layout.get("roles") != ROLES:
+        if not isinstance(layout, dict) or set(layout) != {"package", "version", "profile", "files", "roles"} or layout.get("package") != "methodology-codex" or layout.get("version") != "2.4.0" or layout.get("profile") != "colocated-explicit-source" or layout.get("roles") != ROLES:
             raise ValueError("unsupported package profile")
         rows = layout.get("files")
         if not isinstance(rows, list) or not rows:
@@ -123,7 +124,7 @@ def _package_assembly(root):
             raise ValueError("missing or undeclared actual package member")
         operation = "Metadata"
         plugin = json.loads((package / ".codex-plugin/plugin.json").read_text())
-        if plugin.get("name") != "methodology-codex" or plugin.get("version") != "2.2.0":
+        if plugin.get("name") != "methodology-codex" or plugin.get("version") != "2.4.0":
             raise ValueError("native metadata identity mismatch")
         LOGGER.info("[IMP:9][_package_assembly][VALIDATION_SUCCESS] members=%d", len(actual))
         return declared

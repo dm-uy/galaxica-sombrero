@@ -19,7 +19,7 @@
 ## Q: Why presence only for project records?
 ## A: Orientation needs to know which records exist so the root can read them deliberately under the orient check; copying private content into every session start context would be unrequested disclosure.
 ## @changes
-## LAST_CHANGE: [1.0.0 - Initial in-place binding check and project record presence for the first native Claude Code package.]
+## LAST_CHANGE: [1.1.0 - Exact M30 package source constant; executable functions unchanged. Earlier:1.0.0 - Initial in-place binding check and project record presence for the first native Claude Code package.]
 ## @modulemap
 ## FUNC 2[Attach full module documentation with no runtime effects] => session_start._module_contract
 ## FUNC 6[Resolve the package root from the environment or the script location] => session_start.resolve_package_root
@@ -56,7 +56,7 @@ logger = logging.getLogger("session_start")
 logger.addHandler(logging.NullHandler())
 
 PACKAGE_NAME = "methodology-claude"
-PACKAGE_VERSION = "1.0.0"
+PACKAGE_VERSION = "1.1.0"
 PACKAGE_PROFILE = "colocated-in-place"
 SPEC_ROOT = "../../"
 CORE_OWNERS = ("concepts/principles.md", "roles/_base.md", "code/exoskeleton.md", "code/ldd.md", "code/doxygen.md", "code/tests.md")
@@ -233,7 +233,7 @@ def _check_neutral_version(neutral_root, adapter_version):
 # region FUNC__check_layout [DOMAIN(8): ToolBinding; CONCEPT(8): PackageIdentity; TECH(7): json]
 ## @purpose Confirm that the package declares the identity this hook was written for (name, version and in-place profile), so a foreign or renamed package is not bound by accident.
 ## @uses session_start._read_json_object
-## @io Input: package_root Path. Output: tuple of (list of reason str, declared package version str or None). The reason list is empty exactly when references/package-layout.json is a readable object with package methodology-claude, version 1.0.0 and profile colocated-in-place.
+## @io Input: package_root Path. Output: tuple of (list of reason str, declared package version str or None). The reason list is empty exactly when references/package-layout.json is a readable object with package methodology-claude, version 1.1.0 and profile colocated-in-place.
 ##   Side effects: one file read and trace records. Guarantees: each mismatching key contributes its own reason with the found value clipped to 40 characters; an unusable file gives one reason.
 ##   Raises: none. System importance: 8. Example: a layout declaring profile installed-copy returns one reason naming the found profile.
 ## @complexity 4

@@ -2,7 +2,7 @@
 ## @modulecontract
 ## @purpose To prove that the repository is the skeleton it claims to be: the amended layout of 67 files exists with valid
 ## cards, exactly 2 of them are stubs, the sixty-nine drafts are the ones named, the registries declare what they must and the
-## version files say 1.1.0.
+## version files say 2.0.0.
 ## @scope The file tree, the cards, the stubs, the index of templates, the documentation of the tool, the registries, the
 ## version files and the README. No tool code is run here.
 ## @input The repository on disk; the constant of the 74 files of the inventory's layout.
@@ -18,7 +18,8 @@
 ## A: The specification says the count of stubs equals the layout's count after the amendments; a typed number would
 ## hide a wrong amendment, a computed one shows it.
 ## @changes
-## LAST_CHANGE: [v1.0.1 - M23: the owner's MIT licence (2026-10-10) replaces the former no-licence assertion; no remote is still required.]
+## LAST_CHANGE: [2.0.0 - M30 exact current release/census coupling; all prior cases/assertions/refusals retained.]
+## Earlier: [v1.0.1 - M23: the owner's MIT licence (2026-10-10) replaces the former no-licence assertion; no remote is still required.]
 ## - [v1.0.0 - Reconcile current M19 boundary/release facts and paired source operands; preserve original assertions/pins/refusals/restoration; runtime checks pending.]
 ## @modulemap
 ## FUNC 8[The layout after the amendments] => amended_layout
@@ -35,7 +36,7 @@
 ## FUNC 6[The 28 capabilities with meanings] => test_capabilities_registry_declares_the_28_with_meanings
 ## FUNC 4[The memory capability names an external source] => test_memory_capability_names_an_external_source
 ## FUNC 5[The seven parameters] => test_parameters_registry_declares_the_seven
-## FUNC 3[The version is 1.1.0] => test_spec_version_is_0_19_0
+## FUNC 3[The version is 2.0.0] => test_spec_version_is_0_19_0
 ## FUNC 4[The changelog entry] => test_changelog_entry_names_skeleton_format_registries_tool
 ## FUNC 7[The README explains adoption and the tool] => test_readme_explains_adoption_and_conform
 ## FUNC 5[The README names the MIT licence] => test_readme_states_mit_licence
@@ -399,13 +400,13 @@ def test_parameters_registry_declares_the_seven(repo_root):
 
 
 # region FUNC_test_spec_version_is_0_19_0 [DOMAIN(7): Version; CONCEPT(8): SpecVersion; TECH(4): bytes]
-## @purpose Prove that the version file holds the line 1.1.0 and a newline, and nothing else.
+## @purpose Prove that the version file holds the line 2.0.0 and a newline, and nothing else.
 ## @io pathlib.Path -> None
 ## @complexity 1
 def test_spec_version_is_0_19_0(repo_root):
     data = (repo_root / "SPEC_VERSION").read_bytes()
     print("[IMP:9][test_spec_version][RESULT] bytes=%d" % len(data))
-    assert data == b"1.1.0\n"
+    assert data == b"2.0.0\n"
 # endregion FUNC_test_spec_version_is_0_19_0
 
 

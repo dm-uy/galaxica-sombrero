@@ -11,6 +11,6 @@ Trigger: An open consequential choice; never reopen settled choices or pad trivi
 
 Full owners: `prompting/brainstorm.md`, `prompting/superposition-collapse.md`, `process/decisions.md`.
 
-Separate proposal from selection. For a broad fork provide five distinct approaches including conventional, unconventional and intentionally wild; for bounded choices use viable actual alternatives. Describe essence and two side effects first, then feasibility/impact/risk scores1–10 with reasons and uncertainty. Collapse on owner criteria or delegated scope, record re-opening evidence and deferred options.
+At the mandatory consequential-open trigger, the authorized root must load full `prompting/brainstorm.md` and follow its independent decision-packet procedure using exposed native collaboration; an inner role requests its packet. Read the full owner for actor separation, durable HOLD, scoring, authority, exclusions and missing-capability handling. Record actual current-source/context/tool evidence in existing homes; skill presence proves no execution.
 
 Return the actual scoped artifact/evidence and limitations to the assigning parent. A command, template, hash or producer SUCCESS never certifies execution, independence or concrete-result acceptance.

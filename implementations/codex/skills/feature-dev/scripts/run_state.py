@@ -18,7 +18,7 @@
 ## Q: Why preserve unavailable/unsupported limits?
 ## A: Same-author fixtures and bounded recognizers cannot replace independent source meaning, current maps or actual native smoke.
 ## @changes
-## LAST_CHANGE: [2.2.0 - Exact C2 source/member constants; preserved full original algorithms. Earlier: M25A target Gitignore/tracked priority and hermetic coupled baseline; explicit package/schema unchanged.]
+## LAST_CHANGE: [2.4.0 - Exact M30 source/neutral constants only; original algorithms preserved. Earlier:2.2.0 - Exact C2 source/member constants; preserved full original algorithms. Earlier: M25A target Gitignore/tracked priority and hermetic coupled baseline; explicit package/schema unchanged.]
 ## @modulemap
 ## FUNC 2[Attach full module documentation with no runtime effects] => run_state._module_contract
 ## FUNC 4[Stamp a chronological observation in UTC.] => run_state._stamp
@@ -427,7 +427,7 @@ def inventory(root, excluded=None):
 # region FUNC__bindings [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Pin actual complete co-located package, adapter, neutral and spec identities.
 ## @uses run_state.read_json, run_state.inventory, run_state._file, run_state._relative, run_state._digest, run_state._expect
-## @io framework directory, adapter exact framework/adapter.json, spec actual file. Returns resolved path records, full73 package rows,71 neutral rows, six core names, layout/adapter/spec byte identities and binding digest. Requires package2.2.0, co-located1.1.0 profile, exact roles/kinds/sorted membership; missing/stub/basic malformed core refuses. Full-content meaning/initial truncation authenticity remains parent judgment; later drift changes locked digest. Raises OSError/ValueError/KeyError/TypeError on unavailable or invalid binding. Reads only; no provider/Git writes. Example: relocated complete co-located tree binds independently of cwd. Importance:9.
+## @io framework directory, adapter exact framework/adapter.json, spec actual file. Returns resolved path records, full73 package rows,71 neutral rows, six core names, layout/adapter/spec byte identities and binding digest. Requires package2.4.0, co-located2.0.0 profile, exact roles/kinds/sorted membership; missing/stub/basic malformed core refuses. Full-content meaning/initial truncation authenticity remains parent judgment; later drift changes locked digest. Raises OSError/ValueError/KeyError/TypeError on unavailable or invalid binding. Reads only; no provider/Git writes. Example: relocated complete co-located tree binds independently of cwd. Importance:9.
 ## @complexity 9
 def _bindings(framework, adapter, spec):
     framework, adapter, spec = Path(framework).resolve(), Path(adapter).resolve(), Path(spec).resolve()
@@ -436,7 +436,7 @@ def _bindings(framework, adapter, spec):
         _expect(framework.is_dir() and adapter == framework / 'adapter.json', 'framework/adapter binding mismatch')
         layout_path = framework / 'references/package-layout.json'
         layout = read_json(layout_path)
-        _expect(layout.get('package') == 'methodology-codex' and layout.get('version') == '2.2.0', 'package identity mismatch')
+        _expect(layout.get('package') == 'methodology-codex' and layout.get('version') == '2.4.0', 'package identity mismatch')
         _expect(set(layout) == {'package', 'version', 'profile', 'files', 'roles'} and layout.get('profile') == 'colocated-explicit-source', 'unsupported package profile')
         _expect(layout.get('roles') == {role: 'roles/'+role+'.md' for role in ('architect','coder','debugger','qa','reviewer','searcher')}, 'package role locations mismatch')
         declarations = layout.get('files')
@@ -449,7 +449,7 @@ def _bindings(framework, adapter, spec):
         _expect(binding.get('spec_root') == '../../', 'co-located spec_root must be ../../')
         neutral = (adapter.parent / _text(binding.get('spec_root'), 'neutral binding missing')).resolve()
         _expect(neutral.is_dir() and neutral == framework.parents[1], 'unsupported detached neutral binding')
-        _expect((neutral / 'SPEC_VERSION').read_text().strip() == binding.get('spec_version') == '1.1.0', 'neutral version mismatch')
+        _expect((neutral / 'SPEC_VERSION').read_text().strip() == binding.get('spec_version') == '2.0.0', 'neutral version mismatch')
         profile_cap = _decimal_cap(binding['parameters']['debug-entry-cap'])
         _expect(profile_cap <= 4, 'BLOCKED: adapter Debug extension unsupported')
         declared = binding.get('files')
@@ -470,7 +470,7 @@ def _bindings(framework, adapter, spec):
         neutral_rows = [_file(neutral / _relative(relative)) for relative in sorted(declared)]
         for row, relative in zip(neutral_rows, sorted(declared)):
             row['path'] = relative
-        result = {'framework': str(framework), 'adapter': _file(adapter), 'package': package, 'neutral_root': str(neutral), 'neutral_version': '1.1.0', 'neutral': neutral_rows, 'spec': _file(spec), 'core': list(CORE), 'debug_cap_profile': profile_cap, 'layout': _file(layout_path)}
+        result = {'framework': str(framework), 'adapter': _file(adapter), 'package': package, 'neutral_root': str(neutral), 'neutral_version': '2.0.0', 'neutral': neutral_rows, 'spec': _file(spec), 'core': list(CORE), 'debug_cap_profile': profile_cap, 'layout': _file(layout_path)}
         result['digest'] = _digest(result)
         logger.info('[IMP:9][_bindings][RESULT] package=%d neutral=%d', len(expected), len(neutral_rows))
         return result

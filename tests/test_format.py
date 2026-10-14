@@ -15,7 +15,8 @@
 ## Q: Why an independent norm reader here?
 ## A: If the test used the tool's reader, a reader that drops a norm would drop it from both sides and the test would pass.
 ## @changes
-## LAST_CHANGE: [1.1.0 - Reconcile current M19 boundary/release facts and paired source operands; preserve original assertions/pins/refusals/restoration; runtime checks pending.]
+## LAST_CHANGE: [2.0.0 - M30 exact current release/census coupling; all prior cases/assertions/refusals retained.]
+## Earlier: [1.1.0 - Reconcile current M19 boundary/release facts and paired source operands; preserve original assertions/pins/refusals/restoration; runtime checks pending.]
 ## @modulemap
 ## FUNC 7[Read the norms outside fences as (anchor, id, level) triples] => read_norms
 ## FUNC 5[The card of FORMAT.md] => test_format_md_card
@@ -190,7 +191,7 @@ def test_each_spec_item_2_to_7_has_its_own_section(repo_root):
 
 
 # region FUNC_test_conform_self_gives_no_fail_on_format_md [DOMAIN(9): Format, SelfCheck; CONCEPT(9): Verdict; TECH(6): run_cli, json]
-## @purpose Prove that the tool finds nothing wrong in the file that defines the format, and that the run counts all 1234 current norms.
+## @purpose Prove that the tool finds nothing wrong in the file that defines the format, and that the run counts all 1242 current norms.
 ## @uses run_cli, ldd_trajectory, deny_list
 ## @io (Callable, Tuple, Callable) -> None
 ## @complexity 4
@@ -202,7 +203,7 @@ def test_conform_self_gives_no_fail_on_format_md(run_cli, deny_list, ldd_traject
     print("[IMP:9][test_conform_self_format][RESULT] exit=%d norms=%s fails_on_format=%d" % (code, report["summary"]["population"].get("norms"), len(fails)))
     assert fails == []
     assert code == 0
-    assert report["summary"]["population"]["norms"] == 1234
+    assert report["summary"]["population"]["norms"] == 1242
     assert any("[run_self][VERDICT]" in line for line in lines)
 # endregion FUNC_test_conform_self_gives_no_fail_on_format_md
 

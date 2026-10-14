@@ -1,4 +1,4 @@
-# Pointwise source adoption — neutral1.1.0 / package2.2.0
+# Pointwise source adoption — neutral2.0.0 / package2.4.0
 
 ## Operative loading procedure
 
@@ -51,7 +51,7 @@ The table binds each owner's duty to the real carrier and applicability. Current
 | `process/session.md` | Layer-aware entry/current artifacts, five records and recoverable closure/HANDOFF with actual evidence/commit authority. | `skills/durable-layer/SKILL.md, skills/pm/SKILL.md, skills/roadmap/SKILL.md`; full owner read on applicable profile; missing required proof BLOCKED, optional false trigger recorded with reason. |
 | `process/specification.md` | Original measured intent/RECON/constraints, all AC and delivery/scope, contradiction and deficiency handling without silent narrowing. | `skills/brownfield-spec-template/SKILL.md, skills/greenfield-bootstrap/SKILL.md`; full owner read on applicable profile; missing required proof BLOCKED, optional false trigger recorded with reason. |
 | `prompting/agent-prompt-design.md` | Author one-shot or loop external-agent prompt, rationale/concept map and machine/reproducibility contract; DRAFT defenses and separately granted target evaluation distinct. | `skills/prompting-agent-design/SKILL.md`; full owner read on applicable profile; missing required proof BLOCKED, optional false trigger recorded with reason. |
-| `prompting/brainstorm.md` | Open broad forks five distinct ideas and effects then reasoned scored selection; bounded choices no padding/settled reopening. | `skills/brainstorm/SKILL.md`; full owner read on applicable profile; missing required proof BLOCKED, optional false trigger recorded with reason. |
+| `prompting/brainstorm.md` | Mandatory consequential-open classification and independent packet under the complete brainstorm owner; broad/bounded profiles, exclusions, actual HOLD/evaluation/authority evidence and unavailable-proof handling. | `skills/brainstorm/SKILL.md`; full owner read on applicable profile; missing required proof BLOCKED, optional false trigger recorded with reason. |
 | `prompting/decomposition.md` | Actual phased modes/inputs/results/effects/verification/handoff and structural-temporal agreement, bounded independent parallelism. | `skills/prompting-decompose/SKILL.md`; full owner read on applicable profile; missing required proof BLOCKED, optional false trigger recorded with reason. |
 | `prompting/grace.md` | Full applicable goal/role/context/constraints/output/success/examples prompt authoring and source-specific syntax, not prompt execution. | `skills/prompting/SKILL.md`; full owner read on applicable profile; missing required proof BLOCKED, optional false trigger recorded with reason. |
 | `prompting/prompt-markup.md` | Collision-safe paired semantic sections/data boundaries and actual message roles; delimiters are not permission/security proof. | `skills/prompting-markup/SKILL.md`; full owner read on applicable profile; missing required proof BLOCKED, optional false trigger recorded with reason. |
@@ -133,6 +133,8 @@ Debug text parses as strict decimal nonnegative plain integer; default4, zero va
 
 Structural conform adapter validates membership/reference spelling and declared fields; independent source/converse/full-current ordinary meaning review and actual native smoke are separate required proofs. No full-source transfer percentage, installed enforcement, sandbox efficacy, model resilience/savings, license or publication acceptance is inferred.
 
-## Explicit C2 consumer route
+## Historical C2 consumer route (retained scope)
 
 Source2.2 adds the opt-in methodology-consumer-pm/1.0.0 carrier at references/consumer-pm-profile.md,13 seeds/four entries/shared consumer_files + orient/codemap/markup_migrate (six total helpers,27skills/73members/sixroles). Read full current owners and selected profile before native effects. Historical47/23/two input capacity remains historical; no input-lock migration. Explicit commands/grammars/authority/receipt/unknown-effect contracts live in the profile and package README. C3 automatic hooks/trust, C4 SDK/import/ingest/ledger comparison, C5 autonomous/resume proof and C6 loader activation remain held. Wire2.0/schema2/neutral1.1 remain unchanged. Claude runtime/version and the other58 of its59 package files remain unchanged; the sole source exception is the exact owner-approved one-line parity predicate in implementations/claude/tests/test_package_contract.py. Its shared23/Claude28 and all29 assertions are retained.
+
+Current M30 binding: neutral2.0.0/source2.4.0; wire2.0/schema2 and C2 consumer mechanisms remain unchanged. The historical C2 paragraph above describes its accepted1.1/2.2 release, not current version acceptance. Consequential decisions load the current full brainstorm owner.

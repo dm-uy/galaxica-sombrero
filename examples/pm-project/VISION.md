@@ -1,21 +1,31 @@
 # Methodology project vision
 
-Maintain one coherent, harness-neutral methodology and its complete Codex and Claude adaptations in this canonical Git repository. Any agent maintaining the framework starts from root AGENTS and the four current records, works within authentic approved scope, verifies meaningful outcomes and leaves recoverable state.
+Maintain one coherent, harness-neutral methodology and complete Codex and Claude adaptations in one canonical Git repository. Other agents start from root AGENTS and the four current project records, follow authentic scope/ownership and leave recoverable evidence. Preparation repositories are archival, not additional development sources.
 
-## Selected consolidation outcome
+## Selected outcome and accepted baseline
 
-The owner selected this repository as the sole development source, with a permanent clean main checkout for package loading. The Codex adaptation must cover at least the currently used in-house methodology and operate without external in-house skills/plugins as necessary sources. [M27 coverage contract](specs/m27-self-contained-coverage.md) defines duty-level accounting and behavioral proof. Topic names and this construction chat do not establish whole-methodology parity.
+The owner selected this repository as the sole source of truth for the in-house methodology. The Codex adaptation must cover at least the currently used in-house practices without external in-house skills/plugins as necessary sources. [M27 coverage contract](specs/m27-self-contained-coverage.md) accounts for duties and behavioral proof; matching names or this construction chat do not establish parity.
 
-[M26 onboarding](notes/m26-maintainer-onboarding.md) is integrated through PR #1; preparation repositories are archival. Author/access configuration is machine-local to each clone, not an embedded credential or shared identity. [C1 result](notes/m28-c1-result.md) is accepted and integrated through PR #3. C1 established neutral1.1/Codex source2.1; owner-approved C2 integration now advances canonical main to Codex source2.2.
+[M26 onboarding](notes/m26-maintainer-onboarding.md) is integrated through PR1. [C1](notes/m28-c1-result.md) is integrated through PR3. Owner-accepted [C2](notes/m28-c2-result.md) is integrated through PR4; [integration record](notes/m28-c2-integration.md). Canonical main remains C2/bafec417, neutral1.1/Codex source2.2. MIT remains the license. Author/access configuration is local to each clone, not a credential or shared identity in source.
 
-## Current bounded product
+C2 delivers73members/27skills/sixhelpers/sixroles: opt-in consumer PM profile,13templates,four lifecycle entries and resolver/orient/check/codemap/safe-markup-migration commands. Whole co-located explicit-source loading is the supported profile. Its bounded current evidence is597/146/526, actual CLI/filesystem/control/map checks and independent QA/Review/Finalize, with root record closure assessed separately. Its original blocked histories and cumulative4/4 repairs remain historical and distinct from C3.
 
-[C2](notes/m28-c2-result.md) is independently verified, owner-accepted and integrated through PR #4; [integration record](notes/m28-c2-integration.md). Its source2.2 package has73 members,27 skills,six helpers and six roles: opt-in consumer PM profile,13 templates,four lifecycle entries, a shared resolver and orientation/check, code-map and safe markup-migration commands. The only Claude change is the approved shared-topic parity-test exception; runtime/source1.0, remaining58 members,28 skills and all29 assertions are protected.
+Neutral1.1 retains71owners/69drafts/twostubs,1234norms/444anchors,28capabilities/sevenparameters. Codex wire2.0/schema2 and established roles/gates remain unchanged. Claude source1.0/59members/28skills is protected apart from C2's approved shared-topic test exception; all29assertions remain. Installed activation and full native behavioral parity are not established by source delivery.
 
-Neutral1.1 retains71 owners/69 drafts/two stubs,1234 norms/444 anchors,28 capabilities/seven parameters. Codex wire2.0/schema2 and established roles/gates/check guards remain unchanged. Complete co-located explicit-source loading is the supported profile. MIT remains the license; no installation or public visibility change occurred.
+## Retained C3 outcome — separate branch
 
-## Evidence and limits
+The separate C3 branch source2.3/77members/27skills/sevenhelpers/sixroles remains **unaccepted**; it is not imported into this branch. A3 is terminal ESCALATED/review after cumulative Debug4/global4. Current independent QA2 passed597/158/526 and real source-stage children, but whole Review confirmed a protected-read bypass through symlink plus `..` normalization. No clean Review/Finalize or result acceptance follows. [Current result and full history](notes/m28-c3-result.md).
 
-C2 current QA3, whole Review and assigned Architect Finalize bind one308-file software candidate. Actual suites597/146/526, real CLI/filesystem delivery, discriminating error controls, independent native reading and complete current maps are bounded evidence. Root-only project-record closure is assessed separately. Original blocked continuations and cumulative4/max4 repair spend remain retained. [C2 result and recovery](notes/m28-c2-result.md) is the current evidence home; earlier blocked reports are historical.
+Native AC7 remains HELD/UNFULFILLED, actual native population0. No installation, trust/activation, main merge or public visibility change occurred. Exact earlier commit46b7ccc delivery to the private draft PR5 is complete; later A3 work is local. Historical host failure,20evidence overwrites and qualified Claude resource incident remain disclosed; no original-byte restoration or hard isolation claim.
 
-The original261-file private release and its594/101/526 test evidence remain historical, not proof of future changes. C2 does not establish full native autonomy, active source loading, detached/global installation, enforcement efficacy or model effectiveness. Two process stubs remain disclosed. C3 safeguards → C4 SDK/import/candidate capacity → C5 autonomy/resume/isolation → C6 loader handover still require their matching scopes and decisions. Public visibility, M25C consumer work and later API/database → frontend → Telegram → MCP work remain separate. Error recording stays lightweight; learning experiments and comparative measurements are deferred.
+## Selected practical route
+
+Reassess a smaller, explicit safeguard boundary through read-only reconnaissance and a bounded revised specification before further Code; do not reset the exhausted run. After an accepted minimal safeguard, use a bounded single-stream Python API/database consumer trial to find practical friction before optional infrastructure. C4 SDK/import/candidate capacity, C5 autonomy/resume/isolation and C6 actual loader handover remain owed/held. Frontend → Telegram → MCP are later consumer scopes. Public visibility and native consumer activation require matching decisions.
+
+Lightweight error recording remains active. Systematic learning, comparative measurement and multiple concurrent feature writers are deferred. The original261-file private release and its594/101/526 evidence remain historical, not proof for current changes.
+
+## Current M30 independent-decision rule
+
+Owner-approved shared-owner/PM/Architect/both-carrier contract delivered locally as neutral2.0/Codex2.4/Claude1.1 from accepted C2, without C3 guard source. Important genuinely open choices require independent proposals, saved HOLD, separate evaluation and durable authorized decision; routine/forced/settled choices remain bounded. Existing roles/wires/schemas/registries/pins/Local use remain protected.
+
+Independent QA2 supports source and bounded actual Codex behavior,600/146/526ordinary tests, private checks/adapters/maps and42own XML contracts. Overall M30 remains BLOCKED/qa, Debug1/4: required native Claude AC4/ClaudeAC5 is owner-deferred, not waived. Whole Review/assigned Finalize/acceptance/integration remain incomplete. [Result and limits](notes/m30-result.md). Main remains accepted C2; no global installation/activation/publication.

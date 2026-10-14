@@ -37,7 +37,7 @@ PM keeps the owner's outcome, durable project truth and existing development int
 - **PM-301** MUST: Preserve stable checkpoint IDs, the established focus marker, dependencies, source links, deliberate deferral reasons and return conditions. Maintain the existing versioned route rather than imposing a new carrier or absorbing backlog/snapshot records.
 - **PM-302** MUST: Update the existing route graph and text together where both are applicable.
 - **PM-303** MUST: Close a checkpoint and move focus only when its actual finish criterion is achieved, including integration when required.
-- **PM-304** MUST: For a genuinely open product or architecture fork hold plausible alternatives before selection.
+- **PM-304** MUST: For a genuinely open product or architecture fork hold plausible alternatives before selection. Classify actual consequential stakes/exclusions and load the full [brainstorm owner](../prompting/brainstorm.md#prompting.brainstorm.consequential) at its mandatory trigger. The authorized root prepares its independent decision packet; an inner PM requests that packet and never dispatches.
 - **PM-305** MUST: Compare alternatives against owner criteria and record chosen and deferred reasons and evidence that would reopen the choice. Detailed generation and scoring remain at [brainstorm](../prompting/brainstorm.md).
 - **PM-306** MUST: Ask on material ungranted direction, changed constraints or a conflict with an accepted decision.
 - **PM-307** MUST: Preserve settled choices and use delegated routine judgment without demanding another plan gate. Donor interactive HOLD applies within its declared authority rather than imposing a gate on routine choices.

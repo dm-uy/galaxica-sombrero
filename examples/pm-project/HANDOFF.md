@@ -1,21 +1,19 @@
-# Current checkpoint: C2 integrated; C3 preparation next
+# Current checkpoint: M30 source verified; native Claude deferred
 
-## Blocked on the owner
+## Current disposition
 
-No decision blocks C3 reconnaissance/specification. C3 Code requires its exact specification approval. External installation, publication and C4–C6 Code remain separate decisions.
+M30 is terminal **BLOCKED/qa**, cumulative Debug1/4. Independent QA2 found no current actionable source defect. Root600, Codex146 and Claude526 pass without skips; original private checks, three adapters/maps pass,42/42 own XML contracts. Bounded actual Codex important/trivial/settled behavior is supported. Required live Claude AC4 and Claude AC5 remain UNFULFILLED under the owner's “Пока продолжай без живого прогона Claude”; no waiver/auth retry. Review/assigned Finalize/result acceptance remain incomplete.
 
-## Current and previous state
+[Result/history](notes/m30-result.md), [approved spec](specs/m30-independent-decisions.md), [operative plan](plans/m30-independent-decisions-i2.md), [input correction](notes/m30-input-correction.md). Local review branch codex/m30-decision-independence starts accepted C2; canonical main remains accepted C2. Do not repeat behavioral approval or reset retained runs.
 
-The owner accepted C2 and instructed merge on2026-10-14. PR #4 is MERGED at8161e03a23a2d81a7a0ad4c6d3fa183eba285324; the canonical main was fast-forward synchronized and its309 source bytes/modes matched the verified delivery. [Integration record](notes/m28-c2-integration.md) distinguishes this from subsequent root-only record reconciliation.
+## Delivered and verified
 
-Main now contains neutral1.1/Codex source2.2:73 members/27 skills/six helpers/six roles. Current independent QA3, whole Review and assigned Architect Finalize bind the308-file software candidate;597/146/526 suites, real CLI/migration/log controls and maps passed. Separate309-file root documentation closure/privacy and committed delivery verification passed. [Result, history and recovery](notes/m28-c2-result.md) remains the evidence home.
+One neutral consequential-open owner drives required PM/Architect and both carriers: at least two fresh generators → saved unranked HOLD → distinct evaluation → actual authorized decision/task links. Routine, forced and settled choices remain bounded. Candidate neutral2.0/Codex2.4/Claude1.1 preserves roles, wires/schemas, registries, original pins and README Local use. No global install/activation/main merge.
 
-Original C2 and A1 are terminal BLOCKED/spent1 each; A2 spent2/cap2, cumulative4/max4. Preserve these and C1 spent4/4; integration does not reset budgets or manufacture original Code SUCCESS. Eleven older map field mismatches plus one launcher association ambiguity remain outside C2; current Codex has no new map problem.
+Judged320-file source45ef0b47/input10eea56c is privately retained; these four current records plus result note form a separately verified record-only closure. Original blocked M30/code, I2 failed wave, QA1/Debug1 and refused metadata envelope remain retained. Native sessions retain e350 identity; reuse is through independently verified complete operative input equivalence. Dispatch provenance is parent observation plus actor receipts, not raw host export.
 
-## Next authorized action
+## Next boundary
 
-Read AGENTS and VISION/ROADMAP/TASKS, then only relevant links. Prepare C3 safeguards/hooks reconnaissance and bounded specification; do not begin C3 Code or change installed loading before matching decisions. Preserve clean permanent main, historical preparation source, foreign changes and all retained evidence. The canonical repository remains the development source.
+Do not launch live Claude now. After the owner changes that deferral and the actual engine is available, complete important/Agent/HOLD/evaluator and trivial/settled proofs on explicitly current source, then renew independent acceptance judgment, whole Review and assigned Finalize. No installation/publication/merge grant. Preserve one development stream.
 
-## Held boundaries
-
-Installed sources/settings and private visibility are unchanged. C4 SDK/import/candidates → C5 fresh autonomy/resume/isolation → C6 loader handover remain the selected route. Full methodology parity, active loading and C5 autonomy are unproven. Multiple feature writers and later API/database → frontend → Telegram → MCP are separate scopes. Lightweight error notes remain selected; systematic learning/measurement is deferred.
+C3 remains separate terminal ESCALATED/review, exhausted4/4 and unresolved protected-read defect; no fifth repair or imported guard source. [C3 result](notes/m28-c3-result.md). After an accepted smaller safeguard retain the single-stream Python API/database trial before optional C4; C5–C6 and INTAKE-01 actual task-ledger/entry-source adoption remain owed/held. Lightweight error recording stays active; systematic learning/measurement and concurrent feature writers stay deferred. Preserve foreign archival work.

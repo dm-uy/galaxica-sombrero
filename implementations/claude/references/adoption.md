@@ -1,10 +1,10 @@
-# Pointwise adoption — neutral 1.1.0 / methodology-claude 1.0.0
+# Pointwise adoption — neutral 2.0.0 / methodology-claude 1.1.0
 
 This file is the `via` carrier of all 71 `reference` entries in [adapter.json](../adapter.json). The adapter and this file resolve `spec_root` (`../../`) from the adapter's own directory, independent of the caller's working directory. Inside Claude Code the same location is `${CLAUDE_PLUGIN_ROOT}/../../`.
 
 ## Loading procedure
 
-1. Resolve the package root (`${CLAUDE_PLUGIN_ROOT}`, or the directory of this file's parent) and the neutral root two levels above it. Check that `SPEC_VERSION` equals the adapter's `spec_version` (1.1.0). A missing or different neutral root is BLOCKED; never substitute an older installed copy.
+1. Resolve the package root (`${CLAUDE_PLUGIN_ROOT}`, or the directory of this file's parent) and the neutral root two levels above it. Check that `SPEC_VERSION` equals the adapter's `spec_version` (2.0.0). A missing or different neutral root is BLOCKED; never substitute an older installed copy.
 2. Before any software role acts, read the six core owners in full: `concepts/principles.md`, `roles/_base.md`, `code/exoskeleton.md`, `code/ldd.md`, `code/doxygen.md`, `code/tests.md`. Identity-unchanged content read earlier in the same run may be reused; changed content is read again.
 3. Read the assigned role owner, `protocols/role-returns.md` and every owner the applicable skill names, in full. Specialized owners load on their actual trigger, not by following every link.
 4. Record what was read (path, revision or byte identity, read condition) in the existing phase evidence. A card, a hash, a link, a summary or a stub is not a read; a required owner that is missing, a stub, truncated or unread blocks dependent action.
@@ -63,7 +63,7 @@ Reading an owner assigns no role. The two stub owners (`process/git.md`, `proces
 | `process/session.md` | Layer-aware entry/current artifacts, five records and recoverable closure/HANDOFF with actual evidence/commit authority. | `skills/durable-layer/SKILL.md`, `skills/pm/SKILL.md`, `skills/roadmap/SKILL.md`, `skills/pm-handoff/SKILL.md` |
 | `process/specification.md` | Original measured intent/RECON/constraints, all AC and delivery/scope, contradiction and deficiency handling without silent narrowing. | `skills/brownfield-spec-template/SKILL.md`, `skills/greenfield-bootstrap/SKILL.md` |
 | `prompting/agent-prompt-design.md` | Author agent loop/tool/state/boundary/evaluation contract; DRAFT defenses and actual separately granted target evaluation distinct. | `skills/prompting-agent-design/SKILL.md` |
-| `prompting/brainstorm.md` | Open broad forks five distinct ideas and effects then reasoned scored selection; bounded choices no padding/settled reopening. | `skills/brainstorm/SKILL.md` |
+| `prompting/brainstorm.md` | Mandatory consequential-open classification and independent packet under the complete brainstorm owner; broad/bounded profiles, exclusions, actual HOLD/evaluation/authority evidence and unavailable-proof handling. | `skills/brainstorm/SKILL.md` |
 | `prompting/decomposition.md` | Actual phased modes/inputs/results/effects/verification/handoff and structural-temporal agreement, bounded independent parallelism. | `skills/prompting-decompose/SKILL.md` |
 | `prompting/grace.md` | Full applicable goal/role/context/constraints/output/success/examples prompt authoring and source-specific syntax, not prompt execution. | `skills/prompting/SKILL.md` |
 | `prompting/prompt-markup.md` | Collision-safe paired semantic sections/data boundaries and actual message roles; delimiters are not permission/security proof. | `skills/prompting-markup/SKILL.md` |

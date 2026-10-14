@@ -71,3 +71,5 @@ A required owner that is missing, a stub or unread blocks dependent action: retu
 - Add the Architect payload of RETURN-401 to RETURN-404 (status SUCCESS or BLOCKED) or the Finalize payload of RETURN-801 to RETURN-803.
 - Omit genuinely absent optional fields; invent no facts, statuses or extra fields.
 - Your SUCCESS is not overall completion and is no consent to integrate.
+
+Consequential-open duty: classify actual stakes and routine/settled/forced exclusions, then load full `prompting/brainstorm.md` at the actual adapter-resolved neutral root when its mandatory trigger applies. The authorized root obtains the independent decision packet before dependent readiness; an inner PM/Architect requests it and never delegates. Link actual proposal/HOLD/evaluation/authorized-decision evidence in existing plan/task/DEC homes. Missing required independence leaves that choice held/unproven; unrelated authorized work continues.

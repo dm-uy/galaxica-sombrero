@@ -18,7 +18,8 @@
 ## Q: Why whole carriers and explicit limits?
 ## A: Detached keywords and same-author green fixtures cannot establish complete ordinary meaning or independent acceptance.
 ## @changes
-## LAST_CHANGE: [1.1.0 - Reconcile current M19 boundary/release facts and paired source operands; preserve original assertions/pins/refusals/restoration; runtime checks pending.]
+## LAST_CHANGE: [2.0.0 - M30 exact current release/census coupling; all prior cases/assertions/refusals retained.]
+## Earlier: [1.1.0 - Reconcile current M19 boundary/release facts and paired source operands; preserve original assertions/pins/refusals/restoration; runtime checks pending.]
 ## @modulemap
 ## FUNC 9[Bind complete named protocol/connected source bytes and modes before a physical control.] => test_ldd_testing_protocols._read_protocol_sources
 ## FUNC 9[Report declared producer clause, anchor, explicit force and paired fence shape failures only.] => test_ldd_testing_protocols._producer_structure_failures
@@ -1682,7 +1683,7 @@ def test_protocol_current_metadata_and_map(repo_root, repo_copy, tmp_path, caplo
 ## @io Input: root existing repository Path with actual cards/release/adapter/README/debugger.
 ##   Output: set[str] of named finite status/census/version/adapter/allocation failures.
 ##   Side effects: complete actual file reads and safe boundary counts.
-##   Guarantees: expected71/69/2/1.1.0/eight completed/later F4-F5-F8 are fixed; no source-completeness or runtime-adoption acceptance.
+##   Guarantees: expected71/69/2/2.0.0/eight completed/later F4-F5-F8 are fixed; no source-completeness or runtime-adoption acceptance.
 ##   Raises: ValueError for absent root or malformed card; OSError/UnicodeError/JSONDecodeError for unreadable/invalid source.
 ##   System importance8.
 ##   Example: changing only SPEC_VERSION to0.14.0 reports version while adapter remains valid1.0.0.
@@ -1733,11 +1734,11 @@ def _allocation_failures(root):
             failures.add("census")
         operation = 'Read'
         LOGGER.info("[IMP:7][_allocation_failures][READ] resource=release_adapter_allocation")
-        if (root / "SPEC_VERSION").read_text(encoding="utf-8") != "1.1.0\n":
+        if (root / "SPEC_VERSION").read_text(encoding="utf-8") != "2.0.0\n":
             failures.add("version")
         operation = 'Read'
         LOGGER.info("[IMP:7][_allocation_failures][READ] read actual owned text ordinal=%d", ordinal)
-        if json.loads((root / "examples/adapter.example.json").read_text(encoding="utf-8"))["spec_version"] != "1.1.0":
+        if json.loads((root / "examples/adapter.example.json").read_text(encoding="utf-8"))["spec_version"] != "2.0.0":
             failures.add("adapter")
         operation = 'Read'
         LOGGER.info("[IMP:7][_allocation_failures][READ] read actual owned text ordinal=%d", ordinal)
@@ -1763,7 +1764,7 @@ def _allocation_failures(root):
 ## @purpose Verify actual eight completed code/checker homes and retained later-subject allocation with status/version/allocation negatives and exact recovery.
 ## @uses test_ldd_testing_protocols._allocation_failures, pathlib.Path.read_bytes, pathlib.Path.write_bytes, pathlib.Path.chmod
 ## @io Input: native repo_root current source, complete isolated repo_copy and caplog actual records.
-##   Output: None after71 cards/69 drafts/2 stubs,1.1.0,eight complete/later homes and three triggered finite negatives with restoration.
+##   Output: None after71 cards/69 drafts/2 stubs,2.0.0,eight complete/later homes and three triggered finite negatives with restoration.
 ##   Side effects: only owned repo_copy file edits/readbacks with exact full bytes/numeric modes and safe trace.
 ##   Guarantees: original source and all unedited sibling files remain intact; no archive/source-completeness/adoption acceptance.
 ##   Raises: AssertionError/OSError/ValueError for mismatched actual allocation or recovery.
@@ -1797,7 +1798,7 @@ def test_protocol_promotions_and_remaining_homes(repo_root, repo_copy, caplog):
         sibling_bytes, sibling_mode = sibling.read_bytes(), stat.S_IMODE(sibling.stat().st_mode)
         changes = (
             ("code/ldd.md", b"status: draft", b"status: stub", {"status:code/ldd.md", "census"}),
-            ("SPEC_VERSION", b"1.1.0\n", b"0.14.0\n", {"version"}),
+            ("SPEC_VERSION", b"2.0.0\n", b"0.14.0\n", {"version"}),
             ("README.md", b"general decision lifecycle (DEC01) and full graph are current F4 bodies; confirmed conventions, lifecycle, batch and session procedures and five project forms are current bounded F4 drafts; eight prompting F5 and three autonomy/credentials/language policy bodies are current bounded drafts; six neutral readiness contracts for principles, glossary, Orient, preflight, run audit and conditional safety/recovery are current bounded drafts; wider F4 duties, learning F8, source completeness, operational adoption and publication remain explicit later or unresolved homes.", b"general decision lifecycle (DEC01) and full graph, prompting F5 and learning F8 subjects are complete.", {"allocation"}),
         )
         for ordinal, (relative, old, new, expected) in enumerate(changes):
@@ -1844,7 +1845,7 @@ def test_protocol_promotions_and_remaining_homes(repo_root, repo_copy, caplog):
             _important_records([record for record in caplog.records if record.name == LOGGER.name])
             assert restored == set() and target.read_bytes() == original and stat.S_IMODE(target.stat().st_mode) == mode
         assert not [record for record in caplog.records if record.levelname in ("ERROR", "CRITICAL")]
-        LOGGER.info("[IMP:9][test_protocol_promotions_and_remaining_homes][RESULT] cards71_drafts69_stubs2_version1.1.0_three_mutants_restored=verified")
+        LOGGER.info("[IMP:9][test_protocol_promotions_and_remaining_homes][RESULT] cards71_drafts69_stubs2_version2.0.0_three_mutants_restored=verified")
         # END_BLOCK_BusinessLogic
     # START_BLOCK_ErrorHandling
     except (OSError, UnicodeError, ValueError, TypeError, AssertionError, KeyError) as error:

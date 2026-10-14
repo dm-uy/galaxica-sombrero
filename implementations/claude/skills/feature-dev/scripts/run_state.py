@@ -8,11 +8,11 @@
 ## @links_to_spec M22 specification section 2 Mechanics; requirements BR-3 and BR-4; flow/run-state.md STATE-102 and STATE-501; code/tests.md TST-501
 ## @invariants
 ## - Current neutral role/phase/scan/gate owners remain controlling; structural checks never prove human authority or role independence.
-## - The package identity is methodology-claude 1.0.0 with the colocated-in-place profile and the run contract methodology-claude/1.0.0; the state contract is schema2 and matches the sibling package helper except that the candidate record carries one added key, exclusion_mode, which candidate comparison ignores.
+## - The package identity is methodology-claude 1.1.0 with the colocated-in-place profile and the run contract methodology-claude/1.0.0; the state contract is schema2 and matches the sibling package helper except that the candidate record carries one added key, exclusion_mode, which candidate comparison ignores.
 ## - The package member count is whatever the declared layout lists and must equal the actual package inventory; no literal count is trusted.
 ## - Debug allowance is a nonnegative plain integer, zero is valid, the default is four, and an adapter extension above four is BLOCKED.
 ## - For a target that is the top level of its own git work tree the candidate is tracked plus untracked non-ignored content (STATE-102) minus the generated directory names: what git reports as ignored is excluded, and an ignored directory is skipped wholesale, with no descent and no link refusal inside it.
-## - The generated directory names (.git, .methodology, __pycache__, .pytest_cache, doxygen_output, output) are excluded by name in every target mode, git included: a deliberate superset of STATE-102 limited to regenerable build and cache outputs, kept so that no target that worked before the repair regresses. No other name is excluded in git mode.
+## - The generated directory names (.git, .methodology, `__pycache__`, .pytest_cache, doxygen_output, output) are excluded by name in every target mode, git included: a deliberate superset of STATE-102 limited to regenerable build and cache outputs, kept so that no target that worked before the repair regresses. No other name is excluded in git mode.
 ## - The fallback exclusion list (the generated names plus the Anti-Loop counter names and further regenerable caches) is a heuristic for a target without usable git rules: not a repository, git not launchable, or a subdirectory of a larger repository whose foreign ignore rules could blind the candidate. Git targets use git's own ignore rules on top of the generated names, never the heuristic part of that list.
 ## - A confirmed repository whose ignore enumeration fails is refused, never downgraded to the fallback list.
 ## - Candidate content still refuses links and nonregular members; an unignored new file still changes the digest. Bytecode files and the legacy .test_attempts file stay skipped in every mode.
@@ -32,11 +32,11 @@
 ## Q: Why must the target be the work-tree top level, and why is a failing enumeration refused?
 ## A: A target below a larger repository would inherit that repository's ignore rules, and a catch-all rule above it would blind the whole candidate; such a target uses the declared fallback instead. Once the target is confirmed as a repository, silently weakening to the heuristic would change the identity basis unnoticed, so the failure is refused with a diagnostic.
 ## Q: Why are the generated directory names still excluded by name in a git target that does not ignore them?
-## A: Before the repair doxygen_output, output, __pycache__ and .pytest_cache were never candidate content; making them depend on a project's ignore file would turn a Doxygen build or a test run during Code into a change outside the scope for every git project that has not ignored its map or cache output, a regression of working targets. The superset is deliberate and limited to regenerable build and cache outputs; it is a documented departure from exact STATE-102 (FINAL-202 expects such output to be ignored anyway), not a general name list.
+## A: Before the repair doxygen_output, output, `__pycache__` and .pytest_cache were never candidate content; making them depend on a project's ignore file would turn a Doxygen build or a test run during Code into a change outside the scope for every git project that has not ignored its map or cache output, a regression of working targets. The superset is deliberate and limited to regenerable build and cache outputs; it is a documented departure from exact STATE-102 (FINAL-202 expects such output to be ignored anyway), not a general name list.
 ## Q: Why does every git call force core.fsmonitor off and drop the caller's repository-redirecting environment?
 ## A: Round 3 reproduced two failures. git ls-files --others --ignored and git status run the program a target repository configures as core.fsmonitor, so observing a repository executed code it owns; and an inherited GIT_DIR or GIT_INDEX_FILE made the enumeration read a foreign index, which silently dropped a tracked file from the candidate (fail open). A command-line -c value outranks repository, environment and global configuration, and removing the redirecting variables makes git discover the repository of the target path itself.
 ## @changes
-## LAST_CHANGE: [1.0.0 - Neutral1.1.0 compatibility; Claude Code package binding of the schema2 helper: package methodology-claude, profile colocated-in-place, roles under agents, hook-config and workflow member kinds, member count from the declared layout. Debug repair of independent Review round 2: the target candidate follows git ignore rules (STATE-102) with a declared fallback list otherwise, the candidate records exclusion_mode, ignored trees are skipped before any link check, candidate comparison uses files and digest, and the generated directory names stay excluded by name in git mode as a deliberate superset. Debug repair of independent Review and QA round 3: every git call is hermetic (core.fsmonitor off, repository-redirecting environment dropped), the package exclusion covers the ambient .DS_Store file, and the package membership refusal names the offending paths.]
+## LAST_CHANGE: [1.1.0 - Exact M30 source/neutral constants; algorithms preserved. Earlier:1.0.0 - Neutral1.1.0 compatibility; Claude Code package binding of the schema2 helper: package methodology-claude, profile colocated-in-place, roles under agents, hook-config and workflow member kinds, member count from the declared layout. Debug repair of independent Review round 2: the target candidate follows git ignore rules (STATE-102) with a declared fallback list otherwise, the candidate records exclusion_mode, ignored trees are skipped before any link check, candidate comparison uses files and digest, and the generated directory names stay excluded by name in git mode as a deliberate superset. Debug repair of independent Review and QA round 3: every git call is hermetic (core.fsmonitor off, repository-redirecting environment dropped), the package exclusion covers the ambient .DS_Store file, and the package membership refusal names the offending paths.]
 ## @modulemap
 ## FUNC 2[Attach full module documentation with no runtime effects] => run_state._module_contract
 ## FUNC 4[Stamp a chronological observation in UTC.] => run_state._stamp
@@ -109,7 +109,7 @@ GIT_PROGRAMLESS = ('--no-optional-locks', '-c', 'core.fsmonitor=false')
 # GIT_PROGRAMLESS is the fixed argument prefix of every git call: no optional locks, and the repository-configured core.fsmonitor program is switched off (a command-line value outranks repository, environment and global configuration).
 KINDS = {'skill', 'role', 'helper', 'test', 'test-guide', 'config', 'plugin-manifest', 'adapter', 'layout', 'example', 'documentation', 'hook-config', 'workflow'}
 PACKAGE_NAME = 'methodology-claude'
-PACKAGE_VERSION = '1.0.0'
+PACKAGE_VERSION = '1.1.0'
 PACKAGE_PROFILE = 'colocated-in-place'
 CONTRACT_VERSION = 'methodology-claude/1.0.0'
 ROLES = ('architect', 'coder', 'debugger', 'qa', 'reviewer', 'searcher')
@@ -456,7 +456,7 @@ def _membership_diagnostic(missing, undeclared):
 # region FUNC__bindings [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Pin actual complete in-place package, adapter, neutral and spec identities.
 ## @uses run_state.read_json, run_state.inventory, run_state._membership_diagnostic, run_state._file, run_state._relative, run_state._digest, run_state._expect
-## @io framework directory, adapter exact framework/adapter.json, spec actual file. Returns resolved path records, one package row per declared layout member (count taken from the layout, never a literal),71 neutral rows, six core names, layout/adapter/spec byte identities and binding digest. Requires package methodology-claude version1.0.0, profile colocated-in-place, roles under agents, exact kinds/sorted membership equal to the actual inventory in both directions (the refusal names up to three missing and three undeclared relative paths; the ambient .DS_Store file is not a member); missing/stub/basic malformed core refuses. Full-content meaning/initial truncation authenticity remains parent judgment; later drift changes locked digest. Raises OSError/ValueError/KeyError/TypeError on unavailable or invalid binding. Reads only; no provider/Git writes. Example: relocated complete in-place tree binds independently of cwd. Importance:9.
+## @io framework directory, adapter exact framework/adapter.json, spec actual file. Returns resolved path records, one package row per declared layout member (count taken from the layout, never a literal),71 neutral rows, six core names, layout/adapter/spec byte identities and binding digest. Requires package methodology-claude version1.1.0, profile colocated-in-place, roles under agents, exact kinds/sorted membership equal to the actual inventory in both directions (the refusal names up to three missing and three undeclared relative paths; the ambient .DS_Store file is not a member); missing/stub/basic malformed core refuses. Full-content meaning/initial truncation authenticity remains parent judgment; later drift changes locked digest. Raises OSError/ValueError/KeyError/TypeError on unavailable or invalid binding. Reads only; no provider/Git writes. Example: relocated complete in-place tree binds independently of cwd. Importance:9.
 ## @complexity 9
 def _bindings(framework, adapter, spec):
     framework, adapter, spec = Path(framework).resolve(), Path(adapter).resolve(), Path(spec).resolve()
@@ -483,7 +483,7 @@ def _bindings(framework, adapter, spec):
         _expect(binding.get('spec_root') == '../../', 'co-located spec_root must be ../../')
         neutral = (adapter.parent / _text(binding.get('spec_root'), 'neutral binding missing')).resolve()
         _expect(neutral.is_dir() and neutral == framework.parents[1], 'unsupported detached neutral binding')
-        _expect((neutral / 'SPEC_VERSION').read_text().strip() == binding.get('spec_version') == '1.1.0', 'neutral version mismatch')
+        _expect((neutral / 'SPEC_VERSION').read_text().strip() == binding.get('spec_version') == '2.0.0', 'neutral version mismatch')
         profile_cap = _decimal_cap(binding['parameters']['debug-entry-cap'])
         _expect(profile_cap <= 4, 'BLOCKED: adapter Debug extension unsupported')
         declared = binding.get('files')
@@ -504,7 +504,7 @@ def _bindings(framework, adapter, spec):
         neutral_rows = [_file(neutral / _relative(relative)) for relative in sorted(declared)]
         for row, relative in zip(neutral_rows, sorted(declared)):
             row['path'] = relative
-        result = {'framework': str(framework), 'adapter': _file(adapter), 'package': package, 'neutral_root': str(neutral), 'neutral_version': '1.1.0', 'neutral': neutral_rows, 'spec': _file(spec), 'core': list(CORE), 'debug_cap_profile': profile_cap, 'layout': _file(layout_path)}
+        result = {'framework': str(framework), 'adapter': _file(adapter), 'package': package, 'neutral_root': str(neutral), 'neutral_version': '2.0.0', 'neutral': neutral_rows, 'spec': _file(spec), 'core': list(CORE), 'debug_cap_profile': profile_cap, 'layout': _file(layout_path)}
         result['digest'] = _digest(result)
         logger.info('[IMP:9][_bindings][RESULT] package=%d neutral=%d', len(expected), len(neutral_rows))
         return result

@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.0
+
+- Require independent generation, durable HOLD and separate evaluation for consequential open decisions, through one shared owner and mandatory PM/Architect/native call sites. Routine, settled and forced choices remain bounded.
+- Codex source2.4.0 and Claude source1.1.0 bind neutral2.0.0; membership, six roles, wire/schema and full helper algorithms remain unchanged. Native behavior and source validation retain their actual evidence/limits; no installation or acceptance is inferred.
+
 
 ## Codex source2.2.0 (neutral1.1.0 unchanged)
 
