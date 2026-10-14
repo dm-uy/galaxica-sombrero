@@ -2,7 +2,7 @@
 
 ## Current: M30 independent-decision rule; C3 retained separately
 
-One canonical checkout is the development source; preparation repositories are archival. Canonical main remains accepted C2/bafec417, neutral1.1/Codex source2.2. C3 is not ready for merge. [Current C3 history/result](notes/m28-c3-result.md).
+One canonical checkout is the development source; preparation repositories are archival. Canonical main now includes M30 source through owner-approved PR6, neutral2.0/Codex2.4/Claude1.1; accepted C2/bafec417 is its foundation. C3 is not ready for merge. [Current C3 history/result](notes/m28-c3-result.md).
 
 | Checkpoint | Current disposition |
 |---|---|
@@ -20,7 +20,7 @@ One canonical checkout is the development source; preparation repositories are a
 | M28-C3 | Unaccepted source2.3; A3 terminal ESCALATED/review, protected-read defect remains after green QA2. Cumulative Debug4/4 exhausted; no fifth repair. |
 | M28-C4 | SDK/import/candidate capacity owed/held after the selected practical consumer trial. |
 | M29/C5–C6 | Autonomy/resume/isolation proof and actual source-loader handover owed/held after matching decisions. |
-| M30 | Source/bounded Codex proof verified; BLOCKED/qa, Debug1/4; native Claude required/deferred; Review/Finalize/acceptance pending. |
+| M30 | Source integrated through PR6; BLOCKED/qa Debug1/4 retained; native Claude required/deferred, Review/Finalize/full acceptance pending. |
 | Public visibility | Held; repository remains private. |
 
 ## Retained C3 escalation
@@ -39,4 +39,4 @@ The owner-approved exact46b7ccc push/private draft PR5 update is complete. Subse
 
 Shared owner/PM/Architect/both-carrier source delivered from accepted C2 and independently checked after counted Debug1. Actual Codex important/two-generators/HOLD/evaluator/root-decision/task and trivial/settled controls supported;600/146/526ordinary tests and privacy/adapters/maps pass. [Current result](notes/m30-result.md), [operative plan](plans/m30-independent-decisions-i2.md).
 
-Terminal BLOCKED/qa retains Debug1/4. The owner deferred native Claude; AC4/ClaudeAC5 remain unfulfilled, no auth/retry/waiver. Resume those current-source proofs after that deferral changes, then renew independent QA, whole Review and assigned Finalize before result/integration decisions. INTAKE-01 stays separately scoped; accepted smaller safeguard → single-stream API/database trial → optional C4 → C5/C6 route remains. No C3 budget reset/install/main merge/publication.
+Terminal BLOCKED/qa retains Debug1/4. The owner deferred native Claude; AC4/ClaudeAC5 remain unfulfilled, no auth/retry/waiver. Resume those current-source proofs after that deferral changes, then renew independent QA, whole Review and assigned Finalize before full checkpoint acceptance; owner-authorized source integration through PR6 is complete. INTAKE-01 stays separately scoped; accepted smaller safeguard → single-stream API/database trial → optional C4 → C5/C6 route remains. [Integration record](notes/m30-integration.md). No C3 budget reset, installation or public visibility change.
