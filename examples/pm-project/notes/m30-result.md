@@ -6,7 +6,7 @@ Owner approval: “Давай так сделаем.” selected the concrete sh
 
 One full neutral owner now requires consequential-open classification, at least two distinct fresh proposal contexts, durable unranked HOLD, distinct evaluation using predeclared criteria, and an actual authorized decision with task/evidence links. Routine, forced and settled choices remain bounded. Both native carriers and entry pointers load this owner; inner roles request the root packet. No new engine, software role, phase, wire or schema.
 
-Delivered candidate versions: neutral2.0.0, Codexsource2.4.0 and Claudesource1.1.0. Package populations remain73/59, roles six each; unchanged wires/schemas, capability/parameter registries, original algorithm pins and root README Local use. Canonical main remains accepted C2; no C3 guard source was imported.
+Delivered candidate versions: neutral2.0.0, Codexsource2.4.0 and Claudesource1.1.0. Package populations remain73/59, roles six each; unchanged wires/schemas, capability/parameter registries, original algorithm pins and root README Local use. At this source-stage report, canonical main remained accepted C2; see the subsequent integration below. No C3 guard source was imported.
 
 ## Retained execution history
 
@@ -31,3 +31,7 @@ Final independent QA2 is BLOCKED/qa on45ef0b47, cumulative Debug1/4: root600, Co
 Private runs M30-20261014 and M30-I2-20261014 retain inputs, failures, Code waves, QA1, charged Debug1, QA2, raw streams and native records. The original QA2 envelope had an input-identity transcription typo; the helper refused it before transition. Worker preserved original bytes and authenticated the typo-only amendment; the corrected envelope recorded BLOCKED. Parent's terminal precondition prevented any premature project-record edits. No repair allowance or immutable input was reset.
 
 The320-file judged source is retained separately from this five-record closure. Final recovery custody is local Git metadata M30/20261014-result-held; raw evidence is not public source. Selected source/native/XML resources are retained; not every temporary pytest resource is claimed archived.
+
+## Subsequent owner-authorized source integration
+
+After the preceding limits were disclosed, the owner instructed “мерджи”. PR6 merged the exactaaaa784 source candidate; canonical main was synchronized and its321-file Git tree checked equal. [Actual integration record](m30-integration.md). This is source-stage integration, not retroactive QA SUCCESS, native Claude waiver or completed Review/Finalize/full checkpoint acceptance. Earlier no-merge statements describe the retained pre-integration grant and outcome. Current Claude deferral, M30Debug1/4 and separate C3terminal4/4 remain unchanged.
