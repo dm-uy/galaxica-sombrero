@@ -45,3 +45,5 @@ Terminal BLOCKED/qa retains Debug1/4. The owner deferred native Claude; AC4/Clau
 ## M31 — lightweight PM state and development boundary
 
 The owner settled the direction after the PM reflection: state for agents, QA for features/substantial bug fixes, no QA for documentation/small corrections, and affected-record synchronization on material change/grouped progress/before planned compaction. [Decision and scope](notes/pm-lightweight-direction.md). Local shared/native documentation changes are unreleased; next integration needs its owner decision and release-version binding. No new implementation run or experiment. Existing M30 Claude deferral, C3 exhausted history and later trial/C4–C6 route remain retained.
+
+M31 release update: the owner authorized merge, reissue and installation of the accepted lightweight PM direction (neutral3.0.0 / Codex3.0.0 / Claude2.0.0). Actual completion is recorded in [the decision receipt](notes/pm-lightweight-direction.md); deferred native Claude acceptance and C3 remain separate.

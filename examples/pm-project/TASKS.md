@@ -50,6 +50,6 @@ Status: selected into the approved M30 contract below; this earlier observation 
 
 ## M31 — owner-directed lightweight PM (current)
 
-Direction accepted; [decision/scope](notes/pm-lightweight-direction.md). Shared PM/session/flow/document applicability and both carriers' PM/durable/feature-dev entrypoints are updated locally. Documentation-only task: direct edit/readback/link checks; no QA, new run state or experiment. Package version stamps remain the previous integrated release; semantic version/binding work belongs to release preparation. Local integration-for-review is authorized; main merge, publication and activation are not performed.
+Direction and merge/reissue/installation accepted by the owner; [decision/scope](notes/pm-lightweight-direction.md). Shared and both native carriers reflect the lightweight boundary. Release identities: neutral3.0.0, Codex3.0.0, Claude2.0.0; only exact executable binding constants/current-version assertions change, original algorithm pins/wire/schema/inventories remain.
 
-Next: present the bounded documentation result for integration, keeping the settled direction. Do not start a full flow to assess these document edits or re-open C3/M30 terminal states. Actual runtime enforcement/activation is not claimed.
+Bounded release checks and actual installation readback apply; no feature-dev/QA role or new run ledger for this documentation release. Codex uses a complete repository snapshot; Claude loads canonical main in place. The decision note carries actual completion. Retain M30 deferred Claude proof and exhausted C3 separately; installation is not their acceptance.
