@@ -1,5 +1,7 @@
 # Current maintainer tasks
 
+Current focus: C3 A1 delivered unaccepted partial source; one narrowly reviewed coupled-oracle scope amendment awaits the owner. Current canonical main remains C2. See the final C3 checkpoint below and [result](notes/m28-c3-result.md).
+
 ## M28-C2 Consumer PM profile and commands
 
 State: implementation, current independent QA3, renewed whole Review and assigned Architect Finalize verified, owner-accepted and integrated through PR #4; [integration record](notes/m28-c2-integration.md). [Current result](notes/m28-c2-result.md), [specification](specs/m28-c2-consumer-profile.md), [amended scope](specs/m28-c2-consumer-profile-amendment-01.md), [continuation](notes/m28-c2-amendment-02-continuation.md). Original Code and exact Claude exception approvals are settled.
@@ -33,4 +35,8 @@ These are route selections, not new Code or environment grants. Public visibilit
 
 ## C3 execution checkpoint
 
-The exact partial source-stage scope is owner-approved. Bootstrap completed and a ready single-slice plan exists, but parent acceptance failed before Code due to the root-supplied stale candidate binding after one response correction. Run is BLOCKED, Debug0/4; no guard implementation or native proof exists. [Failure/result and continuation](notes/m28-c3-result.md). Preserve the ledger and require matching bounded continuation; C1/C2 and held native/install/merge boundaries remain unchanged.
+The owner accepted the binding correction on2026-10-14 (“принимаю поправку”). Linked A1 used the actual full current inventory and amended plan68155; Bootstrap and Architect were genuinely accepted. Code delivered the exact23-path source delta (four new/19 existing), proposed Codex2.3/77members/27skills/sevenhelpers/sixroles, but remains unaccepted. The real helper recorded known completed partial effects with terminal BLOCKED/code, Debug0/4. Independent QA/Review/Finalize have not occurred. [Current partial result and retained history](notes/m28-c3-result.md).
+
+The remaining root failure is an omitted coupled current-version/member oracle in tests/test_c1_review_and_routing.py, outside the approved23 paths. A reviewed, unapplied amendment proposes exactly that additional existing path, current2.3/77 constants and paired diagnostics/metadata, preserving fixed algorithm pins, assertions, wire/schema and Claude. The exact test630527 and plan713318 proposals and owner question remain private; a matching decision is pending. No original scope approval is reopened. Preserve both blocked histories and the spent original response correction; no hidden scope or budget reset.
+
+Selected direction after minimal C3: test the framework on a small Python API/database consumer in one feature stream before optional further infrastructure. This is a route preference, not a new consumer Code grant. C4–C6 duties remain owed and held; no native AC7/trust/installation/main merge/publication follows.

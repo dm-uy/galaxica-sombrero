@@ -7,7 +7,7 @@
 ## @links [USES_API(8): pathlib, json, logging; READS_DATA_FROM(9): implementations/codex/references/package-layout.json]
 ## @invariants
 ## - Original source is read-only; negative controls affect only owned copies and restore original full bytes/numeric modes.
-## - Expected73 paths derive from the accepted design, never from the observed producer result or imported neutral classifier.
+## - Expected77 paths derive from the accepted design, never from the observed producer result or imported neutral classifier.
 ## - Package assembly does not prove semantic full-rule adoption, human authority or actual native execution.
 ## @rationale
 ## Q: Why a separate package oracle?
@@ -15,7 +15,7 @@
 ## Q: Why retain an outside-namespace negative?
 ## A: The native exception is typed and scoped; an ordinary malformed Markdown file must still fail the actual common checker.
 ## @changes
-## LAST_CHANGE: [v1.0.1 - M22: the declared sibling set is {codex, claude} (an ambient, git-ignored macOS .DS_Store beside them is not a sibling); an unknown sibling is still refused. Earlier: exact M19 package/boundary checks with independent73-path oracle and restored contrary inputs.]
+## LAST_CHANGE: [2.3.0 - Exact four C3 members/kinds and77 census; preserved prior boundary controls. Earlier v1.0.1: M22: the declared sibling set is {codex, claude} (an ambient, git-ignored macOS .DS_Store beside them is not a sibling); an unknown sibling is still refused. Earlier: exact M19 package/boundary checks with independent73-path oracle and restored contrary inputs.]
 ## @modulemap
 ## FUNC 9[Independent actual package assembly/profile/path judgment] => test_codex_package._package_assembly
 ## FUNC 8[Expose owning important captured records before assertions] => test_codex_package._show_trace
@@ -24,8 +24,8 @@
 ## @usecases
 ## - [test_neutral_boundary_and_complete_package]: Owner -> check exact actual source populations -> native docs separated and ordinary malformed prose refused.
 ## - [test_package_assembly_refusals]: QA -> perturb owned package membership/profile -> rejected real defect and fully restored source.
-## @GREP_SUMMARY package, independent inventory,73paths, typed namespace, source profile, siblings, unsafe paths, restoration
-## @STRUCTURE ▶ canonical source → ◇ independent73path/profile match → ⊕ positive result → ○ owned mutations → ◇ refuse → ⎋ restore
+## @GREP_SUMMARY package, independent inventory,77paths, typed namespace, source profile, siblings, unsafe paths, restoration
+## @STRUCTURE ▶ canonical source → ◇ independent77path/profile match → ⊕ positive result → ○ owned mutations → ◇ refuse → ⎋ restore
 def _module_contract():
     pass
 # endregion MODULE_CONTRACT
@@ -45,15 +45,15 @@ GENERATED = {"__pycache__", ".pytest_cache", "doxygen_output"}
 DECLARED_PACKAGES = {"codex", "claude"}
 CORE = ("concepts/principles.md", "roles/_base.md", "code/exoskeleton.md", "code/ldd.md", "code/doxygen.md", "code/tests.md")
 ROLES = {name: "roles/" + name + ".md" for name in ("architect", "coder", "debugger", "qa", "reviewer", "searcher")}
-EXPECTED_PATHS = ('.codex-plugin/plugin.json', 'Doxyfile', 'README.md', 'adapter.json', 'examples/smoke-spec.md', 'pytest.ini', 'references/adoption.md', 'references/codex-runtime.md', 'references/consumer-pm-profile.md', 'references/handoffs.md', 'references/package-layout.json', 'references/source-disposition.md', 'roles/architect.md', 'roles/coder.md', 'roles/debugger.md', 'roles/qa.md', 'roles/reviewer.md', 'roles/searcher.md', 'skills/analyzer/SKILL.md', 'skills/ax-ui-contract/SKILL.md', 'skills/brainstorm/SKILL.md', 'skills/brownfield-spec-template/SKILL.md', 'skills/code-review/SKILL.md', 'skills/data-transform/SKILL.md', 'skills/devplan-protocol/SKILL.md', 'skills/devplan-protocol/scripts/visual_gate_lint.py', 'skills/document-protocol/SKILL.md', 'skills/durable-layer/SKILL.md', 'skills/feature-dev/SKILL.md', 'skills/feature-dev/scripts/run_state.py', 'skills/graph-protocol/SKILL.md', 'skills/greenfield-bootstrap/SKILL.md', 'skills/hitl-gates/SKILL.md', 'skills/pm-bootstrap/SKILL.md', 'skills/pm-handoff/SKILL.md', 'skills/pm-plan-batch/SKILL.md', 'skills/pm-run-batch/SKILL.md', 'skills/pm/SKILL.md', 'skills/pm/scripts/codemap.py', 'skills/pm/scripts/consumer_files.py', 'skills/pm/scripts/markup_migrate.py', 'skills/pm/scripts/orient.py', 'skills/pm/templates/AGENTS.md', 'skills/pm/templates/CLAUDE.md', 'skills/pm/templates/CONVENTIONS.md', 'skills/pm/templates/DEC.md', 'skills/pm/templates/Doxyfile', 'skills/pm/templates/HANDOFF.md', 'skills/pm/templates/OPEN_QUESTIONS.md', 'skills/pm/templates/RECON.md', 'skills/pm/templates/ROADMAP.md', 'skills/pm/templates/SPEC.md', 'skills/pm/templates/TASKS.md', 'skills/pm/templates/VISION.md', 'skills/pm/templates/gitignore', 'skills/prod-log-vacuum/SKILL.md', 'skills/prompting-agent-design/SKILL.md', 'skills/prompting-decompose/SKILL.md', 'skills/prompting-markup/SKILL.md', 'skills/prompting-verify/SKILL.md', 'skills/prompting/SKILL.md', 'skills/roadmap/SKILL.md', 'skills/semantic-exoskeleton/SKILL.md', 'skills/spec-recon/SKILL.md', 'tests/test_adoption.py', 'tests/test_codemap.py', 'tests/test_consumer_files.py', 'tests/test_consumer_pm.py', 'tests/test_guide.md', 'tests/test_markup_migrate.py', 'tests/test_native_contract.py', 'tests/test_run_state.py', 'tests/test_visual_gate.py')
+EXPECTED_PATHS = ('.codex-plugin/plugin.json', 'Doxyfile', 'README.md', 'adapter.json', 'examples/smoke-spec.md', 'hooks/guard_destructive.py', 'hooks/hooks.json', 'pytest.ini', 'references/adoption.md', 'references/codex-runtime.md', 'references/consumer-pm-profile.md', 'references/handoffs.md', 'references/package-layout.json', 'references/safeguards.md', 'references/source-disposition.md', 'roles/architect.md', 'roles/coder.md', 'roles/debugger.md', 'roles/qa.md', 'roles/reviewer.md', 'roles/searcher.md', 'skills/analyzer/SKILL.md', 'skills/ax-ui-contract/SKILL.md', 'skills/brainstorm/SKILL.md', 'skills/brownfield-spec-template/SKILL.md', 'skills/code-review/SKILL.md', 'skills/data-transform/SKILL.md', 'skills/devplan-protocol/SKILL.md', 'skills/devplan-protocol/scripts/visual_gate_lint.py', 'skills/document-protocol/SKILL.md', 'skills/durable-layer/SKILL.md', 'skills/feature-dev/SKILL.md', 'skills/feature-dev/scripts/run_state.py', 'skills/graph-protocol/SKILL.md', 'skills/greenfield-bootstrap/SKILL.md', 'skills/hitl-gates/SKILL.md', 'skills/pm-bootstrap/SKILL.md', 'skills/pm-handoff/SKILL.md', 'skills/pm-plan-batch/SKILL.md', 'skills/pm-run-batch/SKILL.md', 'skills/pm/SKILL.md', 'skills/pm/scripts/codemap.py', 'skills/pm/scripts/consumer_files.py', 'skills/pm/scripts/markup_migrate.py', 'skills/pm/scripts/orient.py', 'skills/pm/templates/AGENTS.md', 'skills/pm/templates/CLAUDE.md', 'skills/pm/templates/CONVENTIONS.md', 'skills/pm/templates/DEC.md', 'skills/pm/templates/Doxyfile', 'skills/pm/templates/HANDOFF.md', 'skills/pm/templates/OPEN_QUESTIONS.md', 'skills/pm/templates/RECON.md', 'skills/pm/templates/ROADMAP.md', 'skills/pm/templates/SPEC.md', 'skills/pm/templates/TASKS.md', 'skills/pm/templates/VISION.md', 'skills/pm/templates/gitignore', 'skills/prod-log-vacuum/SKILL.md', 'skills/prompting-agent-design/SKILL.md', 'skills/prompting-decompose/SKILL.md', 'skills/prompting-markup/SKILL.md', 'skills/prompting-verify/SKILL.md', 'skills/prompting/SKILL.md', 'skills/roadmap/SKILL.md', 'skills/semantic-exoskeleton/SKILL.md', 'skills/spec-recon/SKILL.md', 'tests/test_adoption.py', 'tests/test_codemap.py', 'tests/test_consumer_files.py', 'tests/test_consumer_pm.py', 'tests/test_guard.py', 'tests/test_guide.md', 'tests/test_markup_migrate.py', 'tests/test_native_contract.py', 'tests/test_run_state.py', 'tests/test_visual_gate.py')
 
 
 EXPECTED_KINDS = {path: ("skill" if path.endswith("/SKILL.md") else
                          "role" if path.startswith("roles/") else
-                         "helper" if "/scripts/" in path else
+                         "helper" if "/scripts/" in path or path == "hooks/guard_destructive.py" else
                          "test-guide" if path == "tests/test_guide.md" else
                          "test" if path.startswith("tests/") else
-                         "config" if path in ("Doxyfile", "pytest.ini", "skills/pm/templates/Doxyfile", "skills/pm/templates/gitignore") else
+                         "config" if path in ("hooks/hooks.json", "Doxyfile", "pytest.ini", "skills/pm/templates/Doxyfile", "skills/pm/templates/gitignore") else
                          "plugin-manifest" if path == ".codex-plugin/plugin.json" else
                          "adapter" if path == "adapter.json" else
                          "layout" if path == "references/package-layout.json" else
@@ -63,10 +63,10 @@ EXPECTED_KINDS = {path: ("skill" if path.endswith("/SKILL.md") else
 # region FUNC__package_assembly [DOMAIN(9): Package; CONCEPT(10): IndependentOracle; TECH(7): pathlib, json]
 ## @purpose Refuse incomplete or unsafe actual package assembly before reporting the independently specified complete profile.
 ## @uses pathlib.Path.read_text, pathlib.Path.rglob, json.loads, logging.Logger.info, logging.Logger.error
-## @io Input: root pathlib.Path of complete co-located source. Output: sorted list of73 exact declared relative paths.
+## @io Input: root pathlib.Path of complete co-located source. Output: sorted list of77 exact declared relative paths.
 ##   Side effects: source reads and safe structured trajectory only; no source/state mutation. Guarantees: exact planned membership/profile/roles and regular contained paths; no claim of mental adoption or sandboxing.
 ##   Raises: ValueError for malformed layout, duplicate/unsafe path, missing/extra/sibling package or detached neutral dependency; OSError/UnicodeError for unreadable files.
-##   System importance:10 for complete source boundary. Example: the current complete co-located package returns its sorted73path set.
+##   System importance:10 for complete source boundary. Example: the current complete co-located package returns its sorted77path set.
 ## @complexity 7
 def _package_assembly(root):
     operation, ordinal = "Binding", -1
@@ -84,7 +84,7 @@ def _package_assembly(root):
             raise ValueError("missing substantive neutral core")
         operation = "Layout"
         layout = json.loads((package / "references/package-layout.json").read_text())
-        if not isinstance(layout, dict) or set(layout) != {"package", "version", "profile", "files", "roles"} or layout.get("package") != "methodology-codex" or layout.get("version") != "2.2.0" or layout.get("profile") != "colocated-explicit-source" or layout.get("roles") != ROLES:
+        if not isinstance(layout, dict) or set(layout) != {"package", "version", "profile", "files", "roles"} or layout.get("package") != "methodology-codex" or layout.get("version") != "2.3.0" or layout.get("profile") != "colocated-explicit-source" or layout.get("roles") != ROLES:
             raise ValueError("unsupported package profile")
         rows = layout.get("files")
         if not isinstance(rows, list) or not rows:
@@ -123,7 +123,7 @@ def _package_assembly(root):
             raise ValueError("missing or undeclared actual package member")
         operation = "Metadata"
         plugin = json.loads((package / ".codex-plugin/plugin.json").read_text())
-        if plugin.get("name") != "methodology-codex" or plugin.get("version") != "2.2.0":
+        if plugin.get("name") != "methodology-codex" or plugin.get("version") != "2.3.0":
             raise ValueError("native metadata identity mismatch")
         LOGGER.info("[IMP:9][_package_assembly][VALIDATION_SUCCESS] members=%d", len(actual))
         return declared
@@ -149,7 +149,7 @@ def _show_trace(records):
 # region FUNC_test_neutral_boundary_and_complete_package [DOMAIN(9): Boundary; CONCEPT(10): RealFilesystem; TECH(7): pytest]
 ## @purpose Verify the actual complete shipped package and scoped neutral boundary through real source and the actual common checker.
 ## @uses test_codex_package._package_assembly, test_codex_package._show_trace, conformlib.markdown.list_neutral_files, run_cli
-## @io Input: current canonical repo_root, owned repo_copy/tmp_path and actual caplog/runner/deny fixture. Output: None after exact73/71/69/2 and malformed ordinary-root refusal.
+## @io Input: current canonical repo_root, owned repo_copy/tmp_path and actual caplog/runner/deny fixture. Output: None after exact77/71/69/2 and malformed ordinary-root refusal.
 ##   Side effects: only owned bad Markdown created then removed; real checker output and visible critical trace. Guarantees: original tree untouched; expected membership is independent. Raises: AssertionError for incorrect source/boundary/verdict. System importance:9. Example: native SKILL cards are excluded, ordinary bad card fails.
 ## @complexity 5
 def test_neutral_boundary_and_complete_package(repo_root, repo_copy, caplog, run_cli, deny_list):
@@ -160,7 +160,7 @@ def test_neutral_boundary_and_complete_package(repo_root, repo_copy, caplog, run
     expected = {p.relative_to(repo_root).as_posix() for p in repo_root.rglob("*.md") if p.relative_to(repo_root).parts[0] not in {".git", "tests", "examples", "implementations", "doxygen_output", "__pycache__", ".pytest_cache"} and p.relative_to(repo_root).as_posix() not in {"README.md", "CHANGELOG.md"}}
     _show_trace(caplog.records)
     assert produced == expected and len(produced) == 71
-    assert len(declared) == 73 and sum(p.startswith("skills/") and p.endswith("/SKILL.md") for p in declared) == 27
+    assert len(declared) == 77 and sum(p.startswith("skills/") and p.endswith("/SKILL.md") for p in declared) == 27
     assert sum(p.startswith("roles/") for p in declared) == 6 and sum("/scripts/" in p and p.endswith(".py") for p in declared) == 6
     assert any("[VALIDATION_SUCCESS]" in r.getMessage() for r in caplog.records)
     assert not [r for r in caplog.records if r.levelno >= logging.ERROR]
