@@ -1,6 +1,6 @@
 # Current maintainer tasks
 
-Current focus: C3 A1 delivered unaccepted partial source; one narrowly reviewed coupled-oracle scope amendment awaits the owner. Current canonical main remains C2. See the final C3 checkpoint below and [result](notes/m28-c3-result.md).
+Current focus: C3 A2 is BLOCKED at Review after a host error and newly confirmed parser boundary defect. Scope amendment is settled; bounded continuation remains pending. Canonical main remains C2. See [current result](notes/m28-c3-result.md).
 
 ## M28-C2 Consumer PM profile and commands
 
@@ -29,14 +29,14 @@ Complete and integrated through owner-approved PR #3 at4a718d7; then-main8d984ed
 
 These are route selections, not new Code or environment grants. Public visibility, concurrent feature writers and later API/database → frontend → Telegram → MCP consumer work remain separate. Lightweight error recording remains active; systematic learning, experiments and comparative measurement are deferred. Host-native tools remain environment dependencies.
 
-## C3 preparation — staged proposal
+## C3 current execution — A2 BLOCKED at Review
 
-[C3 reconnaissance](notes/m28-c3-recon.md) and [exact draft specification](specs/m28-c3-safeguards.md) propose a source-only guard and synchronous opt-in binding as PARTIAL capacity. The owner approved the exact partial source-stage C3 specification on2026-10-14; Architect/Code and independent source-stage verification may proceed. Native role identity, continuation/interception and hook-fault boundaries remain unproven; native proof needs its later concrete grant and full M27 coverage remains owed. C4–C6, permanent activation, publication and main integration remain held. C1/C2 accepted history and budgets are unchanged.
+The exact extra C1 oracle/paired plan amendment was approved and applied. Current branch has unaccepted Codex source2.3/77members/27skills/sevenhelpers/sixroles; neutral1.1/wire2.0/schema2 and Claude remain protected. [Current result and full failed history](notes/m28-c3-result.md).
 
-## C3 execution checkpoint
+A2 Code, two counted repairs and current independent QA3 are recorded. QA3 passed597/157/526 plus privacy/adapters/current maps and actual source-stage children. Whole Review reported another comment/newline command-boundary defect, then its native worker terminated on a host content-risk error without a canonical verdict. Parent lexical diagnosis confirms the boundary loss without executing any candidate command. Actual A2 terminal is BLOCKED/review; no completed Review/Finalize or result acceptance. Cumulative Debug2/max4 and historical response correction1 remain retained.
 
-The owner accepted the binding correction on2026-10-14 (“принимаю поправку”). Linked A1 used the actual full current inventory and amended plan68155; Bootstrap and Architect were genuinely accepted. Code delivered the exact23-path source delta (four new/19 existing), proposed Codex2.3/77members/27skills/sevenhelpers/sixroles, but remains unaccepted. The real helper recorded known completed partial effects with terminal BLOCKED/code, Debug0/4. Independent QA/Review/Finalize have not occurred. [Current partial result and retained history](notes/m28-c3-result.md).
+A matching bounded linked continuation is required before repair: only guard/test paths, preserve command boundaries or refuse unsupported comments, meaningful regression controls, renewed full independent QA/whole Review/assigned Architect Finalize. Do not silently replay the failed actor, clear the terminal or reset spend.
 
-The remaining root failure is an omitted coupled current-version/member oracle in tests/test_c1_review_and_routing.py, outside the approved23 paths. A reviewed, unapplied amendment proposes exactly that additional existing path, current2.3/77 constants and paired diagnostics/metadata, preserving fixed algorithm pins, assertions, wire/schema and Claude. The exact test630527 and plan713318 proposals and owner question remain private; a matching decision is pending. No original scope approval is reopened. Preserve both blocked histories and the spent original response correction; no hidden scope or budget reset.
+Execution limits remain explicit:20 historical Code privacy/adapter/tool evidence files overwritten by Debug2; current snapshots/ledger retained, fresh QA3 evidence authoritative. Unchanged protected Claude tests created/cleaned temporary fixtures outside the exact QA3 resource grant; known/inferred population is qualified in the private ledger. No whole-history byte-preservation or exact-confinement claim. Claude repair is outside this C3 scope.
 
-Selected direction after minimal C3: test the framework on a small Python API/database consumer in one feature stream before optional further infrastructure. This is a route preference, not a new consumer Code grant. C4–C6 duties remain owed and held; no native AC7/trust/installation/main merge/publication follows.
+After minimal C3, prepare a bounded single-stream Python API/database consumer trial before optional infrastructure. C4–C6 remain owed/held; nativeAC7/trust/runtime proof, install/activation, main merge/publication need matching decisions. No full C3/M27 parity claim.

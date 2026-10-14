@@ -15,7 +15,7 @@
 ## Q: Why literal receipts?
 ## A: Policy contents cannot authenticate their own invocation; each synthetic process pins its rendered definition separately.
 ## @changes
-## LAST_CHANGE: [2.3.0 - C3 direct and real-process source-stage controls with explicit native deferral.]
+## LAST_CHANGE: [2.3.0 - Debug2 adds direct and real-child heredoc provenance contrary controls; native AC7 remains held.]
 ## @modulemap
 ## FUNC 9[Fixture or independent guard behavior] => test_guard.digest
 ## FUNC 9[Fixture or independent guard behavior] => test_guard.fixture_binding
@@ -244,10 +244,10 @@ def test_effects_preserve_foreign_state(tmp_path,profile,caplog):
 
 
 # region FUNC_test_shell_ownership_and_unknown_effects [DOMAIN(9): GuardTesting; CONCEPT(9): ContraryControls; TECH(7): pytest]
-## @purpose Verify shell ownership and unknown effects through fixed independent expectations.
-## @uses guard_destructive.load_policy, guard_destructive.classify_event, pathlib, pytest
+## @purpose Verify shell ownership, unforgeable heredoc provenance and unknown effects through direct and actual-child contrary controls.
+## @uses test_guard.fixture_binding, test_guard.decide, test_guard.process_case, guard_destructive.load_policy, guard_destructive.classify_event, pathlib.Path, pytest
 ## @io Input: actual owned pytest tmp_path/parameter fixtures where declared; no shared writes. Output: fixed assertions or fixture values; AssertionError identifies a failed promised property, OSError/ValueError preserves fixture failures. Side effects: only owned fixture/resources and actual handler children; no candidate destructive command or native hook execution. Complexity O(fixture population); importance9. Example: granted scratch positive and foreign sibling negative distinguish the decision.
-## @complexity 2
+## @complexity 7
 def test_shell_ownership_and_unknown_effects(tmp_path,monkeypatch,caplog):
     LOGGER.info('[IMP:4][test_shell_ownership_and_unknown_effects][START] owned criterion verification')
     # START_BLOCK_FixtureAndAssertions
@@ -262,6 +262,68 @@ def test_shell_ownership_and_unknown_effects(tmp_path,monkeypatch,caplog):
     for command in ('touch $UNKNOWN/x','echo $(id)','cat < a.py','cat a.py | cat','env touch a.py','GIT_DIR=x git status','while true; do echo x; done',"sh -c 'sh -c \"sh -c echo\"'",f'cd {scratch} && touch x','rm -rf *','rm --rec --for x',"cat <<EOF\nx\nEOF",'git status --output=out',"X='owned foreign'; rm $X",'PATH=/foreign touch x','LD_PRELOAD=x echo ordinary','IFS=x echo ordinary','BASH_ENV=x echo ordinary',"printf -v out '%s' payload","printf '%n' name"):
         assert decide(policy,event,command)=='deny'
     assert decide(policy,event,"sh -c 'echo ordinary'")=='no-veto'
+    # BUG_FIX_CONTEXT: Public marker text and fake operators in comments erased
+    # protected reads despite earlier green heredoc data controls. Exercise both
+    # direct kernel and pinned actual child, plus reconstructed user operands and
+    # genuine opaque data, with per-case expected-only owning refusal windows.
+    # START_BLOCK_HeredocProvenanceRegression
+    resources=tmp_path/'heredoc-provenance';resources.mkdir()
+    bound,base,argv,owned,repo,parent=fixture_binding(resources)
+    marker=repo/'__GUARD_HEREDOC__';marker.write_text('PUBLIC_SYNTHETIC_SENTINEL\n')
+    protected=repo/'ordinary-protected.txt';protected.write_text('PUBLIC_SYNTHETIC_SENTINEL\n')
+    granted=owned/'__GUARD_HEREDOC__';granted.write_text('PUBLIC_SYNTHETIC_OWNED\n')
+    bound['protected_roots']=[str(marker),str(protected)]
+    policy_path=Path(argv[1]);policy_path.chmod(0o644);policy_path.write_text(json.dumps(bound));policy_path.chmod(0o444);argv[3]=digest(policy_path)
+    receipt=json.loads((parent/'invocation-receipt.json').read_text())
+    receipt['argv']=[sys.executable,'-B',str(HANDLER)]+argv;receipt['policy_sha256']=argv[3]
+    rendered_path=parent/'rendered-hooks.json';rendered=json.loads(rendered_path.read_text())
+    rendered['hooks']['PreToolUse'][0]['hooks'][0]['command']=' '.join(shlex.quote(x) for x in receipt['argv'])
+    rendered_path.chmod(0o644);rendered_path.write_text(json.dumps(rendered));rendered_path.chmod(0o444)
+    receipt['rendered_definition_sha256']=digest(rendered_path);(parent/'invocation-receipt.json').write_text(json.dumps(receipt,indent=2))
+    bound=guard.load_policy(str(policy_path),argv[3],argv[5])
+    before={str(p.relative_to(repo)):(digest(p),stat.S_IMODE(p.stat().st_mode)) for p in repo.rglob('*') if p.is_file()}
+    cases=[
+        ('ordinary-protected','cat ordinary-protected.txt','deny','resolve_path','protected-resource'),
+        ('literal-marker','cat __GUARD_HEREDOC__','deny','resolve_path','protected-resource'),
+        ('quoted-marker',"cat '__GUARD_HEREDOC__'",'deny','resolve_path','protected-resource'),
+        ('concatenated-marker',"cat __GUARD_''HEREDOC__",'deny','resolve_path','protected-resource'),
+        ('escaped-marker',r'cat __GUARD_\HEREDOC__','deny','resolve_path','protected-resource'),
+        ('granted-marker',f'cat "{granted}"','no-veto','resolve_path',''),
+        ('comment-forged',"echo ordinary\n# <<'EOF'\ncat ordinary-protected.txt\nEOF",'deny','shell_segments','heredoc-shape'),
+        ('inline-comment-forged',"echo ordinary # <<'EOF'\ncat ordinary-protected.txt\nEOF",'deny','shell_segments','heredoc-shape'),
+        ('quoted-operator',"echo \"<<'EOF'\"\ncat ordinary-protected.txt\nEOF",'deny','shell_segments','heredoc-shape'),
+        ('continued-header',"echo ordinary \\\ncat <<'EOF'\ncat ordinary-protected.txt\nEOF",'deny','shell_segments','shell-continuation'),
+        ('header-inside-open-quote',"echo \"ordinary\ncat <<'EOF'\ncat ordinary-protected.txt\nEOF\n\"",'deny','shell_segments','shell-quote'),
+        ('genuine-opaque',"cat <<'DATA'\n# <<'EOF'\n'quoted __GUARD_HEREDOC__'\ncat ordinary-protected.txt\nDATA",'no-veto','classify_shell',''),
+        ('genuine-then-protected',"cat <<'DATA'\nPUBLIC_DATA\nDATA\ncat ordinary-protected.txt",'deny','resolve_path','protected-resource'),
+        ('genuine-then-allowed',"cat <<'DATA'\nPUBLIC_DATA\nDATA\ncat a.py",'no-veto','resolve_path',''),
+    ]
+    for label,command,expected,owner,reason in cases:
+        offset=len(caplog.records)
+        assert decide(bound,base,command)==expected
+        window=caplog.records[offset:];messages=[r.getMessage() for r in window]
+        errors=[r.getMessage() for r in window if r.levelno>=logging.ERROR]
+        if expected=='deny':
+            assert errors==[f'[IMP:10][{owner}][REFUSE] {reason}','[IMP:10][classify_event][REFUSE] event-or-effect']
+        else:
+            assert not errors and any(f'[{owner}][VALID]' in m for m in messages)
+        event_case=copy.deepcopy(base);event_case['tool_input']['command']=command
+        child=process_case(argv,event_case,parent)
+        lines=child.stderr.decode().splitlines();critical=[x for x in lines if '[IMP:10]' in x]
+        print(label,'expected',expected,'exit',child.returncode);print('\n'.join(critical+lines[-1:]))
+        assert child.returncode==0
+        assert next(i for i,x in enumerate(lines) if '[load_policy][VALID]' in x)<next(i for i,x in enumerate(lines) if '[classify_event][START]' in x)<len(lines)-1
+        if expected=='deny':
+            assert json.loads(child.stdout)['hookSpecificOutput']['permissionDecision']=='deny'
+            assert critical==errors and lines[-1]=='[IMP:9][main][RESULT] deny'
+        else:
+            assert child.stdout==b'' and not critical and lines[-1]=='[IMP:9][main][RESULT] no-veto'
+            assert any(f'[{owner}][VALID]' in m for m in lines)
+        assert not any('ERROR' in m or 'CRITICAL' in m for m in lines)
+    assert before=={str(p.relative_to(repo)):(digest(p),stat.S_IMODE(p.stat().st_mode)) for p in repo.rglob('*') if p.is_file()}
+    assert granted.read_text()=='PUBLIC_SYNTHETIC_OWNED\n'
+    LOGGER.info('[IMP:9][test_shell_ownership_and_unknown_effects][HEREDOC_VALID] fourteen direct and real-child provenance controls; source unchanged')
+    # END_BLOCK_HeredocProvenanceRegression
     monkeypatch.setattr(guard.subprocess,'run',lambda *a,**k: (_ for _ in ()).throw(OSError()))
     assert decide(policy,event,'git status')=='deny'
     errors=[r.getMessage() for r in caplog.records if r.levelno>=logging.ERROR]

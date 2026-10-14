@@ -1,21 +1,21 @@
-# Current checkpoint: C3 A1 partial source BLOCKED on one scope amendment
+# Current checkpoint: C3 A2 BLOCKED at Review; do not merge
 
-## Blocked on the owner
+## Current result and authority
 
-The exact C3 source stage and the prior binding correction are approved. Source implementation now exists, but one coupled existing test was omitted from the exact software list. The structured question asks only to add tests/test_c1_review_and_routing.py for current2.3/77 oracle constants and paired diagnostics/metadata, plus its reviewed plan amendment and supported linked continuation. Test proposal630527 and plan713318 are independently reviewed and UNAPPLIED. [Result/history](notes/m28-c3-result.md). No repeated original C3 approval is needed.
+The owner approved the exact extra C1 oracle and paired plan on2026-10-14. Both were applied: test630527/plan713318, original specification0ef unchanged. C3 source2.3 has77members/27skills/sevenhelpers/sixroles in the branch; canonical main remains accepted C2/source2.2 at bafec417. The source result is unaccepted and PR5 stays draft.
 
-## Current actual state
+## Evidence and unresolved work
 
-Canonical clean main bafec417 remains accepted C2/neutral1.1/Codex2.2. Branch codex/m28-c3-safeguards has unaccepted Codex2.3 source:77members/27skills/sevenhelpers/sixroles. Code wrote exactly the original23 software paths (four new/19existing). The real A1 helper accepted completed partial effects with BLOCKED/code at candidate141a8908 (full identity in the result/private run),319 source rows, Debug0/4; no Code SUCCESS or independent QA/Review/Finalize. Latest producer suites: root596PASS/1FAIL (omitted C1 oracle), Codex157PASS, Claude526PASS; final comment-only byte limitations are disclosed. Three current maps exit0 and29 own entities reported, not independent safety proof.
+A2 Code was accepted; independent QA found a false git_read contract, then a HIGH heredoc provenance bypass. Counted Debug1 and Debug2 corrected them. Current independent QA3 passed root597/Codex157/Claude526, both private self checks/three adapters,50own XML associations and22independent child cases on candidate3a3979afec0c4e2af447e7186ab18ca33248356b321b242fce37e6665cc9d181.
 
-The original C3 Architect BLOCKED/correction1/Debug0 remains unchanged; the owner-approved one-line plan correction9d6→68155 was applied in A1. Initial duplicate AC7 and wrong root candidate briefing, all red tests and private evidence remain retained. C1 spent4/4 and C2 cumulative4/max4 remain historical, untouched.
+Whole Review reported another command-boundary defect, then its native agent terminated with a host cybersecurity-risk error before delivering a canonical verdict. Parent read-only lexical diagnosis confirms a comment can merge the next command into echo arguments. No candidate command was executed. Actual run is now terminal BLOCKED/review; no Review SUCCESS or Finalize occurred. [Full history/current result](notes/m28-c3-result.md).
 
-## Next eligible action
+## Next action
 
-Wait for the pending exact scope/linked-continuation decision. Meanwhile only independent authorized closure/preparation may proceed. On approval preserve the old terminal and A1 partial ledgers; bind the full actual current candidate and exact amended inputs in a supported linked continuation. Reuse verified work rather than replay old returns. Revalidate amended scope/Architect, implement only the reviewed extra oracle constants, then renew required current-byte full tests/maps, independent QA/Review and assigned Architect Finalize. Never clear a terminal flag, reset spend, weaken tests or modify frozen constructor algorithms.
+Present the bounded linked-continuation decision. Proposed repair stays inside guard_destructive.py and test_guard.py: preserve command boundaries across comments or refuse ambiguous syntax, add contrary controls, then renew independent QA/whole Review/assigned Architect Finalize. Preserve original/A1 terminals, historical response correction1 and cumulative Debug2/max4; no silent retry, reset or third repair dispatch. Private continuation proposal and typed host error live in A2 parent-closure evidence.
 
-Read AGENTS and the four current records, then result, immutable [spec](specs/m28-c3-safeguards.md) and current [plan](plans/m28-c3-safeguards.md). Private new run is .methodology/runs/M28-C3-A1-20261014; exclusive owned code fixture resources are outside the repository, with exact grants in that run. Original archival workspace dirt remains foreign.
+## Limitations and direction
 
-## Direction and held boundaries
+Debug2 unintentionally overwrote20 earlier Code privacy/adapter/tool evidence files; their current bytes and exact ledger survive, original bytes are not claimed preserved. QA3 supplies fresh current evidence. Protected Claude tests also created/cleaned temporary resources outside the exact QA3 root;46creations are inferred from executed test code, only3random names directly retained. Claude sources are outside this C3 grant. No exact resource/OS confinement or all-Git purity claim follows.
 
-Finish minimal C3, then prepare a bounded Python API/database consumer trial with one feature stream to discover practical friction. C4–C6 remain owed and held pending evidence and their matching scopes. Native AC7/trust/model-runtime proof, installation/source-loader activation, main merge/publication and concurrent feature writers remain separate decisions. Source checks prove no native prevention, role isolation or callback-fault confinement. Error recording remains lightweight; systematic learning/comparative measurement is deferred.
+Finish minimal C3, then prepare a bounded single-stream Python API/database consumer trial before optional further infrastructure. C4–C6 remain owed/held. NativeAC7/trust/runtime proof, install/activation, main merge/publication remain separate decisions. Lightweight error recording stays selected; systematic learning/measurement deferred. Preserve foreign/archive work.

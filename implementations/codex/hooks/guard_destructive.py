@@ -16,7 +16,7 @@
 ## Q: Why session-wide rather than role labels?
 ## A: Tool metadata has no authenticated per-subagent identity in the approved source stage.
 ## @changes
-## LAST_CHANGE: [2.3.0 - C3 source-stage pinned policy and finite conservative effect recognition; native AC7 held.]
+## LAST_CHANGE: [2.3.0 - Debug2 binds finite heredoc ownership to parser metadata and refuses ambiguous headers; Debug1 corrected generic Git refusal contract. Native AC7 held.]
 ## @modulemap
 ## FUNC 10[Refuse duplicate nested JSON fields] => guard_destructive._unique_pairs
 ## FUNC 9[Refuse a failed caller-owned invariant with a fixed safe cause.] => guard_destructive.require
@@ -27,8 +27,8 @@
 ## FUNC 9[Reject Git-linked scratch and linked descendant resources.] => guard_destructive.git_free
 ## FUNC 9[Validate explicit parent pins, complete policy grammar and immutable protected entries.] => guard_destructive.load_policy
 ## FUNC 9[Check every addressed effect against binding objects, protected roots and exact grant.] => guard_destructive.resolve_path
-## FUNC 9[Verify a closed Git read request using fixed sanitized store-discovery probes.] => guard_destructive.git_read
-## FUNC 9[Separate finite shell syntax with quoted heredocs retained as consuming-command data.] => guard_destructive.shell_segments
+## FUNC 9[Discover addressed Git stores with a fixed sanitized probe, then refuse every generic read request.] => guard_destructive.git_read
+## FUNC 9[Separate finite shell syntax with parser-owned provenance for standalone quoted cat heredoc data.] => guard_destructive.shell_segments
 ## FUNC 9[Validate every finite shell effect or exact parent-bound opaque check.] => guard_destructive.classify_shell
 ## FUNC 9[Return a session-wide deny or no-veto for actual supported event shapes.] => guard_destructive.classify_event
 ## FUNC 9[Deliver safe native denial or empty no-veto at the actual standalone process boundary.] => guard_destructive.main
@@ -304,10 +304,10 @@ def resolve_path(word, cwd, operation, policy, recursive=False):
 
 
 # region FUNC_git_read [DOMAIN(9): Safeguards; CONCEPT(9): BoundedValidation; TECH(7): Python]
-## @purpose Verify a closed Git read request using fixed sanitized store-discovery probes.
+## @purpose Discover addressed Git stores with a fixed sanitized probe, then refuse every generic read request.
 ## @uses guard_destructive.require, pathlib.Path, logging.Logger.info
-## @io Input: words list, canonical cwd and validated policy. Output/guarantees/errors/side effects/complexity: None on declared store/read shape; ValueError/OSError on unknown mutation/options/store or probe failure; one fixed git child timeout3, never candidate execution; O(output max65536).
-##   System importance:9. Example: git status in declared source repository passes; fetch refuses.
+## @io Input: words list, canonical cwd and validated policy. Output/guarantees/errors/side effects/complexity: No successful return: ValueError/OSError on invalid shape/store/probe and unconditional ValueError after valid discovery; one fixed Git discovery child timeout3, never candidate execution; O(output max65536). Exact authenticated recipe success occurs earlier in classify_shell and bypasses this function.
+##   System importance:9. Example: generic git status refuses even after valid discovery; fetch refuses before discovery. An exact authenticated recipe may pass earlier in classify_shell.
 ## @complexity 6
 def git_read(words, cwd, policy):
     # START_BLOCK_ValidationAndEffects
@@ -347,43 +347,56 @@ def git_read(words, cwd, policy):
 
 
 # region FUNC_shell_segments [DOMAIN(9): Safeguards; CONCEPT(9): BoundedValidation; TECH(7): Python]
-## @purpose Separate finite shell syntax with quoted heredocs retained as consuming-command data.
-## @uses guard_destructive.require, pathlib.Path, logging.Logger.info
-## @io Input: command str UTF8 at most65536. Output/guarantees/errors/side effects/complexity: list of token lists; ValueError on unknown punctuation, expansion, malformed quote/heredoc; no command execution; O(n).
+## @purpose Separate finite shell syntax with parser-owned provenance for standalone quoted cat heredoc data.
+## @uses guard_destructive.require, re.fullmatch, shlex.shlex, logging.Logger.info
+## @io Input: command str UTF8 at most65536. Output/guarantees/errors/side effects/complexity: list of (token list, parser-authored heredoc bool) pairs; ordinary user tokens cannot set provenance. Only a complete standalone cat quoted-delimiter physical line may own an opaque body; other << contexts, continued headers, malformed quotes/delimiters and unknown punctuation/expansion refuse with ValueError. No command execution; O(n).
 ##   System importance:9. Example: quoted cat heredoc SQL text never becomes a SQL command.
-## @complexity 8
+## @complexity 10
 def shell_segments(command):
     # START_BLOCK_ValidationAndEffects
     require(type(command) is str and len(command.encode('utf-8')) <= LIMIT, 'shell_segments', 'shell-size')
-    # Quoted heredocs are opaque data owned by a single consuming command.
-    lines = command.splitlines(); kept = []; index = 0
+    # BUG_FIX_CONTEXT: A public sentinel and pre-lexing operator search let user
+    # operands/comments erase protected effects. Only an entire finite header owns
+    # data; provenance is a separate bool authored here, never inferred from tokens.
+    # START_BLOCK_HeredocOwnership
+    lines = command.split('\n'); pieces = []; pending = []; index = 0
     while index < len(lines):
         line = lines[index]; index += 1
-        matches = list(re.finditer(r"<<\s*'([A-Za-z_][A-Za-z0-9_]*)'", line))
-        if matches:
-            require(len(matches) == 1, 'shell_segments', 'heredoc-shape')
-            marker = matches[0]; delimiter = marker.group(1)
-            require(marker.end() == len(line), 'shell_segments', 'heredoc-shape')
-            kept.append(line[:marker.start()] + ' __GUARD_HEREDOC__')
+        if '<<' in line:
+            header = re.fullmatch(r"[ \t]*cat[ \t]+<<[ \t]*'([A-Za-z_][A-Za-z0-9_]*)'[ \t]*", line)
+            require(header is not None, 'shell_segments', 'heredoc-shape')
+            if pending: pieces.append(('\n'.join(pending), False)); pending = []
+            delimiter = header.group(1)
             while index < len(lines) and lines[index] != delimiter:
                 index += 1
             require(index < len(lines), 'shell_segments', 'heredoc-shape'); index += 1
+            pieces.append(('cat', True))
         else:
-            require('<<' not in line, 'shell_segments', 'heredoc-shape'); kept.append(line)
-    text = '\n'.join(kept)
-    require(not any(c in text for c in ('`', '$(', '<(', '>(', '\x00')), 'shell_segments', 'shell-expansion')
-    lexer = shlex.shlex(text, posix=True, punctuation_chars=';&|<>()\n')
-    lexer.whitespace = ' \t\r'; lexer.whitespace_split = True; lexer.commenters = '#'
-    tokens = list(lexer); segments = []; current = []
-    for token in tokens:
-        if token in (';', '\n', '&&', '||'):
-            require(bool(current) or token == '\n', 'shell_segments', 'shell-chain')
-            if current: segments.append(current)
-            current = []
-        else:
-            require(token not in ('|','&','(',')') and not all(c in ';&|()' for c in token), 'shell_segments', 'unsupported-shell')
-            current.append(token)
-    if current: segments.append(current)
+            require(not line.endswith('\\'), 'shell_segments', 'shell-continuation')
+            pending.append(line)
+    if pending: pieces.append(('\n'.join(pending), False))
+    # END_BLOCK_HeredocOwnership
+    # START_BLOCK_OrdinaryLexing
+    segments = []
+    for text, heredoc in pieces:
+        require(not any(c in text for c in ('`', '$(', '<(', '>(', '\x00')), 'shell_segments', 'shell-expansion')
+        lexer = shlex.shlex(text, posix=True, punctuation_chars=';&|<>()\n')
+        lexer.whitespace = ' \t\r'; lexer.whitespace_split = True; lexer.commenters = '#'
+        try:
+            tokens = list(lexer)
+        except ValueError:
+            require(False, 'shell_segments', 'shell-quote')
+        current = []
+        for token in tokens:
+            if token in (';', '\n', '&&', '||'):
+                require(bool(current) or token == '\n', 'shell_segments', 'shell-chain')
+                if current: segments.append((current, heredoc))
+                current = []
+            else:
+                require(token not in ('|','&','(',')') and not all(c in ';&|()' for c in token), 'shell_segments', 'unsupported-shell')
+                current.append(token)
+        if current: segments.append((current, heredoc))
+    # END_BLOCK_OrdinaryLexing
     require(bool(segments), 'shell_segments', 'empty-shell')
     LOGGER.info('[IMP:9][shell_segments][VALID] segmented finite syntax')
     return segments
@@ -394,7 +407,7 @@ def shell_segments(command):
 # region FUNC_classify_shell [DOMAIN(9): Safeguards; CONCEPT(9): BoundedValidation; TECH(7): Python]
 ## @purpose Validate every finite shell effect or exact parent-bound opaque check.
 ## @uses guard_destructive.require, guard_destructive.resolve_path
-## @io Input: command str, cwd absolute str, policy dict, depth integer0 to2. Output/guarantees/errors/side effects/complexity: None on complete granted effects; ValueError/OSError for unknown effects/options/depth/resources; metadata/fixed Git probes only, no candidate command; O(tokens and resources).
+## @io Input: command str, cwd absolute str, policy dict, depth integer0 to2. Output/guarantees/errors/side effects/complexity: None on complete granted effects; ValueError/OSError for unknown effects/options/depth/resources; metadata/fixed Git probes only, no candidate command; parser-authored heredoc provenance never removes user operands; O(tokens and resources).
 ##   System importance:9. Example: quoted granted touch passes and foreign touch refuses.
 ## @complexity 29
 def classify_shell(command, cwd, policy, depth=0):
@@ -408,16 +421,19 @@ def classify_shell(command, cwd, policy, depth=0):
             LOGGER.info('[IMP:9][classify_shell][VALID] explicit opaque recipe')
             return
     segments = shell_segments(command); conditional = '&&' in command or '||' in command
-    for words in segments:
+    for words, heredoc in segments:
         redirects = []; args = []; index = 0
         while index < len(words):
             word = words[index]; index += 1
             if word in ('>', '>>'):
                 require(index < len(words), owner, 'redirect-shape'); redirects.append(words[index]); index += 1
             else:
-                require(not any(c in word for c in ('<','>')) or word == '__GUARD_HEREDOC__', owner, 'redirect-shape'); args.append(word)
+                require(not any(c in word for c in ('<','>')), owner, 'redirect-shape'); args.append(word)
         for target in redirects: resolve_path(target, cwd, 'write', policy)
         require(bool(args), owner, 'command-shape')
+        # BUG_FIX_CONTEXT: Only shell_segments may author heredoc ownership.
+        # User marker-like filenames remain ordinary addressed read operands.
+        require(not heredoc or (args == ['cat'] and not redirects), owner, 'heredoc-owner')
         require(not any('$' in word for word in args), owner, 'shell-expansion')
         require(not re.match(r'^[A-Za-z_][A-Za-z0-9_]*=', args[0]), owner, 'environment-authority')
         name = args[0]
@@ -428,7 +444,7 @@ def classify_shell(command, cwd, policy, depth=0):
             require(len(args) == 3 and args[1] == '-c' and not redirects, owner, 'shell-flags')
             classify_shell(args[2], cwd, policy, depth + 1); continue
         if name in ('echo', 'printf'):
-            require('__GUARD_HEREDOC__' not in args and all(not x.startswith('-') for x in args[1:]), owner, 'output-shape')
+            require(all(not x.startswith('-') for x in args[1:]), owner, 'output-shape')
             require(name != 'printf' or (len(args) == 3 and args[1] == '%s'), owner, 'printf-shape')
             continue
         if name == 'git': git_read(args, cwd, policy); continue
@@ -438,8 +454,6 @@ def classify_shell(command, cwd, policy, depth=0):
             require(len(args) >= 3 and args[2:] in (['-delete'], ['-exec','rm','-f','{}','+']), owner, 'find-shape')
             resolve_path(args[1], cwd, 'delete', policy, True)
             continue
-        heredoc = '__GUARD_HEREDOC__' in args
-        require(not heredoc or name == 'cat', owner, 'heredoc-owner')
         operands = args[1:]; options = []
         while operands and operands[0].startswith('-') and operands[0] != '--': options.append(operands.pop(0))
         if operands[:1] == ['--']: operands.pop(0)
@@ -449,7 +463,6 @@ def classify_shell(command, cwd, policy, depth=0):
             require(set(options) <= allowed, owner, 'read-option')
             if name == 'rg' and '--files' not in options:
                 require(bool(operands), owner, 'read-shape'); operands = operands[1:]
-            if heredoc: operands.remove('__GUARD_HEREDOC__')
             for path in operands or ([] if heredoc else ['.']):
                 target = str(canonical(path if os.path.isabs(path) else os.path.normpath(os.path.join(cwd, path))))
                 resolve_path(path, cwd, 'read', policy, Path(target).is_dir())
