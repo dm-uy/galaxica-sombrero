@@ -1,19 +1,15 @@
-# Current checkpoint: M30 source integrated; native Claude deferred
+# Current: M31 lightweight PM direction saved locally
 
-## Current disposition
+## Current state
 
-The owner instructed “мерджи” after disclosure of the source-stage result and its limits. PR6 is MERGED at2483857db57293452b53ebf3782951425d097bef. Canonical main was fast-forward synchronized and clean; its321-file tree matched candidateaaaa784 exactly. Current source is neutral2.0/Codex2.4/Claude1.1. [Integration record](notes/m30-integration.md), [source result/history](notes/m30-result.md).
+The owner clarified that PM is lightweight state for the next agent/session. QA belongs to new features and substantial bug fixes; documentation and small corrections use bounded local work. Synchronize only affected records on material changes, grouped routine progress and before planned compaction/handoff. [Accepted direction and scope](notes/pm-lightweight-direction.md).
 
-M30's actual independent QA2 remains terminal **BLOCKED/qa**, Debug1/4: no current actionable source finding;600/146/526 ordinary tests without skips, original private checks/three adapters/maps,42own XML contracts and bounded actual Codex important/trivial/settled proof supported. Required native Claude AC4/ClaudeAC5 is UNFULFILLED under “Пока продолжай без живого прогона Claude”. Source integration is owner-approved; missing proof, whole Review/assigned Finalize and full checkpoint acceptance are not fabricated or waived.
+Shared PM/session/document/flow guidance and both native PM/durable/feature-dev entries now reflect this locally. This is unreleased documentation: no helper/schema/test changes, QA role, new run ledger, installed activation or merge. Existing version stamps remain the previous integrated release; release preparation must apply FORMAT version/binding rules before presenting a repackaged release.
 
-## Delivered and retained
+## Next action
 
-One full consequential-open owner requires at least two fresh generators → saved unranked HOLD → distinct evaluation → actual authorized decision/task links. PM/Architect/both carriers load it; routine/forced/settled choices remain bounded. Roles/wires/schemas/registries/pins and README Local use are protected. No global installation/activation or public visibility change.
+Present/integrate the local documentation change only under the matching owner merge decision. Do not repeat the settled behavioral approval or launch feature-dev for this documentation task. Read [TASKS](TASKS.md) and relevant links; leave current VISION/ROADMAP unchanged unless their meaning changes.
 
-Original blocked runs, I2 failed wave, QA1/charged Debug1 and refused/amended metadata remain retained. Judged320-file45ef source, subsequent321-file record closure and this six-record integration closure stay distinct. Native sessions retain truee350 identity with independently verified complete operative read equivalence; parent transcription/actor receipts are no host export.
+## Retained boundaries
 
-## Next boundary
-
-Do not launch native Claude now. After the owner changes deferral, finish required current-source Claude proofs, then independent acceptance/Review/assigned Finalize. Read [TASKS](TASKS.md), [ROADMAP](ROADMAP.md), [spec](specs/m30-independent-decisions.md) and [operative plan](plans/m30-independent-decisions-i2.md); do not repeat granted approvals or reset budgets.
-
-C3 remains separate terminal ESCALATED/review, exhausted4/4 with unresolved protected-read defect; no fifth repair or imported guard. [C3 history](notes/m28-c3-result.md). INTAKE-01 and C4–C6 remain owed/held. Accepted smaller safeguards → bounded single-stream Python API/database trial → optional C4 → C5/C6 remains the route. Lightweight error recording stays active; systematic learning/measurement and concurrent feature writers remain deferred. Preserve foreign archival work and clean permanent main.
+Canonical main still contains integrated M30 source and its prior record synchronization. [M30 integration](notes/m30-integration.md) and [source result](notes/m30-result.md) retain the actual blocked QA and owner-deferred live Claude proof; do not retry Claude now. C3 remains separate exhausted/unaccepted; [history](notes/m28-c3-result.md). Those runs/budgets are not reset or retroactively completed. Later API/database trial and C4–C6 remain separately scoped. Preserve foreign archival work and clean permanent main.

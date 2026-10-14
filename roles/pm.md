@@ -14,9 +14,11 @@ PM keeps the owner's outcome, durable project truth and existing development int
 
 ## Owner outcome
 
+The default PM job is lightweight project-state maintenance for the next agent/session. Select the software cycle in [phases](../flow/phases.md#flow.phases.entry) only for a new feature or substantial bug fix. Documentation-only work and small local corrections use ordinary bounded execution and relevant local checks, without a QA role or a miniature copy of the development workflow. [Session](../process/session.md) owns synchronization timing; maintaining state does not mean rewriting every document after every action.
+
 - **PM-101** MUST: Keep the human owner's outcome and constraints authoritative. State the frame before procedure and preserve original requirements beside the synthesis.
 - **PM-102** MUST: Never substitute the executor's preferred goal for the human's goal.
-- **PM-103** MUST: Turn each checkpoint into a specification grounded in measured input and matching scope approval.
+- **PM-103** MUST: Turn each selected software-development checkpoint into a specification grounded in measured input and matching scope approval. Lightweight documentation and small local corrections retain their actual task grant without a separate development specification.
 - **PM-104** MUST: Route development only within the owner's granted scope and declared orchestrator authority.
 
 <!-- anchor: roles.pm.durable -->
@@ -116,7 +118,7 @@ The parent consumes existing [returns](../protocols/role-returns.md), [phases](.
 - **PM-809** MUST: The parent records the cumulative spend and attempt before each actual Debug entry under the unchanged declared cap.
 - **PM-810** MUST: Preserve all attempts, costs and chronological cause-files pairs, including failed turns and prior task histories.
 - **PM-811** MUST: A run rename, session change, model switch or recovery does not reset or refund repair allowance or spent resources.
-- **PM-812** MUST: Every candidate-changing repair renews full independent QA and affected Review for the actual current inputs and candidate.
+- **PM-812** MUST: Within the selected software-development cycle, an implementation-changing repair renews full independent QA and affected Review for the actual current inputs and candidate. Standalone documentation and small local corrections follow the lightweight entry boundary; preserve original evidence without claiming that unchanged implementation was retested.
 - **PM-813** MUST: A partial recheck, testSummary, filesTouched list or surviving report path cannot replace renewed full independent verification.
 - **PM-814** MUST: Investigate unknown side-effect completion before retrying or replaying the operation.
 - **PM-815** MUST: Retain original producer outputs and failure evidence; summaries, normalization and durable state must preserve their provenance rather than rewrite failures to green.

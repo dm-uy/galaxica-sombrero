@@ -47,3 +47,9 @@ Status: selected into the approved M30 contract below; this earlier observation 
 - **Held/UNFULFILLED:** actual native Claude AC4/ClaudeAC5 under explicit deferral. Terminal BLOCKED/qa; whole Review/assigned Finalize/full checkpoint acceptance incomplete. Owner-approved source integration through PR6 is complete; [record](notes/m30-integration.md). No Claude auth/engine retry now.
 - [Result/history](notes/m30-result.md), [approved spec](specs/m30-independent-decisions.md), [operative plan](plans/m30-independent-decisions-i2.md), [input correction](notes/m30-input-correction.md). Four current records plus result note are a separate closure after judged source.
 - Next: required Claude proof only after owner changes deferral, then independent acceptance/Review/Finalize. INTAKE-01 remains separately proposed; C4–C6/trial route/C3 history retained. M30 source merge is complete; no installation/public visibility change or C3 merge.
+
+## M31 — owner-directed lightweight PM (current)
+
+Direction accepted; [decision/scope](notes/pm-lightweight-direction.md). Shared PM/session/flow/document applicability and both carriers' PM/durable/feature-dev entrypoints are updated locally. Documentation-only task: direct edit/readback/link checks; no QA, new run state or experiment. Package version stamps remain the previous integrated release; semantic version/binding work belongs to release preparation. Local integration-for-review is authorized; main merge, publication and activation are not performed.
+
+Next: present the bounded documentation result for integration, keeping the settled direction. Do not start a full flow to assess these document edits or re-open C3/M30 terminal states. Actual runtime enforcement/activation is not claimed.

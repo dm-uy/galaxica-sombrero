@@ -1,6 +1,6 @@
 ---
 name: pm-handoff
-description: "Owner-invoked command: close a working session so the next one continues from the files without loss. Reconciles task states and evidence, rewrites HANDOFF, runs the orient check and reports what waits for the owner."
+description: "Owner-invoked command: close a working session so the next one continues from the files without loss. Reconciles changed task states and evidence, updates HANDOFF when needed, uses the adopted orient check and reports what waits for the owner."
 argument-hint: "[closing note]"
 disable-model-invocation: true
 ---
@@ -20,8 +20,8 @@ Route:
 1. Compare each task's state and finish claim with the real artifacts. Keep the original packet and its results before replacing current work; keep blocked, deferred, failed and unfinished rows with their next disposition. Reconcile the route's achieved outcomes, focus and diagram together.
 2. Audit this session for facts that no record carries yet (a decision made only in chat, an ignored file the next step needs, a changed configuration, a defect, a stale number, an unrecorded uncertainty) and route each to its one owning record. This is fact recording, not learning ingestion.
 3. Move an expired live hazard to dated history with its proof and recheck condition; drop only its warning.
-4. Rewrite HANDOFF from its template: the owner blockers first (name each pending decision and the action needed, or say nothing), then the present and previous state with the checked revision and what is uncommitted, the next authorized action pointing at TASKS, and the live traps.
-5. Run the orient check at closure (read-only) and fix what is in scope; keep every unexplained or unavailable result with its recovery action. Commit only the named files this session owns and only if committing was granted; report foreign changes without bundling them.
+4. Follow the shared session cadence on material changes, grouped progress and before planned compaction/handoff. If continuation state is already current, reuse it. Otherwise update HANDOFF from its template: the owner blockers first (name each pending decision and the action needed, or say nothing), then the present and previous state with the checked revision and what is uncommitted, the next authorized action pointing at TASKS, and the live traps.
+5. Use the adopted profile's existing read-only orient check where applicable, without dispatching QA or a separate documentation judge, and fix what is in scope; keep every unexplained or unavailable result with its recovery action. Commit only the named files this session owns and only if committing was granted; report foreign changes without bundling them.
 6. Read the baton as a newcomer would. The final message leads with what waits for the owner, then the concrete changes and checked result, then the confirmed findings and limits, and states whether anything was saved but not committed.
 
 Limits:

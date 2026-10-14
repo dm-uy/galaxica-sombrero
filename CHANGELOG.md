@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Record the owner-directed lightweight PM boundary: QA belongs to new features/substantial bug fixes; documentation and small corrections use bounded local checks. Agent-first project state synchronizes on material change, grouped progress and before planned compaction/handoff, updating affected records only.
+- This is an unreleased documentation/policy change, not a new packaged release under the previous version stamps. Semantic release/version binding under FORMAT remains a release-preparation task; helper algorithms, wire/schema and installed settings are unchanged.
+
 ## 2.0.0
 
 - Require independent generation, durable HOLD and separate evaluation for consequential open decisions, through one shared owner and mandatory PM/Architect/native call sites. Routine, settled and forced choices remain bounded.

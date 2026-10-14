@@ -2,6 +2,8 @@
 
 Maintain one coherent, harness-neutral methodology and complete Codex and Claude adaptations in one canonical Git repository. Other agents start from root AGENTS and the four current project records, follow authentic scope/ownership and leave recoverable evidence. Preparation repositories are archival, not additional development sources.
 
+The owner clarified the operating goal: lightweight state for the next agent/session, with QA reserved for new features and substantial bug fixes. Human presentations are on demand. Only affected records synchronize after material changes, grouped routine progress and before planned compaction/handoff. [Accepted direction](notes/pm-lightweight-direction.md).
+
 ## Selected outcome and accepted baseline
 
 The owner selected this repository as the sole source of truth for the in-house methodology. The Codex adaptation must cover at least the currently used in-house practices without external in-house skills/plugins as necessary sources. [M27 coverage contract](specs/m27-self-contained-coverage.md) accounts for duties and behavioral proof; matching names or this construction chat do not establish parity.

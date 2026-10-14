@@ -10,6 +10,8 @@ status: draft
 
 ## Canon and document homes
 
+The primary reader is an agent entering or resuming a session. Optimize the canonical records for an unambiguous current goal/task/next action, stable paths and linked decisions/evidence. A readable human presentation is produced on request from this same state, without a second editable documentation set. Synchronization follows [session](../process/session.md#process.session.baton): material changes, periodic grouped progress and before planned compaction/handoff. Only affected records change; no full QA workflow or mandatory independent documentation judge accompanies ordinary record maintenance.
+
 - **DOC-101** MUST: Declare one editable home per project-document role and existing binding instructions. AGENTS owns the entry/path map and a short project profile; VISION owns intended outcome; ROADMAP owns outcome route; TASKS owns authorized current work; HANDOFF owns the present baton. References point to evidence rather than duplicating its body.
 - **DOC-102** SHOULD: Use those five current documents as the default. Decisions and notes/results are event-driven records without mandatory separate forms. Small open choices may stay with TASKS. Add a separate profile, index or question register only for real complexity or retained binding project conventions.
 - **DOC-103** MUST: Preserve actual grants, accepted decisions, foreign state and original task/result history when mapping an existing project. A filled form or proposed queue item creates no authority; package revisions are not automatic adoption.

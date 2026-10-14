@@ -1,9 +1,11 @@
 ---
 name: durable-layer
-description: "Use when starting, resuming or handing off a meaningful project checkpoint: read the five project records in their declared homes, keep files (not chat) as the durable authority, and close with a recoverable HANDOFF."
+description: "Use when starting, resuming or handing off a meaningful project checkpoint: read the five project records in their declared homes, keep files (not chat) as the durable authority, and keep a recoverable current HANDOFF."
 ---
 
 # durable-layer
+
+Keep state for the next agent/session, using the shared `process/session.md` cadence: synchronize affected records after material changes, periodically across routine steps and before planned compaction/handoff. Save current task/status, next action and relevant decisions/blockers; retain VISION unless intent changes. Reuse an already-current baton. This is ordinary record maintenance, with no QA role, extra approval or new workflow. Unexpected host compaction is recovered by re-reading durable files, not by claiming an unavailable interception hook.
 
 Files are the durable memory of a project. Chat, compaction and Claude's own memory only point at them.
 
@@ -19,7 +21,7 @@ Route:
 2. Establish the goal, the active task, the live grant, the source revision and the foreign or uncommitted state (`git status --porcelain -uall`). One writer owns each artifact; foreign changes are preserved.
 3. While working, record each material fact where it belongs when you find it: intent in VISION, a local result in TASKS or its notes, a binding choice in the decision home, a live hazard in HANDOFF. Preserve route ids, decisions, failures, pending gates and spent resources.
 4. After compaction or a restart, re-orient from the records (the hook runs again on compaction) and from the run-state ledger (`run_state.py show`); a compaction never resets a run or its budgets.
-5. Close through the pm-handoff command: reconcile evidence, rewrite HANDOFF, and commit only named, authorized files through the root.
+5. Close through the applicable lightweight handoff: reconcile changed state, update HANDOFF only when needed and commit only named, authorized files through the root. The pm-handoff entry preserves this cadence; an unchanged current baton is reused.
 
 Limits:
 - A goal or a standing task is created only on an explicit owner request.

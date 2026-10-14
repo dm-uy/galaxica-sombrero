@@ -5,6 +5,8 @@ description: "Multi-stage project development or checkpoint continuation; not tr
 
 # pm
 
+Use lightweight project-state maintenance as the default. The shared `flow/phases.md` entry boundary reserves Architect → Code → QA for new features and substantial bug fixes. Documentation-only work and small local corrections do not open that flow or require QA. Read `process/session.md` for material-change, grouped-progress and pre-compaction synchronization; preserve already-current records instead of rewriting every file.
+
 Read the complete [runtime](../../references/codex-runtime.md) and [adoption procedure](../../references/adoption.md) first. Resolve neutral owners through the actual package adapter spec_root/files, never a cached installed constitution. Read every required applicable owner body in full and record its current identity/read limits before dependent action. Missing, stub, stale, truncated or unread required content is BLOCKED; complete current injection may be reused. This entry supplies the native trigger and route, not a duplicate neutral protocol or role assignment. Preserve current project instructions, settled grants and exact path scope. An inner role never delegates, commits, merges or changes authoritative state.
 
 Trigger: Multi-stage project development or checkpoint continuation; not trivial isolated work.

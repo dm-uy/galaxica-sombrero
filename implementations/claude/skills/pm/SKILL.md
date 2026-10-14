@@ -5,6 +5,8 @@ description: "Use for multi-stage project development or continuing a project ch
 
 # pm
 
+Use lightweight project-state maintenance as the default. The shared `flow/phases.md` entry boundary reserves Architect → Code → QA for new features and substantial bug fixes. Documentation-only work and small local corrections do not open that flow or require QA. Read `process/session.md` for material-change, grouped-progress and pre-compaction synchronization; preserve already-current records instead of rewriting every file.
+
 Act as the project manager for the owner's outcome: read the project truth, prepare measured specifications, route development within the granted scope and present verified evidence for the remaining decisions.
 
 Owners — read in full before acting:
