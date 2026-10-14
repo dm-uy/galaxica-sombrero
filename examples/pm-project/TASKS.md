@@ -1,28 +1,49 @@
 # Current maintainer tasks
 
-## M28-C2 Consumer PM profile and commands
+## M28-C3 safeguards — terminal escalation
 
-State: implementation, current independent QA3, renewed whole Review and assigned Architect Finalize verified, owner-accepted and integrated through PR #4; [integration record](notes/m28-c2-integration.md). [Current result](notes/m28-c2-result.md), [specification](specs/m28-c2-consumer-profile.md), [amended scope](specs/m28-c2-consumer-profile-amendment-01.md), [continuation](notes/m28-c2-amendment-02-continuation.md). Original Code and exact Claude exception approvals are settled.
+This retained C3 action is closed as an exhausted bounded run; no C3 Code continues here. Actual A3 state is ESCALATED/review at source candidatec5110484; prior spend2 plus A3spend2 exhaust Debug4/global4. Historical correction1 and every earlier failure remain retained. [Full result/history](notes/m28-c3-result.md), [specification](specs/m28-c3-safeguards.md), [approved plan](plans/m28-c3-safeguards.md).
 
-Delivered: opt-in consumer PM profile,13 templates,four PM entries and shared resolver/orient/codemap/markup_migrate helpers;26 new package members. Integrated main Codex source2.2/member73/skill27/helper6/role6; prior C1 source2.1/member47 remains historical. Neutral1.1/wire2.0/schema2, fixed role/guard algorithms and Claude runtime/other58 members remain protected. Sole exact Claude test exception preserves shared23/Claude28/all29 assertions.
+Completed within the grant: exact46b7ccc private draft PR5 delivery; linked Bootstrap/Architect/Code diagnosis; counted Debug3 comment/control-provenance repair; QA1; Review1 CR finding; counted Debug4 blank-boundary repair; fresh full QA2; whole Review2. Current QA2 passed597/158/526, both private self checks and three adapters. Whole Review2 found the unresolved symlink-plus-parent protected-read bypass. Review SUCCESS, Finalize and result acceptance are not complete.
 
-Current tests597/146/526 pass without skips, with actual CLI/files/recovery/log identity/contrary-control and final map evidence. Root-only current-record/result closure is checked separately from judged308-file software source. Original C2/A1 BLOCKED spend1 each and A2spend2/cap2 yield cumulative4/max4; no reset/fifth entry or retroactive original Code SUCCESS.
+A3 source changes stay within guard_destructive.py/test_guard.py. The local branch contains unaccepted source2.3/77members/27skills/sevenhelpers/sixroles; main remains accepted C2/source2.2. Neutral1.1/wire2.0/schema2/Claude/root Local use are protected. Native AC7 is HELD/UNFULFILLED; no install/activation/main merge/publicity.
 
-Next: C3 reconnaissance/specification. Installation/publication and C3–C6 Code require their matching decisions. C2 result/main decision is settled. [Historical blocked checkpoint](notes/m28-c2-blocked-result.md) stays preserved.
+Next proposed activity needs a matching decision: read-only reconnaissance and a revised bounded safeguard specification, evaluating a smaller exact-recipe/structured-tool surface. No fifth repair, counter reset or silently relinked continuation. Retain the current source, raw evidence and limitations. Root-only five-record closure is verified separately from the judged319-file source.
 
-## M28-C1 Required owners and native prompt routing
+## Accepted foundation
 
-Complete and integrated through owner-approved PR #3 at4a718d7; then-main8d984ed reconciled its state. [Specification](specs/m28-c1-required-owners-routing.md), [signature amendment](notes/m28-c1-amendment-01.md), [result](notes/m28-c1-result.md). Required review owners, full native one-shot/loop route and neutral1.1/Codex source2.1 binding retain unchanged wire/schema/algorithms and Claude source1.0. Original597/101/526 evidence and spent4/4 history remain bounded; installed activation is held.
+- M28-C2: implementation/current independent QA3/whole Review/assigned Finalize owner-accepted and integrated through PR4; [result](notes/m28-c2-result.md), [integration](notes/m28-c2-integration.md). Source2.2/73members/27skills/sixhelpers/sixroles; its597/146/526 and original cumulative4/4 history are distinct from C3.
+- M28-C1: integrated through PR3; [result](notes/m28-c1-result.md). Required owners/native prompt routing and compatible neutral1.1/source2.1 bridge, unchanged wire/schema/algorithms.
+- M27/M26: [coverage contract](specs/m27-self-contained-coverage.md) preparation and canonical onboarding integrated. Whole behavioral coverage remains owed; preparation repositories are archival.
 
-## M27 Coverage and M26 onboarding
+## Route after an accepted minimal safeguard
 
-[M27](specs/m27-self-contained-coverage.md) preparation/matrix and selected self-contained outcome are integrated through cumulative PR #3. Whole-duty behavioral parity remains owed; C1/C2 close bounded portions only. [M26 onboarding](notes/m26-maintainer-onboarding.md) and PR #1 are complete. Preserve the canonical checkout, archival preparation records, authentic approvals and foreign work.
+Prepare a bounded single-stream Python API/database consumer trial. Then revisit separately scoped C4 SDK/import/candidate processing, C5 autonomous development/resume/isolation and C6 actual loader handover. Frontend/Telegram/MCP, installation/native activation, public visibility and concurrent feature writers are separate decisions. Lightweight error recording stays selected; systematic learning and comparative measurement remain deferred.
 
-## Next bounded slices and separate scopes
+Preserve historical20evidence overwrites, qualified earlier Claude temporary-resource effects, host failure and foreign archival work. No blanket original-byte restoration or hard OS isolation claim.
 
-- C3: safeguards/hooks, reconnaissance and exact specification before Code.
-- C4: SDK prompt carriers, transcript import and candidate processing; reconcile protected prompting commentary in that scope.
-- C5: fresh canonical-source autonomous development, resume and isolation proof.
-- C6: actual source-loader handover after matching result/activation decisions.
+## New owner observations — proposed follow-up only
 
-These are route selections, not new Code or environment grants. Public visibility, concurrent feature writers and later API/database → frontend → Telegram → MCP consumer work remain separate. Lightweight error recording remains active; systematic learning, experiments and comparative measurement are deferred. Host-native tools remain environment dependencies.
+These observations do not change C3's terminal escalation, approve a design, authorize Code/installation or activate deferred C5/C6 work.
+
+### INTAKE-01 — actual task-ledger and entry-map adoption
+
+The owner supplied a screenshot where an agent treated TASKS as optional and then added it. Canonical C2 PM/durable-layer already require the actual tasks home, with TASKS/AGENTS seeds and a document-home map. The installed1.0 PM/durable entrypoints omit TASKS. The screenshot's actual engine/version/project root is unknown; stale loading is a plausible explanation, not an established cause. Current orient's entry row does not verify actual AGENTS document links.
+
+Status: proposed reconnaissance/acceptance follow-up. Done when a fresh consumer session proves which canonical source it loads, creates or locates the sole current task ledger, links actual key document homes from AGENTS, maintains task status/evidence and resumes from that ledger. Preserve established equivalent filenames; no duplicate register or automatic installation. Route this evidence into the existing onboarding/loader obligations.
+
+### INTAKE-02 — independent exploration before consequential open decisions
+
+The second screenshot requests independent subagent alternatives, superposition and scoring before important decisions. Canonical and installed brainstorm already provide proposal/hold/evaluation/collapse and reasoned scoring. The canonical protocol also permits one participant to perform phases sequentially; independently delegated generation/evaluation is not a universal mandatory trigger in the inspected brainstorm/PM entries.
+
+Status: selected into the approved M30 contract below; this earlier observation is historical. M30 defines which consequential unresolved product/architecture choices require authorized independent generators and separate evaluation; retain alternatives before preference, explicit criteria/score reasons, actual decision authority and rejected/reopening reasons. Preserve settled decisions and routine delegated choices; disclose unavailable independence and respect host limits. Demonstrate actual role separation when required rather than declaring the presence of a skill sufficient. No brainstorm dispatch or methodology change is inferred from the screenshots alone.
+
+## M30 — independent exploration contract (current)
+
+- Existing approval “Давай так сделаем.” retained; later live Claude deferral is not a proof waiver.
+- Delivered: one full neutral owner; actual PM/Architect trigger/load; both carriers/entry pointers; saved HOLD/evaluation/decision links; no new engine/role/phase/schema.
+- Verified: independent QA2 on320-file45ef0b47/input10eea56c;600/146/526ordinary tests without skips, original private checks/three adapters/three maps,42own XML contracts; bounded actual Codex important/trivial/settled cases with true e350 identities and operative byte equivalence.
+- Retained: original BLOCKED/code, I2 failed wave, QA1 BUG_REPORT and actual counted Debug1 fixing historical label/positive trace visibility; no current actionable source defect. M30Debug1/4 is distinct from exhausted C3.
+- **Held/UNFULFILLED:** actual native Claude AC4/ClaudeAC5 under explicit deferral. Terminal BLOCKED/qa; whole Review/assigned Finalize/result acceptance/integration incomplete. No Claude auth/engine retry now.
+- [Result/history](notes/m30-result.md), [approved spec](specs/m30-independent-decisions.md), [operative plan](plans/m30-independent-decisions-i2.md), [input correction](notes/m30-input-correction.md). Four current records plus result note are a separate closure after judged source.
+- Next: required Claude proof only after owner changes deferral, then independent acceptance/Review/Finalize. INTAKE-01 remains separately proposed; C4–C6/trial route/C3 history retained. No install/main merge/publication.

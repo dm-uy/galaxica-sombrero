@@ -45,3 +45,5 @@ Limits:
 - A missing, stub or unread required owner is BLOCKED; a simulated ledger is not native execution.
 - A terminal run is never resumed automatically: continuation needs an owner decision and a linked successor identity, and Debug spend is never reset or refunded.
 - Deferred learning stays deferred; there is no scheduler.
+
+Consequential-open duty: classify actual stakes and routine/settled/forced exclusions, then load full `prompting/brainstorm.md` at the actual adapter-resolved neutral root when its mandatory trigger applies. The authorized root obtains the independent decision packet before dependent readiness; an inner PM/Architect requests it and never delegates. Link actual proposal/HOLD/evaluation/authorized-decision evidence in existing plan/task/DEC homes. Missing required independence leaves that choice held/unproven; unrelated authorized work continues.

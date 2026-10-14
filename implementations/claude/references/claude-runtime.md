@@ -1,6 +1,6 @@
-# Claude Code runtime — methodology-claude 1.0.0
+# Claude Code runtime — methodology-claude 1.1.0
 
-This is the runtime procedure of the native Claude Code package for neutral methodology 1.1.0. It says how Claude Code carries the neutral rules; it restates none of them. Where this file and a neutral owner seem to differ, the neutral owner wins and the difference is a package defect.
+This is the runtime procedure of the native Claude Code package for neutral methodology 2.0.0. It says how Claude Code carries the neutral rules; it restates none of them. Where this file and a neutral owner seem to differ, the neutral owner wins and the difference is a package defect.
 
 ## 1. Profile and binding
 
@@ -86,3 +86,9 @@ With hooks disabled (for example `--bare`) the root performs Orient manually and
 Dialog with the owner is Russian unless the project's or owner's instructions select otherwise; project artifacts are English unless the target's conventions say otherwise. The target's files govern continuity: the five records and notes support compaction and resume. Schedules, monitors, external memory or tracker writes need an explicit matching request. Deferred learning and comparative measurement are not activated by this package.
 
 Not supplied: detached or cached installation, automatic discovery, publication, global configuration changes, a hard sandbox for judges' Bash, and any claim about model effectiveness. Package SUCCESS on a run never authorizes merge, install or publication.
+
+## Consequential decision packet
+
+At the consequential-open trigger load full `prompting/brainstorm.md` through the current adapter binding. The authorized root coordinates its independent packet using the actual native collaboration mechanism; inner roles request it. Carry existing evidence references in the brief/plan/DEC/task, never a new canonical field or phase. Missing required proof holds dependent readiness; preserve reasoned routine/settled/forced exclusions and actual actor/source limits.
+
+Before the opt-in Workflow starts any dependent consequential choice, the root prepares and links the owner-required decision packet through existing inputs. The unchanged workflow cannot manufacture independence or new fields; if the packet is unavailable, use the existing blocked/held route rather than delegate inside Architect.

@@ -33,3 +33,9 @@ Use the complete co-located package under `implementations/codex/` or `implement
 
 - **REPO-103** MUST: Preserve the actual task grant, foreign/uncommitted work and held/failed history. One writer owns each path. Integration-for-review/local commit is authorized; main merge, publication, external installation and deferred code-layer continuation require their matching owner decisions.
 - **REPO-104** MUST: Preserve established software roles, flow/gates, schema/registries and existing execution checks unless an exact task authorizes changing them. At closure retain evidence/limits, reconcile current state and rewrite HANDOFF. Use relevant [experience](process/learning.md), not a mandatory whole-history read.
+
+<!-- anchor: repository.entry.decisions -->
+
+## Important open decisions
+
+- **REPO-105** MUST: Classify actual consequential stakes and load the full [brainstorm owner](prompting/brainstorm.md#prompting.brainstorm.consequential) before an important open product/architecture decision. The authorized root obtains the independent packet; inner roles request it. Record routine/settled/forced exclusions with their reason and link actual decision evidence from existing project homes. Missing required independence holds that choice; this pointer grants no new role, action or installation.

@@ -552,7 +552,7 @@ def test_package_binding_identity_and_layout_refusals(tmp_path, caplog, damage):
 # region FUNC_test_layout_driven_count_and_identity [DOMAIN(9): NativeMethodology; CONCEPT(10): PackageIdentity, LayoutDrivenCount; TECH(7): pytest, json]
 ## @purpose Verify the positive side of the binding: the run contract is methodology-claude/1.0.0 at schema 2, hook-config and workflow member kinds are accepted, and the package member count follows the declared layout instead of a literal.
 ## @uses run_state.initialize, test_run_state.build_tree, test_run_state.edit_json, test_run_state.expose
-## @io Input: tmp_path owned Path, caplog LogCaptureFixture. The test removes one declared example member from both the layout and the owned tree, then initializes. Output: None after asserting the contract version, schema 2, a package row count equal to the shortened layout, the dropped member absent from the rows, the layout containing hook-config and workflow kinds, 71 neutral rows, neutral version 1.1.0, and the six core names. Side effects: owned copy only. Errors: AssertionError. Example: a layout shorter by one member binds with one row fewer and no error record.
+## @io Input: tmp_path owned Path, caplog LogCaptureFixture. The test removes one declared example member from both the layout and the owned tree, then initializes. Output: None after asserting the contract version, schema 2, a package row count equal to the shortened layout, the dropped member absent from the rows, the layout containing hook-config and workflow kinds, 71 neutral rows, neutral version 2.0.0, and the six core names. Side effects: owned copy only. Errors: AssertionError. Example: a layout shorter by one member binds with one row fewer and no error record.
 ## @complexity 5
 def test_layout_driven_count_and_identity(tmp_path, caplog):
     logger.info('[IMP:4][test_layout_driven_count_and_identity][START] owned behavioral verification')
@@ -571,7 +571,7 @@ def test_layout_driven_count_and_identity(tmp_path, caplog):
     assert state['schema_version'] == 2 and state['contract_version'] == 'methodology-claude/1.0.0'
     assert len(rows) == len(layout['files']) and dropped not in {row['path'] for row in rows}
     assert {'hook-config', 'workflow'} <= kinds
-    assert len(state['bindings']['neutral']) == 71 and state['bindings']['neutral_version'] == '1.1.0'
+    assert len(state['bindings']['neutral']) == 71 and state['bindings']['neutral_version'] == '2.0.0'
     assert state['bindings']['core'] == list(run_state.CORE) and path.is_file()
     logger.info('[IMP:9][test_layout_driven_count_and_identity][RESULT] behavioral assertions completed')
     # END_BLOCK_BusinessLogic

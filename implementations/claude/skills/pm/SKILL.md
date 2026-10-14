@@ -27,3 +27,5 @@ Limits:
 - Deferred learning and production log triage need a matching grant.
 - No merge, publication or installation follows from this skill, and an inner role never delegates or commits.
 - A missing, stub or unread required owner is BLOCKED.
+
+Consequential-open duty: classify actual stakes and routine/settled/forced exclusions, then load full `prompting/brainstorm.md` at the actual adapter-resolved neutral root when its mandatory trigger applies. The authorized root obtains the independent decision packet before dependent readiness; an inner PM/Architect requests it and never delegates. Link actual proposal/HOLD/evaluation/authorized-decision evidence in existing plan/task/DEC homes. Missing required independence leaves that choice held/unproven; unrelated authorized work continues.

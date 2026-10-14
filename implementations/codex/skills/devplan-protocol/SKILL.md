@@ -16,3 +16,5 @@ Read complete owners and original approved spec/RECON. Stamp actual neutral METH
 Return the actual scoped artifact/evidence and limitations to the assigning parent. A command, template, hash or producer SUCCESS never certifies execution, independence or concrete-result acceptance.
 
 Actual helper: `scripts/visual_gate_lint.py PLAN --spec SPEC`. Supported suffixes: _py/_ts/_tsx/_js/_jsx/_CLASS/_FUNC/_METHOD; zero recognized nodes exit2, findings exit1, supported finite clean result exit0. Read all unsupported/mixed carriers manually and disclose extent; do not rename them to manufacture coverage.
+
+Consequential-open duty: classify actual stakes and routine/settled/forced exclusions, then load full `prompting/brainstorm.md` at the actual adapter-resolved neutral root when its mandatory trigger applies. The authorized root obtains the independent decision packet before dependent readiness; an inner PM/Architect requests it and never delegates. Link actual proposal/HOLD/evaluation/authorized-decision evidence in existing plan/task/DEC homes. Missing required independence leaves that choice held/unproven; unrelated authorized work continues.

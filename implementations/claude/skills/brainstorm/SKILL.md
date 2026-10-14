@@ -14,11 +14,9 @@ Owners — read in full before acting:
 - `${CLAUDE_PLUGIN_ROOT}/references/claude-runtime.md`
 
 Route:
-1. Check that the choice is open and consequential. Look for a settled answer first (the specification gate record, decision records, the HANDOFF owner block, earlier answers in this session); a settled choice is not reopened and a trivial one gets no ceremony.
-2. Propose before you select. For a broad fork write five distinct approaches: conventional, unconventional and intentionally wild. For a bounded choice list the viable alternatives only, without padding.
-3. For each alternative state its essence and two side effects first, then score feasibility, impact and risk from 1 to 10 with a reason and the uncertainty. Scores are estimates, not measurements.
-4. Hold the set, then collapse on the owner's criteria or on the delegated scope. When the owner owns the choice, ask with AskUserQuestion, put the recommended option first, and record the answer verbatim with who, when and the artifact it covers.
-5. Record the chosen and deferred options, the reason, and the evidence that would reopen the choice, in the decision's existing home.
+1. Load the complete `prompting/brainstorm.md` owner from the actual neutral root and classify actual consequential stakes and exclusions, even without an explicit brainstorm request.
+2. At its mandatory trigger the authorized root uses the actual Agent mechanism for the independent packet; an inner role requests the parent packet and never delegates. Follow the owner's full actor/HOLD/evaluation/authority procedure, without a duplicated local protocol.
+3. Link actual current-source/context/tool/proposal/HOLD/evaluation/authorized-decision evidence from existing project homes. Missing required mechanism or permission holds the dependent choice; routine/settled/forced choices retain their exclusion reason.
 
 Limits:
 - Proposal and selection stay separate; no selection is implemented here.

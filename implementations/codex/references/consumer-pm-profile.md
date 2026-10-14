@@ -1,6 +1,6 @@
 # Native consumer PM profile 1.0.0
 
-Identity: `methodology-consumer-pm/1.0.0`; opt-in only, source package2.2.0 over neutral1.1.0. Wire methodology-codex/2.0.0/schema2 remains unchanged. This carrier composes existing full owners; it creates neither consumer consent nor a replacement constitution.
+Identity: `methodology-consumer-pm/1.0.0`; opt-in only, source package2.4.0 over neutral2.0.0. Wire methodology-codex/2.0.0/schema2 remains unchanged. This carrier composes existing full owners; it creates neither consumer consent nor a replacement constitution.
 
 ## Adoption and homes
 

@@ -16,3 +16,5 @@ Read project entry plus VISION/ROADMAP/TASKS/HANDOFF in actual homes, relevant d
 Return the actual scoped artifact/evidence and limitations to the assigning parent. A command, template, hash or producer SUCCESS never certifies execution, independence or concrete-result acceptance.
 
 Explicit selected consumer profile routes onboarding to pm-bootstrap, proposed packet to pm-plan-batch, exact approved packet to pm-run-batch and closure to pm-handoff. Read full references/consumer-pm-profile.md; ordinary short work stays bounded.
+
+Consequential-open duty: classify actual stakes and routine/settled/forced exclusions, then load full `prompting/brainstorm.md` at the actual adapter-resolved neutral root when its mandatory trigger applies. The authorized root obtains the independent decision packet before dependent readiness; an inner PM/Architect requests it and never delegates. Link actual proposal/HOLD/evaluation/authorized-decision evidence in existing plan/task/DEC homes. Missing required independence leaves that choice held/unproven; unrelated authorized work continues.

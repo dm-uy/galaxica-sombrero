@@ -10,7 +10,7 @@ status: draft
 
 ## Decision history
 
-- **DECISION-101** MUST: Retain consequential choices with question/context, meaningful alternatives, criteria/reasons, chosen option, actual owner/consent provenance, date and affected scope/documents. Unresolved choices retain stakes, reversibility, options, evidence/dependencies and decision owner.
+- **DECISION-101** MUST: Retain consequential choices with question/context, meaningful alternatives, criteria/reasons, chosen option, actual owner/consent provenance, date and affected scope/documents. Unresolved choices retain stakes, reversibility, options, evidence/dependencies and decision owner. At the consequential-open trigger load the full [brainstorm owner](../prompting/brainstorm.md#prompting.brainstorm.consequential) and link actual independent proposals, persisted HOLD and separate evaluation to the authorized decision; this record cannot substitute for those events.
 - **DECISION-102** MUST: Preserve accepted decision text. A changed choice is an explicit amendment or supersession with links; new evidence does not silently rewrite authority.
 - **DECISION-103** MUST: Reuse applicable prior consent, avoid reopening settled choices and distinguish grant from separately reserved result/release decisions. Involve the owner for real ungranted choices, not ordinary in-scope work.
 - **DECISION-104** MAY: Keep a small unresolved choice with its task; follow an existing required question register when declared. Record the eventual resolution as a binding decision when it constrains later work.

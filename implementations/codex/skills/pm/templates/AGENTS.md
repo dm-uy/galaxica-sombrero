@@ -17,3 +17,7 @@ Read complete current six-core/assigned role/runtime/owners; full new rich modul
 ## Closure
 
 Reconcile TASKS/statuses/evidence/decisions and route; rewrite four-heading HANDOFF (Blocked on the owner, State, Queue, Traps), preserve failures/held work and run orient --check. Fix only granted defects; otherwise name owning blocker. Commit/integration only under matching authority. Final message: Blocked on the owner / Changed / Found; unconfirmed claims name source/access limit. Generated actors/timestamps from actual clock, never reusable fixture facts. External lessons stay local candidate notes; C4 comparison unavailable if required, routine learning dormant.
+
+## Important open decisions
+
+Classify consequential stakes/exclusions and load full prompting/brainstorm.md from the actual adopted neutral root at the mandatory consequential-open trigger. Authorized root obtains the independent packet; inner roles request it. Link actual proposal/HOLD/evaluation/authorized-decision evidence from existing homes. Missing required independence holds only that choice; routine/settled/forced reasons remain bounded.
