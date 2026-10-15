@@ -22,17 +22,17 @@ One canonical checkout is the development source; preparation repositories are a
 | M29/C5–C6 | Autonomy/resume/isolation proof and actual source-loader handover owed/held after matching decisions. |
 | M30 | Source integrated through PR6; BLOCKED/qa Debug1/4 retained; native Claude required/deferred, Review/Finalize/full acceptance pending. |
 | M31 | Lightweight PM merged, released and installed; actual completion is in the decision receipt below. |
-| M32 | Current: findings retained; T1 source candidate and T2/T3 bounded checks complete locally; optional practices retained within observed scope. Owner accepted and local main integration completed; remote PR delivery remains unfulfilled, release/install separate. |
+| M32 | Current: findings retained; T1 source candidate and T2/T3 bounded checks complete locally; optional practices retained within observed scope. Owner accepted and local main integration completed; prompting0.6.0 installed locally by subsequent explicit grant; remote PR delivery/release remain unfulfilled. |
 | Public visibility | Held; repository remains private. |
 
 ## M32 — incremental improvement route
 
 The owner selected this route on 2026-10-15: record all book-derived findings, verify incrementally and adopt useful results. [Findings, original authority, source identities and limits](notes/m32-book-findings.md); runnable work stays in [TASKS](TASKS.md).
 
-1. **Checked locally — carrier consistency:** source candidate53b62f0 reconciles the carriers at draft0.6.0; independent document review, structural checks and actual authoring proof support retaining it for review. Owner-approved local source merge is complete; remote delivery/release/install and target readiness remain separate.
+1. **Checked locally — carrier consistency:** source candidate53b62f0 reconciles the carriers at draft0.6.0; independent document review, structural checks and actual authoring proof support retaining it for review. Owner-approved local source merge is complete; prompting0.6.0 subsequently installed locally; remote delivery/release and target readiness remain separate.
 2. **Checked locally — document extraction:** retained the optional recipe after seven synthetic sources, simulated truncation/staleness and actual bounded book extraction. No new mandatory carrier/helper.
 3. **Checked locally — fresh-reader usefulness:** reader recovered authority/holds, caught a synthetic contract contradiction and stale M31 wording; narrow record corrections made. This is a read-only sample, not the full consumer trial.
-4. **Integrated locally — remote delivery held:** the owner accepted the concrete package and both local main merges completed. Canonical PR delivery is still unfulfilled because API/browser access is unavailable; source push, release and installation are separately bounded actions.
+4. **Integrated locally — remote delivery held:** the owner accepted the concrete package and both local main merges completed. Canonical PR delivery is still unfulfilled because API/browser access is unavailable; prompting installation was subsequently authorized/completed locally; source push and remote release remain separately bounded actions.
 
 This is the dependency view for M32 only; older checkpoint rows retain their original states and evidence:
 

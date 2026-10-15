@@ -1,4 +1,4 @@
-# Current: M32 accepted and integrated locally; remote delivery held
+# Current: M32 integrated and prompting update installed locally; remote delivery held
 
 ## Integrated results and authority
 
@@ -12,12 +12,12 @@ T1 reconciles the prompting carriers and metadata. T2 retained the [optional rea
 
 The canonical Git remote is readable through configured Git transport, but GitHub CLI cannot resolve the private repository and the built-in browser has no signed-in GitHub session. Canonical PR delivery remains owed/unfulfilled; local integration is not a remote merge. No remote write or PR creation occurred. Source no-push-without-explicit-command direction remains in force.
 
-Installation was explicitly kept separate. Source0.6.0 is integrated locally; cached prompting installations remain Codex0.5.0 and Claude0.4.0. The Codex installed entry retains its old digest; both cached entry paths resolve outside source. No installed files or global settings were changed. On a matching delivery/installation request, resolve its actual account, target and supported update path, preserve prior installations and verify the resulting binding. Do not patch caches as maintained source or install merely because merge was approved.
+The owner subsequently authorized local installation: “Устанавливай обновление локально.” Native Codex plugin add and Claude user-scope plugin update installed/enabled prompting-methodology0.6.0 from the checked local source. Installed payload verification and backup receipt are recorded in [findings](notes/m32-book-findings.md#local-installation--2026-10-15). Restart the affected clients/start a fresh session to refresh their catalogs; this already-running conversation is not evidence of a refreshed catalog. No target classifier eval or remote release was performed. Previous copies and configuration backups are retained privately; no hand edits to installed payloads were used.
 
-No further source implementation is required for this M32 packet. Retain both branches and private evidence until the outstanding delivery/installation decisions and access are resolved. Other checkpoint work requires its own existing grant; this closure does not revive deferred/exhausted work.
+No further source implementation is required for this M32 packet. Retain both branches and private evidence until outstanding remote delivery and access are resolved. Other checkpoint work requires its own existing grant; this closure does not revive deferred/exhausted work.
 
 ## Evidence and retained limits
 
 Raw artifacts and readbacks remain in canonical common-Git private `methodology-evidence/M32-20261015/manifest.json`, with final checks/identities under its closure directory and original scratch provenance in findings. Both original privacy self checks and whitespace checks passed before the result decision and again on this integration receipt (both self checks exit0). No scanner/list was changed. Earlier failures and corrective history remain in findings and Git.
 
-M31 remains merged/released/installed as neutral3.0.0 / Codex3.0.0 / Claude2.0.0; [receipt](notes/pm-lightweight-direction.md). M30 live native Claude behavioral acceptance remains deferred. C3 remains exhausted/unaccepted/unmerged, with no counter reset or continuation. C4–C6 proof remains separately scoped, and the full API/database trial still requires accepted minimal safeguards. No public visibility change, release, broad learning/measurement program or full consumer trial occurred here.
+M31 remains merged/released/installed as neutral3.0.0 / Codex3.0.0 / Claude2.0.0; [receipt](notes/pm-lightweight-direction.md). M30 live native Claude behavioral acceptance remains deferred. C3 remains exhausted/unaccepted/unmerged, with no counter reset or continuation. C4–C6 proof remains separately scoped, and the full API/database trial still requires accepted minimal safeguards. No public visibility change, remote release, broad learning/measurement program or full consumer trial occurred here.

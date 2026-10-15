@@ -136,3 +136,14 @@ Source main's changed-file digests match the retained T1 static receipt. The ins
 M32's local integration decision is settled and implemented; do not ask for it again. Remote delivery and installation are separate next actions with their existing scope/access requirements. The authored classifier still has no target-run proof, and C3/M30/C4–C6 limitations remain unchanged.
 
 Integration-receipt checks: both unchanged original deny-list self checks returned exit0 again; diff whitespace check passed. Their raw JSON outputs are retained with the private integration receipt.
+
+
+## Local installation — 2026-10-15
+
+The owner explicitly requested: “Устанавливай обновление локально.” This supersedes the earlier installation hold for the accepted prompting update only. Native Codex plugin-add and Claude user-scope plugin-update commands selected the existing local marketplace entry and succeeded, reporting0.6.0. Subsequent plugin-list readback reports the plugin installed/enabled in both clients, with independent0.6.0 cache paths. Source remains reviewed commit53b62f0. No installed payload was edited by hand; no other plugin update or remote write was requested.
+
+Pre-install configuration/registry files and prior prompting cache copies were backed up under common-Git private `methodology-evidence/M32-20261015/installation/before/`; the installation receipt retains actual hashes and verification. Those backups are private operational evidence, not publication content. Restart the affected clients/start a fresh session to refresh their catalogs. This running conversation is not a new-catalog probe, and successful installation does not establish target classifier behavior or waive any prior proof limitation. Remote PR delivery remains unfulfilled; C3/M30/C4–C6 holds are unchanged.
+
+Installation check history: the initial primary privacy scan caught a private marketplace name in the newly recorded command selectors; those selectors were generalized in tracked prose and retained only in the private operational receipt. The unchanged transfer scan passed. No scanner or deny list was changed.
+
+Final installation verification: independent readback found both clients enabled at0.6.0, with all16 payload files in each cache byte-identical to source. Codex configuration matches its backup byte-for-byte; Claude settings and marketplace registry are unchanged, and only the prompting entry changed in its installed registry. Both prior-version payload backups remain intact; native Codex installation removed its old cache, while the old Claude cache remains. Final primary privacy check passes; transfer check and whitespace check pass.
