@@ -6,6 +6,8 @@ A harness-neutral methodology for managing projects and delivering software with
 
 Version: `3.0.1` · License: [MIT](LICENSE)
 
+**Installing for personal use in Codex? Install the `methodology-codex` plugin.** Start with the [new-machine installation steps](implementations/codex/README.md#personal-plugin-installation). Cloning this repository alone does not install it.
+
 [Get started](#get-started) · [How it works](#how-it-works) · [Project memory](#project-memory) · [Validation](#validation) · [Maintainers](#maintainers)
 
 > **Preview status.** The methodology and its adaptations are under development. Source checks and local loading have been exercised; full behavioral parity and operational effectiveness remain unproven. See [scope and evidence](#scope-and-evidence) before relying on a capability.
@@ -88,7 +90,13 @@ Keep a **complete checkout**: both native packages depend on the shared rules be
 
 ### Codex
 
-Use the source-bound [Codex package](implementations/codex/README.md). To work directly from a checkout, ask Codex to read its `implementations/codex/skills/pm/SKILL.md` and required references, naming the actual target project separately. An installed release must carry the complete repository snapshot, with discovery pointing to the nested skills; copying only the skill folder is unsupported.
+For persistent personal use, [install the `methodology-codex` plugin](implementations/codex/README.md#personal-plugin-installation). The instructions cover a complete snapshot, local marketplace registration, installation and discovery checks.
+
+You can give a Codex agent this request:
+
+> Install this repository as my personal Codex plugin, `methodology-codex`, following `implementations/codex/README.md#personal-plugin-installation`. Preserve existing plugins and configuration, keep the complete repository snapshot, and verify that the installed skills are available in a fresh session. Report the installed version and source. The target projects where I will use it are separate from this methodology repository.
+
+For a one-session source trial instead, ask Codex to read the checkout's `implementations/codex/skills/pm/SKILL.md` and required references, naming the actual target project separately. This does not install the plugin. Copying only the skill folder or installing only `implementations/codex/` loses required shared rules and is unsupported.
 
 | Starting point | Entry |
 |---|---|

@@ -1,5 +1,13 @@
 # Current maintainer tasks
 
+## M35 — new-machine Codex installation instructions (current)
+
+Owner reported that a fresh-machine agent did not infer personal plugin installation until prompted. Root prepared a bounded documentation correction in `codex/m35-install-docs`; [result and checks](notes/m35-install-docs.md). No new installer or package profile, live user configuration change or consumer onboarding.
+
+| Task | State | Finish / next action |
+|---|---|---|
+| M35-T1 — explicit personal plugin entry | Checked locally | README/AGENTS installation route, reproducible snapshot and native installation instructions independently exercised in an isolated temporary Codex profile. Main integration/push not authorized for this packet. |
+
 ## M34 — README presentation (current)
 
 Owner-requested reader-oriented README and diagrams; [result, review history and limits](notes/m34-readme.md). Root owns README/current records only; no installation or publication.

@@ -8,6 +8,8 @@ status: draft
 
 This entry applies when maintaining this repository. Shared PM subjects describe consumer projects; these repository-local instructions are not a harness role assignment.
 
+If the owner's task is to download, install or set up this methodology for personal Codex use, start with [personal plugin installation](implementations/codex/README.md#personal-plugin-installation). The intended result is the installed `methodology-codex` plugin with verified skill discovery. A clone or manual reading of SKILL.md is not installation. The maintainer records below describe development of this repository; they are not the installer's task queue. Preserve the owner's actual installation scope and existing configuration.
+
 <!-- anchor: repository.entry.current -->
 
 ## Maintainer startup
