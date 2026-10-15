@@ -1,12 +1,12 @@
 # Current maintainer tasks
 
-## M36 — canonical session handoff synchronization (current)
+## M36 — canonical session handoff synchronization (completed)
 
 Owner explicitly requested synchronizing Sombrero meta-documents and retaining important conclusions from this chat, history and real limitations. [Scope, provenance, carryover and delivery state](notes/m36-session-handoff.md). Documentation only; no framework code, installation, donor adoption or proof-deferral change.
 
 | Task | State | Finish / next action |
 |---|---|---|
-| M36-T1 — current records and self-contained carryover | Checked on isolated branch; result integration pending | Current statuses reconciled; previous baton preserved verbatim; source/claim and fresh-reader review passed. Local links/anchors, whitespace and shipped conform self passed with a task-local public-hygiene deny list. Integrate the reviewed result only under the matching result decision. |
+| M36-T1 — current records and self-contained carryover | Integrated and pushed | Owner explicitly approved main integration/push. Checked source5ad7961 was fast-forwarded into canonical main and delivered; remote readback matched. This factual record closure follows under the same grant. Links, history preservation, source/fresh-reader review, whitespace and bounded conform checks passed; [receipt](notes/m36-session-handoff.md). |
 | M36-T2 — choose the next bounded framework task | Awaiting owner-selected scope | In the next session read AGENTS and current records, then the M36 note. Resume a matching approved scope or ask only for the next genuinely missing scope; no automatic C3 Code, Claude retry or donor implementation. |
 
 ## M35 — new-machine Codex installation instructions (completed)

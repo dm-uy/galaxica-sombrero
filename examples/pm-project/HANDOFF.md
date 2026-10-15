@@ -2,7 +2,7 @@
 
 ## Owner decisions
 
-The owner authorized this record synchronization and transfer of important chat conclusions. The isolated candidate passed bounded checks and independent source/fresh-reader review. Automatic action review refused both external push and local canonical-main integration because distinct matching decisions were missing; neither occurred; delivery status is in the [M36 continuation record](notes/m36-session-handoff.md). No next framework implementation/specification is newly approved. M30 native Claude remains explicitly deferred; C3 remains exhausted.
+The owner explicitly approved local main integration and GitHub push after reviewing the prepared result. Checked M36 source `5ad7961` was fast-forwarded into canonical main and pushed; remote main readback matched. This final record closure follows under the same delivery grant; see the [M36 receipt](notes/m36-session-handoff.md). No M36 merge/push decision remains owed. No next framework implementation/specification is newly approved. M30 native Claude remains explicitly deferred; C3 remains exhausted.
 
 ## Current state
 
@@ -12,7 +12,7 @@ The [M36 note](notes/m36-session-handoff.md) retains the previous baton, audit o
 
 ## Next action
 
-Read [TASKS](TASKS.md) and the [M36 note](notes/m36-session-handoff.md). Finish M36's concrete-result integration, then continue from this canonical repository with the owner's next bounded task. If no matching task grant exists, obtain that scope before specification/Code; do not repeat completed M35 delivery or start a donor-driven rewrite.
+Start the new session in this canonical repository. Read root AGENTS, then this HANDOFF, VISION, ROADMAP and [TASKS](TASKS.md); the [M36 note](notes/m36-session-handoff.md) contains the retained chat conclusions. M36 synchronization is complete; continue with the owner's next bounded task. If no matching task grant exists, obtain that scope before specification/Code; do not repeat completed M35 delivery or start a donor-driven rewrite.
 
 ## Retained traps
 

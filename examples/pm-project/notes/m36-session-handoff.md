@@ -48,7 +48,15 @@ Prepared and independently checked: exactly HANDOFF, VISION, ROADMAP, TASKS and 
 
 An independent read-only source reviewer checked the current links/anchors, cited mechanisms, manifest versions, owner steering, verbatim preservation of the previous baton and cold-reader recovery. The candidate preserves C3/M30/history and introduces no implementation/adoption grant. The worker made no file/Git writes. A final root readback covers only the subsequent factual check-status wording.
 
-Concrete-result integration remains pending. Source and initial check-status wording are committed as `1019081` on `codex/m36-session-handoff`; this later closure records the actual delivery limit. Automatic action review refused the attempted GitHub branch push and then the attempted local canonical-main fast-forward because matching publication/integration decisions were not explicit. Both operations were refused before execution: canonical main and remote main remain at the starting identity; no PR exists, and there was no installation. No workaround or retry was performed. The owner must explicitly authorize the reviewed result's local main integration and, separately or together, its GitHub delivery. A local commit does not by itself authorize main merge or a new release. Do not claim canonical main contains M36 until actual integration is checked and recorded.
+### Integration and delivery receipt
+
+Initial source/check-status work is retained at `1019081`, with the original blocked-delivery closure at `5ad7961`. At that time automatic action review refused the attempted GitHub branch push and local main fast-forward because matching publication/integration decisions were not explicit; both were refused before execution. This history is retained, not erased or treated as an executed push/merge.
+
+The owner then explicitly instructed: “Да, вливай ветку в локальный main Sombrero и пушь на GitHub. Проверь после отправки, что всё на месте и можно открывать новую сессию.” This supplies the matching local integration and GitHub delivery decisions; no further approval for this same bounded result is owed.
+
+Root checked canonical main was still clean at `252a459` and remote main matched. Native `git merge --ff-only codex/m36-session-handoff` integrated `5ad79611ae2abfcb5d78601bf55c38acb7bc6f4e`; native `git push origin main` succeeded, and subsequent `git ls-remote origin refs/heads/main` returned that exact identity. No force-push, new PR, installed-package update or framework source change occurred. This factual record closure accompanies the same authorized delivery; final remote/readback checks are required before reporting the transfer complete.
+
+M36 is complete as a record-synchronization outcome; M36-T2 remains the next owner-selected bounded task, not an implementation grant. The new session can recover the current goal, completed delivery, retained research conclusions and real constraints through root AGENTS and the four current records without the archival chat. Missing next task scope is the only new-task decision, not a reason to repeat M36 delivery or reopen C3/Claude work.
 
 ## Previous baton — historical, superseded by M36
 

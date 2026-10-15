@@ -1,6 +1,6 @@
 # Methodology project route
 
-## Current: M36 session handoff synchronization; earlier proof gaps retained
+## Current: M36 synchronized and delivered; next bounded task awaits scope
 
 One canonical checkout is the development source; preparation repositories are archival. Canonical main includes M30 source through owner-approved PR6 and the later M31/M33 updates. Current source versions are neutral3.0.1/Codex3.0.1/Claude2.0.1; accepted C2/bafec417 is the historical foundation, not the current version. C3 is not ready for merge. [Current C3 history/result](notes/m28-c3-result.md).
 
@@ -26,7 +26,7 @@ One canonical checkout is the development source; preparation repositories are a
 | M33 | Early entry duties and additive bootstrap checked; synthetic/source-review limits retained. Owner-authorized local merge/install and canonical remote delivery complete: neutral/Codex3.0.1, Claude2.0.1; actual discovery/binding evidence retained. |
 | M34 | Checked locally: reader-oriented README and two diagrams, preserved contracts and local visual checks. Owner-approved local integration and canonical main push complete. The repository is now public; that does not create a new packaged release or installed update. |
 | M35 | New-machine installation entry and complete-snapshot instructions checked locally, including isolated native CLI installation. Owner-requested main integration/push complete with remote readback; actual other-machine installation remains separate. |
-| M36 | Owner-authorized record synchronization and transfer of important chat conclusions; [scope, evidence, historical baton and delivery state](notes/m36-session-handoff.md). No framework implementation or donor adoption. |
+| M36 | Completed: checked record synchronization and self-contained chat conclusions integrated into canonical main and pushed under explicit owner approval; [receipt, evidence and preserved baton](notes/m36-session-handoff.md). Next bounded task awaits owner-selected scope. No framework implementation or donor adoption. |
 | Public visibility | Public, confirmed by GitHub readback on 2026-10-15. Earlier private-release/publication holds remain historical; future releases still need their own scope. |
 
 Canonical delivery update2026-10-15: owner-requested direct push delivered the canonical M32/M33/M34 commits. This supersedes earlier canonical-PR delivery holds below; no PR was created. Separate prompting-source upstream/release remains outside that push. Repository visibility was separately observed as public on 2026-10-15; see [M36](notes/m36-session-handoff.md).
