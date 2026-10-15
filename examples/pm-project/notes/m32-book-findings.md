@@ -120,3 +120,19 @@ Full pilot inputs and unedited readbacks remain in session-owned local scratch `
 Final record checks after the narrow M31 cleanup: both unchanged original deny-list self checks exit0, and diff whitespace check passes. Earlier failures remain recorded above; neither the scanner nor its populations/lists were weakened. Original canonical and prompting source checkouts remain clean. Independent final record/claim review completed without substantive findings; source identities, pilot results, current route, local links and private archive integrity were verified within the stated limits.
 
 Durable private evidence: original authored artifacts, fixtures, raw readbacks and receipts are copied byte-for-byte under the canonical common Git directory at `methodology-evidence/M32-20261015/`; `manifest.json` binds their paths, sizes and SHA256 values. The temporary scratch names above remain their original provenance. The private archive is outside the tracked publication set and is not a software run-state ledger.
+
+## Owner integration decision — 2026-10-15
+
+After the concrete local package (source candidate53b62f0 and records14191a0), checks and remaining GitHub-access limitation were presented, the owner answered “Разрешаю.” to the request to proceed with merging the prepared branches. This settles the integration decision for those results; do not ask it again. Execute local main integration in both repositories, preserving history and existing work. Installation remains a separate action, as stated in the question and acknowledged to the owner.
+
+Access observation at this decision: ordinary configured Git transport can read the canonical remote main, while GitHub CLI cannot resolve the private repository even without process token overrides. The built-in browser has no authenticated GitHub session. Do not extract credentials, change accounts, bypass controls or claim a PR. The owner approved merging after disclosure of this limitation; local merges are the available bounded action. Canonical PR delivery remains owed/unfulfilled; source no-push-without-explicit-command remains in force.
+
+### Actual local integration
+
+The authorized fast-forward merges completed without conflicts: source main moved from `6aa66c26eb9a5790de777edc050dc71ef7b0112a` to checked candidate `53b62f0fc9332e53daa3abf432f80b3ed3a17a33`; canonical main moved from `8d98a5859cbaab73b81bfc2f87b0b798bc0c4101` to accepted records packet `14191a078dd1719c8ea862d1dd5e5c39af0e61e2`. Both worktrees were clean after those merges, and their trees matched the respective reviewed branch tips. This later receipt is prepared on the existing records branch and fast-forwarded into canonical main as a separate closure commit; it changes only current state and evidence pointers.
+
+Source main's changed-file digests match the retained T1 static receipt. The installed Codex entry still has its original baseline digest and resolves outside the source checkout. The Claude installed entry also resolves to its independent cached path; its installed registry still reports0.4.0, while the Codex prompting cache remains0.5.0. Source0.6.0 has not been installed. No source push, remote main update, PR creation, release or global configuration change occurred. Canonical remote PR delivery remains unfulfilled under its repository procedure, despite completed local integration; do not silently call this a remote merge.
+
+M32's local integration decision is settled and implemented; do not ask for it again. Remote delivery and installation are separate next actions with their existing scope/access requirements. The authored classifier still has no target-run proof, and C3/M30/C4–C6 limitations remain unchanged.
+
+Integration-receipt checks: both unchanged original deny-list self checks returned exit0 again; diff whitespace check passed. Their raw JSON outputs are retained with the private integration receipt.
