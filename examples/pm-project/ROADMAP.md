@@ -1,8 +1,8 @@
 # Methodology project route
 
-## Current: M35 installation entry merged and pushed; earlier proof gaps retained
+## Current: M36 session handoff synchronization; earlier proof gaps retained
 
-One canonical checkout is the development source; preparation repositories are archival. Canonical main now includes M30 source through owner-approved PR6, neutral2.0/Codex2.4/Claude1.1; accepted C2/bafec417 is its foundation. C3 is not ready for merge. [Current C3 history/result](notes/m28-c3-result.md).
+One canonical checkout is the development source; preparation repositories are archival. Canonical main includes M30 source through owner-approved PR6 and the later M31/M33 updates. Current source versions are neutral3.0.1/Codex3.0.1/Claude2.0.1; accepted C2/bafec417 is the historical foundation, not the current version. C3 is not ready for merge. [Current C3 history/result](notes/m28-c3-result.md).
 
 | Checkpoint | Current disposition |
 |---|---|
@@ -22,13 +22,14 @@ One canonical checkout is the development source; preparation repositories are a
 | M29/C5–C6 | Autonomy/resume/isolation proof and actual source-loader handover owed/held after matching decisions. |
 | M30 | Source integrated through PR6; BLOCKED/qa Debug1/4 retained; native Claude required/deferred, Review/Finalize/full acceptance pending. |
 | M31 | Lightweight PM merged, released and installed; actual completion is in the decision receipt below. |
-| M32 | Current: findings retained; T1 source candidate and T2/T3 bounded checks complete locally; optional practices retained within observed scope. Owner accepted and local main integration completed; prompting0.6.0 installed locally by subsequent explicit grant; remote PR delivery/release remain unfulfilled. |
-| M33 | Checked locally: early entry duties and additive bootstrap; synthetic forward/preservation checks and source review retained. Owner-authorized local merge/install complete: neutral/Codex3.0.1, Claude2.0.1; actual discovery/binding evidence retained. Remote delivery remains unfulfilled. |
-| M34 | Checked locally: reader-oriented README and two diagrams, preserved contracts and local visual checks. Owner-approved local integration and canonical main push complete; public release remains held. |
+| M32 | Findings retained; T1 and bounded T2/T3 checks complete, with optional practices limited to observed scope. Owner-accepted local integration and canonical remote delivery are complete. Prompting0.6.0 is installed locally; its separate source upstream/release remains undelivered. |
+| M33 | Early entry duties and additive bootstrap checked; synthetic/source-review limits retained. Owner-authorized local merge/install and canonical remote delivery complete: neutral/Codex3.0.1, Claude2.0.1; actual discovery/binding evidence retained. |
+| M34 | Checked locally: reader-oriented README and two diagrams, preserved contracts and local visual checks. Owner-approved local integration and canonical main push complete. The repository is now public; that does not create a new packaged release or installed update. |
 | M35 | New-machine installation entry and complete-snapshot instructions checked locally, including isolated native CLI installation. Owner-requested main integration/push complete with remote readback; actual other-machine installation remains separate. |
-| Public visibility | Held; repository remains private. |
+| M36 | Owner-authorized record synchronization and transfer of important chat conclusions; [scope, evidence, historical baton and delivery state](notes/m36-session-handoff.md). No framework implementation or donor adoption. |
+| Public visibility | Public, confirmed by GitHub readback on 2026-10-15. Earlier private-release/publication holds remain historical; future releases still need their own scope. |
 
-Canonical delivery update2026-10-15: owner-requested direct push delivered the canonical M32/M33/M34 commits. This supersedes earlier canonical-PR delivery holds below; no PR was created. Separate prompting-source upstream and public visibility/release remain outside that push.
+Canonical delivery update2026-10-15: owner-requested direct push delivered the canonical M32/M33/M34 commits. This supersedes earlier canonical-PR delivery holds below; no PR was created. Separate prompting-source upstream/release remains outside that push. Repository visibility was separately observed as public on 2026-10-15; see [M36](notes/m36-session-handoff.md).
 
 ## M34 — README presentation
 
@@ -52,10 +53,10 @@ flowchart LR
 
 The owner selected this route on 2026-10-15: record all book-derived findings, verify incrementally and adopt useful results. [Findings, original authority, source identities and limits](notes/m32-book-findings.md); runnable work stays in [TASKS](TASKS.md).
 
-1. **Checked locally — carrier consistency:** source candidate53b62f0 reconciles the carriers at draft0.6.0; independent document review, structural checks and actual authoring proof support retaining it for review. Owner-approved local source merge is complete; prompting0.6.0 subsequently installed locally; remote delivery/release and target readiness remain separate.
+1. **Checked locally — carrier consistency:** source candidate53b62f0 reconciles the carriers at draft0.6.0; independent document review, structural checks and actual authoring proof support retaining it for review. Owner-approved local source merge is complete; prompting0.6.0 subsequently installed locally. Canonical record delivery is complete; separate prompting-source upstream/release and target readiness remain separate.
 2. **Checked locally — document extraction:** retained the optional recipe after seven synthetic sources, simulated truncation/staleness and actual bounded book extraction. No new mandatory carrier/helper.
 3. **Checked locally — fresh-reader usefulness:** reader recovered authority/holds, caught a synthetic contract contradiction and stale M31 wording; narrow record corrections made. This is a read-only sample, not the full consumer trial.
-4. **Integrated locally — remote delivery held:** the owner accepted the concrete package and both local main merges completed. Canonical PR delivery is still unfulfilled because API/browser access is unavailable; prompting installation was subsequently authorized/completed locally; source push and remote release remain separately bounded actions.
+4. **Integrated and delivered canonically:** the owner accepted the concrete package and both local main merges completed. The later owner-authorized direct push completed canonical delivery without a PR; the earlier API/browser delivery blocker is superseded. Prompting installation completed locally; its separate source upstream/release remains undelivered.
 
 This is the dependency view for M32 only; older checkpoint rows retain their original states and evidence:
 
@@ -63,7 +64,7 @@ This is the dependency view for M32 only; older checkpoint rows retain their ori
 flowchart LR
     M32T1["M32-T1 integrated in local source main"] -->|record disposition| M32T2["M32-T2 checked: optional recipe"]
     M32T2 -->|record disposition| M32T3["M32-T3 checked: fresh-reader sample"]
-    M32T3 --> M32T4["M32-T4 local integration done; remote PR held"]
+    M32T3 --> M32T4["M32-T4 canonical delivery done; prompting upstream separate"]
 ```
 
 Carrier consistency comes first because contradictory active instructions can undermine either later check. Each stage records its question, candidate, actual result, benefit/friction, retain/revise/drop/hold disposition and next action. Findings alone do not approve a new compulsory procedure. Main integration, release and activation remain separate decisions over concrete results.
@@ -80,7 +81,7 @@ Recommended next activity: read-only reconnaissance and a bounded revised design
 
 Accepted C2 profile/check/map/migration → genuinely accepted minimal safeguards → bounded single-stream Python API/database trial → separately scoped optional C4 infrastructure → C5 native autonomy/resume/isolation → C6 loader handover. The practical trial precedes optional infrastructure; C4–C6 remain obligations, not waived work or current Code grants.
 
-The owner-approved exact46b7ccc push/private draft PR5 update is complete. Subsequent A3 source and root record closure remain local review work. Main merge, new remote delivery, install/activation, native proof and public visibility need their matching decisions. Other agents start at root AGENTS, use scoped branches and preserve foreign work/clean canonical main. Error recording stays lightweight; systematic learning/measurement and concurrent feature writers remain deferred.
+The owner-approved exact46b7ccc push/private draft PR5 update is complete. Subsequent A3 source and root record closure remain local review work. For that unaccepted C3 candidate, main merge, new remote delivery, install/activation and native proof still need their matching decisions. Repository visibility itself is already public; that observation does not accept or publish the C3 candidate. Other agents start at root AGENTS, use scoped branches and preserve foreign work/clean canonical main. Error recording stays lightweight; systematic learning/measurement and concurrent feature writers remain deferred.
 
 ## M30 — independent-decision rule; proof held
 

@@ -1,6 +1,15 @@
 # Current maintainer tasks
 
-## M35 — new-machine Codex installation instructions (current)
+## M36 — canonical session handoff synchronization (current)
+
+Owner explicitly requested synchronizing Sombrero meta-documents and retaining important conclusions from this chat, history and real limitations. [Scope, provenance, carryover and delivery state](notes/m36-session-handoff.md). Documentation only; no framework code, installation, donor adoption or proof-deferral change.
+
+| Task | State | Finish / next action |
+|---|---|---|
+| M36-T1 — current records and self-contained carryover | Checked on isolated branch; result integration pending | Current statuses reconciled; previous baton preserved verbatim; source/claim and fresh-reader review passed. Local links/anchors, whitespace and shipped conform self passed with a task-local public-hygiene deny list. Integrate the reviewed result only under the matching result decision. |
+| M36-T2 — choose the next bounded framework task | Awaiting owner-selected scope | In the next session read AGENTS and current records, then the M36 note. Resume a matching approved scope or ask only for the next genuinely missing scope; no automatic C3 Code, Claude retry or donor implementation. |
+
+## M35 — new-machine Codex installation instructions (completed)
 
 Owner reported that a fresh-machine agent did not infer personal plugin installation until prompted. Root prepared a bounded documentation correction in `codex/m35-install-docs`; [result and checks](notes/m35-install-docs.md). No new installer or package profile, live user configuration change or consumer onboarding.
 
@@ -8,7 +17,7 @@ Owner reported that a fresh-machine agent did not infer personal plugin installa
 |---|---|---|
 | M35-T1 — explicit personal plugin entry | Integrated and pushed | README/AGENTS installation route, reproducible snapshot and native installation instructions independently exercised in an isolated temporary Codex profile. Owner-requested fast-forward merge and origin/main push completed; remote HEAD matched. Record closure follows under the same grant. |
 
-## M34 — README presentation (current)
+## M34 — README presentation (completed)
 
 Owner-requested reader-oriented README and diagrams; [result, review history and limits](notes/m34-readme.md). Root owns README/current records only; no installation or publication.
 
@@ -17,28 +26,28 @@ Owner-requested reader-oriented README and diagrams; [result, review history and
 | M34-T1 — concise entry and diagrams | Checked locally | Purpose/quick start/document roles and two Mermaid diagrams; original Local use and responsibility boundaries retained. Relevant tests and local rendering pass. |
 | M34-T2 — retain reviewed result | Complete locally | Owner “сливай” implemented: reviewed README3a6858b integrated into local main. Owner-requested canonical push completed and remote HEAD matched; closure receipt follows in the same delivery. No public release or installed update. |
 
-## M33 — PM entry continuity (current)
+## M33 — PM entry continuity (completed)
 
 Owner-authorized template/bootstrap source update; [scope, actual routes and evidence](notes/m33-pm-entry.md). Root owns the isolated source/record amendment; no bulk consumer mutation, release or installation.
 
 | Task | State | Finish / next action |
 |---|---|---|
 | M33-T1 — early entry duties and additive bootstrap | Checked locally | Both seeds/routes agree; five synthetic forward cases, source/preservation checks and independent review support the scoped amendment. Existing rules and actual homes retained. |
-| M33-T2 — checked result and continuation | Complete locally; remote delivery unfulfilled | Owner “Сливай и устанавливай.” implemented. Local main471c02f, Codex3.0.1 full snapshot enabled/discovered, Claude2.0.1 in-place binding passes; backups and actual checks retained. Closure records follow separately; no remote delivery or consumer sweep. |
+| M33-T2 — checked result and continuation | Local integration/install and canonical delivery complete | Owner “Сливай и устанавливай.” implemented at local main471c02f; Codex3.0.1 snapshot and Claude2.0.1 in-place checks retained. The later owner-authorized canonical direct push completed delivery; no consumer sweep. Historical receipts remain in the linked result. |
 
-## M32 — incremental adoption of book-derived findings (current)
+## M32 — incremental adoption of book-derived findings (retained results)
 
 Owner-selected on 2026-10-15: retain all findings and progress step by step, checking and adopting useful results. [Authority, complete findings and acceptance policy](notes/m32-book-findings.md). This is bounded research/document work under M31; implementation, integration and activation keep their applicable boundaries.
 
 | Task | State and dependency | Observable finish / next action |
 |---|---|---|
-| M32-T0 — retain findings and route | Accepted; integrated into local main | Findings and route saved; independent source/link/readback and whitespace checks pass. Source/readback/whitespace checks pass; final privacy results and retained earlier failures are in the note. Remote delivery remains limited. |
+| M32-T0 — retain findings and route | Accepted; integrated into local main | Findings and route saved; independent source/link/readback and whitespace checks pass. Source/readback/whitespace checks pass; final privacy results and retained earlier failures are in the note. Canonical record delivery is complete; separate prompting-source delivery remains limited. |
 | M32-T1 — reconcile prompting carriers | Accepted; integrated into local source main | Candidate commit53b62f0, version0.6.0; independent review, structural checks and actual authoring proof complete. No target eval; local0.6.0 installation subsequently authorized and completed; source no-push rule retained. [Result](notes/m32-book-findings.md#current-result). |
 | M32-T2 — verify document extraction | Checked locally; retained as optional | Recipe exercised on seven synthetic sources, simulated truncation/staleness and actual book ranges. No persistent parser or mandatory skill. [Result](notes/m32-book-findings.md#t2-and-t3--bounded-reading-checks). |
 | M32-T3 — verify fresh-reader usefulness | Checked locally; retained within demonstrated scope | Fresh reader recovered current authority/holds, detected a synthetic contract contradiction and stale M31 wording; records corrected. No broad efficacy or full consumer trial. |
-| M32-T4 — integrate accepted results | Local integration complete; remote PR delivery unfulfilled | Owner “Разрешаю.” retained. Source main53b62f0 and canonical main include records14191a0; closure receipt follows. Local prompting0.6.0 installation subsequently completed in both clients. No push/remote release; remote PR access/procedure remains a separate open delivery tail. |
+| M32-T4 — integrate accepted results | Local integration and canonical delivery complete | Owner “Разрешаю.” retained; source main53b62f0 and canonical records14191a0 integrated. Prompting0.6.0 installation completed in both clients. Later direct push completed canonical delivery without a PR; the separate prompting-source upstream/release remains undelivered. |
 
-Root is the sole writer of M32 findings/recipe, TASKS, ROADMAP, HANDOFF and the narrow M31 note clarification in isolated `codex/m32-book-findings`. The separately granted T1 source edits are committed in `codex/m32-prompting-carriers`; local source main now includes T1; book, workflow helpers/registries and VISION are unchanged; installed prompting copies were updated under the subsequent explicit grant. Stop on ownership conflict, unresolved consequential effects, scope expansion or a required failed/unavailable check. Inspect the actual candidate before deciding adoption; preserve negative findings and held work. The later explicit result decision authorizes the completed local merges; the subsequent explicit installation grant covers only the prompting update; remote release remains separate.
+Historical M32 ownership: root was the sole writer of findings/recipe, TASKS, ROADMAP, HANDOFF and the narrow M31 note clarification in isolated `codex/m32-book-findings`. The present M36 custodian owns only its named record synchronization; the original M32 source grant is not reopened. The separately granted T1 source edits are committed in `codex/m32-prompting-carriers`; local source main now includes T1; book, workflow helpers/registries and VISION are unchanged; installed prompting copies were updated under the subsequent explicit grant. Stop on ownership conflict, unresolved consequential effects, scope expansion or a required failed/unavailable check. Inspect the actual candidate before deciding adoption; preserve negative findings and held work. The later explicit result decision authorizes the completed local merges; the subsequent explicit installation grant covers only the prompting update; remote release remains separate.
 
 Retained older tasks below keep their original states and dispositions. M32 does not restart C3, waive M30 Claude proof or activate the broad deferred learning/measurement program.
 
@@ -60,7 +69,7 @@ Next proposed activity needs a matching decision: read-only reconnaissance and a
 
 ## Route after an accepted minimal safeguard
 
-Prepare a bounded single-stream Python API/database consumer trial. Then revisit separately scoped C4 SDK/import/candidate processing, C5 autonomous development/resume/isolation and C6 actual loader handover. Frontend/Telegram/MCP, installation/native activation, public visibility and concurrent feature writers are separate decisions. Lightweight error recording stays selected; systematic learning and comparative measurement remain deferred.
+Prepare a bounded single-stream Python API/database consumer trial. Then revisit separately scoped C4 SDK/import/candidate processing, C5 autonomous development/resume/isolation and C6 actual loader handover. Frontend/Telegram/MCP, installation/native activation and concurrent feature writers remain separate decisions. Repository visibility is already public; future releases are separately scoped. Lightweight error recording stays selected; systematic learning and comparative measurement remain deferred.
 
 Preserve historical20evidence overwrites, qualified earlier Claude temporary-resource effects, host failure and foreign archival work. No blanket original-byte restoration or hard OS isolation claim.
 

@@ -1,17 +1,19 @@
-# Current: M35 personal Codex installation instructions merged and pushed
+# Current: M36 canonical session handoff synchronization
 
-Follow-up: the owner supplied their LinkedIn URL after discussing author attribution. A one-line README credit was independently checked and committed in isolated `codex/author-credit`: Created and maintained by Danis Valitov, linking the exact supplied profile. The owner then explicitly requested “Сливай, пуш.” Canonical main fast-forwarded to c6e023c, native push succeeded and remote main readback matched the delivered credit. This closure follows under the same delivery grant. No further author-credit merge/push decision is owed. Package behavior and installed configuration are unchanged; M35 delivery below remains complete.
+## Owner decisions
 
-## Current work
+The owner authorized this record synchronization and transfer of important chat conclusions. The isolated candidate passed bounded checks and independent source/fresh-reader review; concrete-result integration remains pending; delivery status is in the [M36 continuation record](notes/m36-session-handoff.md). No next framework implementation/specification is newly approved. M30 native Claude remains explicitly deferred; C3 remains exhausted.
 
-The owner reported fresh-machine confusion: an agent cloned the repository without identifying personal plugin installation until prompted. Root prepared a bounded documentation correction in isolated `codex/m35-install-docs` from clean main7f8b03c. [Result and checks](notes/m35-install-docs.md); [TASKS](TASKS.md); [ROADMAP](ROADMAP.md).
+## Current state
 
-Root README identifies the personal plugin route near the top and supplies an agent-ready request. Root AGENTS routes installation intent before maintainer startup. Native Codex README documents complete committed-source snapshot preparation, transport manifest, local marketplace registration, native installation and fresh-session discovery/binding checks. No new installer/runtime/profile/version, installed user configuration change or consumer onboarding.
+Current source versions: neutral/Codex3.0.1 and Claude2.0.1. Canonical starting main `252a459` matched origin/main and GitHub reported the repository PUBLIC on 2026-10-15. M32/M33/M34 canonical delivery, M35 and author credit are complete. Separate prompting-source upstream/release remains undelivered. Installed Codex snapshot `471c02f` and prompting0.6.0 are carried forward from prior receipts, not reinstalled here.
+
+The [M36 note](notes/m36-session-handoff.md) retains the previous baton, audit observations, owner steering and the self-contained Superpowers comparison. No concrete gap was established in the three inspected donor mechanisms; no donor adoption or whole-framework comparative experiment is approved. This does not negate the owner's reported predictable use across real projects.
 
 ## Next action
 
-The owner explicitly requested “Сливай и пушь.” Canonical main fast-forwarded from7f8b03c to the checkedc4bf1f3 without conflicts. Native Git push succeeded and remote refs/heads/main readback matchedc4bf1f325f245f0e2b97e32d1ad00a341216f91f. This record closure follows under the same delivery grant. Relevant root tests pass9, both original private self checks pass24 each and Codex adapter pass76 after correcting initial privacy failures without weakening checks. Independent final-recipe packaging and native installation/list passed in an isolated temporary Codex profile with tracked bytes/modes and neutral bindings intact. Fresh interactive catalog and the actual other machine were not tested. M35 source integration and delivery are complete. No further M35 merge/push approval is owed; this does not install the package on another machine or change public visibility.
+Read [TASKS](TASKS.md) and the [M36 note](notes/m36-session-handoff.md). Finish M36's concrete-result integration, then continue from this canonical repository with the owner's next bounded task. If no matching task grant exists, obtain that scope before specification/Code; do not repeat completed M35 delivery or start a donor-driven rewrite.
 
-## Retained baseline
+## Retained traps
 
-M34 README was integrated and canonical main pushed under the owner's explicit instructions; no further M34 delivery is owed. M33 local merge/install is complete: neutral/Codex3.0.1 and Claude2.0.1. Installed Codex snapshot remains471c02f; subsequent source/record changes are separate. M32 prompting0.6.0 remains installed; its separate source upstream was not pushed. Public visibility remains held. M30 native Claude proof remains deferred, C3 exhausted/unaccepted/unmerged without reset, C4–C6 proof and the minimal-safeguard prerequisite separate. No earlier completed decision is reopened.
+C3: unaccepted/unmerged, terminal ESCALATED/review, Debug4/4 exhausted; no reset/fifth repair. M30: source integrated, full checkpoint acceptance incomplete, native Claude AC4/ClaudeAC5 deferred/unfulfilled and Debug1/4 retained. Minimal-safeguard → bounded API/database trial → separately scoped C4–C6 route and later frontend/Telegram/MCP remain. Public source visibility and local installation do not satisfy these proofs. See [ROADMAP](ROADMAP.md) and the linked original result records for history.
