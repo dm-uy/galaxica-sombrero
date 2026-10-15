@@ -1,5 +1,14 @@
 # Current maintainer tasks
 
+## M34 — README presentation (current)
+
+Owner-requested reader-oriented README and diagrams; [result, review history and limits](notes/m34-readme.md). Root owns README/current records only; no installation or publication.
+
+| Task | State | Finish / next action |
+|---|---|---|
+| M34-T1 — concise entry and diagrams | Checked locally | Purpose/quick start/document roles and two Mermaid diagrams; original Local use and responsibility boundaries retained. Relevant tests and local rendering pass. |
+| M34-T2 — retain reviewed result | Prepared; integration decision pending | Save exact result/evidence and current baton. Main merge and delivery need the matching result decision; preparation is already authorized. |
+
 ## M33 — PM entry continuity (current)
 
 Owner-authorized template/bootstrap source update; [scope, actual routes and evidence](notes/m33-pm-entry.md). Root owns the isolated source/record amendment; no bulk consumer mutation, release or installation.

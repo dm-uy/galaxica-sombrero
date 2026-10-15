@@ -1,19 +1,15 @@
-# Current: M33 merged and installed locally; remote delivery held
+# Current: M34 README presentation checked locally; integration decision pending
 
-## Completed scope and actual binding
+## Owner request and prepared result
 
-The owner authorized the checked PM entry result with “Сливай и устанавливай.” Local integration and installation are complete; do not ask again. [Authentic scope, source/forward checks and actual completion](notes/m33-pm-entry.md#actual-local-integration-and-installation); [TASKS](TASKS.md); [ROADMAP](ROADMAP.md).
+The owner requested a shorter, clearer README and diagrams explaining the methodology. [Scope, exact implementation, review history and checks](notes/m34-readme.md); [TASKS](TASKS.md); [ROADMAP](ROADMAP.md). Preparation is already authorized; do not ask again. Root owns README and current records in isolated codex/m34-readme from clean54fe169. No package/runtime/rule/version or installed configuration changes.
 
-Canonical main fast-forwarded to471c02f, integrating checked entry/bootstrap source and patch bindings. Codex3.0.1 is enabled from a complete tracked snapshot of471c02f; the actual app-server independently discovers27 installed skills, including pm-bootstrap. Claude's unchanged configured in-place path binds package2.0.1 to neutral3.0.1 through its actual SessionStart hook. Backups and private installation receipt are retained. This subsequent current-record closure is saved separately and does not repackage the installed snapshot. Restart clients/start a fresh session for refreshed catalogs; no hot-reload proof is claimed.
+README now leads with purpose, PM continuity, project memory and native starting points. Two Mermaid diagrams explain the PM loop and normal approved software flow. Existing Local use and detailed responsibility/coverage constraints remain intact in collapsible sections. Initial overview loss and missing Bootstrap stage were caught and corrected without weakening tests. Local Mermaid renders and desktop/mobile checks support presentation, not live GitHub rendering or consumer behavior. Relevant root tests pass33; final privacy/link/source identities retained with the result.
 
-Both AGENTS seeds and the shared/bootstrap/native routes now carry compact early PM duties. Existing-entry preparation compares by meaning and adds only missing nonconflicting duties, preserving original rules/metadata/preamble/names/paths. A conflicting lock or absent purpose/grant remains an explicit gap. No bulk consumer update was performed; existing consumers change only within their own matching grant.
+## Next action
 
-## Checks and remaining delivery
+Present the checked README for its matching integration decision. No main merge, remote/public delivery or installation is performed by this scope. Retain the branch and private evidence. README-only presentation does not require a full software development cycle or immediate installed snapshot replacement.
 
-Source review, five synthetic entry-only cases and independent preservation/readback checks support the bounded amendment. Selected root/package version tests62, full Codex146 and Claude526 pass under Python3.12; original algorithm pins, wire/schema/counters and inventories retained. Both original privacy checks and three adapters pass; strict Claude manifest validation passes. Initial stale-stamp failures and corrections remain in findings/private evidence. Generic Codex validation of Claude-only frontmatter is an incompatible check, not a reason to remove supported fields. No full native Claude behavioral acceptance or whole-PM efficacy is inferred.
+## Retained baseline
 
-Evidence remains under canonical common-Git private methodology-evidence/M33-20261015/, with original preparation evidence and separate installation receipts/backups. Remote PR delivery remains unfulfilled under the prior access limitation; no remote write/public release is claimed. Retain branches/evidence until delivery is resolved. No further preparation, merge or installation decision is owed for this local M33 packet.
-
-## Retained earlier state
-
-M32 prompting0.6.0 remains installed in both clients; [receipt](notes/m32-book-findings.md#local-installation--2026-10-15). M31 historical release/install remains complete; [receipt](notes/pm-lightweight-direction.md). M30 live native Claude acceptance stays deferred; C3 exhausted/unaccepted/unmerged with no reset; C4–C6 proof and accepted-minimal-safeguard prerequisite for the full trial remain separate. This completion revives none of that work.
+M33 local merge/install is complete: neutral/Codex3.0.1 and Claude2.0.1; [receipt](notes/m33-pm-entry.md#actual-local-integration-and-installation). Installed Codex snapshot remains471c02f; current-record closure54fe169 is separate. M32 prompting0.6.0 remains installed. Remote PR delivery remains unfulfilled under prior access limits; public visibility held. M30 native Claude proof remains deferred, C3 exhausted/unaccepted/unmerged without reset, C4–C6 proof and minimal-safeguard prerequisite separate. No earlier completed decision is reopened here.

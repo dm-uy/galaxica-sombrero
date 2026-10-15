@@ -1,78 +1,176 @@
 # agent-methodology
 
-A harness-neutral methodology for agent-driven software development, written as plain Markdown files that no single
-harness owns, and adopted by each harness point by point through an adapter file that a tool can check.
+**Keep AI-agent work connected to the goal, the evidence and the next session.**
 
-Version: `3.0.1` (see `SPEC_VERSION` and `CHANGELOG.md`).
+A harness-neutral methodology for managing projects and delivering software with AI agents. Shared rules live in Markdown; native adaptations bring them to Codex and Claude Code.
 
-License: [MIT](LICENSE), covering the project's code and associated documentation.
+Version: `3.0.1` · License: [MIT](LICENSE)
 
-## What it is
+[Get started](#get-started) · [How it works](#how-it-works) · [Project memory](#project-memory) · [Validation](#validation) · [Maintainers](#maintainers)
 
-Agent-driven development needs the same handful of things whatever runs the agents: roles with clear contracts, a flow
-from specification to release, gates where the owner decides, rules for code markup and logging, and checks that a run
-was honest. This repository states them once, in words that name no product, so that any harness can adopt them.
+> **Preview status.** The methodology and its adaptations are under development. Source checks and local loading have been exercised; full behavioral parity and operational effectiveness remain unproven. See [scope and evidence](#scope-and-evidence) before relying on a capability.
 
-The repository holds three kinds of thing:
+## Why use it?
 
-- The neutral files: Markdown, one topic each, opening with a card (`id`, `title`, `status`) and cut into sections by
-  anchors. Their format is in `FORMAT.md`, as numbered norms (`FMT-1` to `FMT-39`).
-- Two registries that mark where a harness must adapt the text: the capabilities (what a harness can do) and the
-  parameters (values a harness sets). Neutral text calls them by name and never writes a value.
-- The `conform` tool, which checks the repository itself and checks a harness's adapter against it.
+- **Keep direction visible.** Connect the owner's goal to a route, a bounded task and its finish condition.
+- **Continue across sessions.** Recover decisions, progress and the next permitted action from project records.
+- **Separate responsibilities.** Give planning, implementation and independent verification clear boundaries.
+- **Close against evidence.** Distinguish a proposed action, an executed action, a checked result and the owner's acceptance.
 
-The status of a file is `stub`, `draft` or `stable`. Version `3.0.1` has 69 drafts and 2 stubs among 71 neutral files.
-The format, registries, adapter contract and conform tool are complete. Gates, shared role rules, QA/scans and the five
-development-flow subjects and model selection policy have substantive draft bodies. Architect, reconnaissance, the development
-plan, planned CODE and full generic graph, Coder, Debugger, Searcher, Reviewer and PM are also substantive drafts. Minimum Bootstrap preparation is a substantive draft. Exoskeleton, navigation, Doxygen, LDD, tests, AX, data and lints are substantive draft bodies. Document and greenfield/brownfield specification protocols and shared specification validation are substantive F4 drafts; general decision lifecycle (DEC01) and full graph are current F4 bodies; eight prompting and three remaining policy bodies are current bounded drafts; confirmed conventions/lifecycle/batch/session procedures and five project forms are current bounded F4 drafts; principles/glossary/Orient/preflight/run-audit/conditional safety contracts are current bounded drafts; wider uninspected F4 duties and learning F8 remain later. Debugger covers evidenced diagnosis, scoped repair, regression and renewed independent QA; Searcher supplies bounded actual inventory, complete marker/contract reads and ranked evidence under read-only authority; Reviewer judges the complete current result with independent read-only authority, current evidence and parent-owned continuation; PM prepares measured suitable specifications, preserves separate owner decisions and coordinates through declared root authority while inner PM returns scoped evidence; the remaining subjects retain their cards and later homes.
-The current source contains 1242 norms, 447 anchors and 138 live calls. The registry declares 28 capabilities and seven parameters. Adapters account for the text; this release does not assert
-that a particular harness already enforces it.
+Use the PM layer for research, documents and software projects. New features and substantial bug fixes use the development flow; ordinary document work uses bounded edits and relevant checks.
 
-## Native Codex source package
+## How it works
 
-[methodology-codex](implementations/codex/README.md) is the first co-located native source package at version3.0.1, with candidate state schema2. Historical neutral version1.0.0 recorded exactly the FMT-1/FMT-26/REPO-102 boundary changes under unchanged MAJOR policy; current3.0.1 retains all71 neutral paths/69drafts/2stubs and28capabilities/sevenparameters remain. Package native documents use their own declared format and independently checked73-member inventory. Every intended public member, including package Markdown/JSON/Python/extensionless/nested files, remains in the unchanged publication/privacy traversal. Ordinary Markdown outside the declared exceptions is still neutral.
+The PM layer keeps an initiative moving from the owner’s goal to bounded work and recoverable evidence:
 
-Supported profile: complete co-located checkout and explicit loading of the current candidate entry/roles/protocols/runtime/adapter and full neutral core. The [package adapter](implementations/codex/adapter.json) resolves `../../` from its own directory. Missing/stale/incomplete required binding blocks dependent work; another caller cwd does not alter it. A Codex install may carry a complete co-located repository snapshot in its cache: the generated transport manifest at the snapshot root points `skills` to `./implementations/codex/skills/`. The nested package, adapter and neutral owners retain their original paths. A package-only cache copy remains unsupported. Reinstall the snapshot after an accepted release; installation does not prove native behavioral acceptance. Actual native smoke and source checks have their own current evidence and limits.
+```mermaid
+flowchart TD
+    Goal["Owner goal"] --> PM["PM<br/>recover state · plan next step"]
+    PM --> Work["Scoped work<br/>chosen execution method"]
+    Work --> Evidence["Checked result"]
+    Evidence --> Records["Update project records"]
+    Records --> PM
+    classDef direction fill:#eef2ff,stroke:#6366f1,color:#312e81
+    classDef evidence fill:#ecfdf5,stroke:#10b981,color:#064e3b
+    classDef work fill:#f1f5f9,stroke:#94a3b8,color:#0f172a
+    class Goal,PM direction
+    class Evidence,Records evidence
+    class Work work
+```
 
-Run both common and package checks; the common checker does not validate native package semantics. The root map covers tools/bin/tests; the package has its own map configuration and output. From the complete canonical public source root:
+The parent agent keeps the goal, current state and granted scope connected. Shared rules are adapted to the actual tools and permissions of Codex or Claude Code. The host supplies model execution and tools; this repository supplies instructions, contracts and checkers. Reserved direction and integration choices stay with the owner.
+
+For an approved software change, the normal flow is:
+
+```mermaid
+flowchart TD
+    Scope["Measured requirements<br/>Owner approves scope"] --> Bootstrap["Bootstrap<br/>Read-only project inventory"]
+    Bootstrap --> Architect["Architect<br/>Plan the change"]
+    Architect --> Code["Code<br/>Implement the approved slice"]
+    Code --> QA["Independent QA"]
+    QA -->|"Findings"| Debug["Debug within retained budget"]
+    Debug --> QA
+    QA -->|"Pass"| Review["Independent review"]
+    Review -->|"Findings"| Debug
+    Review -->|"Pass"| Finalize["Assigned Finalize<br/>Check the complete result"]
+    Finalize --> Decision["Owner result decision<br/>Merge · rework · reject"]
+    classDef decision fill:#eef2ff,stroke:#6366f1,color:#312e81
+    classDef check fill:#ecfdf5,stroke:#10b981,color:#064e3b
+    classDef repair fill:#fff7ed,stroke:#f97316,color:#7c2d12
+    classDef work fill:#f1f5f9,stroke:#94a3b8,color:#0f172a
+    class Scope,Decision decision
+    class QA,Review,Finalize check
+    class Debug repair
+    class Bootstrap,Architect,Code work
+```
+
+The diagram shows the normal path; blocked, exhausted and failed work keeps its history. Finalize cannot silently repair source, and a passing check does not itself authorize integration. [Full flow](flow/phases.md) · [Gates](process/gates.md) · [Run state](flow/run-state.md)
+
+## Project memory
+
+Each role has one actual document home. Existing project names and rules are preserved.
+
+| Record | What it owns |
+|---|---|
+| **AGENTS** | Entry instructions, reading order, document paths and writer boundaries |
+| **VISION** | Intended outcome, users, constraints and non-goals |
+| **ROADMAP** | Outcome route, dependencies, current focus and deliberate deferrals |
+| **TASKS** | Current work, granted scope, finish conditions and evidence |
+| **HANDOFF** | Present state, blockers and the next authorized action |
+
+Update affected records after material changes, grouped progress and before planned handoff. Keep detailed evidence in linked notes. A fresh agent should be able to continue without the previous chat.
+
+Bootstrap creates missing entries from the [templates](documents/templates/INDEX.md). For existing entries it compares duties by meaning and adds only missing nonconflicting clauses within the grant—without replacing project rules or inventing missing decisions. [Document conventions](documents/conventions.md) · [Session continuity](process/session.md)
+
+## Get started
+
+Keep a **complete checkout**: both native packages depend on the shared rules beside them. Select the adaptation for your host.
+
+### Codex
+
+Use the source-bound [Codex package](implementations/codex/README.md). To work directly from a checkout, ask Codex to read its `implementations/codex/skills/pm/SKILL.md` and required references, naming the actual target project separately. An installed release must carry the complete repository snapshot, with discovery pointing to the nested skills; copying only the skill folder is unsupported.
+
+| Starting point | Entry |
+|---|---|
+| Resume a project | [`pm`](implementations/codex/skills/pm/SKILL.md) |
+| Prepare project records | [`pm-bootstrap`](implementations/codex/skills/pm-bootstrap/SKILL.md) |
+| Plan the next bounded packet | [`pm-plan-batch`](implementations/codex/skills/pm-plan-batch/SKILL.md) |
+| Implement an approved specification | [`feature-dev`](implementations/codex/skills/feature-dev/SKILL.md) |
+
+### Claude Code
+
+Load the [Claude package](implementations/claude/README.md) in place for a session:
+
+```sh
+claude --plugin-dir /absolute/path/to/checkout/implementations/claude
+```
+
+Use `/methodology-claude:pm` to start from the package's [PM entry](implementations/claude/skills/pm/SKILL.md), or its [bootstrap](implementations/claude/skills/pm-bootstrap/SKILL.md) when project preparation is requested. Keep the package and shared rules together. [Persistent local configuration](#local-use)
+
+### Another harness
+
+A JSON adapter accounts for each shared file, declares its capabilities and sets its parameters. The **four ways** to adopt a file are:
+
+| Mode | Meaning |
+|---|---|
+| By reference | Point to an instruction carrier that names the shared file |
+| Vendored with a hash | Keep a copy and record its source SHA-256 |
+| Vendored with overrides | Record each changed section, reason, owner and expiry condition |
+| Not applied | State the reason for excluding the file |
+
+Start from [`examples/adapter.example.json`](examples/adapter.example.json), setting `harness`, `owner`, `spec_version` and `spec_root`. Resolve paths from the adapter directory. [Adapter contract](runtime/adapters.md) · [Capabilities](runtime/capabilities.md) · [Parameters](runtime/parameters.md)
+
+## Validation
+
+The `conform` checker uses Python 3 and the standard library:
+
+```sh
+bin/conform adapter examples/adapter.example.json
+bin/conform self --deny-list /absolute/path/to/private-deny-list.txt
+```
+
+The self check covers neutral format, registries, calls, version consistency and its defined privacy patterns. Supply your deny list outside the repository. It does not certify all Git history or operational behavior. Adapter checks validate declared coverage and bindings; native behavior has separate tests.
+
+`--json` returns a structured report; `--log-level` controls diagnostics. See the [checker reference](checks/conform.md) for all rules and options.
+
+| Exit | Meaning |
+|---|---|
+| 0 | No failure; inspect any warnings |
+| 1 | At least one check failed |
+| 2 | A required input was unavailable; check did not run |
+
+For development, use the [root test guide](tests/test_guide.md) and the selected package's guide:
 
 ```sh
 python3 -m pytest tests -s -v
-bin/conform self --deny-list PRIVATE_DENY_LIST
-bin/conform adapter examples/adapter.example.json
-bin/conform adapter implementations/codex/adapter.json
 python3 -m pytest -c implementations/codex/pytest.ini implementations/codex/tests -s -v
+python3 -m pytest -c implementations/claude/pytest.ini implementations/claude/tests -s -v
 doxygen Doxyfile
 ```
 
-Run the package map separately with `doxygen Doxyfile` from `implementations/codex/`. Read all real findings and current source/config/XML associations. These are commands, not executed results; the [test guide](tests/test_guide.md) separates actual measurements, pending native execution and preserved historical evidence.
+Run each package's Doxygen map from its own directory when applicable. Commands above are instructions, not claims that a check ran on your checkout.
 
-Codex2.2 additionally supplies an explicit opt-in consumer PM profile,13 seeds/four PM entries and three commands over one shared reader. C3 automatic safeguards, C4 SDK/import/ledger, C5 autonomous proof and C6 complete loader handover remain held; the bounded complete-snapshot installation below does not close those proof obligations.
+## Repository map
 
-## Native Claude Code package
+| Area | Read it for |
+|---|---|
+| `concepts/`, `roles/`, `flow/` | Shared principles, role contracts and execution phases |
+| `process/`, `documents/`, `protocols/` | PM, durable records, templates and specification formats |
+| `prompting/`, `policies/`, `code/` | Prompt design, operating policies and code conventions |
+| `runtime/`, `implementations/` | Adapter interfaces and native packages |
+| `checks/`, `bin/`, `tools/`, `tests/` | Checker contracts, implementation and verification |
+| `examples/` | Adapter and workflow examples; fictional examples grant no authority |
 
-[methodology-claude](implementations/claude/README.md) 2.0.1 is the co-located Claude Code plugin for neutral 3.0.1. It consolidates the project's Claude Code practices into one maintained home: 28 skills (the 23 Codex-parity topics and five owner-invoked PM lifecycle commands), six role subagents with pinned model tiers and tool limits (the judges have no edit tools; no role can delegate), a SessionStart binding check, a PreToolUse guard for unrecoverable commands, a `feature-dev` Workflow spine aligned to the current flow, the run-state and visual-gate helpers, and an adapter accounting all 71 neutral files, 28 capabilities and seven parameters. This release binds the current shared neutral owners.
+[FORMAT.md](FORMAT.md) defines neutral cards, anchors and norms. [SPEC_VERSION](SPEC_VERSION) and [CHANGELOG.md](CHANGELOG.md) track the methodology as a unit: changed norm meaning raises **MAJOR**, a new norm or file raises **MINOR**, and meaning-preserving wording raises **PATCH**.
 
-Supported profile: loaded in place with `claude --plugin-dir implementations/claude` for one session, `CLAUDE_CODE_PLUGIN_DIRS` for every session (see [Local use](#local-use)), or a local directory marketplace, so `${CLAUDE_PLUGIN_ROOT}/../../` reaches the neutral owners. Copied installs are unsupported and report the binding as BLOCKED. Check it with:
+## Scope and evidence
 
-```sh
-bin/conform adapter implementations/claude/adapter.json
-python3 -m pytest -c implementations/claude/pytest.ini implementations/claude/tests -s -v
-```
+The current source contains **69 drafts and 2 stubs**. Native packages are versioned separately: Codex **3.0.1**, Claude **2.0.1**, over neutral **3.0.1**.
 
-and `doxygen Doxyfile` from `implementations/claude/`.
+Current limitations include deferred native Claude behavioral acceptance, broader consumer/autonomy proof and systematic comparative evaluation. The unaccepted safeguard work is outside the integrated source. Installation and source-test results do not establish whole-methodology effectiveness. [Current maintainer state](examples/pm-project/HANDOFF.md) · [Acceptance and test evidence](tests/test_guide.md)
 
-## Local use
-
-The packages read neutral owners and package files from disk. Claude loads the canonical checkout in place; an installed Codex transport loads a complete snapshot of an accepted release. Whatever lies in the checkout a harness is pointed at is therefore what every session on that machine follows. The rules below keep that checkout equal to accepted `main` for every agent that works in this repository.
-
-1. Point each harness at its package in the main checkout of this repository. Claude Code: set `CLAUDE_CODE_PLUGIN_DIRS` to `<checkout>/implementations/claude` in the `env` of the user settings (Claude Code 2.1.280 or later; it also applies to desktop sessions, which take no command-line flags). For Codex, install the complete release snapshot with its generated root transport manifest; keep the nested package and neutral owners together.
-2. Keep the main checkout on `main`. Do not check out another branch there and do not leave uncommitted edits to neutral or package files in it; develop on a branch in a separate worktree and merge into `main`. Accepted changes reach new in-place sessions as soon as `main` holds them; `git pull` or a merge updates Claude. Rebuild/reinstall the complete snapshot to update cached Codex installations.
-3. Try unmerged package changes in one session only, with `claude --plugin-dir <worktree>/implementations/claude`.
-4. Do not link a package into a discovered skills directory: a symlinked plugin keeps the link path in `${CLAUDE_PLUGIN_ROOT}`, so `../../` resolves outside the repository and every neutral reference misses.
-5. Before switching a user-level configuration to a package, save the previous configuration and the links it replaces, so the switch can be undone in one step.
-
-## Responsibilities and feedback
+<details>
+<summary>Responsibility boundaries, detailed coverage and deferred subjects</summary>
 
 The methodology allocates five concerns through existing subject contracts; this overview locates their responsibilities and supplies no competing norms.
 
@@ -97,129 +195,23 @@ Runtime adoption and propagated enforcement remain unproven. Comparable real run
 Current F2 interface bodies include role contracts, measured reconnaissance and planning, minimum preparation, flow/state/returns and owner decisions. Current F3 bodies are [exoskeleton](code/exoskeleton.md), [navigation](code/navigation.md), [documentation](code/doxygen.md), [LDD](code/ldd.md), [tests](code/tests.md), [AX](code/ax-ui.md), [data](code/data.md) and [lints](checks/lints.md). Current F4 bodies are [document](protocols/document.md), [greenfield specification](protocols/spec-greenfield.md), [brownfield specification](protocols/spec-brownfield.md) and [shared specification validation](process/specification.md). General decision lifecycle (DEC01) at [decisions](process/decisions.md) and [full graph](protocols/graph.md) are current F4 bodies; [specification](process/specification.md) retains its validation contract. Confirmed [document conventions](documents/conventions.md), [lifecycle](process/lifecycle.md), [batches](process/batch.md) and [session](process/session.md) procedures and [five project forms](documents/templates/INDEX.md) are current bounded F4 drafts, with full editable forms and fictional filled examples. Current bounded F5 prompting bodies are [agent design](prompting/agent-prompt-design.md), [GRACE](prompting/grace.md), [brainstorm](prompting/brainstorm.md), [decomposition](prompting/decomposition.md), [prompt markup](prompting/prompt-markup.md), [solution design](prompting/solution-design.md), [superposition and collapse](prompting/superposition-collapse.md) and [verification](prompting/verification.md). Current remaining policy bodies are [autonomy](policies/autonomy.md), [credentials](policies/credentials.md) and [language](policies/language.md); [model policy](policies/models.md) retains all eighteen current norms. Current bounded readiness contracts are [principles](concepts/principles.md), [glossary](concepts/glossary.md), [Orient](checks/orient.md), [preflight](checks/preflight.md), [particular-run audit](checks/run-audit.md) and [conditional safety/recovery](process/safety.md), with complete reusable forms and fictional cases. These bounded drafts do not complete all F5 or wider F4, source completeness, learning/evaluation, adoption or publication duties. Detailed F8 learning homes are [improvement](process/learning.md) and [knowledge](process/learning.md). The remaining subjects have deferred bodies; an interface or link invokes a subject without proving its body complete, including the eight completed F3 bodies. The remaining subjects that are still marked stub retain their earlier interface status. This combined release preserves accepted PM/M14 and the six inspected readiness contracts; C1 additionally completes the run-review and code-review owners and the native Codex one-shot/loop external-agent route. It does not complete all F5 or source duties of the wider document/learning system. Two stubs remain at process/git.md and process/publication.md; wider uninspected F4 duties remain. Adapter mechanisms supply runtime operation under actual scope and existing permission contracts.
 
 The owner currently retains lightweight error recording in existing notes; systematic learning, improvement experiments and comparative measurement are deferred. Completed bounded document duties do not change that scope.
+</details>
 
-## Layout
+## Maintainers
 
-| Directory or file | Holds |
-|---|---|
-| `FORMAT.md` | The format of the neutral files: cards, anchors, norms, calls, versions, adapters. |
-| `concepts/` | The vocabulary and the principles. |
-| `roles/` | The roles of the flow and what they share. |
-| `flow/` | The phases, delegation, run state and finalization. |
-| `process/` | Batches, gates, specification, reconnaissance, review, decisions, publication, safety and the rest of the working process. |
-| `protocols/` | The shapes of the documents that pass between roles. |
-| `policies/` | Autonomy, credentials, language and model choice. |
-| `prompting/` | How to design and verify the prompts of agents. |
-| `code/` | The code layer: markup, logging, tests, navigation, documentation build. |
-| `checks/` | What each check verifies; `checks/conform.md` describes the tool. |
-| `documents/` | Conventions for project documents and their templates. |
-| `runtime/` | The adapter contract, its JSON Schema, the capability registry and the parameter registry. |
-| `implementations/` | Typed implementation packages with their own declared formats, complete inventories, adapters, tests and maps; every intended public member remains in publication/privacy coverage. |
-| `implementations/codex/` | The native Codex source package, own format/inventory/adapter/tests/map; separate from neutral membership, included in public privacy coverage. |
-| `implementations/claude/` | The native Claude Code plugin package, own layout/adapter/tests/map; loaded in place; separate from neutral membership, included in public privacy coverage. |
-| `examples/` | A working example adapter and the small harness it describes. |
-| `bin/`, `tools/` | The `conform` command: a launcher and the Python package behind it. |
-| `tests/` | The tests of the tool and of the repository, and their map in `tests/test_guide.md`. |
-| `SPEC_VERSION`, `CHANGELOG.md` | The version of the methodology and its history. |
+Start at [AGENTS.md](AGENTS.md), then the sole current [VISION](examples/pm-project/VISION.md), [ROADMAP](examples/pm-project/ROADMAP.md), [TASKS](examples/pm-project/TASKS.md) and [HANDOFF](examples/pm-project/HANDOFF.md). Preserve current grants and foreign work; develop in an isolated worktree and deliver a reviewed branch/PR. Local integration, installed activation and public publication retain their matching owner decisions.
 
-Local untracked execution state and evidence metadata are separate from the complete tracked publication set. Publication verification includes every tracked public member with its full bytes and modes; native-bearing working-tree scans report their different population and any failures separately. This local metadata is not a deployed harness or evidence of runtime adoption.
+## Local use
 
-## How a harness adopts it
+<details>
+<summary>Persistent package configuration and safe checkout practices</summary>
 
-A harness keeps one JSON file, the adapter, in its own repository or its declared owned implementation package here. In it the harness accounts for every neutral file,
-meets every capability and sets every parameter. `runtime/adapters.md` states the contract and
-`runtime/adapter.schema.json` is its JSON Schema.
+The packages read neutral owners and package files from disk. Claude loads the canonical checkout in place; an installed Codex transport loads a complete snapshot of an accepted release. Whatever lies in the checkout a harness is pointed at is therefore what every session on that machine follows. The rules below keep that checkout equal to accepted `main` for every agent that works in this repository.
 
-Each neutral file is taken in one of four ways:
+1. Point each harness at its package in the main checkout of this repository. Claude Code: set `CLAUDE_CODE_PLUGIN_DIRS` to `<checkout>/implementations/claude` in the `env` of the user settings (Claude Code 2.1.280 or later; it also applies to desktop sessions, which take no command-line flags). For Codex, install the complete release snapshot with its generated root transport manifest; keep the nested package and neutral owners together.
+2. Keep the main checkout on `main`. Do not check out another branch there and do not leave uncommitted edits to neutral or package files in it; develop on a branch in a separate worktree and merge into `main`. Accepted changes reach new in-place sessions as soon as `main` holds them; `git pull` or a merge updates Claude. Rebuild/reinstall the complete snapshot to update cached Codex installations.
+3. Try unmerged package changes in one session only, with `claude --plugin-dir <worktree>/implementations/claude`.
+4. Do not link a package into a discovered skills directory: a symlinked plugin keeps the link path in `${CLAUDE_PLUGIN_ROOT}`, so `../../` resolves outside the repository and every neutral reference misses.
+5. Before switching a user-level configuration to a package, save the previous configuration and the links it replaces, so the switch can be undone in one step.
 
-1. By reference: the harness keeps no copy and points at one of its own files that names the neutral file's id or path.
-2. Vendored with a hash: the harness keeps a copy and records the SHA-256 of the neutral bytes; the tool reports the copy
-   stale when the neutral file moves on.
-3. Vendored with overrides: the copy differs in named sections, and each difference carries an anchor, a reason, an owner
-   and a date or a trigger.
-4. Not applied: the harness does not adopt the file and gives a reason.
-
-Capabilities (`runtime/capabilities.md`) are the adaptation points the neutral text may call. For each one the adapter
-gives a `mechanism`, a `fallback`, or both. Parameters (`runtime/parameters.md`) are the values the neutral text may
-call; the adapter gives each a non-empty value.
-
-The steps:
-
-1. Copy `examples/adapter.example.json` into the harness's repository or owned declared package and set `harness`, `owner`, `spec_version` and
-   `spec_root`. Paths in the file are absolute or relative to the directory of the adapter file.
-2. Choose one of the four ways for every neutral file listed in `files`.
-3. Give every capability a mechanism, a fallback, or both.
-4. Give every parameter a value.
-5. Run `bin/conform adapter ADAPTER.json` until it exits 0, and read every warning.
-
-The example adapter and its small harness sit in `examples/`; they are fixtures for the tests and belong to no real
-harness. [Flow-contract cases](examples/flow-contract/README.md) demonstrate a bounded consumer of selected actual
-normative clauses, with independent expected decisions and scratch omission/contradiction controls. The consumer
-verifies this example's interpretation and process delivery; it does not execute a live harness or prove every norm
-enforced by an adapter. Its documented subset and limits accompany its invocation.
-[Model-economy cases](examples/model-economy/README.md) provide eleven finite decisions and five prose mutation
-controls for independent review of the selection policy. They define no executable dispatcher and demonstrate no
-live adoption or measured savings.
-
-[Design-contract fixtures](examples/design-contract/README.md) contain two generic plans, actual XML and map/source
-identity files, distinct negative examples, a semantic case matrix and six prose controls. These fixtures cover the minimum
-planned CODE contract; the current full graph body adds profiles and grammar beyond this finite fixture population, while the detailed document contract is a draft. These fixtures claim no live
-product or harness adoption.
-
-## Running conform
-
-Python 3 with the standard library is all it needs.
-
-```
-bin/conform self --deny-list FILE [--root DIR] [--json] [--log-level LEVEL]
-bin/conform adapter ADAPTER.json [--json] [--log-level LEVEL]
-```
-
-- `self` checks this repository: the format of every neutral file, the registries, the calls, the version, and a
-  publication scan for private content. The scan needs a deny list, a file of private words one per line that lives
-  outside the repository; without it the mode refuses to run.
-- `adapter` checks an adapter against the spec it names: the schema, the spec version, the parameters, the capabilities,
-  the coverage of the neutral files, and each file's way of adoption.
-- `--json` prints the report as one JSON object instead of a table. `--log-level` sends the tool's own trace to standard
-  error; without it nothing goes there.
-
-Exit codes:
-
-| Exit | Meaning |
-|---|---|
-| 0 | No failure. There may be warnings and notes. |
-| 1 | At least one finding failed. |
-| 2 | The check could not run (an input is missing or unreadable). The report is a single `NOT RUN` row. |
-
-`checks/conform.md` describes the table, the summary line, the JSON object and every rule.
-
-## Versions
-
-The methodology is versioned as one unit in `SPEC_VERSION` as `MAJOR.MINOR.PATCH`, and every version has an entry in
-`CHANGELOG.md`. Removing a norm or changing its meaning raises MAJOR; adding a norm or a file raises MINOR; a wording
-change that keeps every meaning raises PATCH. An adapter names the version it was written against, and the tool warns
-when that is older than the repository's.
-
-## Development
-
-```
-python3 -m pytest tests -s -v
-doxygen Doxyfile
-```
-
-The tests cover the tool, the format and the example adapter, and print a trajectory line before each check; the map
-from requirements to tests is `tests/test_guide.md`. The Doxygen build must finish without a message. The code carries
-its own markup (module contracts, region tags, one-line structure diagrams and log lines with an importance level) so
-that a reader who sees only one file can still work with it.
-
-## Project management and maintainer sessions
-
-The general PM layer is now applied in [document conventions](documents/conventions.md), [five forms](documents/templates/INDEX.md), [lifecycle](process/lifecycle.md), [current task/batch](process/batch.md), [session](process/session.md), [decisions](process/decisions.md) and [experience](process/learning.md). It serves different work types; existing software-development roles remain their applicable specialization. Detailed technical document/specification protocols are now substantive drafts; general decision lifecycle (DEC01) and full graph are now substantive drafts; eight prompting and three remaining policy bodies are current bounded drafts with scoped skill packaging. Confirmed conventions/lifecycle/batch/session procedures and five project forms now carry full editable forms and fictional filled cases; six readiness contracts now carry bounded draft bodies/forms/cases; four stubs, wider uninspected F4, learning/evaluation/source responsibilities, operational adoption and publication remain later or unresolved.
-
-Start a maintainer session from [AGENTS](AGENTS.md), which points to the sole current state under examples/pm-project. The root entry is repository-specific and the example adapter explicitly does not apply it to consuming harness behavior. The retained [fictional PM example](examples/pm-integration/README.md) supplies no actual grant or operational effectiveness evidence. This complete repository is the maintained source for the neutral methodology and both implementation packages; earlier export-preparation records are historical, not a second active source. Read [VISION](examples/pm-project/VISION.md), [ROADMAP](examples/pm-project/ROADMAP.md), [TASKS](examples/pm-project/TASKS.md) and [HANDOFF](examples/pm-project/HANDOFF.md) before choosing work. Broader original-source transfer remains unproven. Result acceptance, public visibility, installation and any new native consumer exercise retain their separate decisions.
-
-### Working with another agent
-
-Open a complete checkout of this repository as the project folder in the chosen coding harness. Start at AGENTS.md and the four current records; use relevant owners and the chosen co-located implementation only when the task requires them. Configure an authentic owner-approved Git identity locally before the first commit. Preserve a clean main checkout for package loading, create an isolated worktree for changes, verify the affected contracts and deliver a PR. Future clones obtain the instructions through Git; local identity and credential configuration are machine-local and must be set separately.
-
-For shared rules run conform self with an external private deny list and the example adapter. For package changes run the affected package's tests and adapter as well as root assembly checks. Code changes use the project's documented trace/runtime/map checks and independent judgment where applicable. Documentation-only edits still verify source links and preserved interfaces; do not claim a full native consumer run from a tooling check. The initial source release and all later results retain their own evidence populations.
+</details>
