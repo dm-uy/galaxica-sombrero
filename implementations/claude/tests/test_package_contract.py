@@ -160,7 +160,7 @@ def test_layout_matches_members(caplog):
     LOGGER.info("[IMP:9][test_layout_matches_members][COMPARE] declared=%d actual=%d", len(declared), len(actual))
     _show(caplog.records)
     assert set(layout) == {"package", "version", "profile", "files", "roles"}
-    assert (layout["package"], layout["version"], layout["profile"]) == ("methodology-claude", "2.0.0", "colocated-in-place")
+    assert (layout["package"], layout["version"], layout["profile"]) == ("methodology-claude", "2.0.1", "colocated-in-place")
     assert declared == sorted(declared) and len(set(declared)) == len(declared) == 59
     assert sorted(set(actual) - set(declared)) == [] and sorted(set(declared) - set(actual)) == []
     assert layout["roles"] == {name: "agents/%s.md" % name for name in AGENTS}
@@ -190,10 +190,10 @@ def test_manifest_and_adapter(caplog):
     LOGGER.info("[IMP:9][test_manifest_and_adapter][COVERAGE] files=%d neutral=%d caps=%d params=%d unnamed=%d",
                 len(adapter["files"]), len(neutral), len(adapter["capabilities"]), len(adapter["parameters"]), len(unnamed))
     _show(caplog.records)
-    assert plugin["name"] == "methodology-claude" and plugin["version"] == "2.0.0" and plugin["license"] == "MIT"
+    assert plugin["name"] == "methodology-claude" and plugin["version"] == "2.0.1" and plugin["license"] == "MIT"
     assert not plugin["name"].startswith(("claude", "anthropic"))
     assert adapter["harness"] == "methodology-claude" and adapter["spec_root"] == "../../"
-    assert adapter["spec_version"] == (NEUTRAL / "SPEC_VERSION").read_text().strip() == "3.0.0"
+    assert adapter["spec_version"] == (NEUTRAL / "SPEC_VERSION").read_text().strip() == "3.0.1"
     assert set(adapter["files"]) == neutral and len(neutral) == 71
     assert all(rule == {"mode": "reference", "via": "references/adoption.md"} for rule in adapter["files"].values())
     assert unnamed == []

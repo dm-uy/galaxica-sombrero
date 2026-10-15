@@ -1,14 +1,14 @@
-# Current: M33 PM entry continuity checked locally; integration decision pending
+# Current: M33 accepted; authorized local merge and installation in progress
 
 ## Owner scope and current work
 
-The owner explicitly requested updating AGENTS templates/bootstrap for new projects and meaning-based additive checks for existing entries. [Authentic request, measured routes, exact scope and current evidence](notes/m33-pm-entry.md); [TASKS](TASKS.md); [ROADMAP](ROADMAP.md). Preparation is authorized; do not ask it again. Root owns the isolated codex/m33-pm-entry amendment from clean canonical main f6cd5f5. Source edits are documentation-only; VISION, executable helpers, schemas, released versions and installed packages are unchanged.
+The owner explicitly requested updating AGENTS templates/bootstrap for new projects and meaning-based additive checks for existing entries. [Authentic request, measured routes, exact scope and current evidence](notes/m33-pm-entry.md); [TASKS](TASKS.md); [ROADMAP](ROADMAP.md). Preparation and the subsequent owner-requested local merge/install are authorized; do not ask them again. Root owns the isolated codex/m33-pm-entry amendment from clean canonical main f6cd5f5. The substantive amendment is documentation-only; subsequent patch preparation changes exact binding constants/current assertions and descriptions. VISION, helper algorithms, wire/schema and inventories are preserved; installation effects are recorded only after actual readback.
 
 The two real seeds, shared conventions/bootstrap procedure, both native bootstrap entries, native consumer profile and Codex greenfield pointer now express the early continuity duties and preservation procedure. Bounded synthetic forward/readback checks, original-content preservation comparisons and independent source review support this amendment; actual results/limits are retained in the linked note. Do not claim semantic certification from structural orient results. Original rules, mandatory preambles, equivalent wording and existing paths stay intact; conflicts/unknown purpose or authority stay explicit rather than fabricated.
 
 ## Next action and delivery limits
 
-Present the checked concrete result for its separate integration/delivery decision. Preparation/checks are complete locally, with the README anchor-count finding corrected. No main merge, release, installation or sweep of existing consumers is authorized by this new source-edit request. Retain the owned branch and actual results.
+The owner answered “Сливай и устанавливай.” to the checked result. Complete the authorized local integration/install under the recorded exact scope, with backups and actual binding verification. No consumer sweep, public release or remote push follows. Retain the owned branch and actual results.
 
 ## Retained earlier state
 

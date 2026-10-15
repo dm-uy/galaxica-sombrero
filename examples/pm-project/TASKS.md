@@ -7,7 +7,7 @@ Owner-authorized template/bootstrap source update; [scope, actual routes and evi
 | Task | State | Finish / next action |
 |---|---|---|
 | M33-T1 — early entry duties and additive bootstrap | Checked locally | Both seeds/routes agree; five synthetic forward cases, source/preservation checks and independent review support the scoped amendment. Existing rules and actual homes retained. |
-| M33-T2 — checked result and continuation | Prepared; integration decision pending | Actual checks/limits and independent review retained in the result note. No main merge, release or installation; source preparation grant is settled. |
+| M33-T2 — checked result and continuation | Owner-authorized local merge/install in progress | Owner “Сливай и устанавливай.” retained. Patch bindings and relevant checks prepared; complete local merge, full-snapshot Codex installation and in-place Claude readback, preserving backups. No remote delivery claimed. |
 
 ## M32 — incremental adoption of book-derived findings (current)
 

@@ -3,7 +3,7 @@
 A harness-neutral methodology for agent-driven software development, written as plain Markdown files that no single
 harness owns, and adopted by each harness point by point through an adapter file that a tool can check.
 
-Version: `3.0.0` (see `SPEC_VERSION` and `CHANGELOG.md`).
+Version: `3.0.1` (see `SPEC_VERSION` and `CHANGELOG.md`).
 
 License: [MIT](LICENSE), covering the project's code and associated documentation.
 
@@ -21,7 +21,7 @@ The repository holds three kinds of thing:
   parameters (values a harness sets). Neutral text calls them by name and never writes a value.
 - The `conform` tool, which checks the repository itself and checks a harness's adapter against it.
 
-The status of a file is `stub`, `draft` or `stable`. Version `3.0.0` has 69 drafts and 2 stubs among 71 neutral files.
+The status of a file is `stub`, `draft` or `stable`. Version `3.0.1` has 69 drafts and 2 stubs among 71 neutral files.
 The format, registries, adapter contract and conform tool are complete. Gates, shared role rules, QA/scans and the five
 development-flow subjects and model selection policy have substantive draft bodies. Architect, reconnaissance, the development
 plan, planned CODE and full generic graph, Coder, Debugger, Searcher, Reviewer and PM are also substantive drafts. Minimum Bootstrap preparation is a substantive draft. Exoskeleton, navigation, Doxygen, LDD, tests, AX, data and lints are substantive draft bodies. Document and greenfield/brownfield specification protocols and shared specification validation are substantive F4 drafts; general decision lifecycle (DEC01) and full graph are current F4 bodies; eight prompting and three remaining policy bodies are current bounded drafts; confirmed conventions/lifecycle/batch/session procedures and five project forms are current bounded F4 drafts; principles/glossary/Orient/preflight/run-audit/conditional safety contracts are current bounded drafts; wider uninspected F4 duties and learning F8 remain later. Debugger covers evidenced diagnosis, scoped repair, regression and renewed independent QA; Searcher supplies bounded actual inventory, complete marker/contract reads and ranked evidence under read-only authority; Reviewer judges the complete current result with independent read-only authority, current evidence and parent-owned continuation; PM prepares measured suitable specifications, preserves separate owner decisions and coordinates through declared root authority while inner PM returns scoped evidence; the remaining subjects retain their cards and later homes.
@@ -30,7 +30,7 @@ that a particular harness already enforces it.
 
 ## Native Codex source package
 
-[methodology-codex](implementations/codex/README.md) is the first co-located native source package at version3.0.0, with candidate state schema2. Historical neutral version1.0.0 recorded exactly the FMT-1/FMT-26/REPO-102 boundary changes under unchanged MAJOR policy; current3.0.0 retains all71 neutral paths/69drafts/2stubs and28capabilities/sevenparameters remain. Package native documents use their own declared format and independently checked73-member inventory. Every intended public member, including package Markdown/JSON/Python/extensionless/nested files, remains in the unchanged publication/privacy traversal. Ordinary Markdown outside the declared exceptions is still neutral.
+[methodology-codex](implementations/codex/README.md) is the first co-located native source package at version3.0.1, with candidate state schema2. Historical neutral version1.0.0 recorded exactly the FMT-1/FMT-26/REPO-102 boundary changes under unchanged MAJOR policy; current3.0.1 retains all71 neutral paths/69drafts/2stubs and28capabilities/sevenparameters remain. Package native documents use their own declared format and independently checked73-member inventory. Every intended public member, including package Markdown/JSON/Python/extensionless/nested files, remains in the unchanged publication/privacy traversal. Ordinary Markdown outside the declared exceptions is still neutral.
 
 Supported profile: complete co-located checkout and explicit loading of the current candidate entry/roles/protocols/runtime/adapter and full neutral core. The [package adapter](implementations/codex/adapter.json) resolves `../../` from its own directory. Missing/stale/incomplete required binding blocks dependent work; another caller cwd does not alter it. A Codex install may carry a complete co-located repository snapshot in its cache: the generated transport manifest at the snapshot root points `skills` to `./implementations/codex/skills/`. The nested package, adapter and neutral owners retain their original paths. A package-only cache copy remains unsupported. Reinstall the snapshot after an accepted release; installation does not prove native behavioral acceptance. Actual native smoke and source checks have their own current evidence and limits.
 
@@ -51,7 +51,7 @@ Codex2.2 additionally supplies an explicit opt-in consumer PM profile,13 seeds/f
 
 ## Native Claude Code package
 
-[methodology-claude](implementations/claude/README.md) 2.0.0 is the co-located Claude Code plugin for neutral 3.0.0. It consolidates the project's Claude Code practices into one maintained home: 28 skills (the 23 Codex-parity topics and five owner-invoked PM lifecycle commands), six role subagents with pinned model tiers and tool limits (the judges have no edit tools; no role can delegate), a SessionStart binding check, a PreToolUse guard for unrecoverable commands, a `feature-dev` Workflow spine aligned to the current flow, the run-state and visual-gate helpers, and an adapter accounting all 71 neutral files, 28 capabilities and seven parameters. This release binds the current shared neutral owners.
+[methodology-claude](implementations/claude/README.md) 2.0.1 is the co-located Claude Code plugin for neutral 3.0.1. It consolidates the project's Claude Code practices into one maintained home: 28 skills (the 23 Codex-parity topics and five owner-invoked PM lifecycle commands), six role subagents with pinned model tiers and tool limits (the judges have no edit tools; no role can delegate), a SessionStart binding check, a PreToolUse guard for unrecoverable commands, a `feature-dev` Workflow spine aligned to the current flow, the run-state and visual-gate helpers, and an adapter accounting all 71 neutral files, 28 capabilities and seven parameters. This release binds the current shared neutral owners.
 
 Supported profile: loaded in place with `claude --plugin-dir implementations/claude` for one session, `CLAUDE_CODE_PLUGIN_DIRS` for every session (see [Local use](#local-use)), or a local directory marketplace, so `${CLAUDE_PLUGIN_ROOT}/../../` reaches the neutral owners. Copied installs are unsupported and report the binding as BLOCKED. Check it with:
 

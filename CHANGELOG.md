@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.1
+
+- Clarify existing PM continuity duties in both AGENTS seeds and bootstrap paths; compare existing entries by meaning and add only missing nonconflicting clauses while preserving project instructions and actual homes.
+- Reissue complete local Codex3.0.1 and in-place Claude2.0.1 bindings over neutral3.0.1. Preserve wire/schema, original helper algorithm pins and inventories; prior behavioral proof gaps remain separate.
+
 ## 3.0.0
 
 - Record the owner-directed lightweight PM boundary: QA belongs to new features/substantial bug fixes; documentation and small corrections use bounded local checks. Agent-first project state synchronizes on material change, grouped progress and before planned compaction/handoff, updating affected records only.

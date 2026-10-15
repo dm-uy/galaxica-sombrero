@@ -571,7 +571,7 @@ def test_layout_driven_count_and_identity(tmp_path, caplog):
     assert state['schema_version'] == 2 and state['contract_version'] == 'methodology-claude/1.0.0'
     assert len(rows) == len(layout['files']) and dropped not in {row['path'] for row in rows}
     assert {'hook-config', 'workflow'} <= kinds
-    assert len(state['bindings']['neutral']) == 71 and state['bindings']['neutral_version'] == '3.0.0'
+    assert len(state['bindings']['neutral']) == 71 and state['bindings']['neutral_version'] == '3.0.1'
     assert state['bindings']['core'] == list(run_state.CORE) and path.is_file()
     logger.info('[IMP:9][test_layout_driven_count_and_identity][RESULT] behavioral assertions completed')
     # END_BLOCK_BusinessLogic
