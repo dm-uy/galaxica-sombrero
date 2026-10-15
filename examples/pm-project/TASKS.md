@@ -7,7 +7,7 @@ Owner-authorized template/bootstrap source update; [scope, actual routes and evi
 | Task | State | Finish / next action |
 |---|---|---|
 | M33-T1 — early entry duties and additive bootstrap | Checked locally | Both seeds/routes agree; five synthetic forward cases, source/preservation checks and independent review support the scoped amendment. Existing rules and actual homes retained. |
-| M33-T2 — checked result and continuation | Owner-authorized local merge/install in progress | Owner “Сливай и устанавливай.” retained. Patch bindings and relevant checks prepared; complete local merge, full-snapshot Codex installation and in-place Claude readback, preserving backups. No remote delivery claimed. |
+| M33-T2 — checked result and continuation | Complete locally; remote delivery unfulfilled | Owner “Сливай и устанавливай.” implemented. Local main471c02f, Codex3.0.1 full snapshot enabled/discovered, Claude2.0.1 in-place binding passes; backups and actual checks retained. Closure records follow separately; no remote delivery or consumer sweep. |
 
 ## M32 — incremental adoption of book-derived findings (current)
 

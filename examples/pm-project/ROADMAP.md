@@ -23,7 +23,7 @@ One canonical checkout is the development source; preparation repositories are a
 | M30 | Source integrated through PR6; BLOCKED/qa Debug1/4 retained; native Claude required/deferred, Review/Finalize/full acceptance pending. |
 | M31 | Lightweight PM merged, released and installed; actual completion is in the decision receipt below. |
 | M32 | Current: findings retained; T1 source candidate and T2/T3 bounded checks complete locally; optional practices retained within observed scope. Owner accepted and local main integration completed; prompting0.6.0 installed locally by subsequent explicit grant; remote PR delivery/release remain unfulfilled. |
-| M33 | Checked locally: early entry duties and additive bootstrap; synthetic forward/preservation checks and source review retained. Owner authorized local merge/install; patch preparation and binding checks in progress, remote delivery separate. |
+| M33 | Checked locally: early entry duties and additive bootstrap; synthetic forward/preservation checks and source review retained. Owner-authorized local merge/install complete: neutral/Codex3.0.1, Claude2.0.1; actual discovery/binding evidence retained. Remote delivery remains unfulfilled. |
 | Public visibility | Held; repository remains private. |
 
 ## M33 — PM entry continuity
@@ -32,7 +32,7 @@ One canonical checkout is the development source; preparation repositories are a
 
 ```mermaid
 flowchart LR
-    M33T1["M33-T1 checked: seeds and additive bootstrap"] --> M33T2["M33-T2 active: authorized local merge/install"]
+    M33T1["M33-T1 checked: seeds and additive bootstrap"] --> M33T2["M33-T2 complete locally: merged and installed"]
 ```
 
 ## M32 — incremental improvement route
