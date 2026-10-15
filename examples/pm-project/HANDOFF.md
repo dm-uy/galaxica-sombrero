@@ -1,15 +1,27 @@
-# Current: M31 merged, released and installed
+# Current: M32 findings retained; carrier reconciliation next
 
-## Completed
+## Current work and authority
 
-Owner-authorized lightweight PM change merged through PR8 at3dd4d626. Release v3.0.0 is published in the private repository with the complete co-located archive and SHA256SUMS. Versions: neutral3.0.0 / Codex3.0.0 / Claude2.0.0. [Decision and actual installation receipt](notes/pm-lightweight-direction.md).
+On 2026-10-15 the owner selected stepwise checking and conditional adoption of the book-derived findings. [Full findings, authentic direction, source identities, exclusions and acceptance policy](notes/m32-book-findings.md). [TASKS](TASKS.md) owns runnable steps; [ROADMAP](ROADMAP.md) owns the ordered route.
 
-Codex CLI installed methodology-codex from a complete snapshot of3dd4d626. Its actual app-server discovers all27 enabled skills, including methodology-codex:pm and methodology-codex:feature-dev at the nested package paths. All tracked installed bytes match that release commit. Old personal codex-pm1.0 is disabled and retained. Claude global settings now point to the canonical main package; strict manifest validation and actual SessionStart binding pass against neutral3.0.0. Prior settings and global entry were backed up for rollback. The global fallback entry points at canonical source. Receipt-only maintainer changes after the release do not change the frozen installed snapshot.
+Work is on isolated branch `codex/m32-book-findings`, based on canonical `8d98a5859cbaab73b81bfc2f87b0b798bc0c4101`; canonical main stays clean. Root owns the findings note and affected TASKS/ROADMAP/HANDOFF. VISION and executable/installed sources are unchanged. Recordkeeping is complete locally with relevant checks and explicit limits; integration is pending.
 
-## Next action
+## What is retained
 
-Use a fresh session to consume the new discovery catalog. Continue with a separately bounded single-stream API/database consumer trial when selected; observe actual friction before adding process. QA belongs to new features/substantial bug fixes, while docs and small corrections use relevant local checks. Synchronize only affected agent state on material changes, grouped progress and before planned compaction/handoff.
+Three independent reading lanes covered the supplied book; the parent read its AI instructions. Most practical concepts already exist in canonical methodology. Retained candidates: reconcile conflicting prompting carriers; make long-source extraction delivery verifiable; check existing contracts/session records with a fresh reader. The note also preserves source cautions, an example whose code does not demonstrate its contract, already-covered practices and two conditional hypotheses that are not selected implementation work.
 
-## Retained boundaries
+First-stage reconnaissance located a prompting-plugin source candidate in the owner's `agent-skills` checkout. Its `plugins/prompting-methodology/skills/methodology/SKILL.md` matches the installed 0.5.0 entry byte-for-byte. That entry contains categorical claims already qualified in canonical GRACE/markup/agent design. Carrier files are inventoried; source marketplace metadata says 0.4.0 while plugin metadata says 0.5.0. Actual configured upstream and full semantic review still need checking; source location alone is not upstream release authority.
 
-M30 live native Claude behavioral acceptance remains explicitly deferred; installation and binding checks do not close it. C3 remains exhausted/unaccepted and unmerged; no continuation or counter reset. C4–C6 full proof remains separately scoped. No public visibility change, live Claude model run, full feature-dev or new QA ledger was performed. Original failure/held history and foreign archival work remain intact. Canonical main is the development home; cached Codex snapshots require reinstallation after accepted releases.
+## Next authorized action
+
+Continue M32-T1: verify configured source/marketplace ownership and read the inventoried entry/template/command/agent carriers, then prepare the smallest consistent source and metadata correction and relevant checks. Do not patch installed caches as the maintained source. The owner has already selected this route; do not ask again just to continue its bounded preparation. Inspect source-project instructions before editing another repository, and preserve its existing work.
+
+Delivery/check limits: current GitHub CLI API access cannot resolve the canonical private repository, so no draft PR was created or remote write attempted. Retain the local branch for later delivery. The original transfer deny-list self check passes; the primary list still reports two pre-existing unchanged M31 receipt hits. New source-checkout/marketplace labels were removed; scanner/lists remain unchanged. Independent source/link/readback and whitespace checks support the record packet, not whole-tree privacy cleanliness or operational benefit.
+
+After a stage's actual check, record usefulness/friction and retain/revise/drop/hold before proceeding. Documentation and small corrections follow M31 local checks. New helpers or substantial runtime behavior require concrete scope and the applicable development method. Main merge, release and external installation remain separately reserved decisions. No model-benefit experiment or full consumer trial has been performed by the findings packet.
+
+## Accepted baseline and retained limits
+
+M31 is merged, privately released and installed as neutral3.0.0 / Codex3.0.0 / Claude2.0.0. [Actual receipt and rollback pointers](notes/pm-lightweight-direction.md). Installed Codex is frozen at released `3dd4d626`; later maintainer records are not repackaged bytes. Claude uses the canonical in-place package. The source-record update here does not change either installation.
+
+M30 live native Claude behavioral acceptance remains explicitly deferred. C3 remains exhausted/unaccepted and unmerged; no counter reset or continuation. C4–C6 proof remains separately scoped. The full single-stream API/database trial retains its accepted-minimal-safeguard prerequisite; M32 read-only document checks do not close it. Original failure/held history and foreign archival work remain intact. No public visibility change or broad learning/measurement program is activated.

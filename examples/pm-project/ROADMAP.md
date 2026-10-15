@@ -1,6 +1,6 @@
 # Methodology project route
 
-## Current: M31 lightweight PM clarification; earlier proof gaps retained
+## Current: M32 incremental book-derived improvements; earlier proof gaps retained
 
 One canonical checkout is the development source; preparation repositories are archival. Canonical main now includes M30 source through owner-approved PR6, neutral2.0/Codex2.4/Claude1.1; accepted C2/bafec417 is its foundation. C3 is not ready for merge. [Current C3 history/result](notes/m28-c3-result.md).
 
@@ -21,8 +21,29 @@ One canonical checkout is the development source; preparation repositories are a
 | M28-C4 | SDK/import/candidate capacity owed/held after the selected practical consumer trial. |
 | M29/C5–C6 | Autonomy/resume/isolation proof and actual source-loader handover owed/held after matching decisions. |
 | M30 | Source integrated through PR6; BLOCKED/qa Debug1/4 retained; native Claude required/deferred, Review/Finalize/full acceptance pending. |
-| M31 | Owner-directed lightweight PM documentation prepared locally; no QA, release/merge/activation not performed. |
+| M31 | Lightweight PM merged, released and installed; actual completion is in the decision receipt below. |
+| M32 | Current: findings retained; source reconciliation reconnaissance active, followed by document-extraction checks and fresh-reader usefulness checks, with adoption conditional on observed results. |
 | Public visibility | Held; repository remains private. |
+
+## M32 — incremental improvement route
+
+The owner selected this route on 2026-10-15: record all book-derived findings, verify incrementally and adopt useful results. [Findings, original authority, source identities and limits](notes/m32-book-findings.md); runnable work stays in [TASKS](TASKS.md).
+
+1. **Current — carrier consistency:** verify the actual prompting-plugin source/binding, reconcile conflicting entries/templates/agents and check the smallest candidate. Source candidate and installed-entry equivalence are observed; no plugin edit/release is claimed.
+2. **Next — document extraction:** check a short TOC/anchor/range/delivery-coverage recipe inside the existing workflow, including truncated and stale sources; retain/revise/drop against observed usefulness.
+3. **Then — fresh-reader usefulness:** exercise existing session/contract recovery expectations without author chat history, preserving omissions and unsupported inferences. A read-only check is distinct from the full consumer trial.
+
+This is the dependency view for M32 only; older checkpoint rows retain their original states and evidence:
+
+```mermaid
+flowchart LR
+    M32T1["M32-T1 current: carrier consistency"] -->|record disposition| M32T2["M32-T2 next: document extraction"]
+    M32T2 -->|record disposition| M32T3["M32-T3 then: fresh-reader usefulness"]
+```
+
+Carrier consistency comes first because contradictory active instructions can undermine either later check. Each stage records its question, candidate, actual result, benefit/friction, retain/revise/drop/hold disposition and next action. Findings alone do not approve a new compulsory procedure. Main integration, release and activation remain separate decisions over concrete results.
+
+Replan basis: previously the next proposed practical route was a smaller safeguard followed by the API/database trial. The owner now selects M32's bounded instruction/document checks first. The full trial's original safeguard prerequisite remains; C3 exhaustion, M30 Claude deferral and C4–C6 obligations are preserved. No new safety design or failed-run continuation is authorized by this reordering.
 
 ## Retained C3 escalation
 

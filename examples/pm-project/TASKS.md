@@ -1,5 +1,20 @@
 # Current maintainer tasks
 
+## M32 — incremental adoption of book-derived findings (current)
+
+Owner-selected on 2026-10-15: retain all findings and progress step by step, checking and adopting useful results. [Authority, complete findings and acceptance policy](notes/m32-book-findings.md). This is bounded research/document work under M31; implementation, integration and activation keep their applicable boundaries.
+
+| Task | State and dependency | Observable finish / next action |
+|---|---|---|
+| M32-T0 — retain findings and route | Complete locally; integration pending | Findings and route saved; independent source/link/readback and whitespace checks pass. Original transfer-list self passes; primary-list inherited hits and remote delivery limit are retained in the note. |
+| M32-T1 — reconcile prompting carriers | Active: source reconnaissance | Source/installed entry hashes match; file inventory and source marketplace/version discrepancy recorded. Verify configured upstream and dependent carriers' meaning; prepare the smallest consistent correction and relevant checks before release/integration decisions. |
+| M32-T2 — verify document extraction | Selected, after T1 disposition | Draft the short existing-workflow recipe; exercise valid/missing/duplicate/stale/truncated source cases; retain/revise/drop from actual evidence. No automatic helper or new mandatory skill. |
+| M32-T3 — verify fresh-reader usefulness | Selected, after T2 disposition | Bounded read-only recovery check using existing records/contracts; retain actual errors, limits and usefulness. Full API/database trial still needs its original safeguard prerequisite. |
+
+Root is the sole writer of `notes/m32-book-findings.md`, TASKS, ROADMAP and HANDOFF in the isolated `codex/m32-book-findings` branch. Source book, source prompting plugin, installed caches, workflow helpers/registries and VISION remain read-only in the recordkeeping packet. Stop on ownership conflict, unresolved consequential effects, scope expansion or a required failed/unavailable check. Inspect the actual candidate before deciding adoption; preserve negative findings and held work. No main merge, release or installation is implied by this route grant.
+
+Retained older tasks below keep their original states and dispositions. M32 does not restart C3, waive M30 Claude proof or activate the broad deferred learning/measurement program.
+
 ## M28-C3 safeguards — terminal escalation
 
 This retained C3 action is closed as an exhausted bounded run; no C3 Code continues here. Actual A3 state is ESCALATED/review at source candidatec5110484; prior spend2 plus A3spend2 exhaust Debug4/global4. Historical correction1 and every earlier failure remain retained. [Full result/history](notes/m28-c3-result.md), [specification](specs/m28-c3-safeguards.md), [approved plan](plans/m28-c3-safeguards.md).
