@@ -48,7 +48,7 @@ Prepared and independently checked: exactly HANDOFF, VISION, ROADMAP, TASKS and 
 
 An independent read-only source reviewer checked the current links/anchors, cited mechanisms, manifest versions, owner steering, verbatim preservation of the previous baton and cold-reader recovery. The candidate preserves C3/M30/history and introduces no implementation/adoption grant. The worker made no file/Git writes. A final root readback covers only the subsequent factual check-status wording.
 
-Concrete-result integration remains pending. A local commit and review delivery do not by themselves authorize main merge, installation or a new release. Do not claim the canonical main contains M36 until the actual result decision and integration are recorded.
+Concrete-result integration remains pending. Source and initial check-status wording are committed as `1019081` on `codex/m36-session-handoff`; this later closure records the actual delivery limit. Automatic action review refused the attempted GitHub branch push and then the attempted local canonical-main fast-forward because matching publication/integration decisions were not explicit. Both operations were refused before execution: canonical main and remote main remain at the starting identity; no PR exists, and there was no installation. No workaround or retry was performed. The owner must explicitly authorize the reviewed result's local main integration and, separately or together, its GitHub delivery. A local commit does not by itself authorize main merge or a new release. Do not claim canonical main contains M36 until actual integration is checked and recorded.
 
 ## Previous baton — historical, superseded by M36
 

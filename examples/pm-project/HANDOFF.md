@@ -2,7 +2,7 @@
 
 ## Owner decisions
 
-The owner authorized this record synchronization and transfer of important chat conclusions. The isolated candidate passed bounded checks and independent source/fresh-reader review; concrete-result integration remains pending; delivery status is in the [M36 continuation record](notes/m36-session-handoff.md). No next framework implementation/specification is newly approved. M30 native Claude remains explicitly deferred; C3 remains exhausted.
+The owner authorized this record synchronization and transfer of important chat conclusions. The isolated candidate passed bounded checks and independent source/fresh-reader review. Automatic action review refused both external push and local canonical-main integration because distinct matching decisions were missing; neither occurred; delivery status is in the [M36 continuation record](notes/m36-session-handoff.md). No next framework implementation/specification is newly approved. M30 native Claude remains explicitly deferred; C3 remains exhausted.
 
 ## Current state
 
