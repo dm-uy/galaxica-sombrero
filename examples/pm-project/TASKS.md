@@ -6,7 +6,7 @@ Owner reported that a fresh-machine agent did not infer personal plugin installa
 
 | Task | State | Finish / next action |
 |---|---|---|
-| M35-T1 — explicit personal plugin entry | Checked locally | README/AGENTS installation route, reproducible snapshot and native installation instructions independently exercised in an isolated temporary Codex profile. Main integration/push not authorized for this packet. |
+| M35-T1 — explicit personal plugin entry | Integrated and pushed | README/AGENTS installation route, reproducible snapshot and native installation instructions independently exercised in an isolated temporary Codex profile. Owner-requested fast-forward merge and origin/main push completed; remote HEAD matched. Record closure follows under the same grant. |
 
 ## M34 — README presentation (current)
 

@@ -1,4 +1,4 @@
-# Current: M35 personal Codex installation instructions checked locally
+# Current: M35 personal Codex installation instructions merged and pushed
 
 ## Current work
 
@@ -8,7 +8,7 @@ Root README identifies the personal plugin route near the top and supplies an ag
 
 ## Next action
 
-Checked candidate is ready for the owner's result decision. Relevant root tests pass9, both original private self checks pass24 each and Codex adapter pass76 after correcting initial privacy failures without weakening checks. Independent final-recipe packaging and native installation/list passed in an isolated temporary Codex profile with tracked bytes/modes and neutral bindings intact. Fresh interactive catalog and the actual other machine were not tested. No matching M35 main merge/push decision has been given; the previous M34 push grant covered that delivered packet.
+The owner explicitly requested “Сливай и пушь.” Canonical main fast-forwarded from7f8b03c to the checkedc4bf1f3 without conflicts. Native Git push succeeded and remote refs/heads/main readback matchedc4bf1f325f245f0e2b97e32d1ad00a341216f91f. This record closure follows under the same delivery grant. Relevant root tests pass9, both original private self checks pass24 each and Codex adapter pass76 after correcting initial privacy failures without weakening checks. Independent final-recipe packaging and native installation/list passed in an isolated temporary Codex profile with tracked bytes/modes and neutral bindings intact. Fresh interactive catalog and the actual other machine were not tested. M35 source integration and delivery are complete. No further M35 merge/push approval is owed; this does not install the package on another machine or change public visibility.
 
 ## Retained baseline
 

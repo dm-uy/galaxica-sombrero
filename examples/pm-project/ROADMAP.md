@@ -1,6 +1,6 @@
 # Methodology project route
 
-## Current: M35 installation entry checked locally; M34 delivered; earlier proof gaps retained
+## Current: M35 installation entry merged and pushed; earlier proof gaps retained
 
 One canonical checkout is the development source; preparation repositories are archival. Canonical main now includes M30 source through owner-approved PR6, neutral2.0/Codex2.4/Claude1.1; accepted C2/bafec417 is its foundation. C3 is not ready for merge. [Current C3 history/result](notes/m28-c3-result.md).
 
@@ -25,7 +25,7 @@ One canonical checkout is the development source; preparation repositories are a
 | M32 | Current: findings retained; T1 source candidate and T2/T3 bounded checks complete locally; optional practices retained within observed scope. Owner accepted and local main integration completed; prompting0.6.0 installed locally by subsequent explicit grant; remote PR delivery/release remain unfulfilled. |
 | M33 | Checked locally: early entry duties and additive bootstrap; synthetic forward/preservation checks and source review retained. Owner-authorized local merge/install complete: neutral/Codex3.0.1, Claude2.0.1; actual discovery/binding evidence retained. Remote delivery remains unfulfilled. |
 | M34 | Checked locally: reader-oriented README and two diagrams, preserved contracts and local visual checks. Owner-approved local integration and canonical main push complete; public release remains held. |
-| M35 | New-machine installation entry and complete-snapshot instructions checked locally, including isolated native CLI installation. Main integration/push and live user installation are separate. |
+| M35 | New-machine installation entry and complete-snapshot instructions checked locally, including isolated native CLI installation. Owner-requested main integration/push complete with remote readback; actual other-machine installation remains separate. |
 | Public visibility | Held; repository remains private. |
 
 Canonical delivery update2026-10-15: owner-requested direct push delivered the canonical M32/M33/M34 commits. This supersedes earlier canonical-PR delivery holds below; no PR was created. Separate prompting-source upstream and public visibility/release remain outside that push.
