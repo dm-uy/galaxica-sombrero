@@ -24,7 +24,7 @@ One canonical checkout is the development source; preparation repositories are a
 | M31 | Lightweight PM merged, released and installed; actual completion is in the decision receipt below. |
 | M32 | Current: findings retained; T1 source candidate and T2/T3 bounded checks complete locally; optional practices retained within observed scope. Owner accepted and local main integration completed; prompting0.6.0 installed locally by subsequent explicit grant; remote PR delivery/release remain unfulfilled. |
 | M33 | Checked locally: early entry duties and additive bootstrap; synthetic forward/preservation checks and source review retained. Owner-authorized local merge/install complete: neutral/Codex3.0.1, Claude2.0.1; actual discovery/binding evidence retained. Remote delivery remains unfulfilled. |
-| M34 | Checked locally: reader-oriented README and two diagrams, preserved contracts and local visual checks. Integration decision pending; no public delivery. |
+| M34 | Checked locally: reader-oriented README and two diagrams, preserved contracts and local visual checks. Owner-approved local main integration complete; remote/public delivery still unfulfilled. |
 | Public visibility | Held; repository remains private. |
 
 ## M34 — README presentation
@@ -33,7 +33,7 @@ Owner-selected polish of the public-facing entry, not permission to publish. [Re
 
 ```mermaid
 flowchart LR
-    M34T1["M34-T1 checked: README and diagrams"] --> M34T2["M34-T2 prepared: integration decision"]
+    M34T1["M34-T1 checked: README and diagrams"] --> M34T2["M34-T2 complete: local main integration"]
 ```
 
 ## M33 — PM entry continuity

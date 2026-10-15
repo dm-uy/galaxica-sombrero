@@ -21,3 +21,7 @@ Raw rendering receipt/screenshots and check evidence are retained privately unde
 README preparation is complete locally; independent final source/record verification and relevant checks support the exact reviewed candidate. Main integration and remote/public delivery remain separate matching actions. Earlier M33 local merge/install is complete and not reopened; M32/M33 remote delivery is still unfulfilled, public visibility held, M30 native Claude behavioral proof deferred, C3 exhausted/unaccepted/unmerged and C4–C6 separate.
 
 Closure checks: both unchanged original privacy self checks returned exit0; diff whitespace check passes. Durable private evidence is retained in canonical common-Git methodology-evidence/M34-20261015/: renderer assets/receipts/screenshots, actual check outputs, reviewed source identity and retained review findings. The archive is outside the tracked publication set.
+
+## Owner decision and actual local integration — 2026-10-15
+
+The owner answered “сливай” to the reviewed README result. Canonical main fast-forwarded from54fe169 to3a6858bb7e669039c1af196d5ab25d78a3be7958 without conflicts; the reviewed README bytes are unchanged. This settles local integration; do not ask again. The present closure synchronizes only current records and is saved separately. No package installation, version change, remote write or public release occurred; previous installed snapshots and all earlier proof/delivery holds remain unchanged.

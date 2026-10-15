@@ -7,7 +7,7 @@ Owner-requested reader-oriented README and diagrams; [result, review history and
 | Task | State | Finish / next action |
 |---|---|---|
 | M34-T1 — concise entry and diagrams | Checked locally | Purpose/quick start/document roles and two Mermaid diagrams; original Local use and responsibility boundaries retained. Relevant tests and local rendering pass. |
-| M34-T2 — retain reviewed result | Prepared; integration decision pending | Save exact result/evidence and current baton. Main merge and delivery need the matching result decision; preparation is already authorized. |
+| M34-T2 — retain reviewed result | Complete locally | Owner “сливай” implemented: reviewed README3a6858b integrated into local main. Closure records follow separately; remote/public delivery remains unfulfilled. No installed update. |
 
 ## M33 — PM entry continuity (current)
 

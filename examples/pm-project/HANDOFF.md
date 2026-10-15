@@ -1,14 +1,14 @@
-# Current: M34 README presentation checked locally; integration decision pending
+# Current: M34 README merged locally; remote delivery held
 
 ## Owner request and prepared result
 
-The owner requested a shorter, clearer README and diagrams explaining the methodology. [Scope, exact implementation, review history and checks](notes/m34-readme.md); [TASKS](TASKS.md); [ROADMAP](ROADMAP.md). Preparation is already authorized; do not ask again. Root owns README and current records in isolated codex/m34-readme from clean54fe169. No package/runtime/rule/version or installed configuration changes.
+The owner requested a shorter, clearer README and diagrams explaining the methodology. [Scope, exact implementation, review history and checks](notes/m34-readme.md); [TASKS](TASKS.md); [ROADMAP](ROADMAP.md). Preparation and the subsequent owner-requested local merge are complete; do not ask again. Root owns README and current records in isolated codex/m34-readme from clean54fe169. No package/runtime/rule/version or installed configuration changes.
 
 README now leads with purpose, PM continuity, project memory and native starting points. Two Mermaid diagrams explain the PM loop and normal approved software flow. Existing Local use and detailed responsibility/coverage constraints remain intact in collapsible sections. Initial overview loss and missing Bootstrap stage were caught and corrected without weakening tests. Local Mermaid renders and desktop/mobile checks support presentation, not live GitHub rendering or consumer behavior. Relevant root tests pass33; final privacy/link/source identities retained with the result.
 
 ## Next action
 
-Present the checked README for its matching integration decision. No main merge, remote/public delivery or installation is performed by this scope. Retain the branch and private evidence. README-only presentation does not require a full software development cycle or immediate installed snapshot replacement.
+The owner answered “сливай”; canonical main fast-forwarded to reviewed3a6858b without conflicts. This closure only synchronizes current records. Local integration is settled; remote/public delivery remains unfulfilled under the prior access limitation. No installation/version change or public release occurred. Retain the branch and private evidence until delivery is resolved; no further source work or merge decision is owed for this local README packet.
 
 ## Retained baseline
 
