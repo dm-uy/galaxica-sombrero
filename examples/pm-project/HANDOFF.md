@@ -1,6 +1,6 @@
 # Current: M35 personal Codex installation instructions merged and pushed
 
-Follow-up: the owner supplied their LinkedIn URL after discussing author attribution. A one-line README credit is prepared in isolated `codex/author-credit`: Created and maintained by Danis Valitov, linking the exact supplied profile. This tiny documentation edit changes no package behavior; local review/commit only, no new main merge/push grant. The M35 delivery below remains complete.
+Follow-up: the owner supplied their LinkedIn URL after discussing author attribution. A one-line README credit was independently checked and committed in isolated `codex/author-credit`: Created and maintained by Danis Valitov, linking the exact supplied profile. The owner then explicitly requested “Сливай, пуш.” Canonical main fast-forwarded to c6e023c, native push succeeded and remote main readback matched the delivered credit. This closure follows under the same delivery grant. No further author-credit merge/push decision is owed. Package behavior and installed configuration are unchanged; M35 delivery below remains complete.
 
 ## Current work
 
