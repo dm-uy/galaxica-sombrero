@@ -25,3 +25,7 @@ Closure checks: both unchanged original privacy self checks returned exit0; diff
 ## Owner decision and actual local integration — 2026-10-15
 
 The owner answered “сливай” to the reviewed README result. Canonical main fast-forwarded from54fe169 to3a6858bb7e669039c1af196d5ab25d78a3be7958 without conflicts; the reviewed README bytes are unchanged. This settles local integration; do not ask again. The present closure synchronizes only current records and is saved separately. No package installation, version change, remote write or public release occurred; previous installed snapshots and all earlier proof/delivery holds remain unchanged.
+
+## Owner-requested canonical push — 2026-10-15
+
+The owner explicitly requested “пуш” after the completed local README merge. A normal push to the configured canonical origin succeeded, advancing remote main from8d98a58 to8ea7e0ccf952f95c2db1b76434b3397975253f69. Independent Git transport readback (ls-remote) matched local HEAD. This delivers the canonical M32/M33/M34 changes by the owner's direct-main instruction; no PR was created and the earlier unavailable PR path was not used. It supersedes prior canonical-delivery-held statements, not their historical observations. The separate prompting-source repository was not part of this push. Public visibility, tags/releases and earlier behavioral proof holds are unchanged. This small current-state receipt is committed and pushed as the same authorized delivery closure.

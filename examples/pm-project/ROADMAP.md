@@ -1,6 +1,6 @@
 # Methodology project route
 
-## Current: M34 README presentation; earlier delivery and proof gaps retained
+## Current: M34 README delivered to canonical main; earlier proof gaps retained
 
 One canonical checkout is the development source; preparation repositories are archival. Canonical main now includes M30 source through owner-approved PR6, neutral2.0/Codex2.4/Claude1.1; accepted C2/bafec417 is its foundation. C3 is not ready for merge. [Current C3 history/result](notes/m28-c3-result.md).
 
@@ -24,8 +24,10 @@ One canonical checkout is the development source; preparation repositories are a
 | M31 | Lightweight PM merged, released and installed; actual completion is in the decision receipt below. |
 | M32 | Current: findings retained; T1 source candidate and T2/T3 bounded checks complete locally; optional practices retained within observed scope. Owner accepted and local main integration completed; prompting0.6.0 installed locally by subsequent explicit grant; remote PR delivery/release remain unfulfilled. |
 | M33 | Checked locally: early entry duties and additive bootstrap; synthetic forward/preservation checks and source review retained. Owner-authorized local merge/install complete: neutral/Codex3.0.1, Claude2.0.1; actual discovery/binding evidence retained. Remote delivery remains unfulfilled. |
-| M34 | Checked locally: reader-oriented README and two diagrams, preserved contracts and local visual checks. Owner-approved local main integration complete; remote/public delivery still unfulfilled. |
+| M34 | Checked locally: reader-oriented README and two diagrams, preserved contracts and local visual checks. Owner-approved local integration and canonical main push complete; public release remains held. |
 | Public visibility | Held; repository remains private. |
+
+Canonical delivery update2026-10-15: owner-requested direct push delivered the canonical M32/M33/M34 commits. This supersedes earlier canonical-PR delivery holds below; no PR was created. Separate prompting-source upstream and public visibility/release remain outside that push.
 
 ## M34 — README presentation
 

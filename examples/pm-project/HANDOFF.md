@@ -1,4 +1,4 @@
-# Current: M34 README merged locally; remote delivery held
+# Current: M34 README integrated and canonical main pushed
 
 ## Owner request and prepared result
 
@@ -8,8 +8,8 @@ README now leads with purpose, PM continuity, project memory and native starting
 
 ## Next action
 
-The owner answered “сливай”; canonical main fast-forwarded to reviewed3a6858b without conflicts. This closure only synchronizes current records. Local integration is settled; remote/public delivery remains unfulfilled under the prior access limitation. No installation/version change or public release occurred. Retain the branch and private evidence until delivery is resolved; no further source work or merge decision is owed for this local README packet.
+The owner answered “сливай”; canonical main fast-forwarded to reviewed3a6858b without conflicts. This closure only synchronizes current records. Local integration is settled. The owner then requested “пуш”; canonical remote main was advanced to8ea7e0c and Git readback matched local HEAD. This receipt follows in the same authorized push closure. No PR was created, installation/version change or public release occurred. Canonical Git delivery is complete; no further source/merge/push decision is owed for this packet. See the push receipt in the linked result note.
 
 ## Retained baseline
 
-M33 local merge/install is complete: neutral/Codex3.0.1 and Claude2.0.1; [receipt](notes/m33-pm-entry.md#actual-local-integration-and-installation). Installed Codex snapshot remains471c02f; current-record closure54fe169 is separate. M32 prompting0.6.0 remains installed. Remote PR delivery remains unfulfilled under prior access limits; public visibility held. M30 native Claude proof remains deferred, C3 exhausted/unaccepted/unmerged without reset, C4–C6 proof and minimal-safeguard prerequisite separate. No earlier completed decision is reopened here.
+M33 local merge/install is complete: neutral/Codex3.0.1 and Claude2.0.1; [receipt](notes/m33-pm-entry.md#actual-local-integration-and-installation). Installed Codex snapshot remains471c02f; current-record closure54fe169 is separate. M32 prompting0.6.0 remains installed. Earlier canonical PR delivery holds are superseded by the owner-requested direct main push; the separate prompting-source upstream was not pushed. Public visibility remains held. M30 native Claude proof remains deferred, C3 exhausted/unaccepted/unmerged without reset, C4–C6 proof and minimal-safeguard prerequisite separate. No earlier completed decision is reopened here.

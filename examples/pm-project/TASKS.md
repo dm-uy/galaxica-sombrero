@@ -7,7 +7,7 @@ Owner-requested reader-oriented README and diagrams; [result, review history and
 | Task | State | Finish / next action |
 |---|---|---|
 | M34-T1 — concise entry and diagrams | Checked locally | Purpose/quick start/document roles and two Mermaid diagrams; original Local use and responsibility boundaries retained. Relevant tests and local rendering pass. |
-| M34-T2 — retain reviewed result | Complete locally | Owner “сливай” implemented: reviewed README3a6858b integrated into local main. Closure records follow separately; remote/public delivery remains unfulfilled. No installed update. |
+| M34-T2 — retain reviewed result | Complete locally | Owner “сливай” implemented: reviewed README3a6858b integrated into local main. Owner-requested canonical push completed and remote HEAD matched; closure receipt follows in the same delivery. No public release or installed update. |
 
 ## M33 — PM entry continuity (current)
 
