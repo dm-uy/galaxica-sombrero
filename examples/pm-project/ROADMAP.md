@@ -22,23 +22,25 @@ One canonical checkout is the development source; preparation repositories are a
 | M29/C5–C6 | Autonomy/resume/isolation proof and actual source-loader handover owed/held after matching decisions. |
 | M30 | Source integrated through PR6; BLOCKED/qa Debug1/4 retained; native Claude required/deferred, Review/Finalize/full acceptance pending. |
 | M31 | Lightweight PM merged, released and installed; actual completion is in the decision receipt below. |
-| M32 | Current: findings retained; source reconciliation reconnaissance active, followed by document-extraction checks and fresh-reader usefulness checks, with adoption conditional on observed results. |
+| M32 | Current: findings retained; T1 source candidate and T2/T3 bounded checks complete locally; optional practices retained within observed scope. Concrete integration decision pending. |
 | Public visibility | Held; repository remains private. |
 
 ## M32 — incremental improvement route
 
 The owner selected this route on 2026-10-15: record all book-derived findings, verify incrementally and adopt useful results. [Findings, original authority, source identities and limits](notes/m32-book-findings.md); runnable work stays in [TASKS](TASKS.md).
 
-1. **Current — carrier consistency:** verify the actual prompting-plugin source/binding, reconcile conflicting entries/templates/agents and check the smallest candidate. Source candidate and installed-entry equivalence are observed; no plugin edit/release is claimed.
-2. **Next — document extraction:** check a short TOC/anchor/range/delivery-coverage recipe inside the existing workflow, including truncated and stale sources; retain/revise/drop against observed usefulness.
-3. **Then — fresh-reader usefulness:** exercise existing session/contract recovery expectations without author chat history, preserving omissions and unsupported inferences. A read-only check is distinct from the full consumer trial.
+1. **Checked locally — carrier consistency:** source candidate53b62f0 reconciles the carriers at draft0.6.0; independent document review, structural checks and actual authoring proof support retaining it for review. Merge/release/install and target readiness remain pending.
+2. **Checked locally — document extraction:** retained the optional recipe after seven synthetic sources, simulated truncation/staleness and actual bounded book extraction. No new mandatory carrier/helper.
+3. **Checked locally — fresh-reader usefulness:** reader recovered authority/holds, caught a synthetic contract contradiction and stale M31 wording; narrow record corrections made. This is a read-only sample, not the full consumer trial.
+4. **Current — integration decision:** source candidate and project records are ready for owner review; main merges, source push, release and installation remain separately bounded actions.
 
 This is the dependency view for M32 only; older checkpoint rows retain their original states and evidence:
 
 ```mermaid
 flowchart LR
-    M32T1["M32-T1 current: carrier consistency"] -->|record disposition| M32T2["M32-T2 next: document extraction"]
-    M32T2 -->|record disposition| M32T3["M32-T3 then: fresh-reader usefulness"]
+    M32T1["M32-T1 checked locally: integration pending"] -->|record disposition| M32T2["M32-T2 checked: optional recipe"]
+    M32T2 -->|record disposition| M32T3["M32-T3 checked: fresh-reader sample"]
+    M32T3 --> M32T4["M32-T4 current: owner integration decision"]
 ```
 
 Carrier consistency comes first because contradictory active instructions can undermine either later check. Each stage records its question, candidate, actual result, benefit/friction, retain/revise/drop/hold disposition and next action. Findings alone do not approve a new compulsory procedure. Main integration, release and activation remain separate decisions over concrete results.
@@ -65,6 +67,6 @@ Terminal BLOCKED/qa retains Debug1/4. The owner deferred native Claude; AC4/Clau
 
 ## M31 — lightweight PM state and development boundary
 
-The owner settled the direction after the PM reflection: state for agents, QA for features/substantial bug fixes, no QA for documentation/small corrections, and affected-record synchronization on material change/grouped progress/before planned compaction. [Decision and scope](notes/pm-lightweight-direction.md). Local shared/native documentation changes are unreleased; next integration needs its owner decision and release-version binding. No new implementation run or experiment. Existing M30 Claude deferral, C3 exhausted history and later trial/C4–C6 route remain retained.
+The owner settled the direction after the PM reflection: state for agents, QA for features/substantial bug fixes, no QA for documentation/small corrections, and affected-record synchronization on material change/grouped progress/before planned compaction. [Decision and scope](notes/pm-lightweight-direction.md). The initial local amendment preceded release; the owner subsequently authorized merge, reissue and installation, completed in the receipt below. Existing M30 Claude deferral, C3 exhausted history and later trial/C4–C6 route remain retained.
 
 M31 release update: the owner authorized merge, reissue and installation of the accepted lightweight PM direction (neutral3.0.0 / Codex3.0.0 / Claude2.0.0). Actual completion is recorded in [the decision receipt](notes/pm-lightweight-direction.md); deferred native Claude acceptance and C3 remain separate.
