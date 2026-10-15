@@ -1,5 +1,14 @@
 # Current maintainer tasks
 
+## M33 — PM entry continuity (current)
+
+Owner-authorized template/bootstrap source update; [scope, actual routes and evidence](notes/m33-pm-entry.md). Root owns the isolated source/record amendment; no bulk consumer mutation, release or installation.
+
+| Task | State | Finish / next action |
+|---|---|---|
+| M33-T1 — early entry duties and additive bootstrap | Checked locally | Both seeds/routes agree; five synthetic forward cases, source/preservation checks and independent review support the scoped amendment. Existing rules and actual homes retained. |
+| M33-T2 — checked result and continuation | Prepared; integration decision pending | Actual checks/limits and independent review retained in the result note. No main merge, release or installation; source preparation grant is settled. |
+
 ## M32 — incremental adoption of book-derived findings (current)
 
 Owner-selected on 2026-10-15: retain all findings and progress step by step, checking and adopting useful results. [Authority, complete findings and acceptance policy](notes/m32-book-findings.md). This is bounded research/document work under M31; implementation, integration and activation keep their applicable boundaries.

@@ -2,6 +2,14 @@
 
 This project explicitly adopts `methodology-consumer-pm/1.0.0`, conventions_version `1.0.0`, mode `single-layer`, layer `.`. Actual declarations in CONVENTIONS.md bind each home; preserve existing alternate homes. Read full entry, then orient and actual vision, roadmap, handoff, tasks, then relevant links. One writer per path; foreign/uncommitted work preserved and reported, never silently discarded/committed.
 
+## Project continuity duties
+
+- Recover the owner's goal, current checkpoint/task, constraints, actual grant and next eligible action from the declared current documents before dependent work. Follow their actual paths and project reading order, then relevant links.
+- Connect the current task to its route outcome and intended product value. Record material changes of direction through the existing decision process; do not invent goals or expand scope to fill a template.
+- Distinguish planned work, observed execution, verified results and owner acceptance using the project's vocabulary and evidence. A status label alone proves none of them.
+- Synchronize only affected records after material changes, grouped routine progress and before planned compaction/handoff. Keep intent, route, current work and present handoff in their own homes; preserve decisions and failed/held history.
+- Leave goal, current state, result/evidence, next authorized action, owner-only decisions and deferred work recoverable without chat. Follow existing writer boundaries; a contributor reports gaps to the custodian rather than editing another owner's records.
+
 ## Product and actual homes
 
 <Fill audience, outcome, current evidence and five actual homes from measured inventory; no placeholder may remain in produced records.> Defaults: AGENTS.md, VISION.md, ROADMAP.md, HANDOFF.md, TASKS.md. Reader: arriving contributor. Writer: assigned custodian only. Update event: actual task/status/result changes and closure. Retention: current/previous baton, linked notes preserve older evidence. Declared layered flow reads root vision/architecture/decisions; flow writes only assigned layer homes, external architect owns root normative records.

@@ -45,6 +45,8 @@ Minimum preparation connects actual project facts and the original human goal to
 - **BOOT-121** MUST: Route an actual in-scope preparation defect through the existing authorized repair path. Stop dependent content-losing migration instead of deleting truth to force readiness. Stop dependent work on an unconfirmed material decision and return its owner.
 - **BOOT-122** MUST: Return actual prepared artifact identities. Return measured outcomes and every remaining gap or refusal. Return the owning scope and next authorized action. Use existing return contracts and keep concrete result approval separate from preparation completion.
 
+For entry preparation under BOOT-114, apply the [entry-duty and additive reconciliation procedure](../documents/conventions.md#documents.conventions.entry). New entries receive the compact early duties and actual home map; existing entries are checked for equivalent coverage and supplemented only within the actual grant, preserving original rules and paths. Include covered/missing/conflicting duties and the post-edit preservation/continuation readback in the existing preparation result. No structural checker output substitutes for that semantic check. This elaborates existing preparation and document-preservation duties; it adds no automatic migration or software phase.
+
 <!-- anchor: process.bootstrap.role-boundary -->
 
 ## Assigned technical authorship

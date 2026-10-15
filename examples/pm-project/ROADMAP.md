@@ -1,6 +1,6 @@
 # Methodology project route
 
-## Current: M32 integrated locally; remote delivery held and earlier proof gaps retained
+## Current: M33 PM entry continuity; M32 remote delivery and earlier proof gaps retained
 
 One canonical checkout is the development source; preparation repositories are archival. Canonical main now includes M30 source through owner-approved PR6, neutral2.0/Codex2.4/Claude1.1; accepted C2/bafec417 is its foundation. C3 is not ready for merge. [Current C3 history/result](notes/m28-c3-result.md).
 
@@ -23,7 +23,17 @@ One canonical checkout is the development source; preparation repositories are a
 | M30 | Source integrated through PR6; BLOCKED/qa Debug1/4 retained; native Claude required/deferred, Review/Finalize/full acceptance pending. |
 | M31 | Lightweight PM merged, released and installed; actual completion is in the decision receipt below. |
 | M32 | Current: findings retained; T1 source candidate and T2/T3 bounded checks complete locally; optional practices retained within observed scope. Owner accepted and local main integration completed; prompting0.6.0 installed locally by subsequent explicit grant; remote PR delivery/release remain unfulfilled. |
+| M33 | Checked locally: early entry duties and additive bootstrap; synthetic forward/preservation checks and source review retained. Concrete integration decision pending; release/install separate. |
 | Public visibility | Held; repository remains private. |
+
+## M33 — PM entry continuity
+
+[Authority, reconnaissance, implementation and result](notes/m33-pm-entry.md); [current tasks](TASKS.md). Owner selected the short entry obligations and safe existing-project supplementation. No bulk consumer rewrite or new executable checker is implied.
+
+```mermaid
+flowchart LR
+    M33T1["M33-T1 checked: seeds and additive bootstrap"] --> M33T2["M33-T2 prepared: integration decision pending"]
+```
 
 ## M32 — incremental improvement route
 

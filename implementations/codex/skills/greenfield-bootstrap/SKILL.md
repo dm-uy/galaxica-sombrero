@@ -16,3 +16,5 @@ Inspect hidden instructions, briefs, source and settled stack. Establish audienc
 Return the actual scoped artifact/evidence and limitations to the assigning parent. A command, template, hash or producer SUCCESS never certifies execution, independence or concrete-result acceptance.
 
 Explicit consumer onboarding uses pm-bootstrap even for an existing project; missing preferred records alone never means greenfield. Preserve existing homes/links and authenticate exact adoption.
+
+When granted preparation materializes an entry, apply process/bootstrap.md and documents/conventions.md#documents.conventions.entry: include early continuity duties/actual homes in a new entry; preserve and only supplement an existing entry after the semantic comparison. This does not grant migration or override project rules.

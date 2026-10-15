@@ -1,23 +1,17 @@
-# Current: M32 integrated and prompting update installed locally; remote delivery held
+# Current: M33 PM entry continuity checked locally; integration decision pending
 
-## Integrated results and authority
+## Owner scope and current work
 
-After the concrete M32 package and its limits were presented, the owner answered “Разрешаю.” on 2026-10-15 to proceeding with the prepared branch merges. That local integration decision is settled; do not ask again. [Authority, results and actual receipt](notes/m32-book-findings.md#owner-integration-decision--2026-10-15); [TASKS](TASKS.md); [ROADMAP](ROADMAP.md).
+The owner explicitly requested updating AGENTS templates/bootstrap for new projects and meaning-based additive checks for existing entries. [Authentic request, measured routes, exact scope and current evidence](notes/m33-pm-entry.md); [TASKS](TASKS.md); [ROADMAP](ROADMAP.md). Preparation is authorized; do not ask it again. Root owns the isolated codex/m33-pm-entry amendment from clean canonical main f6cd5f5. Source edits are documentation-only; VISION, executable helpers, schemas, released versions and installed packages are unchanged.
 
-Source main now contains reviewed prompting candidate `53b62f0` (source version0.6.0); canonical main received reviewed records packet `14191a0`, followed by this closure receipt from the same isolated records branch. Both initial merges were fast-forwards without conflict. Post-merge source bytes match the checked candidate; no foreign work or unrelated branches were changed. Root owns only the M32 records and their narrow M31 correction in this closure.
+The two real seeds, shared conventions/bootstrap procedure, both native bootstrap entries, native consumer profile and Codex greenfield pointer now express the early continuity duties and preservation procedure. Bounded synthetic forward/readback checks, original-content preservation comparisons and independent source review support this amendment; actual results/limits are retained in the linked note. Do not claim semantic certification from structural orient results. Original rules, mandatory preambles, equivalent wording and existing paths stay intact; conflicts/unknown purpose or authority stay explicit rather than fabricated.
 
-T1 reconciles the prompting carriers and metadata. T2 retained the [optional reading recipe](notes/m32-context-reading-recipe.md). T3 recovered authority/holds, identified a synthetic contract contradiction and exposed stale M31 wording, now corrected. Independent document reviews and bounded static/reading checks support the stated scope. Actual skill authoring produced a complete classifier prompt and eleven eval inputs; the classifier remains DRAFT/NOT_RUN for its target. No broad model benefit or full consumer proof is claimed.
+## Next action and delivery limits
 
-## Remaining delivery and next action
+Present the checked concrete result for its separate integration/delivery decision. Preparation/checks are complete locally, with the README anchor-count finding corrected. No main merge, release, installation or sweep of existing consumers is authorized by this new source-edit request. Retain the owned branch and actual results.
 
-The canonical Git remote is readable through configured Git transport, but GitHub CLI cannot resolve the private repository and the built-in browser has no signed-in GitHub session. Canonical PR delivery remains owed/unfulfilled; local integration is not a remote merge. No remote write or PR creation occurred. Source no-push-without-explicit-command direction remains in force.
+## Retained earlier state
 
-The owner subsequently authorized local installation: “Устанавливай обновление локально.” Native Codex plugin add and Claude user-scope plugin update installed/enabled prompting-methodology0.6.0 from the checked local source. Installed payload verification and backup receipt are recorded in [findings](notes/m32-book-findings.md#local-installation--2026-10-15). Restart the affected clients/start a fresh session to refresh their catalogs; this already-running conversation is not evidence of a refreshed catalog. No target classifier eval or remote release was performed. Previous copies and configuration backups are retained privately; no hand edits to installed payloads were used.
+M32 remains accepted/integrated locally; prompting0.6.0 was installed/enabled in both clients and byte-verified, with private backups. [M32 results and installation receipt](notes/m32-book-findings.md#local-installation--2026-10-15). Canonical remote PR delivery is still unfulfilled under the earlier access limitation; source no-push direction remains. No remote write is claimed.
 
-No further source implementation is required for this M32 packet. Retain both branches and private evidence until outstanding remote delivery and access are resolved. Other checkpoint work requires its own existing grant; this closure does not revive deferred/exhausted work.
-
-## Evidence and retained limits
-
-Raw artifacts and readbacks remain in canonical common-Git private `methodology-evidence/M32-20261015/manifest.json`, with final checks/identities under its closure directory and original scratch provenance in findings. Both original privacy self checks and whitespace checks passed before the result decision and again on this integration receipt (both self checks exit0). No scanner/list was changed. Earlier failures and corrective history remain in findings and Git.
-
-M31 remains merged/released/installed as neutral3.0.0 / Codex3.0.0 / Claude2.0.0; [receipt](notes/pm-lightweight-direction.md). M30 live native Claude behavioral acceptance remains deferred. C3 remains exhausted/unaccepted/unmerged, with no counter reset or continuation. C4–C6 proof remains separately scoped, and the full API/database trial still requires accepted minimal safeguards. No public visibility change, remote release, broad learning/measurement program or full consumer trial occurred here.
+M31 release/install remains complete; [receipt](notes/pm-lightweight-direction.md). M30 live native Claude acceptance remains deferred; C3 exhausted/unaccepted/unmerged, no reset; C4–C6 proof and accepted-minimal-safeguard prerequisite for the full trial remain unchanged. This task does not revive them.

@@ -62,6 +62,18 @@ A project may declare read budgets, handoff line caps, short route rows or a max
 
 The output is a usable entry/profile and the necessary current records, with authentic adoption provenance and retained source pointers. Stop dependent work when ownership conflicts, missing authoritative inputs or an ungranted profile migration prevents it; continue other already authorized work. A status-only request reads this map and changes nothing.
 
+<!-- anchor: documents.conventions.entry -->
+
+## Entry duties and additive reconciliation
+
+The entry's early continuity block is a compact navigation/behavior contract under DOC-101, LIFE-103 and SESSION-101–105. Use the [AGENTS form](templates/AGENTS.md#documents.templates.agents.form) for new entries. It makes five existing duties visible: recover actual goal/current task/grant/next action; connect task to route and intended value; distinguish planned/executed/verified/accepted; synchronize affected owning records at the session cadence; leave a usable continuation without chat. Current facts remain in their owning documents, detailed procedures at their adopted homes. Respect project metadata and any mandatory preamble before placing this block; its position implies no model-attention guarantee.
+
+During authorized bootstrap/onboarding or an explicitly requested entry update, inspect the complete existing entry and applicable linked rules before editing. Compare the five duties by meaning, not exact headings, wording, filenames or markers. Record covered, missing and conflicting duties with existing source pointers in the current task/result; no new permanent checklist or registry is required. A matching bootstrap/entry-update grant covers scoped additions; reuse it rather than asking again. Read-only status or ordinary resume does not authorize instruction edits or adoption of a newer profile.
+
+For a new entry, fill the compact block and actual document-home map from measured inputs. For an existing entry, keep covered clauses, original rules, metadata, ordering constraints, document names/paths and links intact; insert only missing nonconflicting duties at the earliest permitted location. Do not replace the entry with the seed, normalize unrelated prose, duplicate an equivalent rule or create shadow documents. If a project requires its entry to remain unchanged, or a proposed duty conflicts with its rules or writer scope, preserve it, record the exact conflict and route only the missing decision. Continue independent granted work. Missing purpose, records or approval stays an explicit gap, not an invented answer or consent.
+
+Read back the actual result and diff: original content is preserved, additions are scoped, actual links resolve, and the arriving reader can recover goal/current/next/authority/result/holds from the declared homes. Repeating the same comparison on that result should propose no further additions unless inputs changed. Report unresolved duties and checks separately. An available structural checker such as an orientation marker check cannot certify this semantic comparison; no automatic entry installer or repair is implied.
+
 <!-- anchor: documents.conventions.cases -->
 
 ## Worked profile cases

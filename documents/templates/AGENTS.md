@@ -10,13 +10,21 @@ status: draft
 
 ## Project record form
 
-The following fenced text is a drafting form, not live neutral metadata or consent. Use actual project instructions, evidence and vocabulary.
+The following fenced text is a drafting form, not live neutral metadata or consent. Use actual project instructions, evidence and vocabulary. For existing entries, apply the additive reconciliation in [conventions](../conventions.md#documents.conventions.entry); do not paste this whole form over them.
 
 ```markdown
 # AGENTS — <Project>
 
 Status: <proposed/accepted profile>; authority: <owner instruction/decision pointer>.
 Live document root: <path>. Archived locations: <paths or none>. Existing binding conventions: <pointer or none declared>. This profile applies only within its granted scope.
+
+## Project continuity duties
+
+- Recover the owner's goal, current checkpoint/task, constraints, actual grant and next eligible action from the declared current documents before dependent work. Follow their actual paths and project reading order, then relevant links.
+- Connect the current task to its route outcome and intended product value. Record material changes of direction through the existing decision process; do not invent goals or expand scope to fill a template.
+- Distinguish planned work, observed execution, verified results and owner acceptance using the project's vocabulary and evidence. A status label alone proves none of them.
+- Synchronize only affected records after material changes, grouped routine progress and before planned compaction/handoff. Keep intent, route, current work and present handoff in their own homes; preserve decisions and failed/held history.
+- Leave goal, current state, result/evidence, next authorized action, owner-only decisions and deferred work recoverable without chat. Follow existing writer boundaries; a contributor reports gaps to the custodian rather than editing another owner's records.
 
 ## Canon and reading order
 
@@ -81,6 +89,14 @@ Every person, approval, revision, source, result and observation below is invent
 # AGENTS — Meadow document review
 
 Profile accepted in this fictional project by the owner at the imaginary planning meeting recorded in TASKS.md#grant-record. Adopted local document profile: meadow-records-1, single-layer, root `.`. Existing binding instruction: preserve evidence qualifications; do not contact anyone or publish without a separate owner decision.
+
+## Project continuity duties
+
+- Recover the owner's goal, current checkpoint/task, constraints, actual grant and next eligible action from AGENTS.md, HANDOFF.md, VISION.md, ROADMAP.md and TASKS.md before dependent work. Follow their actual paths and project reading order, then relevant links.
+- Connect the current task to its route outcome and intended policy-review value. Record material changes of direction through the existing decision process; do not invent goals or expand scope to fill a template.
+- Distinguish planned work, observed execution, verified results and owner acceptance using the project's vocabulary and evidence. A status label alone proves none of them.
+- Synchronize only affected records after material changes, grouped routine progress and before planned compaction/handoff. Keep intent, route, current work and present handoff in their own homes; preserve decisions and failed/held history.
+- Leave goal, current state, result/evidence, next authorized action, owner-only decisions and deferred work recoverable without chat. Follow existing writer boundaries; a contributor reports gaps to the custodian rather than editing another owner's records.
 
 ## Canon and reading order
 
