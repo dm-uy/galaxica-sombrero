@@ -207,6 +207,8 @@ The owner currently retains lightweight error recording in existing notes; syste
 
 ## Maintainers
 
+Created and maintained by [Danis Valitov](https://www.linkedin.com/in/valitov-danis-ildusovich/).
+
 Start at [AGENTS.md](AGENTS.md), then the sole current [VISION](examples/pm-project/VISION.md), [ROADMAP](examples/pm-project/ROADMAP.md), [TASKS](examples/pm-project/TASKS.md) and [HANDOFF](examples/pm-project/HANDOFF.md). Preserve current grants and foreign work; develop in an isolated worktree and deliver a reviewed branch/PR. Local integration, installed activation and public publication retain their matching owner decisions.
 
 ## Local use

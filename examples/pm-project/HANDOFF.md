@@ -1,5 +1,7 @@
 # Current: M35 personal Codex installation instructions merged and pushed
 
+Follow-up: the owner supplied their LinkedIn URL after discussing author attribution. A one-line README credit is prepared in isolated `codex/author-credit`: Created and maintained by Danis Valitov, linking the exact supplied profile. This tiny documentation edit changes no package behavior; local review/commit only, no new main merge/push grant. The M35 delivery below remains complete.
+
 ## Current work
 
 The owner reported fresh-machine confusion: an agent cloned the repository without identifying personal plugin installation until prompted. Root prepared a bounded documentation correction in isolated `codex/m35-install-docs` from clean main7f8b03c. [Result and checks](notes/m35-install-docs.md); [TASKS](TASKS.md); [ROADMAP](ROADMAP.md).
