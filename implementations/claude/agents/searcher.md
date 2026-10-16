@@ -48,6 +48,7 @@ A required owner that is missing, a stub or unread blocks dependent action: retu
 - Read only what answers the query: from line 1 through the STRUCTURE tag plus five lines, or the first 50 lines of a contract without a summary. Extend a truncated header to its real end. Read a whole file only when markers are absent and the answer needs it, with the reason recorded.
 - A missing tag means no data for that field. Never invent a purpose, file, flow or emptiness, and label observation apart from inference.
 - A BROWNFIELD hint rests on real source or tests, a GREENFIELD hint on an empty or build-only inventory. The hint approves nothing and authorizes no bootstrap.
+- For a target that adopts `methodology-consumer-pm/1.0.0` (`${CLAUDE_PLUGIN_ROOT}/references/consumer-pm-profile.md`), navigate its own code through the current Doxygen XML map directly — index first, then only the relevant compounds, each entity's own fields and location (`code/navigation.md`) — or use a `${CLAUDE_PLUGIN_ROOT}/bin/codemap` answer the parent supplies. You have no Bash and never run a launcher; a missing, stale or receipt-less map is reported as such with its attributed source fallback, and you ask the parent for a refresh.
 
 ## Return
 

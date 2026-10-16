@@ -28,3 +28,5 @@ Limits:
 - Claude auto-memory and memory plugins are session aids, not project records.
 - No merge, publication or installation follows from this skill, and an inner role never delegates or commits.
 - A missing, stub or unread required owner is BLOCKED.
+
+Consumer PM profile: for an explicitly adopted `methodology-consumer-pm/1.0.0` target, read `${CLAUDE_PLUGIN_ROOT}/references/consumer-pm-profile.md` and the Codex carrier it names, the actual declared homes, packet and baton, and orient at entry with `orient PROJECT` through the launcher `${CLAUDE_PLUGIN_ROOT}/bin/orient`. pm-handoff owns granted closure. Never impose the profile on maintainer records.

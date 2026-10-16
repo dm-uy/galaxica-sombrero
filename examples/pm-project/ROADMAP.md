@@ -1,8 +1,8 @@
 # Methodology project route
 
-## Current: M37 Claude package actualization — patch 2.0.2 checked, C2-port specification awaits the owner
+## Current: M37 Claude package actualization — Claude2.1.0 result accepted, PR awaiting the owner's merge
 
-One canonical checkout is the development source; preparation repositories are archival. Canonical main includes M30 source through owner-approved PR6 and the later M31/M33 updates. Canonical main carries neutral3.0.1/Codex3.0.1/Claude2.0.1; branch `claude/m37-claude-parity` carries Claude2.0.2, pending the owner's integration decision; accepted C2/bafec417 is the historical foundation, not the current version. C3 is not ready for merge. [Current C3 history/result](notes/m28-c3-result.md).
+One canonical checkout is the development source; preparation repositories are archival. Canonical main includes M30 source through owner-approved PR6 and the later M31/M33 updates. Canonical main carries neutral3.0.1/Codex3.0.1/Claude2.0.1; branch `claude/m37-claude-parity` carries Claude2.1.0 in an open PR awaiting the owner's merge; accepted C2/bafec417 is the historical foundation, not the current version. C3 is not ready for merge. [Current C3 history/result](notes/m28-c3-result.md).
 
 | Checkpoint | Current disposition |
 |---|---|
@@ -27,7 +27,7 @@ One canonical checkout is the development source; preparation repositories are a
 | M34 | Checked locally: reader-oriented README and two diagrams, preserved contracts and local visual checks. Owner-approved local integration and canonical main push complete. The repository is now public; that does not create a new packaged release or installed update. |
 | M35 | New-machine installation entry and complete-snapshot instructions checked locally, including isolated native CLI installation. Owner-requested main integration/push complete with remote readback; actual other-machine installation remains separate. |
 | M36 | Completed: checked record synchronization and self-contained chat conclusions integrated into canonical main and pushed under explicit owner approval; [receipt, evidence and preserved baton](notes/m36-session-handoff.md). Next bounded task awaits owner-selected scope. No framework implementation or donor adoption. |
-| M37 | Claude package actualization under the owner's 2026-10-16 scope: patch2.0.2 (carrier parity, install-claim correction, root M31 oracle regression repair) checked locally; live Claude M30 probe run; independent decision packet for the C2 port evaluated (H recommended) and [specification](specs/m37-claude-consumer-profile.md) drafted for owner approval. Nothing merged or pushed. [Record](notes/m37-claude-parity.md). |
+| M37 | Claude package actualization: patch2.0.2, then the C2 consumer PM port as Claude2.1.0 (mechanism H: launchers and carrier referencing the Codex C2 helpers in place). Feature-dev run with independent QA/Review/Finalize; Debug1/4; owner accepted the result with recorded AC5 limits and asked for push + PR; merge after the owner's review. Consumer migrations and in-house plugin retirement follow. [Record](notes/m37-claude-parity.md). |
 | Public visibility | Public, confirmed by GitHub readback on 2026-10-15. Earlier private-release/publication holds remain historical; future releases still need their own scope. |
 
 Canonical delivery update2026-10-15: owner-requested direct push delivered the canonical M32/M33/M34 commits. This supersedes earlier canonical-PR delivery holds below; no PR was created. Separate prompting-source upstream/release remains outside that push. Repository visibility was separately observed as public on 2026-10-15; see [M36](notes/m36-session-handoff.md).

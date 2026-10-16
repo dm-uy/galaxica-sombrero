@@ -4,3 +4,4 @@ __pycache__/
 .pytest_cache/
 tests/.test_counter.json
 .DS_Store
+.methodology/

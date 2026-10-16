@@ -161,27 +161,27 @@ Actor: fresh Claude Code subagent (general-purpose, model opus requested), sessi
 
 ### Files actually read
 
-- `/private/tmp/methodology-m37-claude-parity/examples/pm-project/notes/m37-decision-c2-port/brief.md`
-- `/private/tmp/methodology-m37-claude-parity/prompting/brainstorm.md` (lines 1-82)
-- `/private/tmp/methodology-m37-claude-parity/FORMAT.md` (sections)
-- `/private/tmp/methodology-m37-claude-parity/implementations/codex/references/consumer-pm-profile.md`
-- `/private/tmp/methodology-m37-claude-parity/implementations/codex/README.md` (part)
-- `/private/tmp/methodology-m37-claude-parity/implementations/codex/skills/pm/SKILL.md`
-- `/private/tmp/methodology-m37-claude-parity/implementations/codex/skills/pm-bootstrap/SKILL.md` (grep)
-- `/private/tmp/methodology-m37-claude-parity/implementations/codex/skills/pm/scripts/{orient,codemap,consumer_files,markup_migrate}.py` (headers and greps)
-- `/private/tmp/methodology-m37-claude-parity/implementations/codex/skills/pm/templates/{CLAUDE,AGENTS,HANDOFF}.md`
-- `/private/tmp/methodology-m37-claude-parity/implementations/codex/tests/test_{consumer_pm,consumer_files,codemap,markup_migrate}.py` (greps)
-- `/private/tmp/methodology-m37-claude-parity/implementations/claude/.claude-plugin/plugin.json`
-- `/private/tmp/methodology-m37-claude-parity/implementations/claude/hooks/hooks.json`
-- `/private/tmp/methodology-m37-claude-parity/implementations/claude/references/{package-layout.json,source-disposition.md,claude-runtime.md}`
-- `/private/tmp/methodology-m37-claude-parity/implementations/claude/skills/pm-bootstrap/SKILL.md`
-- `/private/tmp/methodology-m37-claude-parity/implementations/claude/skills/feature-dev/scripts/run_state.py` (binding section)
-- `/private/tmp/methodology-m37-claude-parity/implementations/claude/tests/{test_package_contract,test_session_start,test_guard}.py` (parts)
-- `/private/tmp/methodology-m37-claude-parity/implementations/{codex,claude}/skills/devplan-protocol/scripts/visual_gate_lint.py` (diff)
-- `/private/tmp/methodology-m37-claude-parity/tests/{test_claude_package,test_codex_package,test_c1_review_and_routing,test_skeleton}.py` (parts)
-- `/private/tmp/methodology-m37-claude-parity/tools/conformlib/markdown.py` (grep)
-- `/private/tmp/methodology-m37-claude-parity/bin/conform` (header)
-- `/private/tmp/methodology-m37-claude-parity/documents/templates/HANDOFF.md`
+- `<worktree>/examples/pm-project/notes/m37-decision-c2-port/brief.md`
+- `<worktree>/prompting/brainstorm.md` (lines 1-82)
+- `<worktree>/FORMAT.md` (sections)
+- `<worktree>/implementations/codex/references/consumer-pm-profile.md`
+- `<worktree>/implementations/codex/README.md` (part)
+- `<worktree>/implementations/codex/skills/pm/SKILL.md`
+- `<worktree>/implementations/codex/skills/pm-bootstrap/SKILL.md` (grep)
+- `<worktree>/implementations/codex/skills/pm/scripts/{orient,codemap,consumer_files,markup_migrate}.py` (headers and greps)
+- `<worktree>/implementations/codex/skills/pm/templates/{CLAUDE,AGENTS,HANDOFF}.md`
+- `<worktree>/implementations/codex/tests/test_{consumer_pm,consumer_files,codemap,markup_migrate}.py` (greps)
+- `<worktree>/implementations/claude/.claude-plugin/plugin.json`
+- `<worktree>/implementations/claude/hooks/hooks.json`
+- `<worktree>/implementations/claude/references/{package-layout.json,source-disposition.md,claude-runtime.md}`
+- `<worktree>/implementations/claude/skills/pm-bootstrap/SKILL.md`
+- `<worktree>/implementations/claude/skills/feature-dev/scripts/run_state.py` (binding section)
+- `<worktree>/implementations/claude/tests/{test_package_contract,test_session_start,test_guard}.py` (parts)
+- `<worktree>/implementations/{codex,claude}/skills/devplan-protocol/scripts/visual_gate_lint.py` (diff)
+- `<worktree>/tests/{test_claude_package,test_codex_package,test_c1_review_and_routing,test_skeleton}.py` (parts)
+- `<worktree>/tools/conformlib/markdown.py` (grep)
+- `<worktree>/bin/conform` (header)
+- `<worktree>/documents/templates/HANDOFF.md`
 - `<owner-agent-skills-checkout>/plugins/product-methodology/{.claude-plugin/plugin.json,hooks/hooks.json,bin/codemap,bin/markup-migrate}`
 - AGENTS.md / CLAUDE.md / CONVENTIONS.md greps in `<five-consumer-projects>`
 - `<home>/.claude/settings.json` (grep for `CLAUDE_CODE_PLUGIN_DIRS`)

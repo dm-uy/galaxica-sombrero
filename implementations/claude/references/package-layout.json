@@ -1,6 +1,6 @@
 {
   "package": "methodology-claude",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "profile": "colocated-in-place",
   "files": [
     {
@@ -44,6 +44,18 @@
       "kind": "role"
     },
     {
+      "path": "bin/codemap",
+      "kind": "helper"
+    },
+    {
+      "path": "bin/markup-migrate",
+      "kind": "helper"
+    },
+    {
+      "path": "bin/orient",
+      "kind": "helper"
+    },
+    {
       "path": "examples/smoke-spec.md",
       "kind": "example"
     },
@@ -69,6 +81,10 @@
     },
     {
       "path": "references/claude-runtime.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "references/consumer-pm-profile.md",
       "kind": "documentation"
     },
     {
@@ -202,6 +218,10 @@
     {
       "path": "skills/spec-recon/SKILL.md",
       "kind": "skill"
+    },
+    {
+      "path": "tests/test_consumer_profile.py",
+      "kind": "test"
     },
     {
       "path": "tests/test_guard.py",

@@ -171,22 +171,22 @@ Implications for the spec:
 - The old plugins should stay enabled for each project until its migration is accepted, or the owner explicitly accepts the gap.
 
 ## Files read
-- `/private/tmp/methodology-m37-claude-parity/examples/pm-project/notes/m37-decision-c2-port/{brief,hold-generator-a,hold-generator-b}.md` (full)
-- `/private/tmp/methodology-m37-claude-parity/prompting/brainstorm.md` (lines 9-82); `prompting/verification.md` (rule index)
-- `/private/tmp/methodology-m37-claude-parity/FORMAT.md` (FMT-1, FMT-26..37); `runtime/adapters.md` (grep 109-111); `README.md` (grep); `tools/conformlib/markdown.py` (grep)
-- `/private/tmp/methodology-m37-claude-parity/implementations/codex/`:
+- `<worktree>/examples/pm-project/notes/m37-decision-c2-port/{brief,hold-generator-a,hold-generator-b}.md` (full)
+- `<worktree>/prompting/brainstorm.md` (lines 9-82); `prompting/verification.md` (rule index)
+- `<worktree>/FORMAT.md` (FMT-1, FMT-26..37); `runtime/adapters.md` (grep 109-111); `README.md` (grep); `tools/conformlib/markdown.py` (grep)
+- `<worktree>/implementations/codex/`:
   - `skills/pm/scripts/{consumer_files,orient,codemap,markup_migrate}.py` (targeted sections)
   - `references/{consumer-pm-profile.md,package-layout.json}`
   - `README.md:99`
   - `tests/test_{consumer_pm,codemap,consumer_files,markup_migrate}.py` (grep)
   - `skills/feature-dev/scripts/run_state.py` (grep)
   - `skills/devplan-protocol/scripts/visual_gate_lint.py` (diff)
-- `/private/tmp/methodology-m37-claude-parity/implementations/claude/`:
+- `<worktree>/implementations/claude/`:
   - `references/package-layout.json`
   - `skills/feature-dev/scripts/run_state.py` (grep)
   - `tests/{test_session_start,test_package_contract,test_guard}.py` (grep)
   - README and references (grep)
-- `/private/tmp/methodology-m37-claude-parity/tests/{test_claude_package,test_codex_package,test_c1_review_and_routing,test_skeleton,test_cli}.py` (targeted)
+- `<worktree>/tests/{test_claude_package,test_codex_package,test_c1_review_and_routing,test_skeleton,test_cli}.py` (targeted)
 - `<five-consumer-projects>/{AGENTS,CLAUDE,CONVENTIONS}.md` (front matter and grep, read-only); existence checks for Doxyfile and `.methodology/maps/current.json`
 - `<owner-agent-skills-checkout>/plugins/product-methodology/{hooks/hooks.json,bin/codemap,README.md}`
 - `<home>/.claude/settings.json` (grep); `<home>/.claude/plugins/{installed_plugins,known_marketplaces}.json` (read); session `$PATH`

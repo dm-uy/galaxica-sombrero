@@ -31,3 +31,5 @@ Limits:
 - Do not report a merge, publication or adoption that did not happen.
 - A status-only request edits nothing.
 - A missing, stub or unread required owner is BLOCKED; no installation follows, and an inner role never delegates or commits.
+
+Consumer PM profile: for an adopted `methodology-consumer-pm/1.0.0` target, read `${CLAUDE_PLUGIN_ROOT}/references/consumer-pm-profile.md` and the Codex carrier it names in full. HANDOFF keeps the headings Blocked on the owner, State, Queue and Traps exactly once and in that order, and the orient check of step 5 is `orient PROJECT --check` through the launcher `${CLAUDE_PLUGIN_ROOT}/bin/orient` (bare `orient` only when `command -v orient` resolves to that launcher). Fix only granted defects; name every other failed or unavailable row with its rule under the owner block.

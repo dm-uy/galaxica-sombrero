@@ -63,4 +63,35 @@ Assessment: AC4 and the Claude half of AC5 are supported as bounded observations
 
 ## C2 port decision packet
 
-Consequential-open under BRAIN-104 (package/ownership boundary, shared CLI contract for consumer projects, oracles, long-term maintenance). Brief, persisted unranked HOLD and evaluation live in [m37-decision-c2-port](m37-decision-c2-port/). Pending evaluation and the owner's specification decision.
+Consequential-open under BRAIN-104 (package/ownership boundary, shared CLI contract for consumer projects, oracles, long-term maintenance). Brief, persisted unranked HOLD and evaluation live in [m37-decision-c2-port](m37-decision-c2-port/). Two fresh generators proposed 11 alternatives; a distinct evaluator recommended H (reference the Codex C2 helpers in place, launchers, tripwire) with M1 (byte mirror) as runner-up. The owner approved the [C2-port specification](../specs/m37-claude-consumer-profile.md) on 2026-10-16 («Да, утверждаем H.»), which collapsed the packet to H.
+
+## C2 port — feature-dev run m37-c2-20261016
+
+Interactive root (this Claude Code session) with methodology-claude role agents, framework = an immutable snapshot of main `b8696a2`, run state schema 2 in the untracked local evidence home. Models: searcher haiku; architect, reviewer and finalizer opus; coder, QA and debugger sonnet.
+
+- Bootstrap (one response correction: unknown `map` field) and Architect (one response correction: `mayEdit` not exact paths, stale candidate identity; the helper refused to record that architect-phase control event because the written plan had already changed the candidate — a helper limitation, retained in the evidence). Plan: [m37-claude-consumer-profile](../plans/m37-claude-consumer-profile.md), visual gate PASS (61 nodes).
+- Code SUCCESS after one transport failure (API unreachable); the owner answered «Try again», the root verified the effects (all inside scope, Codex untouched, nothing recorded) and resumed the same coder.
+- Root AC5 live probes (headless Claude Code 2.1.285, `--restricted`, Bash limited to the launchers): pre-Debug run 1 failed N7/E4 because a generic dontAsk denial of a chained command ended Bash use; the rerun with an appended environment note passed. After Debug, attempt 1 failed N7/E4 because the probe allowed only bare launcher names while the fixed carrier calls the absolute path; attempt 2 (absolute-path rules for the same launchers) passed N1, N2, N4–N9 and E1–E5; N3 is only indirectly evidenced (stream-json does not echo the prompt).
+- QA SUCCESS (8 scans), then Review BUG_REPORT with three defects: bare launcher names can be shadowed by another enabled plugin's `bin/` (MEDIUM); launchers crashed with exit 1 on a closed stdout/stderr (LOW); the carrier said a fixture grant never authenticates consent, contradicting the Codex probe route (LOW). Debug 1 of 4 fixed all three with discriminating regression tests; renewed QA and renewed Review were SUCCESS.
+- Finalize (separately assigned Architect) verified everything green and returned BLOCKED on one owner decision: AC5's literal "bare `orient --check`" versus the absolute-path launcher call that the Debug 1 rule requires. Run terminal: BLOCKED, Debug spent 1/4.
+
+Final candidate `9cb1e6e3e8d8465d1e3c3a32733b6d88ea8c4028fd8c61894c2c205a16e62092`: Claude 2.1.0, 64 members; `bin/orient`, `bin/codemap`, `bin/markup-migrate` launchers that execute the Codex C2 scripts of the same checkout with `-B`, unchanged arguments, streams and exit status, or answer one BLOCKED line with exit 2; the by-reference carrier `implementations/claude/references/consumer-pm-profile.md`; routing in nine skills and the searcher; the root tripwire pinning 18 Codex files. Measured on Python 3.12: root 603, Claude 545, Codex 146 passed; launcher tests 19/19 on 3.9 and 3.12; three adapters, `conform self`, `plugin validate` and silent Doxygen maps pass; `implementations/codex` byte-identical to `b8696a2`.
+
+### Owner result decisions (AskUserQuestion, 2026-10-16, verbatim)
+
+- AC5: «Принять (Recommended)» — the absolute-path launcher call counts as meeting AC5; the probe deviations are accepted as recorded; the result is accepted with the named limits below.
+- Integration: «Push + PR, слияние после вас (Recommended)» — push the branch and open a PR to main; the owner merges after review.
+- Ignore rule: «Да (Recommended)» — add `.methodology/` to `.gitignore` in the same PR.
+
+### Post-run documentation corrections (not part of the judged candidate)
+
+After the run the root made documentation-only corrections: the stale package counts in `implementations/claude/examples/smoke-spec.md`; historical "Current" wording and the oracle path count in root `tests/test_guide.md`; the AC5 and validate pointers in the package test guide; `.methodology/` in `.gitignore`; public copies of the plan and decision packet with the run's worktree and probe paths replaced by placeholders (originals kept privately with their hashes); the current maintainer records.
+
+### Limits and follow-ups
+
+- While the in-house `product-methodology` plugin stays enabled, bare `codemap`, `markup-migrate` and `orient` in consumer projects may resolve to either plugin's `bin/`; PATH order between plugins was never measured. Address this in the per-project migrations or by disabling the in-house plugin.
+- C2 `orient` accepts only `methodology-consumer-pm/1.0.0`; the five consumer projects need their own owner-granted migrations before the in-house plugins are disabled.
+- Non-blocking Review observations: a BLOCKED refusal exits 120 instead of 2 when stderr is a broken pipe; `_emit`'s open-stream path writes no own trace event; the launchers' `@purpose` still says "by bare name".
+- The run-state helper cannot record an architect-phase response correction after the plan was written, and has no continuation mechanism for a terminal run; both are retained as package observations.
+- Raw evidence (run state, role returns, live-probe streams, about 1 GB) is kept in the owner's private evidence directory, not in this public repository.
+- Test-environment trap found at the final check: `test_package_contract.py::test_manifest_and_adapter`, several root tests and `bin/conform adapter`/`self` (whose skip list omits `.methodology`) count every `*.md` in the working tree as neutral population, including the ignored local `.methodology/` evidence home once it holds a Markdown report; with such a file present they fail although the candidate is unchanged. Run the suites on a clean export (as QA and Finalize did) until the walk honours the ignore rule.

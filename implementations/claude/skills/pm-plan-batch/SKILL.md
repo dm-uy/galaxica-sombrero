@@ -30,3 +30,5 @@ Limits:
 - Approval of a batch grants no result decision and never enlarges scope; it is not inferred from silence, a default or a filled-in form.
 - The packet custodian alone edits TASKS; every other contributor reports to it.
 - A missing, stub or unread required owner is BLOCKED; no merge, publication or installation follows, and an inner role never delegates or commits.
+
+Consumer PM profile: for an explicitly adopted `methodology-consumer-pm/1.0.0` target, read `${CLAUDE_PLUGIN_ROOT}/references/consumer-pm-profile.md` and the Codex carrier it names in full. The packet uses the profile's TASKS form and S/M/L classes, and `orient PROJECT --check` through the launcher `${CLAUDE_PLUGIN_ROOT}/bin/orient` reports its structural rows before the batch gate. Structural rows never authenticate consent.

@@ -1,5 +1,11 @@
 # Changelog
 
+## Claude source2.1.0 (neutral3.0.1 unchanged)
+
+- Carry the opt-in consumer PM profile `methodology-consumer-pm/1.0.0` by reference to the accepted Codex C2 helpers and seeds (owner decision H, M37): a thin carrier `references/consumer-pm-profile.md`, routing in pm, pm-bootstrap, pm-plan-batch, pm-run-batch, pm-handoff, durable-layer, roadmap, document-protocol, greenfield-bootstrap and the searcher, and three `bin/` launchers (`orient`, `codemap`, `markup-migrate`) that run the sibling Codex scripts in place with `-B`, pass arguments and exit status unchanged and report `methodology-claude BLOCKED:` with exit 2 when the sibling is missing.
+- The launchers skip a standard stream the caller closed instead of failing with exit 1, and a bare launcher name is used only after `command -v` shows it resolves to the package's own `bin/` (the absolute launcher path otherwise, always for `markup-migrate --apply`), because another enabled plugin may ship a command of the same name. The carrier states the fixture-local probe grant in the Codex sense, and its optional hook recipe merges stderr (`2>&1`) so a BLOCKED line reaches the session context.
+- A root tripwire pins the SHA-256 of the 18 Codex files the Claude package depends on. Membership 59 → 64 (three helpers, one documentation carrier, one test); 28 skills, six roles, wire, schema, hooks and helper algorithms are unchanged; Codex is unchanged. No consumer project, user setting or global PATH changes; the optional per-project SessionStart hook is documented, never installed.
+
 ## Claude source2.0.2 (neutral3.0.1 unchanged)
 
 - Carry the current neutral owners faithfully: one-shot/loop external-agent prompt route with the three AGENTPROMPT-103 artifacts, the unsent RUNREV-301 continuation message, and the same neutral owner sets as Codex in the four lifecycle entries (decisions, learning, specification, code-review, safety, session and gates).

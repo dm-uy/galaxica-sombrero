@@ -1,4 +1,4 @@
-# Claude Code runtime — methodology-claude 2.0.2
+# Claude Code runtime — methodology-claude 2.1.0
 
 This is the runtime procedure of the native Claude Code package for neutral methodology 3.0.1. It says how Claude Code carries the neutral rules; it restates none of them. Where this file and a neutral owner seem to differ, the neutral owner wins and the difference is a package defect.
 
@@ -19,6 +19,8 @@ The SessionStart hook checks the binding at every start, resume, clear and compa
 At entry or resume the root (the main session acting for the owner) reads in full `checks/orient.md`, `checks/preflight.md`, `checks/run-audit.md` and `process/safety.md` before the assessments they govern, then the target's entry instructions (`AGENTS.md`, `CLAUDE.md`) and its five durable records (purpose, route, tasks, handoff, instructions) where the project keeps them. Orient and preflight are performed with real reads and permitted commands; the hook output is a pointer, not the assessment. Run all cheap independent checks even after one fails, and withhold only the dependent effects. Read-only work needs no clean tree.
 
 Required reading follows [adoption](adoption.md): the six core owners before any software role acts, the assigned role owner and `protocols/role-returns.md`, and the owners named by the applicable skill. A link, card, hash or summary is not a read. A required owner that is missing, a stub, truncated or unread blocks dependent action.
+
+A target that explicitly adopts the consumer PM profile `methodology-consumer-pm/1.0.0` is oriented at entry with `orient PROJECT` and checked at closure with `orient PROJECT --check` through the package's `bin/` launchers, which run the sibling Codex C2 helpers in place; see [consumer PM profile](consumer-pm-profile.md). A bare name is used only when `command -v` resolves it to the package's own launcher, otherwise the absolute launcher path. A missing sibling Codex package is BLOCKED.
 
 ## 3. Roles, models and permissions
 
@@ -78,6 +80,8 @@ Product code follows the six core owners: semantic exoskeleton on authored code,
 |---|---|---|
 | SessionStart (startup, resume, clear, compact) | `hooks/session_start.py` | Verifies the in-place binding and adds a short context: the bound neutral root or the BLOCKED reasons, the reading duty, and, when the target has an `AGENTS.md`, which of its durable records exist. Never writes, never fails the session. |
 | PreToolUse (Bash) | `hooks/guard_destructive.py` | Asks before commands that would lose unrecoverable state; denies tree-changing commands to read-only agent types; silent otherwise. `METHODOLOGY_GUARD_SCOPE=off` disables it. |
+
+The consumer PM profile adds no package hook; its optional per-project SessionStart recipe lives in [consumer PM profile](consumer-pm-profile.md) and is installed only under a per-project grant.
 
 With hooks disabled (for example `--bare`) the root performs Orient manually and checks scope and effects itself before each operation.
 

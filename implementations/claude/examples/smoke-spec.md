@@ -22,7 +22,7 @@ Write a Python 3.9 standard-library CLI `inventory.py` in the target that reads 
 
 | Id | Criterion |
 |---|---|
-| AC-1 | On the real package the report lists every declared member with its true size and SHA-256; counts equal the layout's (for this package: 59 files, 28 skills, 6 roles, 4 helpers). |
+| AC-1 | On the real package the report lists every declared member with its true size and SHA-256; counts equal the layout's (for this package: 64 files, 28 skills, 6 roles, 7 helpers). |
 | AC-2 | The three refusal cases exit 2, write nothing and name the cause. |
 | AC-3 | Tests use real temporary package copies, print the important trace before asserting, and the expected values are derived from the input bytes, not duplicated constants. |
 | AC-4 | The CLI and tests carry the semantic exoskeleton and LDD; `doxygen Doxyfile` in the target builds silently. |

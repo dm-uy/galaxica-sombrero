@@ -138,23 +138,23 @@ Actor: fresh Claude Code subagent (general-purpose, model opus requested), sessi
 
 ## Files actually read (fully or in excerpts)
 
-- `/private/tmp/methodology-m37-claude-parity/examples/pm-project/notes/m37-decision-c2-port/brief.md` (full; SHA-256 matches 01838020…71c7)
-- `/private/tmp/methodology-m37-claude-parity/prompting/brainstorm.md` (lines 1–60, including both requested sections)
-- `/private/tmp/methodology-m37-claude-parity/FORMAT.md` (FMT-1, versions, adapters)
-- `/private/tmp/methodology-m37-claude-parity/bin/conform`, `tools/conform.py` (head), `tools/conformlib/markdown.py` (excerpt)
-- `/private/tmp/methodology-m37-claude-parity/implementations/codex/`:
+- `<worktree>/examples/pm-project/notes/m37-decision-c2-port/brief.md` (full; SHA-256 matches 01838020…71c7)
+- `<worktree>/prompting/brainstorm.md` (lines 1–60, including both requested sections)
+- `<worktree>/FORMAT.md` (FMT-1, versions, adapters)
+- `<worktree>/bin/conform`, `tools/conform.py` (head), `tools/conformlib/markdown.py` (excerpt)
+- `<worktree>/implementations/codex/`:
   - `references/consumer-pm-profile.md` (headings, lines 13–39)
   - `skills/pm/scripts/{consumer_files,orient,codemap,markup_migrate}.py` (grep excerpts, `resolve_layout`, `orient.main`)
   - `tests/test_consumer_pm.py` (excerpts) and `tests/test_{codemap,consumer_files,markup_migrate}.py` (grep)
   - `README.md` (grep)
   - `skills/{pm,pm-bootstrap,pm-handoff}/SKILL.md` (grep)
   - `skills/feature-dev/scripts/run_state.py` (grep)
-- `/private/tmp/methodology-m37-claude-parity/implementations/claude/`:
+- `<worktree>/implementations/claude/`:
   - `.claude-plugin/plugin.json`, `hooks/hooks.json`, `hooks/session_start.py` (first part)
   - `references/package-layout.json` (head), `references/source-disposition.md`
   - `README.md` and `references/claude-runtime.md` (grep)
   - `skills/pm-bootstrap/SKILL.md`, `adapter.json` (grep)
   - `tests/test_package_contract.py` and `tests/test_session_start.py` (excerpts)
   - `skills/feature-dev/scripts/run_state.py` (constants)
-- `/private/tmp/methodology-m37-claude-parity/tests/`: `test_claude_package.py`, `test_codex_package.py`, `test_c1_review_and_routing.py`, `test_skeleton.py`, `test_cli.py` (excerpts)
+- `<worktree>/tests/`: `test_claude_package.py`, `test_codex_package.py`, `test_c1_review_and_routing.py`, `test_skeleton.py`, `test_cli.py` (excerpts)
 - `<owner-agent-skills-checkout>/plugins/product-methodology/`: `hooks/hooks.json`, `bin/codemap`, `README.md` (grep), `scripts/orient.py` (grep), `CONVENTIONS.md` (head), `.claude-plugin/plugin.json`

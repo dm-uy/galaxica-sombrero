@@ -33,3 +33,5 @@ Limits:
 - No merge, push, publication or deployment without the separate result decision; rejection grants no destructive rollback.
 - Inner roles never delegate or commit; the root alone integrates.
 - A missing, stub or unread required owner is BLOCKED; no installation follows from this command.
+
+Consumer PM profile: for an explicitly adopted `methodology-consumer-pm/1.0.0` target, read `${CLAUDE_PLUGIN_ROOT}/references/consumer-pm-profile.md` and the Codex carrier it names in full. Authenticate the exact packet, task and specification grant before effects, activate the packet and rewrite HANDOFF together, and run `orient PROJECT --check` through the launcher `${CLAUDE_PLUGIN_ROOT}/bin/orient` before activation and before the result decision. A fictional probe quotes its fixture-local grant and never stands in for the consumer's batch or result gate.

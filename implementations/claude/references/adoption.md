@@ -1,4 +1,4 @@
-# Pointwise adoption — neutral 3.0.1 / methodology-claude 2.0.2
+# Pointwise adoption — neutral 3.0.1 / methodology-claude 2.1.0
 
 This file is the `via` carrier of all 71 `reference` entries in [adapter.json](../adapter.json). The adapter and this file resolve `spec_root` (`../../`) from the adapter's own directory, independent of the caller's working directory. Inside Claude Code the same location is `${CLAUDE_PLUGIN_ROOT}/../../`.
 
@@ -11,6 +11,8 @@ This file is the `via` carrier of all 71 `reference` entries in [adapter.json](.
 5. The target project's own instructions win on the code surface (style, tooling, logging idiom); the neutral process layer applies within that authority. This adapter declares no overrides.
 
 Reading an owner assigns no role. The two stub owners (`process/git.md`, `process/publication.md`) are explicitly incomplete: their present duties come from the substantive owners named in their rows, and no carrier claims their bodies.
+
+The opt-in consumer PM profile `methodology-consumer-pm/1.0.0` is carried by reference in [consumer-pm-profile.md](consumer-pm-profile.md); it composes the owners below and changes no row.
 
 ## Owner table
 

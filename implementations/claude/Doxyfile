@@ -6,8 +6,8 @@ OUTPUT_DIRECTORY       = doxygen_output
 CREATE_SUBDIRS         = NO
 OPTIMIZE_OUTPUT_JAVA   = YES
 PYTHON_DOCSTRING       = YES
-INPUT                  = hooks skills/feature-dev/scripts skills/devplan-protocol/scripts tests
-FILE_PATTERNS          = *.py
+INPUT                  = bin hooks skills/feature-dev/scripts skills/devplan-protocol/scripts tests
+FILE_PATTERNS          = *.py orient codemap markup-migrate
 EXTENSION_MAPPING      = no_extension=Python
 RECURSIVE              = YES
 EXCLUDE_PATTERNS       = */.venv/* */venv/* */node_modules/* */doxygen_output/* */__pycache__/* */.pytest_cache/*

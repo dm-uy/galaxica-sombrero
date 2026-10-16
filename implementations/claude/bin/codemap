@@ -1,0 +1,202 @@
+#!/usr/bin/env python3
+# region MODULE_CONTRACT [DOMAIN(9): ConsumerPM, Launcher; CONCEPT(9): InPlaceReference, BlockedNotDegraded; TECH(7): Python, os.execv]
+## @modulecontract
+## @purpose Let a Claude Code session run the Codex C2 codemap helper of the same checkout by bare name, with the helper's own arguments, streams and exit status, and refuse plainly when that helper is missing.
+## @scope Real-path resolution of the sibling Codex script, its validation and the process handoff; no code-map query logic, no fallback location, no default argument.
+## @input Command-line arguments after the program name; environment variable METHODOLOGY_LAUNCHER_LOG (optional level name); this file's own path.
+## @output On success the process becomes the current interpreter running -B on the checkout's implementations/codex/skills/pm/scripts/codemap.py with the same arguments; its stdout, stderr and exit status are the script's. On refusal exactly one methodology-claude BLOCKED line on stderr, nothing on stdout, exit status 2; a standard stream that the caller closed is skipped, never a crash.
+## @links [USES_API(9): os.execv; USES_API(8): os.path.realpath, os.lstat, stat.S_ISREG, os.path.commonpath; USES_API(6): logging; READS_DATA_FROM(9): ../codex/skills/pm/scripts/codemap.py relative to the package root; READS_DATA_FROM(5): environment METHODOLOGY_LAUNCHER_LOG]
+## @links_to_spec examples/pm-project/specs/m37-claude-consumer-profile.md Behavior 2, BR-1, BR-4, BR-6, AC2
+## @invariants
+## - The sibling script is resolved only from this file's real path; no PATH entry, working directory, PYTHONPATH or installed copy is consulted.
+## - Arguments pass unchanged and in order; the only interpreter option the launcher adds is -B.
+## - The launcher writes nothing to stdout; its own trace reaches stderr only when METHODOLOGY_LAUNCHER_LOG names a level.
+## - A standard stream that the caller closed (the interpreter reports it as None) is skipped without a crash: the handoff still happens and a refusal still ends with status 2.
+## - A missing, non-regular or escaping sibling is BLOCKED with exit status 2 and nothing runs.
+## - Python 3.9 syntax and the standard library only.
+## @rationale
+## Q: Why replace the process with os.execv instead of running a child process?
+## A: Exit status, signals, stdin and the terminal stay the script's own; subprocess.run would kill its child on Ctrl-C and would turn a death by signal into a negative code that is not an exit status.
+## Q: Why pass -B?
+## A: It keeps the pinned Codex directory free of bytecode caches, so the launcher never changes a Codex byte (BR-1).
+## Q: Why no fallback to another copy of the helper?
+## A: Another copy may differ from the pinned bytes; a stopped command is recoverable, a silently different one is not.
+## Q: Why skip a closed standard stream instead of failing?
+## A: A caller that closes stdout or stderr is entitled to the script's own behavior and status, and the direct python3 -B call of the script succeeds in that case; a launcher crash would change an observable result (BR-4).
+## @changes
+## LAST_CHANGE: [2.1.0 - Debug 1 of M37-C2: closed standard streams are skipped through _emit instead of raising AttributeError; earlier: initial M37 launcher of the Codex C2 codemap helper.]
+## @modulemap
+## FUNC 5[Attach the opt-in stderr trace handler] => codemap._configure_logging
+## FUNC 7[Write to and flush a standard stream unless the caller closed it] => codemap._emit
+## FUNC 9[Resolve and validate the sibling script inside the checkout] => codemap.resolve_sibling
+## FUNC 9[Hand the process to the sibling script or answer BLOCKED] => codemap.main
+## @usecases
+## - [main]: Claude Code root with the plugin bin on PATH -> codemap PROJECT TARGET -> the Codex codemap report and exit status
+## - [main]: Root on a checkout without the Codex package -> codemap PROJECT TARGET -> one BLOCKED line, exit 2
+## - [main]: Tool runner that closed stdout or stderr -> codemap --help -> the Codex script's own report and status, or BLOCKED with status 2, never a traceback
+## - [resolve_sibling]: Test on an owned copy -> missing, non-regular or escaping sibling -> refusal cause without execution
+## @GREP_SUMMARY Claude Code launcher, codemap, consumer PM profile, in-place reference, Codex C2 helper, realpath, os.execv, -B, BLOCKED exit 2, closed standard streams, no fallback
+## @STRUCTURE ▶ argv → ⊕ realpath(__file__) → ◇ sibling regular ∧ inside checkout ? → 〈⚡ execv(python -B sibling argv) : ⟦BLOCKED line⟧ → ⎋ 2〉
+def _module_contract():
+    pass
+# endregion MODULE_CONTRACT
+
+import logging
+import os
+import stat
+import sys
+
+logger = logging.getLogger("methodology_claude.launcher")
+logger.addHandler(logging.NullHandler())
+
+COMMAND = "codemap"
+SCRIPT = "codemap.py"
+LOG_ENV = "METHODOLOGY_LAUNCHER_LOG"
+BLOCKED_PREFIX = "methodology-claude BLOCKED: "
+LEVELS = ("DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL")
+STATES = {"missing": "missing", "not-regular": "not a regular file", "outside": "outside the checkout"}
+
+
+# region FUNC__configure_logging [DOMAIN(7): Observability; CONCEPT(6): OptInTrace; TECH(6): logging]
+## @purpose Show the launcher's own trace on stderr only when the caller asks for it, so that a normal run stays byte-equal to a direct call of the Codex script.
+## @uses logging.StreamHandler, logging.Formatter, logging.Logger.setLevel
+## @io Input: environ mapping of str to str; the value of METHODOLOGY_LAUNCHER_LOG is read when present. Output: bool, True exactly when the value is one of DEBUG, INFO, WARNING, ERROR, CRITICAL and a stderr handler was attached.
+##   Side effects: attaches one stderr StreamHandler with the message-only format to the module logger, sets its level and stops propagation to the root logger; nothing else. Guarantees: any other value, including an empty or lowercase one, attaches nothing and the launcher stays silent.
+##   Raises: none for a mapping input. System importance: 5. Example: with METHODOLOGY_LAUNCHER_LOG set to INFO the call returns True and later records appear on stderr; with the variable unset it returns False.
+## @complexity 2
+def _configure_logging(environ):
+    # START_BLOCK_Validation
+    level = environ.get(LOG_ENV, "")
+    if level not in LEVELS:
+        return False
+    # END_BLOCK_Validation
+    # START_BLOCK_BusinessLogic
+    handler = logging.StreamHandler(sys.stderr)
+    handler.setFormatter(logging.Formatter("%(message)s"))
+    logger.addHandler(handler)
+    logger.setLevel(level)
+    logger.propagate = False
+    logger.info("[IMP:5][_configure_logging][TRACE_ON] level=%s", level)
+    return True
+    # END_BLOCK_BusinessLogic
+# endregion FUNC__configure_logging
+
+
+# region FUNC_resolve_sibling [DOMAIN(9): ConsumerPM; CONCEPT(9): SiblingResolution, Containment; TECH(8): os.path, stat]
+## @purpose Find the sibling Codex script from this launcher's real path and prove that it is a regular file inside the checkout, so that nothing outside the pinned checkout can ever run.
+## @uses os.path.realpath, os.lstat, stat.S_ISREG, os.path.commonpath, logging
+## @io Input: launcher_file str, the path of the launcher file (relative or through a symbolic link is allowed; it is resolved to its real path). Output: tuple of (sibling str or None, candidate str, cause str); cause is ok, missing, not-regular or outside; sibling equals candidate exactly when cause is ok; candidate is the normalized absolute path where the sibling is expected.
+##   Side effects: one lstat and realpath lookups, no write; one IMP:7 RESOLVE record, then one IMP:9 VALIDATION_SUCCESS or one IMP:10 VALIDATION_FAILURE record (missing adds the OSError class name). No argument value is ever logged.
+##   Guarantees: a symbolic link, a directory or a special file at the candidate is not-regular; a candidate whose real path leaves the checkout (two levels above the package) is outside; the checkout is never widened.
+##   Raises: none for a str input. System importance: 9. Example: for a launcher at package/bin/codemap the candidate is package/../codex/skills/pm/scripts/codemap.py; a missing file returns None, that candidate and missing.
+## @complexity 4
+def resolve_sibling(launcher_file):
+    # START_BLOCK_Resolution
+    package = os.path.dirname(os.path.dirname(os.path.realpath(launcher_file)))
+    checkout = os.path.realpath(os.path.join(package, os.pardir, os.pardir))
+    candidate = os.path.normpath(os.path.join(package, os.pardir, "codex", "skills", "pm", "scripts", SCRIPT))
+    logger.info("[IMP:7][resolve_sibling][RESOLVE] command=%s", COMMAND)
+    # END_BLOCK_Resolution
+    # START_BLOCK_Validation
+    cause = "ok"
+    kind = ""
+    mode = None
+    try:
+        mode = os.lstat(candidate).st_mode
+    # END_BLOCK_Validation
+    # START_BLOCK_ErrorHandling
+    except OSError as error:
+        cause = "missing"
+        kind = type(error).__name__
+    # END_BLOCK_ErrorHandling
+    # START_BLOCK_Classification
+    if mode is not None and not stat.S_ISREG(mode):
+        cause = "not-regular"
+    if cause == "ok" and os.path.commonpath([os.path.realpath(candidate), checkout]) != checkout:
+        cause = "outside"
+    # END_BLOCK_Classification
+    # START_BLOCK_Refusal
+    if cause != "ok":
+        logger.error("[IMP:10][resolve_sibling][VALIDATION_FAILURE] command=%s cause=%s%s",
+                     COMMAND, cause, " kind=" + kind if kind else "")
+        return None, candidate, cause
+    # END_BLOCK_Refusal
+    # START_BLOCK_Result
+    logger.info("[IMP:9][resolve_sibling][VALIDATION_SUCCESS] command=%s cause=ok", COMMAND)
+    return candidate, candidate, cause
+    # END_BLOCK_Result
+# endregion FUNC_resolve_sibling
+
+
+# region FUNC__emit [DOMAIN(7): ProcessBoundary; CONCEPT(9): ClosedStreamSkipped; TECH(5): sys.stdout, sys.stderr]
+## @purpose Write an optional text to one standard stream and flush it, or skip the stream when the caller closed it, so that a closed descriptor never turns the handoff or the BLOCKED answer into a crash.
+## @uses logging.Logger.warning
+## @io Input: stream, a text stream object or None (the interpreter sets sys.stdout or sys.stderr to None when its descriptor was closed at start); text str, possibly empty, written before the flush. Output: bool, True when the stream existed and was flushed, False when it was None and nothing was written.
+##   Side effects: the text on the stream and one flush; for a None stream one IMP:9 STREAM_CLOSED warning record naming the number of skipped characters, never the text. Guarantees: a None stream is never touched and never raises; the open-stream path adds no trace record of its own, so the launcher trace stays as the callers write it.
+##   Raises: none for a None stream; an OSError or ValueError of a real stream is not caught. System importance: 7. Example: _emit(sys.stderr, "line\n") writes and flushes and returns True; _emit(None, "line\n") returns False and writes nothing.
+## @complexity 2
+def _emit(stream, text):
+    # START_BLOCK_Validation
+    if stream is None:
+        # BUG_FIX_CONTEXT: main called sys.stdout.flush(), sys.stderr.flush() and sys.stderr.write() unconditionally; a caller that closed descriptor 1 or 2 makes the interpreter set that stream to None.
+        # Previous: AttributeError, exit 1 and no Codex script run, where the direct call gives the script's status. Problem: BR-4 pass-through and the exit 2 of a refusal were lost. Fix: skip an absent stream here and warn once.
+        logger.warning("[IMP:9][_emit][STREAM_CLOSED] chars=%d skipped", len(text))
+        return False
+    # END_BLOCK_Validation
+    # START_BLOCK_BusinessLogic
+    if text:
+        stream.write(text)
+    stream.flush()
+    return True
+    # END_BLOCK_BusinessLogic
+# endregion FUNC__emit
+
+
+# region FUNC_main [DOMAIN(9): ConsumerPM, ProcessHandoff; CONCEPT(9): ExitStatusPassThrough, BlockedNotDegraded; TECH(8): os.execv, sys]
+## @purpose Hand the whole process to the sibling Codex script with the caller's arguments, or answer one plain BLOCKED line and exit status 2 when the script cannot be used.
+## @uses codemap._configure_logging, codemap.resolve_sibling, codemap._emit, os.execv, sys.executable, sys.stdout, sys.stderr
+## @io Input: argv list of str, the arguments after the program name, passed on unchanged and in order (empty list allowed). Output: int; the function returns only on refusal and then always returns 2; on success the process is replaced by the current interpreter running -B on the sibling script, so the script's stdout, stderr, stdin, signals and exit status reach the caller unchanged.
+##   Side effects: the opt-in stderr trace; on refusal exactly one methodology-claude BLOCKED line on stderr (skipped when stderr is closed) and nothing on stdout; on success stdout and stderr are flushed (a closed one is skipped) and then replaced by the exec. Guarantees: no other location is searched and no default argument or option is added; the interpreter is read from sys.executable at call time.
+##   Raises: none; an empty interpreter path and an OSError from os.execv are answered as BLOCKED with status 2, and a standard stream the caller closed is skipped. System importance: 9. Example: main with the arguments PROJECT and --check on a complete checkout never returns and the Codex script's exit status is the process status; the same call on a checkout without the sibling returns 2 after the BLOCKED line.
+## @complexity 5
+def main(argv):
+    # START_BLOCK_Validation
+    _configure_logging(os.environ)
+    logger.info("[IMP:4][main][INIT] command=%s argc=%d", COMMAND, len(argv))
+    sibling, candidate, cause = resolve_sibling(__file__)
+    interpreter = sys.executable
+    # END_BLOCK_Validation
+    # START_BLOCK_ErrorHandling
+    if sibling is None:
+        logger.info("[IMP:9][main][BLOCKED_ANSWER] command=%s exit=2", COMMAND)
+        # BUG_FIX_CONTEXT: the BLOCKED line was written and flushed on sys.stderr unconditionally, which raised AttributeError and exit 1 when the caller closed descriptor 2.
+        # Previous: a refusal assumed an open stderr. Problem: the refusal status 2 of BR-4 was lost. Fix: write through _emit, which skips an absent stream, and return 2 as before.
+        _emit(sys.stderr, BLOCKED_PREFIX + "%s sibling script %s: %s\n" % (COMMAND, STATES[cause], candidate))
+        return 2
+    if not interpreter:
+        logger.error("[IMP:10][main][INTERPRETER_FAILURE] command=%s cause=no-interpreter", COMMAND)
+        # BUG_FIX_CONTEXT: the same unconditional stderr write as the refusal above crashed with a closed descriptor 2; the answer now goes through _emit.
+        _emit(sys.stderr, BLOCKED_PREFIX + "%s has no current interpreter path\n" % COMMAND)
+        return 2
+    # END_BLOCK_ErrorHandling
+    # START_BLOCK_BusinessLogic
+    logger.info("[IMP:8][main][EXEC] command=%s argc=%d", COMMAND, len(argv))
+    # BUG_FIX_CONTEXT: sys.stdout.flush() and sys.stderr.flush() ran unconditionally before the exec and raised AttributeError when the caller closed a descriptor, so the Codex script never ran.
+    # Previous: both streams were assumed open. Problem: exit 1 and a launcher traceback where the direct call gives the script's own status. Fix: flush each stream through _emit, which skips an absent one, then exec as before.
+    _emit(sys.stdout, "")
+    _emit(sys.stderr, "")
+    try:
+        os.execv(interpreter, [interpreter, "-B", sibling] + list(argv))
+    # END_BLOCK_BusinessLogic
+    # START_BLOCK_ExecFailureHandling
+    except OSError as error:
+        logger.error("[IMP:10][main][EXEC_FAILURE] command=%s kind=%s", COMMAND, type(error).__name__)
+        # BUG_FIX_CONTEXT: the could-not-start answer used the same unconditional stderr write; it now goes through _emit so a closed descriptor 2 still ends with status 2.
+        _emit(sys.stderr, BLOCKED_PREFIX + "%s could not start the current interpreter (%s)\n" % (COMMAND, type(error).__name__))
+        return 2
+    # END_BLOCK_ExecFailureHandling
+# endregion FUNC_main
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1:]))

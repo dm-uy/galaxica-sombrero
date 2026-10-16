@@ -15,7 +15,7 @@
 ## Q: Why inspect contrary forms?
 ## A: Removing a required report boundary or substantive draft must fail the same predicate that accepts current source.
 ## @changes
-## LAST_CHANGE: [2.1.0 - M37 Claude 2.0.2 release selectors and Claude one-shot/loop prompt-route assertions; earlier2.0.0 - M30 Debug1 owning success exposure/order/cardinality before pins; exact unique release selectors, consequential owner/caller controls and SessionStart original AST; earlier1.1.0 - C2 exact source/member normalization; fixed original pins retained. Earlier: C1 required owners, direct external-agent route and fixed original helper algorithm controls.]
+## LAST_CHANGE: [2.2.0 - M37 Claude 2.1.0 release selectors; earlier2.1.0 - M37 Claude 2.0.2 release selectors and Claude one-shot/loop prompt-route assertions; earlier2.0.0 - M30 Debug1 owning success exposure/order/cardinality before pins; exact unique release selectors, consequential owner/caller controls and SessionStart original AST; earlier1.1.0 - C2 exact source/member normalization; fixed original pins retained. Earlier: C1 required owners, direct external-agent route and fixed original helper algorithm controls.]
 ## @modulemap
 ## FUNC 1[Metadata anchor] => test_c1_review_and_routing._module_contract
 ## FUNC 8[Read complete source with owned safe trace] => test_c1_review_and_routing._read
@@ -193,7 +193,7 @@ def _algorithm_identity(text, engine):
             assignments = [n for n in tree.body if isinstance(n, ast.Assign) and len(n.targets) == 1
                            and isinstance(n.targets[0], ast.Name) and n.targets[0].id == "PACKAGE_VERSION"]
             assert len(assignments) == 1, "unique package source assignment required"
-            assert isinstance(assignments[0].value, ast.Constant) and assignments[0].value.value == "2.0.2", "wrong package source version"
+            assert isinstance(assignments[0].value, ast.Constant) and assignments[0].value.value == "2.1.0", "wrong package source version"
             assignments[0].value.value = "1.0.0"
         if engine == "codex":
             # Original C2 exact chained membership selector; no unrelated73 node is changed.
@@ -225,7 +225,7 @@ def test_release_bridge_keeps_wire_and_helper_algorithms(repo_root, caplog):
     # START_BLOCK_BusinessLogic
     caplog.set_level(logging.INFO, logger=LOGGER.name)
     assert _read(repo_root, "SPEC_VERSION") == "3.0.1\n"
-    for engine, version in (("codex", "3.0.1"), ("claude", "2.0.2")):
+    for engine, version in (("codex", "3.0.1"), ("claude", "2.1.0")):
         base = "implementations/" + engine
         layout = json.loads(_read(repo_root, base + "/references/package-layout.json"))
         adapter = json.loads(_read(repo_root, base + "/adapter.json"))
@@ -286,8 +286,8 @@ def test_release_bridge_keeps_wire_and_helper_algorithms(repo_root, caplog):
         if engine == "codex":
             controls.append(text.replace("layout.get('version') == '3.0.1'", "layout.get('version') == '2.2.0'", 1))
         else:
-            controls.extend([text.replace("PACKAGE_VERSION = '2.0.2'", "PACKAGE_VERSION = '1.0.0'", 1),
-                             text.replace("PACKAGE_VERSION = '2.0.2'", "PACKAGE_VERSION = '2.0.2'\nPACKAGE_VERSION = '2.0.2'", 1)])
+            controls.extend([text.replace("PACKAGE_VERSION = '2.1.0'", "PACKAGE_VERSION = '1.0.0'", 1),
+                             text.replace("PACKAGE_VERSION = '2.1.0'", "PACKAGE_VERSION = '2.1.0'\nPACKAGE_VERSION = '2.1.0'", 1)])
         caplog.clear()
         for control in controls:
             assert control != text
@@ -418,7 +418,7 @@ def test_session_start_source_bridge_preserves_ast(repo_root, caplog):
     tree = ast.parse(text)
     assignments = [n for n in tree.body if isinstance(n, ast.Assign) and len(n.targets) == 1
                    and isinstance(n.targets[0], ast.Name) and n.targets[0].id == "PACKAGE_VERSION"]
-    assert len(assignments) == 1 and isinstance(assignments[0].value, ast.Constant) and assignments[0].value.value == "2.0.2"
+    assert len(assignments) == 1 and isinstance(assignments[0].value, ast.Constant) and assignments[0].value.value == "2.1.0"
     assignments[0].value.value = "1.0.0"
     # Python3.12 adds empty type_params to the parser's dump; preserve the original3.9 oracle.
     # Only EMPTY version-introduced fields are omitted from serialization, never nonempty generics.
