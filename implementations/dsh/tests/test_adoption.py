@@ -46,13 +46,13 @@ logger=logging.getLogger(__name__)
 # region FUNC_test_colocated_adoption_and_other_cwd [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Verify colocated adoption and other cwd over actual owned inputs.
 ## @uses json.loads
-## @io Input: tmp_path: owned pathlib.Path, caplog: pytest.LogCaptureFixture. Cases: no parametrized inputs. Output: None after these concrete checks: len(state['bindings']['neutral']) == 71 and len(state['bindings']['package']['files']) == 75; Path(state['bindings']['neutral_root']) == Path(state['framework']).parents[1]; relocated.returncode == 0 and json.loads(relocated.stdout)['state']['input_identity'] == state['input_identity']; set(state['bindings']['core']) == {'concepts/principles.md', 'roles/_base.md', 'code/exoskeleton.md', 'code/ldd.md', 'code/doxygen.md', 'code/tests.md'}. AssertionError denotes a failed promised check; expected refusals are explicitly caught in this test body. Side effects: only the actual owned fixture writes/child processes in this body; shared package and neutral corpus reads stay read-only. No native acceptance is inferred. Example: python3 -m pytest tests/test_adoption.py::test_colocated_adoption_and_other_cwd executes these exact cases. Importance:9.
+## @io Input: tmp_path: owned pathlib.Path, caplog: pytest.LogCaptureFixture. Cases: no parametrized inputs. Output: None after these concrete checks: len(state['bindings']['neutral']) == 71 and len(state['bindings']['package']['files']) == 76; Path(state['bindings']['neutral_root']) == Path(state['framework']).parents[1]; relocated.returncode == 0 and json.loads(relocated.stdout)['state']['input_identity'] == state['input_identity']; set(state['bindings']['core']) == {'concepts/principles.md', 'roles/_base.md', 'code/exoskeleton.md', 'code/ldd.md', 'code/doxygen.md', 'code/tests.md'}. AssertionError denotes a failed promised check; expected refusals are explicitly caught in this test body. Side effects: only the actual owned fixture writes/child processes in this body; shared package and neutral corpus reads stay read-only. No native acceptance is inferred. Example: python3 -m pytest tests/test_adoption.py::test_colocated_adoption_and_other_cwd executes these exact cases. Importance:9.
 ## @complexity 5
 def test_colocated_adoption_and_other_cwd(tmp_path,caplog):
     logger.info('[IMP:4][test_colocated_adoption_and_other_cwd][START] owned behavioral verification')
     # START_BLOCK_BusinessLogic
     caplog.set_level(logging.INFO);path,state,_=make_fixture(tmp_path)
-    assert len(state['bindings']['neutral'])==71 and len(state['bindings']['package']['files'])==75
+    assert len(state['bindings']['neutral'])==71 and len(state['bindings']['package']['files'])==76
     assert Path(state['bindings']['neutral_root'])==Path(state['framework']).parents[1]
     relocated=cli('show','--state',path,cwd=tmp_path.parent)
     assert relocated.returncode==0 and json.loads(relocated.stdout)['state']['input_identity']==state['input_identity']

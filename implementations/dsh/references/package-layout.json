@@ -48,6 +48,10 @@
       "kind": "documentation"
     },
     {
+      "path": "references/dsh-subagent-workflow.md",
+      "kind": "documentation"
+    },
+    {
       "path": "references/handoffs.md",
       "kind": "documentation"
     },
