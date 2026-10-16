@@ -1,5 +1,14 @@
 # Current maintainer tasks
 
+## M38 — DSH native implementation package (delivered on a branch, awaiting the owner's integration and installation decisions)
+
+Owner request: implement the methodology for the DeepSeek Harness under `implementations/`, reconcile it against current source and connect it as a DSH plugin. Scope, evidence and limits: [result note](notes/m38-dsh-package.md). Because this adds a shipped public package and not only documentation, the change keeps the software flow's separation between an implementation artifact and the owner's matching concrete-result decision.
+
+| Task | State | Finish / next action |
+|---|---|---|
+| M38-T1 — third typed package and DSH bundle | Checked on an isolated branch | Adapter, runtime, 27 skills, six roles, six helpers, bundle and a root contract test. `bin/conform adapter` and `bin/conform self` exit 0; package suite 146 passed; root DSH test 2 passed; sibling package tests 11 passed. A scratch-profile `dsh plugin add` proved the layer and the resolved skill root. |
+| M38-T2 — owner decisions | Awaiting the owner | Separate decisions for a `main` merge, for installing the bundle into the live profile, and for any publication. No native behavioral acceptance of this package exists yet; a real methodology run is its own task. |
+
 ## M36 — canonical session handoff synchronization (completed)
 
 Owner explicitly requested synchronizing Sombrero meta-documents and retaining important conclusions from this chat, history and real limitations. [Scope, provenance, carryover and delivery state](notes/m36-session-handoff.md). Documentation only; no framework code, installation, donor adoption or proof-deferral change.
