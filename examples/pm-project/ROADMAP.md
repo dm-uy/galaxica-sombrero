@@ -95,3 +95,9 @@ Terminal BLOCKED/qa retains Debug1/4. The owner deferred native Claude; AC4/Clau
 The owner settled the direction after the PM reflection: state for agents, QA for features/substantial bug fixes, no QA for documentation/small corrections, and affected-record synchronization on material change/grouped progress/before planned compaction. [Decision and scope](notes/pm-lightweight-direction.md). The initial local amendment preceded release; the owner subsequently authorized merge, reissue and installation, completed in the receipt below. Existing M30 Claude deferral, C3 exhausted history and later trial/C4–C6 route remain retained.
 
 M31 release update: the owner authorized merge, reissue and installation of the accepted lightweight PM direction (neutral3.0.0 / Codex3.0.0 / Claude2.0.0). Actual completion is recorded in [the decision receipt](notes/pm-lightweight-direction.md); deferred native Claude acceptance and C3 remain separate.
+
+## M38 — DSH native implementation package (delivered on a branch)
+
+The owner asked for the methodology to be implemented for the DeepSeek Harness under `implementations/` and connected as a plugin. Delivered on `dsh/m38-harness-package` as a third typed package at 3.0.1 over neutral 3.0.1, with an adapter over all 71 neutral files, 27 skill carriers, six role carriers, the shared helpers and a DSH bundle that mounts the package's own skill root. [Result, evidence and limits](notes/m38-dsh-package.md).
+
+Not a release and not accepted behavior: the package is proved structurally and its installation is proved on a scratch profile only. A `main` merge, installation into the live profile, publication and any real methodology run retain their separate owner decisions. The sibling packages' source, wire, schema and behavior are unchanged, and the retained M30/C3 limits and the later trial/C4–C6 route are untouched.

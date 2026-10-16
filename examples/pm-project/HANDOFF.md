@@ -1,61 +1,25 @@
-# Current: M37 Claude package actualization — Claude 2.1.0 in review
+# Current: M38 DSH native implementation package
 
 ## Owner decisions
 
-Waiting for the owner:
-
-1. **Review and merge the M37 pull request.** The PR takes branch `claude/m37-claude-parity` into main and contains:
-   - Claude 2.0.2 (carrier parity);
-   - Claude 2.1.0 (the C2 consumer PM profile by reference to the Codex helpers);
-   - the M31 root-oracle repair;
-   - the M37 records.
-
-   Claude loads main in place, so the merge changes every Claude session at once.
-
-2. **Choose when to migrate consumer projects (M37-T7).** Each of the five consumer projects needs its own grant to adopt `methodology-consumer-pm/1.0.0`. After that, the owner decides on disabling the in-house plugins.
-
-Settled on 2026-10-16. Verbatim answers are in the [M37 record](notes/m37-claude-parity.md):
-
-- the M37 scope;
-- keeping the name `methodology-claude`;
-- lifting the M30 Claude deferral;
-- approval of the C2-port specification with mechanism H;
-- accepting the result, with AC5 met by the absolute-path launcher call;
-- push plus PR, merged after the owner's review;
-- the `.methodology/` ignore rule.
+The owner approved implementing the methodology for the DeepSeek Harness under `implementations/`, chose the full Codex-twin package, and chose installation as a plugin in the `web` profile. That authorization covers preparing the package and proving the installation mechanism. It does not yet cover a `main` merge, installation into the owner's live harness home, or publication; those remain separate matching decisions and none has been taken. M30 native Claude remains explicitly deferred; C3 remains exhausted. The pending `claude/m37-claude-parity` work is another writer's branch and is untouched.
 
 ## Current state
 
-- **Main.** Still `b8696a2`: neutral and Codex 3.0.1, Claude 2.0.1.
-- **The PR branch.**
-  - Claude 2.1.0 with 64 members: three launchers, a by-reference carrier, routing in nine skills and the searcher, and a root tripwire over 18 Codex files.
-  - `implementations/codex` is byte-identical to main.
-- **Feature-dev run `m37-c2-20261016`.** Bootstrap, Architect, Code, QA, Review, Debug 1 of 4, renewed QA and Review, then Finalize. It ended BLOCKED on the AC5 literal-wording decision, which the owner has since accepted.
-- **Checks on Python 3.12.** Root 603, Claude 545 and Codex 146 tests passed. The launcher tests pass on Python 3.9 and 3.12.
-- **Evidence.** Raw run evidence (about 1 GB) lives in the owner's private evidence directory. The local `.methodology/` folder is now ignored.
+Current source versions: neutral/Codex3.0.1 and Claude2.0.1. **M38 adds a third package, `implementations/dsh`, at 3.0.1 over neutral 3.0.1**, on branch `dsh/m38-harness-package` in the isolated worktree `/private/tmp/methodology-m38-dsh-harness`. It is not on `main`. [Result, evidence and limits](notes/m38-dsh-package.md); [task entry](TASKS.md).
+
+The package carries an adapter over all 71 neutral files, 28 capabilities and seven parameters, 27 DSH skill carriers, six role carriers, the six shared Python helpers, the 13 PM templates and a DSH bundle whose single row mounts the package's own `skills/` root. `bin/conform adapter` and `bin/conform self` both exit 0; the package suite is 146 passed; the new root contract test is 2 passed; the two sibling package suites are 11 passed. A scratch-profile `dsh plugin add` composed a real bundle layer and the row resolved to a skill root holding 27 entries.
+
+No native behavioral acceptance of this package exists: no flow ran, no checkpoint resumed and no session observed the catalog. The package is a source and installation artifact, and it is reported as one.
 
 ## Next action
 
-Read, in order: root AGENTS, this HANDOFF, VISION, ROADMAP, [TASKS](TASKS.md), and the [M37 record](notes/m37-claude-parity.md).
-
-- **If the PR is merged:** verify main and the in-place binding (the SessionStart hook reports 2.1.0), then plan M37-T7 with the owner.
-- **If it is not merged:** apply only the owner's review comments on the branch.
-
-Do not edit consumer projects or user settings without their own grant.
+The owner's next decisions, in order: (1) whether to merge `dsh/m38-harness-package` into `main`; (2) whether to install the bundle into the live profile, which the package README describes and which is proved only on a scratch profile so far; (3) whether a real methodology run should be performed to begin behavioral acceptance. Absent a matching decision, do not merge, do not touch the live harness home, and do not present the package as accepted.
 
 ## Retained traps
 
-- **Bare launcher names.** While the in-house `product-methodology` plugin is enabled, the bare names `codemap`, `markup-migrate` and `orient` in a Bash session may resolve to its `bin/`. The package's own routes check `command -v` first or use the absolute launcher path.
-- **Root suite interpreter.** Run the root suite with `/opt/homebrew/bin/python3.12`. Under the system Python 3.9, one AST-pin test fails because the pin depends on the interpreter.
-- **Marketplace installs.** Any marketplace install of the Claude package copies it and reports BLOCKED. Use in-place loading only.
-- **Live headless probes.** Restricting Bash to launcher-only rules can deny the commands the routes legitimately use, such as the absolute launcher path or `command -v`. Match the probe rules to the current routes before reading a failure as a product defect.
-- **Run-state helper gaps.**
-  - It cannot record an architect-phase response correction after the plan file exists.
-  - It cannot continue a terminal run.
-- **C3.** Remains exhausted, unaccepted and unmerged.
-- **M30.** Debug 1/4 retained. Native Claude AC4/AC5 were observed in M37, but renewed M30 QA, Review and Finalize are still owed.
-- **Remaining route (unchanged).**
-  1. Minimal safeguard.
-  2. API/database trial.
-  3. Separately scoped C4–C6.
-  4. Later: frontend, Telegram and MCP.
+The root `tests` suite carries **67 pre-existing failures** on unmodified `main` — 60 in `test_flow_contract.py`, six in `test_pm_role.py`, and the stale helper-algorithm pin in `test_c1_review_and_routing.py::test_release_bridge_keeps_wire_and_helper_algorithms`. A detached checkout of `b8696a2` reproduces them; they are not caused by M38 and must not be read as M38 regressions. The DSH helper deliberately stays out of that pin loop: it deviates structurally by one line, and joining the pin needs a reviewed normalization branch rather than a weakened check.
+
+C3: unaccepted/unmerged, terminal ESCALATED/review, Debug4/4 exhausted; no reset/fifth repair. M30: source integrated, full checkpoint acceptance incomplete, native Claude AC4/ClaudeAC5 deferred/unfulfilled and Debug1/4 retained. Minimal-safeguard → bounded API/database trial → separately scoped C4–C6 route and later frontend/Telegram/MCP remain. Public source visibility and local installation do not satisfy these proofs. See [ROADMAP](ROADMAP.md) and the linked original result records for history.
+
+One delegated reconnaissance reader left a `.DS_Store` and an untracked `dsh-subagent-workflow-reference.md` in the read-only harness checkout under the home directory. That checkout is foreign to this repository and outside this grant, so neither file was removed; a later owner decision can clean them.

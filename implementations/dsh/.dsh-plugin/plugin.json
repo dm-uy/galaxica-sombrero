@@ -1,0 +1,16 @@
+{
+  "name": "methodology-dsh",
+  "version": "3.0.1",
+  "description": "Native DeepSeek Harness binding of the harness-neutral agent methodology: PM lifecycle, gated feature development with independent QA and Review, six role carriers and the on-demand skill catalog.",
+  "author": {
+    "name": "Methodology maintainers"
+  },
+  "license": "MIT",
+  "keywords": ["methodology", "agents", "feature-dev", "project-management", "qa", "review", "deepseek-harness"],
+  "dsh": {
+    "bundle": {
+      "patch": "../cordis.patch.yml"
+    },
+    "skills": "../skills/"
+  }
+}

@@ -56,7 +56,7 @@ import pytest
 
 LOGGER = logging.getLogger(__name__)
 GENERATED = {"__pycache__", ".pytest_cache", "doxygen_output", ".DS_Store"}
-DECLARED_PACKAGES = {"codex", "claude"}
+DECLARED_PACKAGES = {"codex", "claude", "dsh"}
 CORE = ("concepts/principles.md", "roles/_base.md", "code/exoskeleton.md", "code/ldd.md", "code/doxygen.md", "code/tests.md")
 ROLES = {name: "agents/" + name + ".md" for name in ("architect", "coder", "debugger", "qa", "reviewer", "searcher")}
 TOPICS = ("analyzer", "ax-ui-contract", "brainstorm", "brownfield-spec-template", "code-review", "data-transform",

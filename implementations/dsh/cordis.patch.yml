@@ -1,0 +1,36 @@
+# Methodology DSH bundle patch.
+#
+# Installed into a profile with, from the repository root:
+#
+#   dsh plugin --profile web add ./implementations/dsh
+#
+# The bundle adds ONE row: a second local skill provider whose only root is this
+# package's own `skills/` directory. It deliberately leaves every existing row
+# alone. In particular it does not touch the base `skill-filesystem` row, which
+# the web-app bundle disables so that each agent preset owns local discovery:
+# a preset's `skill-filesystem` registers into that preset's layer, while this
+# row is a deployment-level provider and registers into the global layer, so the
+# methodology catalog reaches every session regardless of the selected preset.
+#
+# `includeDefaultRoots: false` keeps this provider to its explicit root, so the
+# project (`.dsh/skills`, `.agents/skills`) and harness-home (`skills` under
+# the harness home and under the shared agents home) roots are still discovered
+# exactly once, by the preset's own provider, and a project skill of the same
+# name still wins on rank.
+#
+# The path is computed at load time rather than written as a literal: a home
+# directory path must never be committed to this repository, and the resolver
+# below is the same one the shipped web-app preset uses to locate a package's
+# bundled `skills/` directory.
+#
+# `providerName` is unique here because the registry merges providers by name and
+# a duplicate would collide with the preset provider's `filesystem` identity.
+
+- insert:
+    - id: methodology-skill-filesystem
+      name: '@deepseek-ai/dsh-skill-filesystem'
+      config:
+        providerName: methodology
+        includeDefaultRoots: false
+        customSkillDirs:
+          - !!js process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@methodology/dsh/package.json')), 'skills')
