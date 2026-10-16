@@ -1,5 +1,16 @@
 # Current maintainer tasks
 
+## M38 — DSH native implementation package (delivered on a branch, awaiting the owner's integration and installation decisions)
+
+Owner request: implement the methodology for the DeepSeek Harness under `implementations/`, reconcile it against current source and connect it as a DSH plugin. Scope, evidence and limits: [result note](notes/m38-dsh-package.md). Because this adds a shipped public package and not only documentation, the change keeps the software flow's separation between an implementation artifact and the owner's matching concrete-result decision.
+
+| Task | State | Finish / next action |
+|---|---|---|
+| M38-T1 — third typed package and DSH bundle | Checked on an isolated branch | Adapter, runtime, 27 skills, six roles, six helpers, bundle and a root contract test. `bin/conform adapter` and `bin/conform self` exit 0; package suite 146 passed; root DSH test 2 passed; sibling package tests 11 passed. A scratch-profile `dsh plugin add` proved the layer and the resolved skill root. |
+| M38-T2 — `main` merge and live installation | Done | Owner approved both. `af7eab7` fast-forwarded into canonical `main`; `dsh plugin --profile web add ./implementations/dsh` installed the bundle into the live profile from this checkout. Composed layer and 27-entry skill root verified with `--dump-config`. Previous profile files saved as `.bak-m38`. Publication stays separate and untaken. |
+| M38-T3 — first real run, probe 1 | Done on the live profile | The bundle is installed in the `desktop` profile this GUI actually runs. All 27 methodology skills appeared in the running session and `pm` loaded with `Base directory for this skill: <checkout>/implementations/dsh/skills/pm`. Recorded correction: the first installation had gone to the `web` profile, which is why the plugin was absent after the owner's restart. |
+| M38-T4 — smoke and a bounded real task | Awaiting an explicit grant | [Run specification](notes/m38-run-01.md). The smoke specification now measures its counts instead of naming stale ones. A shell-driven headless run cannot substitute: no provider credential. |
+
 ## M36 — canonical session handoff synchronization (completed)
 
 Owner explicitly requested synchronizing Sombrero meta-documents and retaining important conclusions from this chat, history and real limitations. [Scope, provenance, carryover and delivery state](notes/m36-session-handoff.md). Documentation only; no framework code, installation, donor adoption or proof-deferral change.

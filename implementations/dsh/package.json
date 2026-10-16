@@ -1,0 +1,25 @@
+{
+  "name": "@methodology/dsh",
+  "version": "3.0.1",
+  "private": true,
+  "description": "DeepSeek Harness binding of the harness-neutral agent methodology: PM lifecycle, gated feature development with independent QA and Review, role carriers and the on-demand skill catalog.",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "adapter.json",
+    "cordis.patch.yml",
+    "references",
+    "roles",
+    "skills",
+    "examples",
+    "README.md",
+    "Doxyfile",
+    "pytest.ini",
+    "tests"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
