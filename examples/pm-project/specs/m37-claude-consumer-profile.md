@@ -1,6 +1,9 @@
 ---
-status: draft
+status: approved
 proposed-at: 2026-10-16
+approved-at: 2026-10-16
+approval-mechanism: owner chat reply to the structured next-step question "Утверждаете спецификацию порта C2 с вариантом H?"
+approval-quote: "Да, утверждаем H."
 decision-packet: ../notes/m37-decision-c2-port/README.md
 record: ../notes/m37-claude-parity.md
 ---
