@@ -59,6 +59,7 @@ EXPECTED_KINDS = {
     'references/adoption.md': 'documentation',
     'references/consumer-pm-profile.md': 'documentation',
     'references/dsh-runtime.md': 'documentation',
+    'references/dsh-subagent-workflow.md': 'documentation',
     'references/handoffs.md': 'documentation',
     'references/package-layout.json': 'layout',
     'references/source-disposition.md': 'documentation',
@@ -234,7 +235,7 @@ def test_neutral_boundary_and_complete_package(repo_root, repo_copy, caplog, run
     expected = {p.relative_to(repo_root).as_posix() for p in repo_root.rglob("*.md") if p.relative_to(repo_root).parts[0] not in {".git", "tests", "examples", "implementations", "doxygen_output", "__pycache__", ".pytest_cache"} and p.relative_to(repo_root).as_posix() not in {"README.md", "CHANGELOG.md"}}
     _show_trace(caplog.records)
     assert produced == expected and len(produced) == 71
-    assert len(declared) == 74 and sum(p.startswith("skills/") and p.endswith("/SKILL.md") for p in declared) == 27
+    assert len(declared) == 75 and sum(p.startswith("skills/") and p.endswith("/SKILL.md") for p in declared) == 27
     assert sum(p.startswith("roles/") for p in declared) == 6 and sum("/scripts/" in p and p.endswith(".py") for p in declared) == 6
     assert any("[VALIDATION_SUCCESS]" in r.getMessage() for r in caplog.records)
     assert not [r for r in caplog.records if r.levelno >= logging.ERROR]

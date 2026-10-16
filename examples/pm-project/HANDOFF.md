@@ -2,7 +2,7 @@
 
 ## Owner decisions
 
-The owner approved implementing the methodology for the DeepSeek Harness under `implementations/`, chose the full Codex-twin package, and chose installation as a plugin in the `web` profile. That authorization covers preparing the package and proving the installation mechanism. It does not yet cover a `main` merge, installation into the owner's live harness home, or publication; those remain separate matching decisions and none has been taken. M30 native Claude remains explicitly deferred; C3 remains exhausted. The pending `claude/m37-claude-parity` work is another writer's branch and is untouched.
+The owner approved implementing the methodology for the DeepSeek Harness under `implementations/`, chose the full Codex-twin package, installation as a plugin in the `web` profile, and then explicitly approved the `main` merge and the live installation ("надо смержить и поставить в профиль этот бандл"). Both are done: checked M38 source `af7eab7` was fast-forwarded into canonical `main`, and `dsh plugin --profile web add ./implementations/dsh` installed the bundle into the live profile against the canonical checkout. Publication remains a separate decision and has not been taken. M30 native Claude remains explicitly deferred; C3 remains exhausted. The pending `claude/m37-claude-parity` work is another writer's branch and is untouched.
 
 ## Current state
 
@@ -10,11 +10,11 @@ Current source versions: neutral/Codex3.0.1 and Claude2.0.1. **M38 adds a third 
 
 The package carries an adapter over all 71 neutral files, 28 capabilities and seven parameters, 27 DSH skill carriers, six role carriers, the six shared Python helpers, the 13 PM templates and a DSH bundle whose single row mounts the package's own `skills/` root. `bin/conform adapter` and `bin/conform self` both exit 0; the package suite is 146 passed; the new root contract test is 2 passed; the two sibling package suites are 11 passed. A scratch-profile `dsh plugin add` composed a real bundle layer and the row resolved to a skill root holding 27 entries.
 
-No native behavioral acceptance of this package exists: no flow ran, no checkpoint resumed and no session observed the catalog. The package is a source and installation artifact, and it is reported as one.
+The live `web` profile now composes one `# == @methodology/dsh` layer whose row resolves to this checkout's `implementations/dsh/skills` (27 entries); the previous `package.json` and `cordis.patch.yml` are saved beside them as `.bak-m38` for one-step rollback. No native behavioral acceptance exists yet: no flow ran, no checkpoint resumed and no session observed the catalog. The run that would establish it is prepared and specified at [the first-run note](notes/m38-run-01.md); it needs a fresh session, because a session's catalog is fixed when it is created and the session that installed the bundle predates it.
 
 ## Next action
 
-The owner's next decisions, in order: (1) whether to merge `dsh/m38-harness-package` into `main`; (2) whether to install the bundle into the live profile, which the package README describes and which is proved only on a scratch profile so far; (3) whether a real methodology run should be performed to begin behavioral acceptance. Absent a matching decision, do not merge, do not touch the live harness home, and do not present the package as accepted.
+Run [M38-RUN-01](notes/m38-run-01.md) in a fresh session: load `pm` through the skill tool and record the reported base directory, run the bounded smoke, then take this repository's own next bounded task through the flow. Retain the three probe outputs verbatim. A headless probe from a shell cannot substitute: it fails with `MISSING_CREDENTIAL` because the provider key lives in the Web host's credential service, not in a child environment.
 
 ## Retained traps
 
@@ -22,4 +22,4 @@ The root `tests` suite carries **67 pre-existing failures** on unmodified `main`
 
 C3: unaccepted/unmerged, terminal ESCALATED/review, Debug4/4 exhausted; no reset/fifth repair. M30: source integrated, full checkpoint acceptance incomplete, native Claude AC4/ClaudeAC5 deferred/unfulfilled and Debug1/4 retained. Minimal-safeguard → bounded API/database trial → separately scoped C4–C6 route and later frontend/Telegram/MCP remain. Public source visibility and local installation do not satisfy these proofs. See [ROADMAP](ROADMAP.md) and the linked original result records for history.
 
-One delegated reconnaissance reader left a `.DS_Store` and an untracked `dsh-subagent-workflow-reference.md` in the read-only harness checkout under the home directory. That checkout is foreign to this repository and outside this grant, so neither file was removed; a later owner decision can clean them.
+A delegated reconnaissance reader had written its report into this repository's own root. It is now owned by the package as [the DSH subagent/workflow reference](implementations/dsh/references/dsh-subagent-workflow.md) and declared in the layout. The reader also left a `.DS_Store` in the foreign `deepseek-harness` checkout; that checkout is outside this grant, so the file was left alone.

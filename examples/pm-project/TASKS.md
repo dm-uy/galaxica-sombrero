@@ -7,7 +7,8 @@ Owner request: implement the methodology for the DeepSeek Harness under `impleme
 | Task | State | Finish / next action |
 |---|---|---|
 | M38-T1 — third typed package and DSH bundle | Checked on an isolated branch | Adapter, runtime, 27 skills, six roles, six helpers, bundle and a root contract test. `bin/conform adapter` and `bin/conform self` exit 0; package suite 146 passed; root DSH test 2 passed; sibling package tests 11 passed. A scratch-profile `dsh plugin add` proved the layer and the resolved skill root. |
-| M38-T2 — owner decisions | Awaiting the owner | Separate decisions for a `main` merge, for installing the bundle into the live profile, and for any publication. No native behavioral acceptance of this package exists yet; a real methodology run is its own task. |
+| M38-T2 — `main` merge and live installation | Done | Owner approved both. `af7eab7` fast-forwarded into canonical `main`; `dsh plugin --profile web add ./implementations/dsh` installed the bundle into the live profile from this checkout. Composed layer and 27-entry skill root verified with `--dump-config`. Previous profile files saved as `.bak-m38`. Publication stays separate and untaken. |
+| M38-T3 — first real run | Prepared, awaiting a fresh session | [Run specification](notes/m38-run-01.md): catalog/base-directory probe, the package smoke, then one bounded real task through `pm`. Two walls recorded honestly: the installing session predates the catalog, and a shell-driven headless probe has no provider credential. |
 
 ## M36 — canonical session handoff synchronization (completed)
 
