@@ -133,7 +133,7 @@ def _package_assembly(root):
         operation = "Layout"
         layout = json.loads((package / "references/package-layout.json").read_text())
         if (not isinstance(layout, dict) or set(layout) != {"package", "version", "profile", "files", "roles"}
-                or layout.get("package") != "methodology-claude" or layout.get("version") != "2.0.1"
+                or layout.get("package") != "methodology-claude" or layout.get("version") != "2.0.2"
                 or layout.get("profile") != "colocated-in-place" or layout.get("roles") != ROLES):
             raise ValueError("unsupported package profile")
         rows = layout.get("files")
@@ -176,7 +176,7 @@ def _package_assembly(root):
             raise ValueError("missing or undeclared actual package member")
         operation = "Metadata"
         plugin = json.loads((package / ".claude-plugin/plugin.json").read_text())
-        if plugin.get("name") != "methodology-claude" or plugin.get("version") != "2.0.1":
+        if plugin.get("name") != "methodology-claude" or plugin.get("version") != "2.0.2":
             raise ValueError("native metadata identity mismatch")
         LOGGER.info("[IMP:9][_package_assembly][VALIDATION_SUCCESS] members=%d", len(actual))
         return declared

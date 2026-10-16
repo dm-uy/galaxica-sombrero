@@ -109,7 +109,7 @@ GIT_PROGRAMLESS = ('--no-optional-locks', '-c', 'core.fsmonitor=false')
 # GIT_PROGRAMLESS is the fixed argument prefix of every git call: no optional locks, and the repository-configured core.fsmonitor program is switched off (a command-line value outranks repository, environment and global configuration).
 KINDS = {'skill', 'role', 'helper', 'test', 'test-guide', 'config', 'plugin-manifest', 'adapter', 'layout', 'example', 'documentation', 'hook-config', 'workflow'}
 PACKAGE_NAME = 'methodology-claude'
-PACKAGE_VERSION = '2.0.1'
+PACKAGE_VERSION = '2.0.2'
 PACKAGE_PROFILE = 'colocated-in-place'
 CONTRACT_VERSION = 'methodology-claude/1.0.0'
 ROLES = ('architect', 'coder', 'debugger', 'qa', 'reviewer', 'searcher')

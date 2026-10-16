@@ -1,5 +1,11 @@
 # Changelog
 
+## Claude source2.0.2 (neutral3.0.1 unchanged)
+
+- Carry the current neutral owners faithfully: one-shot/loop external-agent prompt route with the three AGENTPROMPT-103 artifacts, the unsent RUNREV-301 continuation message, and the same neutral owner sets as Codex in the four lifecycle entries (decisions, learning, specification, code-review, safety, session and gates).
+- Correct installation claims for Claude Code 2.1.299: in-place loading only; any marketplace install, including a local directory marketplace, copies the plugin into the cache and is BLOCKED. Validate without `--strict`, which fails only on the kept name `methodology-claude`.
+- Repair the root regression left by 3.0.0: refresh the 351 `flow/phases.md` read receipts and the PM-103/PM-812 oracle clauses to the owner-approved text; the original whole-fixture pin stays, with a receipt-refresh table under its contrary controls. Membership 59, roles, wire, schema and helper algorithms are unchanged; Codex is unchanged.
+
 ## 3.0.1
 
 - Clarify existing PM continuity duties in both AGENTS seeds and bootstrap paths; compare existing entries by meaning and add only missing nonconflicting clauses while preserving project instructions and actual homes.

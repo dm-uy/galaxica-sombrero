@@ -11,6 +11,9 @@ Leave a baton that a reader with no chat can pick up: the goal, the current task
 
 Owners — read in full before acting:
 - `${CLAUDE_PLUGIN_ROOT}/../../process/session.md`
+- `${CLAUDE_PLUGIN_ROOT}/../../process/batch.md`
+- `${CLAUDE_PLUGIN_ROOT}/../../process/decisions.md`
+- `${CLAUDE_PLUGIN_ROOT}/../../process/learning.md`
 - `${CLAUDE_PLUGIN_ROOT}/../../documents/templates/HANDOFF.md`
 - `${CLAUDE_PLUGIN_ROOT}/../../checks/orient.md`
 - `${CLAUDE_PLUGIN_ROOT}/../../process/gates.md`
@@ -18,7 +21,7 @@ Owners — read in full before acting:
 
 Route:
 1. Compare each task's state and finish claim with the real artifacts. Keep the original packet and its results before replacing current work; keep blocked, deferred, failed and unfinished rows with their next disposition. Reconcile the route's achieved outcomes, focus and diagram together.
-2. Audit this session for facts that no record carries yet (a decision made only in chat, an ignored file the next step needs, a changed configuration, a defect, a stale number, an unrecorded uncertainty) and route each to its one owning record. This is fact recording, not learning ingestion.
+2. Audit this session for facts that no record carries yet (a decision made only in chat, an ignored file the next step needs, a changed configuration, a defect, a stale number, an unrecorded uncertainty) and route each to its one owning record. A binding decision goes to the decision home with its actual human source and provenance; an accepted decision body is never edited, only its status, superseded_by and amended_by change, and where the project numbers decisions a new number comes only from the parent's ordered allocation. A genuinely open alternative stays an open question. A useful failure, remedy or corrected belief becomes a dated project note as process/learning.md describes. This is fact recording, not learning ingestion.
 3. Move an expired live hazard to dated history with its proof and recheck condition; drop only its warning.
 4. Follow the shared session cadence on material changes, grouped progress and before planned compaction/handoff. If continuation state is already current, reuse it. Otherwise update HANDOFF from its template: the owner blockers first (name each pending decision and the action needed, or say nothing), then the present and previous state with the checked revision and what is uncommitted, the next authorized action pointing at TASKS, and the live traps.
 5. Use the adopted profile's existing read-only orient check where applicable, without dispatching QA or a separate documentation judge, and fix what is in scope; keep every unexplained or unavailable result with its recovery action. Commit only the named files this session owns and only if committing was granted; report foreign changes without bundling them.

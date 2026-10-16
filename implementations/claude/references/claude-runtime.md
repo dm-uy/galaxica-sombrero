@@ -1,4 +1,4 @@
-# Claude Code runtime — methodology-claude 2.0.1
+# Claude Code runtime — methodology-claude 2.0.2
 
 This is the runtime procedure of the native Claude Code package for neutral methodology 3.0.1. It says how Claude Code carries the neutral rules; it restates none of them. Where this file and a neutral owner seem to differ, the neutral owner wins and the difference is a package defect.
 
@@ -10,9 +10,9 @@ Profile `colocated-in-place`. The package lives at `implementations/claude/` of 
 claude --plugin-dir <checkout>/implementations/claude
 ```
 
-for one session, through `CLAUDE_CODE_PLUGIN_DIRS` set to the same path in the `env` of the user settings for every session (Claude Code 2.1.280 or later; source `methodology-claude@inline`), or through a local directory marketplace whose root contains this directory (a plugin source must start with `./` and may not contain `..`). All three load it in place. A symlink to this directory under a discovered skills directory is unsupported: `${CLAUDE_PLUGIN_ROOT}` keeps the link path and every `../../` reference misses, although the SessionStart hook, which resolves real paths, reports the binding bound. Inside Claude Code the package root is `${CLAUDE_PLUGIN_ROOT}` and the neutral root is `${CLAUDE_PLUGIN_ROOT}/../../`. `adapter.json` resolves `spec_root` (`../../`) from its own directory, so the caller's working directory never changes the binding.
+for one session, through `CLAUDE_CODE_PLUGIN_DIRS` set to the same path in the `env` of the user settings for every session (Claude Code 2.1.280 or later; source `methodology-claude@inline`). Both load it in place. Any marketplace install copies the plugin elsewhere and is unsupported: Claude Code 2.1.299 copies a plugin from a git or even a local directory marketplace into its plugin cache without the neutral files above it, and the SessionStart hook then reports the binding as BLOCKED. A symlink to this directory under a discovered skills directory is unsupported: `${CLAUDE_PLUGIN_ROOT}` keeps the link path and every `../../` reference misses, although the SessionStart hook, which resolves real paths, reports the binding bound. Inside Claude Code the package root is `${CLAUDE_PLUGIN_ROOT}` and the neutral root is `${CLAUDE_PLUGIN_ROOT}/../../`. `adapter.json` resolves `spec_root` (`../../`) from its own directory, so the caller's working directory never changes the binding.
 
-The SessionStart hook checks the binding at every start, resume, clear and compaction: adapter, `SPEC_VERSION` equal to the adapter's `spec_version`, the package layout identity and the six core owners present as drafts. A failed check is reported as BLOCKED in the session context. A copied install (git marketplace, plugin cache) has no neutral root above it and is unsupported: dependent methodology work stops; never fall back to an older installed copy of these practices.
+The SessionStart hook checks the binding at every start, resume, clear and compaction: adapter, `SPEC_VERSION` equal to the adapter's `spec_version`, the package layout identity and the six core owners present as drafts. A failed check is reported as BLOCKED in the session context. A copied install (git or local directory marketplace, plugin cache) has no neutral root above it and is unsupported: dependent methodology work stops; never fall back to an older installed copy of these practices.
 
 ## 2. Entry and orientation
 

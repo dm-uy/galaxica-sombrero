@@ -15,6 +15,8 @@ Owners — read in full before acting:
 - `${CLAUDE_PLUGIN_ROOT}/../../flow/delegation.md`
 - `${CLAUDE_PLUGIN_ROOT}/../../flow/run-state.md`
 - `${CLAUDE_PLUGIN_ROOT}/../../process/gates.md`
+- `${CLAUDE_PLUGIN_ROOT}/../../process/code-review.md`
+- `${CLAUDE_PLUGIN_ROOT}/../../process/safety.md`
 - `${CLAUDE_PLUGIN_ROOT}/../../policies/models.md`
 - `${CLAUDE_PLUGIN_ROOT}/references/claude-runtime.md`
 
@@ -25,7 +27,7 @@ Route:
 4. M task: reconnaissance through spec-recon, then a specification inside the approved scope (one outside it stops the run for renewed authorization), then the feature-dev cycle. This invocation is the opt-in for `/methodology-claude:feature-dev-workflow`; if the Workflow is unavailable follow the manual route of the feature-dev skill with run state. An L task is cut into M tasks before it runs.
 5. Verify each result yourself: separate author claims from independent review, list every skipped, deferred or blocked check with its reason, and run what the cycle did not run before calling the task done. A SUCCESS covers only what was checked.
 6. Record start, observations, blocks and finish in TASKS as they happen; route a binding decision to the decision home. At a stop condition record the reason and the return condition, and continue independent granted tasks. A non-gate question to the owner goes out while other tasks keep running, and is not asked if the answer is already recorded.
-7. At the end present blockers first, then changes and evidence, then findings and limits. Prepare the concrete result, run the live probe, then ask once with AskUserQuestion: merge, rework with a concrete Bug Report, or reject. Archive the packet with all task states, clean only resources this run created, and close with pm-handoff.
+7. At the end present blockers first, then changes and evidence, then findings and limits. Prepare the concrete result, run the live probe, then ask once with AskUserQuestion: merge, rework with a concrete Bug Report, or reject. Archiving the packet, cleanup and commits are consequential effects: before each, name its actual targets and the matching grant, and keep any not granted for the owner. Archive the packet with all task states. Before cleaning a branch, worktree or other resource, verify that it belongs to this run, inspect its ignored and uncommitted content, preserve nonregenerable state and hold the applicable integration or cleanup authority; a clean status alone is insufficient. Then close with pm-handoff.
 
 Limits:
 - No merge, push, publication or deployment without the separate result decision; rejection grants no destructive rollback.

@@ -1,5 +1,19 @@
 # Current maintainer tasks
 
+## M37 — Claude package actualization (current)
+
+Owner scope of 2026-10-16 (structured answers retained verbatim in the [record](notes/m37-claude-parity.md)): patch the Claude package now; port the C2 consumer PM profile through specification → owner approval → feature-dev; keep the name `methodology-claude`; lift the M30 Claude deferral and run the live proof; keep the in-house plugins until orient is ported. Isolated branch `claude/m37-claude-parity` from `b8696a2`; root is the only writer.
+
+| Task | State | Finish / next action |
+|---|---|---|
+| M37-T1 — reconcile Claude with Codex, neutral owners and in-house plugins | Done | Two read-only lanes plus root re-check; findings in the record. |
+| M37-T2 — patch Claude 2.0.2 | Checked locally, committed on the branch | Carrier parity (prompting route, RUNREV-301, lifecycle owner sets), install-claim correction, M31 root-oracle regression repair. Root 600 (3.12), Claude 526, Codex 146, adapters, self check, plugin validate pass; independent review findings addressed. Awaits the owner's integration decision. |
+| M37-T3 — live Claude M30 AC4/Claude AC5 | Observed | Three fresh headless runs on candidate 2.0.2: important case ran two generators → persisted HOLD → distinct evaluator → DEC; trivial and settled controls stayed bounded. M30 renewed QA/Review/Finalize still owed. |
+| M37-T4 — C2-port decision packet | Evaluated; collapse at the spec gate | Two generators, persisted HOLD, distinct evaluator ([packet](notes/m37-decision-c2-port/README.md)); recommendation H, runner-up M1; U1 verified after evaluation. |
+| M37-T5 — C2-port specification | Draft, awaiting owner approval | [Specification](specs/m37-claude-consumer-profile.md). Approval selects H and authorizes the feature-dev run; rework names the change. |
+| M37-T6 — feature-dev run for the C2 port | Held on T5 | Bootstrap → Architect → Code → QA → Review → Finalize with methodology-claude roles. |
+| M37-T7 — consumer migrations and plugin retirement | Held on T6 and per-project grants | Five consumer projects migrate to the profile one by one; then the owner disables the in-house plugins. |
+
 ## M36 — canonical session handoff synchronization (completed)
 
 Owner explicitly requested synchronizing Sombrero meta-documents and retaining important conclusions from this chat, history and real limitations. [Scope, provenance, carryover and delivery state](notes/m36-session-handoff.md). Documentation only; no framework code, installation, donor adoption or proof-deferral change.

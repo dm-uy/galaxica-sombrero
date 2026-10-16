@@ -106,8 +106,8 @@
       "fallback": "Missing records are reported as missing; no reconstruction presented as fact."
     },
     "packaging-install": {
-      "mechanism": "claude --plugin-dir <repo>/implementations/claude for one session, CLAUDE_CODE_PLUGIN_DIRS set to that path in the user settings env for every session, or a local directory marketplace whose root contains the package, loads the package in place; claude plugin validate --strict checks it.",
-      "fallback": "Copied installs (git marketplace, cache) are unsupported: the SessionStart hook reports the missing neutral binding as BLOCKED and dependent work stops. A symlinked skills-directory plugin is unsupported too: its neutral references miss although the hook reports it bound."
+      "mechanism": "claude --plugin-dir <repo>/implementations/claude for one session, or CLAUDE_CODE_PLUGIN_DIRS set to that path in the user settings env for every session, loads the package in place; claude plugin validate checks it, where the name warning is expected.",
+      "fallback": "Copied installs (git or local directory marketplace, plugin cache) are unsupported: the SessionStart hook reports the missing neutral binding as BLOCKED and dependent work stops. A symlinked skills-directory plugin is unsupported too: its neutral references miss although the hook reports it bound."
     },
     "launch-environment": {
       "mechanism": "The session working directory, added directories, the owner's permission mode and environment define roots and autonomy; credentials follow policies/credentials.md.",
