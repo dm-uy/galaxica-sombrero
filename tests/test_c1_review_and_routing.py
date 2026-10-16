@@ -15,6 +15,9 @@
 ## Q: Why inspect contrary forms?
 ## A: Removing a required report boundary or substantive draft must fail the same predicate that accepts current source.
 ## @changes
+## - The two pins below were recalibrated for the AST-shape normalizer that replaced the earlier
+##   release-site counter; the helper algorithms themselves did not change, and every injected drift
+##   control in the test body still changes the identity.
 ## LAST_CHANGE: [2.1.0 - M38 recalibrated the two helper-algorithm pins for the AST-shape normalizer that replaced the release-site counter; no helper executable changed and every drift control is retained. Earlier: 2.0.0 - M30 Debug1 owning success exposure/order/cardinality before pins; exact unique release selectors, consequential owner/caller controls and SessionStart original AST; earlier1.1.0 - C2 exact source/member normalization; fixed original pins retained. Earlier: C1 required owners, direct external-agent route and fixed original helper algorithm controls.]
 ## @modulemap
 ## FUNC 1[Metadata anchor] => test_c1_review_and_routing._module_contract
@@ -45,10 +48,6 @@ import logging
 import pytest
 
 LOGGER = logging.getLogger(__name__)
-# Recalibrated for the AST-shape normalizer that replaced the earlier release-site counter.
-# The helper algorithms themselves did not change: lifting the pinned sources' release
-# constants to the current values reproduces these same identities, and every injected
-# drift control below still changes them.
 PINS = {'codex': '1d1dc69167bfd334c5434e6b574d666759f1b38c9c1825e3d5a2b53b58167318', 'claude': '4205d1ea7c3cb901afe835b34f3edd6d6e38d7e00c39062cd304320906203432'}
 
 # region FUNC__read [DOMAIN(8): Source; CONCEPT(8): Identity; TECH(7): pathlib]
@@ -148,8 +147,11 @@ def test_external_agent_route_requires_full_current_owner(repo_root, caplog, tmp
 ## @uses ast.parse, ast.walk, ast.dump, hashlib.sha256, logging.Logger.info, logging.Logger.error
 ## @io Input: complete helper str and engine codex/claude. Output: SHA256 hex of the normalized whole AST.
 ##   Invariants: original input and original PINS unchanged; exact unique selector shape/current value required.
-##   Side effects: safe owning validation/result/error trace. Guarantees: only three Codex/two Claude binding constants,
-##   the unique Claude source assignment and existing exact73 member selector normalize; all other nodes stay pinned.
+##   Side effects: safe owning validation/result/error trace. Guarantees: exactly these sites normalize, each as its unique
+##   shape -- the SPEC_VERSION chain for both engines, the codex layout-version comparison, the result
+##   neutral_version for both, the codex exact membership count and the Claude PACKAGE_VERSION assignment; every
+##   other node, including the pinned function's own docstring, stays pinned. The Claude helper carries no member
+##   count literal at all, so nothing there needs normalizing.
 ##   Raises: AssertionError on missing/duplicate/wrong selector or unknown engine; SyntaxError on invalid Python.
 ##   Importance:9. Example: unrelated max_debug4 to3 remains a different whole algorithm identity.
 ## @complexity 7
