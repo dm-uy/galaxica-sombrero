@@ -26,6 +26,15 @@ Owner request: study this repository, implement the methodology for the DeepSeek
 - `python3 -m pytest tests/test_codex_package.py tests/test_claude_package.py` — 11 passed after the declared sibling set was extended to include `dsh`.
 - **Real installation into a scratch profile**: `dsh plugin --profile web add <package>` linked the package and appended `@methodology/dsh` to `dsh.profile.bundles`; `dsh --profile web --dump-config` composed a real `# == @methodology/dsh` layer carrying the expected row; and the row's loader expression resolves, from the profile directory, to the package's `skills/` directory holding 27 entries. The scratch profile was restored with `dsh plugin ... remove`.
 
+## Verified in the follow-up round
+
+- **The package map builds.** `doxygen Doxyfile` from this package exits 0 and produces 53 XML files in its own `doxygen_output/`, covering all six helpers (`run_state`, `orient`, `codemap`, `consumer_files`, `markup_migrate`, `visual_gate_lint`) by their own source, entity and location fields. The output directory is ignored by the root `.gitignore`, so the build leaves the tree clean.
+- **Every skill card is valid for the harness.** All 27 `SKILL.md` files open with a well-formed card, carry `name` equal to their directory and a non-empty `description`, use only those two keys, and each `name` matches the harness's kebab-case rule. A malformed card would make the harness drop that skill silently with a warning, so this is the check that the catalog is complete rather than merely present.
+- **The installation holds on a fresh profile.** Repeated on a second, empty scratch harness home: `dsh plugin --profile web add` appended `@methodology/dsh` to `dsh.profile.bundles`, `--dump-config` composed exactly one `# == @methodology/dsh` layer with the expected row, and that row resolved to the package's `skills/` directory holding 27 entries for every baseUrl form the loader can supply (the profile directory as a path, as a file URL, and the profile's config file). Both scratch homes were then removed.
+- **Conformance still holds after the document corrections.** `bin/conform self` exits 0 and `bin/conform adapter implementations/dsh/adapter.json` exits 0 with 76 passes and no warning.
+
+Three factual corrections came out of this review, each inherited verbatim from the sibling package and wrong here: the composition line claimed 73 members (this package declares 74 and ships 75); `source-disposition.md` named neutral 1.1.0 against the current 3.0.1; and both references closed with a paragraph about the Claude package that has no bearing on this one. The package's own documents now match its measured composition.
+
 ## Not verified
 
 - **No native behavioral acceptance.** No agent ran a methodology flow through this package: no Bootstrap-to-Finalize run, no checkpoint and resume, no independent QA or Review of a real target, and no session observed its skill catalog. The package tests and the installation check are structural and source-level.
