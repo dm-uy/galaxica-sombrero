@@ -173,7 +173,7 @@ Run each package's Doxygen map from its own directory when applicable. Commands 
 
 ## Scope and evidence
 
-The current source contains **69 drafts and 2 stubs**. Native packages are versioned separately: Codex **3.0.1**, Claude **2.0.1**, over neutral **3.0.1**.
+The current source contains **69 drafts and 2 stubs**. Native packages are versioned separately: Codex **3.0.1**, Claude **2.1.0**, over neutral **3.0.1**.
 
 Current limitations include deferred native Claude behavioral acceptance, broader consumer/autonomy proof and systematic comparative evaluation. The unaccepted safeguard work is outside the integrated source. Installation and source-test results do not establish whole-methodology effectiveness. [Current maintainer state](examples/pm-project/HANDOFF.md) · [Acceptance and test evidence](tests/test_guide.md)
 

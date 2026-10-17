@@ -20,8 +20,8 @@
 ## Q: Why separate typed facts, physical records and expectations?
 ## A: Fenced scenario labels yield no observation; expected status and an origin label cannot supply real prerequisite evidence.
 ## @changes
-## LAST_CHANGE: [2.0.0 - M30 exact51 role-read receipt metadata normalization; ORIGINAL whole-byte pins and contrary guards retained.]
-## Earlier: [v1.0.0 - Reconcile current M19 boundary/release facts and paired source operands; preserve original assertions/pins/refusals/restoration; runtime checks pending.]
+## LAST_CHANGE: [2.1.0 - M37 RECEIPT_REFRESH table adds the 351 flow/phases.md receipts after the owner-approved M31 owner change; ORIGINAL whole-byte pins and contrary guards retained.]
+## Earlier: [2.0.0 - M30 exact51 role-read receipt metadata normalization.] [v1.0.0 - Reconcile current M19 boundary/release facts and paired source operands; preserve original assertions/pins/refusals/restoration; runtime checks pending.]
 ## BUG_FIX_CONTEXT: QA found fenced labels discarded before evaluation and three one-literal negatives with surviving equivalent duties.
 ## BUG_FIX_CONTEXT: Reviewed source supports and independent related reasons distinguish redundant removal from actual loss; typed records expose absent versus unmet triggers.
 ## BUG_FIX_CONTEXT: Public prose and fixed policy stay unchanged; renewed independent semantic judgment and actual formal checks remain required.
@@ -29,6 +29,7 @@
 ## FUNC 8[Read complete actual source surfaces with their physical hashes and numeric modes] => _read_surfaces
 ## FUNC 8[Check actual Bootstrap cards anchors populations and overview links] => test_f2_structure_and_public_links
 ## FUNC 8[Require complete source-fixed current responsibility supports without live contrary grants] => test_f2_complete_current_interfaces
+## FUNC 8[Map exact current path-bound read-receipt SHA populations back to pinned originals] => _receipt_normalized
 ## FUNC 8[Retain protected bytes and same-version current rules beyond the optional QA repeat economy] => test_f2_unchanged_contract_boundaries
 ## FUNC 8[Separate actual live mandatory clauses from fences and reject ambiguous duplicate norms] => _parse_live
 ## FUNC 8[Check one reviewed support at its actual path norm level and live clause] => _support_matches
@@ -5995,11 +5996,48 @@ def test_f2_complete_current_interfaces(repo_root):
 # endregion FUNC_test_f2_complete_current_interfaces
 
 
+# Path-bound read-receipt refreshes admitted under the original whole-fixture pin: (owner path, pinned original SHA, current owner SHA, exact receipt population).
+RECEIPT_REFRESH = (
+    ("roles/architect.md", "d7ecb56452d6c20ca04938fcf16a8b786a0ac851762e27e0ac860d97b6035d23", "44763ab7afa836e5533e45075a66decc8a55b5ac9caddd8c2ff85b26678a8d61", 51),
+    ("flow/phases.md", "12a171ce07528146b9c3e3f91c5550aea072c3e7315293f5462766b0f32544ec", "2a22af26aca732913e546291e4aa57a3e0d94f532a2697d1c09f768e53c8851b", 351),
+)
+
+
+# region FUNC__receipt_normalized [DOMAIN(8): F2; CONCEPT(9): ActualEvidence, FixedIntent; TECH(6): json, bytes]
+## @purpose Map current path-bound read-receipt SHA scalars back to their pinned originals only when every refreshed population is exact.
+## @uses json.loads
+## @io Input: candidate bytes of the flow-contract fixture. Output: (normalized bytes or None, refused owner path or None, selected row count).
+##   Invariants: RECEIPT_REFRESH unchanged; a path is normalized only when its readEvidence rows number exactly its population, all carry the
+##   current owner SHA and the current SHA occurs exactly that many times in the bytes. Side effects: none.
+##   Guarantees: a wrong, missing or duplicated receipt row returns None with the refused path; no other byte is rewritten.
+##   Raises: JSONDecodeError on malformed candidate bytes. Importance:9. Example: 352 phases rows after a duplicated row return None.
+## @complexity 5
+def _receipt_normalized(candidate):
+    for owner_path, old_owner, current_owner, population in RECEIPT_REFRESH:
+        current_bytes = current_owner.encode()
+        pending = [json.loads(candidate)]
+        selected = []
+        while pending:
+            item = pending.pop()
+            if isinstance(item, dict):
+                if "readEvidence" in item:
+                    selected.extend(row for row in item["readEvidence"] if row.get("path") == owner_path)
+                pending.extend(item.values())
+            elif isinstance(item, list):
+                pending.extend(item)
+        exact = len(selected) == population and all(row.get("sha256") == current_owner for row in selected) and candidate.count(current_bytes) == population
+        if not exact:
+            return None, owner_path, len(selected)
+        candidate = candidate.replace(current_bytes, old_owner.encode())
+    return candidate, None, len(selected)
+# endregion FUNC__receipt_normalized
+
+
 # region FUNC_test_f2_unchanged_contract_boundaries [DOMAIN(8): F2; CONCEPT(9): ActualEvidence, FixedIntent; TECH(6): pathlib, json]
-## @purpose Retain every ORIGINAL protected byte pin, admitting only51 authorized current Architect read-receipt SHA scalars.
-## @uses pathlib.Path.read_bytes, json.loads, re.search, hashlib.sha256, test_f2_interfaces._read_surfaces
+## @purpose Retain every ORIGINAL protected byte pin, admitting only the authorized current Architect (51) and flow/phases.md (351) read-receipt SHA scalars.
+## @uses pathlib.Path.read_bytes, json.loads, re.search, hashlib.sha256, test_f2_interfaces._read_surfaces, test_f2_interfaces._receipt_normalized
 ## @io Input: repo_root Path of actual source. Output: None after whole protected-byte and contrary controls.
-##   Invariants: original PROTECTED_PINS unchanged; only51 current path-bound receipt SHA values normalize to fixed originals.
+##   Invariants: original PROTECTED_PINS unchanged; only the RECEIPT_REFRESH path-bound receipt SHA values normalize to fixed originals.
 ##   Guarantees: actual owner hash matches; wrong/missing/duplicate receipts refuse; any other case/event/byte corruption stays pinned.
 ##   Side effects: safe count/identity and owning success9/expected refusal10 trace only; candidate and control bytes stay in memory.
 ##   Raises: AssertionError on scope/hash/duty mismatch, JSONDecodeError on malformed fixture, OSError on unavailable source.
@@ -6014,33 +6052,27 @@ def test_f2_unchanged_contract_boundaries(repo_root):
         if relative == "examples/flow-contract/cases.json":
             # BUG_FIX_CONTEXT: exact authorized role-read receipts changed, while the original whole-fixture pin must remain.
             # Normalize only current path-bound receipt SHA scalars; every other ordered byte stays under the original oracle.
-            old_owner = "d7ecb56452d6c20ca04938fcf16a8b786a0ac851762e27e0ac860d97b6035d23"
-            current_owner = "44763ab7afa836e5533e45075a66decc8a55b5ac9caddd8c2ff85b26678a8d61"
-            assert hashlib.sha256((repo_root / "roles/architect.md").read_bytes()).hexdigest() == current_owner
-            current_bytes = current_owner.encode()
-            row_match = re.search(rb'\{\s*"path":\s*"roles/architect\.md",\s*"sha256":\s*"' + current_bytes + rb'"\s*\}', data)
-            assert row_match is not None and b'first-success' in data
+            # M30 refreshed the 51 Architect receipts; M37 refreshes the 351 flow/phases.md receipts after the owner-approved M31 owner change.
+            for owner_path, _old_owner, current_owner, _population in RECEIPT_REFRESH:
+                assert hashlib.sha256((repo_root / owner_path).read_bytes()).hexdigest() == current_owner
+            assert b'first-success' in data
             controls = [("current", data, True),
-                        ("case-byte", data.replace(b'first-success', b'first-succesx', 1), False),
-                        ("wrong-sha", data.replace(current_bytes, b'0' * 64, 1), False),
-                        ("missing-owner", data.replace(b'"path": "roles/architect.md"', b'"path": "roles/other.md"', 1), False),
-                        ("duplicate-row", data[:row_match.end()] + b',' + row_match.group() + data[row_match.end():], False)]
+                        ("case-byte", data.replace(b'first-success', b'first-succesx', 1), False)]
+            for owner_path, _old_owner, current_owner, _population in RECEIPT_REFRESH:
+                current_bytes = current_owner.encode()
+                path_bytes = re.escape(owner_path.encode())
+                row_match = re.search(rb'\{\s*"path":\s*"' + path_bytes + rb'",\s*"sha256":\s*"' + current_bytes + rb'"\s*\}', data)
+                assert row_match is not None
+                controls.extend([("wrong-sha:" + owner_path, data.replace(current_bytes, b'0' * 64, 1), False),
+                                 ("missing-owner:" + owner_path, data.replace(b'"path": "' + owner_path.encode() + b'"', b'"path": "roles/other.md"', 1), False),
+                                 ("duplicate-row:" + owner_path, data[:row_match.end()] + b',' + row_match.group() + data[row_match.end():], False)])
             for label, candidate, expected_valid in controls:
-                pending = [json.loads(candidate)]
-                selected = []
-                while pending:
-                    item = pending.pop()
-                    if isinstance(item, dict):
-                        if "readEvidence" in item:
-                            selected.extend(row for row in item["readEvidence"] if row.get("path") == "roles/architect.md")
-                        pending.extend(item.values())
-                    elif isinstance(item, list):
-                        pending.extend(item)
-                exact = len(selected) == 51 and all(row.get("sha256") == current_owner for row in selected) and candidate.count(current_bytes) == 51
-                normalized = candidate.replace(current_bytes, old_owner.encode()) if exact else candidate
-                valid = exact and hashlib.sha256(normalized).hexdigest() == expected
-                print("[IMP:%d][test_f2_unchanged_contract_boundaries][RECEIPT_%s] control=%s selected=%d" % (9 if valid else 10, "VALID" if valid else "REFUSED", label, len(selected)))
+                normalized, refused_path, selected = _receipt_normalized(candidate)
+                valid = normalized is not None and hashlib.sha256(normalized).hexdigest() == expected
+                print("[IMP:%d][test_f2_unchanged_contract_boundaries][RECEIPT_%s] control=%s refused_path=%s selected=%d" % (9 if valid else 10, "VALID" if valid else "REFUSED", label, refused_path, selected))
                 assert valid is expected_valid
+                if ":" in label:
+                    assert refused_path == label.split(":", 1)[1]
                 if label == "current":
                     data = normalized
         actual = hashlib.sha256(data).hexdigest()

@@ -1,4 +1,4 @@
-# Claude Code runtime — methodology-claude 2.0.1
+# Claude Code runtime — methodology-claude 2.1.0
 
 This is the runtime procedure of the native Claude Code package for neutral methodology 3.0.1. It says how Claude Code carries the neutral rules; it restates none of them. Where this file and a neutral owner seem to differ, the neutral owner wins and the difference is a package defect.
 
@@ -10,15 +10,17 @@ Profile `colocated-in-place`. The package lives at `implementations/claude/` of 
 claude --plugin-dir <checkout>/implementations/claude
 ```
 
-for one session, through `CLAUDE_CODE_PLUGIN_DIRS` set to the same path in the `env` of the user settings for every session (Claude Code 2.1.280 or later; source `methodology-claude@inline`), or through a local directory marketplace whose root contains this directory (a plugin source must start with `./` and may not contain `..`). All three load it in place. A symlink to this directory under a discovered skills directory is unsupported: `${CLAUDE_PLUGIN_ROOT}` keeps the link path and every `../../` reference misses, although the SessionStart hook, which resolves real paths, reports the binding bound. Inside Claude Code the package root is `${CLAUDE_PLUGIN_ROOT}` and the neutral root is `${CLAUDE_PLUGIN_ROOT}/../../`. `adapter.json` resolves `spec_root` (`../../`) from its own directory, so the caller's working directory never changes the binding.
+for one session, through `CLAUDE_CODE_PLUGIN_DIRS` set to the same path in the `env` of the user settings for every session (Claude Code 2.1.280 or later; source `methodology-claude@inline`). Both load it in place. Any marketplace install copies the plugin elsewhere and is unsupported: Claude Code 2.1.299 copies a plugin from a git or even a local directory marketplace into its plugin cache without the neutral files above it, and the SessionStart hook then reports the binding as BLOCKED. A symlink to this directory under a discovered skills directory is unsupported: `${CLAUDE_PLUGIN_ROOT}` keeps the link path and every `../../` reference misses, although the SessionStart hook, which resolves real paths, reports the binding bound. Inside Claude Code the package root is `${CLAUDE_PLUGIN_ROOT}` and the neutral root is `${CLAUDE_PLUGIN_ROOT}/../../`. `adapter.json` resolves `spec_root` (`../../`) from its own directory, so the caller's working directory never changes the binding.
 
-The SessionStart hook checks the binding at every start, resume, clear and compaction: adapter, `SPEC_VERSION` equal to the adapter's `spec_version`, the package layout identity and the six core owners present as drafts. A failed check is reported as BLOCKED in the session context. A copied install (git marketplace, plugin cache) has no neutral root above it and is unsupported: dependent methodology work stops; never fall back to an older installed copy of these practices.
+The SessionStart hook checks the binding at every start, resume, clear and compaction: adapter, `SPEC_VERSION` equal to the adapter's `spec_version`, the package layout identity and the six core owners present as drafts. A failed check is reported as BLOCKED in the session context. A copied install (git or local directory marketplace, plugin cache) has no neutral root above it and is unsupported: dependent methodology work stops; never fall back to an older installed copy of these practices.
 
 ## 2. Entry and orientation
 
 At entry or resume the root (the main session acting for the owner) reads in full `checks/orient.md`, `checks/preflight.md`, `checks/run-audit.md` and `process/safety.md` before the assessments they govern, then the target's entry instructions (`AGENTS.md`, `CLAUDE.md`) and its five durable records (purpose, route, tasks, handoff, instructions) where the project keeps them. Orient and preflight are performed with real reads and permitted commands; the hook output is a pointer, not the assessment. Run all cheap independent checks even after one fails, and withhold only the dependent effects. Read-only work needs no clean tree.
 
 Required reading follows [adoption](adoption.md): the six core owners before any software role acts, the assigned role owner and `protocols/role-returns.md`, and the owners named by the applicable skill. A link, card, hash or summary is not a read. A required owner that is missing, a stub, truncated or unread blocks dependent action.
+
+A target that explicitly adopts the consumer PM profile `methodology-consumer-pm/1.0.0` is oriented at entry with `orient PROJECT` and checked at closure with `orient PROJECT --check` through the package's `bin/` launchers, which run the sibling Codex C2 helpers in place; see [consumer PM profile](consumer-pm-profile.md). A bare name is used only when `command -v` resolves it to the package's own launcher, otherwise the absolute launcher path. A missing sibling Codex package is BLOCKED.
 
 ## 3. Roles, models and permissions
 
@@ -78,6 +80,8 @@ Product code follows the six core owners: semantic exoskeleton on authored code,
 |---|---|---|
 | SessionStart (startup, resume, clear, compact) | `hooks/session_start.py` | Verifies the in-place binding and adds a short context: the bound neutral root or the BLOCKED reasons, the reading duty, and, when the target has an `AGENTS.md`, which of its durable records exist. Never writes, never fails the session. |
 | PreToolUse (Bash) | `hooks/guard_destructive.py` | Asks before commands that would lose unrecoverable state; denies tree-changing commands to read-only agent types; silent otherwise. `METHODOLOGY_GUARD_SCOPE=off` disables it. |
+
+The consumer PM profile adds no package hook; its optional per-project SessionStart recipe lives in [consumer PM profile](consumer-pm-profile.md) and is installed only under a per-project grant.
 
 With hooks disabled (for example `--bare`) the root performs Orient manually and checks scope and effects itself before each operation.
 

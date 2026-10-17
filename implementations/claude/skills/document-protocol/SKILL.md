@@ -24,3 +24,5 @@ Limits:
 - Write only inside the granted paths and report any other write you find.
 - No merge, publication or installation follows from this skill, and an inner role never delegates or commits.
 - A missing, stub or unread required owner is BLOCKED.
+
+Consumer PM profile: the selected seeds at `${CLAUDE_PLUGIN_ROOT}/../codex/skills/pm/templates/` and the profile metadata compose the full document and specification owners above. Read `${CLAUDE_PLUGIN_ROOT}/references/consumer-pm-profile.md` and the Codex carrier it names, and preserve actual record homes and richer paired technical forms. Templates never supply consent. `orient PROJECT --check` through the launcher `${CLAUDE_PLUGIN_ROOT}/bin/orient` reports structural rows only, not meaning.

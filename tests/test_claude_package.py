@@ -5,15 +5,15 @@
 ##   carriers.
 ## @scope Exact specified package paths, kinds, profile and role locations; declared sibling packages; detached-neutral,
 ##   malformed, unsafe and linked refusals on owned copies; privacy canaries in agent, hook, workflow and harness carriers.
-## @input Current complete canonical source and isolated owned copies; the M22 specification's 59-path list as the
+## @input Current complete canonical source and isolated owned copies; the M37 specification's 64-path list as the
 ##   independent expected input.
 ## @output Assertions over real source paths and metadata; visible validation and failure trajectories; exact restoration.
 ## @links [USES_API(8): pathlib, json, logging, subprocess; READS_DATA_FROM(9): implementations/claude/references/package-layout.json;
 ##   USES_API(7): bin/conform self (subprocess)]
-## @links_to_spec examples/pm-project/specs/m22-claude-package.md AC-M22-1, AC-M22-2
+## @links_to_spec examples/pm-project/specs/m22-claude-package.md AC-M22-1, AC-M22-2; examples/pm-project/specs/m37-claude-consumer-profile.md Behavior 6
 ## @invariants
 ## - Original source is read-only; negative controls change only owned copies and restore full bytes and numeric modes.
-## - The 59 expected paths come from the approved specification, never from the observed layout file.
+## - The 64 expected paths come from the approved specification, never from the observed layout file.
 ## - Assembly does not prove that a live session read or obeyed the neutral owners.
 ## @rationale
 ## Q: Why a second, root-level oracle when the package has its own contract test?
@@ -23,7 +23,7 @@
 ## A: The scanner and its canaries are the shipped privacy contract; running the real CLI proves the new carrier families
 ##    are in the same traversal without a second scanner.
 ## @changes
-## LAST_CHANGE: [2.0.0 - M30 exact current release/census coupling; all prior cases/assertions/refusals retained.]
+## LAST_CHANGE: [2.1.0 - M37 consumer-profile membership 64 (three bin launchers, carrier, package test) and Claude 2.1.0 selectors; earlier 2.0.0 - M30 exact current release/census coupling; all prior cases/assertions/refusals retained.]
 ## Earlier: [1.1.0 - M22 Claude package assembly oracle, refusals and publication-channel coverage.]
 ## @modulemap
 ## FUNC 7[Run the shipped conform self launcher on a copy] => test_claude_package._publication_process
@@ -34,11 +34,11 @@
 ## FUNC 9[Missing/extra/sibling/unsafe/detached/linked refusals] => test_claude_package.test_claude_package_refusals
 ## FUNC 10[Privacy canaries bite in native Claude carriers] => test_claude_package.test_claude_publication_channels
 ## @usecases
-## - [test_complete_claude_package]: Owner → check the exact package population → 59 members, 28 skills, 6 roles, 4 helpers.
+## - [test_complete_claude_package]: Owner → check the exact package population → 64 members, 28 skills, 6 roles, 7 helpers.
 ## - [test_claude_package_refusals]: QA → perturb owned package membership → defect refused, source restored.
 ## - [test_claude_publication_channels]: Owner → plant canaries in native carriers → the shipped scan fails each one.
-## @GREP_SUMMARY Claude package, independent inventory, 59 paths, typed namespace, colocated-in-place, siblings, unsafe paths, publication canaries
-## @STRUCTURE ▶ canonical source → ◇ 59-path/profile match → ⊕ positive result → ○ owned mutations → ◇ refuse → ⎋ restore → ○ canaries → ◇ scan FAIL
+## @GREP_SUMMARY Claude package, independent inventory, 64 paths, typed namespace, colocated-in-place, siblings, unsafe paths, publication canaries
+## @STRUCTURE ▶ canonical source → ◇ 64-path/profile match → ⊕ positive result → ○ owned mutations → ◇ refuse → ⎋ restore → ○ canaries → ◇ scan FAIL
 def _module_contract():
     pass
 # endregion MODULE_CONTRACT
@@ -66,13 +66,15 @@ TOPICS = ("analyzer", "ax-ui-contract", "brainstorm", "brownfield-spec-template"
           "prompting-verify", "roadmap", "semantic-exoskeleton", "spec-recon")
 FIXED = {
     ".claude-plugin/plugin.json": "plugin-manifest", "Doxyfile": "config", "README.md": "documentation",
-    "adapter.json": "adapter", "examples/smoke-spec.md": "example", "hooks/guard_destructive.py": "helper",
+    "adapter.json": "adapter", "bin/codemap": "helper", "bin/markup-migrate": "helper", "bin/orient": "helper",
+    "examples/smoke-spec.md": "example", "hooks/guard_destructive.py": "helper",
     "hooks/hooks.json": "hook-config", "hooks/session_start.py": "helper", "pytest.ini": "config",
     "references/adoption.md": "documentation", "references/claude-runtime.md": "documentation",
-    "references/handoffs.md": "documentation", "references/package-layout.json": "layout",
+    "references/consumer-pm-profile.md": "documentation", "references/handoffs.md": "documentation", "references/package-layout.json": "layout",
     "references/source-disposition.md": "documentation",
     "skills/devplan-protocol/scripts/visual_gate_lint.py": "helper", "skills/feature-dev/scripts/run_state.py": "helper",
-    "tests/test_guard.py": "test", "tests/test_guide.md": "test-guide", "tests/test_package_contract.py": "test",
+    "tests/test_consumer_profile.py": "test", "tests/test_guard.py": "test", "tests/test_guide.md": "test-guide",
+    "tests/test_package_contract.py": "test",
     "tests/test_run_state.py": "test", "tests/test_session_start.py": "test", "tests/test_visual_gate.py": "test",
     "tests/test_workflow.py": "test", "tests/workflow_harness.mjs": "test", "workflows/feature-dev.js": "workflow",
 }
@@ -112,7 +114,7 @@ def _forms(value):
 # region FUNC__package_assembly [DOMAIN(9): Package; CONCEPT(10): IndependentOracle; TECH(7): pathlib, json]
 ## @purpose Refuse an incomplete or unsafe Claude package before reporting the independently specified complete profile.
 ## @uses pathlib.Path.read_text, pathlib.Path.rglob, json.loads, logging.Logger.info, logging.Logger.error
-## @io Input: root pathlib.Path of a complete co-located source. Output: sorted list of the 59 declared relative paths.
+## @io Input: root pathlib.Path of a complete co-located source. Output: sorted list of the 64 declared relative paths.
 ##   Side effects: reads and a safe trajectory only. Raises: ValueError for malformed layout, duplicate/unsafe path,
 ##   missing/extra/sibling package or detached neutral dependency; OSError/UnicodeError for unreadable files.
 ## @complexity 7
@@ -133,7 +135,7 @@ def _package_assembly(root):
         operation = "Layout"
         layout = json.loads((package / "references/package-layout.json").read_text())
         if (not isinstance(layout, dict) or set(layout) != {"package", "version", "profile", "files", "roles"}
-                or layout.get("package") != "methodology-claude" or layout.get("version") != "2.0.1"
+                or layout.get("package") != "methodology-claude" or layout.get("version") != "2.1.0"
                 or layout.get("profile") != "colocated-in-place" or layout.get("roles") != ROLES):
             raise ValueError("unsupported package profile")
         rows = layout.get("files")
@@ -176,7 +178,7 @@ def _package_assembly(root):
             raise ValueError("missing or undeclared actual package member")
         operation = "Metadata"
         plugin = json.loads((package / ".claude-plugin/plugin.json").read_text())
-        if plugin.get("name") != "methodology-claude" or plugin.get("version") != "2.0.1":
+        if plugin.get("name") != "methodology-claude" or plugin.get("version") != "2.1.0":
             raise ValueError("native metadata identity mismatch")
         LOGGER.info("[IMP:9][_package_assembly][VALIDATION_SUCCESS] members=%d", len(actual))
         return declared
@@ -204,14 +206,14 @@ def _show_trace(records):
 # region FUNC_test_complete_claude_package [DOMAIN(9): Boundary; CONCEPT(10): RealFilesystem; TECH(7): pytest]
 ## @purpose Verify the actual complete package population and the declared sibling set from the canonical source.
 ## @uses test_claude_package._package_assembly, test_claude_package._show_trace
-## @io Input: repo_root and caplog. Output: None after the exact 59/28/6/4 population and the sibling set are confirmed.
+## @io Input: repo_root and caplog. Output: None after the exact 64/28/6/7 population and the sibling set are confirmed.
 ## @complexity 3
 def test_complete_claude_package(repo_root, caplog):
     caplog.set_level(logging.INFO, logger=LOGGER.name)
     declared = _package_assembly(repo_root)
     _show_trace(caplog.records)
     kinds = [EXPECTED_KINDS[p] for p in declared]
-    assert len(declared) == 59 and kinds.count("skill") == 28 and kinds.count("role") == 6 and kinds.count("helper") == 4
+    assert len(declared) == 64 and kinds.count("skill") == 28 and kinds.count("role") == 6 and kinds.count("helper") == 7
     assert {p.name for p in (repo_root / "implementations").iterdir() if p.name != ".DS_Store"} == DECLARED_PACKAGES
     assert any("[VALIDATION_SUCCESS]" in r.getMessage() for r in caplog.records)
     assert not [r for r in caplog.records if r.levelno >= logging.ERROR]

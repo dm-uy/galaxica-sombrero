@@ -23,3 +23,5 @@ Limits:
 - Status is read against artifacts; a checkbox alone is not evidence.
 - No merge, publication or installation follows from this skill, and an inner role never delegates or commits.
 - A missing, stub or unread required owner is BLOCKED.
+
+Consumer PM profile: for an explicitly adopted `methodology-consumer-pm/1.0.0` target, read `${CLAUDE_PLUGIN_ROOT}/references/consumer-pm-profile.md` and the Codex carrier it names; apply its actual homes, stable ids, the single `<<< WE ARE HERE` marker, the matching Mermaid diagram, the inclusive budgets and the held reasons. `orient PROJECT --check` through the launcher `${CLAUDE_PLUGIN_ROOT}/bin/orient` reports the structural route rows. Existing project declarations win.

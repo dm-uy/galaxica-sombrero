@@ -1,4 +1,4 @@
-# Source disposition — methodology-claude 1.0.0
+# Source disposition — methodology-claude 2.1.0
 
 This table describes Claude-native technical duties under neutral labels S1–S8. Private source reconnaissance, exact locators and byte identities are unavailable in this public tree. The labels do not assert a complete source transfer. Every rule the package applies comes from current neutral owners; older variants do not become competing rules. Native mechanics and wording are reconciled as detailed below.
 
@@ -20,7 +20,8 @@ Dispositions: **adapted** (reworked into a package member under the current neut
 | S2 | SessionStart orientation script | superseded | `hooks/session_start.py` (new, binding check and record presence); the full Orient assessment is the root's duty under `checks/orient.md`. |
 | S2 | PreToolUse destructive-command guard | adapted | `hooks/guard_destructive.py`: decision rules and precision kept; active whenever the package is loaded; read-only agent types extended to the package judges. |
 | S2 | Project conventions, manifest, document templates | superseded | `documents/conventions.md`, `documents/templates/*` and `process/*`. |
-| S2 | Code-map query, markup migration, run-review scripts | outside | Useful tools with their own tests, not needed to bind the methodology; candidates for a later package increment by separate decision. |
+| S2 | Code-map query and markup migration scripts | superseded | Carried by reference: the accepted Codex C2 helpers `implementations/codex/skills/pm/scripts/codemap.py`, `markup_migrate.py`, `orient.py` and `consumer_files.py` and the 13 seeds run in place through `bin/codemap`, `bin/markup-migrate` and `bin/orient`; no Claude copy (M37 decision H, [carrier](consumer-pm-profile.md)). |
+| S2 | Run-review script | outside | Deferred by the earlier owner decision; not part of this package. |
 | S3 | Prompting skills and commands (agent-prompt, brainstorm, contract, design, verify-fact, methodology router) | superseded | `prompting/*.md` through `skills/prompting*`, `skills/brainstorm` and `skills/semantic-exoskeleton`. |
 | S3 | Brainstorm and architect ensemble agents | superseded | `prompting/brainstorm.md`, `prompting/superposition-collapse.md`; the root dispatches a role or a general subagent when a fork needs independent hypotheses. |
 | S3 | Book-derived prompting knowledge graph | omitted | Not authored by the project; the neutral prompting owners are re-authored independently. |
@@ -42,6 +43,9 @@ Dispositions: **adapted** (reworked into a package member under the current neut
 | `skills/pm-*/SKILL.md` (5) | S2 command set; neutral process owners. |
 | `skills/feature-dev/scripts/run_state.py` | Codex package helper: the schema-2 run-state contract is shared; the package identity is this package's, and the candidate inventory now follows git's ignore rules with a declared fallback (M22 Debug entries 2 and 3), with package-specific behavior and tests retained. The Codex helper also has Gitignore-aware inventory after M25A; see Known limits. |
 | `skills/devplan-protocol/scripts/visual_gate_lint.py` | Codex package helper. |
+| `bin/orient`, `bin/codemap`, `bin/markup-migrate` | New in 2.1.0 (M37): launchers that run the sibling Codex C2 helpers in place with `-B`; BLOCKED when the sibling is missing. |
+| `references/consumer-pm-profile.md` | New in 2.1.0 (M37): thin by-reference carrier over the Codex consumer PM profile. |
+| `tests/test_consumer_profile.py` | New in 2.1.0 (M37): launcher process-boundary, carrier and routing tests. |
 | `hooks/hooks.json`, `hooks/session_start.py` | New. |
 | `hooks/guard_destructive.py` | S2 guard, adapted. |
 | `workflows/feature-dev.js` | S1/S4 spine, adapted. |
@@ -50,3 +54,5 @@ Dispositions: **adapted** (reworked into a package member under the current neut
 ## Known limits
 
 The run-state helpers share the state contract but are not asserted to behave identically. Both have Gitignore-aware candidate inventory. M25A Codex source uses tracked-priority cached/nonignored-other enumeration at a confirmed Git top-level, a declared nonGit/subdirectory/unavailableGit fallback, and refusal on confirmed unusable enumeration. Its coupled inventory/baseline observation clears inherited GIT_* steering and disables optional locks/fsmonitor; this bounded protection does not claim every repository program is disabled. Claude retains its own fallback and tests. Byte equality proves only bytes; private source origin and acceptance evidence is unavailable here and no complete-transfer claim follows. The Codex-derived helpers duplicate code between the two packages; extracting a shared helper is a separate decision because it changes the Codex package.
+
+From 2.1.0 the consumer PM profile depends at runtime on the sibling Codex package of the same checkout. The root test `tests/test_claude_consumer_bridge.py` pins the SHA-256 of the 18 Codex files it uses, so a change there fails until a reviewer re-pins it with a reason.

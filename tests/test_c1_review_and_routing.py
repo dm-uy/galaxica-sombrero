@@ -15,7 +15,7 @@
 ## Q: Why inspect contrary forms?
 ## A: Removing a required report boundary or substantive draft must fail the same predicate that accepts current source.
 ## @changes
-## LAST_CHANGE: [2.0.0 - M30 Debug1 owning success exposure/order/cardinality before pins; exact unique release selectors, consequential owner/caller controls and SessionStart original AST; earlier1.1.0 - C2 exact source/member normalization; fixed original pins retained. Earlier: C1 required owners, direct external-agent route and fixed original helper algorithm controls.]
+## LAST_CHANGE: [2.2.0 - M37 Claude 2.1.0 release selectors; earlier2.1.0 - M37 Claude 2.0.2 release selectors and Claude one-shot/loop prompt-route assertions; earlier2.0.0 - M30 Debug1 owning success exposure/order/cardinality before pins; exact unique release selectors, consequential owner/caller controls and SessionStart original AST; earlier1.1.0 - C2 exact source/member normalization; fixed original pins retained. Earlier: C1 required owners, direct external-agent route and fixed original helper algorithm controls.]
 ## @modulemap
 ## FUNC 1[Metadata anchor] => test_c1_review_and_routing._module_contract
 ## FUNC 8[Read complete source with owned safe trace] => test_c1_review_and_routing._read
@@ -114,7 +114,7 @@ def test_required_review_owners_have_operating_forms_and_boundaries(repo_root, c
 # endregion FUNC_test_required_review_owners_have_operating_forms_and_boundaries
 
 # region FUNC_test_external_agent_route_requires_full_current_owner [DOMAIN(9): Prompting; CONCEPT(9): Dependency; TECH(7): pytest]
-## @purpose Verify direct one-shot/loop route with meaningful absent/stub current-source controls.
+## @purpose Verify direct one-shot/loop route in the Codex and Claude carriers with meaningful absent/stub current-source controls.
 ## @uses test_c1_review_and_routing._read, test_c1_review_and_routing._operating
 ## @io Input: repo_root Path, caplog fixture, tmp_path owned Path. Output: None after source and contrary assertions. Side effects: owned absent/stub file and visible trace only; no author/recipient execution. Guarantees: required actual owner full-source condition is checked and fallback remains forbidden. Raises: AssertionError on mismatch. Importance:9. Example: stub owner cannot satisfy full-source profile.
 ## @complexity 5
@@ -130,6 +130,14 @@ def test_external_agent_route_requires_full_current_owner(repo_root, caplog, tmp
     for field in ("all three authored artifacts", "machine/reproducibility", "DRAFT/NOT_RUN", "synthetic-secret probe", "only to loop designs", "Missing, stub, stale, truncated or unread required content is BLOCKED"):
         assert field in specialized
     assert "\nstatus: draft\n" in owner and "cached installed constitution" in specialized
+    claude_general = _read(repo_root, "implementations/claude/skills/prompting/SKILL.md")
+    claude_specialized = _read(repo_root, "implementations/claude/skills/prompting-agent-design/SKILL.md")
+    for field in ("one-shot or loop", "prompting-agent-design", "ordinary short human-read prose"):
+        assert field in claude_general
+    assert "tool loops to prompting-agent-design" not in claude_general
+    for field in ("all three authored artifacts", "reproducibility contract", "DRAFT/NOT_RUN", "synthetic-secret probe", "only to a loop design", "prompting/agent-prompt-design.md", "A missing, stub or unread required owner is BLOCKED"):
+        assert field in claude_specialized
+    print("[IMP:9][test_external_agent_route_requires_full_current_owner][CLAUDE_ROUTE] one-shot/loop route and three artifacts present in the Claude carriers")
     assert not [r for r in caplog.records if r.levelno >= logging.ERROR]
     missing = tmp_path / "owner.md"
     assert not missing.exists()
@@ -185,7 +193,7 @@ def _algorithm_identity(text, engine):
             assignments = [n for n in tree.body if isinstance(n, ast.Assign) and len(n.targets) == 1
                            and isinstance(n.targets[0], ast.Name) and n.targets[0].id == "PACKAGE_VERSION"]
             assert len(assignments) == 1, "unique package source assignment required"
-            assert isinstance(assignments[0].value, ast.Constant) and assignments[0].value.value == "2.0.1", "wrong package source version"
+            assert isinstance(assignments[0].value, ast.Constant) and assignments[0].value.value == "2.1.0", "wrong package source version"
             assignments[0].value.value = "1.0.0"
         if engine == "codex":
             # Original C2 exact chained membership selector; no unrelated73 node is changed.
@@ -217,7 +225,7 @@ def test_release_bridge_keeps_wire_and_helper_algorithms(repo_root, caplog):
     # START_BLOCK_BusinessLogic
     caplog.set_level(logging.INFO, logger=LOGGER.name)
     assert _read(repo_root, "SPEC_VERSION") == "3.0.1\n"
-    for engine, version in (("codex", "3.0.1"), ("claude", "2.0.1")):
+    for engine, version in (("codex", "3.0.1"), ("claude", "2.1.0")):
         base = "implementations/" + engine
         layout = json.loads(_read(repo_root, base + "/references/package-layout.json"))
         adapter = json.loads(_read(repo_root, base + "/adapter.json"))
@@ -278,8 +286,8 @@ def test_release_bridge_keeps_wire_and_helper_algorithms(repo_root, caplog):
         if engine == "codex":
             controls.append(text.replace("layout.get('version') == '3.0.1'", "layout.get('version') == '2.2.0'", 1))
         else:
-            controls.extend([text.replace("PACKAGE_VERSION = '2.0.1'", "PACKAGE_VERSION = '1.0.0'", 1),
-                             text.replace("PACKAGE_VERSION = '2.0.1'", "PACKAGE_VERSION = '2.0.1'\nPACKAGE_VERSION = '2.0.1'", 1)])
+            controls.extend([text.replace("PACKAGE_VERSION = '2.1.0'", "PACKAGE_VERSION = '1.0.0'", 1),
+                             text.replace("PACKAGE_VERSION = '2.1.0'", "PACKAGE_VERSION = '2.1.0'\nPACKAGE_VERSION = '2.1.0'", 1)])
         caplog.clear()
         for control in controls:
             assert control != text
@@ -410,7 +418,7 @@ def test_session_start_source_bridge_preserves_ast(repo_root, caplog):
     tree = ast.parse(text)
     assignments = [n for n in tree.body if isinstance(n, ast.Assign) and len(n.targets) == 1
                    and isinstance(n.targets[0], ast.Name) and n.targets[0].id == "PACKAGE_VERSION"]
-    assert len(assignments) == 1 and isinstance(assignments[0].value, ast.Constant) and assignments[0].value.value == "2.0.1"
+    assert len(assignments) == 1 and isinstance(assignments[0].value, ast.Constant) and assignments[0].value.value == "2.1.0"
     assignments[0].value.value = "1.0.0"
     # Python3.12 adds empty type_params to the parser's dump; preserve the original3.9 oracle.
     # Only EMPTY version-introduced fields are omitted from serialization, never nonempty generics.

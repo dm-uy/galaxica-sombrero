@@ -11,6 +11,9 @@ Prepare a project so the next role has its records, its code map and its settled
 
 Owners — read in full before acting:
 - `${CLAUDE_PLUGIN_ROOT}/../../process/bootstrap.md`
+- `${CLAUDE_PLUGIN_ROOT}/../../process/session.md`
+- `${CLAUDE_PLUGIN_ROOT}/../../process/safety.md`
+- `${CLAUDE_PLUGIN_ROOT}/../../process/gates.md`
 - `${CLAUDE_PLUGIN_ROOT}/../../documents/conventions.md`
 - `${CLAUDE_PLUGIN_ROOT}/../../documents/templates/INDEX.md`
 - `${CLAUDE_PLUGIN_ROOT}/../../roles/pm.md`
@@ -20,11 +23,18 @@ Owners — read in full before acting:
 Route:
 1. Resolve the project from the argument or the working directory. Orient read-only first (the SessionStart context, then the entry and existing records), record the baseline with `git status --porcelain -uall`, and classify from real source: existing executable code is never greenfield.
 2. Preparation writes need a matching bounded grant. Authenticate the owner's existing bootstrap/entry-update request against the actual files and actions; reuse clear matching consent. Ask with AskUserQuestion only for missing or ambiguous scope, including an optional CLAUDE.md import or a move not already granted.
-3. Inventory the existing documents and give each its one home under the conventions. Never overwrite and never delete truth: if a move would lose content, stop and return that gap.
+3. Inventory the existing documents and give each its one home under the conventions. Never overwrite and never delete truth: map the proposed homes first, treat every move as a consequential effect that needs a matching grant (a clear existing grant counts), and if a move would lose content, stop and return that gap.
 4. Seed only the missing records (AGENTS, VISION, ROADMAP, HANDOFF, TASKS) from the five templates listed in the templates index, at the homes the target selects, preserving existing Git and ignore rules. The vision stays a draft; a decision becomes a record only when the owner has confirmed it. Apply documents/conventions.md#documents.conventions.entry: put the compact continuity duties and actual home map early in new entries; compare existing entries by meaning, retaining equivalent clauses and adding only missing nonconflicting duties within the grant. Preserve original rules/bytes, metadata, mandatory preamble, links and alternate names; never replace an existing entry with the form. Report conflicts without overriding them.
 5. Make sure the Doxyfile covers the source and tests, create the output directories, run `doxygen Doxyfile` with Bash and read the exit code and the XML back. A missing doxygen or Doxyfile is owed work, reported, never an exemption.
 6. Read back the actual entry/current homes for recoverable goal/current/next/grants/result/holds, original-rule preservation and no duplicate additions on repeat inspection. Return covered/missing/conflicting duties in the existing result. Run the project's available checker and keep every remaining failure with its owner in HANDOFF under the blockers; structural markers do not certify semantic duty coverage.
 7. Gate: ask once with AskUserQuestion to approve, rework or cancel, recording the answer verbatim. Report in this order: what waits for the owner, what changed, what was found.
+
+Consumer PM profile adoption — only when the owner's grant selects `methodology-consumer-pm/1.0.0`; otherwise the route above with the five neutral forms applies unchanged:
+1. Read `${CLAUDE_PLUGIN_ROOT}/references/consumer-pm-profile.md` and the Codex carrier it names in full. Authenticate the exact adoption and materialization scope (which seeds, which homes, which existing records may change) before any effect.
+2. Seed from the 13 profile templates at `${CLAUDE_PLUGIN_ROOT}/../codex/skills/pm/templates/` instead of the five neutral forms, and only the granted missing applicable leaves. Never overwrite, move or delete an existing record without an exact granted migration; if the adoption would need such a change, leave the file as it is and name the change as a pending owner decision.
+3. Declare the profile in the CONVENTIONS front matter with the actual homes, actor and clock. Bind the Doxyfile INPUT to the real sources and tests; a Doxygen build and its receipt under `.methodology/maps/` need their own resource grant.
+4. Run `orient PROJECT --check` through the launcher `${CLAUDE_PLUGIN_ROOT}/bin/orient` (bare `orient` only when `command -v orient` resolves to that launcher) and report every row exactly as printed; keep each failed or unavailable row with its owner in HANDOFF under the owner block. After a granted map build, `${CLAUDE_PLUGIN_ROOT}/bin/codemap PROJECT TARGET` answers navigation questions. `${CLAUDE_PLUGIN_ROOT}/bin/markup-migrate PROJECT` previews a markup migration; `--apply` runs only under the apply conditions of the Codex carrier, with an AskUserQuestion-authenticated approval record.
+5. Offer the carrier's optional per-project SessionStart hook only under its own explicit per-project grant.
 
 Limits:
 - No `git init`, commit or merge without a matching grant; foreign changes are preserved.

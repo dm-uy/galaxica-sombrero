@@ -56,7 +56,7 @@ logger = logging.getLogger("session_start")
 logger.addHandler(logging.NullHandler())
 
 PACKAGE_NAME = "methodology-claude"
-PACKAGE_VERSION = "2.0.1"
+PACKAGE_VERSION = "2.1.0"
 PACKAGE_PROFILE = "colocated-in-place"
 SPEC_ROOT = "../../"
 CORE_OWNERS = ("concepts/principles.md", "roles/_base.md", "code/exoskeleton.md", "code/ldd.md", "code/doxygen.md", "code/tests.md")

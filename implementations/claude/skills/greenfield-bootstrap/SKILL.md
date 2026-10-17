@@ -25,3 +25,5 @@ Limits:
 - Preparation grants no technical authorship: architecture is the Architect's, implementation the coder's.
 - No merge, publication or installation follows from this skill, and an inner role never delegates or commits.
 - A missing, stub or unread required owner is BLOCKED.
+
+Consumer PM profile: explicit consumer onboarding uses pm-bootstrap even for an existing project; a missing preferred record alone never means greenfield. Read `${CLAUDE_PLUGIN_ROOT}/references/consumer-pm-profile.md`, preserve existing homes and links and authenticate the exact adoption; after adoption, `orient PROJECT --check` through the launcher `${CLAUDE_PLUGIN_ROOT}/bin/orient` reports the rows.

@@ -65,7 +65,7 @@ The native Claude Code package `implementations/claude/` is checked by its own s
 
 | Criterion | Root selector | Required evidence and limits |
 |---|---|---|
-| `AC-M22-1` | test_claude_package.py::test_complete_claude_package; ::test_claude_package_refusals; test_codex_package.py (declared sibling set) | Independent 59-path/kind oracle from the approved specification, profile `colocated-in-place`, role map to `agents/*.md`; missing, extra, unknown sibling, unsafe, absolute, duplicate, profile, detached, linked, malformed, wrong-kind, runtime-footprint and role-map refusals with restoration. `tests/test_codex_package.py` now declares `{codex, claude}` and still refuses `unknown-engine`. |
+| `AC-M22-1` | test_claude_package.py::test_complete_claude_package; ::test_claude_package_refusals; test_codex_package.py (declared sibling set) | Independent path/kind oracle from the approved specifications (59 paths under M22, 64 since the approved M37-C2 specification), profile `colocated-in-place`, role map to `agents/*.md`; missing, extra, unknown sibling, unsafe, absolute, duplicate, profile, detached, linked, malformed, wrong-kind, runtime-footprint and role-map refusals with restoration. `tests/test_codex_package.py` now declares `{codex, claude}` and still refuses `unknown-engine`. |
 | `AC-M22-2` | test_claude_package.py::test_claude_publication_channels; `bin/conform adapter implementations/claude/adapter.json`; `bin/conform self` | Every existing canary fails the unchanged scanner in agent, hook-config, hook script, workflow, Node harness, skill and adapter carriers, with exact rule/subject/fingerprint and restoration; adapter exit 0 without warning; self exit 0 with the private deny lists. |
 
 ```sh
@@ -747,7 +747,7 @@ C2–C6, SDK carriers, systematic learning/comparative measurement, loader/sourc
 
 ## C2 consumer PM profile and scoped Python helpers — source 2.2.0
 
-Current C2 adds 26 members to the retained 47-member Codex package: exactly 73 members, 27 skills, six helpers and six role carriers. Wire methodology-codex/2.0.0, schema2, neutral1.1.0/71 and Claude1.0.0/59 remain fixed. Earlier C1 and other release tables describe historical checkpoints. C2 does not activate C3–C6, learning ingestion, detached installation, publication or main integration.
+At C2 (historical), C2 added 26 members to the retained 47-member Codex package: exactly 73 members, 27 skills, six helpers and six role carriers. Wire methodology-codex/2.0.0, schema2, neutral1.1.0/71 and Claude1.0.0/59 remain fixed. Earlier C1 and other release tables describe historical checkpoints. C2 does not activate C3–C6, learning ingestion, detached installation, publication or main integration.
 
 | Criterion | Literal covering inputs, operations and selectors | Threshold, observable trace, owner and limitation |
 |---|---|---|
@@ -782,7 +782,7 @@ Read actual IMP4 INIT, IMP7/8 input/source/proof boundaries, IMP9 evaluated RETU
 
 ## M30 consequential-decision source and proof boundary
 
-Current neutral2.0.0, Codex source2.4.0/member73 and Claude source1.1.0/member59 preserve six software roles, original helper algorithms, wire/schema and the complete root Local use section. New tests in root `tests/test_c1_review_and_routing.py` are direct real-source/AST checks, with local contrary mutations and expected-only errors. They do not call a model or certify native behavior.
+At M30 (historical), neutral2.0.0, Codex source2.4.0/member73 and Claude source1.1.0/member59 preserved six software roles, original helper algorithms, wire/schema and the complete root Local use section. New tests in root `tests/test_c1_review_and_routing.py` are direct real-source/AST checks, with local contrary mutations and expected-only errors. They do not call a model or certify native behavior. Current sources after M37: neutral3.0.1, Codex3.0.1/member73, Claude2.1.0/member64.
 
 | AC | Actual mechanism, fixed expectations and owner | Evidence limit |
 |---|---|---|
