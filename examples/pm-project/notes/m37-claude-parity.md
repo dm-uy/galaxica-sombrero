@@ -89,9 +89,42 @@ After the run the root made documentation-only corrections: the stale package co
 
 ### Limits and follow-ups
 
-- While the in-house `product-methodology` plugin stays enabled, bare `codemap`, `markup-migrate` and `orient` in consumer projects may resolve to either plugin's `bin/`; PATH order between plugins was never measured. Address this in the per-project migrations or by disabling the in-house plugin.
+- While the in-house `product-methodology` plugin stays enabled, bare `codemap` and `markup-migrate` in consumer projects may resolve to either plugin's `bin/` (the old plugin ran `orient` from its `scripts/` and its SessionStart hook, not from `bin/`); PATH order between plugins was never measured. Address this in the per-project migrations or by disabling the in-house plugin.
 - C2 `orient` accepts only `methodology-consumer-pm/1.0.0`; the five consumer projects need their own owner-granted migrations before the in-house plugins are disabled.
 - Non-blocking Review observations: a BLOCKED refusal exits 120 instead of 2 when stderr is a broken pipe; `_emit`'s open-stream path writes no own trace event; the launchers' `@purpose` still says "by bare name".
 - The run-state helper cannot record an architect-phase response correction after the plan was written, and has no continuation mechanism for a terminal run; both are retained as package observations.
 - Raw evidence (run state, role returns, live-probe streams, about 1 GB) is kept in the owner's private evidence directory, not in this public repository.
 - Test-environment trap found at the final check: `test_package_contract.py::test_manifest_and_adapter`, several root tests and `bin/conform adapter`/`self` (whose skip list omits `.methodology`) count every `*.md` in the working tree as neutral population, including the ignored local `.methodology/` evidence home once it holds a Markdown report; with such a file present they fail although the candidate is unchanged. Run the suites on a clean export (as QA and Finalize did) until the walk honours the ignore rule.
+
+## In-house plugin retirement (2026-10-19)
+
+After the M37 and M38 merges the owner asked, in Russian: «Давай придушим вот эти вот старые плагины, потому что, по идее, в новом все уже есть, и надо работать в рамках него.» The owner then asked for this record: "Record the disabling of the in-house plugins in HANDOFF, TASKS and the M37 record, open a PR and merge it."
+
+What changed:
+
+- `product-methodology` and `prompting-methodology` are disabled at user scope with `claude plugin disable --scope user`. Their `enabledPlugins` entries are now false; no other user setting changed, and `CLAUDE_CODE_PLUGIN_DIRS` still loads methodology-claude in place.
+- Both plugins stay installed in the plugin cache. Rollback is `claude plugin enable --scope user <plugin>@<owner marketplace>`.
+- A scan of project settings in the owner's projects folder (four levels deep) found none that re-enable either plugin.
+- This happened before the consumer migrations, which the owner chose to accept. For new sessions it supersedes the first limit above, by inference, and the ordering condition of the second; C2 `orient` still accepts only `methodology-consumer-pm/1.0.0`.
+
+Verification: a fresh headless session (Claude Code 2.1.285, `-p` with stream-json output) started in the canonical checkout. Its init event listed:
+
+- methodology-claude, loaded in place, and three built-in plugins;
+- the six methodology-claude roles, and no agent from either old plugin;
+- 29 methodology-claude skill and command entries, and none from the old plugins;
+- one SessionStart hook response, reporting methodology-claude 2.1.0 bound to neutral 3.0.1.
+
+The model call in that session failed on the headless CLI's expired login. That failure does not affect the init listing. Sessions started before the disable keep the old plugins until they restart; whether a plugin reload also applies the change was not measured.
+
+What has no direct replacement:
+
+- `pm-ingest-candidates` (skill) and `run_review.py` (script) are absent from methodology-claude. Both stayed deferred by the earlier decision. Owner-level instructions that cite `run_review.py` now name a disabled tool.
+- The old prompting commands (`agent-prompt`, `brainstorm`, `contract`, `design`, `verify-fact`), the `agent-prompt` and `methodology` skills, and the `architect-agent`/`brainstorm-agent` agents map onto methodology-claude's `brainstorm`, `prompting`, `prompting-agent-design`, `prompting-decompose`, `prompting-markup` and `prompting-verify` skills and its roles. The names differ, and no one-to-one parity was measured.
+- The old plugin's hooks are gone. Its PreToolUse `guard_destructive.py` has an adapted twin in methodology-claude. Its SessionStart `orient.py` injection, which ran in every project, has no equivalent for unmigrated consumers. methodology-claude's own SessionStart hook reports the package binding and which project records exist, and leaves orientation to the `orient` check.
+- The old `bin/` held `codemap` and `markup-migrate`. New sessions now get those names, plus `orient`, only from methodology-claude. This is inferred from the init listing; no Bash call measured it.
+
+Consumer impact until each consumer migrates:
+
+- The five consumer projects keep their pre-C2 profile and their CLAUDE.md lines that claim plugin injection.
+- C2 `orient` accepts only `methodology-consumer-pm/1.0.0`, so expect it to refuse their current profile. This was not measured in those projects.
+- Each migration (M37-T7) still needs its own grant.
