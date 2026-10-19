@@ -1,6 +1,6 @@
 ---
 name: brownfield-spec-template
-description: "Use when reconnaissance of an existing project is complete and a change specification for it must be written (feature addition, refactoring, fix). Not for a genuinely new product."
+description: "ТЗ на изменение существующего проекта: «напиши ТЗ на доработку», «спецификация изменения существующего проекта», «ТЗ на рефакторинг или фикс». Use when reconnaissance of an existing project is complete and a change specification for it must be written (feature addition, refactoring, fix). Not for a genuinely new product."
 ---
 
 # brownfield-spec-template

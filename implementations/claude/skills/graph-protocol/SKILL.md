@@ -1,6 +1,6 @@
 ---
 name: graph-protocol
-description: "Use when writing a DraftCodeGraph, an explicitly requested CODE or DOMAIN knowledge graph, or a contracted maintained code map: strict XML grammar, local directed links, evidence for every existing node."
+description: "Граф кода или граф знаний в XML: «построй граф кода», «DraftCodeGraph», «граф знаний CODE или DOMAIN», «карта кода в XML». Use when writing a DraftCodeGraph, an explicitly requested CODE or DOMAIN knowledge graph, or a contracted maintained code map: strict XML grammar, local directed links, evidence for every existing node."
 ---
 
 # graph-protocol

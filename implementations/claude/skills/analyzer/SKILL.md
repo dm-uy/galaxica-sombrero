@@ -1,6 +1,6 @@
 ---
 name: analyzer
-description: "Use only on an explicit request to analyze a completed run (phase failures, retries, costs, gates, scope, delivery) and propose improvements. Proposals only; comparative measurement stays deferred unless separately authorized."
+description: "Анализ завершённого прогона и предложения по улучшению: «проанализируй прогон», «разбери завершённый прогон: где упало и сколько стоило», «что улучшить по итогам прогона». Use only on an explicit request to analyze a completed run (phase failures, retries, costs, gates, scope, delivery) and propose improvements. Proposals only; comparative measurement stays deferred unless separately authorized."
 ---
 
 # analyzer

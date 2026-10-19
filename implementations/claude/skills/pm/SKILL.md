@@ -1,6 +1,6 @@
 ---
 name: pm
-description: "Use for multi-stage project development or continuing a project checkpoint: keep the owner's outcome, the durable records and the development flow connected. Not for trivial isolated work."
+description: "Ведение многоэтапной разработки проекта: «веди проект», «что дальше по проекту», «продолжи разработку проекта», «многоэтапная разработка». Use for multi-stage project development or continuing a project checkpoint: keep the owner's outcome, the durable records and the development flow connected. Not for trivial isolated work."
 ---
 
 # pm

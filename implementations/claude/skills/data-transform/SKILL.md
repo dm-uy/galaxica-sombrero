@@ -1,6 +1,6 @@
 ---
 name: data-transform
-description: "Use when planning or writing a complex data transformation, join or other data-heavy change (ETL, Pandas, SQL) and the choice of approach depends on the real schema and population."
+description: "Сложная трансформация данных: «ETL», «джойн таблиц на Pandas или SQL», «перелить данные между схемами». Use when planning or writing a complex data transformation, join or other data-heavy change (ETL, Pandas, SQL) and the choice of approach depends on the real schema and population."
 ---
 
 # data-transform

@@ -1,6 +1,6 @@
 ---
 name: prod-log-vacuum
-description: "Use only when the owner names a production service, a log source, a time window and the deployment context and asks for the errors in it to be collected and classified. Read-only triage that proposes repairs and never makes them."
+description: "Разбор ошибок из прод-логов: «собери ошибки из прод-логов», «разбери ошибки продакшна за период», «классифицируй ошибки в логах сервиса». Use only when the owner names a production service, a log source, a time window and the deployment context and asks for the errors in it to be collected and classified. Read-only triage that proposes repairs and never makes them."
 ---
 
 # prod-log-vacuum

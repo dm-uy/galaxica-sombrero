@@ -34,6 +34,8 @@ Read the validation output. Claude Code 2.1.299 warns that the name `methodology
 | `skills/devplan-protocol/scripts/visual_gate_lint.py` | Mechanical visual-gate check for development plans. |
 | `adapter.json`, `references/` | Adapter (71 files, 28 capabilities, 7 parameters), [runtime](references/claude-runtime.md), [handoffs](references/handoffs.md), [adoption](references/adoption.md), [source disposition](references/source-disposition.md), [layout](references/package-layout.json), [consumer PM profile](references/consumer-pm-profile.md). |
 
+Each of the 23 model-invoked skill descriptions opens with a Russian use-case label and Russian trigger phrases, followed by the unchanged English description, because the adapter binds `dialog-language` to Russian. In live probes on 2026-10-19, Russian phrases placed after the English text did not fire `prompting-verify` (0 of 3), while the same phrases placed first did (3 of 3). The five lifecycle commands keep `disable-model-invocation: true`: Claude Code keeps their descriptions out of the model's context, so only their slash commands invoke them.
+
 Read the [runtime](references/claude-runtime.md) before using `pm` or `feature-dev`. Typical entry points: `/methodology-claude:pm` to resume a project checkpoint, `/methodology-claude:pm-plan-batch` and `/methodology-claude:pm-run-batch` for a batch, `/methodology-claude:feature-dev` with an approved specification, `/methodology-claude:pm-handoff` at the end of a session.
 
 ## Consumer PM profile

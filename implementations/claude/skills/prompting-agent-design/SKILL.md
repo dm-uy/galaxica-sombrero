@@ -1,6 +1,6 @@
 ---
 name: prompting-agent-design
-description: "Use when authoring another agent's system prompt for a one-shot task or a bounded tool-using loop: the prompt, its rationale and its reproducibility contract, and for a loop also phases, tools, state, approvals, failure routes and costs. Running a ready workflow of this kind uses feature-dev; this skill only designs it."
+description: "Системный промпт для другого агента: «промпт для агента», «системный промпт для агента», «system prompt для LangGraph или CrewAI», «спроектируй агентный цикл». Use when authoring another agent's system prompt for a one-shot task or a bounded tool-using loop: the prompt, its rationale and its reproducibility contract, and for a loop also phases, tools, state, approvals, failure routes and costs. Running a ready workflow of this kind uses feature-dev; this skill only designs it."
 ---
 
 # prompting-agent-design

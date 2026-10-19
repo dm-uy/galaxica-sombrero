@@ -1,6 +1,6 @@
 ---
 name: roadmap
-description: "Use to create, inspect or update a project route (ROADMAP) with stable checkpoint identities, a focus marker and a matching dependency diagram."
+description: "Маршрут проекта (ROADMAP): «роадмап», «дорожная карта проекта», «обнови ROADMAP». Use to create, inspect or update a project route (ROADMAP) with stable checkpoint identities, a focus marker and a matching dependency diagram."
 ---
 
 # roadmap

@@ -184,7 +184,7 @@ Losses:
 
 ### Follow-up
 
-- **Russian trigger phrases.** Work on them started separately at the owner's start on 2026-10-19; its result comes as its own PR.
+- **Russian trigger phrases.** PR15 leads each of the 23 model-invoked skill descriptions with a Russian label and trigger phrases; the English text follows unchanged. In concurrent probes on probe E's request, Russian phrases after the English did not fire `prompting-verify` (0/3), and the same phrases first did (3/3). English controls showed that the English-only descriptions already caught most Russian requests, so loss 5 is narrower than inferred. A global per-skill usage counter in Claude Code's user configuration file confounds later baselines. Probe counts and limits are in the PR description; the owner decides the merge. The `pm-*` commands are unchanged (loss 6).
 - **Owner decisions.** The remaining losses wait for the owner:
   - port `run_review.py` and `pm-ingest-candidates`, or drop them and the rule's citation;
   - restore a typed brainstorm generator;

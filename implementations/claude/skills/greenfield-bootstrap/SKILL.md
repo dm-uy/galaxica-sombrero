@@ -1,6 +1,6 @@
 ---
 name: greenfield-bootstrap
-description: "Use for a genuinely new product after a measured inventory shows nothing to build on: establish audience, first falsifiable value, stack and MVP, write the greenfield specification and seed the records. Missing records alone do not make a project greenfield."
+description: "Новый продукт с нуля: «стартуем новый проект с чистого листа», «новый продукт с нуля», «MVP с нуля». Use for a genuinely new product after a measured inventory shows nothing to build on: establish audience, first falsifiable value, stack and MVP, write the greenfield specification and seed the records. Missing records alone do not make a project greenfield."
 ---
 
 # greenfield-bootstrap

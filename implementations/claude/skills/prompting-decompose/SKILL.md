@@ -1,6 +1,6 @@
 ---
 name: prompting-decompose
-description: "Use when a complex, multi-mode task or prompt needs explicit phases with inputs, effects, checks and handoffs (inspect, design, implement, verify). Not for a simple answer."
+description: "Декомпозиция сложной задачи на фазы: «разбей задачу на фазы», «декомпозируй сложную задачу», «фазы с входами, проверками и передачей». Use when a complex, multi-mode task or prompt needs explicit phases with inputs, effects, checks and handoffs (inspect, design, implement, verify). Not for a simple answer."
 ---
 
 # prompting-decompose

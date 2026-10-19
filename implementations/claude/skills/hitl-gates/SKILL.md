@@ -1,6 +1,6 @@
 ---
 name: hitl-gates
-description: "Use before implementation starts (the specification or batch decision) and before the concrete result is merged, published or deployed (the result decision). Passes each gate through a structured owner question and records the answer."
+description: "Гейты согласования с владельцем: «согласуй со мной ТЗ перед реализацией», «спроси меня перед мержем или деплоем», «утверждение результата». Use before implementation starts (the specification or batch decision) and before the concrete result is merged, published or deployed (the result decision). Passes each gate through a structured owner question and records the answer."
 ---
 
 # hitl-gates
