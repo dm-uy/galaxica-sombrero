@@ -128,3 +128,66 @@ Consumer impact until each consumer migrates:
 - The five consumer projects keep their pre-C2 profile and their CLAUDE.md lines that claim plugin injection.
 - C2 `orient` accepts only `methodology-consumer-pm/1.0.0`, so expect it to refuse their current profile. This was not measured in those projects.
 - Each migration (M37-T7) still needs its own grant.
+
+## Sandbox check after the retirement (2026-10-19)
+
+The owner asked: «Убедиться, что ничего не потеряли и прогнать какой-нибудь легкий тест на песочнице. там как раз у нас есть проектик с tastraкером. И по идее каждый Харнес может иметь подобный проектик, чтобы играться на нем и не задевать другие.» The owner then asked for this record: «Запиши итоги проверки в песочнице и список потерь в записи репозитория (M37 record, HANDOFF, TASKS), открой PR и слей его.»
+
+### Sandbox
+
+The tasklight task-tracker sandbox (`010-cli-smoke` in the owner's sandbox folder) belongs to the DSH house and holds another writer's uncommitted note. It was left untouched. Following the owner's per-harness idea, a Claude-only copy `011-claude-tasklight` was cloned from its committed state, and its remote was removed. The copy's 19 tests pass.
+
+### Live probes
+
+Each probe ran in a fresh headless session: Claude Code 2.1.285, `--model sonnet`, stream-json output, started in the Claude copy. All reported probes used a clean environment (see the discarded run below). The CLI reported about $2.40 for all seven sessions, including one discarded run.
+
+| Probe | Request | Result |
+|---|---|---|
+| A, wiring | Run `command -v codemap markup-migrate orient`, `orient . --check` and `codemap . tasklight`, then list the methodology skills and agents | PASS. Only methodology-claude and built-in plugins loaded, with six roles and one SessionStart hook. All three names resolved to methodology-claude's `bin/`, which measures what the retirement section above could only infer. Before adoption, `orient` and `codemap` exited 2 with `ConsumerInputError` (`not-readable-regular-file`) without naming the missing file. |
+| B, PM orientation | `/methodology-claude:pm`, read-only | PASS. It recovered the state (A1 closed, A2 next), found record inconsistencies, changed no tracked file or record and asked for the owner's gate. Its pytest run rewrote only git-ignored test caches. |
+| C, profile adoption | `/methodology-claude:pm-bootstrap .` with the owner's words above as the headless chat grant: additive only, no commits, no hooks | PASS. Created `AGENTS.md`, `CONVENTIONS.md`, `TASKS.md` and `Doxyfile`, and added a blocked-on-owner block to `HANDOFF.md`, all uncommitted. `orient --check` then failed nine rows (CHECK-02, 04, 07, 08, 09, 11, 15, 20, 22) on the copy's legacy records, each needing a change to an existing record that the grant excluded. |
+| D, trivial brainstorm | `/methodology-claude:brainstorm` on «rm или delete» | PASS. It classified the choice as a local reversible one, ran no generators and stated the exclusion reason. |
+| E, Russian fact check | «Проверь факт с источниками: с какой версии Python есть оператор match…» without a command | FAIL. `prompting-verify` did not fire. The answer was correct, but it came from generic fetches with no verification statuses. |
+| F, Russian contract | «Составь MODULE_CONTRACT и FUNCTION_CONTRACT для tasklight/store.py…» without a command | PASS. It read the exoskeleton, LDD and Doxygen owners and drafted the contracts. It also found real mismatches between `store.py` and its contract text. |
+
+The first wiring run was discarded. A child `claude` started from a running session inherits that session's environment, including the PATH entries of its still-loaded plugins. That run therefore resolved `codemap` and `markup-migrate` to the disabled plugin's source `bin/`. No shell startup file adds that path. A clean login environment (`env -i` with the login shell's PATH) removed it.
+
+### What was lost
+
+A read-only Sonnet lane compared both disabled plugins with methodology-claude. The root checked four of its claims against the files:
+
+- the `disable-model-invocation` flags;
+- the old hook's silence on undeclared projects;
+- how far the neutral owners carry the old quotation rule;
+- the two deferred tools.
+
+Losses:
+
+1. **`run_review.py`.** It reported run metrics and delegations that passed no model, including DeepSeek Harness sessions. This is a recorded deferral, and the owner's model-policy rule still cites it.
+2. **`pm-ingest-candidates` and the candidates ledger.** A recorded deferral (C4).
+3. **Typed `brainstorm-agent` and `architect-agent`.** Generators now run as generic subagents with an explicit model. The old `/design` and `/contract` commands have no direct entry. The lane's rough transcript count put past `brainstorm-agent` dispatches near 70.
+4. **Part of the research-quote rule of the old `pm-run-batch`.** The old rule required research quotations copied from the fetched page, with no ellipsis inside a quotation, and a verifier that fetched every quoted page and found the exact string. The neutral owners carry part of it: `process/batch.md` requires research quotations to be verified against the fetched source, and RECON-204 forbids fabricated ellipses in reconnaissance quotations. Missing are the ellipsis ban for every research deliverable and the verifier's exact-string step.
+5. **Russian trigger phrases.** Probe E shows a Russian request missing its skill. No English control ran, so the cause, English-only descriptions, is inferred.
+6. **Auto-firing `pm-*` skills.** The five `pm-*` skills carry `disable-model-invocation: true`, so an end-of-session request such as "wrap up" or "handoff" no longer starts `pm-handoff` on its own; it needs `/methodology-claude:pm-handoff`.
+7. **The session-start orientation panel in the five consumer projects, until they migrate.** In the sandbox, before adoption, the new `orient` refused with an error that does not name the missing file. The five consumer projects themselves were not measured.
+
+### Name changes
+
+| Old | New |
+|---|---|
+| `brainstorm` | `/methodology-claude:brainstorm` |
+| `verify-fact` | `/methodology-claude:prompting-verify` |
+| `agent-prompt` | `/methodology-claude:prompting-agent-design` |
+| `design` | nearest `/methodology-claude:prompting` |
+| `contract` | nearest `/methodology-claude:semantic-exoskeleton` |
+| the five other `pm-*` skills | `/methodology-claude:pm-*` |
+
+### Follow-up
+
+- **Russian trigger phrases.** Work on them started separately at the owner's start on 2026-10-19; its result comes as its own PR.
+- **Owner decisions.** The remaining losses wait for the owner:
+  - port `run_review.py` and `pm-ingest-candidates`, or drop them and the rule's citation;
+  - restore a typed brainstorm generator;
+  - extend the neutral quotation rule with the research-wide ellipsis ban and the verifier's exact-string step.
+- **Consumer migrations.** Probe C sizes them: a consumer with legacy records should expect the same nine row families.
+- **Evidence.** The probe transcripts, prompts, the probe runner and their SHA-256 sums are in the owner's private evidence directory outside this repository.
