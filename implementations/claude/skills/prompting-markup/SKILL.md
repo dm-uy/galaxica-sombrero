@@ -1,6 +1,6 @@
 ---
 name: prompting-markup
-description: "Use for a long prompt or briefing that mixes instructions with data, where structure, delimiters and precedence matter. Short tasks need no forced full markup."
+description: "Разметка длинного промпта с данными: «размети длинный промпт», «структурируй промпт с данными», «разметка XML-тегами». Use for a long prompt or briefing that mixes instructions with data, where structure, delimiters and precedence matter. Short tasks need no forced full markup."
 ---
 
 # prompting-markup

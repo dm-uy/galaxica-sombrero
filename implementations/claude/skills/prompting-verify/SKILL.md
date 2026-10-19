@@ -1,6 +1,6 @@
 ---
 name: prompting-verify
-description: "Use when a factual claim, an agent decision or a design needs evidence and a bounded checking plan: name the pivotal claims, the sources and tools, the independent checks and the stop route."
+description: "Проверка факта или утверждения с источниками: «проверь факт», «проверь с источниками», «верифицируй утверждение», «подтверди источниками». Use when a factual claim, an agent decision or a design needs evidence and a bounded checking plan: name the pivotal claims, the sources and tools, the independent checks and the stop route."
 ---
 
 # prompting-verify

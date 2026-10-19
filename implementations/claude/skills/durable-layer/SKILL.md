@@ -1,6 +1,6 @@
 ---
 name: durable-layer
-description: "Use when starting, resuming or handing off a meaningful project checkpoint: read the five project records in their declared homes, keep files (not chat) as the durable authority, and keep a recoverable current HANDOFF."
+description: "Старт, продолжение или передача контрольной точки проекта: «где мы остановились», «продолжим с прошлой сессии», «обнови HANDOFF», «зафиксируй состояние проекта». Use when starting, resuming or handing off a meaningful project checkpoint: read the five project records in their declared homes, keep files (not chat) as the durable authority, and keep a recoverable current HANDOFF."
 ---
 
 # durable-layer

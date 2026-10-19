@@ -1,6 +1,6 @@
 ---
 name: ax-ui-contract
-description: "Use before designing any slice that creates or changes web UI (React, Next.js, HTML, web components): fixes role, accessible name, state and stable identity for every control and how they are verified. Absent for pure backend or CLI work."
+description: "Контракт доступности веб-интерфейса: «спроектируй веб-экран или форму», «новый веб-интерфейс на React», «доступность контролов: роль, имя, состояние». Use before designing any slice that creates or changes web UI (React, Next.js, HTML, web components): fixes role, accessible name, state and stable identity for every control and how they are verified. Absent for pure backend or CLI work."
 ---
 
 # ax-ui-contract

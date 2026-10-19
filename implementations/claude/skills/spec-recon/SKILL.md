@@ -1,6 +1,6 @@
 ---
 name: spec-recon
-description: "Use for read-only reconnaissance before writing a new specification, or when evidence synthesis is explicitly requested: independent Code, Data and Decisions lanes (Legacy and Web when relevant) with measured claims and citations."
+description: "Разведка перед новой спецификацией: «разведка перед ТЗ», «изучи проект перед спецификацией», «собери факты по коду, данным и решениям». Use for read-only reconnaissance before writing a new specification, or when evidence synthesis is explicitly requested: independent Code, Data and Decisions lanes (Legacy and Web when relevant) with measured claims and citations."
 ---
 
 # spec-recon

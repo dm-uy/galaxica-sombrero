@@ -1,6 +1,6 @@
 ---
 name: document-protocol
-description: "Use when authoring a structured technical document, requirements set or specification that other agents will parse: outline first, paired boundaries, explicit contracts and directed links."
+description: "Структурированный технический документ для агентов: «напиши техническую спецификацию», «документ требований для агентов», «структурированный технический документ». Use when authoring a structured technical document, requirements set or specification that other agents will parse: outline first, paired boundaries, explicit contracts and directed links."
 ---
 
 # document-protocol

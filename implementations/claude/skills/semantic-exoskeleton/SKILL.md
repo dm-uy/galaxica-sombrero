@@ -1,6 +1,6 @@
 ---
 name: semantic-exoskeleton
-description: "Use before any assigned software role acts, and when writing a version-stamped development plan: loads the six core owners (principles, shared role rules, exoskeleton markup, LDD logging, Doxygen, tests) that every code-writing role must read in full."
+description: "Семантическая разметка и контракты кода: «напиши контракт модуля или функции», «MODULE_CONTRACT или FUNCTION_CONTRACT», «разметь код по экзоскелету». Use before any assigned software role acts, and when writing a version-stamped development plan: loads the six core owners (principles, shared role rules, exoskeleton markup, LDD logging, Doxygen, tests) that every code-writing role must read in full."
 ---
 
 # semantic-exoskeleton

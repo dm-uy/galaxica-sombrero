@@ -1,6 +1,6 @@
 ---
 name: code-review
-description: "Use when a stable, completed candidate (a diff, a branch or a finished run) needs an independent cumulative review before the result decision. The reviewer is a separate read-only agent; it never repairs."
+description: "Независимое ревью готового кандидата: «сделай ревью», «отревьюй ветку или диф», «независимое ревью перед мержем». Use when a stable, completed candidate (a diff, a branch or a finished run) needs an independent cumulative review before the result decision. The reviewer is a separate read-only agent; it never repairs."
 ---
 
 # code-review

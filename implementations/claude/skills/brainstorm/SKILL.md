@@ -1,6 +1,6 @@
 ---
 name: brainstorm
-description: "Use for an open, consequential choice (architecture, product fork, unfamiliar problem) where the first idea may be only a local optimum. Never reopens settled choices and adds no padding to trivial decisions."
+description: "Брейншторм перед важным открытым выбором: «брейншторм», «накидай варианты», «какую архитектуру выбрать», «сравни альтернативы перед важным решением». Use for an open, consequential choice (architecture, product fork, unfamiliar problem) where the first idea may be only a local optimum. Never reopens settled choices and adds no padding to trivial decisions."
 ---
 
 # brainstorm

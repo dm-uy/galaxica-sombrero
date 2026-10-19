@@ -1,6 +1,6 @@
 ---
 name: feature-dev
-description: "Use on an explicit request to run the full native flow (Bootstrap, Architect, Code, QA, Review, counted Debug, Finalize) for an exact approved specification or batch. The root session dispatches typed role subagents, validates every return and keeps the run state."
+description: "Полный цикл разработки по явному запросу: «запусти feature-dev по утверждённому ТЗ», «полный цикл Architect → Code → QA → Review», «реализуй утверждённую спецификацию ролями». Use on an explicit request to run the full native flow (Bootstrap, Architect, Code, QA, Review, counted Debug, Finalize) for an exact approved specification or batch. The root session dispatches typed role subagents, validates every return and keeps the run state."
 ---
 
 # feature-dev

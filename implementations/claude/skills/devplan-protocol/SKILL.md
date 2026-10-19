@@ -1,6 +1,6 @@
 ---
 name: devplan-protocol
-description: "Use when an assigned Architect writes a DevelopmentPlan for an approved slice: ordered sections 1 to 6, a code graph, data flow, measurable acceptance criteria, runtime commands and the visual-gate check."
+description: "План разработки для утверждённого среза: «напиши план разработки (DevelopmentPlan)», «план реализации по утверждённому ТЗ». Use when an assigned Architect writes a DevelopmentPlan for an approved slice: ordered sections 1 to 6, a code graph, data flow, measurable acceptance criteria, runtime commands and the visual-gate check."
 ---
 
 # devplan-protocol
