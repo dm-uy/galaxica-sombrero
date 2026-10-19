@@ -1,8 +1,8 @@
 # Methodology project route
 
-## Current: M37 Claude package actualization — Claude2.1.0 result accepted, PR awaiting the owner's merge
+## Current: M37 and M38 merged — Claude 2.1.0 and DSH 3.0.1 on main
 
-One canonical checkout is the development source; preparation repositories are archival. Canonical main includes M30 source through owner-approved PR6 and the later M31/M33 updates. Canonical main carries neutral3.0.1/Codex3.0.1/Claude2.0.1; branch `claude/m37-claude-parity` carries Claude2.1.0 in an open PR awaiting the owner's merge; accepted C2/bafec417 is the historical foundation, not the current version. C3 is not ready for merge. [Current C3 history/result](notes/m28-c3-result.md).
+One canonical checkout is the development source; preparation repositories are archival. Canonical main includes M30 source through owner-approved PR6 and the later M31/M33 updates. Canonical main carries neutral 3.0.1, Codex 3.0.1, Claude 2.1.0 (M37, PR11) and DSH 3.0.1 (M38, PR10); accepted C2/bafec417 is the historical foundation, not the current version. C3 is not ready for merge. [Current C3 history/result](notes/m28-c3-result.md).
 
 | Checkpoint | Current disposition |
 |---|---|
@@ -27,7 +27,8 @@ One canonical checkout is the development source; preparation repositories are a
 | M34 | Checked locally: reader-oriented README and two diagrams, preserved contracts and local visual checks. Owner-approved local integration and canonical main push complete. The repository is now public; that does not create a new packaged release or installed update. |
 | M35 | New-machine installation entry and complete-snapshot instructions checked locally, including isolated native CLI installation. Owner-requested main integration/push complete with remote readback; actual other-machine installation remains separate. |
 | M36 | Completed: checked record synchronization and self-contained chat conclusions integrated into canonical main and pushed under explicit owner approval; [receipt, evidence and preserved baton](notes/m36-session-handoff.md). Next bounded task awaits owner-selected scope. No framework implementation or donor adoption. |
-| M37 | Claude package actualization: patch2.0.2, then the C2 consumer PM port as Claude2.1.0 (mechanism H: launchers and carrier referencing the Codex C2 helpers in place). Feature-dev run with independent QA/Review/Finalize; Debug1/4; owner accepted the result with recorded AC5 limits and asked for push + PR; merge after the owner's review. Consumer migrations and in-house plugin retirement follow. [Record](notes/m37-claude-parity.md). |
+| M37 | Claude package actualization: patch2.0.2, then the C2 consumer PM port as Claude2.1.0 (mechanism H: launchers and carrier referencing the Codex C2 helpers in place). Feature-dev run with independent QA/Review/Finalize; Debug1/4; owner accepted the result with recorded AC5 limits; merged into `origin/main` through PR11 (merge `380dd00`, 2026-10-17). Consumer migrations and in-house plugin retirement follow under per-project grants. [Record](notes/m37-claude-parity.md). |
+| M38 | DSH native implementation package 3.0.1 over neutral 3.0.1, installed into the live `web`/`desktop` profiles; live discovery, `pm` loading and a bounded smoke observed. Rebased onto M37 and merged into `origin/main` through PR10 (merge `1ff633c`, 2026-10-19). Full Bootstrap-to-Finalize, checkpoint/resume and role isolation on DSH remain unproved (probe 3). [Result](notes/m38-dsh-package.md). |
 | Public visibility | Public, confirmed by GitHub readback on 2026-10-15. Earlier private-release/publication holds remain historical; future releases still need their own scope. |
 
 Canonical delivery update2026-10-15: owner-requested direct push delivered the canonical M32/M33/M34 commits. This supersedes earlier canonical-PR delivery holds below; no PR was created. Separate prompting-source upstream/release remains outside that push. Repository visibility was separately observed as public on 2026-10-15; see [M36](notes/m36-session-handoff.md).
@@ -96,8 +97,8 @@ The owner settled the direction after the PM reflection: state for agents, QA fo
 
 M31 release update: the owner authorized merge, reissue and installation of the accepted lightweight PM direction (neutral3.0.0 / Codex3.0.0 / Claude2.0.0). Actual completion is recorded in [the decision receipt](notes/pm-lightweight-direction.md); deferred native Claude acceptance and C3 remain separate.
 
-## M38 — DSH native implementation package (delivered on a branch)
+## M38 — DSH native implementation package (merged through PR10)
 
-The owner asked for the methodology to be implemented for the DeepSeek Harness under `implementations/` and connected as a plugin. Delivered on `dsh/m38-harness-package` as a third typed package at 3.0.1 over neutral 3.0.1, with an adapter over all 71 neutral files, 27 skill carriers, six role carriers, the shared helpers and a DSH bundle that mounts the package's own skill root. [Result, evidence and limits](notes/m38-dsh-package.md).
+The owner asked for the methodology to be implemented for the DeepSeek Harness under `implementations/` and connected as a plugin. Delivered as a third typed package at 3.0.1 over neutral 3.0.1, with an adapter over all 71 neutral files, 27 skill carriers, six role carriers, the shared helpers and a DSH bundle that mounts the package's own skill root. [Result, evidence and limits](notes/m38-dsh-package.md).
 
-Not a release and not accepted behavior: the package is proved structurally and its installation is proved on a scratch profile only. A `main` merge, installation into the live profile, publication and any real methodology run retain their separate owner decisions. The sibling packages' source, wire, schema and behavior are unchanged, and the retained M30/C3 limits and the later trial/C4–C6 route are untouched.
+Not a release and not accepted behavior. The owner later approved the `main` merge and the live installation: the bundle is installed into the `web` and `desktop` profiles, live discovery and a bounded smoke were observed, and the rebased package was merged into `origin/main` through PR10 (merge `1ff633c`, 2026-10-19). A packaged release and the full Bootstrap-to-Finalize run retain their separate owner decisions. The sibling packages' source, wire, schema and behavior are unchanged, and the retained M30/C3 limits and the later trial/C4–C6 route are untouched.

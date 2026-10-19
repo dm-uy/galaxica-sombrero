@@ -1,45 +1,62 @@
-# Current: M38 DSH native implementation package
+# Current: M37 and M38 merged — Claude 2.1.0 and DSH 3.0.1 on main
 
 ## Owner decisions
 
-The owner approved implementing the methodology for the DeepSeek Harness under `implementations/`, chose the full Codex-twin package, installation as a plugin in the `web` profile, and then explicitly approved the `main` merge and the live installation ("надо смержить и поставить в профиль этот бандл"). Historical local delivery: checked M38 source `af7eab7` was fast-forwarded into canonical `main`, and the recorded `dsh plugin --profile web add ./implementations/dsh` installed the bundle into the live profile against the canonical checkout. Publication remains a separate decision and has not been taken. M37 has since lifted the M30 native Claude deferral and observed AC4/AC5; renewed M30 QA/Review/Finalize remain owed. C3 remains exhausted.
+Settled:
+
+- **M37 — Claude package actualization.** Merged into `origin/main` through PR11 (merge `380dd00`, 2026-10-17). The owner's verbatim answers are in the [M37 record](notes/m37-claude-parity.md):
+  - the M37 scope;
+  - keeping the name `methodology-claude`;
+  - lifting the M30 Claude deferral;
+  - approval of the C2-port specification with mechanism H;
+  - accepting the result, with AC5 met by the absolute-path launcher call;
+  - push plus PR, merged after the owner's review;
+  - the `.methodology/` ignore rule.
+- **M38 — DSH native implementation package.** The owner approved the full Codex-twin package, then its `main` merge and the live installation («надо смержить и поставить в профиль этот бандл»), then the rebase onto M37. Merged into `origin/main` through PR10 (merge `1ff633c`, 2026-10-19). [Result, evidence and limits](notes/m38-dsh-package.md).
+
+Waiting for the owner:
+
+1. **Consumer migrations (M37-T7).** Each of the five consumer projects needs its own grant to adopt `methodology-consumer-pm/1.0.0`. After that, the owner decides on disabling the in-house plugins.
+2. **DSH probe 3 (M38-T4).** The full Bootstrap-to-Finalize run on DSH needs a matching target and scope; see [M38-RUN-01](notes/m38-run-01.md).
+3. **Next bounded framework task.** Choose among the remaining route below.
+
+No packaged release of Claude 2.1.0 or DSH 3.0.1 has been taken; it remains a separate decision.
 
 ## Current state
 
-Current source versions: neutral/Codex3.0.1 and Claude2.1.0. **M38 adds a third package, `implementations/dsh`, at 3.0.1 over neutral 3.0.1**, now on `dsh/m38-package-and-runs` in `/private/tmp/methodology-m38-rebase`, rebased onto `origin/main` after M37. The earlier local-main fast-forward is historical; M38 is not yet in `origin/main`. [Result, evidence and limits](notes/m38-dsh-package.md); [task entry](TASKS.md).
-
-Historical M38 package checks before this rebase: the package carries an adapter over all 71 neutral files, 28 capabilities and seven parameters, 27 DSH skill carriers, six role carriers, the six shared Python helpers, the 13 PM templates and a DSH bundle whose single row mounts the package's own `skills/` root. `bin/conform adapter` and `bin/conform self` both exit 0; the package suite is 146 passed; the new root contract test is 2 passed; the two sibling package suites are 11 passed. A scratch-profile `dsh plugin add` composed a real bundle layer and the row resolved to a skill root holding 27 entries.
-
-**The first installation went into the wrong profile.** The DSH GUI used for that run uses the `desktop` profile, and the bundle was first added to `web`; the owner restarted and the plugin was rightly absent. The bundle is now installed into `desktop` as well, and the correction is the reason the live session's catalog changed: all 27 methodology skills appeared in the running session, and loading `pm` through the skill tool returned `Base directory for this skill: <checkout>/implementations/dsh/skills/pm`, so discovery and on-demand loading are demonstrated on the live profile rather than inferred. Both profiles keep their previous `package.json` and `cordis.patch.yml` beside them as `.bak-m38` for one-step rollback. What is still absent is the complete flow: no Bootstrap-to-Finalize run, no checkpoint and resume, and no assigned flow QA/Review; the bounded smoke did receive independent verification. The run that would establish those is specified at [the first-run note](notes/m38-run-01.md), and probe 2 was executed on the granted disposable target; its result and limits are recorded there.
+- **Main** includes M37 and M38. Source versions: neutral 3.0.1, Codex 3.0.1, Claude 2.1.0, DSH 3.0.1.
+- **Claude package.** 64 members: three launchers that reference the Codex C2 helpers in place, a by-reference consumer PM carrier, routing in nine skills and the searcher, and a root tripwire over 18 Codex files. It loads in place from the canonical checkout. On 2026-10-19, after the M38 merge, the maintainer session that synchronized these records observed the SessionStart hook there report methodology-claude 2.1.0 bound to neutral 3.0.1.
+- **DSH package.** Adapter over all 71 neutral files, 27 skill carriers, six role carriers, the six shared helpers and a bundle that mounts the package's own skill root. It is installed into the `web` and `desktop` profiles from the canonical checkout. Live discovery, on-demand loading of `pm` and a bounded smoke with independent verification were shown before the rebase. No full flow and no assigned flow QA/Review ran. The package is byte-identical to that tip, but the live profiles were not re-probed after the merge.
+- **Checks on the merged candidates (Python 3.12).**
+  - M37, final candidate before the merge: root 603, Claude 545 and Codex 146 tests passed.
+  - M38 after the rebase: root 605, DSH 146 and focused C1 6 tests passed; DSH adapter conformance passed.
+  - `bin/conform self` was not run for the M38 rebase, because its private deny list was not supplied.
+- **Evidence.** Raw M37 run evidence (about 1 GB) lives in the owner's private evidence directory outside this repository.
 
 ## Next action
 
-Probes 1 and 2 of [M38-RUN-01](notes/m38-run-01.md) are recorded: live discovery/loading and the bounded smoke ran. The smoke did not establish the full Bootstrap-to-Finalize flow, checkpoint/resume or role isolation. Probe 3 still needs its matching target and scope. The owner requested this M38 rebase and branch push; merging into remote main remains a separate action.
+Read, in order: root AGENTS, this HANDOFF, VISION, ROADMAP, [TASKS](TASKS.md), then only the relevant notes: the [M37 record](notes/m37-claude-parity.md) and the [M38 result](notes/m38-dsh-package.md).
+
+Ask the owner which of the three waiting items to take. Do not edit consumer projects, DSH profiles or user settings without their own grant.
 
 ## Retained traps
 
-Historical pre-M37 baseline: the root `tests` suite carried **67 pre-existing failures** on unmodified `main`: 65 in `test_flow_contract.py`, one in `test_pm_role.py`, and the stale helper-algorithm pin in `test_c1_review_and_routing.py`. A detached checkout of `b8696a2` reproduces exactly 65+1+1. Measured after M38: **66 failures**, the same 65+1, so M38 removed one failure and added none. Those measurements predate the M37 root-oracle repairs and do not describe the rebased tree. The rebase retains the M37 Python3.12 helper pins; the earlier M38 hashes came from Python3.9, whose AST omits empty type_params fields. See the rebase validation below for current results.
+- **Bare launcher names.** While the in-house `product-methodology` plugin is enabled, the bare names `codemap`, `markup-migrate` and `orient` in a Bash session may resolve to its `bin/`. The package's own routes check `command -v` first or use the absolute launcher path.
+- **Root suite interpreter.** Run the root suite with `/opt/homebrew/bin/python3.12`. The C1 helper pins depend on the interpreter: under Python 3.9 the AST omits empty `type_params` fields, so one pin test fails.
+- **Checks in a working checkout.** Package tests, several root tests and `bin/conform adapter`/`self` count every `*.md` under the ignored `.methodology/` folder. Run final checks on a clean copy.
+- **C1 helper pin.** The merged tree keeps the upstream pins; M38's Python 3.9 recalibration was dropped in the rebase. A pin cannot separate an intentional algorithm change from drift, so review any re-pin against the source delta. The DSH helper stays outside that pin loop. Details are in the [M38 result](notes/m38-dsh-package.md#root-suite-repairs-during-m38).
+- **Marketplace installs.** Any marketplace install of the Claude package copies it and reports BLOCKED. Use in-place loading only.
+- **DSH profiles.** The DSH GUI runs the `desktop` profile; the first installation went to `web` by mistake. Both profiles keep their previous `package.json` and `cordis.patch.yml` as `.bak-m38` for one-step rollback.
+- **Live headless probes.** Restricting Bash to launcher-only rules can deny the commands the routes legitimately use, such as the absolute launcher path or `command -v`. Match the probe rules to the current routes before reading a failure as a product defect.
+- **Run-state helper gaps.**
+  - It cannot record an architect-phase response correction after the plan file exists.
+  - It cannot continue a terminal run.
+- **C3.** Remains exhausted, unaccepted and unmerged: terminal ESCALATED/review, Debug 4/4, no reset or fifth repair.
+- **M30.** Source integrated, Debug 1/4 retained. Native Claude AC4/AC5 were observed in M37, but renewed M30 QA, Review and Finalize are still owed.
+- **Remaining route.**
+  1. Minimal safeguard.
+  2. Bounded API/database trial.
+  3. Separately scoped C4–C6.
+  4. Later: frontend, Telegram and MCP.
 
-The pin failure was fixed, and the fix is a calibration rather than a cover-up. Its cause: the test's normalizer was rewritten from a release-site counter into an AST-shape matcher, and the two pin literals were never recalibrated, so the test failed on correct helpers. Evidence that the executable algorithm did not change, established twice and independently: the pinned and current helper sources normalize to byte-identical ASTs, the only differing string constants across the two revisions are release values, and all injected drift controls (schema version, `max_debug`, `profile_cap`, neutral version, and a missing or duplicated selector) still change the identity. One claim in the first version of this record was too strong and is corrected: the old pin literals are not reproducible from the commit they were attributed to under either normalizer, so they were already stale earlier than that. The recalibration itself rests on the measurement, not on that provenance.
-
-That fix and the DSH package's own root test also exposed a markup defect: `tests/test_dsh_package.py` placed its import block against the contract region, which `test_code_layer.py` refuses. It is fixed, so that check is green again. The DSH helper still deliberately stays out of the pin loop in `test_c1_review_and_routing.py`: its membership selector has a different shape, it carries a second membership set and its contract version is its own, so joining that loop needs a reviewed normalization branch rather than a weakened check.
-
-Three residual risks of the recalibrated pin are recorded rather than hidden. First, a pin cannot separate an intentional algorithm change from drift: whoever edits the helper can re-pin it, so what actually refuses a wrong release value is the control list in the test body, and a recalibration must be reviewed against the source delta, as this one was. Second, the pin covers the pinned function's own docstring, so a documentation-only edit inside that function forces a re-pin. Third, `dsh` remains unpinned by that test.
-
-C3: unaccepted/unmerged, terminal ESCALATED/review, Debug4/4 exhausted; no reset/fifth repair. M30: source integrated, full checkpoint acceptance incomplete, native Claude AC4/AC5 observed in M37, renewed M30 QA/Review/Finalize owed and Debug1/4 retained. Minimal-safeguard → bounded API/database trial → separately scoped C4–C6 route and later frontend/Telegram/MCP remain. Public source visibility and local installation do not satisfy these proofs. See [ROADMAP](ROADMAP.md) and the linked original result records for history.
-
-A delegated reconnaissance reader had written its report into this repository's own root. It is now owned by the package as [the DSH subagent/workflow reference](../../implementations/dsh/references/dsh-subagent-workflow.md) and declared in the layout. The reader also left a `.DS_Store` in the foreign `deepseek-harness` checkout; that checkout is outside this grant, so the file was left alone.
-
-## M37 continuity retained through the rebase
-
-M37 was merged into `origin/main` through PR11. Claude 2.1.0 includes the C2 consumer PM profile by reference, three launchers, a by-reference carrier, routing in nine skills and the searcher, and the root tripwire over the Codex sources. The owner accepted the AC5 absolute-path launcher call; the original Finalize BLOCKED result and Debug1/4 history remain in [the M37 record](notes/m37-claude-parity.md). Its historical Python3.12 checks were root603, Claude545 and Codex146.
-
-M37-T7 consumer migrations and retirement of the in-house plugins still require per-project grants. Bare launcher names can resolve to the in-house plugin; use the package's command resolution or absolute paths. Claude uses in-place loading; marketplace copies report BLOCKED. Run the root suite with `/opt/homebrew/bin/python3.12`. Launcher-only headless probe rules must allow the actual route. The run-state helper still cannot record an architect response correction after the plan exists or continue a terminal run. No consumer or user configuration changed in this rebase.
-
-## M38 rebase validation — 2026-10-19
-
-Rebased the full `dsh/m38-package-and-runs` history onto M37 merge `380dd00` under the owner's explicit rebase/conflict-resolution/push grant. Resolved HANDOFF/TASKS by retaining both checkpoints and current limits; retained Claude2.1.0 assertions, the Python3.12 pins from M37 and M38's traceability comments. The DSH package is byte-identical to its pre-rebase tip. No source helpers changed. An independent read-only verifier confirmed ancestry, executable C1 equality with upstream, links, M37 carryover and the interpreter explanation for the pins; no blocking findings or writes outside the three resolution paths.
-
-Validation on `/opt/homebrew/bin/python3.12`: root `pytest -q tests` **605 passed**; DSH package `pytest -q -c implementations/dsh/pytest.ini implementations/dsh/tests` **146 passed**; focused C1 **6 passed**. DSH adapter conformance: exit0, 76 passes, no warnings/failures. `git diff --check` passed. The initial targeted run failed only because the replayed M38 Python3.9 pins differ from Python3.12; retaining the existing upstream pins resolved it without helper or normalizer changes. `bin/conform self` was NOT RUN (exit2: required private deny list not supplied); historical self-scan claims above are not a fresh scan. No new live-installation or full-flow proof is claimed.
-
-Next action: deliver this checked branch with an explicit lease against the pre-rebase remote tip, then use it for review/integration under the matching decision. Local main and other writers' branches remain untouched.
+Public source visibility and local installation do not satisfy these proofs. See [ROADMAP](ROADMAP.md) and the linked result records for history.
