@@ -1,13 +1,13 @@
 # Current maintainer tasks
 
-## GRACE-Q2 — minimal QA evidence package (local candidate)
+## GRACE-Q2 — minimal QA evidence package (integrated and delivered)
 
 [Owner grant, scope and checks](notes/grace-qa-evidence-minimal.md). Documentation clarification, neutral first then Codex/Claude/DSH; no new roles, experiments or contract/test reduction.
 
 | Task | State | Finish / next action |
 |---|---|---|
-| GRACE-Q2-T1 — neutral clarification and carrier sync | Done locally | Existing QA evidence view, LDD outcome correlation and agent-operable test guide; preserve all required guarantees. |
-| GRACE-Q2-T2 — bounded checks and project records | Done locally; integration pending | Wording, patch bindings and preserved interfaces checked; independent document review clear after history-comment correction. Retain local result for its separate integration decision. |
+| GRACE-Q2-T1 — neutral clarification and carrier sync | Done; main/origin | Existing QA evidence view, LDD outcome correlation and agent-operable test guide; preserve all required guarantees. |
+| GRACE-Q2-T2 — bounded checks and project records | Done; main/origin | Wording, patch bindings and preserved interfaces checked; independent document review clear after history-comment correction. Owner approved integration/origin delivery; package448e575 was pushed and remotely confirmed. Working-profile installation withheld. |
 
 ## M38 — DSH native implementation package (merged through PR10)
 

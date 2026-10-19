@@ -1,6 +1,10 @@
-# Current: GRACE-Q2 minimal QA evidence package (local candidate)
+# Current: GRACE-Q2 integrated and delivered to origin/main
 
-Owner approved [GRACE-Q2](notes/grace-qa-evidence-minimal.md): clarify existing QA evidence, LDD outcome correlation and an agent-operable test guide in neutral owners, then synchronize Codex/Claude/DSH. No new roles, experiments, contract/test reduction or installation. Root owns source/current records in isolated `codex/qa-evidence-minimal`, base00c16ae; canonical main stays clean. Implemented and locally checked: neutral/Codex/DSH source3.0.2 and Claude source2.1.1. Independent document review found no unresolved defect after restoring three historical comments. The local candidate is complete; its next action is the separate integration decision. Checks and their failed-attempt history/limits are in the linked note. No installed update or demonstrated testing-quality improvement is claimed. M37/M38 and all waiting items below remain unchanged.
+Owner-approved [GRACE-Q2](notes/grace-qa-evidence-minimal.md) is integrated: neutral QA evidence, LDD outcome correlation and an agent-operable test guide, followed by Codex/Claude/DSH carrier synchronization. Reviewed package `448e575` was fast-forwarded into clean canonical main and pushed; remote readback confirmed its full identity. The API could not create a PR (`must be a collaborator`), so delivery used the owner's explicit main/origin grant through normal Git push. This record synchronization follows that verified package delivery.
+
+Current source versions: neutral/Codex/DSH **3.0.2**, Claude **2.1.1**. Bounded checks, corrected failures, independent review and limits are in the linked note. No new roles, experiments or contract/test reduction. **Working-profile installation is expressly withheld**: no install command or profile configuration change was made. Existing in-place loaders may read changed canonical source; live loaded versions were not re-probed. No demonstrated testing-quality improvement or new packaged release is claimed.
+
+Next: GRACE-Q2 implementation and origin delivery are complete; wait for a new owner-selected scope. Retained consumer migrations, DSH probe 3, M30/C3 and plugin-retirement decisions below remain separate. No installation is authorized.
 
 # Retained canonical checkpoint: M37 and M38 merged
 
@@ -46,7 +50,7 @@ No packaged release of Claude 2.1.0 or DSH 3.0.1 has been taken; it remains a se
 
 Read, in order: root AGENTS, this HANDOFF, VISION, ROADMAP, [TASKS](TASKS.md), then only the relevant notes: the [M37 record](notes/m37-claude-parity.md) and the [M38 result](notes/m38-dsh-package.md).
 
-The owner selected GRACE-Q2 above. The four retained waiting items remain separate; do not reopen their scope. Do not edit consumer projects, DSH profiles or user settings without their own grant.
+GRACE-Q2 is delivered; the four retained waiting items remain separate and await their own scope. Do not edit consumer projects, DSH profiles or user settings without their own grant.
 
 ## Retained traps
 

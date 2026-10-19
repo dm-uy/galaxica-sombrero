@@ -28,4 +28,13 @@ Bounded local checks used Python 3.12 and a disposable source copy. The first co
 
 Local diagnostic logs and the preservation comparison are at `/private/tmp/qa-evidence-minimal-checks/`; failed attempts are retained there. This is bounded regression/source validation, not a full suite, live probe, new empirical run or efficacy claim. Private-deny-list self conformance was not rerun because its real deny list was not supplied. [Independent document review](grace-qa-evidence-review.md) completed with no unresolved defect. It caught three mechanically rewritten historical test-header lines, restored byte-for-byte without changing assertions. The reviewer wrote only its permitted scratch report; root copied it here.
 
-The checked local candidate is complete on `codex/qa-evidence-minimal`. Local preservation is authorized; main integration, publication and installation retain their matching decisions. M37/M38 history and outstanding consumer/DSH/M30/C3 obligations remain unchanged.
+The checked candidate was completed on `codex/qa-evidence-minimal`; the later owner grant and actual main/origin delivery are recorded below. Working-profile installation remains withheld. M37/M38 history and outstanding consumer/DSH/M30/C3 obligations remain unchanged.
+
+
+## Integration receipt — 2026-10-19
+
+Owner: «Да, давай интегрируем этот пакет в main, отправим в origin и обновим проектные документы. Установку в рабочие профили пока не делаем.»
+
+The clean canonical main was fast-forwarded from `00c16ae` to the reviewed package `448e5751f0e739d15ff34a8e256c0710177f44db`. The normal push succeeded; `git ls-remote origin refs/heads/main` returned that exact commit. The intended repository PR route was attempted after branch publication, but GitHub GraphQL rejected creation with `must be a collaborator (createPullRequest)`. No PR was created. The owner's explicit main/origin grant was fulfilled through the normal Git push, without force or history rewriting.
+
+This receipt and current-record synchronization follow the verified package delivery. No install/update command, user-profile configuration change, new experiment or release was performed. Existing in-place consumers can read changed checkout source; their live loaded versions and behavior were not re-probed. M37/M38 and the other retained proof/consumer holds remain separate.
