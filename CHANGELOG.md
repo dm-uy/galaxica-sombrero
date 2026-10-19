@@ -14,6 +14,7 @@
 
 ## 3.0.1
 
+- Add the DeepSeek Harness binding as a third implementation package, `implementations/dsh`, at package 3.0.1 over neutral 3.0.1: an adapter over all 71 neutral files, 28 capabilities and seven parameters, 27 skill carriers, six role carriers, the six shared helpers and a DSH bundle that mounts the package's own skill root. No sibling package's source, wire, schema or behavior changes.
 - Clarify existing PM continuity duties in both AGENTS seeds and bootstrap paths; compare existing entries by meaning and add only missing nonconflicting clauses while preserving project instructions and actual homes.
 - Reissue complete local Codex3.0.1 and in-place Claude2.0.1 bindings over neutral3.0.1. Preserve wire/schema, original helper algorithm pins and inventories; prior behavioral proof gaps remain separate.
 

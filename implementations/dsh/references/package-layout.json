@@ -1,0 +1,315 @@
+{
+  "package": "methodology-dsh",
+  "version": "3.0.1",
+  "profile": "colocated-explicit-source",
+  "files": [
+    {
+      "path": ".dsh-plugin/plugin.json",
+      "kind": "plugin-manifest"
+    },
+    {
+      "path": "Doxyfile",
+      "kind": "config"
+    },
+    {
+      "path": "README.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "adapter.json",
+      "kind": "adapter"
+    },
+    {
+      "path": "cordis.patch.yml",
+      "kind": "config"
+    },
+    {
+      "path": "examples/smoke-spec.md",
+      "kind": "example"
+    },
+    {
+      "path": "package.json",
+      "kind": "plugin-manifest"
+    },
+    {
+      "path": "pytest.ini",
+      "kind": "config"
+    },
+    {
+      "path": "references/adoption.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "references/consumer-pm-profile.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "references/dsh-runtime.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "references/dsh-subagent-workflow.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "references/handoffs.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "references/source-disposition.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "roles/architect.md",
+      "kind": "role"
+    },
+    {
+      "path": "roles/coder.md",
+      "kind": "role"
+    },
+    {
+      "path": "roles/debugger.md",
+      "kind": "role"
+    },
+    {
+      "path": "roles/qa.md",
+      "kind": "role"
+    },
+    {
+      "path": "roles/reviewer.md",
+      "kind": "role"
+    },
+    {
+      "path": "roles/searcher.md",
+      "kind": "role"
+    },
+    {
+      "path": "skills/analyzer/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/ax-ui-contract/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/brainstorm/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/brownfield-spec-template/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/code-review/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/data-transform/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/devplan-protocol/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/devplan-protocol/scripts/visual_gate_lint.py",
+      "kind": "helper"
+    },
+    {
+      "path": "skills/document-protocol/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/durable-layer/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/feature-dev/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/feature-dev/scripts/run_state.py",
+      "kind": "helper"
+    },
+    {
+      "path": "skills/graph-protocol/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/greenfield-bootstrap/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/hitl-gates/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/pm-bootstrap/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/pm-handoff/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/pm-plan-batch/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/pm-run-batch/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/pm/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/pm/scripts/codemap.py",
+      "kind": "helper"
+    },
+    {
+      "path": "skills/pm/scripts/consumer_files.py",
+      "kind": "helper"
+    },
+    {
+      "path": "skills/pm/scripts/markup_migrate.py",
+      "kind": "helper"
+    },
+    {
+      "path": "skills/pm/scripts/orient.py",
+      "kind": "helper"
+    },
+    {
+      "path": "skills/pm/templates/AGENTS.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/CLAUDE.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/CONVENTIONS.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/DEC.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/Doxyfile",
+      "kind": "config"
+    },
+    {
+      "path": "skills/pm/templates/HANDOFF.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/OPEN_QUESTIONS.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/RECON.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/ROADMAP.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/SPEC.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/TASKS.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/VISION.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "skills/pm/templates/gitignore",
+      "kind": "config"
+    },
+    {
+      "path": "skills/prod-log-vacuum/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/prompting-agent-design/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/prompting-decompose/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/prompting-markup/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/prompting-verify/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/prompting/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/roadmap/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/semantic-exoskeleton/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "skills/spec-recon/SKILL.md",
+      "kind": "skill"
+    },
+    {
+      "path": "tests/test_adoption.py",
+      "kind": "test"
+    },
+    {
+      "path": "tests/test_codemap.py",
+      "kind": "test"
+    },
+    {
+      "path": "tests/test_consumer_files.py",
+      "kind": "test"
+    },
+    {
+      "path": "tests/test_consumer_pm.py",
+      "kind": "test"
+    },
+    {
+      "path": "tests/test_guide.md",
+      "kind": "test-guide"
+    },
+    {
+      "path": "tests/test_markup_migrate.py",
+      "kind": "test"
+    },
+    {
+      "path": "tests/test_native_contract.py",
+      "kind": "test"
+    },
+    {
+      "path": "tests/test_run_state.py",
+      "kind": "test"
+    },
+    {
+      "path": "tests/test_visual_gate.py",
+      "kind": "test"
+    }
+  ],
+  "roles": {
+    "architect": "roles/architect.md",
+    "coder": "roles/coder.md",
+    "debugger": "roles/debugger.md",
+    "qa": "roles/qa.md",
+    "reviewer": "roles/reviewer.md",
+    "searcher": "roles/searcher.md"
+  }
+}
