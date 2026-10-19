@@ -21,7 +21,7 @@ Waiting for the owner:
 1. **Consumer migrations (M37-T7).** Each of the five consumer projects needs its own grant to adopt `methodology-consumer-pm/1.0.0`. The in-house plugins are already disabled, so unmigrated projects run on methodology-claude alone. Expect C2 `orient` to refuse their current profile until they migrate.
 2. **DSH probe 3 (M38-T4).** The full Bootstrap-to-Finalize run on DSH needs a matching target and scope; see [M38-RUN-01](notes/m38-run-01.md).
 3. **Next bounded framework task.** Choose among the remaining route below.
-4. **Losses after the plugin retirement.** Decide whether to port `run_review.py` and `pm-ingest-candidates` or drop them and the model-policy rule's citation, whether to restore a typed brainstorm generator, and whether to extend the neutral quotation rule with the research-wide ellipsis ban and the verifier's exact-string step. Russian trigger phrases are being worked on separately; their result comes as its own PR.
+4. **Losses after the plugin retirement.** Decide whether to port `run_review.py` and `pm-ingest-candidates` or drop them and the model-policy rule's citation, whether to restore a typed brainstorm generator, and whether to extend the neutral quotation rule with the research-wide ellipsis ban and the verifier's exact-string step. Russian trigger phrases are in PR15, which awaits your review and merge.
 
 No packaged release of Claude 2.1.0 or DSH 3.0.1 has been taken; it remains a separate decision.
 
