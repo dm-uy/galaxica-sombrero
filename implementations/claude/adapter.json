@@ -1,7 +1,7 @@
 {
   "harness": "methodology-claude",
   "owner": "Methodology Claude package maintainers",
-  "spec_version": "3.0.1",
+  "spec_version": "3.0.2",
   "spec_root": "../../",
   "parameters": {
     "dialog-language": "Russian unless controlling owner or project instructions select otherwise",

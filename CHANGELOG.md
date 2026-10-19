@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.2
+
+- Clarify existing QA evidence as requirement → expected/actual behavior → check/evidence → disposition, reusing the test guide and original artifacts instead of parallel reports. Preserve required scans, independent QA/Review and canonical returns.
+- Explain correlation of LDD labels with observable outcomes/state and use the existing test guide as an agent operating guide for the appropriate shipped interface and isolated data. No mandatory MCP wrapper, telemetry service, new role, contract reduction or test reduction.
+- Synchronize existing Codex/DSH QA carriers at source3.0.2 and Claude at source2.1.1 over neutral3.0.2. Only exact executable version selectors and current-version test oracles change; wire/schema, helper algorithms and package membership remain unchanged. No new experimental run, installation or release execution.
+
 ## Claude source2.1.0 (neutral3.0.1 unchanged)
 
 - Carry the opt-in consumer PM profile `methodology-consumer-pm/1.0.0` by reference to the accepted Codex C2 helpers and seeds (owner decision H, M37): a thin carrier `references/consumer-pm-profile.md`, routing in pm, pm-bootstrap, pm-plan-batch, pm-run-batch, pm-handoff, durable-layer, roadmap, document-protocol, greenfield-bootstrap and the searcher, and three `bin/` launchers (`orient`, `codemap`, `markup-migrate`) that run the sibling Codex scripts in place with `-B`, pass arguments and exit status unchanged and report `methodology-claude BLOCKED:` with exit 2 when the sibling is missing.

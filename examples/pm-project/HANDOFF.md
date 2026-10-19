@@ -1,4 +1,8 @@
-# Current: M37 and M38 merged — Claude 2.1.0 and DSH 3.0.1 on main
+# Current: GRACE-Q2 minimal QA evidence package (local candidate)
+
+Owner approved [GRACE-Q2](notes/grace-qa-evidence-minimal.md): clarify existing QA evidence, LDD outcome correlation and an agent-operable test guide in neutral owners, then synchronize Codex/Claude/DSH. No new roles, experiments, contract/test reduction or installation. Root owns source/current records in isolated `codex/qa-evidence-minimal`, base00c16ae; canonical main stays clean. Implemented and locally checked: neutral/Codex/DSH source3.0.2 and Claude source2.1.1. Independent document review found no unresolved defect after restoring three historical comments. The local candidate is complete; its next action is the separate integration decision. Checks and their failed-attempt history/limits are in the linked note. No installed update or demonstrated testing-quality improvement is claimed. M37/M38 and all waiting items below remain unchanged.
+
+# Retained canonical checkpoint: M37 and M38 merged
 
 ## Owner decisions
 
@@ -42,7 +46,7 @@ No packaged release of Claude 2.1.0 or DSH 3.0.1 has been taken; it remains a se
 
 Read, in order: root AGENTS, this HANDOFF, VISION, ROADMAP, [TASKS](TASKS.md), then only the relevant notes: the [M37 record](notes/m37-claude-parity.md) and the [M38 result](notes/m38-dsh-package.md).
 
-Ask the owner which of the four waiting items to take. Do not edit consumer projects, DSH profiles or user settings without their own grant.
+The owner selected GRACE-Q2 above. The four retained waiting items remain separate; do not reopen their scope. Do not edit consumer projects, DSH profiles or user settings without their own grant.
 
 ## Retained traps
 

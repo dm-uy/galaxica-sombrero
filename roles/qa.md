@@ -74,6 +74,10 @@ The shared obligations ROLE-103, ROLE-402, ROLE-401, ROLE-203 in [the base role]
 
 The shared obligations ROLE-601, ROLE-603 in [the base role](_base.md) apply here.
 
+Use the existing [AC-to-test guide](../code/tests.md#code.tests.guide) as the requirement map. A compact evidence row reads: requirement/AC → expected behavior → actual behavior → check and evidence reference → met, NOT met, unverified, or N/A with reason. Keep actual results in QA's authorized evidence artifact and reference the guide rather than editing the judged tree. Unavailable evidence stays unverified and cannot satisfy QA-602; a confirmed symptom and a proposed cause are separate claims.
+
+This is an evidence view, not a new wire schema or another report layer. Reference the same primary artifacts from the canonical return and current project records instead of copying report bodies. Preserve original results, candidate identities, required scans, independent Review and all existing gate/history obligations.
+
 - **QA-602** MUST: Return SUCCESS only when the full suite passes, logs contain no unexpected errors, every applicable registry scan is PASS, every measurable acceptance criterion is measured and met, no required criterion is unverified or deferred, and every nonapplicable scan is N/A with its reason.
 - **QA-603** MUST: When the adapter declares prose fallback, return the literal sentence SUCCESS: All tests passed, semantic log verification confirms correctness. followed by a one-to-three-sentence summary, actual suite summary and, for infrastructure, probed endpoints with expected/actual HTTP codes and a stack-state snapshot.
 - **QA-604** MUST NOT: Return SUCCESS for infrastructural done criteria verified only by mocked drivers; if the stack never ran, report INFRA_DOD_NOT_VERIFIED, using BUG_REPORT for an implementation failure and BLOCKED for unavailable environment or authorization.

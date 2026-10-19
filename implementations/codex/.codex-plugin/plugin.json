@@ -1,6 +1,6 @@
 {
   "name": "methodology-codex",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Native source-bound Codex PM and approved development workflow.",
   "skills": "./skills/",
   "interface": {

@@ -1,6 +1,6 @@
 # Methodology project route
 
-## Current: M37 and M38 merged — Claude 2.1.0 and DSH 3.0.1 on main
+## Current: GRACE-Q2 minimal QA evidence clarification (local candidate)
 
 One canonical checkout is the development source; preparation repositories are archival. Canonical main includes M30 source through owner-approved PR6 and the later M31/M33 updates. Canonical main carries neutral 3.0.1, Codex 3.0.1, Claude 2.1.0 (M37, PR11) and DSH 3.0.1 (M38, PR10); accepted C2/bafec417 is the historical foundation, not the current version. C3 is not ready for merge. [Current C3 history/result](notes/m28-c3-result.md).
 
@@ -29,6 +29,7 @@ One canonical checkout is the development source; preparation repositories are a
 | M36 | Completed: checked record synchronization and self-contained chat conclusions integrated into canonical main and pushed under explicit owner approval; [receipt, evidence and preserved baton](notes/m36-session-handoff.md). Next bounded task awaits owner-selected scope. No framework implementation or donor adoption. |
 | M37 | Claude package actualization: patch2.0.2, then the C2 consumer PM port as Claude2.1.0 (mechanism H: launchers and carrier referencing the Codex C2 helpers in place). Feature-dev run with independent QA/Review/Finalize; Debug1/4; owner accepted the result with recorded AC5 limits; merged into `origin/main` through PR11 (merge `380dd00`, 2026-10-17). The owner disabled the in-house plugins on 2026-10-19; consumer migrations follow under per-project grants. [Record](notes/m37-claude-parity.md). |
 | M38 | DSH native implementation package 3.0.1 over neutral 3.0.1, installed into the live `web`/`desktop` profiles; live discovery, `pm` loading and a bounded smoke observed. Rebased onto M37 and merged into `origin/main` through PR10 (merge `1ff633c`, 2026-10-19). Full Bootstrap-to-Finalize, checkpoint/resume and role isolation on DSH remain unproved (probe 3). [Result](notes/m38-dsh-package.md). |
+| GRACE-Q2 | Owner-approved minimal QA/LDD/test-guide clarification, neutral first then three adaptations; implemented, locally checked and independently document-reviewed; integration pending. [Scope and checks](notes/grace-qa-evidence-minimal.md). No new roles/runs or contract/test reduction. |
 | Public visibility | Public, confirmed by GitHub readback on 2026-10-15. Earlier private-release/publication holds remain historical; future releases still need their own scope. |
 
 Canonical delivery update2026-10-15: owner-requested direct push delivered the canonical M32/M33/M34 commits. This supersedes earlier canonical-PR delivery holds below; no PR was created. Separate prompting-source upstream/release remains outside that push. Repository visibility was separately observed as public on 2026-10-15; see [M36](notes/m36-session-handoff.md).
@@ -102,3 +103,10 @@ M31 release update: the owner authorized merge, reissue and installation of the 
 The owner asked for the methodology to be implemented for the DeepSeek Harness under `implementations/` and connected as a plugin. Delivered as a third typed package at 3.0.1 over neutral 3.0.1, with an adapter over all 71 neutral files, 27 skill carriers, six role carriers, the shared helpers and a DSH bundle that mounts the package's own skill root. [Result, evidence and limits](notes/m38-dsh-package.md).
 
 Not a release and not accepted behavior. The owner later approved the `main` merge and the live installation: the bundle is installed into the `web` and `desktop` profiles, live discovery and a bounded smoke were observed, and the rebased package was merged into `origin/main` through PR10 (merge `1ff633c`, 2026-10-19). A packaged release and the full Bootstrap-to-Finalize run retain their separate owner decisions. The sibling packages' source, wire, schema and behavior are unchanged, and the retained M30/C3 limits and the later trial/C4–C6 route are untouched.
+
+## GRACE-Q2 — bounded documentation package
+
+```mermaid
+flowchart LR
+    GQ2T1["T1 done: neutral and carrier clarification"] --> GQ2T2["T2 done: checks and document review; integration pending"]
+```

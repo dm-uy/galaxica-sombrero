@@ -1,4 +1,4 @@
-# Source disposition — methodology-claude 2.1.0
+# Source disposition — methodology-claude 2.1.1
 
 This table describes Claude-native technical duties under neutral labels S1–S8. Private source reconnaissance, exact locators and byte identities are unavailable in this public tree. The labels do not assert a complete source transfer. Every rule the package applies comes from current neutral owners; older variants do not become competing rules. Native mechanics and wording are reconciled as detailed below.
 

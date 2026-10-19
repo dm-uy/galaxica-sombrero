@@ -67,7 +67,7 @@ import pytest
 LOGGER = logging.getLogger(__name__)
 BASELINE = "M37 baseline ba44b19: accepted C2 bytes"
 PINS = {
-    "implementations/codex/references/consumer-pm-profile.md": ("14adb7b06e045b670acececdd88bdd0fc3c3bd079b779e6374e8a9e41d0bde41", BASELINE),
+    "implementations/codex/references/consumer-pm-profile.md": ("d0d0c5e607464770468d8782521b41b578b25eb649431db2dc3a2e7195c6531f", "GRACE-Q2: source/neutral patch identity only; carrier duties unchanged"),
     "implementations/codex/skills/pm/scripts/codemap.py": ("9d08a9558fa4e88df6f9dc086a6873455c031aee15ecc3d7f584fb17ac63fc6e", BASELINE),
     "implementations/codex/skills/pm/scripts/consumer_files.py": ("a86d3b963e49f9b63c5380ceb19a998f7e91457a6e54c331732f8a781e03ff84", BASELINE),
     "implementations/codex/skills/pm/scripts/markup_migrate.py": ("887b809c466384211caf52ea1027b8fd6ea090eecca4a2beee277302ac066768", BASELINE),

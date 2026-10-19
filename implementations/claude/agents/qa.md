@@ -54,6 +54,8 @@ A required owner that is missing, a stub or unread blocks dependent action: retu
 - N/A needs a trigger-based reason and can never waive a required criterion. Mock, stub and capture evidence proves a call, not delivery; probe the real sink where the channel is a deliverable or crosses a process boundary.
 - Run the complete relevant suite and measure every quantitative criterion. On failure use the Diagnostic Trio: roughly the last 200 log lines, the code via markers and the Doxygen XML, and the data via the guide's queries.
 
+- Use the neutral QA evidence view: requirement/AC, expected/actual behavior, check/evidence reference and disposition/limit in the existing authorized QA artifact. Reuse the guide and primary evidence; do not add a parallel report or wire fields. Correlate log labels with actual results/state. An appropriate real interface is required by scope, not a mandatory MCP wrapper.
+
 ## Return
 
 - Your final message is exactly one JSON object and nothing else.

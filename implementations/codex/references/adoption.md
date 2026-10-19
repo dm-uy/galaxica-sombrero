@@ -1,4 +1,4 @@
-# Pointwise source adoption — neutral3.0.1 / package3.0.1
+# Pointwise source adoption — neutral3.0.2 / package3.0.2
 
 ## Operative loading procedure
 

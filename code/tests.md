@@ -148,6 +148,8 @@ This body states source-backed conditional authoring and evidence duties. Runtim
 
 - **TST-701** MUST: Give every AC an actual covering behavioral test or an explicit deferred/N-A row with its reason. The guide states input data, native fixtures and ownership, exact commands/queries, thresholds and measured met/NOT-met values, expected important trace or AX state, runtime limitations and verification owner. Test names remain behavioral unless host permission allows specification identifiers; the guide is the canonical code-side AC map. When a CLI/script/entrypoint ships, map a test exercising its real invocation end to end, with actual invocation evidence before the summary. A legacy guide recognizer accepting older bare rows does not automatically certify a new formatted table.
 
+These commands and fixture instructions are also the independent agent's operating guide: identify the actual application entry/interface, preparation of isolated data and reset/cleanup of owned state. Scenario verification uses the appropriate real HTTP, CLI, MCP or UI surface; direct business-logic tests retain TST-201. Select from the application's actual scope rather than assuming MCP is required. Describing an existing surface does not authorize an extra wrapper, server or dependency. Reuse this guide and its evidence links in QA rather than maintaining a parallel acceptance map.
+
 <!-- anchor: code.tests.quantities -->
 
 ## Actual threshold measurement

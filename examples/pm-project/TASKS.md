@@ -1,5 +1,14 @@
 # Current maintainer tasks
 
+## GRACE-Q2 — minimal QA evidence package (local candidate)
+
+[Owner grant, scope and checks](notes/grace-qa-evidence-minimal.md). Documentation clarification, neutral first then Codex/Claude/DSH; no new roles, experiments or contract/test reduction.
+
+| Task | State | Finish / next action |
+|---|---|---|
+| GRACE-Q2-T1 — neutral clarification and carrier sync | Done locally | Existing QA evidence view, LDD outcome correlation and agent-operable test guide; preserve all required guarantees. |
+| GRACE-Q2-T2 — bounded checks and project records | Done locally; integration pending | Wording, patch bindings and preserved interfaces checked; independent document review clear after history-comment correction. Retain local result for its separate integration decision. |
+
 ## M38 — DSH native implementation package (merged through PR10)
 
 Owner request: implement the methodology for the DeepSeek Harness under `implementations/`, reconcile it against current source and connect it as a DSH plugin. Scope, evidence and limits: [result note](notes/m38-dsh-package.md). Because this adds a shipped public package and not only documentation, the change keeps the software flow's separation between an implementation artifact and the owner's matching concrete-result decision.

@@ -56,6 +56,8 @@ This body states source-backed conditional authoring and evidence duties. Runtim
 
 - **LDD-801** MUST: Read the entire produced relevant log and compare actual critical belief, validation, goal and error operations with the intended contracts. Printing filtered records before assertions is necessary exposure and is separate from this full log audit. Report the executed-path conclusion with evidence; passing assertions alone do not establish full correctness.
 
+Correlate the owning operation with its actual result and relevant state through available safe identifiers/context in the host encoding. An event labelled COMMITTED is not evidence of persistence when the acknowledged data cannot be read back; check the promised outcome under [Semantic Trace Verification](tests.md#code.tests.semantic-trace) and QA's [Diagnostic Trio](../roles/qa.md#roles.qa.diagnostic-trio). This uses the existing log contract and evidence references, without a new mandatory field set, telemetry service or duplicate log store.
+
 <!-- anchor: code.ldd.runtime-streams -->
 
 ## Original stream bindings
