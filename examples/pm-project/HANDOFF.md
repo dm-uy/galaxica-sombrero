@@ -1,20 +1,22 @@
-# Current: PR17 review corrections checked; result decision pending
+# Current: PR17 merged; working packages updated
 
-[Draft PR17](https://github.com/dm-uy/galaxica-sombrero/pull/17), branch `codex/qa-reflection-clarification`, awaits the owner's concrete-result decision after bounded review corrections. Main merge, release and working-profile installation remain ungranted. Canonical main remains at9f95453; the PR candidate is neutral/Codex/DSH3.1.0 and Claude2.2.0.
+The owner explicitly requested PR merge and installation on 2026-10-21. [PR17](https://github.com/dm-uy/galaxica-sombrero/pull/17) is merged at `a3210036e43c1ce0c873df46e50b560a7e1da93e`, including reviewed head `bfdb2e9edb4925b547b9d98165c025078488e958`. Source versions are neutral/Codex/DSH3.1.0 and Claude2.2.0. [Scope, review history and installation receipt](notes/qa-reflection-clarification.md); [tasks](TASKS.md).
 
 ## Current result and evidence
 
-The QA/preparation/reuse clarification and VERIFY-105 SHOULD remain substantively accepted by the two independent source reviews supplied by the owner. Their reviewed snapshot is `dc25ea4`: source commit f72798d followed by two record-only commits. The current branch head is obtained from Git/PR at delivery, not embedded recursively in this file. [Scope, provenance, review findings and checks](notes/qa-reflection-clarification.md#pr17-independent-review-follow-up); [historical author-side review](notes/qa-reflection-review.md); [tasks](TASKS.md).
+Codex uses the complete immutable merge snapshot through the existing methodology-local marketplace: enabled3.1.0, fresh app-server discovery of27 enabled skills, including PM, feature-dev and prompting-verify. Independent verification matched all426 tracked files and executable bits in both release and installed cache; the sole extra is the root transport manifest with only its skills path changed. Prior config/catalog and release snapshots are retained for rollback.
 
-Root checked the first review's raw receipts: full root605, Claude545, Codex146 and DSH146 tests passed on Python3.12 at dc25ea4. Earlier author-side red runs are retained as history in the result note. Five stale annotation lines and current-record identity/chronology defects are corrected; QA carriers now reference their neutral owners instead of duplicating the added summary. Follow-up checks passed: unchanged ASTs/five corrected comments, package contracts2/2/7, root package checks13, four adapters76each and three clean Doxygen builds with actual five-member XML version checks. Bounded independent rereview found no actionable defect. No new full-suite run, private-deny-list coverage or live efficacy claim follows from these documentation corrections.
+Claude stays in place on canonical main: native plugin details discovers2.2.0; validation and actual SessionStart binding to neutral3.1.0 pass. DSH web/desktop remain registered in place and both resolve3.1.0 with27 skill files. Fresh web configuration composes the methodology provider. CLI dumping desktop was refused because Electron exclusively manages that profile; desktop's fresh runtime catalog was not checked. No active application or user session was restarted.
+
+The earlier full-suite results belong to dc25ea4; bounded comment/record/reference follow-up checks belong to the reviewed PR head. Installation checks are loading/integrity evidence, not new full-suite tests or real-agent efficacy proof. Original failed attempts and retained obligations remain in their linked records.
 
 ## Next action
 
-Use the existing PR head for the corrected result and obtain the owner's concrete-result decision. Do not merge or install automatically. Preserve source/check identities and original failures. The owner explicitly directed the gh account switch to dm-uy; future delivery should distinguish active API account, Git push access and commit author.
+Start a fresh session in each affected client for refreshed discovery; follow the DSH package's profile-restart guidance when needed. This construction conversation is not hot-reload proof. The next substantive development work requires its own actual scope from the retained route; merge/install approval is fulfilled. This receipt-only closure does not repackage the frozen Codex snapshot or publish a release tag.
 
 ## Retained obligations and relevant traps
 
-- GRACE-Q2 is integrated and delivered; working-profile installation was withheld. [Result and history](notes/grace-qa-evidence-minimal.md). This is history, not another current-version or next-action block.
+- GRACE-Q2 is integrated and delivered; its then-withheld installation is now superseded by the installed PR17 snapshot. [Result and history](notes/grace-qa-evidence-minimal.md). This is history, not another current-version or next-action block.
 - M37 consumer migrations still need per-project grants; old in-house plugins are disabled. Retirement losses and historical launcher/PATH caveats remain at [M37](notes/m37-claude-parity.md). [M37 tasks](TASKS.md#m37--claude-package-actualization-merged-through-pr11).
 - DSH full-flow probe3 needs a matching target/scope; use the desktop profile deliberately and preserve previous profile backups. [M38](notes/m38-dsh-package.md), [probe evidence](notes/m38-run-01.md).
 - C3 remains terminal, unaccepted and exhausted at Debug4/4; no fifth repair or reset. [C3 result](notes/m28-c3-result.md).
