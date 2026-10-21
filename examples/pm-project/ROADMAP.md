@@ -1,12 +1,13 @@
 # Methodology project route
 
-## Current: QA-REFLECT checked locally; result integration pending
+## Current: QA-REFLECT PR17 corrections checked; integration pending
 
-Owner-approved bounded clarification follows the consumer-run review and four independent critiques. [Scope, decisions and evidence](notes/qa-reflection-clarification.md); [tasks](TASKS.md). Bounded source/package checks and independent document review complete; checked source f72798d delivered to origin branch and draft PR17 opened after the owner-directed CLI account switch. Main integration and installation remain separate. Earlier route and held work remain unchanged.
+Owner-approved bounded clarification follows the consumer-run review and four independent critiques. [Scope, decisions and evidence](notes/qa-reflection-clarification.md); [tasks](TASKS.md). The delivered snapshot dc25ea4 received two independent reviews and full green root/native-suite results. Bounded annotation/record/reference corrections and affected independent verification are complete; original evidence remains identified in the result note. Main integration and installation remain separate. Earlier route and held work remain unchanged.
 
 ```mermaid
 flowchart LR
-    QRT1["QA-REFLECT-T1 checked: neutral and native guidance"] --> QRT2["QA-REFLECT-T2 checked: result integration pending"]
+    QRT1["QA-REFLECT-T1 checked: neutral and native guidance"] --> QRT2["QA-REFLECT-T2 checked: initial result"]
+    QRT2 --> QRT3["QA-REFLECT-T3 checked: PR17 corrections; integration pending"]
 ```
 
 ## Retained: GRACE-Q2 integrated and delivered to origin/main

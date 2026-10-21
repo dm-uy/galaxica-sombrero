@@ -4,7 +4,7 @@
 
 Owner, current chat: «Давай внесем эту доработку». The approved subject is the refined minimal neutral QA/preparation amendment after four independent critiques, plus the owner's preference to challenge substantial first conclusions before relying on them in decisions, including conversational advice where possible.
 
-Base: canonical main `9f95453`; initially clean. Work is isolated on `codex/qa-reflection-clarification`. Root is the only source/record writer. This is documentation clarification of existing QA-602, TST-701, PREFLIGHT-201, VERIFY-101/102, SESSION-108 and decision/brainstorm duties, plus the owner-approved new VERIFY-105 SHOULD recommendation. It does not open a software feature-dev run. Original norm lines, roles, phases, eight scans, gates, schemas, budgets and helper algorithms remain protected. No consumer project edits, live probes, new path helper, global preference/settings mutation, main merge, public release or installation is included. Branch delivery and a PR for review follow the repository maintainer entry; they do not accept the concrete result for main.
+Base: canonical main `9f95453`; initially clean. Work is isolated on `codex/qa-reflection-clarification`. Root is the only source/record writer. This is documentation clarification of existing QA-602, TST-701, PREFLIGHT-201, VERIFY-101/102, SESSION-108 and decision/brainstorm duties, plus the owner-approved new VERIFY-105 SHOULD recommendation. It does not open a software feature-dev run. Original norm lines, roles, phases, eight scans, gates, schemas, budgets and helper algorithms remain protected. No consumer project edits, live probes, new path helper, general global preference/settings mutation (except the later explicitly owner-directed GitHub CLI account switch recorded below), main merge, public release or installation is included. Branch delivery and a PR for review follow the repository maintainer entry; they do not accept the concrete result for main.
 
 ## Source-grounded scope and reflection
 
@@ -36,7 +36,7 @@ The independent document reviewer caught three issues before closure: the new re
 
 The3.1.0 root run completed602passed/3failed in126.76s. The three remaining failures were fixed population oracles still expecting1242 norms; actual1243 is the original population plus VERIFY-105. Only those three exact count assertions and their current-purpose comment were updated. Bridge-pin rationale now says version identity rather than patch. The affected count cases and unchanged bridge negative controls are rechecked separately; the full red run remains retained, and no fresh all-green full-run claim is made from partial rechecks. Final native Codex/DSH contracts each passed2, selected Claude checks158passed; all three adapter checks returned0 with76passes each.
 
-## Current validation and disposition
+## Historical author validation before PR review
 
 - Corrected norm-count assertions plus unchanged bridge controls:6passed in1.07s, exit0. They cover the3failed cases and the3bridge cases. Unaffected602root results are retained; the final full root run itself remains recorded as red rather than relabeled green.
 - Current-version native contract checks: Codex2passed, DSH2passed. Selected Claude package/session/profile/run-state checks:158passed in57.77s. These are bounded checks, not full native suites or live model/loader probes.
@@ -44,7 +44,7 @@ The3.1.0 root run completed602passed/3failed in126.76s. The three remaining fail
 - Original norm lines and fenced examples preserved; the sole new norm is VERIFY-105 SHOULD. Four executable ASTs are identical after reversing only current version literals. The existing flow fixture changes only50currentQAread-receipt hashes; its original negative controls remain.
 - `git diff --check` passes. Raw initial and current stdout/stderr, inventories, preservation and oracle-correction receipts remain in the owned temporary evidence directory above. Current records and review are documentation closure, not freshly retested implementation.
 
-Independent document review: [original findings and resolution](qa-reflection-review.md). No unresolved source finding after the bounded rereview; no future compliance, safety, quality or speed improvement is established by these source checks. Main merge and installed activation remain separate. Canonical main/consumers/settings have not been changed by this task.
+Independent document review: [original findings and resolution](qa-reflection-review.md). No unresolved source finding after the bounded rereview; no future compliance, safety, quality or speed improvement is established by these source checks. Main merge and installed activation remain separate. Canonical main and methodology consumers/installations have not been changed; the later owner-directed CLI account switch is recorded separately.
 
 ## Review delivery receipt
 
@@ -56,4 +56,32 @@ Draft PR creation through the GitHub CLI failed with `must be a collaborator (cr
 
 The owner clarified that the CLI must switch users. Under that explicit instruction, `gh auth switch --hostname github.com --user dm-uy` selected the intended account. Repository API readback then confirmed the required access; no credential payload was displayed. The prior creation failure remains historical, not an unresolved blocker.
 
-[Draft PR17](https://github.com/dm-uy/galaxica-sombrero/pull/17) is OPEN, head `codex/qa-reflection-clarification`, base `main`; API readback confirmed the delivered head ad5a72c. Main merge and installation remain separate decisions. For future delivery, match the active CLI account to the intended repository before declaring an access blocker; Git author, Git push access and active GitHub API account are distinct.
+[Draft PR17](https://github.com/dm-uy/galaxica-sombrero/pull/17) is OPEN, head `codex/qa-reflection-clarification`, base `main`; On2026-10-21 API readback confirmed head `ad5a72c` at PR creation; subsequent record-only commits advanced the branch. This is a dated observation, not the current head. Main merge and installation remain separate decisions. For future delivery, match the active CLI account to the intended repository before declaring an access blocker; Git author, Git push access and active GitHub API account are distinct.
+
+## PR17 independent review follow-up
+
+Reviewed committed snapshot: `dc25ea4957044e8eb3e7bc84b1396d439c0fcd83`, base `9f95453`. The source began in `f72798d`; the two following commits changed only HANDOFF, ROADMAP, TASKS and this note. Current branch/PR HEAD is read from Git/API at delivery, rather than claimed as a self-referential hash in its own commit. Later corrections preserve this snapshot's measurement identity.
+
+Two independent reports were supplied by the owner. Root read the first review's original report, raw stdout/exit receipts and copy-integrity/source-comparison artifacts. The Git-free candidate matched the reviewed committed snapshot. Verified reviewer-run results on Python3.12:
+
+| Check on dc25ea4 | Observed result | Exit |
+|---|---|---|
+| Root suite |605passed in128.29s|0|
+| Baseline root at9f95453 |605passed in127.03s|0|
+| Full Claude package |545passed in179.46s|0|
+| Full Codex package |146passed in62.74s|0|
+| Full DSH package |146passed in63.39s|0|
+
+The first reviewer also ran all four adapters (including the example) at76passes each and a synthetic-list self check; no private-list coverage is inferred. The second report independently states605root passes in131.67s on dc25ea4, three76-pass adapters and50hash-only flow-fixture leaf changes. Its raw test streams were not supplied in the attachment, so that separate timing remains attributed to that report. Neither report establishes installed or live behavioral effectiveness. The first reviewer disclosed two outside-grant listing files in its own scratchpad; these were outside the project, were not used as evidence and were not reverted here.
+
+Corrections and dispositions:
+
+- Confirmed stale current-version annotations in exactly five comment lines across four test files. Updated only those current contract literals; complete executable ASTs remain identical to dc25ea4. Historical version records remain historical.
+- Clarified the PR-creation readback as historical. Bound the original author-side review to its actual precommit stage and subsequent source commit without publishing an owner-local absolute path or fabricating a postcommit review.
+- Replaced stacked HANDOFF state with one current baton and links to the existing history. Retained every current hold and relevant continuation trap.
+- Replaced the duplicated added QA summary in three carriers with references to the full neutral verdict/guide/preflight/session owners. This addresses the second report's future-drift concern without another prose pin or duplicate policy. It does not change the neutral QA gate.
+- Kept optional wording tightening, extra norm design and broader test/registry changes out of this correction: reviewers found the existing neutral meanings strict and consistent. Source3.1.0/package2.2.0 remain unchanged for these pre-merge documentation fixes.
+
+Follow-up verification on an owned Git-free copy: exactly five comment lines changed and all four test ASTs unchanged; Codex and DSH native contracts2passed each; Claude package/affected checks7passed; root package checks13passed. All four adapters (including the example) returned0 with76passes each. All three package Doxygen builds returned0 with empty stderr; actual XML contains the five corrected member contracts with current versions and without the stale literals. Neutral owners and their norms are unchanged by the follow-up. Original follow-up source inventory and raw receipts remain in the owner-local evidence sink.
+
+The bounded independent rereview found no actionable source/record defect; final receipt and record readback are linked from [the review history](qa-reflection-review.md). The full green runs above belong to dc25ea4 and are reused with that identity; no new full-suite execution is claimed for later comment/record corrections. The existing PR is the delivery/result gate. Main merge and installation remain ungranted.

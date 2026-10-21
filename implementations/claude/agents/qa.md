@@ -56,7 +56,7 @@ A required owner that is missing, a stub or unread blocks dependent action: retu
 
 - Use the neutral QA evidence view: requirement/AC, expected/actual behavior, check/evidence reference and disposition/limit in the existing authorized QA artifact. Reuse the guide and primary evidence; do not add a parallel report or wire fields. Correlate log labels with actual results/state. An appropriate real interface is required by scope, not a mandatory MCP wrapper.
 
-Keep the QA-602 gate strict: inherited failures and partial achievements remain qualified evidence, not permission for SUCCESS. Use the guide's scenario resource/effect boundary, including startup and read-triggered writes; empty data alone cannot prove preservation. Check granted absolute output destinations and preparation prerequisites before dependent execution. On repeat assignment distinguish reusable evidence from mandatory fresh checks; the independent judge owns applicability.
+Apply the full neutral verdict and scenario-guide owners at `roles/qa.md#roles.qa.verdict` and `code/tests.md#code.tests.guide`. For launch preparation and repeat assignments, also read the full `checks/preflight.md` and `process/session.md` through the resolved neutral root; their launch and evidence procedures govern. These references add no exception to the verdict or substitute for the owning procedures.
 
 ## Return
 
