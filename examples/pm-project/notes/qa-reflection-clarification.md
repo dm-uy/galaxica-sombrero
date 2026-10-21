@@ -45,3 +45,9 @@ The3.1.0 root run completed602passed/3failed in126.76s. The three remaining fail
 - `git diff --check` passes. Raw initial and current stdout/stderr, inventories, preservation and oracle-correction receipts remain in the owned temporary evidence directory above. Current records and review are documentation closure, not freshly retested implementation.
 
 Independent document review: [original findings and resolution](qa-reflection-review.md). No unresolved source finding after the bounded rereview; no future compliance, safety, quality or speed improvement is established by these source checks. Main merge and installed activation remain separate. Canonical main/consumers/settings have not been changed by this task.
+
+## Review delivery receipt
+
+Checked source commit `f72798d4ce47d05feb008da5c115ad4dc5f73fa0` was committed with the existing repository-local owner identity and pushed normally to `origin/codex/qa-reflection-clarification`. Remote readback returned that exact SHA. [Compare the branch](https://github.com/dm-uy/galaxica-sombrero/compare/main...codex/qa-reflection-clarification).
+
+Draft PR creation through the GitHub CLI failed with `must be a collaborator (createPullRequest)`. Read-only API permissions showed no push permission for that CLI account; normal Git push uses its separately configured access and succeeded. The in-app browser fallback opened the exact compare page and showed Sign in, so no authenticated PR action was available there. No account/session/permission setting was changed. No PR was created. Creating it needs an account with the required repository access; the reviewed branch and prepared description remain available. This receipt updates delivery state only. Main merge, release and installation are still ungranted, and canonical main remains clean at9f95453.

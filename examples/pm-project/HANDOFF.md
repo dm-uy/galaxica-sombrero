@@ -1,4 +1,4 @@
-# Current: QA-REFLECT checked locally; main integration pending
+# Current: QA-REFLECT branch delivered; PR creation blocked by API access
 
 Owner approved the refined QA/preparation amendment and recommended bounded critical reflection of consequential recommendations. [Scope, independent critique, checks and limits](notes/qa-reflection-clarification.md); [tasks](TASKS.md).
 
@@ -6,7 +6,7 @@ The concrete source result is on `codex/qa-reflection-clarification`, isolated f
 
 Independent document review resolved three initial issues. Final root run602pass/3count-oraclefail is retained; the3corrected cases plus3bridge controls passed on focused recheck. Native contract checks2Codex/2DSH and selected158Claude checks passed; all three adapters76passes. No freshly green full-root run, full native suite, private-deny-list self scan or live behavioral improvement is claimed. Evidence and current-source review are linked from the result note.
 
-Next: deliver the checked branch/PR for the owner's concrete-result decision. Main merge, public release and installed-profile changes remain ungranted. Canonical main, active consumers and user settings are untouched. Resume from the result note; do not restart consumer runs or retained C3/M30/DSH work. Earlier obligations below remain separate.
+Checked source f72798d is pushed and remotely confirmed on `origin/codex/qa-reflection-clarification`. Draft PR creation failed with `must be a collaborator`; the browser fallback is signed out. [Delivery receipt and branch comparison](notes/qa-reflection-clarification.md#review-delivery-receipt). Next: create the PR using authorized repository access, then obtain the owner's concrete-result decision. No user authentication/settings were changed. Main merge, public release and installed-profile changes remain ungranted. Canonical main, active consumers and user settings are untouched. Resume from the result note; do not restart consumer runs or retained C3/M30/DSH work. Earlier obligations below remain separate.
 
 # Retained: GRACE-Q2 integrated and delivered to origin/main
 

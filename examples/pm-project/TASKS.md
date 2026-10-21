@@ -7,7 +7,7 @@
 | Task | State | Finish / next action |
 |---|---|---|
 | QA-REFLECT-T1 — neutral wording and native carriers | Checked locally | Strict QA gate, scenario effects, prerequisite refusal, bounded reflection and honest reuse; original guarantees retained. |
-| QA-REFLECT-T2 — consistency and independent review | Checked locally | Initial failures and corrections retained; bounded root/native/adapter checks and independent document review completed. Branch/PR delivery is for review; main integration and installed activation await matching decisions. |
+| QA-REFLECT-T2 — consistency and independent review | Checked locally | Initial failures and corrections retained; bounded root/native/adapter checks and independent document review completed. Checked source f72798d delivered to origin branch; PR API access blocked, browser signed out. Main integration and installed activation await matching decisions. |
 
 ## GRACE-Q2 — minimal QA evidence package (integrated and delivered)
 
