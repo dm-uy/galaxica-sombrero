@@ -92,9 +92,9 @@ def test_actual_layout_and_adapter_contract(caplog):
     caplog.set_level(logging.INFO)
     layout=json.loads((PACKAGE/'references/package-layout.json').read_text());adapter=json.loads((PACKAGE/'adapter.json').read_text())
     print('Actual layout/adapter populations:',len(layout['files']),len(adapter['files']),len(adapter['capabilities']),len(adapter['parameters']))
-    assert layout['package']=='methodology-codex' and layout['version']=='3.0.2' and layout['profile']=='colocated-explicit-source'
+    assert layout['package']=='methodology-codex' and layout['version']=='3.1.0' and layout['profile']=='colocated-explicit-source'
     assert len(layout['files'])==73 and len(adapter['files'])==71 and len(adapter['capabilities'])==28 and len(adapter['parameters'])==7
-    assert adapter['spec_root']=='../../' and adapter['spec_version']=='3.0.2'
+    assert adapter['spec_root']=='../../' and adapter['spec_version']=='3.1.0'
     names=[row['path'] for row in layout['files']];assert names==sorted(set(names))
     assert set(layout['roles'])=={'architect','coder','debugger','qa','reviewer','searcher'}
     logger.info('[IMP:9][test_actual_layout_and_adapter_contract][RESULT] declared populations verified; not semantic adoption proof')

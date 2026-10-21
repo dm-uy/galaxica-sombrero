@@ -191,7 +191,7 @@ def test_each_spec_item_2_to_7_has_its_own_section(repo_root):
 
 
 # region FUNC_test_conform_self_gives_no_fail_on_format_md [DOMAIN(9): Format, SelfCheck; CONCEPT(9): Verdict; TECH(6): run_cli, json]
-## @purpose Prove that the tool finds nothing wrong in the file that defines the format, and that the run counts all 1242 current norms.
+## @purpose Prove that the tool finds nothing wrong in the file that defines the format, and that the run counts all 1243 current norms.
 ## @uses run_cli, ldd_trajectory, deny_list
 ## @io (Callable, Tuple, Callable) -> None
 ## @complexity 4
@@ -203,7 +203,7 @@ def test_conform_self_gives_no_fail_on_format_md(run_cli, deny_list, ldd_traject
     print("[IMP:9][test_conform_self_format][RESULT] exit=%d norms=%s fails_on_format=%d" % (code, report["summary"]["population"].get("norms"), len(fails)))
     assert fails == []
     assert code == 0
-    assert report["summary"]["population"]["norms"] == 1242
+    assert report["summary"]["population"]["norms"] == 1243
     assert any("[run_self][VERDICT]" in line for line in lines)
 # endregion FUNC_test_conform_self_gives_no_fail_on_format_md
 

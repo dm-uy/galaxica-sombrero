@@ -5914,8 +5914,9 @@ SURFACES = ['process/bootstrap.md',
  'runtime/adapters.md']
 
 PROTECTED_PINS = {
+ # QA reflection clarification (2026-10-21): current QA owner prose and the same 50 path-bound receipts refreshed; original norm lines and fixture controls retained.
  # GRACE-Q2 (2026-10-19): re-pinned after the owner-approved minimal QA evidence clarification added two prose paragraphs (examples/pm-project/notes/grace-qa-evidence-minimal.md); no norm line changed.
- 'roles/qa.md': '7937c94f8dcd41da0909f6bbaf9f9d3eecb69a00dd45070928c623015827e508',
+ 'roles/qa.md': 'e1aa3a6e25aa35fe9f443b41dff0cd48150c548cf5cad7546a3d1e5364fa5751',
  'flow/delegation.md': 'b45f4a9311ffdfd8ca8d288170b54fffe452289c48af49f62a6cb50def92d303',
  'flow/run-state.md': '1da78a3a86356dcb8a6cdd5d652aee0bc639ab626368af9bbffce31f67ef984e',
  'process/gates.md': 'e52f0929630fc2b3d9a7305da0004d0ab4f9a6515b328ed1115a6cd79c6d56c4',
@@ -6002,7 +6003,7 @@ def test_f2_complete_current_interfaces(repo_root):
 RECEIPT_REFRESH = (
     ("roles/architect.md", "d7ecb56452d6c20ca04938fcf16a8b786a0ac851762e27e0ac860d97b6035d23", "44763ab7afa836e5533e45075a66decc8a55b5ac9caddd8c2ff85b26678a8d61", 51),
     ("flow/phases.md", "12a171ce07528146b9c3e3f91c5550aea072c3e7315293f5462766b0f32544ec", "2a22af26aca732913e546291e4aa57a3e0d94f532a2697d1c09f768e53c8851b", 351),
-    ("roles/qa.md", "baeb5f36875dbfee733d9114de2d37a2cfa6b7888d0722395dadf52532f2ba53", "7937c94f8dcd41da0909f6bbaf9f9d3eecb69a00dd45070928c623015827e508", 50),
+    ("roles/qa.md", "baeb5f36875dbfee733d9114de2d37a2cfa6b7888d0722395dadf52532f2ba53", "e1aa3a6e25aa35fe9f443b41dff0cd48150c548cf5cad7546a3d1e5364fa5751", 50),
 )
 
 

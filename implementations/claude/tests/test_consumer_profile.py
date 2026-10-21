@@ -126,7 +126,7 @@ BARE_ORIENT = "(bare `orient` only when `command -v orient` resolves to that lau
 BIN = "${CLAUDE_PLUGIN_ROOT}/bin/"
 BLOCKED_PREFIX = "methodology-claude BLOCKED: "
 PROFILE = "methodology-consumer-pm/1.0.0"
-HEADINGS = ["# Consumer PM profile for Claude Code — methodology-claude 2.1.1", "## Claude Code deltas", "### 1. Invocation",
+HEADINGS = ["# Consumer PM profile for Claude Code — methodology-claude 2.2.0", "## Claude Code deltas", "### 1. Invocation",
             "### 2. Consent", "### 3. Delegation model", "### 4. No package hook", "### 5. Optional per-project SessionStart hook"]
 PLUGIN_REFERENCE = re.compile(r"\$\{CLAUDE_PLUGIN_ROOT\}/([A-Za-z0-9_./-]+)")
 MARKDOWN_LINK = re.compile(r"\]\(([^)\s]+)\)")
@@ -566,7 +566,7 @@ def _routing_problems(texts):
             problems.append("searcher lacks " + needle)
     for topic in ("semantic-exoskeleton", "devplan-protocol"):
         body = texts["skills/%s/SKILL.md" % topic]
-        if "methodology-claude 2.1.1" not in body or "2.0.2" in body:
+        if "methodology-claude 2.2.0" not in body or "2.0.2" in body:
             problems.append(topic + " version signature")
     # END_BLOCK_BusinessLogic
     # START_BLOCK_Result
@@ -1374,7 +1374,7 @@ def test_routed_entries_name_carrier_and_launchers(caplog):
         "carrier name removed": _variant(texts, "skills/roadmap/SKILL.md", CARRIER, "${CLAUDE_PLUGIN_ROOT}/references/claude-runtime.md"),
         "missing codex directory": _variant(texts, "skills/pm-bootstrap/SKILL.md", "pm/templates/", "pm/templates-missing/"),
         "searcher with Bash": _variant(texts, "agents/searcher.md", "tools: Read, Glob, Grep", "tools: Read, Glob, Grep, Bash"),
-        "stale signature": _variant(texts, "skills/devplan-protocol/SKILL.md", "methodology-claude 2.1.1", "methodology-claude 2.0.2"),
+        "stale signature": _variant(texts, "skills/devplan-protocol/SKILL.md", "methodology-claude 2.2.0", "methodology-claude 2.0.2"),
     }
     refused = {name: _routing_problems(body) for name, body in controls.items()}
     _show(caplog.records)

@@ -1,4 +1,14 @@
-# Current: GRACE-Q2 integrated and delivered to origin/main
+# Current: QA-REFLECT checked locally; main integration pending
+
+Owner approved the refined QA/preparation amendment and recommended bounded critical reflection of consequential recommendations. [Scope, independent critique, checks and limits](notes/qa-reflection-clarification.md); [tasks](TASKS.md).
+
+The concrete source result is on `codex/qa-reflection-clarification`, isolated from canonical main9f95453. Neutral/Codex/DSH3.1.0 and Claude2.2.0 clarify existing QA/effect/preparation/reuse duties and add VERIFY-105 SHOULD. Original norms, roles, phases, statuses, schemas, budgets and executable algorithms are preserved. The change adds no helper or new workflow stage.
+
+Independent document review resolved three initial issues. Final root run602pass/3count-oraclefail is retained; the3corrected cases plus3bridge controls passed on focused recheck. Native contract checks2Codex/2DSH and selected158Claude checks passed; all three adapters76passes. No freshly green full-root run, full native suite, private-deny-list self scan or live behavioral improvement is claimed. Evidence and current-source review are linked from the result note.
+
+Next: deliver the checked branch/PR for the owner's concrete-result decision. Main merge, public release and installed-profile changes remain ungranted. Canonical main, active consumers and user settings are untouched. Resume from the result note; do not restart consumer runs or retained C3/M30/DSH work. Earlier obligations below remain separate.
+
+# Retained: GRACE-Q2 integrated and delivered to origin/main
 
 Owner-approved [GRACE-Q2](notes/grace-qa-evidence-minimal.md) is integrated: neutral QA evidence, LDD outcome correlation and an agent-operable test guide, followed by Codex/Claude/DSH carrier synchronization. Reviewed package `448e575` was fast-forwarded into clean canonical main and pushed; remote readback confirmed its full identity. The API could not create a PR (`must be a collaborator`), so delivery used the owner's explicit main/origin grant through normal Git push. This record synchronization follows that verified package delivery.
 

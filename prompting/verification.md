@@ -26,6 +26,12 @@ Chain-of-Verification starts with a candidate answer, generates specific verific
 
 - **VERIFY-102** MUST: Revise claims in light of observed checks; retain contradictions, source/date/version qualifications and unresolved questions. Agreement alone never skips consequential external verification.
 
+- **VERIFY-105** SHOULD: Treat a consequential first analysis or recommendation as a candidate and apply bounded critical reflection before relying on it in a decision, including conversational advice; use an authorized independent reader when available, preserve existing mandatory independence and report the actual check limits.
+
+The recommended reflection applies the check-and-revise sequence above. A bounded critical reflection asks which assumptions lack evidence, which counterexample would defeat the recommendation, whether it addresses the observed cause, what it fails to prevent, and what costs or new failure modes it creates. Retain, narrow or reject the recommendation from those checks; persuasive rewriting and reviewer agreement do not establish effectiveness. Identify actual separation and limits; when independent reading is unavailable, label self-review honestly and keep unavailable pivotal evidence uncertain. The mandatory consequential-open independence procedure remains at [brainstorm](brainstorm.md#prompting.brainstorm.consequential).
+
+Reuse a completed applicable reflection instead of adding another ritual. Keep the response proportionate: routine edits, settled choices and simple answers do not acquire mandatory fanout, a report or a new owner gate. Record only the conclusion, supporting checks, material revisions and remaining uncertainty in the existing answer or decision/evidence home. Repeat for new material evidence or a remaining pivotal unresolved concern within the actual allowance, not simply to make a draft sound more certain.
+
 Placeholder CoVe form:
 
 ```text

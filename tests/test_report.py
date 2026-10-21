@@ -270,7 +270,7 @@ def test_summary_states_population_and_probes_self(run_cli, repo_copy, deny_list
     assert code == 0
     assert list(population) == POPULATION_KEYS_SELF
     assert population["neutral-files"] == 71
-    assert population["norms"] == 1242
+    assert population["norms"] == 1243
     assert population["capabilities"] == 28
     assert population["parameters"] == 7
     assert population["anchors"] >= 25
@@ -313,7 +313,7 @@ def test_summary_states_population_and_probes_adapter(run_cli, repo_root):
     assert list(population) == POPULATION_KEYS_ADAPTER
     assert population["neutral-files"] == 71
     assert population["anchors"] == anchors
-    assert population["norms"] == 1242
+    assert population["norms"] == 1243
     assert population["capabilities"] == 28
     assert population["parameters"] == 7
     assert population["spec-version"] == version

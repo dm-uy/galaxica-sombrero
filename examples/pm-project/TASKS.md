@@ -1,5 +1,14 @@
 # Current maintainer tasks
 
+## QA-REFLECT — QA boundaries and critical reflection (checked locally)
+
+[Owner scope, critique and validation](notes/qa-reflection-clarification.md). Documentation clarification on an isolated branch; no new software flow, status or helper.
+
+| Task | State | Finish / next action |
+|---|---|---|
+| QA-REFLECT-T1 — neutral wording and native carriers | Checked locally | Strict QA gate, scenario effects, prerequisite refusal, bounded reflection and honest reuse; original guarantees retained. |
+| QA-REFLECT-T2 — consistency and independent review | Checked locally | Initial failures and corrections retained; bounded root/native/adapter checks and independent document review completed. Branch/PR delivery is for review; main integration and installed activation await matching decisions. |
+
 ## GRACE-Q2 — minimal QA evidence package (integrated and delivered)
 
 [Owner grant, scope and checks](notes/grace-qa-evidence-minimal.md). Documentation clarification, neutral first then Codex/Claude/DSH; no new roles, experiments or contract/test reduction.

@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.1.0
+
+- Clarify the existing strict QA gate for inherited suite failures, masked assertions, partial achievements and probe-effect incidents; preserve QA-602, canonical statuses and authentic scope decisions.
+- Make existing test-guide resource/effect boundaries and launch prerequisites explicit, including nonempty preservation fixtures, read-triggered writes, output paths and dependent-launch refusal. No path helper or sandbox is added.
+- Add VERIFY-105 SHOULD for bounded critical reflection of consequential recommendations, including conversational advice, within the existing verification/brainstorm procedure. Reuse applicable reflection and evidence with their limits; preserve required fresh independent QA and routine/settled exclusions.
+- Synchronize Codex/DSH source3.1.0 and Claude source2.2.0 over neutral3.1.0. One added recommendation; no changed existing norms, roles, phases, schema, budgets or installed-profile change.
+
 ## 3.0.2
 
 - Clarify existing QA evidence as requirement → expected/actual behavior → check/evidence → disposition, reusing the test guide and original artifacts instead of parallel reports. Preserve required scans, independent QA/Review and canonical returns.

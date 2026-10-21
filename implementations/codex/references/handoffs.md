@@ -59,7 +59,7 @@ python3 FRAMEWORK_ROOT/skills/feature-dev/scripts/run_state.py record --state ST
 
 Resolve placeholders to actual authorized paths before execution; proposals are NOT_RUN. State `.methodology/runs/RUN_ID/state.json`, schema2. show validates current locks/resume without writes. Success0 JSON stdout, refusal2 with safe diagnostics stderr; record may retain refusal chronology while accepted progress/counters stay unchanged. No unreadable ledger replacement. Debug cap plain nonnegative int/strict decimal CLI default4, zero valid, bool/negative/fraction/unsupported extension refuse. Root persists spend before each Code/QA/Review-origin entry, retained once on failure/resume. Retry units separate; terminal/schema1/stale/malformed/unsafe artifacts refuse, never reset. The helper cannot authenticate an arbitrary approval string or judge mental reading/isolation; actual parent evidence remains required.
 
-Source release is package3.0.2 over neutral3.0.2; contractVersion remains methodology-codex/2.0.0 and schema2. Source release and wire identity are separate; old input locks are not migrated.
+Source release is package3.1.0 over neutral3.1.0; contractVersion remains methodology-codex/2.0.0 and schema2. Source release and wire identity are separate; old input locks are not migrated.
 
 ## Historical C2 consumer route (retained scope)
 
