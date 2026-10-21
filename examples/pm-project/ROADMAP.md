@@ -2,7 +2,7 @@
 
 ## Current: QA-REFLECT checked locally; result integration pending
 
-Owner-approved bounded clarification follows the consumer-run review and four independent critiques. [Scope, decisions and evidence](notes/qa-reflection-clarification.md); [tasks](TASKS.md). Bounded source/package checks and independent document review complete; checked source f72798d delivered to origin branch, PR creation blocked by API access. Main integration and installation remain separate. Earlier route and held work remain unchanged.
+Owner-approved bounded clarification follows the consumer-run review and four independent critiques. [Scope, decisions and evidence](notes/qa-reflection-clarification.md); [tasks](TASKS.md). Bounded source/package checks and independent document review complete; checked source f72798d delivered to origin branch and draft PR17 opened after the owner-directed CLI account switch. Main integration and installation remain separate. Earlier route and held work remain unchanged.
 
 ```mermaid
 flowchart LR

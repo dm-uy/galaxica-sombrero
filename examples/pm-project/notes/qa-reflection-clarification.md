@@ -51,3 +51,9 @@ Independent document review: [original findings and resolution](qa-reflection-re
 Checked source commit `f72798d4ce47d05feb008da5c115ad4dc5f73fa0` was committed with the existing repository-local owner identity and pushed normally to `origin/codex/qa-reflection-clarification`. Remote readback returned that exact SHA. [Compare the branch](https://github.com/dm-uy/galaxica-sombrero/compare/main...codex/qa-reflection-clarification).
 
 Draft PR creation through the GitHub CLI failed with `must be a collaborator (createPullRequest)`. Read-only API permissions showed no push permission for that CLI account; normal Git push uses its separately configured access and succeeded. The in-app browser fallback opened the exact compare page and showed Sign in, so no authenticated PR action was available there. No account/session/permission setting was changed. No PR was created. Creating it needs an account with the required repository access; the reviewed branch and prepared description remain available. This receipt updates delivery state only. Main merge, release and installation are still ungranted, and canonical main remains clean at9f95453.
+
+### PR access resolved by owner-directed account selection
+
+The owner clarified that the CLI must switch users. Under that explicit instruction, `gh auth switch --hostname github.com --user dm-uy` selected the intended account. Repository API readback then confirmed the required access; no credential payload was displayed. The prior creation failure remains historical, not an unresolved blocker.
+
+[Draft PR17](https://github.com/dm-uy/galaxica-sombrero/pull/17) is OPEN, head `codex/qa-reflection-clarification`, base `main`; API readback confirmed the delivered head ad5a72c. Main merge and installation remain separate decisions. For future delivery, match the active CLI account to the intended repository before declaring an access blocker; Git author, Git push access and active GitHub API account are distinct.
