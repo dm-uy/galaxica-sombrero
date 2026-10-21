@@ -1,14 +1,14 @@
 # Current maintainer tasks
 
-## QA-REFLECT — QA boundaries and critical reflection (PR17 review corrections)
+## QA-REFLECT — QA boundaries and critical reflection (PR17 merged and installed)
 
 [Owner scope, critique and validation](notes/qa-reflection-clarification.md). Documentation clarification on an isolated branch; no new software flow, status or helper.
 
 | Task | State | Finish / next action |
 |---|---|---|
-| QA-REFLECT-T1 — neutral wording and native carriers | Checked locally | Strict QA gate, scenario effects, prerequisite refusal, bounded reflection and honest reuse; original guarantees retained. |
-| QA-REFLECT-T2 — consistency and independent review | Checked locally | Initial failures and corrections retained; bounded root/native/adapter checks and independent document review completed. Checked source f72798d delivered to origin branch; owner-directed gh account switch resolved API access and draft PR17 is open. Main integration and installed activation await matching decisions. |
-| QA-REFLECT-T3 — owner-supplied PR17 review corrections | Checked locally | Five current-version comment lines, historical provenance, one current HANDOFF and neutral-owner QA references; bounded contracts/maps/adapters and independent rereview pass. Main merge/install remain separate. |
+| QA-REFLECT-T1 — neutral wording and native carriers | Done; PR17 merged | Strict QA gate, scenario effects, prerequisite refusal, bounded reflection and honest reuse; original guarantees retained. |
+| QA-REFLECT-T2 — consistency and independent review | Done; PR17 merged | Initial failures and corrections retained; bounded root/native/adapter checks and independent document review completed. Checked source f72798d delivered to origin branch; owner-directed gh account switch resolved API access. PR17 subsequently merged under explicit owner grant; installed activation is recorded below. |
+| QA-REFLECT-T3 — owner-supplied PR17 review corrections | Done; PR17 merged | Five current-version comment lines, historical provenance, one current HANDOFF and neutral-owner QA references; bounded contracts/maps/adapters and independent rereview pass. Owner granted merge/install; completed at a321003 with the bounded checks below. |
 
 ## GRACE-Q2 — minimal QA evidence package (integrated and delivered)
 
@@ -19,7 +19,7 @@
 | GRACE-Q2-T1 — neutral clarification and carrier sync | Done; main/origin | Existing QA evidence view, LDD outcome correlation and agent-operable test guide; preserve all required guarantees. |
 | GRACE-Q2-T2 — bounded checks and project records | Done; main/origin | Wording, patch bindings and preserved interfaces checked; independent document review clear after history-comment correction. Owner approved integration/origin delivery; package448e575 was pushed and remotely confirmed. Working-profile installation withheld. |
 
-PR17 follow-up at reviewed snapshot dc25ea4: two independent reviews confirm substantive correctness and full-suite green results; five annotation lines, record provenance/HANDOFF and duplicate QA summary are corrected. Bounded follow-up verification completed; [evidence and disposition](notes/qa-reflection-clarification.md#pr17-independent-review-follow-up). Main integration remains pending.
+PR17 follow-up at reviewed snapshot dc25ea4: two independent reviews confirm substantive correctness and full-suite green results; five annotation lines, record provenance/HANDOFF and duplicate QA summary are corrected. Bounded follow-up verification completed; [evidence and disposition](notes/qa-reflection-clarification.md#pr17-independent-review-follow-up). PR17 merged at a321003; Codex3.1.0 is enabled with fresh27-skill discovery, Claude2.2.0 binds to neutral3.1.0, and both registered DSH profiles resolve3.1.0. Web composition passes; desktop CLI composition is host-refused and fresh desktop discovery remains unverified. [Installation receipt](notes/qa-reflection-clarification.md#merge-and-installation-2026-10-21).
 
 ## M38 — DSH native implementation package (merged through PR10)
 
