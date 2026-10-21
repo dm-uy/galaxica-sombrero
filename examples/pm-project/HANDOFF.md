@@ -1,77 +1,24 @@
-# Current: GRACE-Q2 integrated and delivered to origin/main
+# Current: PR17 review corrections checked; result decision pending
 
-Owner-approved [GRACE-Q2](notes/grace-qa-evidence-minimal.md) is integrated: neutral QA evidence, LDD outcome correlation and an agent-operable test guide, followed by Codex/Claude/DSH carrier synchronization. Reviewed package `448e575` was fast-forwarded into clean canonical main and pushed; remote readback confirmed its full identity. The API could not create a PR (`must be a collaborator`), so delivery used the owner's explicit main/origin grant through normal Git push. This record synchronization follows that verified package delivery.
+[Draft PR17](https://github.com/dm-uy/galaxica-sombrero/pull/17), branch `codex/qa-reflection-clarification`, awaits the owner's concrete-result decision after bounded review corrections. Main merge, release and working-profile installation remain ungranted. Canonical main remains at9f95453; the PR candidate is neutral/Codex/DSH3.1.0 and Claude2.2.0.
 
-Current source versions: neutral/Codex/DSH **3.0.2**, Claude **2.1.1**. Bounded checks, corrected failures, independent review and limits are in the linked note. No new roles, experiments or contract/test reduction. **Working-profile installation is expressly withheld**: no install command or profile configuration change was made. Existing in-place loaders may read changed canonical source; live loaded versions were not re-probed. No demonstrated testing-quality improvement or new packaged release is claimed.
+## Current result and evidence
 
-Next: GRACE-Q2 implementation and origin delivery are complete; wait for a new owner-selected scope. Retained consumer migrations, DSH probe 3, M30/C3 and plugin-retirement decisions below remain separate. No installation is authorized.
+The QA/preparation/reuse clarification and VERIFY-105 SHOULD remain substantively accepted by the two independent source reviews supplied by the owner. Their reviewed snapshot is `dc25ea4`: source commit f72798d followed by two record-only commits. The current branch head is obtained from Git/PR at delivery, not embedded recursively in this file. [Scope, provenance, review findings and checks](notes/qa-reflection-clarification.md#pr17-independent-review-follow-up); [historical author-side review](notes/qa-reflection-review.md); [tasks](TASKS.md).
 
-# Retained canonical checkpoint: M37 and M38 merged
-
-## Owner decisions
-
-Settled:
-
-- **M37 — Claude package actualization.** Merged into `origin/main` through PR11 (merge `380dd00`, 2026-10-17). The owner's verbatim answers are in the [M37 record](notes/m37-claude-parity.md):
-  - the M37 scope;
-  - keeping the name `methodology-claude`;
-  - lifting the M30 Claude deferral;
-  - approval of the C2-port specification with mechanism H;
-  - accepting the result, with AC5 met by the absolute-path launcher call;
-  - push plus PR, merged after the owner's review;
-  - the `.methodology/` ignore rule.
-- **M38 — DSH native implementation package.** The owner approved the full Codex-twin package, then its `main` merge and the live installation («надо смержить и поставить в профиль этот бандл»), then the rebase onto M37. Merged into `origin/main` through PR10 (merge `1ff633c`, 2026-10-19). [Result, evidence and limits](notes/m38-dsh-package.md).
-- **In-house plugins disabled (2026-10-19).** The owner: «Давай придушим вот эти вот старые плагины, потому что, по идее, в новом все уже есть, и надо работать в рамках него.» `product-methodology` and `prompting-methodology` are disabled at user scope, ahead of the consumer migrations. Details, losses and rollback are in the [M37 record](notes/m37-claude-parity.md#in-house-plugin-retirement-2026-10-19).
-- **Sandbox check (2026-10-19).** At the owner's request, six live probes in a Claude-only copy of the tasklight sandbox: five passed, and a Russian fact-check request missed `prompting-verify`. A parity check listed seven losses. [Results, losses and name changes](notes/m37-claude-parity.md#sandbox-check-after-the-retirement-2026-10-19).
-
-Waiting for the owner:
-
-1. **Consumer migrations (M37-T7).** Each of the five consumer projects needs its own grant to adopt `methodology-consumer-pm/1.0.0`. The in-house plugins are already disabled, so unmigrated projects run on methodology-claude alone. Expect C2 `orient` to refuse their current profile until they migrate.
-2. **DSH probe 3 (M38-T4).** The full Bootstrap-to-Finalize run on DSH needs a matching target and scope; see [M38-RUN-01](notes/m38-run-01.md).
-3. **Next bounded framework task.** Choose among the remaining route below.
-4. **Losses after the plugin retirement.** Decide whether to port `run_review.py` and `pm-ingest-candidates` or drop them and the model-policy rule's citation, whether to restore a typed brainstorm generator, and whether to extend the neutral quotation rule with the research-wide ellipsis ban and the verifier's exact-string step. Russian trigger phrases are in PR15, which awaits your review and merge.
-
-No packaged release of Claude 2.1.0 or DSH 3.0.1 has been taken; it remains a separate decision.
-
-## Current state
-
-- **Main** includes M37 and M38. Source versions: neutral 3.0.1, Codex 3.0.1, Claude 2.1.0, DSH 3.0.1.
-- **Claude package.** 64 members: three launchers that reference the Codex C2 helpers in place, a by-reference consumer PM carrier, routing in nine skills and the searcher, and a root tripwire over 18 Codex files. It loads in place from the canonical checkout. On 2026-10-19, after the M38 merge, the maintainer session that synchronized these records observed the SessionStart hook there report methodology-claude 2.1.0 bound to neutral 3.0.1.
-- **DSH package.** Adapter over all 71 neutral files, 27 skill carriers, six role carriers, the six shared helpers and a bundle that mounts the package's own skill root. It is installed into the `web` and `desktop` profiles from the canonical checkout. Live discovery, on-demand loading of `pm` and a bounded smoke with independent verification were shown before the rebase. No full flow and no assigned flow QA/Review ran. The package is byte-identical to that tip, but the live profiles were not re-probed after the merge.
-- **In-house plugins.** Disabled at user scope on 2026-10-19 and still installed. A fresh headless session in the canonical checkout listed methodology-claude as the only non-built-in plugin, with its six roles and one SessionStart hook. Sessions started before the disable keep the old plugins until they restart; whether a plugin reload also applies the change was not measured.
-- **Claude sandbox.** `011-claude-tasklight` in the owner's sandbox folder is a Claude-only copy of the tasklight sandbox; the DSH sandbox stays untouched. The consumer profile is adopted there additively and uncommitted; `orient --check` fails nine rows on its legacy records.
-- **Checks on the merged candidates (Python 3.12).**
-  - M37, final candidate before the merge: root 603, Claude 545 and Codex 146 tests passed.
-  - M38 after the rebase: root 605, DSH 146 and focused C1 6 tests passed; DSH adapter conformance passed.
-  - `bin/conform self` was not run for the M38 rebase, because its private deny list was not supplied.
-- **Evidence.** Raw M37 run evidence (about 1 GB) lives in the owner's private evidence directory outside this repository.
+Root checked the first review's raw receipts: full root605, Claude545, Codex146 and DSH146 tests passed on Python3.12 at dc25ea4. Earlier author-side red runs are retained as history in the result note. Five stale annotation lines and current-record identity/chronology defects are corrected; QA carriers now reference their neutral owners instead of duplicating the added summary. Follow-up checks passed: unchanged ASTs/five corrected comments, package contracts2/2/7, root package checks13, four adapters76each and three clean Doxygen builds with actual five-member XML version checks. Bounded independent rereview found no actionable defect. No new full-suite run, private-deny-list coverage or live efficacy claim follows from these documentation corrections.
 
 ## Next action
 
-Read, in order: root AGENTS, this HANDOFF, VISION, ROADMAP, [TASKS](TASKS.md), then only the relevant notes: the [M37 record](notes/m37-claude-parity.md) and the [M38 result](notes/m38-dsh-package.md).
+Use the existing PR head for the corrected result and obtain the owner's concrete-result decision. Do not merge or install automatically. Preserve source/check identities and original failures. The owner explicitly directed the gh account switch to dm-uy; future delivery should distinguish active API account, Git push access and commit author.
 
-GRACE-Q2 is delivered; the four retained waiting items remain separate and await their own scope. Do not edit consumer projects, DSH profiles or user settings without their own grant.
+## Retained obligations and relevant traps
 
-## Retained traps
-
-- **Bare launcher names.** With `product-methodology` disabled, a fresh session resolves `codemap`, `markup-migrate` and `orient` to methodology-claude's `bin/`; the 2026-10-19 sandbox probe measured this with `command -v`. A session started before the disable, or one where the plugin is re-enabled, may still resolve `codemap` and `markup-migrate` to the old `bin/`; the old plugin never had an `orient` launcher. The package's own routes check `command -v` first or use the absolute launcher path.
-- **Capabilities without a replacement.** Seven losses are listed in the [M37 record](notes/m37-claude-parity.md#sandbox-check-after-the-retirement-2026-10-19), with the new command names. The `pm-*` skills run only on an explicit command.
-- **Root suite interpreter.** Run the root suite with `/opt/homebrew/bin/python3.12`. The C1 helper pins depend on the interpreter: under Python 3.9 the AST omits empty `type_params` fields, so one pin test fails.
-- **Checks in a working checkout.** Package tests, several root tests and `bin/conform adapter`/`self` count every `*.md` under the ignored `.methodology/` folder. Run final checks on a clean copy.
-- **C1 helper pin.** The merged tree keeps the upstream pins; M38's Python 3.9 recalibration was dropped in the rebase. A pin cannot separate an intentional algorithm change from drift, so review any re-pin against the source delta. The DSH helper stays outside that pin loop. Details are in the [M38 result](notes/m38-dsh-package.md#root-suite-repairs-during-m38).
-- **Marketplace installs.** Any marketplace install of the Claude package copies it and reports BLOCKED. Use in-place loading only.
-- **DSH profiles.** The DSH GUI runs the `desktop` profile; the first installation went to `web` by mistake. Both profiles keep their previous `package.json` and `cordis.patch.yml` as `.bak-m38` for one-step rollback.
-- **Probes launched from a running session.** A child `claude` inherits the parent's environment, including PATH entries of the parent's loaded plugins. Launch live probes with `env -i` and the login shell's PATH.
-- **Live headless probes.** Restricting Bash to launcher-only rules can deny the commands the routes legitimately use, such as the absolute launcher path or `command -v`. Match the probe rules to the current routes before reading a failure as a product defect.
-- **Run-state helper gaps.**
-  - It cannot record an architect-phase response correction after the plan file exists.
-  - It cannot continue a terminal run.
-- **C3.** Remains exhausted, unaccepted and unmerged: terminal ESCALATED/review, Debug 4/4, no reset or fifth repair.
-- **M30.** Source integrated, Debug 1/4 retained. Native Claude AC4/AC5 were observed in M37, but renewed M30 QA, Review and Finalize are still owed.
-- **Remaining route.**
-  1. Minimal safeguard.
-  2. Bounded API/database trial.
-  3. Separately scoped C4–C6.
-  4. Later: frontend, Telegram and MCP.
-
-Public source visibility and local installation do not satisfy these proofs. See [ROADMAP](ROADMAP.md) and the linked result records for history.
+- GRACE-Q2 is integrated and delivered; working-profile installation was withheld. [Result and history](notes/grace-qa-evidence-minimal.md). This is history, not another current-version or next-action block.
+- M37 consumer migrations still need per-project grants; old in-house plugins are disabled. Retirement losses and historical launcher/PATH caveats remain at [M37](notes/m37-claude-parity.md). [M37 tasks](TASKS.md#m37--claude-package-actualization-merged-through-pr11).
+- DSH full-flow probe3 needs a matching target/scope; use the desktop profile deliberately and preserve previous profile backups. [M38](notes/m38-dsh-package.md), [probe evidence](notes/m38-run-01.md).
+- C3 remains terminal, unaccepted and exhausted at Debug4/4; no fifth repair or reset. [C3 result](notes/m28-c3-result.md).
+- M30 source is integrated and native Claude observations exist through M37, but renewed QA/Review/Finalize and full acceptance remain owed. [M30](notes/m30-result.md), [M37](notes/m37-claude-parity.md).
+- The later safeguard/API-database/C4-C6/frontend/Telegram/MCP route remains separately scoped. [ROADMAP](ROADMAP.md). No deferred code continuation is authorized by this correction.
+- Use Python3.12 for interpreter-bound AST pins. Run source/package checks in a clean Git-free copy: ignored methodology Markdown can alter inventories. Genuine algorithm changes require review, never automatic re-pinning.
+- Preserve known run-state limitations (architect response correction after plan creation; terminal runs cannot restart), explicit in-place versus copied loader boundaries, and missing private self-check coverage. Details remain in [M36](notes/m36-session-handoff.md), [M37](notes/m37-claude-parity.md) and [M38](notes/m38-dsh-package.md).

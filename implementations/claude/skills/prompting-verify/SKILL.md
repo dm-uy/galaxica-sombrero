@@ -24,3 +24,5 @@ Limits:
 - Structural conformance is not semantic verification.
 - No merge, publication or installation follows from this skill, and an inner role never delegates or commits.
 - A missing, stub or unread required owner is BLOCKED.
+
+Follow the neutral VERIFY-105 recommendation for bounded critical reflection of consequential analyses and recommendations, including conversational advice: challenge assumptions, counterexamples, causal fit, residual risks and costs, then revise with evidence. Use authorized independent reading when available, report actual separation, and preserve the mandatory brainstorm packet at its trigger. Reuse a completed applicable reflection; no mandatory fanout, new phase, report or gate for routine or settled work.

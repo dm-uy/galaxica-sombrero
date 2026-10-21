@@ -150,6 +150,8 @@ This body states source-backed conditional authoring and evidence duties. Runtim
 
 These commands and fixture instructions are also the independent agent's operating guide: identify the actual application entry/interface, preparation of isolated data and reset/cleanup of owned state. Scenario verification uses the appropriate real HTTP, CLI, MCP or UI surface; direct business-logic tests retain TST-201. Select from the application's actual scope rather than assuming MCP is required. Describing an existing surface does not authorize an extra wrapper, server or dependency. Reuse this guide and its evidence links in QA rather than maintaining a parallel acceptance map.
 
+For a real-entrypoint scenario, make the guide's existing ownership and preparation instructions concrete: name the resource boundary, known writes from startup, background work and apparently read-only operations, allowed changes, relevant nonempty fixtures, and how actual effects will be observed. Include files/cache and reachable services as applicable, not only the database. Source inspection identifies known effects; it is not an exhaustive census. Isolation limits damage and before/after observations detect deviations within their stated coverage. A fresh empty database alone cannot prove preservation: seed valid retained data, invalid data and related records when those distinctions matter. An unexpected mutation is not permitted merely because the data are synthetic. Investigate unknown effects before replay under the existing safety contract; keep observations and gaps in the existing QA evidence home.
+
 <!-- anchor: code.tests.quantities -->
 
 ## Actual threshold measurement

@@ -1,4 +1,4 @@
-# Consumer PM profile for Claude Code — methodology-claude 2.1.1
+# Consumer PM profile for Claude Code — methodology-claude 2.2.0
 
 Identity: `methodology-consumer-pm/1.0.0`, opt-in only, carried by reference. The Claude package does not copy the profile. Its complete statement — adoption and homes, operational forms and routes, the 13 seeds, the command contracts and supported input, the deliberately held capacities, the 75 source duties and the 22 checker rows — is the Codex carrier [consumer-pm-profile.md](../../codex/references/consumer-pm-profile.md) (`${CLAUDE_PLUGIN_ROOT}/../codex/references/consumer-pm-profile.md`). Read it in full whenever a target adopts or uses the profile. The scripts and seeds are the accepted Codex C2 files under `${CLAUDE_PLUGIN_ROOT}/../codex/skills/pm/`; where the Codex carrier writes `PACKAGE/skills/pm/`, the Claude package means that directory. Wire `methodology-claude/1.0.0`, run-state schema 2 and the six roles are unchanged.
 

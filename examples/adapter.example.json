@@ -1,7 +1,7 @@
 {
   "harness": "example-harness",
   "owner": "the maintainers of the example harness",
-  "spec_version": "3.0.2",
+  "spec_version": "3.1.0",
   "spec_root": "..",
   "parameters": {
     "dialog-language": "English",

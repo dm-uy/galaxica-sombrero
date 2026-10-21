@@ -1,6 +1,16 @@
 # Methodology project route
 
-## Current: GRACE-Q2 integrated and delivered to origin/main
+## Current: QA-REFLECT PR17 corrections checked; integration pending
+
+Owner-approved bounded clarification follows the consumer-run review and four independent critiques. [Scope, decisions and evidence](notes/qa-reflection-clarification.md); [tasks](TASKS.md). The delivered snapshot dc25ea4 received two independent reviews and full green root/native-suite results. Bounded annotation/record/reference corrections and affected independent verification are complete; original evidence remains identified in the result note. Main integration and installation remain separate. Earlier route and held work remain unchanged.
+
+```mermaid
+flowchart LR
+    QRT1["QA-REFLECT-T1 checked: neutral and native guidance"] --> QRT2["QA-REFLECT-T2 checked: initial result"]
+    QRT2 --> QRT3["QA-REFLECT-T3 checked: PR17 corrections; integration pending"]
+```
+
+## Retained: GRACE-Q2 integrated and delivered to origin/main
 
 One canonical checkout is the development source; preparation repositories are archival. Canonical main includes M30 source through owner-approved PR6 and the later M31/M33 updates. Canonical main carries neutral/Codex/DSH 3.0.2 and Claude 2.1.1 after GRACE-Q2; M37/PR11 and M38/PR10 remain the preceding package checkpoints; accepted C2/bafec417 is the historical foundation, not the current version. C3 is not ready for merge. [Current C3 history/result](notes/m28-c3-result.md).
 

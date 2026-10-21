@@ -1,6 +1,6 @@
 # Methodology Claude
 
-Native Claude Code package 2.1.1 for the neutral methodology 3.0.2 of this repository. It is a Claude Code plugin named `methodology-claude` that binds the neutral rules in place: its skills and role agents point at the neutral owners two levels up, its hooks check that binding, and its adapter accounts for every neutral file, capability and parameter.
+Native Claude Code package 2.2.0 for the neutral methodology 3.1.0 of this repository. It is a Claude Code plugin named `methodology-claude` that binds the neutral rules in place: its skills and role agents point at the neutral owners two levels up, its hooks check that binding, and its adapter accounts for every neutral file, capability and parameter.
 
 ## Load it
 

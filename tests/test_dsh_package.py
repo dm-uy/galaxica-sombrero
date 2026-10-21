@@ -150,13 +150,13 @@ def _package_assembly(root):
             raise ValueError("regular owned co-located package directory required")
         if set(p.name for p in package.parent.iterdir() if p.name != ".DS_Store") != DECLARED_PACKAGES:
             raise ValueError("unknown sibling package")
-        if not (root / "SPEC_VERSION").is_file() or (root / "SPEC_VERSION").read_text() != "3.0.2\n":
+        if not (root / "SPEC_VERSION").is_file() or (root / "SPEC_VERSION").read_text() != "3.1.0\n":
             raise ValueError("unsupported detached neutral dependency")
         if not all((root / rel).is_file() and "status: draft\n" in (root / rel).read_text() for rel in CORE):
             raise ValueError("missing substantive neutral core")
         operation = "Layout"
         layout = json.loads((package / MAP).read_text())
-        if not isinstance(layout, dict) or set(layout) != {"package", "version", "profile", "files", "roles"} or layout.get("package") != "methodology-dsh" or layout.get("version") != "3.0.2" or layout.get("profile") != "colocated-explicit-source" or layout.get("roles") != ROLES:
+        if not isinstance(layout, dict) or set(layout) != {"package", "version", "profile", "files", "roles"} or layout.get("package") != "methodology-dsh" or layout.get("version") != "3.1.0" or layout.get("profile") != "colocated-explicit-source" or layout.get("roles") != ROLES:
             raise ValueError("unsupported package profile")
         rows = layout.get("files")
         if not isinstance(rows, list) or not rows:
@@ -195,7 +195,7 @@ def _package_assembly(root):
             raise ValueError("missing or undeclared actual package member")
         operation = "Metadata"
         plugin = json.loads((package / ".dsh-plugin/plugin.json").read_text())
-        if plugin.get("name") != "methodology-dsh" or plugin.get("version") != "3.0.2":
+        if plugin.get("name") != "methodology-dsh" or plugin.get("version") != "3.1.0":
             raise ValueError("native metadata identity mismatch")
         bundle = json.loads((package / "package.json").read_text())
         if bundle.get("name") != "@methodology/dsh" or bundle.get("dsh", {}).get("bundle", {}).get("patch") != "./cordis.patch.yml":

@@ -4,6 +4,8 @@ Maintain one coherent, harness-neutral methodology and complete Codex, Claude an
 
 The owner clarified the operating goal: lightweight state for the next agent/session, with QA reserved for new features and substantial bug fixes. Human presentations are on demand. Only affected records synchronize after material changes, grouped routine progress and before planned compaction/handoff. [Accepted direction](notes/pm-lightweight-direction.md).
 
+Owner clarification, 2026-10-21: consequential first analyses and recommendations are candidates for bounded critical reflection before decision use, including conversation where possible. Challenge assumptions, causal fit, counterexamples, costs and residual risks; use authorized independent review when available and reuse applicable completed reflection. Routine and settled work stays proportionate. [Recorded scope](notes/qa-reflection-clarification.md).
+
 ## Selected outcome and accepted baseline
 
 The owner selected this repository as the sole source of truth for the in-house methodology. The Codex adaptation must cover at least the currently used in-house practices without external in-house skills/plugins as necessary sources. [M27 coverage contract](specs/m27-self-contained-coverage.md) accounts for duties and behavioral proof; matching names or this construction chat do not establish parity.
