@@ -5,8 +5,8 @@ description: "Before any assigned software role or its version-stamped developme
 
 # semantic-exoskeleton
 
-METHODOLOGY_VERSION: 3.1.0
-Package binding: methodology-dsh3.1.0, schema2, colocated-explicit-source. Copy the actual loaded neutral revision into a new plan and retain package/adapter/source identities alongside it; this stamp does not prove full reading.
+METHODOLOGY_VERSION: 3.2.0
+Package binding: methodology-dsh3.2.0, schema2, colocated-explicit-source. Copy the actual loaded neutral revision into a new plan and retain package/adapter/source identities alongside it; this stamp does not prove full reading.
 
 Read the complete [runtime](../../references/dsh-runtime.md) and [adoption procedure](../../references/adoption.md) first. Resolve neutral owners through the actual package adapter spec_root/files, never a cached installed constitution. Read every required applicable owner body in full and record its current identity/read limits before dependent action. Missing, stub, stale, truncated or unread required content is BLOCKED; complete current injection may be reused. This entry supplies the native trigger and route, not a duplicate neutral protocol or role assignment. Preserve current project instructions, settled grants and exact path scope. An inner role never delegates, commits, merges or changes authoritative state.
 

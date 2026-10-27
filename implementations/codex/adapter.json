@@ -1,7 +1,7 @@
 {
   "harness": "methodology-codex",
   "owner": "Methodology Codex package maintainers",
-  "spec_version": "3.1.0",
+  "spec_version": "3.2.0",
   "spec_root": "../../",
   "parameters": {
     "dialog-language": "Russian unless controlling owner/project instructions select otherwise",

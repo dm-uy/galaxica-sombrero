@@ -284,7 +284,7 @@ def test_release_and_example_adapter_are_current(repo_root):
     adapter = json.loads((repo_root / "examples/adapter.example.json").read_text(encoding="utf-8"))
     changes = (repo_root / "CHANGELOG.md").read_text(encoding="utf-8").split("## 0.2.0", 1)
     print("[IMP:9][test_release_and_example_adapter_are_current][CHECK] version bytes=%d" % len(version))
-    assert version == b"3.1.0\n" and adapter["spec_version"] == "3.1.0"
+    assert version == b"3.2.0\n" and adapter["spec_version"] == "3.2.0"
     assert adapter["parameters"]["gate-cadence"] == "per-change"
     assert len(changes) == 2
     entry = changes[1].split("## ", 1)[0]

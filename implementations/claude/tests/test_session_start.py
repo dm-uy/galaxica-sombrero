@@ -80,12 +80,12 @@ NO_FALLBACK = "never fall back to another installed copy"
 COMMON_CRITICAL = {("check_binding", "BLOCKED"), ("render_context", "BLOCKED_TEXT")}
 CASES = [
     ("missing_spec_version", ["SPEC_VERSION is missing at the neutral root"], {("_check_neutral_version", "READ_FAILURE")}),
-    ("wrong_spec_version", ["SPEC_VERSION 9.0.0 differs from adapter spec_version 3.1.0"], {("_check_neutral_version", "VERSION_MISMATCH")}),
+    ("wrong_spec_version", ["SPEC_VERSION 9.0.0 differs from adapter spec_version 3.2.0"], {("_check_neutral_version", "VERSION_MISMATCH")}),
     ("missing_core_file", ["core owner missing: code/tests.md"], {("_check_core_owners", "OWNER_MISSING")}),
     ("stub_core_card", ["core owner card is not status draft: code/ldd.md (status stub)"], {("_check_core_owners", "OWNER_NOT_DRAFT")}),
     ("wrong_layout_package", ["package-layout package is methodology-codex, expected methodology-claude"], {("_check_layout", "IDENTITY_MISMATCH")}),
     ("wrong_layout_profile", ["package-layout profile is installed-copy, expected colocated-in-place"], {("_check_layout", "IDENTITY_MISMATCH")}),
-    ("wrong_layout_version", ["package-layout version is 9.0.0, expected 2.2.0"], {("_check_layout", "IDENTITY_MISMATCH")}),
+    ("wrong_layout_version", ["package-layout version is 9.0.0, expected 2.3.0"], {("_check_layout", "IDENTITY_MISMATCH")}),
     ("missing_adapter", ["adapter.json is missing, unreadable or not a JSON object"], {("_read_json_object", "READ_FAILURE"), ("_check_adapter", "ADAPTER_UNUSABLE")}),
     ("wrong_spec_root", ["adapter spec_root is not ../../"], {("_check_adapter", "SPEC_ROOT_MISMATCH")}),
     ("missing_adapter_version", ["adapter spec_version is missing"], {("_check_adapter", "SPEC_VERSION_MISSING")}),
@@ -241,7 +241,7 @@ def show_records(records):
 ## @purpose Verify that the real co-located package is bound, that the context states the neutral version, the absolute neutral root and the reading duty, and that the owned trajectory of a successful check is complete and error free.
 ## @uses test_session_start.run_hook, test_session_start.answer, test_session_start.trace_events, test_session_start.show_trace
 ## @io Input: tmp_path of an owned project directory. Output: None after the assertions. Side effects: one real hook process with tracing on; no writes to the package. Guarantees: the success events appear once each in order and no importance 10 event or unrelated stderr text appears.
-##   Raises: AssertionError when the answer or the trace differs. System importance: 9. Example: the sentence methodology-claude 2.2.0 bound in place to neutral methodology 3.1.0 at the real neutral root is present.
+##   Raises: AssertionError when the answer or the trace differs. System importance: 9. Example: the sentence methodology-claude 2.3.0 bound in place to neutral methodology 3.2.0 at the real neutral root is present.
 ## @complexity 5
 def test_real_package_binds_and_states_duty(tmp_path):
     project = tmp_path / "project"
@@ -252,7 +252,7 @@ def test_real_package_binds_and_states_duty(tmp_path):
     context = answer(stdout)
     events = trace_events(stderr)
     assert code == 0
-    sentence = "methodology-claude 2.2.0 bound in place to neutral methodology 3.1.0 at %s" % os.path.realpath(NEUTRAL)
+    sentence = "methodology-claude 2.3.0 bound in place to neutral methodology 3.2.0 at %s" % os.path.realpath(NEUTRAL)
     assert context.startswith(sentence)
     assert "Before any methodology role or skill work, read %s/references/claude-runtime.md and the six core owners in full; Orient by checks/orient.md" % os.path.realpath(PACKAGE) in context
     for owner in CORE:
@@ -354,7 +354,7 @@ def test_bad_payload_and_closed_input_still_answer(tmp_path):
         print("[IMP:9][test_bad_payload_and_closed_input_still_answer][PAYLOAD] exit=%d stdout_lines=%d stderr_chars=%d" % (code, stdout.count("\n"), len(stderr)))
         context = answer(stdout)
         assert code == 0 and stderr == ""
-        assert context.startswith("methodology-claude 2.2.0 bound in place")
+        assert context.startswith("methodology-claude 2.3.0 bound in place")
         if payload == json.dumps({"cwd": "bad\u0000path"}):
             assert "AGENTS.md absent" in context
         else:
@@ -365,7 +365,7 @@ def test_bad_payload_and_closed_input_still_answer(tmp_path):
                             preexec_fn=lambda: os.close(0))
     print("[IMP:9][test_bad_payload_and_closed_input_still_answer][CLOSED_STDIN] exit=%d stderr_chars=%d" % (closed.returncode, len(closed.stderr)))
     assert closed.returncode == 0 and closed.stderr == ""
-    assert answer(closed.stdout).startswith("methodology-claude 2.2.0 bound in place")
+    assert answer(closed.stdout).startswith("methodology-claude 2.3.0 bound in place")
 # endregion FUNC_test_bad_payload_and_closed_input_still_answer
 
 
@@ -500,7 +500,7 @@ def test_package_root_resolution_and_symlink(tmp_path, caplog):
     assert by_empty_environment == by_location == Path(os.path.realpath(package))
     assert ok is True and reasons == []
     assert facts["neutral_root"] == os.path.realpath(root) and facts["package_root"] == os.path.realpath(package)
-    assert facts["spec_version"] == "3.1.0" and facts["package_version"] == "2.2.0"
+    assert facts["spec_version"] == "3.2.0" and facts["package_version"] == "2.3.0"
 # endregion FUNC_test_package_root_resolution_and_symlink
 
 
@@ -595,5 +595,5 @@ def test_hooks_json_command_runs_through_a_shell(tmp_path):
     done = subprocess.run(hook["command"], shell=True, input="{}", capture_output=True, text=True, env=env, cwd=str(tmp_path), timeout=60)
     print("[IMP:9][test_hooks_json_command_runs_through_a_shell][SHELL] exit=%d stdout_lines=%d stderr_chars=%d" % (done.returncode, done.stdout.count("\n"), len(done.stderr)))
     assert done.returncode == 0 and done.stderr == ""
-    assert answer(done.stdout).startswith("methodology-claude 2.2.0 bound in place")
+    assert answer(done.stdout).startswith("methodology-claude 2.3.0 bound in place")
 # endregion FUNC_test_hooks_json_command_runs_through_a_shell

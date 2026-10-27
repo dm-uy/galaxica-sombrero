@@ -1270,7 +1270,7 @@ def test_core_promotions_and_remaining_homes(repo_root):
         for relative in CORE_FILES[:3]:
             assert "status: draft" in sources[relative]
         readme = sources["README.md"]
-        assert "69 drafts and 2 stubs" in readme and "Version: `3.1.0`" in readme
+        assert "69 drafts and 2 stubs" in readme and "Version: `3.2.0`" in readme
         for path in ("code/ldd.md", "code/tests.md"):
             assert "status: draft" in (repo_root / path).read_text(encoding="utf-8")
         for path in ("code/ax-ui.md", "code/data.md", "checks/lints.md"):

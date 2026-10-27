@@ -1,18 +1,18 @@
-# Current: PR17 merged; working packages updated
+# Current: PR19 rework after owner review
 
-The owner explicitly requested PR merge and installation on 2026-10-21. [PR17](https://github.com/dm-uy/galaxica-sombrero/pull/17) is merged at `a3210036e43c1ce0c873df46e50b560a7e1da93e`, including reviewed head `bfdb2e9edb4925b547b9d98165c025078488e958`. Source versions are neutral/Codex/DSH3.1.0 and Claude2.2.0. [Scope, review history and installation receipt](notes/qa-reflection-clarification.md); [tasks](TASKS.md).
+## Owner decisions
 
-## Current result and evidence
+Owner selected removal of the account name from current text with published history preserved, and a separate norm with MINOR. These decisions authorize the bounded rework; no second scope question is needed. Main integration and installation remain separate, ungranted actions.
 
-Codex uses the complete immutable merge snapshot through the existing methodology-local marketplace: enabled3.1.0, fresh app-server discovery of27 enabled skills, including PM, feature-dev and prompting-verify. Independent verification matched all426 tracked files and executable bits in both release and installed cache; the sole extra is the root transport manifest with only its skills path changed. Prior config/catalog and release snapshots are retained for rollback.
+## Current work
 
-Claude stays in place on canonical main: native plugin details discovers2.2.0; validation and actual SessionStart binding to neutral3.1.0 pass. DSH web/desktop remain registered in place and both resolve3.1.0 with27 skill files. Fresh web configuration composes the methodology provider. CLI dumping desktop was refused because Electron exclusively manages that profile; desktop's fresh runtime catalog was not checked. No active application or user session was restarted.
+Root is the sole writer in isolated `codex/brownfield-source-coverage`, continuing from PR19 head997adbf. Canonical main remains clean at77c8cfe. Candidate versions: neutral/Codex/DSH3.2.0, Claude2.3.0. SP-205 now owns the explicit brownfield correspondence result in a dedicated field of the existing receipt. Procedure/form placement, relevance exclusions, inconsistent example and public current-note attribution are corrected; the initial PATCH/source-transfer rationale is withdrawn.
 
-The earlier full-suite results belong to dc25ea4; bounded comment/record/reference follow-up checks belong to the reviewed PR head. Installation checks are loading/integrity evidence, not new full-suite tests or real-agent efficacy proof. Original failed attempts and retained obligations remain in their linked records.
+[Authority, correction groups and historical checks](notes/brownfield-source-correspondence.md); [tasks](TASKS.md). Revised full suites, adapters, scoped identifier/format checks and full-list independent review pass; a subsequent test-only strengthening passed the complete affected module. Exact snapshots and limits are in the note. Revised source f2ac31a is delivered through the existing draft PR19; this closure changes records only. Next: owner re-review of the corrected result. No history rewrite or deferred continuation.
 
-## Next action
+## Previous delivery
 
-Start a fresh session in each affected client for refreshed discovery; follow the DSH package's profile-restart guidance when needed. This construction conversation is not hot-reload proof. The next substantive development work requires its own actual scope from the retained route; merge/install approval is fulfilled. This receipt-only closure does not repackage the frozen Codex snapshot or publish a release tag.
+PR17 merged and working packages were updated under the prior owner grant. [Receipt and limits](notes/qa-reflection-clarification.md#merge-and-installation-2026-10-21). Codex installed3.1.0, Claude in-place2.2.0 and DSH bindings3.1.0 remain the delivered baseline; this branch is not their activation. Fresh-client/restart caveats and DSH desktop-discovery limits remain in that receipt.
 
 ## Retained obligations and relevant traps
 

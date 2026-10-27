@@ -406,7 +406,7 @@ def test_parameters_registry_declares_the_seven(repo_root):
 def test_spec_version_is_0_19_0(repo_root):
     data = (repo_root / "SPEC_VERSION").read_bytes()
     print("[IMP:9][test_spec_version][RESULT] bytes=%d" % len(data))
-    assert data == b"3.1.0\n"
+    assert data == b"3.2.0\n"
 # endregion FUNC_test_spec_version_is_0_19_0
 
 

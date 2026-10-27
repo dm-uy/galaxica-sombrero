@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.2.0
+
+- Add SP-205 MUST for brownfield source-obligation correspondence in the existing specification receipt, with explicit source/obligation exclusions, exact BR/AC/boundary mappings or authorized dispositions, reverse provenance and checked extent/limits.
+- Give the correspondence its own field in that receipt, preserving Task/tracker comparison. The brownfield form points to it from Context / Input RECON. No new register, role, phase, gate, runtime checker or schema.
+- Synchronize current Codex/DSH3.2.0 and Claude2.3.0 bindings over neutral3.2.0. This MINOR supersedes the unaccepted PR19 patch candidate; source-transfer norms SP-401/SB-501 are not the authority for this new duty. Installation remains separate.
+
 ## 3.1.0
 
 - Clarify the existing strict QA gate for inherited suite failures, masked assertions, partial achievements and probe-effect incidents; preserve QA-602, canonical statuses and authentic scope decisions.

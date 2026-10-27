@@ -1,6 +1,6 @@
 # region MODULE_CONTRACT [DOMAIN(9): Review, PromptRouting; CONCEPT(9): RequiredOwner, Compatibility; TECH(7): Python, pytest]
 ## @modulecontract
-## @purpose Reject incomplete required review ownership, missing external-agent routes and unauthorized helper algorithm drift.
+## @purpose Reject incomplete required review ownership, missing external-agent routes, unauthorized helper algorithm drift and omitted brownfield correspondence contracts.
 ## @scope Bounded source forms/cases/routes and exact release bridge; independent native source/output judgment remains separate.
 ## @input Actual read-only repository files; caplog and isolated tmp_path fixtures; fixed pre-Code AST identities.
 ## @output Meaningful current-source assertions with contrary omission/stub/algorithm controls and visible safe trace.
@@ -15,10 +15,11 @@
 ## Q: Why inspect contrary forms?
 ## A: Removing a required report boundary or substantive draft must fail the same predicate that accepts current source.
 ## @changes
+## LAST_CHANGE: [3.2.0 - Add bounded SP-205 norm/receipt/form omission controls, including removal of the actual receipt row while an example label survives.]
 ## - Rebase retains the M37 Python3.12 pins for the AST-shape normalizer. M38 had calibrated
 ##   the same helpers under Python3.9; empty type_params fields explain the different hashes.
 ##   No helper algorithm changed, and every injected drift control remains operative.
-## LAST_CHANGE: [2.3.0 - M38 rebase retains M37 Python3.12 pins and release selectors with M38 traceability; all drift controls retained; earlier2.2.0 - M37 Claude 2.1.0 release selectors; earlier2.1.0 - M37 Claude 2.0.2 release selectors and Claude one-shot/loop prompt-route assertions; earlier2.0.0 - M30 Debug1 owning success exposure/order/cardinality before pins; exact unique release selectors, consequential owner/caller controls and SessionStart original AST; earlier1.1.0 - C2 exact source/member normalization; fixed original pins retained. Earlier: C1 required owners, direct external-agent route and fixed original helper algorithm controls.]
+## Earlier: [2.3.0 - M38 rebase retains M37 Python3.12 pins and release selectors with M38 traceability; all drift controls retained; earlier2.2.0 - M37 Claude 2.1.0 release selectors; earlier2.1.0 - M37 Claude 2.0.2 release selectors and Claude one-shot/loop prompt-route assertions; earlier2.0.0 - M30 Debug1 owning success exposure/order/cardinality before pins; exact unique release selectors, consequential owner/caller controls and SessionStart original AST; earlier1.1.0 - C2 exact source/member normalization; fixed original pins retained. Earlier: C1 required owners, direct external-agent route and fixed original helper algorithm controls.]
 ## @modulemap
 ## FUNC 1[Metadata anchor] => test_c1_review_and_routing._module_contract
 ## FUNC 8[Read complete source with owned safe trace] => test_c1_review_and_routing._read
@@ -30,6 +31,7 @@
 ## FUNC 9[Consequential owner and callers] => test_c1_review_and_routing.test_consequential_owner_and_call_sites
 ## FUNC 9[Exclusions and data authority] => test_c1_review_and_routing.test_consequential_exclusions_and_untrusted_packets
 ## FUNC 9[SessionStart exact source bridge] => test_c1_review_and_routing.test_session_start_source_bridge_preserves_ast
+## FUNC 9[Reject omitted brownfield correspondence norm, receipt field or form pointer] => test_c1_review_and_routing.test_brownfield_source_correspondence_contract
 ## @usecases
 ## - Independent QA -> run owner omission/stub/contrary controls -> bounded source evidence for C1-AC1/2/3/6.
 ## - Independent QA -> compare fixed pre-Code algorithms and unrelated mutation -> C1-AC4/6 compatibility protection.
@@ -172,9 +174,9 @@ def _algorithm_identity(text, engine):
         assert len(bindings) == 1, "unique bindings function required"
         binding = bindings[0]
         # Shape locates a declared site; current value is checked separately, never a blanket literal rewrite.
-        expressions = [("(neutral / 'SPEC_VERSION').read_text().strip() == binding.get('spec_version') == '3.1.0'", "3.1.0", "1.0.0")]
+        expressions = [("(neutral / 'SPEC_VERSION').read_text().strip() == binding.get('spec_version') == '3.2.0'", "3.2.0", "1.0.0")]
         if engine == "codex":
-            expressions.append(("layout.get('version') == '3.1.0'", "3.1.0", "2.0.0"))
+            expressions.append(("layout.get('version') == '3.2.0'", "3.2.0", "2.0.0"))
         for expression, current, original in expressions:
             expected = ast.parse(expression, mode="eval").body
             matches = [n for n in ast.walk(binding) if isinstance(n, ast.Compare)
@@ -193,13 +195,13 @@ def _algorithm_identity(text, engine):
         assert len(results) == 1, "unique result dictionary required"
         values = [value for key, value in zip(results[0].keys, results[0].values)
                   if isinstance(key, ast.Constant) and key.value == "neutral_version"]
-        assert len(values) == 1 and isinstance(values[0], ast.Constant) and values[0].value == "3.1.0", "exact result neutral version required"
+        assert len(values) == 1 and isinstance(values[0], ast.Constant) and values[0].value == "3.2.0", "exact result neutral version required"
         values[0].value = "1.0.0"
         if engine == "claude":
             assignments = [n for n in tree.body if isinstance(n, ast.Assign) and len(n.targets) == 1
                            and isinstance(n.targets[0], ast.Name) and n.targets[0].id == "PACKAGE_VERSION"]
             assert len(assignments) == 1, "unique package source assignment required"
-            assert isinstance(assignments[0].value, ast.Constant) and assignments[0].value.value == "2.2.0", "wrong package source version"
+            assert isinstance(assignments[0].value, ast.Constant) and assignments[0].value.value == "2.3.0", "wrong package source version"
             assignments[0].value.value = "1.0.0"
         if engine == "codex":
             # Original C2 exact chained membership selector; no unrelated73 node is changed.
@@ -230,12 +232,12 @@ def _algorithm_identity(text, engine):
 def test_release_bridge_keeps_wire_and_helper_algorithms(repo_root, caplog):
     # START_BLOCK_BusinessLogic
     caplog.set_level(logging.INFO, logger=LOGGER.name)
-    assert _read(repo_root, "SPEC_VERSION") == "3.1.0\n"
-    for engine, version in (("codex", "3.1.0"), ("claude", "2.2.0")):
+    assert _read(repo_root, "SPEC_VERSION") == "3.2.0\n"
+    for engine, version in (("codex", "3.2.0"), ("claude", "2.3.0")):
         base = "implementations/" + engine
         layout = json.loads(_read(repo_root, base + "/references/package-layout.json"))
         adapter = json.loads(_read(repo_root, base + "/adapter.json"))
-        assert layout["version"] == version and adapter["spec_version"] == "3.1.0"
+        assert layout["version"] == version and adapter["spec_version"] == "3.2.0"
         text = _read(repo_root, base + "/skills/feature-dev/scripts/run_state.py")
         # BUG_FIX_CONTEXT: Successful normalizations were captured then cleared before exposure.
         # Expose each actual owning VALID/RESULT pair and verify its order/cardinality before the pin.
@@ -286,14 +288,14 @@ def test_release_bridge_keeps_wire_and_helper_algorithms(repo_root, caplog):
         assert not [r for r in caplog.records if r.levelno >= logging.ERROR]
         assert identity != PINS[engine]
         # Missing, duplicate, wrong-release selectors must refuse; a same-value global is not a permitted site.
-        controls = [text.replace("'neutral_version': '3.1.0'", "'other_version': '2.0.0'", 1),
-                    text.replace("'neutral_version': '3.1.0'", "'neutral_version': '9.0.0'", 1),
-                    text.replace("'neutral_version': '3.1.0'", "'neutral_version': '3.1.0', 'neutral_version': '3.1.0'", 1)]
+        controls = [text.replace("'neutral_version': '3.2.0'", "'other_version': '2.0.0'", 1),
+                    text.replace("'neutral_version': '3.2.0'", "'neutral_version': '9.0.0'", 1),
+                    text.replace("'neutral_version': '3.2.0'", "'neutral_version': '3.2.0', 'neutral_version': '3.2.0'", 1)]
         if engine == "codex":
-            controls.append(text.replace("layout.get('version') == '3.1.0'", "layout.get('version') == '2.2.0'", 1))
+            controls.append(text.replace("layout.get('version') == '3.2.0'", "layout.get('version') == '2.2.0'", 1))
         else:
-            controls.extend([text.replace("PACKAGE_VERSION = '2.2.0'", "PACKAGE_VERSION = '1.0.0'", 1),
-                             text.replace("PACKAGE_VERSION = '2.2.0'", "PACKAGE_VERSION = '2.2.0'\nPACKAGE_VERSION = '2.2.0'", 1)])
+            controls.extend([text.replace("PACKAGE_VERSION = '2.3.0'", "PACKAGE_VERSION = '1.0.0'", 1),
+                             text.replace("PACKAGE_VERSION = '2.3.0'", "PACKAGE_VERSION = '2.3.0'\nPACKAGE_VERSION = '2.3.0'", 1)])
         caplog.clear()
         for control in controls:
             assert control != text
@@ -424,7 +426,7 @@ def test_session_start_source_bridge_preserves_ast(repo_root, caplog):
     tree = ast.parse(text)
     assignments = [n for n in tree.body if isinstance(n, ast.Assign) and len(n.targets) == 1
                    and isinstance(n.targets[0], ast.Name) and n.targets[0].id == "PACKAGE_VERSION"]
-    assert len(assignments) == 1 and isinstance(assignments[0].value, ast.Constant) and assignments[0].value.value == "2.2.0"
+    assert len(assignments) == 1 and isinstance(assignments[0].value, ast.Constant) and assignments[0].value.value == "2.3.0"
     assignments[0].value.value = "1.0.0"
     # Python3.12 adds empty type_params to the parser's dump; preserve the original3.9 oracle.
     # Only EMPTY version-introduced fields are omitted from serialization, never nonempty generics.
@@ -462,3 +464,56 @@ def test_session_start_source_bridge_preserves_ast(repo_root, caplog):
     assert not [r for r in caplog.records if r.levelno >= logging.ERROR]
     # END_BLOCK_BusinessLogic
 # endregion FUNC_test_session_start_source_bridge_preserves_ast
+
+
+# region FUNC_test_brownfield_source_correspondence_contract [DOMAIN(9): Requirements; CONCEPT(9): Correspondence, OmissionControl; TECH(7): pytest]
+## @purpose Reject removal of SP-205, its anchored receipt field or the brownfield form pointer, with the same finite predicate used on shipped source.
+## @uses test_c1_review_and_routing._read, test_c1_review_and_routing._operating
+## @io Input: repo_root Path and caplog fixture. Output: None after current-source and deliberate single-omission checks.
+##   Side effects: safe source-read and important validation/refusal trace; no source mutation. Guarantees: each listed field
+##   is independently required and an omitted field refuses; no whole-prose semantics or real-agent compliance is inferred.
+##   Raises: AssertionError for missing field, vacuous omission control or unexpected errors. Importance:9.
+##   Example: removing the actual receipt row fails even when the GREENFIELD example still contains the field label.
+## @complexity 6
+def test_brownfield_source_correspondence_contract(repo_root, caplog):
+    # START_BLOCK_Validation
+    caplog.set_level(logging.INFO, logger=LOGGER.name)
+    cases = {
+        "process/specification.md": (
+            "<!-- anchor: process.specification.source-correspondence -->",
+            "**SP-205** MUST:",
+            "source identities and exclusions with reasons",
+            "exact BR/AC/boundary locations or an explicit disposition",
+            "Brownfield source correspondence: [BROWNFIELD only:",
+            "the run-state helper does not automatically bind arbitrary brief or chat contents",
+        ),
+        "protocols/spec-brownfield.md": (
+            "[Source obligations, considered-source exclusions and dispositions:",
+            "in the existing specification receipt under SP-205; no separate register.",
+        ),
+    }
+    # END_BLOCK_Validation
+    # START_BLOCK_BusinessLogic
+    for relative, fields in cases.items():
+        text = _read(repo_root, relative)
+        assert _operating(text, fields)
+        assert not [record for record in caplog.records if record.levelno >= logging.ERROR]
+        caplog.clear()
+        for field in fields:
+            omitted = text.replace(field, "")
+            assert omitted != text
+            assert not _operating(omitted, fields)
+        expected_refusals = len(fields)
+        if relative == "process/specification.md":
+            start = text.index("Brownfield source correspondence: [BROWNFIELD only:")
+            end = text.index("Classification/profile:", start)
+            without_receipt_row = text[:start] + text[end:]
+            assert "Brownfield source correspondence: N/A — GREENFIELD" in without_receipt_row
+            assert not _operating(without_receipt_row, fields)
+            expected_refusals += 1
+        errors = [record for record in caplog.records if record.levelno >= logging.ERROR]
+        assert len(errors) == expected_refusals
+        assert all("[_operating][REFUSED]" in record.getMessage() for record in errors)
+        caplog.clear()
+    # END_BLOCK_BusinessLogic
+# endregion FUNC_test_brownfield_source_correspondence_contract

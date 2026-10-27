@@ -27,6 +27,20 @@ A specification connects an actual request and measured input to a bounded, veri
 - **SP-203** MUST: Validate the complete applicable profile, including purpose/scope/BR/AC/delivery, graph authority, scope lists, boundaries and full document readiness. Brownfield validation explicitly checks BR-1 compatibility/authorized exceptions, MAY EDIT / DO NOT TOUCH and measurable ACs. Inspect coupled test/doc/plan/checker consumers; successful format/lint output alone does not prove completeness or architecture equality.
 - **SP-204** MUST: Treat literal verification promises as obligations with the applicable [development plan](../protocols/dev-plan.md) commitments: token → actual symbol/operation → bounded expected result. Keep AC and volunteered promises visible without inventing a new commitment schema or checker. Source-section headings are a prose contract unless an actual documented consumer proves a particular parser rule.
 
+<!-- anchor: process.specification.source-correspondence -->
+
+## Brownfield source-obligation correspondence
+
+- **SP-205** MUST: Before declaring a BROWNFIELD specification ready, record source-obligation correspondence in the existing specification receipt. Account for the considered source population, source identities and exclusions with reasons; map each substantive in-scope original obligation to exact BR/AC/boundary locations or an explicit disposition with its authority/basis. Preserve conditions, quantifiers, prohibitions and exceptions, and identify source or derivation/assumption bases for substantive additions. Record the actual author/validator, checked extent, unresolved items and access limits using the receipt's existing fields; resolve deficiencies and human-dependent choices through the existing routes before claiming readiness.
+
+Preparation uses the actual brief and measured inputs under SP-101, [reconnaissance](reconnaissance.md#process.reconnaissance.lanes) and the applicable [bootstrap duties](bootstrap.md#process.bootstrap.measured-inputs). SP-205 adds an explicit recorded correspondence requirement; source-preservation duties alone do not supply that record.
+
+Use `Input RECON` to identify considered sources by actual path/message location and revision, content hash or dated snapshot, alongside access limits. Reassess affected correspondence before reusing the receipt when a relied-upon source changes; the run-state helper does not automatically bind arbitrary brief or chat contents. Retain the reason for excluding a considered source or obligation as irrelevant, superseded or outside the approved slice; do not silently narrow the population to the retained sources. Unknown or inaccessible inputs remain coverage limits. This records the actual bounded population, not an assurance that every possible source has been discovered.
+
+In `Brownfield source correspondence`, identify each substantive original obligation by its source location and wording or a faithful bounded summary, then its exact BR, AC or boundary location. One source can contain several obligations; one citation does not account for all of them. Several obligations can share a BR only while all their meaning is retained. Record superseded, deferred, excluded or unresolved obligations with the actual basis or decision reference. A disposition grants no authority to drop an obligation. Conversely, link substantive BRs and boundaries to a source or an explicit derivation/assumption basis; an agent's addition is not approved intent merely because it appears in the table.
+
+For mixed work under SP-102, state which brownfield scope the correspondence covers; this rule does not claim greenfield coverage. The existing author/validator checks both directions and records the extent and limits of that check in the receipt. Unmatched obligations, unresolved interpretation and unavailable required inputs use the existing deficiency/readiness routes. Reading every source or citing a source for every BR alone does not establish complete correspondence. Existing PM preparation, Architect validation and implementation QA retain their owners; no new role, separate register, requirement-ID scheme, mandatory blind-extraction pass, owner gate or runtime schema is introduced.
+
 <!-- anchor: process.specification.deficiencies -->
 
 ## Deficiencies and bounded reconstruction
@@ -73,6 +87,10 @@ Author / validator: [Actual responsibilities and evidence]
 Input RECON: [Measured source/consumer population and limits]
 Approval: [Exact authority/scope/reference; separate integration state]
 Task/tracker comparison: [Compared inputs, differences or none; write authorization is separate]
+Brownfield source correspondence: [BROWNFIELD only: source obligations/locations → exact BR/AC/
+boundary or disposition with authority/basis; reverse source/derivation links; considered-source
+exclusions and reasons; checked extent and unresolved/access limits. Reuse Input RECON,
+Author / validator and Readiness outcome; other profiles: N/A]
 Classification/profile: [Actual source basis and architecture authority]
 Done when / Stop and ask when: [Actual finish line and task-specific edges]
 Complete-profile/document check: [Contracts/markers/links/BR/AC/scope/graph/delivery and limits]
@@ -119,6 +137,17 @@ $END_SECTION_DISPOSITIONS
 $END_SPECIFICATION_RECEIPT
 ```
 
+Fictional brownfield correspondence in that same receipt, not a separate ledger:
+
+| Source obligation | Specification location or disposition | Basis / check |
+|---|---|---|
+| Brief paragraph 2: export all records, including archived records | BR-2; AC-EXPORT-1 explicitly includes archived records | Validator compared the full obligation and its qualifier with both locations |
+| Brief paragraph 3: retain the existing file format | BR-1; AC-REGRESSION-1 names the preserved format | Compatibility is not inferred from an unrelated green suite |
+| Earlier decision D1: export active records only | Superseded by D2 requiring archived records too | Authorized D2 agrees with the current brief; the existing file format remains unchanged |
+| Supplied appendix C: styling for an unrelated page | Excluded from this export slice | Source and exclusion retained in Input RECON; no export behavior or compatibility obligation is inferred |
+
+If BR-2 instead says only “export active records”, the archived-record obligation is still unaccounted for even when the brief is marked read and every BR has a source citation. Record the mismatch through the existing deficiency/readiness procedure before claiming the spec ready. An inaccessible appendix remains an explicit coverage limit, not an assumed empty obligation set.
+
 <!-- anchor: process.specification.example -->
 
 ## Complete worked example: validation with a recoverable omission
@@ -157,6 +186,7 @@ Brief fixes local search, two behaviors and standard-library-only execution; ext
 load-bearing. Unknown wider source coverage is not claimed as complete.
 Approval: owner approved that local MVP and constraints, not publication or the unseen result.
 Task/tracker comparison: local task and brief agree; there is no external tracker in this context.
+Brownfield source correspondence: N/A — GREENFIELD; SP-205 does not apply to this example.
 Classification/profile: GREENFIELD, constraint-led. Outcomes/local CLI/input-text seam fixed;
 Architect owns technical component graph/layout. No nonexistent regression guard is imposed.
 Done when: search returns matching titles for declared inputs, meaningful positive/error tests and

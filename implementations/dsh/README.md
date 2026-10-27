@@ -2,7 +2,7 @@
 
 **For persistent personal use, install this package as the `@methodology/dsh` bundle in a DeepSeek Harness profile.** Cloning the source or asking an agent to read a skill is not installation. The steps below register the bundle and check that the harness actually discovers the methodology skills.
 
-Native DSH implementation package 3.1.0 for neutral methodology 3.1.0.
+Native DSH implementation package 3.2.0 for neutral methodology 3.2.0.
 
 ## Installation
 
@@ -105,7 +105,7 @@ Set `PYTHONDONTWRITEBYTECODE=1` for Python checks; read warnings, full streams a
 
 [Smoke specification](examples/smoke-spec.md) is a reusable inventory-report task with exact target paths and source-derived output and refusals. Templates never authenticate grants. Candidate-bound native execution, one real same-run checkpoint and resume, independent source, case, QA, Review and Finalize, and committed-artifact proof remain required before claiming package acceptance; installed historical results do not substitute. SUCCESS does not authorize merge, installation or publication, and the matching concrete-result integration decision stays separate.
 
-Current source version is 3.1.0 over neutral 3.1.0. Wire `methodology-dsh/2.0.0` and schema 2 are the run-state contract shared with the sibling packages. No loader activation and no full-methodology parity is certified by this release.
+Current source version is 3.2.0 over neutral 3.2.0. Wire `methodology-dsh/2.0.0` and schema 2 are the run-state contract shared with the sibling packages. No loader activation and no full-methodology parity is certified by this release.
 
 ## Consumer profile and commands
 

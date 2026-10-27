@@ -80,6 +80,8 @@ $START_BODY
 ## Context / Input RECON
 [Measured identity, producers/consumers, current behavior, actual baseline test population,
 relevant current rules and source/evidence limits; addition in one sentence]
+[Source obligations, considered-source exclusions and dispositions: use Brownfield source
+correspondence in the existing specification receipt under SP-205; no separate register.]
 ## What we add
 [Measurable inputs/outputs, defaults, errors, persistence/lifecycle]
 ## Business Requirements
