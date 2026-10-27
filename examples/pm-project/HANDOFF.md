@@ -8,7 +8,7 @@ Owner selected removal of the account name from current text with published hist
 
 Root is the sole writer in isolated `codex/brownfield-source-coverage`, continuing from PR19 head997adbf. Canonical main remains clean at77c8cfe. Candidate versions: neutral/Codex/DSH3.2.0, Claude2.3.0. SP-205 now owns the explicit brownfield correspondence result in a dedicated field of the existing receipt. Procedure/form placement, relevance exclusions, inconsistent example and public current-note attribution are corrected; the initial PATCH/source-transfer rationale is withdrawn.
 
-[Authority, correction groups and historical checks](notes/brownfield-source-correspondence.md); [tasks](TASKS.md). Revised full suites, adapters, scoped identifier/format checks and full-list independent review pass; a subsequent test-only strengthening passed the complete affected module. Exact snapshots and limits are in the note. Next: normal commit/push update of the existing draft PR. No history rewrite or deferred continuation.
+[Authority, correction groups and historical checks](notes/brownfield-source-correspondence.md); [tasks](TASKS.md). Revised full suites, adapters, scoped identifier/format checks and full-list independent review pass; a subsequent test-only strengthening passed the complete affected module. Exact snapshots and limits are in the note. Revised source f2ac31a is delivered through the existing draft PR19; this closure changes records only. Next: owner re-review of the corrected result. No history rewrite or deferred continuation.
 
 ## Previous delivery
 

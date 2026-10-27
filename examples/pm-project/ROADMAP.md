@@ -2,7 +2,7 @@
 
 ## Current: PR19 source-obligation rework
 
-Owner review returned the initial draft for correction. Owner selected a separate norm with MINOR and removal of the account name from current text while retaining history. SP-205 and a dedicated correspondence field stay in the existing receipt; no new role/gate/register. Current candidate neutral/Codex/DSH3.2.0, Claude2.3.0. [Correction groups and retained original evidence](notes/brownfield-source-correspondence.md); [tasks](TASKS.md). Revised full suites, scoped checks and independent re-review pass with a bounded test-only follow-up; PR update is next. Main integration, installation and deferred work remain separate.
+Owner review returned the initial draft for correction. Owner selected a separate norm with MINOR and removal of the account name from current text while retaining history. SP-205 and a dedicated correspondence field stay in the existing receipt; no new role/gate/register. Current candidate neutral/Codex/DSH3.2.0, Claude2.3.0. [Correction groups and retained original evidence](notes/brownfield-source-correspondence.md); [tasks](TASKS.md). Revised full suites, scoped checks and independent re-review pass with a bounded test-only follow-up; Revised source f2ac31a is delivered in PR19 for owner re-review. Main integration, installation and deferred work remain separate.
 
 ## Previous delivery: QA-REFLECT PR17 merged and installed
 

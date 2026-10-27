@@ -8,7 +8,7 @@ Owner-selected correction, 2026-10-27: remove the account name from current text
 |---|---|---|
 | BF-SOURCE-T1 — existing-receipt correspondence | Superseded by T3 | Initial patch candidate and review missed source-transfer authority, semver and receipt/example issues; history retained. |
 | BF-SOURCE-T2 — initial validation and delivery | Historical; not revised-candidate proof | Original suites passed and draft PR19 was delivered at997adbf; owner review returned it for correction. |
-| BF-SOURCE-T3 — owner-selected norm and review corrections | Checked; PR update next | All13 items have dispositions; SP-205/MINOR, dedicated field, traceable exclusions, form/example, source identities and records corrected. Full suites plus bounded strengthened-test follow-up and independent re-review pass. History preserved; main/install remain separate. |
+| BF-SOURCE-T3 — owner-selected norm and review corrections | Delivered; owner review next | All13 items have dispositions; SP-205/MINOR, dedicated field, traceable exclusions, form/example, source identities and records corrected. Full suites plus bounded strengthened-test follow-up and independent re-review pass. History preserved; source f2ac31a delivered in PR19, main/install remain separate. |
 
 
 ## QA-REFLECT — QA boundaries and critical reflection (PR17 merged and installed)
