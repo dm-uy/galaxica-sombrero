@@ -1,6 +1,10 @@
 # Methodology project route
 
-## Current: QA-REFLECT PR17 merged and installed
+## Current: brownfield source-obligation correspondence
+
+Owner selected a bounded documentation clarification of the existing specification receipt. [Scope, reconciliation and checks](notes/brownfield-source-correspondence.md); [tasks](TASKS.md). The isolated candidate passed existing root/native suites, adapters, bounded format checks and independent document review. Branch/draft-PR delivery is next; main integration and installation remain separate. No new software run, role/gate or comparative pilot; previous delivery and all held obligations remain below.
+
+## Previous delivery: QA-REFLECT PR17 merged and installed
 
 Owner-approved bounded clarification follows the consumer-run review and four independent critiques. [Scope, decisions and evidence](notes/qa-reflection-clarification.md); [tasks](TASKS.md). The delivered snapshot dc25ea4 received two independent reviews and full green root/native-suite results. Bounded annotation/record/reference corrections and affected independent verification are complete; original evidence remains identified in the result note. The owner subsequently approved merge and installation: PR17 merged at a321003 and working packages were updated, with fresh Codex discovery, Claude binding and bounded DSH profile checks. [Installation receipt and limits](notes/qa-reflection-clarification.md#merge-and-installation-2026-10-21). Earlier route and held work remain unchanged.
 

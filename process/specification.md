@@ -40,6 +40,28 @@ A specification connects an actual request and measured input to a bounded, veri
 
 [Role returns](../protocols/role-returns.md), [delegation](../flow/delegation.md), [phases](../flow/phases.md) and gates retain their current ownership and status semantics. The source producer promises deficiency transport for both classifications; some donor consumers transported it only for brownfield. Universal transport above preserves the duty rather than copying that consumer defect. Donor repairs and runtime implementation are separate work.
 
+For BROWNFIELD, the existing source-to-final and converse review is recorded in the
+specification receipt's `Task/tracker comparison`, with source pointers in `Input RECON`.
+For each substantive obligation in the declared, relevant input population, identify its
+source location and wording or a faithful bounded summary, then its exact BR, AC or boundary
+location in the specification. Preserve conditions, quantifiers, prohibitions and exceptions;
+a source can contain several obligations, and citing that source once does not account for
+all of them. A combined BR may cover several obligations only while retaining their meaning.
+
+If an obligation is not carried into the specification, record its disposition and the
+actual basis or decision reference: superseded, deferred, excluded within authorized scope,
+or unresolved. A disposition does not grant authority to drop an obligation. Conversely,
+identify the source or existing derivation/assumption basis for substantive BRs and boundaries;
+agent-authored additions do not become approved intent through this correspondence.
+
+Use the receipt's existing author/validator, input limits and readiness outcome to state who
+checked this correspondence, its actual extent, unresolved mappings and unavailable inputs.
+Apply the existing deficiency and human-decision routes to unresolved items; do not claim
+complete correspondence merely because every source was opened or every BR has a citation.
+This clarifies the existing review result, not a new register, requirement-ID scheme, role,
+mandatory blind-extraction pass, owner gate or implementation-stage QA obligation. Reuse existing
+source references and project homes rather than copying the requirements into parallel documents.
+
 <!-- anchor: process.specification.form -->
 
 ## Full authoring and validation receipt form
@@ -73,6 +95,9 @@ Author / validator: [Actual responsibilities and evidence]
 Input RECON: [Measured source/consumer population and limits]
 Approval: [Exact authority/scope/reference; separate integration state]
 Task/tracker comparison: [Compared inputs, differences or none; write authorization is separate]
+[BROWNFIELD: each relevant source obligation/location → exact BR/AC/boundary, or disposition
+with authority/basis; reverse source/derivation links; reviewer, extent and unresolved/access limits
+use the existing Author / validator, Input RECON and Readiness outcome fields]
 Classification/profile: [Actual source basis and architecture authority]
 Done when / Stop and ask when: [Actual finish line and task-specific edges]
 Complete-profile/document check: [Contracts/markers/links/BR/AC/scope/graph/delivery and limits]
@@ -118,6 +143,19 @@ $END_ARTIFACT_DECISION_DEFICIENCIES
 $END_SECTION_DISPOSITIONS
 $END_SPECIFICATION_RECEIPT
 ```
+
+Fictional brownfield correspondence in that same receipt, not a separate ledger:
+
+| Source obligation | Specification location or disposition | Basis / check |
+|---|---|---|
+| Brief paragraph 2: export all records, including archived records | BR-2; AC-EXPORT-1 explicitly includes archived records | Validator compared the full obligation and its qualifier with both locations |
+| Brief paragraph 3: retain the existing file format | BR-1; AC-REGRESSION-1 names the preserved format | Compatibility is not inferred from an unrelated green suite |
+| Earlier decision D1: CSV output | Superseded by D2 selecting JSON | Actual authorized decision D2; no silent deletion or agent-selected replacement |
+
+If BR-2 instead says only “export active records”, the archived-record obligation is still
+unaccounted for even when the brief is marked read and every BR has a source citation. Record
+the mismatch through the existing deficiency/readiness procedure before claiming the spec ready.
+An inaccessible appendix remains an explicit coverage limit, not an assumed empty obligation set.
 
 <!-- anchor: process.specification.example -->
 

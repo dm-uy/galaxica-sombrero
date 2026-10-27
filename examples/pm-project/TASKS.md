@@ -1,3 +1,12 @@
+# Brownfield source-obligation correspondence
+
+Owner-authorized documentation clarification, 2026-10-27. [Scope and evidence](notes/brownfield-source-correspondence.md).
+
+| Task | State | Finish / next action |
+|---|---|---|
+| BF-SOURCE-T1 — clarify the existing brownfield receipt | Checked locally | Source correspondence/disposition wording and example; preserve roles, gates, original norms and runtime schemas. |
+| BF-SOURCE-T2 — validation and review delivery | Checks passed; delivery next | Full existing suites, adapters, bounded format and independent document review complete. Commit and draft PR next; main merge and installation remain separate. |
+
 # Current maintainer tasks
 
 ## QA-REFLECT — QA boundaries and critical reflection (PR17 merged and installed)

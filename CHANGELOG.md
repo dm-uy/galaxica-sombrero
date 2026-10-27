@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.1.1
+
+- Clarify the existing brownfield source-to-specification review in the specification receipt: map relevant source obligations to exact BR/AC/boundary locations or authorized dispositions, preserve qualifiers and reverse provenance, and report checked extent and limits.
+- Reuse Input RECON, Task/tracker comparison, author/validator and readiness fields; no new norm, register, role, phase, gate, checker or runtime schema. Synchronize current Codex/DSH3.1.1 and Claude2.2.1 bindings over neutral3.1.1; installation remains separate.
+
 ## 3.1.0
 
 - Clarify the existing strict QA gate for inherited suite failures, masked assertions, partial achievements and probe-effect incidents; preserve QA-602, canonical statuses and authentic scope decisions.

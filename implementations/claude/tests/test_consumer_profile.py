@@ -126,7 +126,7 @@ BARE_ORIENT = "(bare `orient` only when `command -v orient` resolves to that lau
 BIN = "${CLAUDE_PLUGIN_ROOT}/bin/"
 BLOCKED_PREFIX = "methodology-claude BLOCKED: "
 PROFILE = "methodology-consumer-pm/1.0.0"
-HEADINGS = ["# Consumer PM profile for Claude Code — methodology-claude 2.2.0", "## Claude Code deltas", "### 1. Invocation",
+HEADINGS = ["# Consumer PM profile for Claude Code — methodology-claude 2.2.1", "## Claude Code deltas", "### 1. Invocation",
             "### 2. Consent", "### 3. Delegation model", "### 4. No package hook", "### 5. Optional per-project SessionStart hook"]
 PLUGIN_REFERENCE = re.compile(r"\$\{CLAUDE_PLUGIN_ROOT\}/([A-Za-z0-9_./-]+)")
 MARKDOWN_LINK = re.compile(r"\]\(([^)\s]+)\)")
@@ -538,7 +538,7 @@ def _carrier_problems(text, base):
 # region FUNC__routing_problems [DOMAIN(9): Routing; CONCEPT(10): NamedCarrierAndLaunchers; TECH(6): re]
 ## @purpose List every way the package texts fail the M37 routing: a routed skill without the carrier, the orient launcher or the profile identity, a pm-bootstrap without the other launchers and the templates, a searcher with the wrong tools or no carrier, a stale version signature, or any unresolved reference.
 ## @uses test_consumer_profile._references
-## @io Input: texts dict of str package-relative path to str text, as returned by _package_texts (a mutated copy for a contrary control). Output: list of str problems, empty exactly when the nine ROUTED skills name the carrier and ${CLAUDE_PLUGIN_ROOT}/bin/orient and, except the two IDENTITY_EXEMPT documentation entries, the profile identity; pm-bootstrap also names bin/codemap, bin/markup-migrate, ../codex/skills/pm/templates/ and still the neutral templates index; the searcher names the carrier and bin/codemap and its tools line is exactly Read, Glob, Grep; semantic-exoskeleton and devplan-protocol contain methodology-claude 2.2.0 and no 2.0.2; and no listed text has an unresolved reference.
+## @io Input: texts dict of str package-relative path to str text, as returned by _package_texts (a mutated copy for a contrary control). Output: list of str problems, empty exactly when the nine ROUTED skills name the carrier and ${CLAUDE_PLUGIN_ROOT}/bin/orient and, except the two IDENTITY_EXEMPT documentation entries, the profile identity; pm-bootstrap also names bin/codemap, bin/markup-migrate, ../codex/skills/pm/templates/ and still the neutral templates index; the searcher names the carrier and bin/codemap and its tools line is exactly Read, Glob, Grep; semantic-exoskeleton and devplan-protocol contain methodology-claude 2.2.1 and no 2.0.2; and no listed text has an unresolved reference.
 ##   Side effects: none. Guarantees: the same predicate judges the real texts and the contrary in-memory controls. Raises: KeyError when a required text is absent from texts. System importance: 9.
 ##   Example: pm-bootstrap text without the templates directory name yields a problem naming it.
 ## @complexity 7
@@ -566,7 +566,7 @@ def _routing_problems(texts):
             problems.append("searcher lacks " + needle)
     for topic in ("semantic-exoskeleton", "devplan-protocol"):
         body = texts["skills/%s/SKILL.md" % topic]
-        if "methodology-claude 2.2.0" not in body or "2.0.2" in body:
+        if "methodology-claude 2.2.1" not in body or "2.0.2" in body:
             problems.append(topic + " version signature")
     # END_BLOCK_BusinessLogic
     # START_BLOCK_Result
@@ -1354,7 +1354,7 @@ def test_carrier_states_only_declared_deltas(caplog):
 
 
 # region FUNC_test_routed_entries_name_carrier_and_launchers [DOMAIN(9): Routing; CONCEPT(10): NamedCarrierAndLaunchers, ReferenceResolution; TECH(7): re, pathlib]
-## @purpose Prove that the nine routed skills name the carrier and the orient launcher (seven of them also the profile identity), pm-bootstrap also names the other launchers and the Codex templates and keeps its neutral templates index, the searcher names the carrier and bin/codemap with tools exactly Read, Glob, Grep, the two version-signature skills read 2.2.0, and that every plugin-root reference and relative link of all 28 skills, six agents, the carrier and the runtime reference resolves, with contrary in-memory controls refused by the same predicate.
+## @purpose Prove that the nine routed skills name the carrier and the orient launcher (seven of them also the profile identity), pm-bootstrap also names the other launchers and the Codex templates and keeps its neutral templates index, the searcher names the carrier and bin/codemap with tools exactly Read, Glob, Grep, the two version-signature skills read 2.2.1, and that every plugin-root reference and relative link of all 28 skills, six agents, the carrier and the runtime reference resolves, with contrary in-memory controls refused by the same predicate.
 ## @uses test_consumer_profile._package_texts, test_consumer_profile._routing_problems, test_consumer_profile._references, test_consumer_profile._show
 ## @io Input: caplog. Output: None after the real package texts have no routing problem (28 skills, 6 agents, carrier, runtime read), and a copy without the carrier name in one routed body, a copy whose pm-bootstrap names a missing Codex directory, a copy with a searcher tools line that adds Bash, and a copy with a stale version signature each yield a problem.
 ##   Side effects: file reads only. Guarantees: finite text predicates; whether the routed text means the right thing is the independent review's judgment (AC4). Raises: AssertionError on any difference. System importance: 9.
@@ -1374,7 +1374,7 @@ def test_routed_entries_name_carrier_and_launchers(caplog):
         "carrier name removed": _variant(texts, "skills/roadmap/SKILL.md", CARRIER, "${CLAUDE_PLUGIN_ROOT}/references/claude-runtime.md"),
         "missing codex directory": _variant(texts, "skills/pm-bootstrap/SKILL.md", "pm/templates/", "pm/templates-missing/"),
         "searcher with Bash": _variant(texts, "agents/searcher.md", "tools: Read, Glob, Grep", "tools: Read, Glob, Grep, Bash"),
-        "stale signature": _variant(texts, "skills/devplan-protocol/SKILL.md", "methodology-claude 2.2.0", "methodology-claude 2.0.2"),
+        "stale signature": _variant(texts, "skills/devplan-protocol/SKILL.md", "methodology-claude 2.2.1", "methodology-claude 2.0.2"),
     }
     refused = {name: _routing_problems(body) for name, body in controls.items()}
     _show(caplog.records)

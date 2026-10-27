@@ -1,6 +1,6 @@
 {
   "name": "@methodology/dsh",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "private": true,
   "description": "DeepSeek Harness binding of the harness-neutral agent methodology: PM lifecycle, gated feature development with independent QA and Review, role carriers and the on-demand skill catalog.",
   "license": "MIT",

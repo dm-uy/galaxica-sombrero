@@ -5,7 +5,7 @@ description: "Семантическая разметка и контракты 
 
 # semantic-exoskeleton
 
-METHODOLOGY_VERSION: 3.1.0. Package binding: methodology-claude 2.2.0, run-state contract methodology-claude/1.0.0, schema 2, colocated-in-place. Copy the neutral revision you actually loaded into a new plan and keep the package, adapter and source identities beside it; this stamp does not prove that anything was read.
+METHODOLOGY_VERSION: 3.1.1. Package binding: methodology-claude 2.2.1, run-state contract methodology-claude/1.0.0, schema 2, colocated-in-place. Copy the neutral revision you actually loaded into a new plan and keep the package, adapter and source identities beside it; this stamp does not prove that anything was read.
 
 Owners — read in full before acting:
 - `${CLAUDE_PLUGIN_ROOT}/../../concepts/principles.md`

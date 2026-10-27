@@ -1,6 +1,6 @@
-# Claude Code runtime — methodology-claude 2.2.0
+# Claude Code runtime — methodology-claude 2.2.1
 
-This is the runtime procedure of the native Claude Code package for neutral methodology 3.1.0. It says how Claude Code carries the neutral rules; it restates none of them. Where this file and a neutral owner seem to differ, the neutral owner wins and the difference is a package defect.
+This is the runtime procedure of the native Claude Code package for neutral methodology 3.1.1. It says how Claude Code carries the neutral rules; it restates none of them. Where this file and a neutral owner seem to differ, the neutral owner wins and the difference is a package defect.
 
 ## 1. Profile and binding
 
