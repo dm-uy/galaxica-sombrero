@@ -1,6 +1,6 @@
 # Current maintainer tasks
 
-## BF-SOURCE — brownfield source-obligation correspondence (PR19 rework)
+## BF-SOURCE — brownfield source-obligation correspondence (PR19 merged and installed)
 
 Owner-selected correction, 2026-10-27: remove the account name from current text while retaining history; introduce SP-205 with MINOR. [Scope, earlier failed rationale and corrections](notes/brownfield-source-correspondence.md).
 
@@ -8,7 +8,8 @@ Owner-selected correction, 2026-10-27: remove the account name from current text
 |---|---|---|
 | BF-SOURCE-T1 — existing-receipt correspondence | Superseded by T3 | Initial patch candidate and review missed source-transfer authority, semver and receipt/example issues; history retained. |
 | BF-SOURCE-T2 — initial validation and delivery | Historical; not revised-candidate proof | Original suites passed and draft PR19 was delivered at997adbf; owner review returned it for correction. |
-| BF-SOURCE-T3 — owner-selected norm and review corrections | Delivered; owner review next | All13 items have dispositions; SP-205/MINOR, dedicated field, traceable exclusions, form/example, source identities and records corrected. Full suites plus bounded strengthened-test follow-up and independent re-review pass. History preserved; source f2ac31a delivered in PR19, main/install remain separate. |
+| BF-SOURCE-T3 — owner-selected norm and review corrections | Accepted; PR19 merged | All13 items have dispositions; SP-205/MINOR, dedicated field, traceable exclusions, form/example, source identities and records corrected. Full suites plus bounded strengthened-test follow-up and independent re-review pass. History preserved; corrected result accepted and PR19 merged at17574b8. |
+| BF-SOURCE-T4 — accepted merge and installed-version update | Complete | Explicit owner grant fulfilled: Codex/DSH3.2.0, Claude2.3.0. Fresh Codex discovery/integrity, Claude binding and DSH web probes pass; desktop runtime discovery remains unverified. [Receipt](notes/brownfield-source-correspondence.md#merge-and-installed-version-update--2026-10-27). |
 
 
 ## QA-REFLECT — QA boundaries and critical reflection (PR17 merged and installed)
