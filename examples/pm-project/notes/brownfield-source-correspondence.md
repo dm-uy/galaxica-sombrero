@@ -34,4 +34,12 @@ Corrected Git-free snapshot: root605passed in128.13s, Codex146passed in66.11s, D
 
 Independent bounded document review and rereviews found no remaining actionable defect. They verified preservation of existing norms and roles/gates, semver rationale, source/receipt placement, the archived-record negative example, exact current-version control corrections and the single carrier repin. Review agents wrote no files. Whitespace and source-snapshot comparison passed; subsequent closure edits affect project records only. No real-agent efficacy, comparative-pilot outcome or installed adoption is claimed.
 
-Source result is ready for branch delivery and draft PR. Owner acceptance for main integration and installation remains pending; the main checkout is unchanged and clean.
+Source result is delivered through draft PR19. Owner acceptance for main integration and installation remains pending; the main checkout is unchanged and clean.
+
+### Review delivery
+
+Checked source commit `f554d845f69eadeddc0af13073cd7efca8db9255` was committed with the existing repository-local identity and pushed to `origin/codex/brownfield-source-coverage`. [Draft PR19](https://github.com/dm-uy/galaxica-sombrero/pull/19) is OPEN, base main; API readback confirmed that exact head at creation. This delivery receipt and current-record closure follow as a record-only commit; the PR's current head is read from Git/API, not asserted as a self-referential hash here.
+
+The first PR-create attempt failed with `must be a collaborator`. Separate follow-up calls were again using dvalitov despite the earlier successful account switch. No PR existed for the branch. Selecting dm-uy and verifying `gh api user` in the same invocation as creation resolved delivery; the actor was confirmed before creating the draft. Preserve this observed client/account behavior without assuming why it changed or repeatedly relying on a prior call's active account. No credential payload was read or published.
+
+Final reportable suite summaries, adapter results, synthetic-list scope and frozen snapshot inventory were independently verified from their original artifacts. The main checkout remains clean at `77c8cfe`; no merge, installed-package update or deferred continuation was performed. Next action is owner review of PR19 and its separate integration decision.

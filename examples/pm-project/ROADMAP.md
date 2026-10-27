@@ -2,7 +2,7 @@
 
 ## Current: brownfield source-obligation correspondence
 
-Owner selected a bounded documentation clarification of the existing specification receipt. [Scope, reconciliation and checks](notes/brownfield-source-correspondence.md); [tasks](TASKS.md). The isolated candidate passed existing root/native suites, adapters, bounded format checks and independent document review. Branch/draft-PR delivery is next; main integration and installation remain separate. No new software run, role/gate or comparative pilot; previous delivery and all held obligations remain below.
+Owner selected a bounded documentation clarification of the existing specification receipt. [Scope, reconciliation and checks](notes/brownfield-source-correspondence.md); [tasks](TASKS.md). The isolated candidate passed existing root/native suites, adapters, bounded format checks and independent document review. [Draft PR19](https://github.com/dm-uy/galaxica-sombrero/pull/19) is delivered for owner review; main integration and installation remain separate. No new software run, role/gate or comparative pilot; previous delivery and all held obligations remain below.
 
 ## Previous delivery: QA-REFLECT PR17 merged and installed
 

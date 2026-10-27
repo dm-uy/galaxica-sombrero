@@ -2,13 +2,13 @@
 
 ## Owner decision
 
-No new scope approval is needed. The owner authorized the existing-receipt clarification in this chat. Main integration and installation are separate, ungranted actions; prepare the checked branch and draft PR for review first.
+The checked clarification is delivered in [draft PR19](https://github.com/dm-uy/galaxica-sombrero/pull/19). Next owner action: review the concrete result and decide integration. Implementation authorization is fulfilled; main merge and installation remain separate, ungranted actions.
 
 ## Current work
 
 Canonical main starts clean at `77c8cfe`. Root is the sole writer in isolated `codex/brownfield-source-coverage`. The source elaborates the existing source-to-final/converse duty: map each relevant source obligation to BR/AC/boundary or an authorized disposition, preserve qualifiers, and state checked coverage/limits in the existing receipt. No new role, ledger, mandatory blind extraction, gate or checker. Patch neutral/Codex/DSH3.1.1, Claude2.2.1; current package identities are synchronized, not installed.
 
-[Authority, reconciliation and actual checks](notes/brownfield-source-correspondence.md); [tasks](TASKS.md). Existing full root and three native suites pass; adapters, bounded format and independent document review pass. Next: commit and deliver draft PR. Original failed attempts and evidence limits remain in the note.
+[Authority, reconciliation and actual checks](notes/brownfield-source-correspondence.md); [tasks](TASKS.md). Existing full root and three native suites pass; adapters, bounded format and independent document review pass. Checked source f554d84 is delivered through draft PR19; subsequent closure changes only project records. Original failed attempts, account-selection observation and evidence limits remain in the note. No source work remains before owner review.
 
 ## Previous delivery
 
