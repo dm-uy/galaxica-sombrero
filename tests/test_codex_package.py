@@ -79,13 +79,13 @@ def _package_assembly(root):
             raise ValueError("regular owned co-located package directory required")
         if set(p.name for p in package.parent.iterdir() if p.name != ".DS_Store") != DECLARED_PACKAGES:
             raise ValueError("unknown sibling package")
-        if not (root / "SPEC_VERSION").is_file() or (root / "SPEC_VERSION").read_text() != "3.1.1\n":
+        if not (root / "SPEC_VERSION").is_file() or (root / "SPEC_VERSION").read_text() != "3.2.0\n":
             raise ValueError("unsupported detached neutral dependency")
         if not all((root / rel).is_file() and "status: draft\n" in (root / rel).read_text() for rel in CORE):
             raise ValueError("missing substantive neutral core")
         operation = "Layout"
         layout = json.loads((package / "references/package-layout.json").read_text())
-        if not isinstance(layout, dict) or set(layout) != {"package", "version", "profile", "files", "roles"} or layout.get("package") != "methodology-codex" or layout.get("version") != "3.1.1" or layout.get("profile") != "colocated-explicit-source" or layout.get("roles") != ROLES:
+        if not isinstance(layout, dict) or set(layout) != {"package", "version", "profile", "files", "roles"} or layout.get("package") != "methodology-codex" or layout.get("version") != "3.2.0" or layout.get("profile") != "colocated-explicit-source" or layout.get("roles") != ROLES:
             raise ValueError("unsupported package profile")
         rows = layout.get("files")
         if not isinstance(rows, list) or not rows:
@@ -124,7 +124,7 @@ def _package_assembly(root):
             raise ValueError("missing or undeclared actual package member")
         operation = "Metadata"
         plugin = json.loads((package / ".codex-plugin/plugin.json").read_text())
-        if plugin.get("name") != "methodology-codex" or plugin.get("version") != "3.1.1":
+        if plugin.get("name") != "methodology-codex" or plugin.get("version") != "3.2.0":
             raise ValueError("native metadata identity mismatch")
         LOGGER.info("[IMP:9][_package_assembly][VALIDATION_SUCCESS] members=%d", len(actual))
         return declared

@@ -16,6 +16,8 @@ C2 delivers73members/27skills/sixhelpers/sixroles: opt-in consumer PM profile,13
 
 At accepted C2, neutral1.1 retained71owners/69drafts/twostubs,1234norms/444anchors,28capabilities/sevenparameters. Codex wire2.0/schema2 and established roles/gates remain unchanged. At accepted C2, Claude source1.0/59members/28skills was protected apart from its approved shared-topic test exception; all29assertions remained. M30 subsequently advances only its approved source/metadata bindings to1.1. Installed activation and full native behavioral parity are not established by source delivery.
 
+PR19 is an unmerged candidate: neutral/Codex/DSH3.2.0 and Claude2.3.0 add SP-205 under the owner-selected MINOR correction. These are candidate source identities, not the actual main/installed baseline above. Reconcile this sentence and the main-version receipt only after an authorized merge. [Current correction and evidence](notes/brownfield-source-correspondence.md).
+
 ## Retained C3 outcome — separate branch
 
 The separate C3 branch source2.3/77members/27skills/sevenhelpers/sixroles remains **unaccepted**; it is not imported into this branch. A3 is terminal ESCALATED/review after cumulative Debug4/global4. Current independent QA2 passed597/158/526 and real source-stage children, but whole Review confirmed a protected-read bypass through symlink plus `..` normalization. No clean Review/Finalize or result acceptance follows. [Current result and full history](notes/m28-c3-result.md).

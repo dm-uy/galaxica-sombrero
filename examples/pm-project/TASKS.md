@@ -1,13 +1,15 @@
-# Brownfield source-obligation correspondence
+# Current maintainer tasks
 
-Owner-authorized documentation clarification, 2026-10-27. [Scope and evidence](notes/brownfield-source-correspondence.md).
+## BF-SOURCE — brownfield source-obligation correspondence (PR19 rework)
+
+Owner-selected correction, 2026-10-27: remove the account name from current text while retaining history; introduce SP-205 with MINOR. [Scope, earlier failed rationale and corrections](notes/brownfield-source-correspondence.md).
 
 | Task | State | Finish / next action |
 |---|---|---|
-| BF-SOURCE-T1 — clarify the existing brownfield receipt | Checked locally | Source correspondence/disposition wording and example; preserve roles, gates, original norms and runtime schemas. |
-| BF-SOURCE-T2 — validation and review delivery | Complete; owner review next | Full existing suites, adapters, bounded format and independent document review passed. [Draft PR19](https://github.com/dm-uy/galaxica-sombrero/pull/19) delivered; main merge and installation remain separate. |
+| BF-SOURCE-T1 — existing-receipt correspondence | Superseded by T3 | Initial patch candidate and review missed source-transfer authority, semver and receipt/example issues; history retained. |
+| BF-SOURCE-T2 — initial validation and delivery | Historical; not revised-candidate proof | Original suites passed and draft PR19 was delivered at997adbf; owner review returned it for correction. |
+| BF-SOURCE-T3 — owner-selected norm and review corrections | Checked; PR update next | All13 items have dispositions; SP-205/MINOR, dedicated field, traceable exclusions, form/example, source identities and records corrected. Full suites plus bounded strengthened-test follow-up and independent re-review pass. History preserved; main/install remain separate. |
 
-# Current maintainer tasks
 
 ## QA-REFLECT — QA boundaries and critical reflection (PR17 merged and installed)
 

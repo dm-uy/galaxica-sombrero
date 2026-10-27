@@ -1,9 +1,10 @@
 # Changelog
 
-## 3.1.1
+## 3.2.0
 
-- Clarify the existing brownfield source-to-specification review in the specification receipt: map relevant source obligations to exact BR/AC/boundary locations or authorized dispositions, preserve qualifiers and reverse provenance, and report checked extent and limits.
-- Reuse Input RECON, Task/tracker comparison, author/validator and readiness fields; no new norm, register, role, phase, gate, checker or runtime schema. Synchronize current Codex/DSH3.1.1 and Claude2.2.1 bindings over neutral3.1.1; installation remains separate.
+- Add SP-205 MUST for brownfield source-obligation correspondence in the existing specification receipt, with explicit source/obligation exclusions, exact BR/AC/boundary mappings or authorized dispositions, reverse provenance and checked extent/limits.
+- Give the correspondence its own field in that receipt, preserving Task/tracker comparison. The brownfield form points to it from Context / Input RECON. No new register, role, phase, gate, runtime checker or schema.
+- Synchronize current Codex/DSH3.2.0 and Claude2.3.0 bindings over neutral3.2.0. This MINOR supersedes the unaccepted PR19 patch candidate; source-transfer norms SP-401/SB-501 are not the authority for this new duty. Installation remains separate.
 
 ## 3.1.0
 

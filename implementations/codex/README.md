@@ -72,7 +72,7 @@ This follows the existing complete-snapshot transport, not a new installer or st
 
 ## Source loading and package contract
 
-Native Codex implementation package3.1.1 for neutral methodology3.1.1. Supported profile is a complete co-located checkout with explicit source loading. Resolve this actual package, its adapter and current neutral root; read [runtime](references/codex-runtime.md) and [adoption](references/adoption.md) before `$pm` or `$feature-dev`. Native installation uses a complete repository snapshot with a generated root transport manifest whose `skills` is `./implementations/codex/skills/`; this preserves the supported nested package binding. A detached package-only cache copy is unsupported; missing required neutral dependency is BLOCKED, never fallback to an older installed package.
+Native Codex implementation package3.2.0 for neutral methodology3.2.0. Supported profile is a complete co-located checkout with explicit source loading. Resolve this actual package, its adapter and current neutral root; read [runtime](references/codex-runtime.md) and [adoption](references/adoption.md) before `$pm` or `$feature-dev`. Native installation uses a complete repository snapshot with a generated root transport manifest whose `skills` is `./implementations/codex/skills/`; this preserves the supported nested package binding. A detached package-only cache copy is unsupported; missing required neutral dependency is BLOCKED, never fallback to an older installed package.
 
 `pm` resumes the actual five project record roles and prepares RECON/spec; `feature-dev` uses an authentic exact approved specification and actual target to dispatch native Bootstrap→Architect→Code→independent QA→Review→separately assigned Architect Finalize. Root alone owns state, counters and integration. This package launches no model engine or daemon and does not alter configured models. Inner roles cannot delegate/commit. Reading a carrier grants no role or consent.
 
@@ -92,7 +92,7 @@ Set PYTHONDONTWRITEBYTECODE=1 for Python checks; read warnings/full streams and 
 
 [Smoke specification](examples/smoke-spec.md) is a reusable useful inventory-report task with exact target paths and source-derived output/refusals. Templates never authenticate grants. Actual candidate-bound native execution and one real same-run checkpoint/resume, independent source/case/QA/Review/Finalize and committed-artifact proof remain required before claiming package acceptance; installed historical results do not substitute. SUCCESS does not authorize merge/install/publication. Matching concrete-result integration decision stays separate.
 
-Current source version is3.1.1 over neutral3.1.1. Wire methodology-codex/2.0.0 and schema2 remain unchanged; both complete review owners and the one-shot/loop three-artifact prompt route are read through current adoption. No loader activation or full-methodology parity is certified by this release.
+Current source version is3.2.0 over neutral3.2.0. Wire methodology-codex/2.0.0 and schema2 remain unchanged; both complete review owners and the one-shot/loop three-artifact prompt route are read through current adoption. No loader activation or full-methodology parity is certified by this release.
 
 ## Consumer profile and commands
 

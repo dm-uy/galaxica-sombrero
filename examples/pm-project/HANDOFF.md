@@ -1,14 +1,14 @@
-# Current: brownfield source-obligation receipt clarification
+# Current: PR19 rework after owner review
 
-## Owner decision
+## Owner decisions
 
-The checked clarification is delivered in [draft PR19](https://github.com/dm-uy/galaxica-sombrero/pull/19). Next owner action: review the concrete result and decide integration. Implementation authorization is fulfilled; main merge and installation remain separate, ungranted actions.
+Owner selected removal of the account name from current text with published history preserved, and a separate norm with MINOR. These decisions authorize the bounded rework; no second scope question is needed. Main integration and installation remain separate, ungranted actions.
 
 ## Current work
 
-Canonical main starts clean at `77c8cfe`. Root is the sole writer in isolated `codex/brownfield-source-coverage`. The source elaborates the existing source-to-final/converse duty: map each relevant source obligation to BR/AC/boundary or an authorized disposition, preserve qualifiers, and state checked coverage/limits in the existing receipt. No new role, ledger, mandatory blind extraction, gate or checker. Patch neutral/Codex/DSH3.1.1, Claude2.2.1; current package identities are synchronized, not installed.
+Root is the sole writer in isolated `codex/brownfield-source-coverage`, continuing from PR19 head997adbf. Canonical main remains clean at77c8cfe. Candidate versions: neutral/Codex/DSH3.2.0, Claude2.3.0. SP-205 now owns the explicit brownfield correspondence result in a dedicated field of the existing receipt. Procedure/form placement, relevance exclusions, inconsistent example and public current-note attribution are corrected; the initial PATCH/source-transfer rationale is withdrawn.
 
-[Authority, reconciliation and actual checks](notes/brownfield-source-correspondence.md); [tasks](TASKS.md). Existing full root and three native suites pass; adapters, bounded format and independent document review pass. Checked source f554d84 is delivered through draft PR19; subsequent closure changes only project records. Original failed attempts, account-selection observation and evidence limits remain in the note. No source work remains before owner review.
+[Authority, correction groups and historical checks](notes/brownfield-source-correspondence.md); [tasks](TASKS.md). Revised full suites, adapters, scoped identifier/format checks and full-list independent review pass; a subsequent test-only strengthening passed the complete affected module. Exact snapshots and limits are in the note. Next: normal commit/push update of the existing draft PR. No history rewrite or deferred continuation.
 
 ## Previous delivery
 

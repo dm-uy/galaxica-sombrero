@@ -84,7 +84,7 @@ def test_shipped_native_contracts(caplog):
 # region FUNC_test_actual_layout_and_adapter_contract [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Verify actual layout and adapter contract over actual owned inputs.
 ## @uses json.loads
-## @io Input: caplog: pytest.LogCaptureFixture. Cases: no parametrized inputs. Output: None after these concrete checks: layout['package'] == 'methodology-dsh' and layout['version'] == '3.1.1' and (layout['profile'] == 'colocated-explicit-source'); len(layout['files']) == 75 and len(adapter['files']) == 71 and (len(adapter['capabilities']) == 28) and (len(adapter['parameters']) == 7); adapter['spec_root'] == '../../' and adapter['spec_version'] == '3.1.1'; names == sorted(set(names)); set(layout['roles']) == {'architect', 'coder', 'debugger', 'qa', 'reviewer', 'searcher'}; not any((r.levelno 〉= logging.ERROR for r in caplog.records)). AssertionError denotes a failed promised check; expected refusals are explicitly caught in this test body. Side effects: only the actual owned fixture writes/child processes in this body; shared package and neutral corpus reads stay read-only. No native acceptance is inferred. Example: python3 -m pytest tests/test_native_contract.py::test_actual_layout_and_adapter_contract executes these exact cases. Importance:9.
+## @io Input: caplog: pytest.LogCaptureFixture. Cases: no parametrized inputs. Output: None after these concrete checks: layout['package'] == 'methodology-dsh' and layout['version'] == '3.2.0' and (layout['profile'] == 'colocated-explicit-source'); len(layout['files']) == 75 and len(adapter['files']) == 71 and (len(adapter['capabilities']) == 28) and (len(adapter['parameters']) == 7); adapter['spec_root'] == '../../' and adapter['spec_version'] == '3.2.0'; names == sorted(set(names)); set(layout['roles']) == {'architect', 'coder', 'debugger', 'qa', 'reviewer', 'searcher'}; not any((r.levelno 〉= logging.ERROR for r in caplog.records)). AssertionError denotes a failed promised check; expected refusals are explicitly caught in this test body. Side effects: only the actual owned fixture writes/child processes in this body; shared package and neutral corpus reads stay read-only. No native acceptance is inferred. Example: python3 -m pytest tests/test_native_contract.py::test_actual_layout_and_adapter_contract executes these exact cases. Importance:9.
 ## @complexity 5
 def test_actual_layout_and_adapter_contract(caplog):
     logger.info('[IMP:4][test_actual_layout_and_adapter_contract][START] owned behavioral verification')
@@ -92,9 +92,9 @@ def test_actual_layout_and_adapter_contract(caplog):
     caplog.set_level(logging.INFO)
     layout=json.loads((PACKAGE/'references/package-layout.json').read_text());adapter=json.loads((PACKAGE/'adapter.json').read_text())
     print('Actual layout/adapter populations:',len(layout['files']),len(adapter['files']),len(adapter['capabilities']),len(adapter['parameters']))
-    assert layout['package']=='methodology-dsh' and layout['version']=='3.1.1' and layout['profile']=='colocated-explicit-source'
+    assert layout['package']=='methodology-dsh' and layout['version']=='3.2.0' and layout['profile']=='colocated-explicit-source'
     assert len(layout['files'])==75 and len(adapter['files'])==71 and len(adapter['capabilities'])==28 and len(adapter['parameters'])==7
-    assert adapter['spec_root']=='../../' and adapter['spec_version']=='3.1.1'
+    assert adapter['spec_root']=='../../' and adapter['spec_version']=='3.2.0'
     names=[row['path'] for row in layout['files']];assert names==sorted(set(names))
     assert set(layout['roles'])=={'architect','coder','debugger','qa','reviewer','searcher'}
     logger.info('[IMP:9][test_actual_layout_and_adapter_contract][RESULT] declared populations verified; not semantic adoption proof')

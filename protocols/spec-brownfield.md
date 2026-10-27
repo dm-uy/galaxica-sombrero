@@ -80,10 +80,10 @@ $START_BODY
 ## Context / Input RECON
 [Measured identity, producers/consumers, current behavior, actual baseline test population,
 relevant current rules and source/evidence limits; addition in one sentence]
+[Source obligations, considered-source exclusions and dispositions: use Brownfield source
+correspondence in the existing specification receipt under SP-205; no separate register.]
 ## What we add
 [Measurable inputs/outputs, defaults, errors, persistence/lifecycle]
-[Use the existing specification receipt's Task/tracker comparison for source-obligation
-correspondence and dispositions under process/specification.md; do not add a parallel register.]
 ## Business Requirements
 BR-1: [Named compatibility/API/artifact/test population with exact authorized exceptions]
 BR-2: [Declarative new outcome]

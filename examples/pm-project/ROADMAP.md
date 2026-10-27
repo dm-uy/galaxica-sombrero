@@ -1,8 +1,8 @@
 # Methodology project route
 
-## Current: brownfield source-obligation correspondence
+## Current: PR19 source-obligation rework
 
-Owner selected a bounded documentation clarification of the existing specification receipt. [Scope, reconciliation and checks](notes/brownfield-source-correspondence.md); [tasks](TASKS.md). The isolated candidate passed existing root/native suites, adapters, bounded format checks and independent document review. [Draft PR19](https://github.com/dm-uy/galaxica-sombrero/pull/19) is delivered for owner review; main integration and installation remain separate. No new software run, role/gate or comparative pilot; previous delivery and all held obligations remain below.
+Owner review returned the initial draft for correction. Owner selected a separate norm with MINOR and removal of the account name from current text while retaining history. SP-205 and a dedicated correspondence field stay in the existing receipt; no new role/gate/register. Current candidate neutral/Codex/DSH3.2.0, Claude2.3.0. [Correction groups and retained original evidence](notes/brownfield-source-correspondence.md); [tasks](TASKS.md). Revised full suites, scoped checks and independent re-review pass with a bounded test-only follow-up; PR update is next. Main integration, installation and deferred work remain separate.
 
 ## Previous delivery: QA-REFLECT PR17 merged and installed
 
@@ -16,7 +16,7 @@ flowchart LR
 
 ## Retained: GRACE-Q2 integrated and delivered to origin/main
 
-One canonical checkout is the development source; preparation repositories are archival. Canonical main includes M30 source through owner-approved PR6 and the later M31/M33 updates. Canonical main carries neutral/Codex/DSH 3.1.0 and Claude 2.2.0 after PR17; M37/PR11 and M38/PR10 remain the preceding package checkpoints; accepted C2/bafec417 is the historical foundation, not the current version. C3 is not ready for merge. [Current C3 history/result](notes/m28-c3-result.md).
+One canonical checkout is the development source; preparation repositories are archival. Canonical main includes M30 source through owner-approved PR6 and the later M31/M33 updates. The actual main baseline remains neutral/Codex/DSH 3.1.0 and Claude 2.2.0 after PR17; PR19 candidate3.2.0/Claude2.3.0 is unmerged and recorded separately above; M37/PR11 and M38/PR10 remain the preceding package checkpoints; accepted C2/bafec417 is the historical foundation, not the current version. C3 is not ready for merge. [Current C3 history/result](notes/m28-c3-result.md).
 
 | Checkpoint | Current disposition |
 |---|---|
