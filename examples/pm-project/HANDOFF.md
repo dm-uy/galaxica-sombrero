@@ -1,18 +1,16 @@
-# Current: PR19 rework after owner review
+# Current: PR19 merged; installed versions updated
 
-## Owner decisions
+## Owner decisions and completion
 
-Owner selected removal of the account name from current text with published history preserved, and a separate norm with MINOR. These decisions authorize the bounded rework; no second scope question is needed. Main integration and installation remain separate, ungranted actions.
+The owner accepted the corrections and explicitly authorized PR19 merge and installed-version updates. Completed at merge17574b8; no remaining decision for this bounded task. [Acceptance, merge and installation receipt](notes/brownfield-source-correspondence.md#merge-and-installed-version-update--2026-10-27).
 
-## Current work
+## Current result
 
-Root is the sole writer in isolated `codex/brownfield-source-coverage`, continuing from PR19 head997adbf. Canonical main remains clean at77c8cfe. Candidate versions: neutral/Codex/DSH3.2.0, Claude2.3.0. SP-205 now owns the explicit brownfield correspondence result in a dedicated field of the existing receipt. Procedure/form placement, relevance exclusions, inconsistent example and public current-note attribution are corrected; the initial PATCH/source-transfer rationale is withdrawn.
+Neutral/Codex/DSH3.2.0 and Claude2.3.0 deliver SP-205 in the existing specification receipt. Codex uses an immutable complete merge snapshot: native installed/enabled3.2.0, fresh27-skill discovery and full427-file byte/mode integrity pass. Prior source/config backups are retained. Claude remains inline on canonical main:2.3.0 discovered, manifest and actual SessionStart binding pass. Both DSH profiles resolve3.2.0 and27skills; fresh web composition passes. Desktop CLI composition remains host-refused; fresh desktop runtime discovery is unverified.
 
-[Authority, correction groups and historical checks](notes/brownfield-source-correspondence.md); [tasks](TASKS.md). Revised full suites, adapters, scoped identifier/format checks and full-list independent review pass; a subsequent test-only strengthening passed the complete affected module. Exact snapshots and limits are in the note. Revised source f2ac31a is delivered through the existing draft PR19; this closure changes records only. Next: owner re-review of the corrected result. No history rewrite or deferred continuation.
+## Continuation
 
-## Previous delivery
-
-PR17 merged and working packages were updated under the prior owner grant. [Receipt and limits](notes/qa-reflection-clarification.md#merge-and-installation-2026-10-21). Codex installed3.1.0, Claude in-place2.2.0 and DSH bindings3.1.0 remain the delivered baseline; this branch is not their activation. Fresh-client/restart caveats and DSH desktop-discovery limits remain in that receipt.
+Use fresh client sessions and restart guidance as needed; no active app/session was restarted. This chat's original catalog is not hot-reload evidence. [Task history, original failures and bounded checks](notes/brownfield-source-correspondence.md); [tasks](TASKS.md). Source tests belong to their recorded snapshots; installation probes establish loading/integrity, not new software efficacy. This receipt-only closure does not repackage the Codex snapshot or publish a release tag. Next substantive work requires its own scope; the retained route below is not automatically resumed.
 
 ## Retained obligations and relevant traps
 
