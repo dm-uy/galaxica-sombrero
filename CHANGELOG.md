@@ -1,5 +1,11 @@
 # Changelog
 
+## Claude source2.4.0 (neutral3.2.0 unchanged)
+
+- The five lifecycle commands (`pm-bootstrap`, `pm-plan-batch`, `pm-run-batch`, `pm-handoff`, `pm-review-run`) drop `disable-model-invocation: true`: the root may invoke one when its step is due, as the owner may type it. Owner request of 2026-10-28 in a consumer workspace session: «Так не годится. Надо сделать так, чтобы ты мог запускать сам автономно эти вещи. Это запрещено на уровне плагина, потому что плагин-то, собственно говоря, наш, и мы можем внести в него изменения для твоей имплементации, если он тебя блокирует.»
+- Consent is unchanged: each command states that its invocation is never consent and still authenticates its recorded grant (the batch's Gate A for `pm-run-batch`) and asks with AskUserQuestion where its gate falls due. Only an owner-typed `pm-run-batch` is the opt-in for the feature-dev Workflow; after a model invocation the root runs M tasks on the interactive feature-dev route unless the owner opted into the Workflow in the conversation. Their descriptions gain Russian use-case labels like the other 23 skills.
+- The package contract test now refuses any skill that disables model invocation and any lifecycle command without the consent sentence. Runtime sections 4 and 5, the feature-dev skill, the README and the source disposition follow. Package identity 2.3.0 → 2.4.0 in the manifest, layout, hooks, run-state helper and current-version oracles. Membership, roles, wire, schema, hooks' behaviour and Codex are unchanged; installation remains separate.
+
 ## 3.2.0
 
 - Add SP-205 MUST for brownfield source-obligation correspondence in the existing specification receipt, with explicit source/obligation exclusions, exact BR/AC/boundary mappings or authorized dispositions, reverse provenance and checked extent/limits.

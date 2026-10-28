@@ -1,13 +1,14 @@
 ---
 name: pm-plan-batch
-description: "Owner-invoked command: propose the next task or bounded batch in TASKS from the route's current step, the requirements and the open questions, and pass the batch gate through a structured question."
+description: "Планирование батча: «спланируй батч», «нарежь следующий батч», «что войдёт в следующий пакет задач». Propose the next task or bounded batch in TASKS from the route's current step, the requirements and the open questions, and pass the batch gate through a structured question. The owner may type it or the model may invoke it when the route's next step needs a packet; the invocation is never consent."
 argument-hint: "[route step or focus]"
-disable-model-invocation: true
 ---
 
 # pm-plan-batch
 
 Turn the route's next step into a reviewable packet of tasks. Drafting never activates it: only the owner's approval does.
+
+**Invocation.** The owner may type this command, or the root may invoke it itself when the route's next step needs a packet. Either way the invocation is never consent: drafting never activates a packet, and only the owner's structured answer does.
 
 Owners — read in full before acting:
 - `${CLAUDE_PLUGIN_ROOT}/../../process/batch.md`

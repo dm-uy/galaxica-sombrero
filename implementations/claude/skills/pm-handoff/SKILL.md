@@ -1,13 +1,14 @@
 ---
 name: pm-handoff
-description: "Owner-invoked command: close a working session so the next one continues from the files without loss. Reconciles changed task states and evidence, updates HANDOFF when needed, uses the adopted orient check and reports what waits for the owner."
+description: "Закрытие сессии с передачей: «закрой сессию», «сделай хэндовер», «зафиксируй состояние перед перерывом». Close a working session so the next one continues from the files without loss. Reconciles changed task states and evidence, updates HANDOFF when needed, uses the adopted orient check and reports what waits for the owner. The owner may type it or the model may invoke it at a session close; the invocation is never consent."
 argument-hint: "[closing note]"
-disable-model-invocation: true
 ---
 
 # pm-handoff
 
 Leave a baton that a reader with no chat can pick up: the goal, the current task, the next authorized action, the owner-only decisions and the latest evidence.
+
+**Invocation.** The owner may type this command, or the root may invoke it itself at a session close or before a planned compaction. Either way the invocation is never consent: a commit still needs its matching grant, and owner decisions stay in the handoff's first block.
 
 Owners — read in full before acting:
 - `${CLAUDE_PLUGIN_ROOT}/../../process/session.md`

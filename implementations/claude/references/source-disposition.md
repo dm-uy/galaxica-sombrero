@@ -1,4 +1,4 @@
-# Source disposition — methodology-claude 2.3.0
+# Source disposition — methodology-claude 2.4.0
 
 This table describes Claude-native technical duties under neutral labels S1–S8. Private source reconnaissance, exact locators and byte identities are unavailable in this public tree. The labels do not assert a complete source transfer. Every rule the package applies comes from current neutral owners; older variants do not become competing rules. Native mechanics and wording are reconciled as detailed below.
 
@@ -15,7 +15,7 @@ Dispositions: **adapted** (reworked into a package member under the current neut
 | S1 | Decision-protocol skill and its decision-record lint | superseded / omitted | Duty carried by `process/decisions.md` through `skills/brainstorm`; the lint script has no tests and its skeleton differs from the neutral decision profiles. |
 | S1 | Visual-gate lint v1.0 | superseded | `skills/devplan-protocol/scripts/visual_gate_lint.py`, taken from the tested Codex package helper. |
 | S1 | Workflow spine feature-dev | adapted | `workflows/feature-dev.js`: Workflow API usage, schemas and null guard kept; phase set, eight named scans, Review, separately assigned Finalize, cumulative Debug cap with 0 valid and the recorder step follow the current owners. |
-| S2 | PM skills pm-bootstrap, pm-plan-batch, pm-run-batch, pm-handoff, pm-review-run | adapted | Same-named owner-invoked commands under `skills/`, pointing at `process/bootstrap.md`, `process/batch.md`, `process/session.md`, `checks/run-audit.md` and their neighbours. |
+| S2 | PM skills pm-bootstrap, pm-plan-batch, pm-run-batch, pm-handoff, pm-review-run | adapted | Same-named lifecycle commands under `skills/`, model-invoked or typed by the owner (owner-only until 2.3.0),, pointing at `process/bootstrap.md`, `process/batch.md`, `process/session.md`, `checks/run-audit.md` and their neighbours. |
 | S2 | PM skill pm-ingest-candidates and the candidates ledger | omitted | Systematic learning is owner-deferred (M13); lightweight error recording in project notes remains the practice. |
 | S2 | SessionStart orientation script | superseded | `hooks/session_start.py` (new, binding check and record presence); the full Orient assessment is the root's duty under `checks/orient.md`. |
 | S2 | PreToolUse destructive-command guard | adapted | `hooks/guard_destructive.py`: decision rules and precision kept; active whenever the package is loaded; read-only agent types extended to the package judges. |

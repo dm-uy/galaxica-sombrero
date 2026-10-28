@@ -1,4 +1,8 @@
-# Current: PR19 merged; installed versions updated
+# Current: PM-INVOKE in review; PR19 merged and installed
+
+## Waiting for the owner: PM-INVOKE (Claude 2.4.0)
+
+Branch `claude/pm-model-invocation` makes the five `pm-*` lifecycle commands model-invocable, at the owner's request of 2026-10-28; consent semantics are unchanged. Merge into `main`, a push or PR, and the in-place update need the owner's decision. [Task](TASKS.md#pm-invoke--model-invocable-lifecycle-commands-claude-240-branch-in-review).
 
 ## Owner decisions and completion
 

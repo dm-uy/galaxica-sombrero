@@ -1,5 +1,14 @@
 # Current maintainer tasks
 
+## PM-INVOKE — model-invocable lifecycle commands (Claude 2.4.0, branch in review)
+
+Owner request, 2026-10-28, in the interview workspace session: «Так не годится. Надо сделать так, чтобы ты мог запускать сам автономно эти вещи. Это запрещено на уровне плагина, потому что плагин-то, собственно говоря, наш, и мы можем внести в него изменения для твоей имплементации, если он тебя блокирует.» Scope: the five Claude `pm-*` lifecycle skills become model-invocable while their consent semantics stay as they are; Codex is unchanged.
+
+| Task | State | Finish / next action |
+|---|---|---|
+| PM-INVOKE-T1 — skills, runtime, test, version | Done on branch `claude/pm-model-invocation` | Flags removed, consent sentence in each command, runtime sections 4 and 5, contract test inverted, package 2.4.0, CHANGELOG. Package and root suites on Python 3.12 in a Git-free copy are recorded in the commit message. |
+| PM-INVOKE-T2 — merge and in-place update | Waiting for the owner | The in-place plugin reads canonical `main`, so the change takes effect only after the owner's merge decision and a fresh Claude session. No push or PR without the owner's word. |
+
 ## BF-SOURCE — brownfield source-obligation correspondence (PR19 merged and installed)
 
 Owner-selected correction, 2026-10-27: remove the account name from current text while retaining history; introduce SP-205 with MINOR. [Scope, earlier failed rationale and corrections](notes/brownfield-source-correspondence.md).

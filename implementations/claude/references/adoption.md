@@ -1,4 +1,4 @@
-# Pointwise adoption — neutral 3.2.0 / methodology-claude 2.3.0
+# Pointwise adoption — neutral 3.2.0 / methodology-claude 2.4.0
 
 This file is the `via` carrier of all 71 `reference` entries in [adapter.json](../adapter.json). The adapter and this file resolve `spec_root` (`../../`) from the adapter's own directory, independent of the caller's working directory. Inside Claude Code the same location is `${CLAUDE_PLUGIN_ROOT}/../../`.
 

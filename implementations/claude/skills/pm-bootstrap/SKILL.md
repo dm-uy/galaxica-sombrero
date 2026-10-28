@@ -1,13 +1,14 @@
 ---
 name: pm-bootstrap
-description: "Owner-invoked command: bring a project onto the methodology's document conventions (five records, Doxyfile, code map) and pass the owner's gate on the result. Use to start a new project or to restructure an existing one."
+description: "Подключение проекта к методологии: «подключи проект к методологии», «заведи записи проекта», «переведи проект на конвенции». Bring a project onto the methodology's document conventions (five records, Doxyfile, code map) and pass the owner's gate on the result. Use to start a new project or to restructure an existing one. The owner may type it or the model may invoke it; the invocation is never consent."
 argument-hint: "[project path]"
-disable-model-invocation: true
 ---
 
 # pm-bootstrap
 
 Prepare a project so the next role has its records, its code map and its settled inputs, without writing anything the owner did not grant.
+
+**Invocation.** The owner may type this command, or the root may invoke it itself when a project needs its records. Either way the invocation is never consent: profile adoption, seed materialization, migration and any hook still wait for the owner's exact grant through AskUserQuestion.
 
 Owners — read in full before acting:
 - `${CLAUDE_PLUGIN_ROOT}/../../process/bootstrap.md`

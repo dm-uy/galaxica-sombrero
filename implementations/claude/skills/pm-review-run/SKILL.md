@@ -1,13 +1,14 @@
 ---
 name: pm-review-run
-description: "Owner-invoked command: review how the methodology behaved in a real agent run on a project, from its records, and turn the facts into findings with a home for each fix. Read-only."
+description: "Разбор поведения методологии в прогоне: «разбери, как отработала методология», «ревью прогона по записям проекта». Review how the methodology behaved in a real agent run on a project, from its records, and turn the facts into findings with a home for each fix. Read-only. The owner may type it or the model may invoke it; the invocation is never consent."
 argument-hint: "[project path] [time window]"
-disable-model-invocation: true
 ---
 
 # pm-review-run
 
 Answer one question from the records: what did the agents actually do, and what should change as a result. The review fixes nothing.
+
+**Invocation.** The owner may type this command, or the root may invoke it itself when a finished run needs review. Either way the invocation is never consent: the review proposes findings and applies nothing.
 
 Owners — read in full before acting:
 - `${CLAUDE_PLUGIN_ROOT}/../../checks/run-audit.md`

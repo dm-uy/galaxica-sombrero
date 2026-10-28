@@ -1,6 +1,6 @@
 # Methodology Claude
 
-Native Claude Code package 2.3.0 for the neutral methodology 3.2.0 of this repository. It is a Claude Code plugin named `methodology-claude` that binds the neutral rules in place: its skills and role agents point at the neutral owners two levels up, its hooks check that binding, and its adapter accounts for every neutral file, capability and parameter.
+Native Claude Code package 2.4.0 for the neutral methodology 3.2.0 of this repository. It is a Claude Code plugin named `methodology-claude` that binds the neutral rules in place: its skills and role agents point at the neutral owners two levels up, its hooks check that binding, and its adapter accounts for every neutral file, capability and parameter.
 
 ## Load it
 
@@ -25,7 +25,7 @@ Read the validation output. Claude Code 2.1.299 warns that the name `methodology
 
 | Part | Content |
 |---|---|
-| `skills/` | 23 topics with the same names as the Codex package (for example `pm`, `feature-dev`, `semantic-exoskeleton`, `devplan-protocol`, `brainstorm`) and 5 owner-invoked lifecycle commands: `pm-bootstrap`, `pm-plan-batch`, `pm-run-batch`, `pm-handoff`, `pm-review-run`. Invoke as `/methodology-claude:<name>`. |
+| `skills/` | 23 topics with the same names as the Codex package (for example `pm`, `feature-dev`, `semantic-exoskeleton`, `devplan-protocol`, `brainstorm`) and 5 lifecycle commands, model-invoked or typed by the owner: `pm-bootstrap`, `pm-plan-batch`, `pm-run-batch`, `pm-handoff`, `pm-review-run`. Invoke as `/methodology-claude:<name>`. |
 | `agents/` | Six role subagents — `architect` and `reviewer` on opus, `coder`, `qa` and `debugger` on sonnet, `searcher` on haiku. The judges `qa`, `reviewer` and `searcher` have no Edit or Write tools; no role can delegate. |
 | `hooks/` | SessionStart: verifies the in-place binding and orients on the target's records. PreToolUse on Bash: asks before unrecoverable commands and denies tree-changing commands to the judges. |
 | `bin/` | `orient`, `codemap`, `markup-migrate`: launchers of the opt-in consumer PM profile. They run the sibling Codex C2 helpers in place and report BLOCKED when the sibling is missing. |
@@ -34,7 +34,7 @@ Read the validation output. Claude Code 2.1.299 warns that the name `methodology
 | `skills/devplan-protocol/scripts/visual_gate_lint.py` | Mechanical visual-gate check for development plans. |
 | `adapter.json`, `references/` | Adapter (71 files, 28 capabilities, 7 parameters), [runtime](references/claude-runtime.md), [handoffs](references/handoffs.md), [adoption](references/adoption.md), [source disposition](references/source-disposition.md), [layout](references/package-layout.json), [consumer PM profile](references/consumer-pm-profile.md). |
 
-Each of the 23 model-invoked skill descriptions opens with a Russian use-case label and Russian trigger phrases, followed by the unchanged English description, because the adapter binds `dialog-language` to Russian. In live probes on 2026-10-19, Russian phrases placed after the English text did not fire `prompting-verify` (0 of 3), while the same phrases placed first did (3 of 3). The five lifecycle commands keep `disable-model-invocation: true`: Claude Code keeps their descriptions out of the model's context, so only their slash commands invoke them.
+Each of the 28 skill descriptions opens with a Russian use-case label and Russian trigger phrases, followed by the unchanged English description, because the adapter binds `dialog-language` to Russian. In live probes on 2026-10-19, Russian phrases placed after the English text did not fire `prompting-verify` (0 of 3), while the same phrases placed first did (3 of 3). Until 2.3.0 the five lifecycle commands carried `disable-model-invocation: true`, so only their slash commands invoked them. Since 2.4.0 the root may invoke them itself when their step is due; the invocation is never consent, and each command authenticates its recorded grant before effects (the [runtime](references/claude-runtime.md), section 5).
 
 Read the [runtime](references/claude-runtime.md) before using `pm` or `feature-dev`. Typical entry points: `/methodology-claude:pm` to resume a project checkpoint, `/methodology-claude:pm-plan-batch` and `/methodology-claude:pm-run-batch` for a batch, `/methodology-claude:feature-dev` with an approved specification, `/methodology-claude:pm-handoff` at the end of a session.
 

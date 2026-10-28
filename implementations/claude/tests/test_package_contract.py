@@ -160,7 +160,7 @@ def test_layout_matches_members(caplog):
     LOGGER.info("[IMP:9][test_layout_matches_members][COMPARE] declared=%d actual=%d", len(declared), len(actual))
     _show(caplog.records)
     assert set(layout) == {"package", "version", "profile", "files", "roles"}
-    assert (layout["package"], layout["version"], layout["profile"]) == ("methodology-claude", "2.3.0", "colocated-in-place")
+    assert (layout["package"], layout["version"], layout["profile"]) == ("methodology-claude", "2.4.0", "colocated-in-place")
     assert declared == sorted(declared) and len(set(declared)) == len(declared) == 64
     assert sorted(set(actual) - set(declared)) == [] and sorted(set(declared) - set(actual)) == []
     assert layout["roles"] == {name: "agents/%s.md" % name for name in AGENTS}
@@ -190,7 +190,7 @@ def test_manifest_and_adapter(caplog):
     LOGGER.info("[IMP:9][test_manifest_and_adapter][COVERAGE] files=%d neutral=%d caps=%d params=%d unnamed=%d",
                 len(adapter["files"]), len(neutral), len(adapter["capabilities"]), len(adapter["parameters"]), len(unnamed))
     _show(caplog.records)
-    assert plugin["name"] == "methodology-claude" and plugin["version"] == "2.3.0" and plugin["license"] == "MIT"
+    assert plugin["name"] == "methodology-claude" and plugin["version"] == "2.4.0" and plugin["license"] == "MIT"
     assert not plugin["name"].startswith(("claude", "anthropic"))
     assert adapter["harness"] == "methodology-claude" and adapter["spec_root"] == "../../"
     assert adapter["spec_version"] == (NEUTRAL / "SPEC_VERSION").read_text().strip() == "3.2.0"
@@ -240,7 +240,8 @@ def test_agent_carriers(caplog):
 
 # region FUNC_test_skill_entries [DOMAIN(9): Skills; CONCEPT(9): TopicParity, InPlaceOwners; TECH(6): pathlib]
 ## @purpose Refuse a skill set that loses Codex topic parity or the five lifecycle commands, or an entry whose frontmatter,
-##   invocation mode or owner pointers are wrong.
+##   invocation mode or owner pointers are wrong: no skill disables model invocation (2.4.0), and each lifecycle
+##   command states that its invocation is never consent.
 ## @uses test_package_contract._frontmatter, test_package_contract._unresolved_references
 ## @io caplog -> None
 ## @complexity 6
@@ -257,8 +258,10 @@ def test_skill_entries(caplog):
                     topic, count, neutral_refs, len(missing))
         if fields.get("name") != topic or not fields.get("description"):
             problems.append(topic + ": frontmatter")
-        if (fields.get("disable-model-invocation") == "true") != (topic in LIFECYCLE):
+        if fields.get("disable-model-invocation") == "true":
             problems.append(topic + ": invocation mode")
+        if topic in LIFECYCLE and "the invocation is never consent" not in body:
+            problems.append(topic + ": invocation consent")
         if neutral_refs < 1 or "${CLAUDE_PLUGIN_ROOT}/references/claude-runtime.md" not in body:
             problems.append(topic + ": owners")
         problems.extend(topic + ": unresolved " + m for m in missing)
