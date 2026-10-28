@@ -1,8 +1,8 @@
-# Current: PM-INVOKE in review; PR19 merged and installed
+# Current: PM-INVOKE merged locally (Claude 2.4.0); PR19 merged and installed
 
-## Waiting for the owner: PM-INVOKE (Claude 2.4.0)
+## PM-INVOKE (Claude 2.4.0): merged locally, not pushed
 
-Branch `claude/pm-model-invocation` makes the five `pm-*` lifecycle commands model-invocable, at the owner's request of 2026-10-28; consent semantics are unchanged. Merge into `main`, a push or PR, and the in-place update need the owner's decision. [Task](TASKS.md#pm-invoke--model-invocable-lifecycle-commands-claude-240-branch-in-review).
+Branch `claude/pm-model-invocation` makes the five `pm-*` lifecycle commands model-invocable, at the owner's request of 2026-10-28. Consent semantics are unchanged. The owner chose a local fast-forward into `main` (2026-10-28T17:20:41Z). `origin` is behind until the owner's word on a push or PR. The live probe is the first fresh session (PM-INVOKE-T3). [Task](TASKS.md#pm-invoke--model-invocable-lifecycle-commands-claude-240-branch-in-review).
 
 ## Owner decisions and completion
 
