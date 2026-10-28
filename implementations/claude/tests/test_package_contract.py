@@ -23,7 +23,7 @@
 ## Q: Why a line parser for frontmatter instead of PyYAML?
 ## A: The package is stdlib-only; carrier and skill frontmatter is deliberately flat, and the parser refuses nesting.
 ## @changes
-## LAST_CHANGE: [2.1.0 - M37 Claude 2.1.0 identity and membership 64 with 7 helpers; earlier 2.0.0 - M30 exact current release/census coupling; all prior cases/assertions/refusals retained.]
+## LAST_CHANGE: [2.4.0 - PM-INVOKE: no skill may carry the disable-model-invocation key in any spelling, each lifecycle command must state that its invocation is never consent; Claude 2.4.0 identity; earlier 2.1.0 - M37 Claude 2.1.0 identity and membership 64 with 7 helpers; earlier 2.0.0 - M30 exact current release/census coupling; all prior cases/assertions/refusals retained.]
 ## Earlier: [2.0.0 - Initial M22 package contract oracle.]
 ## @modulemap
 ## FUNC 6[Read flat frontmatter and body of a Markdown carrier] => _frontmatter
@@ -258,7 +258,7 @@ def test_skill_entries(caplog):
                     topic, count, neutral_refs, len(missing))
         if fields.get("name") != topic or not fields.get("description"):
             problems.append(topic + ": frontmatter")
-        if fields.get("disable-model-invocation") == "true":
+        if "disable-model-invocation" in fields:
             problems.append(topic + ": invocation mode")
         if topic in LIFECYCLE and "the invocation is never consent" not in body:
             problems.append(topic + ": invocation consent")

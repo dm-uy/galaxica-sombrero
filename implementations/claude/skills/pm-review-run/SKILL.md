@@ -1,6 +1,6 @@
 ---
 name: pm-review-run
-description: "Разбор поведения методологии в прогоне: «разбери, как отработала методология», «ревью прогона по записям проекта». Review how the methodology behaved in a real agent run on a project, from its records, and turn the facts into findings with a home for each fix. Read-only. The owner may type it or the model may invoke it; the invocation is never consent."
+description: "Разбор поведения методологии в прогоне: «разбери, как отработала методология», «ревью прогона по записям проекта». Review how the methodology behaved in a real agent run on a project, from its records, and turn the facts into findings with a home for each fix. Read-only. The owner may type it or the model may invoke it on the owner's explicit review request; the invocation is never consent."
 argument-hint: "[project path] [time window]"
 ---
 
@@ -8,7 +8,7 @@ argument-hint: "[project path] [time window]"
 
 Answer one question from the records: what did the agents actually do, and what should change as a result. The review fixes nothing.
 
-**Invocation.** The owner may type this command, or the root may invoke it itself when a finished run needs review. Either way the invocation is never consent: the review proposes findings and applies nothing.
+**Invocation.** The owner may type this command, or the root may invoke it itself when the owner asks for a run to be reviewed. Either way the invocation is never consent: before reading any record or transcript, confirm the owner's explicit review request with its named project, run or window, question and authorized read and report roots (RUNREV-101); when no such request is on record, ask with AskUserQuestion and read nothing until the answer. The review proposes findings and applies nothing.
 
 Owners — read in full before acting:
 - `${CLAUDE_PLUGIN_ROOT}/../../checks/run-audit.md`

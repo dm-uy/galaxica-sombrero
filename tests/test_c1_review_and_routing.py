@@ -15,11 +15,11 @@
 ## Q: Why inspect contrary forms?
 ## A: Removing a required report boundary or substantive draft must fail the same predicate that accepts current source.
 ## @changes
-## LAST_CHANGE: [3.2.0 - Add bounded SP-205 norm/receipt/form omission controls, including removal of the actual receipt row while an example label survives.]
+## LAST_CHANGE: [Claude 2.4.0 - release selectors for PM-INVOKE (model-invocable lifecycle commands); earlier 3.2.0 - Add bounded SP-205 norm/receipt/form omission controls, including removal of the actual receipt row while an example label survives.]
 ## - Rebase retains the M37 Python3.12 pins for the AST-shape normalizer. M38 had calibrated
 ##   the same helpers under Python3.9; empty type_params fields explain the different hashes.
 ##   No helper algorithm changed, and every injected drift control remains operative.
-## Earlier: [2.4.0 - M38 rebase retains M37 Python3.12 pins and release selectors with M38 traceability; all drift controls retained; earlier2.2.0 - M37 Claude 2.1.0 release selectors; earlier2.1.0 - M37 Claude 2.0.2 release selectors and Claude one-shot/loop prompt-route assertions; earlier2.0.0 - M30 Debug1 owning success exposure/order/cardinality before pins; exact unique release selectors, consequential owner/caller controls and SessionStart original AST; earlier1.1.0 - C2 exact source/member normalization; fixed original pins retained. Earlier: C1 required owners, direct external-agent route and fixed original helper algorithm controls.]
+## Earlier: [2.3.0 - M38 rebase retains M37 Python3.12 pins and release selectors with M38 traceability; all drift controls retained; earlier2.2.0 - M37 Claude 2.1.0 release selectors; earlier2.1.0 - M37 Claude 2.0.2 release selectors and Claude one-shot/loop prompt-route assertions; earlier2.0.0 - M30 Debug1 owning success exposure/order/cardinality before pins; exact unique release selectors, consequential owner/caller controls and SessionStart original AST; earlier1.1.0 - C2 exact source/member normalization; fixed original pins retained. Earlier: C1 required owners, direct external-agent route and fixed original helper algorithm controls.]
 ## @modulemap
 ## FUNC 1[Metadata anchor] => test_c1_review_and_routing._module_contract
 ## FUNC 8[Read complete source with owned safe trace] => test_c1_review_and_routing._read

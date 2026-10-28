@@ -8,7 +8,7 @@ argument-hint: "[batch id]"
 
 Execute an approved packet task by task. Routine steps inside the grant need no repeated approval; consequential ungranted forks and the result decision stay with the owner.
 
-**Invocation.** The owner may type this command, or the root may invoke it itself once the batch's Gate A is recorded. Either way the invocation is never consent: the run proceeds only for the packet whose gate record step 1 authenticates, and the result decision stays with the owner. An owner-typed invocation is also the opt-in for the feature-dev Workflow; a model invocation is not, so after one the root runs M tasks on the interactive feature-dev route unless the owner opted into the Workflow in the conversation.
+**Invocation.** The owner may type this command, or the root may invoke it itself once the batch decision (Gate A) is recorded. Either way the invocation is never consent: the run proceeds only for the packet whose gate record step 1 authenticates, and the result decision stays with the owner. An owner-typed invocation is also the opt-in for the feature-dev Workflow; a model invocation is not, so after one the root runs M tasks on the interactive feature-dev route unless the owner opted into the Workflow in the conversation.
 
 Owners — read in full before acting:
 - `${CLAUDE_PLUGIN_ROOT}/../../process/batch.md`
