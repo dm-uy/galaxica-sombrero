@@ -240,7 +240,7 @@ def test_agent_carriers(caplog):
 
 # region FUNC_test_skill_entries [DOMAIN(9): Skills; CONCEPT(9): TopicParity, InPlaceOwners; TECH(6): pathlib]
 ## @purpose Refuse a skill set that loses Codex topic parity or the five lifecycle commands, or an entry whose frontmatter,
-##   invocation mode or owner pointers are wrong: no skill disables model invocation (2.4.0), and each lifecycle
+##   invocation mode or owner pointers are wrong: no skill carries the disable-model-invocation key (2.4.0), and each lifecycle
 ##   command states that its invocation is never consent.
 ## @uses test_package_contract._frontmatter, test_package_contract._unresolved_references
 ## @io caplog -> None
