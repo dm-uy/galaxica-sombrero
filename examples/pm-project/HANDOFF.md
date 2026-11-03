@@ -2,7 +2,7 @@
 
 ## Owner decisions
 
-Nothing remains for the bounded requested merge/install task. The owner accepted the concrete result and explicitly granted local main merge and installed Codex/Claude/DSH updates; [decision, execution and limits](notes/spec-recon-decision-checkpoint-result.md#accepted-merge-and-installed-updates--2026-11-03). No remote push or unrelated consumer migration is included.
+Nothing remains for the bounded requested merge/install task. The owner accepted the concrete result and explicitly granted local main merge and installed Codex/Claude/DSH updates; [decision, execution and limits](notes/spec-recon-decision-checkpoint-result.md#accepted-merge-and-installed-updates--2026-11-03). The owner then authorized remote delivery; [main push and readback](notes/spec-recon-decision-checkpoint-result.md#remote-main-delivery--2026-11-03) completed. No unrelated consumer migration is included.
 
 ## Current result
 
@@ -16,7 +16,7 @@ Source implementation/affected checks/independent review and bounded synthetic b
 
 ## Relevant previous state
 
-PM-INVOKE (Claude 2.4.0) was fast-forwarded into canonical `main` under the owner's 2026-10-28 decision, without push. Its first-fresh-session live probe is still unverified. [Original task, authority and retained probe](TASKS.md#pm-invoke--model-invocable-lifecycle-commands-claude-240-branch-in-review). The current branch inherits that local baseline; publishing it could also publish the previously held work and therefore needs matching scope.
+PM-INVOKE (Claude 2.4.0) was fast-forwarded into canonical `main` under the owner's 2026-10-28 decision, without push. Its first-fresh-session live probe is still unverified. [Original task, authority and retained probe](TASKS.md#pm-invoke--model-invocable-lifecycle-commands-claude-240-branch-in-review). The later explicit push grant covered the accumulated main delta and delivered these commits too; the original local-only decision is retained as history.
 
 PR19 was accepted, merged and installed under its separate grant. [Receipt and limits](notes/brownfield-source-correspondence.md#merge-and-installed-version-update--2026-10-27). Its installed snapshot proof is not a new runtime efficacy result and is not changed by this documentation task. The earlier continuation and failures remain in those records; no release or installed snapshot was repackaged.
 
