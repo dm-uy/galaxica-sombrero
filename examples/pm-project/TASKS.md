@@ -9,7 +9,7 @@ Owner request, 2026-11-03: prepare a specification for explicit forks in RECON, 
 | RECON-DEC-T1 — measured reconnaissance and specification | Complete locally | [Draft specification](specs/spec-recon-decision-checkpoint.md) and [RECON / verification](notes/RECON_2026-11-03_spec-recon-decision-checkpoint.md); independent document review found no blockers, bounded document/adapter checks pass. |
 | RECON-DEC-T2 — owner specification decision | Approved with lighter procedure | Exact owner quote is retained in the specification metadata; no full feature-dev run. |
 | RECON-DEC-T3 — targeted implementation | Checked locally | [Changes, affected checks, independent review and bounded native probe](notes/spec-recon-decision-checkpoint-result.md); no full feature-dev flow. |
-| RECON-DEC-T4 — local main integration and installed updates | Active; owner approved | Owner explicitly granted main merge and installed Codex/Claude/DSH updates on 2026-11-03; exact words in the result receipt. No remote push is inferred. |
+| RECON-DEC-T4 — local main integration and installed updates | Complete locally | Owner grant executed: canonical main integrated; Codex4.0.0, Claude3.0.0, DSH4.0.0 updated and bounded load/integrity checks pass. [Receipt / desktop runtime limit](notes/spec-recon-decision-checkpoint-result.md#accepted-merge-and-installed-updates--2026-11-03). No remote push. |
 
 ## PM-INVOKE — model-invocable lifecycle commands (Claude 2.4.0, branch in review)
 

@@ -1,17 +1,17 @@
 # Methodology project route
 
-## Current focus: RECON-DEC concrete result decision
+## Current: RECON-DEC integrated locally and installed
 
-Owner-selected on 2026-11-03: the [specification](specs/spec-recon-decision-checkpoint.md) for reviewed RECON forks and owner authorization before brainstorm is prepared and independently checked locally. The owner subsequently approved targeted implementation without full feature-dev. The source changes, affected checks, independent review and bounded behavioral probe are complete locally; [result and limits](notes/spec-recon-decision-checkpoint-result.md). Integration remains a separate decision. Previous delivered and held outcomes below retain their state. [Tasks](TASKS.md#recon-dec--reviewed-recon-forks-and-owner-authorized-brainstorm).
+Owner-selected on 2026-11-03: the [specification](specs/spec-recon-decision-checkpoint.md) for reviewed RECON forks and owner authorization before brainstorm is prepared and independently checked locally. The owner subsequently approved targeted implementation without full feature-dev. The source changes, affected checks, independent review and bounded behavioral probe are complete locally; [result and limits](notes/spec-recon-decision-checkpoint-result.md). The owner accepted the result and granted local main merge plus installed Codex/Claude/DSH updates; [completed receipt and runtime limits](notes/spec-recon-decision-checkpoint-result.md#accepted-merge-and-installed-updates--2026-11-03). No remote push. Previous delivered and held outcomes below retain their state. [Tasks](TASKS.md#recon-dec--reviewed-recon-forks-and-owner-authorized-brainstorm).
 
 ```mermaid
 flowchart LR
   RD1["RECON-DEC-T1 checked locally: recon and specification"] --> RD2["RECON-DEC-T2 approved: targeted procedure"]
   RD2 --> RD3["RECON-DEC-T3 checked locally: targeted implementation"]
-  RD3 --> RD4["RECON-DEC-T4 pending: concrete result integration"]
+  RD3 --> RD4["RECON-DEC-T4 complete: local merge and installed updates"]
 ```
 
-## Current: PR19 merged and installed
+## Previous delivery: PR19 merged and installed
 
 Owner accepted the full13 corrections and authorized merge/install. PR19 merged at17574b8; current neutral/Codex/DSH3.2.0 and Claude2.3.0 include SP-205 and the dedicated correspondence field in the existing receipt. Codex native installation/fresh discovery/full integrity, Claude native discovery/binding and DSH web composition pass. DSH desktop installed binding is updated; fresh desktop runtime discovery remains unverified. [Receipt and preserved limits](notes/brownfield-source-correspondence.md#merge-and-installed-version-update--2026-10-27); [tasks](TASKS.md). No new role/gate/register or consumer migration; retained work remains separately scoped.
 

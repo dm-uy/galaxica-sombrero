@@ -1,20 +1,18 @@
-# Current: RECON-DEC approved merge and installed updates
+# Current: RECON-DEC integrated locally and installed
 
-## Current owner grant
+## Owner decisions
 
-The owner explicitly accepted the result and granted local main merge plus installed Codex, Claude and DSH updates on 2026-11-03. [Exact grant and execution receipt](notes/spec-recon-decision-checkpoint-result.md#owner-integration-and-installed-update-grant--2026-11-03). Root is performing the bounded update and load/integrity checks; no remote push or unrelated plugin/settings change is included.
+Nothing remains for the bounded requested merge/install task. The owner accepted the concrete result and explicitly granted local main merge and installed Codex/Claude/DSH updates; [decision, execution and limits](notes/spec-recon-decision-checkpoint-result.md#accepted-merge-and-installed-updates--2026-11-03). No remote push or unrelated consumer migration is included.
 
 ## Current result
 
-The owner explicitly approved targeted implementation on 2026-11-03 without full feature-dev. [Exact grant and revised specification](specs/spec-recon-decision-checkpoint.md). Root implemented RECON-307–311/SP-206 and BRAIN-104's scoped launch condition, synchronized native callers and current release bindings, retained original algorithm/schema/role boundaries and updated only coupled factual receipt/census consumers.
+Canonical main fast-forwarded to `40328d0b9e67df6f4848b04750f68d5957563103`. Installed Codex4.0.0 uses a complete immutable snapshot of that commit; native install/list, fresh app-server skill discovery and full tracked-byte/executable-mode comparison passed. Previous release/config/catalog backups are retained. Claude3.0.0 reads canonical main in place; native discovery, manifest and actual SessionStart binding to neutral4.0.0 pass. Both registered DSH profiles resolve4.0.0 and their actual filesystem providers discover/load27skills; fresh web composition passes. Desktop full composition remains Electron-only, so active desktop runtime/catalog refresh is unverified.
 
-Source versions in the branch: neutral/Codex/DSH4.0.0, Claude3.0.0. These are source identities, not installed versions. The canonical stable checkout remains clean on `main`; no installed package or user configuration changed. All source edits belong to root on `codex/recon-decision-spec`, implementation base `3db5a5cccf51c8227d78aa6b2e37fc1fd04e2d29`.
-
-Affected tests and adapter checks pass; independent source review and a small fresh-context checker/consumer probe are retained in the result note. The initial missed DSH manifest failure, review corrections, exact receipt refreshes and environment warning are retained there. No full regression run, feature-dev phases/ledger, technical plan, Doxygen build, real positive human launch event, complete live brainstorm or installed-runtime enforcement is claimed. The bounded probe found omissions/false exclusions, held permission/readiness despite an untrusted worker claim and allowed the independently checked empty case without an empty question.
+Source implementation/affected checks/independent review and bounded synthetic behavior remain in [the result receipt](notes/spec-recon-decision-checkpoint-result.md). This closure changes project records only; it does not repackage the installed Codex source snapshot. No active client/session was restarted; use fresh sessions and client restart guidance to load the refreshed catalog. This chat's original catalog is not hot-reload evidence. No model efficacy, hard enforcement or deferred whole-flow acceptance is inferred.
 
 ## Continuation
 
-[Tasks and next disposition](TASKS.md#recon-dec--reviewed-recon-forks-and-owner-authorized-brainstorm). After a matching result decision, perform only its concrete integration/publication/install scope and preserve existing local-only history. No deferred C3/M30/consumer work is resumed by this result. If rework is requested, keep the current evidence/history and use affected checks; do not open a full feature-dev run solely for this instruction change.
+[Tasks](TASKS.md#recon-dec--reviewed-recon-forks-and-owner-authorized-brainstorm). Any later source update, remote publication or consumer migration needs its matching task/action grant. Reuse the completed result decision; do not ask to merge/install this same source again. Current record closure is performed under that existing grant. Preserve the retained obligations below.
 
 ## Relevant previous state
 
