@@ -1,5 +1,15 @@
 # Current maintainer tasks
 
+## RECON-DEC — reviewed RECON forks and owner-authorized brainstorm
+
+Owner request, 2026-11-03: prepare a specification for explicit forks in RECON, independent completeness verification, and owner agreement before launching brainstorm so downstream project specifications contain worked-through decisions. Grant: reconnaissance, specification and affected maintainer records only; no implementation, merge, push or installation.
+
+| Task | State | Finish / next action |
+|---|---|---|
+| RECON-DEC-T1 — measured reconnaissance and specification | Complete locally | [Draft specification](specs/spec-recon-decision-checkpoint.md) and [RECON / verification](notes/RECON_2026-11-03_spec-recon-decision-checkpoint.md); independent document review found no blockers, bounded document/adapter checks pass. |
+| RECON-DEC-T2 — owner specification decision | Pending owner review | Review the linked concrete draft; approval to prepare it is not approval to implement it. |
+| RECON-DEC-T3 — implementation and delivery | Not authorized | Requires matching specification approval and its selected execution scope; integration/install remain separate. |
+
 ## PM-INVOKE — model-invocable lifecycle commands (Claude 2.4.0, branch in review)
 
 Owner request, 2026-10-28, in the interview workspace session: «Так не годится. Надо сделать так, чтобы ты мог запускать сам автономно эти вещи. Это запрещено на уровне плагина, потому что плагин-то, собственно говоря, наш, и мы можем внести в него изменения для твоей имплементации, если он тебя блокирует.» Scope: the five Claude `pm-*` lifecycle skills become model-invocable while their consent semantics stay as they are; Codex is unchanged.

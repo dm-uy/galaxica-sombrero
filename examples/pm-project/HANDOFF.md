@@ -1,20 +1,22 @@
-# Current: PM-INVOKE merged locally (Claude 2.4.0); PR19 merged and installed
+# Current: RECON-DEC specification ready for owner review
 
-## PM-INVOKE (Claude 2.4.0): merged locally, not pushed
+## Pending owner decision
 
-Branch `claude/pm-model-invocation` makes the five `pm-*` lifecycle commands model-invocable, at the owner's request of 2026-10-28. Consent semantics are unchanged. The owner chose a local fast-forward into `main` (2026-10-28T17:20:41Z). `origin` is behind until the owner's word on a push or PR. The live probe is the first fresh session (PM-INVOKE-T3). [Task](TASKS.md#pm-invoke--model-invocable-lifecycle-commands-claude-240-branch-in-review).
+Review [the concrete RECON-DEC specification](specs/spec-recon-decision-checkpoint.md). The owner authorized preparation on 2026-11-03, not implementation of the unseen draft. No main merge, push, publication or installation is authorized by this task. Reuse a later matching decision rather than asking twice.
 
-## Owner decisions and completion
+## Current result and continuation
 
-The owner accepted the corrections and explicitly authorized PR19 merge and installed-version updates. Completed at merge17574b8; no remaining decision for this bounded task. [Acceptance, merge and installation receipt](notes/brownfield-source-correspondence.md#merge-and-installed-version-update--2026-10-27).
+The draft covers explicit RECON uncertainties/exclusions, independent completeness checking even for an empty list, human permission before named brainstorm launches and actual decision traceability before dependent specification readiness. [Input RECON, source identities and document verification](notes/RECON_2026-11-03_spec-recon-decision-checkpoint.md). Root owns only the RECON, specification and affected TASKS/ROADMAP/HANDOFF on `codex/recon-decision-spec`, based on `bbc91c0c9c6d85342d6c049272c31f70079d3d9a`; the canonical stable checkout remains clean on `main`.
 
-## Current result
+Independent read-only source lanes and independent draft verification completed; no blocking document finding remains. The plan-only/spec-affecting clarification is incorporated. Document checks, whitespace and existing adapter checks pass within the note's limits; future implementation/native criteria remain NOT RUN. These records are retained in the local scoped branch; no remote delivery is claimed. [Tasks and next disposition](TASKS.md#recon-dec--reviewed-recon-forks-and-owner-authorized-brainstorm).
 
-Neutral/Codex/DSH3.2.0 and Claude2.3.0 deliver SP-205 in the existing specification receipt. Codex uses an immutable complete merge snapshot: native installed/enabled3.2.0, fresh27-skill discovery and full427-file byte/mode integrity pass. Prior source/config backups are retained. Claude remains inline on canonical main:2.3.0 discovered, manifest and actual SessionStart binding pass. Both DSH profiles resolve3.2.0 and27skills; fresh web composition passes. Desktop CLI composition remains host-refused; fresh desktop runtime discovery is unverified.
+Next eligible action is the owner's review/rework decision. After exact implementation approval, use the actual co-located workflow and dictated plan home in the spec. Do not treat the source-authoring task as a feature-dev run or silently activate held work.
 
-## Continuation
+## Relevant previous state
 
-Use fresh client sessions and restart guidance as needed; no active app/session was restarted. This chat's original catalog is not hot-reload evidence. [Task history, original failures and bounded checks](notes/brownfield-source-correspondence.md); [tasks](TASKS.md). Source tests belong to their recorded snapshots; installation probes establish loading/integrity, not new software efficacy. This receipt-only closure does not repackage the Codex snapshot or publish a release tag. Next substantive work requires its own scope; the retained route below is not automatically resumed.
+PM-INVOKE (Claude 2.4.0) was fast-forwarded into canonical `main` under the owner's 2026-10-28 decision, without push. Its first-fresh-session live probe is still unverified. [Original task, authority and retained probe](TASKS.md#pm-invoke--model-invocable-lifecycle-commands-claude-240-branch-in-review). The current branch inherits that local baseline; publishing it could also publish the previously held work and therefore needs matching scope.
+
+PR19 was accepted, merged and installed under its separate grant. [Receipt and limits](notes/brownfield-source-correspondence.md#merge-and-installed-version-update--2026-10-27). Its installed snapshot proof is not a new runtime efficacy result and is not changed by this documentation task. The earlier continuation and failures remain in those records; no release or installed snapshot was repackaged.
 
 ## Retained obligations and relevant traps
 

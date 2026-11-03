@@ -1,5 +1,15 @@
 # Methodology project route
 
+## Current focus: RECON-DEC specification decision
+
+Owner-selected on 2026-11-03: the [specification](specs/spec-recon-decision-checkpoint.md) for reviewed RECON forks and owner authorization before brainstorm is prepared and independently checked locally. Its implementation awaits the owner decision. Previous delivered and held outcomes below retain their state. [Tasks](TASKS.md#recon-dec--reviewed-recon-forks-and-owner-authorized-brainstorm).
+
+```mermaid
+flowchart LR
+  RD1["RECON-DEC-T1 checked locally: recon and specification"] --> RD2["RECON-DEC-T2 pending: owner spec decision"]
+  RD2 --> RD3["RECON-DEC-T3 not authorized: implementation"]
+```
+
 ## Current: PR19 merged and installed
 
 Owner accepted the full13 corrections and authorized merge/install. PR19 merged at17574b8; current neutral/Codex/DSH3.2.0 and Claude2.3.0 include SP-205 and the dedicated correspondence field in the existing receipt. Codex native installation/fresh discovery/full integrity, Claude native discovery/binding and DSH web composition pass. DSH desktop installed binding is updated; fresh desktop runtime discovery remains unverified. [Receipt and preserved limits](notes/brownfield-source-correspondence.md#merge-and-installed-version-update--2026-10-27); [tasks](TASKS.md). No new role/gate/register or consumer migration; retained work remains separately scoped.
