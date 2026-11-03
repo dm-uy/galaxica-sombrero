@@ -1,18 +1,30 @@
-# Current: RECON-DEC integrated locally and installed
+# Current: CONT-BOUND recon checked; named decision packet pending
 
 ## Owner decisions
 
-Nothing remains for the bounded requested merge/install task. The owner accepted the concrete result and explicitly granted local main merge and installed Codex/Claude/DSH updates; [decision, execution and limits](notes/spec-recon-decision-checkpoint-result.md#accepted-merge-and-installed-updates--2026-11-03). The owner then authorized remote delivery; [main push and readback](notes/spec-recon-decision-checkpoint-result.md#remote-main-delivery--2026-11-03) completed. No unrelated consumer migration is included.
+Missing: launch permission for ONE bounded independent packet covering Q-REPRESENTATION (successor/history/accounting/reentry/recovery) and Q-ROLLOUT (shared-neutral compatibility with deferred adapters). [Reviewed questions, stakes and original completeness evidence](notes/RECON_2026-11-03_bounded-continuation.md). No solution/specification approval or implementation is inferred. Do not repeat the settled Codex-only scope question.
 
-## Current result
+## Current result and authority
 
-Canonical main fast-forwarded to `40328d0b9e67df6f4848b04750f68d5957563103`. Installed Codex4.0.0 uses a complete immutable snapshot of that commit; native install/list, fresh app-server skill discovery and full tracked-byte/executable-mode comparison passed. Previous release/config/catalog backups are retained. Claude3.0.0 reads canonical main in place; native discovery, manifest and actual SessionStart binding to neutral4.0.0 pass. Both registered DSH profiles resolve4.0.0 and their actual filesystem providers discover/load27skills; fresh web composition passes. Desktop full composition remains Electron-only, so active desktop runtime/catalog refresh is unverified.
+Owner authorized recon/spec preparation first, no implementation: A+B as one bounded change; В–Д as existing-rule clarifications. Later owner clarification selects Codex executable scope and explanatory instructions for separate Claude/DSH agents. [Transfer brief](notes/bounded-continuation-transfer-briefs.md) is preliminary until a Codex representation/specification/tested receipt exists.
 
-Source implementation/affected checks/independent review and bounded synthetic behavior remain in [the result receipt](notes/spec-recon-decision-checkpoint-result.md). This closure changes project records only; it does not repackage the installed Codex source snapshot. No active client/session was restarted; use fresh sessions and client restart guidance to load the refreshed catalog. This chat's original catalog is not hot-reload evidence. No model efficacy, hard enforcement or deferred whole-flow acceptance is inferred.
+Two read-only source lanes and a distinct fresh completeness checker verified current helper behavior and motivating Jeni metadata. All four completeness findings were accepted; bounded delta verification found no remaining material omission. Recon is ready for human presentation, while dependent specification readiness is held at the named questions. [Tasks](TASKS.md#cont-bound--bounded-continuation-and-earlier-verification).
 
-## Continuation
+Worktree branch `codex/continuation-recon`, baseline `388c94495d86a771da6fa5e8514249976dc8c8a1`. Root owns only recon/evidence/brief and TASKS/ROADMAP/HANDOFF. Document structure, local links, source-identity and whitespace checks pass; no source/package/version/configuration change, test/build/helper/probe/consumer execution, main merge, push or installation. Retain the initial conditional review and its later delta separately. Named-file local documentation storage follows REPO-103; canonical main stays clean.
 
-[Tasks](TASKS.md#recon-dec--reviewed-recon-forks-and-owner-authorized-brainstorm). Any later source update, remote publication or consumer migration needs its matching task/action grant. Reuse the completed result decision; do not ask to merge/install this same source again. Current record closure is performed under that existing grant. Preserve the retained obligations below.
+## Next action and current traps
+
+Present the reviewed packet and ask only for its missing named launch permission under RECON-309. After matching permission, obtain one bounded independent proposal/HOLD/evaluation packet and resolve its spec-affecting choices before drafting a ready specification. Do not launch implementation from a planning answer.
+
+- Actual Jeni aggregate4/4 is outside native0/0; import must reconcile the identified parent record, not infer fresh budget.
+- Original3.2 locks need historical read validation separate from current operational binding; retain original bytes, including on diagnostic refusals.
+- CLI terminal refusal may append diagnostics; transition refusal alone is not predecessor immutability.
+- Retry episodes, eligible no-repair/remaining-allowance reentry, and single-writer lineage limits are explicit recon obligations.
+- Claude/DSH hard-pin shared neutral4.0.0. A shared version change can break ordinary runs; their later agents need compatible bindings and coordinated delivery. No implicit sibling code/configuration write is granted here.
+
+## Previous completed delivery
+
+RECON-DEC local merge/installed updates and subsequent owner-authorized remote delivery remain complete. [Original receipt and runtime limits](notes/spec-recon-decision-checkpoint-result.md). This task neither changes installed snapshots nor reopens those decisions.
 
 ## Relevant previous state
 

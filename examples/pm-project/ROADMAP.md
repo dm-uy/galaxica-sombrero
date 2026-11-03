@@ -1,6 +1,15 @@
 # Methodology project route
 
-## Current: RECON-DEC integrated locally and installed
+## Current: CONT-BOUND recon checked; specification questions held
+
+Owner-selected on 2026-11-03: recon before the specification for A+B (bounded history-preserving continuation and early capability checks), with V–D as clarifications of existing rules. [RECON](notes/RECON_2026-11-03_bounded-continuation.md), [tasks](TASKS.md#cont-bound--bounded-continuation-and-earlier-verification). Recon and independent completeness/delta checks are complete locally. Owner settled Codex executable scope with separate Claude/DSH transfer instructions. Q-REPRESENTATION/Q-ROLLOUT await matching launch permission for ONE bounded decision packet before specification readiness. No implementation, Jeni continuation, migration or release is authorized.
+
+```mermaid
+flowchart LR
+  CB1["CONT-BOUND-T1 checked: measured recon and completeness"] --> CB2["CONT-BOUND-T2 held: named decision packet then spec"]
+```
+
+## Previous: RECON-DEC integrated locally and installed
 
 Owner-selected on 2026-11-03: the [specification](specs/spec-recon-decision-checkpoint.md) for reviewed RECON forks and owner authorization before brainstorm is prepared and independently checked locally. The owner subsequently approved targeted implementation without full feature-dev. The source changes, affected checks, independent review and bounded behavioral probe are complete locally; [result and limits](notes/spec-recon-decision-checkpoint-result.md). The owner accepted the result and granted local main merge plus installed Codex/Claude/DSH updates; [completed receipt and runtime limits](notes/spec-recon-decision-checkpoint-result.md#accepted-merge-and-installed-updates--2026-11-03). Owner-authorized [remote main delivery](notes/spec-recon-decision-checkpoint-result.md#remote-main-delivery--2026-11-03) is complete. Previous delivered and held outcomes below retain their state. [Tasks](TASKS.md#recon-dec--reviewed-recon-forks-and-owner-authorized-brainstorm).
 

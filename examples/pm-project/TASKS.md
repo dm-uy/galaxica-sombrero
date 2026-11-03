@@ -1,5 +1,14 @@
 # Current maintainer tasks
 
+## CONT-BOUND — bounded continuation and earlier verification
+
+Owner request, 2026-11-03: «Давай подготовим спецификацию доработок методологии: А и Б — одним ограниченным изменением, В–Д — уточнениями существующих правил. Сначала проведи необходимый recon, без реализации.» Preparation only. The later owner clarification selects Codex executable work and explanatory transfer instructions for separate Claude/DSH agents; it does not authorize implementation, consumer repair, main merge, push or installation.
+
+| Task | State | Finish / next action |
+|---|---|---|
+| CONT-BOUND-T1 — source/data/decision reconnaissance | Complete locally | [RECON](notes/RECON_2026-11-03_bounded-continuation.md), independent source lanes and fresh completeness check; all four findings reconciled and bounded delta verified. Source unchanged. |
+| CONT-BOUND-T2 — resolve spec-affecting questions and draft specification | Awaiting named launch permission | ONE bounded packet for Q-REPRESENTATION/Q-ROLLOUT: successor/accounting/recovery contract plus nonbreaking shared-neutral delivery for deferred adapters. [Preliminary transfer briefs](notes/bounded-continuation-transfer-briefs.md). No design selected or generators launched; specification readiness held. |
+
 ## RECON-DEC — reviewed RECON forks and owner-authorized brainstorm
 
 Owner request, 2026-11-03: prepare a specification for explicit forks in RECON, independent completeness verification, and owner agreement before launching brainstorm so downstream project specifications contain worked-through decisions. Initial grant: preparation only. On 2026-11-03 the owner approved removing the full feature-dev procedure and implementing the bounded change with affected checks, independent review and a small behavioral probe. Merge, push and installation remain separate.
