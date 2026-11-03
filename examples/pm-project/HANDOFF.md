@@ -1,26 +1,33 @@
-# Current: CONT-BOUND recon checked; named decision packet pending
+# Current: CONT-BOUND specification checked; owner review pending
 
 ## Owner decisions
 
-Missing: launch permission for ONE bounded independent packet covering Q-REPRESENTATION (successor/history/accounting/reentry/recovery) and Q-ROLLOUT (shared-neutral compatibility with deferred adapters). [Reviewed questions, stakes and original completeness evidence](notes/RECON_2026-11-03_bounded-continuation.md). No solution/specification approval or implementation is inferred. Do not repeat the settled Codex-only scope question.
+Review the concrete [draft specification](specs/bounded-continuation.md). The owner approved preparation and ONE named independent packet, not the unseen schema3 design, implementation, source integration or installation. No code starts from this handoff. Preserve the already settled Codex-only executable scope and external Claude/DSH agents; do not re-ask launch permission.
 
-## Current result and authority
+## Current checked result
 
-Owner authorized recon/spec preparation first, no implementation: A+B as one bounded change; В–Д as existing-rule clarifications. Later owner clarification selects Codex executable scope and explanatory instructions for separate Claude/DSH agents. [Transfer brief](notes/bounded-continuation-transfer-briefs.md) is preliminary until a Codex representation/specification/tested receipt exists.
+Two fresh independent generators, saved unranked HOLD and distinct evaluation are complete; [originals, evaluation and root proposed drafting choice](notes/bounded-continuation-decision/decision.md). Root proposes A: one schema3 operational authority, original historical schema2/parent reconciliation, closed immutable run artifacts and conservative reserved-entry recovery. Native5.0/neutral4.1/rolewire2.0 are proposed separate version domains, not delivered versions. B remains a credible recorded alternative with reopening evidence.
 
-Two read-only source lanes and a distinct fresh completeness checker verified current helper behavior and motivating Jeni metadata. All four completeness findings were accepted; bounded delta verification found no remaining material omission. Recon is ready for human presentation, while dependent specification readiness is held at the named questions. [Tasks](TASKS.md#cont-bound--bounded-continuation-and-earlier-verification).
+[Original source/document review](notes/bounded-continuation-spec-review.md) found missing neutral release consumers. Root accepted and fixed the exact identity-only scope/correspondence; [final independent delta](notes/bounded-continuation-spec-review-delta.md) says READY FOR OWNER REVIEW. Root document contracts/IDs/links, source identities, whitespace and bounded home-path/email checks passed. Software tests/builds/helper/probes/consumer execution and full private deny-list publication scan were not performed or claimed.
 
-Worktree branch `codex/continuation-recon`, baseline `388c94495d86a771da6fa5e8514249976dc8c8a1`. Root owns only recon/evidence/brief and TASKS/ROADMAP/HANDOFF. Document structure, local links, source-identity and whitespace checks pass; no source/package/version/configuration change, test/build/helper/probe/consumer execution, main merge, push or installation. Retain the initial conditional review and its later delta separately. Named-file local documentation storage follows REPO-103; canonical main stays clean.
+[Claude/DSH transfer instructions](notes/bounded-continuation-transfer-briefs.md) distinguish required ordinary-operation compatibility from later optional continuation parity. Full common/sibling/overall Finalize and shared-neutral main integration remain held until separately authorized accepted compatibility contributions pass against the exact combined source. Do not fix their native code locally or silently repoint installed profiles.
 
-## Next action and current traps
+## Storage and next action
 
-Present the reviewed packet and ask only for its missing named launch permission under RECON-309. After matching permission, obtain one bounded independent proposal/HOLD/evaluation packet and resolve its spec-affecting choices before drafting a ready specification. Do not launch implementation from a planning answer.
+Branch `codex/continuation-recon`; source baseline `388c94495d86a771da6fa5e8514249976dc8c8a1`, prior documentation checkpoint `5b499d2`. Current changes are root-owned project documents/evidence only, stored by named-file local commit under REPO-103; recover its exact revision from this branch. Canonical main remains clean. No source/package/version/configuration change, merge, push, installation or Jeni budget/continuation action.
 
-- Actual Jeni aggregate4/4 is outside native0/0; import must reconcile the identified parent record, not infer fresh budget.
-- Original3.2 locks need historical read validation separate from current operational binding; retain original bytes, including on diagnostic refusals.
-- CLI terminal refusal may append diagnostics; transition refusal alone is not predecessor immutability.
-- Retry episodes, eligible no-repair/remaining-allowance reentry, and single-writer lineage limits are explicit recon obligations.
-- Claude/DSH hard-pin shared neutral4.0.0. A shared version change can break ordinary runs; their later agents need compatible bindings and coordinated delivery. No implicit sibling code/configuration write is granted here.
+Next: present the checked draft for owner review; incorporate requested changes without restarting recon or repeating settled permissions. A later matching implementation grant would activate the scoped Architect/Code/independent QA route, using a distinct read-only governing framework binding and candidate source as the plan requires. No automatic implementation is granted now.
+
+Complete original brief and earlier completeness report with local paths remain unchanged in ignored `.methodology/continuations/cont-bound-docs/evidence/raw/`; tracked projections are labeled and retain original hashes. Preserve those private originals before any worktree archive. No subagent writes outside the assigned empty write scopes were reported.
+
+## Current traps
+
+- Jeni aggregate4/4 is outside native0/0; no native-only import, reset or free repair5.
+- Original3.2 locks and all legacy predecessor bytes remain historical, including diagnostic refusal paths.
+- Immutable terminal artifacts differ from the mutable lineage authority; no snapshot may authorize dispatch.
+- Retry episodes, no-repair verification, remaining allowance and new-grant repairs retain distinct accounting/predicates; release-stamp absence does not prove nonrelease.
+- Shared neutral4.1 with old sibling hard pins would break ordinary paths; compatibility evidence is required before main integration.
+- Coupled neutral/root metadata guards and exact Codex AST exceptions are in the specification; never globally replace versions or merely repin algorithms.
 
 ## Previous completed delivery
 

@@ -1,12 +1,12 @@
 # Methodology project route
 
-## Current: CONT-BOUND recon checked; specification questions held
+## Current: CONT-BOUND specification checked locally; owner review pending
 
-Owner-selected on 2026-11-03: recon before the specification for A+B (bounded history-preserving continuation and early capability checks), with V–D as clarifications of existing rules. [RECON](notes/RECON_2026-11-03_bounded-continuation.md), [tasks](TASKS.md#cont-bound--bounded-continuation-and-earlier-verification). Recon and independent completeness/delta checks are complete locally. Owner settled Codex executable scope with separate Claude/DSH transfer instructions. Q-REPRESENTATION/Q-ROLLOUT await matching launch permission for ONE bounded decision packet before specification readiness. No implementation, Jeni continuation, migration or release is authorized.
+Owner-selected on 2026-11-03: recon before the specification for A+B (bounded history-preserving continuation and early capability checks), with V–D as clarifications of existing rules. [RECON](notes/RECON_2026-11-03_bounded-continuation.md), [tasks](TASKS.md#cont-bound--bounded-continuation-and-earlier-verification). Recon and independent completeness/delta checks are complete locally. Owner settled Codex executable scope with separate Claude/DSH transfer instructions. Owner authorized ONE Q-REPRESENTATION/Q-ROLLOUT packet through the matching structured answer; [brief and grant](notes/bounded-continuation-decision/brief.md). Independent generation/HOLD/evaluation and root proposed A choice are complete; the [draft specification](specs/bounded-continuation.md) passed independent document/source review and bounded delta; owner review remains pending, with implementation excluded. No implementation, Jeni continuation, migration or release is authorized.
 
 ```mermaid
 flowchart LR
-  CB1["CONT-BOUND-T1 checked: measured recon and completeness"] --> CB2["CONT-BOUND-T2 held: named decision packet then spec"]
+  CB1["CONT-BOUND-T1 checked: measured recon and completeness"] --> CB2["CONT-BOUND-T2 checked: draft spec awaits owner review"]
 ```
 
 ## Previous: RECON-DEC integrated locally and installed

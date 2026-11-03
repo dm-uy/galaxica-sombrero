@@ -1,6 +1,6 @@
 # Claude and DSH continuation transfer briefs
 
-Status: explanatory reconnaissance-stage brief, 2026-11-03. [Owning RECON](RECON_2026-11-03_bounded-continuation.md). The owner chose Codex executable work here and separate native-agent follow-up for Claude/DSH. This brief is not approval of sibling implementation or a claim of working support. It must be completed with the approved Codex specification, selected representation/version and actual tested receipt before use as an implementation assignment. No CLI or schema that does not yet exist is prescribed.
+Status: explanatory transfer brief aligned to the proposed A specification, 2026-11-03; human specification approval and implementation are pending. [Owning RECON](RECON_2026-11-03_bounded-continuation.md). The owner chose Codex executable work here and separate native-agent follow-up for Claude/DSH. This brief is not approval of sibling implementation or a claim of working support. Use the [draft specification](../specs/bounded-continuation.md) and [original decision packet](bounded-continuation-decision/decision.md) now for preparation; an actual implementation assignment must bind the approved version and checked source receipt when those exist. No CLI or schema that does not yet exist is prescribed.
 
 ## Shared-neutral compatibility prerequisite
 
@@ -29,3 +29,17 @@ Propose exact DSH write scope, supported profile and compatible package/schema b
 ## Required verification in either later port
 
 Exercise actual native predecessor/successor creation, supported external aggregate import, current-input mismatch, missing/wrong-scope/reused grant, duplicate/sibling successor, causal Code repair precharge, interruption around charge/release/completion, unknown-effect refusal, exhaustion with eligible final QA, unchanged predecessor bytes, and renewed current candidate verification. Include actual shipped entry/caller path, not only direct Python logic or a successful initialization. Exact inputs/commands derive from the selected Codex specification and each native runtime; none were run here.
+
+## Selected proposed contract and delivery order
+
+The draft chooses A: one schema3 operational authority per causal lineage and immutable closed-run artifacts, separately read-validating the admitted old ledger/parent pair. Proposed Codex package5.0.0 changes the new persistent format; canonical role-return wire2.0 stays unchanged. Proposed shared neutral4.1.0 adds PREFLIGHT-204, PLAN-405, TST-1003 and LIFE-108 without changing old norm meanings. These are design inputs for review, not shipped versions or an instruction to replace every version literal.
+
+Required first outcome from each separately authorized native agent: compatible ordinary operation against the exact accepted shared-neutral source. Its own helper/adapter/layout/runtime/adoption/tests must agree; preserve its old historical locks and own wire/defaults. The Codex3.2 plus parent4/native0 bridge is the motivating Codex population, not automatic authority to migrate a Codex run into Claude/DSH or to guess a different engine's historic shapes. Native continuation parity needs its own measured native input/consumer contract.
+
+Only after the ordinary-compatibility contributions and combined full common/sibling/native checks are accepted may the shared source integration be considered for its separate result decision. This Codex task does not patch those native packages. A checked isolated Codex candidate cannot be called overall green when the shared-version dependency remains unresolved. No old native profile is silently repointed to a snapshot.
+
+For a later native continuation port, carry the A invariants: original source files unchanged on every refusal, one enrolled lineage authority, explicit supported terminal/reentry matrix, native repair through Code charged before release, no-repair QA at exhaustion, all four retry episode scopes, current verification renewal, actual reservation/readback/native-parent proof, and declared single-writer/storage limits. Preserve its own existing wire contract unless its separate approved task explicitly changes it.
+
+Inspect exact native compatibility guard consumers before editing. In Claude, Python-only work is insufficient if `workflows/feature-dev.js` still enforces the old cap/fresh-state/counter interpretation. In DSH, web/desktop discovery and actual root dispatch are different proof obligations. Do not merely repin AST hashes or advertise source parity as native efficacy.
+
+Required return to this task: source/contract/version identities; exact touched paths and purposes; unchanged protected bytes; ordinary-compatibility evidence first; any separately promised continuation/native-parent evidence; independent review; known failures and unsupported routes; and remaining integration/activation decisions. Existing matching task permission is reused; this explanatory note itself does not authenticate a new external action. Actual Codex checked-source/acceptance receipt is NOT AVAILABLE at specification preparation, and no agent should invent it.

@@ -2,7 +2,7 @@
 
 Actor/context: `/root/continuation_completeness`, a distinct fresh actor who did not author the RECON, its classification or either earlier lane report. Assignment: read-only completeness challenge under RECON-308, not solution generation, architecture selection or software QA.
 
-Target: `/Users/a1111/.codex/worktrees/continuation-recon/galaxica-sombrero`, branch `codex/continuation-recon`, baseline `388c94495d86a771da6fa5e8514249976dc8c8a1`.
+Target: `WORKTREE_ROOT`, branch `codex/continuation-recon`, baseline `388c94495d86a771da6fa5e8514249976dc8c8a1`.
 
 Exact permitted write paths: **NONE**, including scratch and Git. Restrictions were behavioral within the host sandbox; no hard per-agent filesystem isolation is claimed. No files, Git state, tests, builds, helper executions, product probes or delegated actors were created or changed.
 
@@ -123,3 +123,5 @@ I found no basis to reopen default four, preserved failures/history, separate re
 After root reconciliation, a bounded read-only delta check can confirm the additions. The resulting reviewed question still requires matching human launch permission before proposal generation; this review supplies neither that permission nor implementation/specification approval.
 
 Closing Git status showed only the root-owned documentation changes already identified in the assignment. **Writes by this checker: none.**
+
+Publication projection: local absolute checkout path replaced by WORKTREE_ROOT. Complete original bytes are retained in the ignored task-owned `.methodology/continuations/cont-bound-docs/evidence/raw/` home; original SHA256 `2570fc9402cb015590de517bca0f4d0e9c5749d645afb9ccbe445779ac348a1e`. This is a privacy projection, not a changed finding or permission.

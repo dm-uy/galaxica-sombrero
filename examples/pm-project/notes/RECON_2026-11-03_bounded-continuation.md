@@ -1,6 +1,6 @@
 # RECON — bounded continuation and earlier verification
 
-Date: 2026-11-03. Status: reconnaissance complete and independently checked; Q-REPRESENTATION/Q-ROLLOUT await human launch permission before dependent specification readiness.
+Date: 2026-11-03. Status: reconnaissance complete; owner authorized ONE Q-REPRESENTATION/Q-ROLLOUT decision packet on 2026-11-03. Selection/specification preparation active; no implementation.
 Baseline: `388c94495d86a771da6fa5e8514249976dc8c8a1`. Branch: `codex/continuation-recon`.
 
 <!-- $START_DOCUMENT -->
@@ -271,3 +271,19 @@ REQUIRES: RC_QUESTIONS, RC_BOUNDARY
 
 <!-- $END_SECTION_RECON -->
 <!-- $END_DOCUMENT -->
+
+## Owner-authorized packet launch — 2026-11-03
+
+Original reviewed pending states above are retained as history. The actual structured answer was «Разрешить один пакет по обоим вопросам» to question call `call_74fb1a9b695f430f9e198e1566ed53be`, item0, explicitly covering Q-REPRESENTATION/Q-ROLLOUT, choice for specification, no implementation/installation/Jeni execution. [Same brief, boundaries, predeclared criteria and source binding](bounded-continuation-decision/brief.md). This supersedes only the missing launch-permission hold, not solution/spec/result acceptance. Fresh generators are authorized; no source writes or sibling execution follow.
+
+## Packet result and proposed specification trace — 2026-11-03
+
+Two distinct fresh generators produced original A/B proposals; root saved/read back the unranked [HOLD](bounded-continuation-decision/HOLD.md) before distinct evaluation. [Original evaluation](bounded-continuation-decision/evaluation.md) recommends A narrowly; [root drafting choice](bounded-continuation-decision/decision.md) accepts it as a proposal for owner review, retaining B and reopening evidence. No extra generation round, implementation or human design approval occurred.
+
+Current Q-REPRESENTATION disposition: schema3 single lineage authority with bounded historical bridge, immutable run terminals, explicit entry/retry/recovery/identity constraints → [draft specification](../specs/bounded-continuation.md) BR-1–5, AC-CONT-1–7/11. Current Q-ROLLOUT disposition: coordinated shared-neutral hold, separate external-agent ordinary compatibility before main → BR-9/10, AC-CONT-12. Q-SCOPE remains Codex executable only; Q-LEGACY remains actual native0/root4; Q-DURABILITY makes no exactly-once/global/power-loss promise. These are proposed spec resolutions, not owner-approved implementation/release decisions.
+
+Coupled-consumer source addendum exposed actual Codex/Claude full-AST guard and exact exception requirements, not a new scope fork. Scope/readiness independent review must check this and the snapshot/control distinction. Root also corrected local-path privacy defects in root-owned documents: complete original brief/completeness report retained unchanged in ignored `.methodology/continuations/cont-bound-docs/evidence/raw/`; tracked publication projections name the redaction and original hashes. The older delta report hashes refer to the original bytes, not the redacted projection. No full private deny-list publication scan is claimed.
+
+## Specification preparation closure — 2026-11-03
+
+The [draft specification](../specs/bounded-continuation.md) and transfer instructions passed independent source/document review after an exact release-consumer scope correction; [original review](bounded-continuation-spec-review.md) and [final delta](bounded-continuation-spec-review-delta.md) retain both outcomes. This closes authorized preparation, not human design/specification approval or implementation. All Q items now have current proposed draft dispositions and BR/AC/boundary trace in the specification receipt; earlier pending statements above remain dated checkpoint history. Root document checks pass; source/runtime behavior remains unchanged and NOT RUN.
