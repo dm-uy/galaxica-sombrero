@@ -1,16 +1,20 @@
-# Current: RECON-DEC specification ready for owner review
+# Current: RECON-DEC targeted result ready for integration review
 
 ## Pending owner decision
 
-Review [the concrete RECON-DEC specification](specs/spec-recon-decision-checkpoint.md). The owner authorized preparation on 2026-11-03, not implementation of the unseen draft. No main merge, push, publication or installation is authorized by this task. Reuse a later matching decision rather than asking twice.
+Review the [concrete source result and bounded evidence](notes/spec-recon-decision-checkpoint-result.md) for the separate integration action. No main merge, push, publication or installation has occurred. The branch inherits PM-INVOKE local-only commits; publishing that inherited work needs matching scope too. Reuse any later exact owner decision rather than asking twice.
 
-## Current result and continuation
+## Current result
 
-The draft covers explicit RECON uncertainties/exclusions, independent completeness checking even for an empty list, human permission before named brainstorm launches and actual decision traceability before dependent specification readiness. [Input RECON, source identities and document verification](notes/RECON_2026-11-03_spec-recon-decision-checkpoint.md). Root owns only the RECON, specification and affected TASKS/ROADMAP/HANDOFF on `codex/recon-decision-spec`, based on `bbc91c0c9c6d85342d6c049272c31f70079d3d9a`; the canonical stable checkout remains clean on `main`.
+The owner explicitly approved targeted implementation on 2026-11-03 without full feature-dev. [Exact grant and revised specification](specs/spec-recon-decision-checkpoint.md). Root implemented RECON-307–311/SP-206 and BRAIN-104's scoped launch condition, synchronized native callers and current release bindings, retained original algorithm/schema/role boundaries and updated only coupled factual receipt/census consumers.
 
-Independent read-only source lanes and independent draft verification completed; no blocking document finding remains. The plan-only/spec-affecting clarification is incorporated. Document checks, whitespace and existing adapter checks pass within the note's limits; future implementation/native criteria remain NOT RUN. These records are retained in the local scoped branch; no remote delivery is claimed. [Tasks and next disposition](TASKS.md#recon-dec--reviewed-recon-forks-and-owner-authorized-brainstorm).
+Source versions in the branch: neutral/Codex/DSH4.0.0, Claude3.0.0. These are source identities, not installed versions. The canonical stable checkout remains clean on `main`; no installed package or user configuration changed. All source edits belong to root on `codex/recon-decision-spec`, implementation base `3db5a5cccf51c8227d78aa6b2e37fc1fd04e2d29`.
 
-Next eligible action is the owner's review/rework decision. After exact implementation approval, use the actual co-located workflow and dictated plan home in the spec. Do not treat the source-authoring task as a feature-dev run or silently activate held work.
+Affected tests and adapter checks pass; independent source review and a small fresh-context checker/consumer probe are retained in the result note. The initial missed DSH manifest failure, review corrections, exact receipt refreshes and environment warning are retained there. No full regression run, feature-dev phases/ledger, technical plan, Doxygen build, real positive human launch event, complete live brainstorm or installed-runtime enforcement is claimed. The bounded probe found omissions/false exclusions, held permission/readiness despite an untrusted worker claim and allowed the independently checked empty case without an empty question.
+
+## Continuation
+
+[Tasks and next disposition](TASKS.md#recon-dec--reviewed-recon-forks-and-owner-authorized-brainstorm). After a matching result decision, perform only its concrete integration/publication/install scope and preserve existing local-only history. No deferred C3/M30/consumer work is resumed by this result. If rework is requested, keep the current evidence/history and use affected checks; do not open a full feature-dev run solely for this instruction change.
 
 ## Relevant previous state
 

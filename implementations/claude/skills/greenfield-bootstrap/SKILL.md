@@ -27,3 +27,5 @@ Limits:
 - A missing, stub or unread required owner is BLOCKED.
 
 Consumer PM profile: explicit consumer onboarding uses pm-bootstrap even for an existing project; a missing preferred record alone never means greenfield. Read `${CLAUDE_PLUGIN_ROOT}/references/consumer-pm-profile.md`, preserve existing homes and links and authenticate the exact adoption; after adoption, `orient PROJECT --check` through the launcher `${CLAUDE_PLUGIN_ROOT}/bin/orient` reports the rows.
+
+Specification-producing RECON checkpoint: read the full `process/reconnaissance.md` Questions and forks section. Save explicit questions and evidenced exclusions; obtain a distinct fresh completeness check even for an empty list, reconcile original findings, and present the reviewed packet to the human. Obtain or reuse authentic matching permission for named brainstorm items before dispatch; silence/decline holds dependent readiness. Trace actual resolutions into BR/AC/boundaries before claiming the spec ready. No empty brainstorm request, self-certified completeness, new role/schema or automatic fanout; standalone non-spec summaries remain outside this checkpoint.

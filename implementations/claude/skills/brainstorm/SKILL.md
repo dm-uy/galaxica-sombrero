@@ -23,3 +23,5 @@ Limits:
 - Silence, a default, another agent or a tool result is never the owner's choice.
 - No merge, publication or installation follows from this skill, and an inner role never delegates or commits.
 - A missing, stub or unread required owner is BLOCKED.
+
+Specification-producing RECON checkpoint: read the full `process/reconnaissance.md` Questions and forks section. Save explicit questions and evidenced exclusions; obtain a distinct fresh completeness check even for an empty list, reconcile original findings, and present the reviewed packet to the human. Obtain or reuse authentic matching permission for named brainstorm items before dispatch; silence/decline holds dependent readiness. Trace actual resolutions into BR/AC/boundaries before claiming the spec ready. No empty brainstorm request, self-certified completeness, new role/schema or automatic fanout; standalone non-spec summaries remain outside this checkpoint.

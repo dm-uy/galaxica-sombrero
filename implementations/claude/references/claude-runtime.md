@@ -1,6 +1,6 @@
-# Claude Code runtime — methodology-claude 2.4.0
+# Claude Code runtime — methodology-claude 3.0.0
 
-This is the runtime procedure of the native Claude Code package for neutral methodology 3.2.0. It says how Claude Code carries the neutral rules; it restates none of them. Where this file and a neutral owner seem to differ, the neutral owner wins and the difference is a package defect.
+This is the runtime procedure of the native Claude Code package for neutral methodology 4.0.0. It says how Claude Code carries the neutral rules; it restates none of them. Where this file and a neutral owner seem to differ, the neutral owner wins and the difference is a package defect.
 
 ## 1. Profile and binding
 
@@ -96,3 +96,5 @@ Not supplied: detached or cached installation, automatic discovery, publication,
 At the consequential-open trigger load full `prompting/brainstorm.md` through the current adapter binding. The authorized root coordinates its independent packet using the actual native collaboration mechanism; inner roles request it. Carry existing evidence references in the brief/plan/DEC/task, never a new canonical field or phase. Missing required proof holds dependent readiness; preserve reasoned routine/settled/forced exclusions and actual actor/source limits.
 
 Before the opt-in Workflow starts any dependent consequential choice, the root prepares and links the owner-required decision packet through existing inputs. The unchanged workflow cannot manufacture independence or new fields; if the packet is unavailable, use the existing blocked/held route rather than delegate inside Architect.
+
+For specification-producing reconnaissance, enforce the full `process/reconnaissance.md` Questions and forks checkpoint before dependent readiness: separate completeness actor, original-source checks including empty/excluded cases, root reconciliation, reviewed owner digest and authentic matching named brainstorm launch permission before generators. Reuse matching grants; missing permission or independence holds the affected choice. Root verifies actual resolutions and source/BR/AC/boundary traceability; helper state does not certify those semantics. Standalone non-spec summaries and plan-only routine choices retain their existing boundaries.

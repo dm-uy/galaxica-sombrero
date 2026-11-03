@@ -1,10 +1,10 @@
-# Pointwise adoption — neutral 3.2.0 / methodology-claude 2.4.0
+# Pointwise adoption — neutral 4.0.0 / methodology-claude 3.0.0
 
 This file is the `via` carrier of all 71 `reference` entries in [adapter.json](../adapter.json). The adapter and this file resolve `spec_root` (`../../`) from the adapter's own directory, independent of the caller's working directory. Inside Claude Code the same location is `${CLAUDE_PLUGIN_ROOT}/../../`.
 
 ## Loading procedure
 
-1. Resolve the package root (`${CLAUDE_PLUGIN_ROOT}`, or the directory of this file's parent) and the neutral root two levels above it. Check that `SPEC_VERSION` equals the adapter's `spec_version` (3.2.0). A missing or different neutral root is BLOCKED; never substitute an older installed copy.
+1. Resolve the package root (`${CLAUDE_PLUGIN_ROOT}`, or the directory of this file's parent) and the neutral root two levels above it. Check that `SPEC_VERSION` equals the adapter's `spec_version` (4.0.0). A missing or different neutral root is BLOCKED; never substitute an older installed copy.
 2. Before any software role acts, read the six core owners in full: `concepts/principles.md`, `roles/_base.md`, `code/exoskeleton.md`, `code/ldd.md`, `code/doxygen.md`, `code/tests.md`. Identity-unchanged content read earlier in the same run may be reused; changed content is read again.
 3. Read the assigned role owner, `protocols/role-returns.md` and every owner the applicable skill names, in full. Specialized owners load on their actual trigger, not by following every link.
 4. Record what was read (path, revision or byte identity, read condition) in the existing phase evidence. A card, a hash, a link, a summary or a stub is not a read; a required owner that is missing, a stub, truncated or unread blocks dependent action.
@@ -136,3 +136,5 @@ These 28 rows equal the adapter declarations. A declared mechanism is what the p
 | `model-judgment` | opus (Claude Code alias for the current Opus model); used for architecture, plans, specifications, Review, Finalize and synthesis |
 | `gate-cadence` | per-change exact specification; an approved batch scope where the owner expressly granted it; the result decision stays separate |
 | `debug-entry-cap` | 4 |
+
+Specification-producing reconnaissance also adopts RECON-307–311 and SP-206 in full: one Questions and forks section, a distinct completeness challenge including empty/excluded cases, root reconciliation, matching human launch permission and resolution traceability before dependent specification readiness. This qualifies BRAIN-104 launch order only at that checkpoint; it adds no role, schema or automated enforcement.

@@ -5999,9 +5999,10 @@ def test_f2_complete_current_interfaces(repo_root):
 # endregion FUNC_test_f2_complete_current_interfaces
 
 
+# RECON-DEC 2026-11-03: independent source/hash review refreshes only the 51 Architect read receipts after ARCH-301 changed; original whole-fixture pin and negative controls retained.
 # Path-bound read-receipt refreshes admitted under the original whole-fixture pin: (owner path, pinned original SHA, current owner SHA, exact receipt population).
 RECEIPT_REFRESH = (
-    ("roles/architect.md", "d7ecb56452d6c20ca04938fcf16a8b786a0ac851762e27e0ac860d97b6035d23", "44763ab7afa836e5533e45075a66decc8a55b5ac9caddd8c2ff85b26678a8d61", 51),
+    ("roles/architect.md", "d7ecb56452d6c20ca04938fcf16a8b786a0ac851762e27e0ac860d97b6035d23", "659b2eca3ab50487dcb82cb85511dfaded6c0acece9f24d337d3de4b3bf35024", 51),
     ("flow/phases.md", "12a171ce07528146b9c3e3f91c5550aea072c3e7315293f5462766b0f32544ec", "2a22af26aca732913e546291e4aa57a3e0d94f532a2697d1c09f768e53c8851b", 351),
     ("roles/qa.md", "baeb5f36875dbfee733d9114de2d37a2cfa6b7888d0722395dadf52532f2ba53", "e1aa3a6e25aa35fe9f443b41dff0cd48150c548cf5cad7546a3d1e5364fa5751", 50),
 )

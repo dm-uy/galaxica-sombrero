@@ -27,6 +27,8 @@ A specification connects an actual request and measured input to a bounded, veri
 - **SP-203** MUST: Validate the complete applicable profile, including purpose/scope/BR/AC/delivery, graph authority, scope lists, boundaries and full document readiness. Brownfield validation explicitly checks BR-1 compatibility/authorized exceptions, MAY EDIT / DO NOT TOUCH and measurable ACs. Inspect coupled test/doc/plan/checker consumers; successful format/lint output alone does not prove completeness or architecture equality.
 - **SP-204** MUST: Treat literal verification promises as obligations with the applicable [development plan](../protocols/dev-plan.md) commitments: token → actual symbol/operation → bounded expected result. Keep AC and volunteered promises visible without inventing a new commitment schema or checker. Source-section headings are a prose contract unless an actual documented consumer proves a particular parser rule.
 
+- **SP-206** MUST: Before declaring a new or revised project specification ready, consume its RECON [Questions and forks checkpoint](reconnaissance.md#process.reconnaissance.forks): independent completeness evidence includes empty lists and exclusions, root reconciliation, applicable matching human brainstorm launch permission, and actual resolutions/dispositions traced to exact BR/AC/boundaries. Retain pending/disputed items and hold their dependent readiness. Reuse unchanged accepted decisions and matching grants; source changes/new spec-affecting forks renew affected evidence only. Launch consent is not a solution decision, specification approval or integration acceptance. Record this check in the existing receipt, not a new register or runtime field.
+
 <!-- anchor: process.specification.source-correspondence -->
 
 ## Brownfield source-obligation correspondence
@@ -87,6 +89,7 @@ Author / validator: [Actual responsibilities and evidence]
 Input RECON: [Measured source/consumer population and limits]
 Approval: [Exact authority/scope/reference; separate integration state]
 Task/tracker comparison: [Compared inputs, differences or none; write authorization is separate]
+RECON questions and forks: [Independent completeness, exclusions/empty conclusion, reconciliation, applicable launch permission, resolutions → exact BR/AC/boundaries; remaining dependent holds]
 Brownfield source correspondence: [BROWNFIELD only: source obligations/locations → exact BR/AC/
 boundary or disposition with authority/basis; reverse source/derivation links; considered-source
 exclusions and reasons; checked extent and unresolved/access limits. Reuse Input RECON,

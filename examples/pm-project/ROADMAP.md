@@ -1,13 +1,14 @@
 # Methodology project route
 
-## Current focus: RECON-DEC specification decision
+## Current focus: RECON-DEC concrete result decision
 
-Owner-selected on 2026-11-03: the [specification](specs/spec-recon-decision-checkpoint.md) for reviewed RECON forks and owner authorization before brainstorm is prepared and independently checked locally. Its implementation awaits the owner decision. Previous delivered and held outcomes below retain their state. [Tasks](TASKS.md#recon-dec--reviewed-recon-forks-and-owner-authorized-brainstorm).
+Owner-selected on 2026-11-03: the [specification](specs/spec-recon-decision-checkpoint.md) for reviewed RECON forks and owner authorization before brainstorm is prepared and independently checked locally. The owner subsequently approved targeted implementation without full feature-dev. The source changes, affected checks, independent review and bounded behavioral probe are complete locally; [result and limits](notes/spec-recon-decision-checkpoint-result.md). Integration remains a separate decision. Previous delivered and held outcomes below retain their state. [Tasks](TASKS.md#recon-dec--reviewed-recon-forks-and-owner-authorized-brainstorm).
 
 ```mermaid
 flowchart LR
-  RD1["RECON-DEC-T1 checked locally: recon and specification"] --> RD2["RECON-DEC-T2 pending: owner spec decision"]
-  RD2 --> RD3["RECON-DEC-T3 not authorized: implementation"]
+  RD1["RECON-DEC-T1 checked locally: recon and specification"] --> RD2["RECON-DEC-T2 approved: targeted procedure"]
+  RD2 --> RD3["RECON-DEC-T3 checked locally: targeted implementation"]
+  RD3 --> RD4["RECON-DEC-T4 pending: concrete result integration"]
 ```
 
 ## Current: PR19 merged and installed

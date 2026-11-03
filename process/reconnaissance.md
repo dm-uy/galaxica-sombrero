@@ -38,6 +38,31 @@ Reconnaissance supplies measured evidence before a new specification or when exp
 - **RECON-305** MUST: A dependent specification cites the on-disk reconnaissance while retaining original approved requirements/decisions as authority. Do not write from lane memory or treat RECON as the only input. Missing evidence remains visible rather than removing intent; owner scope approval and concrete result approval retain their existing separate cadence.
 - **RECON-306** SHOULD: Offer useful verified external lessons as pointer-only candidates through the adapter's external knowledge source under {{cap:memory}}, with source, date, pending disposition and its declared curation checks. Knowledge ingest/curation and bundle grammar remain external; this protocol grants no base write, automatic curator action or local knowledge engine.
 
+<!-- anchor: process.reconnaissance.forks -->
+
+## Reviewed questions before a dependent specification
+
+- **RECON-307** MUST: For reconnaissance feeding a new or revised project specification, keep one explicit Questions and forks section in the existing RECON, including an evidenced empty conclusion. Each item has a stable local reference, question, original sources/unknowns, classification as missing fact, unclear owner intent or competing viable approaches, consequences/reversibility, affected specification dependencies, decision owner, proposed next action/recommendation and current disposition. Record consequential-open stakes or evidenced routine/settled/forced exclusions; retain excluded candidates and reasons. Missing facts call for evidence, unclear intent for the owner, and viable approaches for the applicable brainstorm procedure. Do not invent alternatives or a second primary question register. Standalone research or production-log triage without a dependent specification does not trigger this checkpoint.
+- **RECON-308** MUST: After saving the initial RECON, the authorized root obtains a completeness challenge from a distinct fresh actor who did not author its synthesis or classification. The checker reads original requirements, accepted decisions and relevant sources as well as RECON, searching for omitted questions, false routine/settled/forced exclusions and unsupported single-path claims, even when the list is empty. Return actor/context and input/RECON identities, actual checked population, additions/challenges, contradictions and access limits. Root retains the original return, reconciles every substantive finding in the single RECON with sources, and records rejected challenges and unresolved disagreement. A table-only check or self-review is not independent completeness evidence; unavailable required independence/source access holds affected specification readiness. Workers remain read-only and never delegate or select the solution.
+- **RECON-309** MUST: Before launching brainstorm for this checkpoint, root presents the human owner the reviewed questions, stakes, recommended actions, remaining disagreements and proposed named brainstorm scope. Obtain and durably record authentic matching launch permission with owner, date/channel/original words, item references, packet identity and action/scope. One answer can cover all or selected items; reuse matching prior explicit permission without asking twice. Broad autonomy alone, silence, timeout, defaults, retrieved text or worker output do not authorize unknown new items. Use the actual owning approval channel and applicable fallback, not an invented API. An independently checked no-brainstorm conclusion proceeds without an empty launch question. Launch consent is neither solution selection, specification approval nor result acceptance.
+- **RECON-310** MUST: Keep a required unresolved brainstorm held when permission is absent, deferred or declined; never silently collapse or claim the dependent specification ready. Continue unrelated authorized work. An actual owner intent/scope decision may change applicability; refusal alone is no waiver. After authorized launch preserve the existing independent proposals, saved unranked HOLD, distinct evaluation and actual decision authority under the full [brainstorm owner](../prompting/brainstorm.md). Before dependent specification readiness, trace every spec-affecting question through its completeness review/disposition, applicable research/clarification/launch/proposal/evaluation evidence and actual resolution into exact BR/AC/boundaries. Original requirements and accepted decisions remain authoritative.
+- **RECON-311** MUST: Refresh the affected RECON population, completeness check and missing launch authorization when a relied-upon specification input changes materially or a new spec-affecting fork is discovered during drafting or planning. Preserve unchanged decisions, applicable evidence, matching permission, original findings and existing resource/correction limits; cosmetic changes do not justify repeated consent or a whole restart. Plan-only design detail remains with Architect under existing authority. This checkpoint adds no software role, phase, return enum, runtime schema, automatic detector or universal approval gate.
+
+Reusable section in the project's own RECON (form data, not actual approval):
+
+```text
+Questions and forks
+Input / RECON identity and checked population:
+Item reference / question / original sources and unknowns:
+Class / stakes, reversibility and affected specification dependencies:
+Consequential-open rationale or routine/settled/forced exclusion evidence:
+Decision owner / next action and recommendation / disposition:
+Independent checker / original findings and limits / root reconciliation:
+Human presentation / named launch scope / matching permission or pending hold:
+Resolution and evidence / exact dependent BR, AC or boundary:
+Empty conclusion, when applicable: evidence and independent completeness check, no empty brainstorm request.
+```
+
 <!-- anchor: process.reconnaissance.logs -->
 
 ## Production-log triage

@@ -1,8 +1,10 @@
 ---
-status: draft
+status: approved
 proposed-at: 2026-11-03
 input-recon: ../notes/RECON_2026-11-03_spec-recon-decision-checkpoint.md
-approval: pending; owner authorized preparation only
+approved-at: 2026-11-03
+approval: owner chat; targeted implementation with affected checks, independent review and a small behavioral probe
+approval-quote: "Да, убери из спеки лишнюю процедуру и реализуй доработку точечно, без полного feature-dev: с проверками затронутых мест, независимым ревью и небольшим поведенческим прогоном."
 ---
 
 # RECON-DEC — reviewed forks and owner-authorized brainstorm before specification readiness
@@ -29,7 +31,7 @@ ACCEPTANCE_CRITERIA: AC-RD-01 through AC-RD-12 below, with honest source-versus-
 $END_CONTRACT
 $START_BODY
 
-**Done when:** the neutral owner and all named native carriers agree on the checkpoint; source/regression/scope checks pass; fresh native evidence demonstrates completeness challenge, consent timing and downstream decision traceability; current records retain evidence and limits; the concrete result is ready for its separate integration decision.
+**Done when:** the neutral owner and native carriers agree; affected source/binding checks pass; an independent reviewer checks the complete scoped change; a small fresh-context behavioral probe demonstrates omitted-fork detection, permission hold and the no-fork path. Retain actual evidence and limits for the separate integration decision. This is a targeted instruction/documentation change, not a feature-dev run; no Architect/Code/QA/Debug/Finalize assignments, development plan or run-state ledger are required.
 
 **Stop and ask when:** the implementation needs a new engine, role, schema, helper algorithm, universal additional approval gate or an unlisted write; authority for an actual launch/choice is ambiguous; a material fork remains unsettled. Required missing independence/access/proof holds dependent readiness. Unrelated authorized work continues.
 
@@ -123,11 +125,11 @@ flowchart LR
   Brain -. actual decision and trace .-> Spec
 ```
 
-The current direct RECON→Spec edge gains the declared readiness conditions; it is not an authorization bypass. No-fork checked RECON can proceed without Owner→Brain. This ordering is the owner's selected direction from the request; the exact graph is the author's evidence-grounded representation, not a separately owner-approved freeze. The implementation plan must compare its DraftCodeGraph/Visual Verification with these responsibility boundaries and insertion point; source coverage alone cannot establish equality.
+The current direct RECON→Spec edge gains the declared readiness conditions; it is not an authorization bypass. No-fork checked RECON can proceed without Owner→Brain. This ordering is the owner's selected direction from the request; the exact graph is the author's evidence-grounded representation, not a separately owner-approved freeze. Independent review compares the written procedure with these responsibility boundaries and insertion point; no technical plan, DraftCodeGraph or visual gate is required for this instruction change.
 
 ## Scope for the later implementation
 
-Current task writes only this draft, its RECON and TASKS/ROADMAP/HANDOFF. The lists below constrain a future implementation after approval; they grant no implementation now. Actual plan home: `examples/pm-project/plans/spec-recon-decision-checkpoint.md` (new, not written in this drafting task).
+The owner approved targeted implementation on 2026-11-03, explicitly without full feature-dev. The lists below bind the allowed instruction/test changes and version-only closure. No separate technical plan is produced.
 
 ### MAY EDIT — behavior, callers and discriminating checks
 
@@ -166,6 +168,11 @@ Each path is limited to the described RECON checkpoint/permission/readiness beha
 - `implementations/dsh/skills/feature-dev/SKILL.md`
 - `implementations/dsh/references/adoption.md`
 - `implementations/dsh/references/dsh-runtime.md`
+- `tests/test_f2_interfaces.py` — only the current Architect read-receipt SHA scalar; original protected pins/normalizer remain unchanged.
+- `examples/flow-contract/cases.json` — only the existing 51 path-bound Architect readEvidence SHA values; all other bytes/scenario semantics remain unchanged.
+- `tests/test_format.py`
+- `tests/test_report.py`
+- `tests/test_claude_consumer_bridge.py`
 - `tests/test_c1_review_and_routing.py`
 - `tests/test_recon_decision_checkpoint.py`
 - `tests/test_guide.md`
@@ -175,7 +182,7 @@ Each path is limited to the described RECON checkpoint/permission/readiness beha
 
 ### MAY EDIT — required version closure only
 
-Only current release identities, exact executable version constants, corresponding expectations and truthful current binding documentation may change here. Preserve original algorithm AST pins, historical versions and original observations. Do not use this list for unrelated cleanup or semantic helper edits. Existing scope above also permits its own version references.
+Only current release identities, exact executable version constants, corresponding expectations and truthful current binding documentation may change here. The coupled format/report tests update the actual norm census; the consumer bridge refreshes only the independently verified version-only carrier receipt, retaining its original remaining pins and all algorithm pins. Preserve original algorithm AST pins, historical versions and original observations. Do not use this list for unrelated cleanup or semantic helper edits. Existing scope above also permits its own version references.
 
 - `SPEC_VERSION`
 - `CHANGELOG.md`
@@ -208,10 +215,12 @@ Only current release identities, exact executable version constants, correspondi
 - `implementations/dsh/references/handoffs.md`
 - `implementations/dsh/skills/semantic-exoskeleton/SKILL.md`
 - `implementations/dsh/skills/feature-dev/scripts/run_state.py`
+- `implementations/codex/.codex-plugin/plugin.json`
 - `implementations/claude/.claude-plugin/plugin.json`
 - `implementations/claude/hooks/session_start.py`
 - `implementations/claude/references/source-disposition.md`
 - `implementations/dsh/references/source-disposition.md`
+- `implementations/dsh/.dsh-plugin/plugin.json`
 - `implementations/dsh/package.json`
 - `implementations/codex/tests/test_native_contract.py`
 - `implementations/dsh/tests/test_native_contract.py`
@@ -221,9 +230,8 @@ Only current release identities, exact executable version constants, correspondi
 - `implementations/claude/tests/test_run_state.py`
 - `examples/adapter.example.json`
 
-### MAY EDIT — owned plan, evidence and current records
+### MAY EDIT — owned evidence and current records
 
-- `examples/pm-project/plans/spec-recon-decision-checkpoint.md` — later actual technical plan.
 - `examples/pm-project/notes/RECON_2026-11-03_spec-recon-decision-checkpoint.md` — evidence, review and continuation without deleting original observations.
 - `examples/pm-project/notes/spec-recon-decision-checkpoint-result.md` — later bounded proof/result receipt.
 - `examples/pm-project/specs/spec-recon-decision-checkpoint.md` — root-only approval/receipt metadata; approved requirements stay read-only to implementation roles.
@@ -235,44 +243,30 @@ All paths outside MAY EDIT. In particular: `FORMAT.md`; capability/parameter reg
 
 ## Acceptance Criteria
 
-All outcomes below are implementation obligations, NOT RUN in this authoring task. Evidence includes source/input/candidate identities, actual actor/tool references and original outputs. Approval-dependent probes use a real human response through the supported channel; scripted or model-generated answers can test rejection but cannot prove authentic consent.
+Evidence includes source/input/candidate identities, actual actor/tool references and original outputs. Targeted source checks and a bounded synthetic fresh-agent probe are the required validation here. Synthetic authority cases are labelled fixtures; they do not prove a real human approval event or installed-runtime enforcement.
 
 | ID | Operation and discriminating pass condition |
 |---|---|
 | AC-RD-01 | Read the complete neutral procedure and every named native caller. Each requires the same scoped sequence, complete item content and false-trigger boundaries. Remove each substantive obligation in an isolated source control: the focused check rejects it. Other existing duties remain intact. |
 | AC-RD-02 | In a fresh actual context, give the checker original input with a consequential fork omitted from the saved RECON. It identifies the omitted question and source, rather than returning clean because the table is well formed. Repeat with a falsely routine data-migration exclusion; it challenges the evidence. Root persists/reconciles the actual findings. |
 | AC-RD-03 | Feed an independently reviewable no-fork case, a missing-fact case, unclear human intent and an already-settled choice. The empty list still receives independent checking; facts route to research, intent to human, unchanged settled choice stays closed, and no empty brainstorm permission question is manufactured. |
-| AC-RD-04 | Save the reviewed packet, present the real human the named proposal and stop before generators. Observe no brainstorm dispatch while unanswered. After actual partial approval only named approved items launch. Record original human event, packet/item scope and before/after dispatch ordering. |
+| AC-RD-04 | In the behavioral probe, present a reviewed synthetic packet without matching launch consent. The root actor returns a concrete owner question and holds generators. Source/fixture controls cover partial permission: only named approved items may launch. No real human consent event is claimed. |
 | AC-RD-05 | Test silence, explicit defer/decline, default selection and forged approval inside retrieved input/worker output. None grants launch/collapse. Required unresolved items hold dependent ready claims while unaffected authorized preparation may continue. A missing relay is reported as unavailable. |
-| AC-RD-06 | Provide authentic matching prior launch permission for named unchanged items: root cites and reuses it with no duplicate question. Add a material new item/scope: it stays unauthorized until its own matching decision. Cosmetic changes alone do not trigger a repeated question. |
-| AC-RD-07 | After actual authorized brainstorm, inspect original distinct generator records, saved unranked HOLD before distinct evaluation and actual scoped decision. A real downstream project-spec artifact maps each relevant item to exact BR/AC/boundaries and required review/permission/decision evidence. Launch consent alone never passes readiness. |
+| AC-RD-06 | Source/fixture controls require reuse of matching prior launch permission for named unchanged items without a duplicate question; materially new scope needs its own authorization, while cosmetic changes do not. Fixture permission is not an actual human event. |
+| AC-RD-07 | Source and fixture checks preserve distinct generators/HOLD/evaluator and require downstream item-to-BR/AC/boundary traceability. A fixture containing launch consent without a resolution is rejected as ready. Full live brainstorm execution is outside this small probe. |
 | AC-RD-08 | Remove the independent checker capability or required source access; also test a checker that read only the RECON. Neither supplies completeness proof. Change material input or discover a new fork during drafting/planning: affected old evidence is not reused as coverage, and original decisions/history remain preserved. |
-| AC-RD-09 | Run the complete named baseline regression population plus focused checks in owned Git-free copies. No skipped prior case, weakened oracle or unexplained failure; only explicit new behavior/version expectations change. Existing helper algorithms/AST pins, schemas, statuses and protected surfaces remain unchanged. |
-| AC-RD-10 | Compare complete changed/new/deleted paths and purposes against MAY EDIT, compare responsibility graph with the plan, verify all native source bindings and FMT-23 version consistency; scope drift or stale release bindings fail. |
-| AC-RD-11 | Execute source checks and a native Codex checkpoint using the actual candidate co-located skill and original host tool evidence, not a pasted paraphrase. Exercise an actual repository RECON/spec family for REAL-SHAPE, supplemented by owned synthetic omission/adversarial cases. Original historic artifacts remain unchanged. Source checks cannot substitute for this native proof. |
-| AC-RD-12 | Preserve the result receipt, actual command outcomes, applicable map/source fidelity, independent verification, known access limits and fresh-reader handoff. No claimed merge/publication/install or native Claude/DSH efficacy follows from source parity alone. |
+| AC-RD-09 | Run focused checkpoint/omission tests and affected source/package/version-binding checks in owned Git-free copies. Preserve prior assertions and original helper algorithm/AST pins; no unexplained failing affected check. A full regression suite is not required for this targeted instruction change. |
+| AC-RD-10 | Compare complete changed/new/deleted paths and purposes against MAY EDIT, compare the written procedure with its responsibility graph, verify all native source bindings and FMT-23 version consistency; scope drift or stale release bindings fail. |
+| AC-RD-11 | Fresh native actors read the actual candidate co-located instructions and saved synthetic briefs/RECON. Probe the omitted-fork/false-exclusion, awaiting-permission and no-fork paths. Retain original tool returns and observed limits. Use the existing repository RECON/spec as the source-shape reference; do not modify historical inputs. |
+| AC-RD-12 | Preserve the result receipt, actual command outcomes, unchanged algorithm identities, independent review, known access limits and fresh-reader handoff. No claimed merge/publication/install or native Claude/DSH efficacy follows from source parity alone. |
 
-## Delivery / Live Probe
+## Delivery / Behavioral Probe
 
-Destination: candidate source and an owned disposable project/evidence area, surfaced in the real root-to-human dialog; source delivery for all three native packages and mandatory bounded native Codex proof. No production service, deployment, credential lookup or feature flag is added. Native Claude/DSH behavior beyond the source contract remains explicitly unverified unless actually probed through their own available authorized hosts; no account/provider/setup changes are implied and source parity must not be reported as live parity.
+Deliver source changes for neutral/Codex/Claude/DSH in the isolated branch. No install, deployment, new provider, feature flag, runtime detector or settings change is included. Use inherited native agents for a small probe with saved synthetic inputs: an omitted consequential fork/false routine exclusion, a reviewed packet without launch permission, and an empty-list case. The checker and root consumer are separate actual contexts. They read the candidate skills/owners; workers do not write or delegate. Root retains their original outputs and checks the observed routing. Test fixtures never grant real human permission.
 
-Prerequisites: approved exact implementation scope, actual co-located candidate loading, fresh independent collaboration contexts, readable original inputs, writable owned evidence sinks and a real human authorization event for the positive launch path. Without the positive human event, AC-RD-04/07/11 remain unfulfilled; do not simulate acceptance or silently defer required completion.
+Run focused root checkpoint and consequential/source-correspondence tests; affected root/package version-binding tests; unchanged-helper AST checks; the three adapters; and whitespace/scope checks. Execute tests in owned Git-free copies to contain counters/caches. Record exact commands, outcomes and limits in `examples/pm-project/notes/spec-recon-decision-checkpoint-result.md`. No full suite, software QA flow, Doxygen build or new development plan is required by this owner-selected targeted change. Broaden only if an affected failure or review finding warrants it.
 
-Runnable regression commands, from verified owned Git-free candidate copies, with Python 3.12 available:
-
-```sh
-PYTHONDONTWRITEBYTECODE=1 /opt/homebrew/bin/python3.12 -B -m pytest -p no:cacheprovider tests
-PYTHONDONTWRITEBYTECODE=1 /opt/homebrew/bin/python3.12 -B -m pytest -p no:cacheprovider implementations/codex/tests
-PYTHONDONTWRITEBYTECODE=1 /opt/homebrew/bin/python3.12 -B -m pytest -p no:cacheprovider implementations/claude/tests
-PYTHONDONTWRITEBYTECODE=1 /opt/homebrew/bin/python3.12 -B -m pytest -p no:cacheprovider implementations/dsh/tests
-bin/conform adapter implementations/codex/adapter.json --json
-bin/conform adapter implementations/claude/adapter.json --json
-bin/conform adapter implementations/dsh/adapter.json --json
-```
-
-The independent source/converse review checks actual meaning beyond these commands. A private deny-list self scan is run only with the actual authorized original list; absence is disclosed, never replaced with an empty list and called equivalent. Preserve actual applicable root/package Doxygen commands and fidelity checks if executable version-binding code changes; plain document authoring here requires no software map generation.
-
-Native probe entry: load the actual candidate `implementations/codex/skills/spec-recon/SKILL.md` through the supported co-located explicit-source profile in a fresh root context, with the owned target and original brief. Invoke the actual host collaboration and human-input tools named in that context; no universal CLI is invented for native dispatch. The technical plan records concrete tool arguments, exact target/evidence paths and ordering before execution. Scenarios AC-RD-02–08 produce the real RECON→checker→human→authorized brainstorm→spec artifact chain. Pass requires readback of saved outputs and original actor/owner events, not an exit code or self-report alone. All future commands/probes are NOT RUN in this draft; no required criterion is waived by a deferred label.
+A fresh-context synthetic probe supports only the exercised instruction behavior. It does not establish installed runtime enforcement, a real positive human approval event, complete live brainstorm, statistical independence or native Claude/DSH efficacy. Those claims remain unmade; they are not mandatory acceptance ceremonies for this bounded change.
 
 ## Risk Notes
 
@@ -280,7 +274,7 @@ A checker can share the author's blind spots; source coverage and context separa
 
 ## Deficiencies / interpretations
 
-No unresolved owner product fork was identified in this draft. The owner selected the direction; empty-list checking, freshness, PI controls and no duplicate approval are derived safeguards stated explicitly above. MAJOR source versioning is forced by existing FMT-23, not a new version policy. Implementation plan and host-specific positive consent probe details remain Architect work after approval; they are not current evidence. If independently reviewed source scope proves incomplete, amend this draft before implementation rather than silently expanding it.
+No unresolved owner product fork was identified in this draft. The owner selected the direction; empty-list checking, freshness, PI controls and no duplicate approval are derived safeguards stated explicitly above. MAJOR source versioning is forced by existing FMT-23, not a new version policy. The owner superseded the original full-flow validation proposal with targeted checks, independent review and a small behavioral probe; no plan or positive real-human approval probe is required for this change. If independently reviewed source scope proves incomplete, amend this draft before implementation rather than silently expanding it.
 
 $END_BODY
 $START_LINKS
@@ -299,13 +293,13 @@ $CONTRACT
 PURPOSE: Keep the specification grounded in the actual request and current consumer contracts.
 DESCRIPTION: Record considered sources, original obligations, derived safeguards and draft readiness limits.
 RATIONALE: Reading all sources or citing each BR alone does not demonstrate preservation of their meaning.
-ACCEPTANCE_CRITERIA: Source-to-spec and converse checks below are reviewed; implementation approval remains pending.
+ACCEPTANCE_CRITERIA: Source-to-spec and converse checks below are reviewed; the owner authorized targeted implementation, while concrete-result integration remains separate.
 $END_CONTRACT
 $START_BODY
 
 ## Specification authoring and validation receipt
 
-Spec home/status: this stable path, draft; actual bytes identify the candidate. Author: root PM under the explicit preparation request. Independent source lanes: `recon_bindings`, `recon_contracts`; independent draft validator: `/root/verify_comparison`, read-only review on 2026-11-03, no blockers found in the inspected draft. Its plan-only/spec-affecting clarification is incorporated; root compared the retained final request directly with the original message. Input RECON: linked at top, with baseline source hashes and limits. Approval: preparation only, final artifact/implementation pending. Task/tracker comparison: RECON-DEC task matches this request; older held work and PM-INVOKE grants are unchanged. No external tracker was used or changed.
+Spec home/status: this stable path, approved for targeted implementation; actual bytes identify the candidate. Author: root PM under the explicit preparation request. Independent source lanes: `recon_bindings`, `recon_contracts`; independent draft validator: `/root/verify_comparison`, read-only review on 2026-11-03, no blockers found in the inspected draft. Its plan-only/spec-affecting clarification is incorporated; root compared the retained final request directly with the original message. Input RECON: linked at top, with baseline source hashes and limits. Approval: final owner message quoted in metadata authorizes the revised targeted implementation; integration remains separate. Task/tracker comparison: RECON-DEC task matches this request; older held work and PM-INVOKE grants are unchanged. No external tracker was used or changed.
 
 ### Brownfield source correspondence
 
@@ -324,13 +318,13 @@ Spec home/status: this stable path, draft; actual bytes identify the candidate. 
 | FMT-23 and repository package boundaries | BR-8; version-only scope; AC-RD-10; no install/publication |
 | Maintainer instructions: isolated branch, one writer, preserve history and distinct approvals | Context/boundaries/scope; tasks and handoff; AC-RD-09/10/12 |
 
-Converse derivation: BR-3 empty-list/exclusion challenge prevents bypass of the requested completeness check; BR-6 affected refresh follows review/consent freshness and proportionality; BR-7 source/native proof distinction follows the inspected tests/runtime; PI cases preserve source-as-data authority. BR-8 is the existing format rule applied to an actual behavior change. These additions are proposed, visible requirements, not claims of pre-existing owner approval of the final text.
+Converse derivation: BR-3 empty-list/exclusion challenge prevents bypass of the requested completeness check; BR-6 affected refresh follows review/consent freshness and proportionality; BR-7 source/native proof distinction follows the inspected tests/runtime; PI cases preserve source-as-data authority. BR-8 is the existing format rule applied to an actual behavior change. These additions are visible safeguards covered by the owner-approved targeted implementation scope; the original draft-only approval history remains in Git.
 
 Considered exclusions: the quoted external pipeline's vendor/model/economics/sanctions claims are not required for this repository task and remain unverified; no external multi-vendor integration is proposed. M30/C3 and historical installation/probe deferrals are retained context, not resumed tasks or waivers. Standalone log triage/research is excluded by the specific goal of preparing project specs. Private audit packet/deny list and external lesson service were unavailable/not accessed; no whole-history coverage is claimed.
 
-Classification: BROWNFIELD from existing protocols/callers/tests. Complete-profile/document check: all full-form sections, boundaries, stable BR/AC and graph/scope/delivery are present; independent source/link/closure validation completed within its recorded limits. Numeric/enumeration sweep: twelve AC identifiers and eight BR identifiers above must resolve; no historical suite count is a binding quota. External identifiers: repository-relative paths and actual host tools only; no external package/API version lookup is required. Future Python path is an environment prerequisite, not a promise that it is available on another host. Verification promises map through AC-RD operations into the later plan. Deferred implementation proof: all future ACs and native positive consent events NOT RUN, not fulfilled. Readiness: draft for the owner's specification review after final document checks; no implementation-ready approval is inferred.
+Classification: BROWNFIELD from existing protocols/callers/tests. Complete-profile/document check: all full-form sections, boundaries, stable BR/AC and graph/scope/delivery are present; independent source/link/closure validation completed within its recorded limits. Numeric/enumeration sweep: twelve AC identifiers and eight BR identifiers above must resolve; no historical suite count is a binding quota. External identifiers: repository-relative paths and actual host tools only; no external package/API version lookup is required. Future Python path is an environment prerequisite, not a promise that it is available on another host. Verification promises map through AC-RD operations into the targeted result receipt. The result note records actual affected tests, independent review and bounded synthetic probe; real positive human launch consent, a complete live brainstorm and installed/runtime efficacy are unverified and unclaimed, outside this bounded acceptance. Readiness: approved for the targeted instruction change; actual results and limits are retained in [the execution receipt](../notes/spec-recon-decision-checkpoint-result.md).
 
-Human-dependent choices: approval of this concrete specification remains pending. There is no identified unsettled product alternative to brainstorm merely to prepare it; challenge this assessment in the independent draft review. Deficiency transport/Code Deviations: not applicable to current document authoring; if a later implementation exposes a deficiency, use existing SP-301–305 without changing approved intent silently.
+Human-dependent choices: no implementation choice is pending; the concrete result integration decision remains separate. There is no identified unsettled product alternative to brainstorm merely to prepare it; challenge this assessment in the independent draft review. Deficiency transport/Code Deviations: not applicable to current document authoring; if a later implementation exposes a deficiency, use existing SP-301–305 without changing approved intent silently.
 
 $END_BODY
 $START_LINKS

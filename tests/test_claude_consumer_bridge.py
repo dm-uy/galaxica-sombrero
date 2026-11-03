@@ -67,7 +67,7 @@ import pytest
 LOGGER = logging.getLogger(__name__)
 BASELINE = "M37 baseline ba44b19: accepted C2 bytes"
 PINS = {
-    "implementations/codex/references/consumer-pm-profile.md": ("5b37c5b666fa44e7023b7efe4e8ebf94ad21f4df163d368150a02b78ca184aae", "SP-205 minor correction 2026-10-27: source/neutral version identity only; carrier duties unchanged; independent diff/hash review and bridge negative controls required"),
+    "implementations/codex/references/consumer-pm-profile.md": ("2fd2038e8fd465f58835cd030a7cfb88f2912164a4cb907e54f30d726fa72825", "RECON-DEC 2026-11-03: source/neutral version identity only, 3.2.0 to 4.0.0; carrier duties unchanged; independent old/new diff/hash review and Claude binding/session/route checks passed; bridge negative controls retained"),
     "implementations/codex/skills/pm/scripts/codemap.py": ("9d08a9558fa4e88df6f9dc086a6873455c031aee15ecc3d7f584fb17ac63fc6e", BASELINE),
     "implementations/codex/skills/pm/scripts/consumer_files.py": ("a86d3b963e49f9b63c5380ceb19a998f7e91457a6e54c331732f8a781e03ff84", BASELINE),
     "implementations/codex/skills/pm/scripts/markup_migrate.py": ("887b809c466384211caf52ea1027b8fd6ea090eecca4a2beee277302ac066768", BASELINE),

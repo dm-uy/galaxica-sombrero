@@ -160,7 +160,7 @@ def test_layout_matches_members(caplog):
     LOGGER.info("[IMP:9][test_layout_matches_members][COMPARE] declared=%d actual=%d", len(declared), len(actual))
     _show(caplog.records)
     assert set(layout) == {"package", "version", "profile", "files", "roles"}
-    assert (layout["package"], layout["version"], layout["profile"]) == ("methodology-claude", "2.4.0", "colocated-in-place")
+    assert (layout["package"], layout["version"], layout["profile"]) == ("methodology-claude", "3.0.0", "colocated-in-place")
     assert declared == sorted(declared) and len(set(declared)) == len(declared) == 64
     assert sorted(set(actual) - set(declared)) == [] and sorted(set(declared) - set(actual)) == []
     assert layout["roles"] == {name: "agents/%s.md" % name for name in AGENTS}
@@ -190,10 +190,10 @@ def test_manifest_and_adapter(caplog):
     LOGGER.info("[IMP:9][test_manifest_and_adapter][COVERAGE] files=%d neutral=%d caps=%d params=%d unnamed=%d",
                 len(adapter["files"]), len(neutral), len(adapter["capabilities"]), len(adapter["parameters"]), len(unnamed))
     _show(caplog.records)
-    assert plugin["name"] == "methodology-claude" and plugin["version"] == "2.4.0" and plugin["license"] == "MIT"
+    assert plugin["name"] == "methodology-claude" and plugin["version"] == "3.0.0" and plugin["license"] == "MIT"
     assert not plugin["name"].startswith(("claude", "anthropic"))
     assert adapter["harness"] == "methodology-claude" and adapter["spec_root"] == "../../"
-    assert adapter["spec_version"] == (NEUTRAL / "SPEC_VERSION").read_text().strip() == "3.2.0"
+    assert adapter["spec_version"] == (NEUTRAL / "SPEC_VERSION").read_text().strip() == "4.0.0"
     assert set(adapter["files"]) == neutral and len(neutral) == 71
     assert all(rule == {"mode": "reference", "via": "references/adoption.md"} for rule in adapter["files"].values())
     assert unnamed == []
@@ -240,7 +240,7 @@ def test_agent_carriers(caplog):
 
 # region FUNC_test_skill_entries [DOMAIN(9): Skills; CONCEPT(9): TopicParity, InPlaceOwners; TECH(6): pathlib]
 ## @purpose Refuse a skill set that loses Codex topic parity or the five lifecycle commands, or an entry whose frontmatter,
-##   invocation mode or owner pointers are wrong: no skill carries the disable-model-invocation key (2.4.0), and each lifecycle
+##   invocation mode or owner pointers are wrong: no skill carries the disable-model-invocation key (3.0.0), and each lifecycle
 ##   command states that its invocation is never consent.
 ## @uses test_package_contract._frontmatter, test_package_contract._unresolved_references
 ## @io caplog -> None

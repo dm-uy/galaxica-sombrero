@@ -85,3 +85,7 @@ Root document checks passed: nested paired markers, declared BR/AC identifiers, 
 The draft and affected current records are the only owned changes. No source/package/version/settings changes, implementation, main merge, push or installation occurred. The next owner action is review of the concrete specification; its implementation approval remains pending.
 
  Original failed shell branch creation was a sandbox metadata denial; the scoped branch was subsequently created through an approved escalation. Some exploratory searches named nonexistent candidate files; only observed existing paths enter the specification. No failed attempt was interpreted as product evidence or consent.
+
+## Later owner-authorized targeted implementation
+
+The original drafting-only state above is retained as dated history. The owner subsequently approved targeted implementation without full feature-dev; see the [exact grant, changes and bounded evidence](spec-recon-decision-checkpoint-result.md). Original source hashes above remain the pre-change baseline, not a current-source identity.

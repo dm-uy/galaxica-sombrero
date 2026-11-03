@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.0.0
+
+- Specification-producing RECON gains explicit questions/exclusions, a fresh independent completeness challenge even for an empty list, root reconciliation and a reviewed human digest before named brainstorm launch permission (RECON-307–311, SP-206).
+- Qualify BRAIN-104 at that checkpoint: required analysis is held until matching human permission, never silently skipped or launched automatically. Keep existing generators/HOLD/evaluator, decision authority and separate specification/result decisions; plan-only detail and standalone non-spec research retain their boundaries.
+- Synchronize neutral/Codex/DSH4.0.0 and Claude3.0.0 source identities. FMT-23 requires MAJOR for changed normative launch order. Only exact executable release constants change; helper algorithms, pins, schemas, roles and package membership remain intact. This targeted instruction change does not run feature-dev or install/publish packages.
+
 ## Claude source2.4.0 (neutral3.2.0 unchanged)
 
 - The five lifecycle commands (`pm-bootstrap`, `pm-plan-batch`, `pm-run-batch`, `pm-handoff`, `pm-review-run`) drop `disable-model-invocation: true`: the root may invoke one when its step is due, as the owner may type it. Owner request of 2026-10-28 in a consumer workspace session: «Так не годится. Надо сделать так, чтобы ты мог запускать сам автономно эти вещи. Это запрещено на уровне плагина, потому что плагин-то, собственно говоря, наш, и мы можем внести в него изменения для твоей имплементации, если он тебя блокирует.»
