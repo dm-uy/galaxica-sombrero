@@ -1,8 +1,8 @@
-# Current: RECON-DEC targeted result ready for integration review
+# Current: RECON-DEC approved merge and installed updates
 
-## Pending owner decision
+## Current owner grant
 
-Review the [concrete source result and bounded evidence](notes/spec-recon-decision-checkpoint-result.md) for the separate integration action. No main merge, push, publication or installation has occurred. The branch inherits PM-INVOKE local-only commits; publishing that inherited work needs matching scope too. Reuse any later exact owner decision rather than asking twice.
+The owner explicitly accepted the result and granted local main merge plus installed Codex, Claude and DSH updates on 2026-11-03. [Exact grant and execution receipt](notes/spec-recon-decision-checkpoint-result.md#owner-integration-and-installed-update-grant--2026-11-03). Root is performing the bounded update and load/integrity checks; no remote push or unrelated plugin/settings change is included.
 
 ## Current result
 
