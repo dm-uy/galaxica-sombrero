@@ -2,7 +2,7 @@
 
 ## Current: CONT-BOUND Codex and Claude checked; shared rollout held
 
-Claude 3.1.0 ordinary compatibility with neutral 4.1.0 is checked locally on `claude/cont-bound-compat` and resolves both root failures the Codex receipt retained; [result](notes/bounded-continuation-claude-compat.md). DSH 5.0.0 is on draft PR 21, and native combined validation still holds shared rollout. Porting continuation to Claude remains a separate decision.
+Claude 3.1.0 ordinary compatibility with neutral 4.1.0 is checked locally on `claude/cont-bound-compat` and resolves both root failures the Codex receipt retained; [result](notes/bounded-continuation-claude-compat.md). DSH 5.0.0 is on draft PR 21; a trial merge of both passes all suites and a live Claude session. The owner's result holds shared rollout. Porting continuation to Claude remains a separate decision.
 
 Codex implementation/checks and the same single independent review are complete locally: [result](notes/bounded-continuation-result.md), [final judgment](notes/bounded-continuation-review-final.md). Owner result is pending. Shared rollout/merge/install are held for separate Claude/DSH ordinary compatibility, retained baseline markup correction and exact combined common/sibling/native validation. The approved lighter procedure remains controlling; no synthetic full-flow actors are required. Earlier preparation history follows.
 

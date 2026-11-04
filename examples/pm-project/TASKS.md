@@ -25,7 +25,7 @@ Owner: «надо доработать наш плагин с методолог
 | Task | State | Finish / next action |
 |---|---|---|
 | CONT-BOUND-T5 — Claude 3.1.0 ordinary compatibility | Checked locally; owner result pending | [Result](notes/bounded-continuation-claude-compat.md) on `claude/cont-bound-compat`: Claude 548, root 616 and Codex 201 passed; live native session and real helper route observed; review findings dispositioned, with the notes left open stated in the result. |
-| CONT-BOUND-T6 — DSH compatibility | On draft PR 21; owner result pending | Branch `dsh/continuation`, by a separate agent, carries DSH 5.0.0 from the same base. On the Claude branch alone its package suite fails 83 of 146 on the version pin; a trial merge of both passes all four suites. |
+| CONT-BOUND-T6 — DSH compatibility | On draft PR 21; owner result pending | Branch `dsh/continuation`, by a separate agent, carries DSH 5.0.0 from the same base. On the Claude branch alone its package suite fails 83 of 146 on the version pin; a trial merge of both passes all four suites and a live Claude session. |
 | CONT-BOUND-T7 — findings outside the Claude package | Open | Stale Codex stamps corrected and guarded at the owner's word on 2026-11-04. Still open: Codex carrier wording, the missing `continuation.py` disposition row and the smoke specification's admissions path; the same stamp guard for DSH; neutral homes for the ledger rule and for counting a successor's Code repair; stranding of in-flight runs by in-place releases. [Details](notes/bounded-continuation-claude-compat.md#findings-for-other-owners). |
 | CONT-BOUND-T8 — continuation port to Claude | Not selected | Separate owner decision; the ledger that motivated continuation is Codex's, so this port would not serve it. |
 

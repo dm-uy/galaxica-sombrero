@@ -84,7 +84,11 @@ The cause is free-text identity outside any check: in Codex no test read these s
 | `bin/conform adapter` | Claude, Codex and DSH pass 76, fail 0 |
 | `doxygen Doxyfile`, root and three packages | exit 0, empty stdout and stderr |
 
-This resolves both root failures PR 21 retains. It is a common and sibling check only: no native session or Workflow ran on the merged tree, so native combined validation stays open, and PR 21's own evidence and review belong to that branch and were not rechecked here.
+This resolves both root failures PR 21 retains.
+
+**Live session on the merged tree.** The owner asked for this before merge: «Да, прогони». A fresh Claude Code 2.1.285 session on a Git-free copy of the merge of `48d14a5` with `37d8e2b`, tree `e62fd43`, with the same command and steps as the earlier live session and Sonnet as root. Its init event lists plugin 3.1.0 from that copy and all six `methodology-claude:` roles. The SessionStart hook exits 0 with `methodology-claude 3.1.0 bound in place to neutral methodology 4.1.0`. The session loaded the `feature-dev` skill, ran `init` and `show` with exit 0 at schema 2, phase bootstrap, cap 4 and neutral 4.1.0, and dispatched `methodology-claude:searcher` on Haiku, which returned its inventory line. Its one write outside the target was a temporary `show` output in the system temporary directory, reported by the session and removed afterwards. This shows loading and dispatch on the merged tree, not model obedience or efficacy.
+
+No full feature-dev or Workflow run and no native Codex or DSH session ran on the merged tree. PR 21's own evidence and review belong to that branch and were not rechecked here.
 
 ## Independent review
 
@@ -159,7 +163,7 @@ Round 3 on `a47bf6a`, a narrow check of these corrections and of this record's f
 
 1. Owner's concrete-result decision on this candidate and on the Codex candidate beneath it: merging this branch also merges Codex 5.0.
 2. Merge order with PR 21: this branch first, because PR 21 alone raises the neutral release under Claude 3.0.0 and blocks every Claude session. The root `README.md` line naming DSH 4.0.0 then needs its DSH 5.0.0 value, because neither branch can state the combined result alone.
-3. Exact combined common/sibling/native validation.
+3. Whether a full native flow on the merged tree is wanted before merge. The common and sibling suites and a live Claude session already pass there.
 4. Only after those: main merge, push and installed updates, each by its own grant. Because the plugin loads in place from main, Claude 3.1.0 must enter main together with neutral 4.1.0, never apart from it.
 5. Whether to port continuation to Claude at all. The ledger that motivated continuation is Codex's, so this port would not serve it.
 
