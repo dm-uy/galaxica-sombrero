@@ -218,3 +218,5 @@ Complete code/exoskeleton.md, code/navigation.md and code/doxygen.md as substant
 ## 4.1.0 — bounded continuation candidate
 
 Add PREFLIGHT-204, PLAN-405, TST-1003 and LIFE-108 without rewriting existing duties. Codex5.0.0 introduces schema3 causal authority, immutable historical import, bounded continuation/grants and reserved-entry recovery; role wire2.0/default4 remain. Shared integration is held for separately accepted Claude/DSH ordinary compatibility. No installation is part of this source change.
+
+Claude3.1.0 adds ordinary compatibility with neutral4.1.0: exact release constants, the four duties in its carriers and an honest statement of its helper's limits. Its helper algorithms, schema2, role wire and default4 are unchanged, and it gains no continuation route. DSH compatibility remains pending.

@@ -149,3 +149,17 @@ Debug 1 final-run measurements (one candidate; QA and Review re-measure). Comple
 ## RECON-DEC targeted instruction checks
 
 Source versions: neutral/Codex/DSH4.0.0, Claude3.0.0. Root `tests/test_recon_decision_checkpoint.py` checks exact RECON-307–311, BRAIN-104, SP-206, the operative receipt row and all named native callers, with in-memory missing-clause controls. `tests/test_c1_review_and_routing.py` retains original algorithm pins and existing consequential/authority/correspondence controls; current-version assertions alone change. These are finite source checks, not proof of live classification, consent or independent actor execution. The current result note records affected binding checks, independent review and a small fresh-context behavioral probe, separately from historical full-flow or package-suite evidence. No full feature-dev flow is required for this owner-approved instruction change.
+
+## CONT-BOUND ordinary compatibility (Claude 3.1.0 over neutral 4.1.0)
+
+Scope is ordinary operation on neutral 4.1.0 only; this release ports no continuation route. Run everything with Python 3.12 from a complete Git-free copy of the checkout, because ignored Markdown can alter inventories. The fixtures are owned temporary trees. No model, provider, product or consumer resource is used by the suites. Commands use `-p no:cacheprovider`, `PYTHONDONTWRITEBYTECODE=1` and distinct owned `--basetemp` paths.
+
+| Requirement | Test or command | Required observation |
+|---|---|---|
+| Binding agrees with the neutral release | `test_manifest_and_adapter`, `test_real_package_complete`, `test_session_start.py`; root `test_release_bridge_keeps_wire_and_helper_algorithms` | Package 3.1.0, adapter and helper at 4.1.0; the frozen Claude helper and hook AST pins pass with their values unchanged |
+| Each additive duty reaches its carriers | `test_additive_duties_reach_their_carriers` | One owner norm per duty, no carrier problem, every removal control detected |
+| The capability statement is true | `test_capability_claim_matches_the_shipped_helper` | The real CLI lists exactly `init`, `show`, `record` and refuses the six continuation operations with exit 2 and empty stdout |
+| Ordinary route still works | Full package suite, including the real Workflow scenarios in `test_workflow.py` | Zero failures and zero skips |
+| Shared acceptance | `python3.12 -m pytest tests`, the Codex suite, `bin/conform adapter implementations/claude/adapter.json`, both `doxygen Doxyfile` builds | Root and Codex suites pass, adapter check exits 0, builds exit 0 with silent streams |
+
+Not covered here: DSH compatibility, which its own agent owns and whose package suite still fails on the version pin; `bin/conform self`, which needs the private deny list. A live session load is separate evidence recorded in the project result note, because no suite proves that a session read or obeyed these carriers. A run started under an earlier package stays bound to that package: the helper refuses it with `package identity mismatch` and leaves its bytes unchanged. A refused `record` on a terminal schema 2 run still appends its diagnostic to that file; this retained limit is protected helper behavior.

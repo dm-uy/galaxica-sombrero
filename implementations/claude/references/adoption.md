@@ -1,10 +1,10 @@
-# Pointwise adoption — neutral 4.0.0 / methodology-claude 3.0.0
+# Pointwise adoption — neutral 4.1.0 / methodology-claude 3.1.0
 
 This file is the `via` carrier of all 71 `reference` entries in [adapter.json](../adapter.json). The adapter and this file resolve `spec_root` (`../../`) from the adapter's own directory, independent of the caller's working directory. Inside Claude Code the same location is `${CLAUDE_PLUGIN_ROOT}/../../`.
 
 ## Loading procedure
 
-1. Resolve the package root (`${CLAUDE_PLUGIN_ROOT}`, or the directory of this file's parent) and the neutral root two levels above it. Check that `SPEC_VERSION` equals the adapter's `spec_version` (4.0.0). A missing or different neutral root is BLOCKED; never substitute an older installed copy.
+1. Resolve the package root (`${CLAUDE_PLUGIN_ROOT}`, or the directory of this file's parent) and the neutral root two levels above it. Check that `SPEC_VERSION` equals the adapter's `spec_version` (4.1.0). A missing or different neutral root is BLOCKED; never substitute an older installed copy.
 2. Before any software role acts, read the six core owners in full: `concepts/principles.md`, `roles/_base.md`, `code/exoskeleton.md`, `code/ldd.md`, `code/doxygen.md`, `code/tests.md`. Identity-unchanged content read earlier in the same run may be reused; changed content is read again.
 3. Read the assigned role owner, `protocols/role-returns.md` and every owner the applicable skill names, in full. Specialized owners load on their actual trigger, not by following every link.
 4. Record what was read (path, revision or byte identity, read condition) in the existing phase evidence. A card, a hash, a link, a summary or a stub is not a read; a required owner that is missing, a stub, truncated or unread blocks dependent action.
@@ -23,7 +23,7 @@ The opt-in consumer PM profile `methodology-consumer-pm/1.0.0` is carried by ref
 | `checks/conform.md` | Actual common checker outputs/exits and finite recognizer limits; run required self/adapter and retain all warnings, no semantic truth inferred. | `references/claude-runtime.md` |
 | `checks/lints.md` | Actual observable check evidence/locators and limitations; stale/unavailable mechanisms remain unaccepted. | `references/claude-runtime.md` |
 | `checks/orient.md` | Entry and closure assessment of actual adopted records/grants/ownership and eligible next action, readonly status without bootstrap authority. | `skills/feature-dev/SKILL.md`, `skills/pm-handoff/SKILL.md`, `hooks/session_start.py` |
-| `checks/preflight.md` | Complete selected prerequisites before effects/spend; all cheap independent checks despite failure, dependent rows withheld and unverified behavior disclosed. | `skills/feature-dev/SKILL.md`, `skills/prompting-verify/SKILL.md` |
+| `checks/preflight.md` | Complete selected prerequisites before effects/spend; all cheap independent checks despite failure, dependent rows withheld and unverified behavior disclosed; required lifecycle/import/extension/recovery transitions compared with the actual helper (PREFLIGHT-204). | `skills/feature-dev/SKILL.md`, `skills/prompting-verify/SKILL.md` |
 | `checks/qa-scans.md` | Eight named registry, actual preflight/runtime timing, triggers/structured findings and contrary controls; no required criterion waived by N/A. | `skills/feature-dev/SKILL.md` |
 | `checks/run-audit.md` | Readonly original run reconstruction from actual records/effects/counters and source identities; chronology and missing costs retained. | `skills/analyzer/SKILL.md`, `skills/feature-dev/SKILL.md`, `skills/prompting-verify/SKILL.md`, `skills/pm-review-run/SKILL.md` |
 | `code/ax-ui.md` | Applicable web control role/name/state/stable identity and actual AX/component evidence; visual claims separate. | `skills/ax-ui-contract/SKILL.md` |
@@ -32,7 +32,7 @@ The opt-in consumer PM profile `methodology-consumer-pm/1.0.0` is carried by ref
 | `code/exoskeleton.md` | Complete rich module/entity semantic fields, paired containment, qualified links and precise edit-local/language exceptions. | `skills/semantic-exoskeleton/SKILL.md` |
 | `code/ldd.md` | Owned authored trajectory, imp/function/block/events, critical success9/failure10, safe host encoding and complete relevant-log audit. | `skills/semantic-exoskeleton/SKILL.md` |
 | `code/navigation.md` | Use current actual graph/map then relevant full source; maintain contracted actual maps, read-only readers request refresh. | `skills/devplan-protocol/SKILL.md`, `skills/graph-protocol/SKILL.md` |
-| `code/tests.md` | Native direct imports/isolated fixtures, outcome plus actual trace, expected-only errors, real channel/shape/discrimination, separate counters and full relevant final suite. | `skills/semantic-exoskeleton/SKILL.md` |
+| `code/tests.md` | Native direct imports/isolated fixtures, outcome plus actual trace, expected-only errors, real channel/shape/discrimination, lifecycle and completeness controls (TST-1003), separate counters and full relevant final suite. | `skills/semantic-exoskeleton/SKILL.md` |
 | `concepts/glossary.md` | Use source-backed forty-term meanings in actual context; catalog neither installs engine nor substitutes substantive core/protocol. | `skills/spec-recon/SKILL.md` |
 | `concepts/principles.md` | Six-member finite full operative constitution, authentic bounded authority, complete behavior and separate actual delivery/adoption claims. | `skills/semantic-exoskeleton/SKILL.md` |
 | `documents/conventions.md` | Actual adopted five logical homes/layer/metadata/format/report enclosure; no new defaults override existing target. | `skills/document-protocol/SKILL.md`, `skills/durable-layer/SKILL.md` |
@@ -57,7 +57,7 @@ The opt-in consumer PM profile `methodology-consumer-pm/1.0.0` is carried by ref
 | `process/gates.md` | Authentic exact specification/run and concrete-result decisions, structured channel/default and qualified authorized fallback, no silence consent. | `skills/feature-dev/SKILL.md`, `skills/hitl-gates/SKILL.md`, `skills/pm/SKILL.md`, `skills/pm-plan-batch/SKILL.md` |
 | `process/git.md` | Disclosed stub; current gates/base/PM/safety own actual preservation and parent commit boundaries, no invented Git procedure. | `references/claude-runtime.md` |
 | `process/learning.md` | Contextual error notes and external candidate pointers only under scope; systematic learning/comparable measurement remains deferred. | `skills/analyzer/SKILL.md` |
-| `process/lifecycle.md` | Actual meaningful tracks/checkpoints/task plan/order/replanning/backlog/snapshot, complete roles and owner-selected route. | `skills/durable-layer/SKILL.md`, `skills/pm/SKILL.md`, `skills/roadmap/SKILL.md` |
+| `process/lifecycle.md` | Actual meaningful tracks/checkpoints/task plan/order/replanning/backlog/snapshot, reassessment of growing blocking preparation (LIFE-108), complete roles and owner-selected route. | `skills/durable-layer/SKILL.md`, `skills/pm/SKILL.md`, `skills/roadmap/SKILL.md` |
 | `process/publication.md` | Disclosed stub; no publication/install claimed or authorized by local package, residual procedure/license evidence required before that future action. | `references/claude-runtime.md` |
 | `process/reconnaissance.md` | Original requirements plus actual independent Code/Data/Decisions/conditional Legacy/Web, populations/citations/contradictions/unchecked limits before spec. | `skills/pm/SKILL.md`, `skills/prod-log-vacuum/SKILL.md`, `skills/spec-recon/SKILL.md` |
 | `process/review.md` | Complete explicit run/window review, original commitments and reachable record/provenance judgment; findings, limits and unsent continuation only, no deferred measurement/import/ingest engine inferred. | `skills/analyzer/SKILL.md`, `skills/pm-review-run/SKILL.md` |
@@ -72,7 +72,7 @@ The opt-in consumer PM profile `methodology-consumer-pm/1.0.0` is carried by ref
 | `prompting/solution-design.md` | Evidence-grounded actual solution alternatives, patterns and constraints with source-backed criteria and concise decision record. | `skills/prompting/SKILL.md` |
 | `prompting/superposition-collapse.md` | Genuine alternatives, unresolved axes and evidence-based authorized collapse; settled decisions preserved. | `skills/brainstorm/SKILL.md` |
 | `prompting/verification.md` | Evidence/CoVe/Diagnostic Trio/independent checks, finite attempts and uncertainty; same-model agreement not independent confirmation. | `skills/prompting-verify/SKILL.md` |
-| `protocols/dev-plan.md` | Actual plan identity/sections1–6/full graph/flow/visual/AC/channel/commands/literal verification commitments. | `skills/devplan-protocol/SKILL.md`, `skills/prompting-decompose/SKILL.md` |
+| `protocols/dev-plan.md` | Actual plan identity/sections1–6/full graph/flow/visual/AC/channel/commands/literal verification commitments; minimal real check of a material uncertain premise before dependent construction (PLAN-405). | `skills/devplan-protocol/SKILL.md`, `skills/prompting-decompose/SKILL.md` |
 | `protocols/document.md` | Outline before detail, complete paired contracted artifacts/types/bodies/directed ID links and ordinary-meaning readiness. | `skills/document-protocol/SKILL.md`, `skills/prompting-markup/SKILL.md` |
 | `protocols/graph.md` | Complete CODE/DOMAIN profiles/shared grammar/nine DOMAIN sections, actual directed source relations and brownfield evidence, syntax versus meaning. | `skills/devplan-protocol/SKILL.md`, `skills/graph-protocol/SKILL.md`, `skills/prompting-decompose/SKILL.md` |
 | `protocols/role-returns.md` | Unmodified full canonical envelopes/status-dependent payloads/list scans and parent semantic acceptance before state. | `skills/feature-dev/SKILL.md`, `references/handoffs.md` |

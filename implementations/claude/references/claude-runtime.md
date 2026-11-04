@@ -1,6 +1,6 @@
-# Claude Code runtime — methodology-claude 3.0.0
+# Claude Code runtime — methodology-claude 3.1.0
 
-This is the runtime procedure of the native Claude Code package for neutral methodology 4.0.0. It says how Claude Code carries the neutral rules; it restates none of them. Where this file and a neutral owner seem to differ, the neutral owner wins and the difference is a package defect.
+This is the runtime procedure of the native Claude Code package for neutral methodology 4.1.0. It says how Claude Code carries the neutral rules; it restates none of them. Where this file and a neutral owner seem to differ, the neutral owner wins and the difference is a package defect.
 
 ## 1. Profile and binding
 
@@ -65,6 +65,8 @@ python3 ${CLAUDE_PLUGIN_ROOT}/skills/feature-dev/scripts/run_state.py record --s
 ```
 
 State lives at `<target>/.methodology/runs/<run-id>/state.json` (schema 2, atomic UTF-8). The ordinary route is Bootstrap → Architect → Code → QA → Review → separately assigned Architect Finalize → SUCCESS. Code, QA and Review defects share one cumulative Debug allowance: default 4, lowered to any nonnegative integer (0 valid); an extension above 4 is BLOCKED because the package has no supported bounded grant mechanism yet. The spend is recorded before each entry and never refunded. Debug FIXED renews full independent QA and the affected Review. Each phase attempt gets at most one response correction; a second unusable return ends BLOCKED, or ESCALATED_FINALIZE in Finalize. An unknown side-effect outcome is investigated before any replay. Terminal statuses are SUCCESS, SPEC_BLOCKED, VISUAL_GATE_FAIL, ESCALATED, BLOCKED, ERROR and ESCALATED_FINALIZE; a terminal run never resumes automatically. Before resuming, run `show`, inspect the real artifacts and keep every counter and history entry. The helper checks structure and order; it proves neither the truth of a return, nor independence, nor consent.
+
+Helper capabilities (`checks/preflight.md` PREFLIGHT-204): the helper's only operations are `init`, `show` and `record`, as `run_state.py --help` reports; there is no capability command. Terminal continuation, historical import, Debug extension above 4 and reserved-entry recovery are unsupported by both the helper and the Workflow spine. Before dependent construction or run spend the root compares what the work requires with these limits, records the result in the existing assessment and withholds only the dependent work when a requirement is unsupported. A declaration is not runtime qualification. The Codex package's schema 3 continuation belongs to that package: it is not a route for a Claude run, and no ledger crosses between engines.
 
 ## 7. QA scans and delivery evidence
 

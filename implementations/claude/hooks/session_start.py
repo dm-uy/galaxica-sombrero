@@ -19,7 +19,7 @@
 ## Q: Why presence only for project records?
 ## A: Orientation needs to know which records exist so the root can read them deliberately under the orient check; copying private content into every session start context would be unrequested disclosure.
 ## @changes
-## LAST_CHANGE: [1.1.0 - Exact M30 package source constant; executable functions unchanged. Earlier:1.0.0 - Initial in-place binding check and project record presence for the first native Claude Code package.]
+## LAST_CHANGE: [3.1.0 - Exact package source constant; executable functions unchanged. Earlier: 1.1.0 - Exact M30 package source constant; executable functions unchanged. Earlier:1.0.0 - Initial in-place binding check and project record presence for the first native Claude Code package.]
 ## @modulemap
 ## FUNC 2[Attach full module documentation with no runtime effects] => session_start._module_contract
 ## FUNC 6[Resolve the package root from the environment or the script location] => session_start.resolve_package_root
@@ -56,7 +56,7 @@ logger = logging.getLogger("session_start")
 logger.addHandler(logging.NullHandler())
 
 PACKAGE_NAME = "methodology-claude"
-PACKAGE_VERSION = "3.0.0"
+PACKAGE_VERSION = "3.1.0"
 PACKAGE_PROFILE = "colocated-in-place"
 SPEC_ROOT = "../../"
 CORE_OWNERS = ("concepts/principles.md", "roles/_base.md", "code/exoskeleton.md", "code/ldd.md", "code/doxygen.md", "code/tests.md")
