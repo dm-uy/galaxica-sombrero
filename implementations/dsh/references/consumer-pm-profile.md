@@ -1,6 +1,6 @@
 # Native consumer PM profile 1.0.0
 
-Identity: `methodology-consumer-pm/1.0.0`; opt-in only, source package4.1.0 over neutral4.1.0. Wire methodology-dsh/2.0.0/schema2 remains unchanged. This carrier composes existing full owners; it creates neither consumer consent nor a replacement constitution.
+Identity: `methodology-consumer-pm/1.0.0`; opt-in only, source package5.0.0 over neutral4.1.0. Wire methodology-dsh/2.0.0 remains unchanged; persistent schema3 is current, schema2 historical-only. This carrier composes existing full owners; it creates neither consumer consent nor a replacement constitution.
 
 ## Adoption and homes
 

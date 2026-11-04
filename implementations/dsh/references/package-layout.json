@@ -1,6 +1,6 @@
 {
   "package": "methodology-dsh",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "profile": "colocated-explicit-source",
   "files": [
     {
@@ -126,6 +126,10 @@
     {
       "path": "skills/feature-dev/SKILL.md",
       "kind": "skill"
+    },
+    {
+      "path": "skills/feature-dev/scripts/continuation.py",
+      "kind": "helper"
     },
     {
       "path": "skills/feature-dev/scripts/run_state.py",
@@ -281,6 +285,10 @@
     },
     {
       "path": "tests/test_consumer_pm.py",
+      "kind": "test"
+    },
+    {
+      "path": "tests/test_continuation.py",
       "kind": "test"
     },
     {
