@@ -4,11 +4,11 @@ Owner, 2026-11-04: «Сначала совместимость». Claude 3.1.0 b
 
 ## Owner decisions
 
-The concrete result of this candidate and of the Codex candidate beneath it. Merge, push and installation are not granted. Assign a DSH agent for its first bounded packet. Porting continuation to Claude is a separate choice.
+The concrete result of this candidate and of the Codex candidate beneath it; merging this branch also merges Codex 5.0. Merge, push and installation are not granted. Assign a DSH agent for its first bounded packet. Porting continuation to Claude is a separate choice.
 
 ## Verified result and next action
 
-On `de6b91b`: Claude 547 passed, root 616 passed, Codex 200 passed, zero skips, both maps silent. The live native session bound 3.1.0 to 4.1.0, ran `init` and `show` and dispatched a role. The two root failures the Codex checkpoint below retained are resolved on this branch: the Claude release bridge passes with its pins unchanged, and the base markup defect in `test_recon_decision_checkpoint.py`, also red on main at `388c944`, is fixed with no logic change.
+On `eba2905`: Claude 547 passed, root 616 passed, Codex 200 passed, zero skips, both maps silent. The live native session bound 3.1.0 to 4.1.0, ran `init` and `show` and dispatched a role. The two root failures the Codex checkpoint below retained are resolved on this branch: the Claude release bridge passes with its pins unchanged, and the base markup defect in `test_recon_decision_checkpoint.py`, also red on main at `388c944`, is fixed with no logic change.
 
 Still blocking shared integration: DSH fails 83 of 146 on `neutral version mismatch`; stale Codex version stamps listed in the result note; exact combined common/sibling/native validation. Claude 3.1.0 must enter main together with neutral 4.1.0, because the plugin loads in place from main and either one alone blocks every Claude session.
 

@@ -24,10 +24,10 @@ Owner: «надо доработать наш плагин с методолог
 
 | Task | State | Finish / next action |
 |---|---|---|
-| CONT-BOUND-T5 — Claude 3.1.0 ordinary compatibility | Checked locally; owner result pending | [Result](notes/bounded-continuation-claude-compat.md) on `claude/cont-bound-compat`: Claude 547, root 616 and Codex 200 passed; live native session and real helper route observed; first review's findings dispositioned. |
+| CONT-BOUND-T5 — Claude 3.1.0 ordinary compatibility | Checked locally; owner result pending | [Result](notes/bounded-continuation-claude-compat.md) on `claude/cont-bound-compat`: Claude 547, root 616 and Codex 200 passed; live native session and real helper route observed; both review rounds' findings dispositioned. |
 | CONT-BOUND-T6 — DSH ordinary compatibility | Not started; needs a separately assigned DSH agent | Its package suite fails 83 of 146 on the version pin. Blocks shared integration. |
-| CONT-BOUND-T7 — findings outside the Claude package | Open | Stale Codex stamps before integration; Codex carrier wording; neutral home for the ledger rule; stranding of in-flight runs by in-place releases. [Details](notes/bounded-continuation-claude-compat.md#findings-for-other-owners). |
-| CONT-BOUND-T8 — continuation port to Claude | Not selected | Separate owner decision; Jeni does not need it. |
+| CONT-BOUND-T7 — findings outside the Claude package | Open | Stale Codex stamps before integration; Codex carrier wording; neutral homes for the ledger rule and for counting a successor's Code repair; stranding of in-flight runs by in-place releases. [Details](notes/bounded-continuation-claude-compat.md#findings-for-other-owners). |
+| CONT-BOUND-T8 — continuation port to Claude | Not selected | Separate owner decision; the motivating Jeni ledger is Codex's, so this port would not serve it. |
 
 ## RECON-DEC — reviewed RECON forks and owner-authorized brainstorm
 
