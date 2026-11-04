@@ -4,7 +4,7 @@
 ## @scope Actual neutral norm bodies, the operative specification receipt and three native packages' entry texts.
 ## @input Read-only repo_root; in-memory omission controls. No model or native dispatch runs here.
 ## @output Finite source-contract assertions; actual fresh-context behavior is separate recorded evidence.
-## @links [READS_DATA_FROM(9): process/reconnaissance.md, prompting/brainstorm.md; READS_DATA_FROM(8): implementations/codex, implementations/claude and implementations/dsh entry texts; USES_API(6): pytest, re]
+## @links [READS_DATA_FROM(9): process/reconnaissance.md, process/specification.md, prompting/brainstorm.md; READS_DATA_FROM(8): implementations/codex, implementations/claude and implementations/dsh entry texts; USES_API(6): pytest, re]
 ## @invariants Original files, helper algorithms, schemas and authorization remain unchanged by these checks.
 ## @rationale
 ## Q: Why check source clauses instead of an agent's behavior?
@@ -17,7 +17,7 @@
 ## FUNC 9[Verify receipt and native routes] => test_recon_decision_checkpoint.test_receipt_and_native_routes_reject_omission
 ## @usecases
 ## - [test_checkpoint_norms_reject_omission]: Maintainer → remove one required clause in memory → the missing obligation is refused
-## - [test_receipt_and_native_routes_reject_omission]: Maintainer → remove a native route or receipt row in memory → caller drift is refused
+## - [test_receipt_and_native_routes_reject_omission]: Maintainer → remove the receipt row or one native checkpoint clause in memory → the omission is detected
 ## @GREP_SUMMARY recon questions, missing forks, false exclusions, empty list, human launch consent, source checks only
 ## @STRUCTURE actual norm and native text → finite required clauses → in-memory missing-clause controls → assertions
 def _module_contract():

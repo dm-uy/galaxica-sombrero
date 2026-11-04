@@ -5,16 +5,17 @@
 ##   the agreed frontmatter, and every `${CLAUDE_PLUGIN_ROOT}` reference resolves to a real file.
 ## @scope Package layout and kinds, plugin manifest identity, adapter coverage (71 files, 28 capabilities, 7 parameters),
 ##   adoption carrier coverage, agent model/tool contract, skill topic set and frontmatter, owner-reference resolution,
-##   hooks wiring and workflow identity.
-## @input The real package directory and the real neutral checkout two levels above it; read only.
-## @output Assertions and a visible IMP:7-10 trajectory printed before them; no file is written.
+##   hooks wiring and workflow identity, the four neutral 4.1.0 duties in their carriers and the helper's real CLI limits.
+## @input The real package directory and the real neutral checkout two levels above it, read only; child processes of the real helper.
+## @output Assertions and a visible IMP:7-10 trajectory printed before them; only owned pytest tmp_path files are written.
 ## @links [READS_DATA_FROM(9): references/package-layout.json, adapter.json, agents/*.md, skills/*/SKILL.md, hooks/hooks.json;
-##   READS_DATA_FROM(8): runtime/capabilities.md, runtime/parameters.md, SPEC_VERSION, implementations/codex/skills]
+##   READS_DATA_FROM(8): runtime/capabilities.md, runtime/parameters.md, SPEC_VERSION, implementations/codex/skills,
+##   checks/preflight.md, protocols/dev-plan.md, code/tests.md, process/lifecycle.md; USES_API(8): skills/feature-dev/scripts/run_state.py CLI]
 ## @links_to_spec examples/pm-project/specs/m22-claude-package.md AC-M22-1, AC-M22-2, AC-M22-3
 ## @invariants
 ## - Expected agent models and tools, the 28 topics and the neutral population are derived independently of the producer
 ##   files they judge (from the specification table, the Codex topic directory and the neutral registries).
-## - The tests never modify the package or the neutral checkout.
+## - The tests never modify the package or the neutral checkout; a helper child process only reads or refuses an owned tmp_path file.
 ## - A structural pass proves assembly and reference resolution, not that a live session read or obeyed the owners.
 ## @rationale
 ## Q: Why recompute the neutral population instead of trusting adapter.json?
@@ -247,7 +248,7 @@ def test_agent_carriers(caplog):
 
 # region FUNC_test_skill_entries [DOMAIN(9): Skills; CONCEPT(9): TopicParity, InPlaceOwners; TECH(6): pathlib]
 ## @purpose Refuse a skill set that loses Codex topic parity or the five lifecycle commands, or an entry whose frontmatter,
-##   invocation mode or owner pointers are wrong: no skill carries the disable-model-invocation key (3.1.0), and each lifecycle
+##   invocation mode or owner pointers are wrong: no skill carries the disable-model-invocation key (since 2.4.0), and each lifecycle
 ##   command states that its invocation is never consent.
 ## @uses test_package_contract._frontmatter, test_package_contract._unresolved_references
 ## @io caplog -> None
@@ -300,98 +301,132 @@ def test_hooks_and_workflow(caplog):
 # endregion FUNC_test_hooks_and_workflow
 
 
-# Independent oracle from the approved neutral 4.1.0 additions; never derived from the carriers it judges.
+# Fixed expected statements, from the approved neutral 4.1.0 norms and this package's actual helper limits. This is a finite
+# recognizer under TST-1001: it catches removal or inversion of these exact statements, never a contrary sentence added elsewhere.
 DUTY_OWNERS = {"PREFLIGHT-204": "checks/preflight.md", "PLAN-405": "protocols/dev-plan.md", "TST-1003": "code/tests.md", "LIFE-108": "process/lifecycle.md"}
-DUTY_CARRIERS = {
-    "skills/pm/SKILL.md": ("PREFLIGHT-204", "LIFE-108"),
-    "skills/devplan-protocol/SKILL.md": ("PLAN-405", "TST-1003"),
-    "skills/feature-dev/SKILL.md": ("PREFLIGHT-204", "PLAN-405", "TST-1003", "LIFE-108"),
-    "references/claude-runtime.md": ("PREFLIGHT-204",),
+HELPER_LIMITS = ("lists its only operations, `init`, `show` and `record`", "no continuation operation", "no historical import", "no Debug extension above 4", "no dispatch reservation record")
+CARRIER_STATEMENTS = {
+    "skills/pm/SKILL.md": ("Apply PREFLIGHT-204 from `checks/preflight.md`", "the helper has no continuation operation", "Apply LIFE-108 from `process/lifecycle.md`"),
+    "skills/devplan-protocol/SKILL.md": ("Apply PLAN-405 from `protocols/dev-plan.md`", "TST-1003 from `code/tests.md`"),
+    "skills/feature-dev/SKILL.md": ("PREFLIGHT-204 in `checks/preflight.md`",) + HELPER_LIMITS + (
+        "applies PLAN-405 through devplan-protocol", "apply TST-1003 from the core `code/tests.md`", "applies LIFE-108 from `process/lifecycle.md`"),
+    "references/claude-runtime.md": ("`checks/preflight.md` PREFLIGHT-204",) + HELPER_LIMITS + (
+        "The resume of a RUNNING run described above stays", "`flow/run-state.md` STATE-702 can start only as a fresh `init` from Bootstrap",
+        "does not charge a repair made by the successor's Code", "counts such a repair itself", "has no supported route here", "reads only its own schema 2 ledgers"),
 }
-CAPABILITY_CLAUSES = ("`init`, `show` and `record`", "terminal continuation", "historical import", "extension", "reserved-entry recovery", "withhold")
+INVERSIONS = (
+    ("skills/pm/SKILL.md", "has no continuation operation", "has a continuation operation"),
+    ("skills/devplan-protocol/SKILL.md", "Apply PLAN-405", "Skip PLAN-405"),
+    ("skills/feature-dev/SKILL.md", "no Debug extension above 4", "a Debug extension above 4"),
+    ("references/claude-runtime.md", "no continuation operation", "a continuation operation"),
+    ("references/claude-runtime.md", "counts such a repair itself", "never counts such a repair"),
+)
+REFUSED_OPERATIONS = ("capabilities", "continue", "reserve", "released", "recover", "episode")
+WORKFLOW_ARGS = "const KNOWN_ARGS = ['spec', 'target', 'plan', 'approval', 'runId', 'framework', 'scratch', 'maxDebug', 'dialogLang', 'recordState']"
 
 
 # region FUNC__carrier_problems [DOMAIN(9): AdditiveDuties; CONCEPT(9): CarrierCoverage; TECH(5): str]
-## @purpose List every place where this package fails to carry a neutral 4.1.0 additive duty or the honest limits of its helper.
-## @uses DUTY_CARRIERS, DUTY_OWNERS, CAPABILITY_CLAUSES
-## @io Input: texts dict of package-relative path to full text, containing every DUTY_CARRIERS key and references/adoption.md.
-##   Output: list of str problems, empty exactly when each carrier names its duties, each PREFLIGHT-204 paragraph states all
-##   capability clauses and each owner's single adoption row names its duty. Side effects: none.
-##   Raises: KeyError for a missing path. System importance: 9. Example: a pm text without LIFE-108 gives "skills/pm/SKILL.md: missing LIFE-108".
-## @complexity 5
+## @purpose List every place where this package loses a neutral 4.1.0 duty pointer or a stated limit of its helper.
+## @uses test_package_contract.CARRIER_STATEMENTS, test_package_contract.DUTY_OWNERS, logging.Logger.info
+## @io Input: texts dict of package-relative path to full text, containing every CARRIER_STATEMENTS key and references/adoption.md.
+##   Output: list of str problems, empty exactly when each carrier holds its exact statements and each owner's single adoption
+##   row names its duty. Side effects: one flow trace. Guarantees: finite exact-statement recognition, no prose semantics.
+##   Raises: KeyError for a missing path. System importance: 9.
+##   Example: a pm text saying "has a continuation operation" gives "skills/pm/SKILL.md: lacks the helper has no continuation operation".
+## @complexity 4
 def _carrier_problems(texts):
-    problems = []
-    for path, duties in DUTY_CARRIERS.items():
-        problems.extend("%s: missing %s" % (path, duty) for duty in duties if duty not in texts[path])
-        if "PREFLIGHT-204" in duties:
-            paragraph = next((p for p in texts[path].split("\n\n") if "PREFLIGHT-204" in p), "").lower()
-            problems.extend("%s: PREFLIGHT-204 lacks %s" % (path, clause) for clause in CAPABILITY_CLAUSES if clause not in paragraph)
+    # START_BLOCK_Statements
+    problems = ["%s: lacks %s" % (path, statement) for path, statements in CARRIER_STATEMENTS.items()
+                for statement in statements if statement not in texts[path]]
+    # END_BLOCK_Statements
+    # START_BLOCK_AdoptionRows
     for duty, owner in DUTY_OWNERS.items():
         rows = [line for line in texts["references/adoption.md"].splitlines() if line.startswith("| `%s` |" % owner)]
         if len(rows) != 1 or duty not in rows[0]:
             problems.append("references/adoption.md: %s row lacks %s" % (owner, duty))
+    # END_BLOCK_AdoptionRows
+    LOGGER.info("[IMP:5][_carrier_problems][RESULT] problems=%d", len(problems))
     return problems
 # endregion FUNC__carrier_problems
 
 
-# region FUNC_test_additive_duties_reach_their_carriers [DOMAIN(9): AdditiveDuties; CONCEPT(9): OmissionControl; TECH(6): pytest, re]
+# region FUNC_test_additive_duties_reach_their_carriers [DOMAIN(9): AdditiveDuties; CONCEPT(9): OmissionControl, Inversion; TECH(6): pytest]
 ## @purpose Refuse a release that binds neutral 4.1.0 by version alone: each additive duty has one neutral owner norm and reaches its
-##   Claude carriers, and removing any one of them fails, because the rest of the suite stays green without them.
-## @uses test_package_contract._carrier_problems, test_package_contract._show, re.sub
+##   Claude carriers, and removing or inverting a stated limit fails, because the rest of the suite stays green without them.
+## @uses test_package_contract._carrier_problems, test_package_contract._show
 ## @io Input: caplog fixture; reads the real carriers and neutral owners, mutates only in-memory copies. Output: None.
-##   Guarantees: fixed expected problem strings for every duty, capability clause and adoption row; no file is written.
-##   Raises: AssertionError on a missing norm, a carrier omission or an undiscriminating control. System importance: 9.
-##   Example: dropping LIFE-108 from skills/pm/SKILL.md yields exactly the problem "skills/pm/SKILL.md: missing LIFE-108".
+##   Guarantees: fixed expected problem strings for each statement removal, each inversion and each adoption row; no file is written;
+##   no unexpected error record. Raises: AssertionError on a missing norm, a carrier omission or an undetected control.
+##   System importance: 9. Example: "Skip PLAN-405" in devplan-protocol yields "skills/devplan-protocol/SKILL.md: lacks Apply PLAN-405 from `protocols/dev-plan.md`".
 ## @complexity 6
 def test_additive_duties_reach_their_carriers(caplog):
+    # START_BLOCK_Observe
     caplog.set_level(logging.INFO, logger=LOGGER.name)
-    texts = {path: (PACKAGE / path).read_text(encoding="utf-8") for path in list(DUTY_CARRIERS) + ["references/adoption.md"]}
+    texts = {path: (PACKAGE / path).read_text(encoding="utf-8") for path in list(CARRIER_STATEMENTS) + ["references/adoption.md"]}
     norms = {duty: [line for line in (NEUTRAL / owner).read_text(encoding="utf-8").splitlines() if ("**%s** MUST:" % duty) in line]
              for duty, owner in DUTY_OWNERS.items()}
     problems = _carrier_problems(texts)
     LOGGER.info("[IMP:9][test_additive_duties_reach_their_carriers][CURRENT] carriers=%d problems=%d", len(texts), len(problems))
-    controls = []
-    for path, duties in DUTY_CARRIERS.items():
-        controls.extend((path, duty, "%s: missing %s" % (path, duty)) for duty in duties)
-        if "PREFLIGHT-204" in duties:
-            controls.extend((path, clause, "%s: PREFLIGHT-204 lacks %s" % (path, clause)) for clause in CAPABILITY_CLAUSES)
-    controls.extend(("references/adoption.md", duty, "references/adoption.md: %s row lacks %s" % (owner, duty)) for duty, owner in DUTY_OWNERS.items())
+    # END_BLOCK_Observe
+    # START_BLOCK_Controls
+    controls = [(path, statement, "", "%s: lacks %s" % (path, statement)) for path, statements in CARRIER_STATEMENTS.items() for statement in statements]
+    for path, old, new in INVERSIONS:
+        lost = [statement for statement in CARRIER_STATEMENTS[path] if old in statement]
+        assert len(lost) == 1, (path, old)
+        controls.append((path, old, new, "%s: lacks %s" % (path, lost[0])))
+    controls.extend(("references/adoption.md", duty, "", "references/adoption.md: %s row lacks %s" % (owner, duty)) for duty, owner in DUTY_OWNERS.items())
     undetected = []
-    for path, removed, expected in controls:
+    for path, old, new, expected in controls:
         mutated = dict(texts)
-        mutated[path] = re.sub(re.escape(removed), "", texts[path], flags=re.IGNORECASE)
+        mutated[path] = texts[path].replace(old, new)
         if mutated[path] == texts[path] or expected not in _carrier_problems(mutated):
             undetected.append(expected)
     LOGGER.info("[IMP:9][test_additive_duties_reach_their_carriers][CONTROLS] total=%d undetected=%d", len(controls), len(undetected))
+    # END_BLOCK_Controls
+    # START_BLOCK_Result
     _show(caplog.records)
     assert all(len(lines) == 1 for lines in norms.values()), norms
     assert problems == []
-    assert len(controls) == sum(len(duties) for duties in DUTY_CARRIERS.values()) + 3 * len(CAPABILITY_CLAUSES) + len(DUTY_OWNERS) and undetected == []
+    assert len(controls) == sum(len(statements) for statements in CARRIER_STATEMENTS.values()) + len(INVERSIONS) + len(DUTY_OWNERS) and undetected == []
+    assert not [record for record in caplog.records if record.levelno >= logging.ERROR]
+    # END_BLOCK_Result
 # endregion FUNC_test_additive_duties_reach_their_carriers
 
 
 # region FUNC_test_capability_claim_matches_the_shipped_helper [DOMAIN(9): AdditiveDuties; CONCEPT(9): RealPath, HonestLimits; TECH(7): subprocess, argparse]
-## @purpose Keep the PREFLIGHT-204 statement true against the real boundary: the shipped helper CLI offers exactly init, show and
-##   record and refuses the continuation operations another package ships, and the Workflow spine keeps its Debug ceiling of 4.
+## @purpose Keep the stated helper limits true against the real boundary: the shipped CLI offers exactly init, show and record, refuses
+##   the operations another package ships and another package's ledger, and the Workflow spine keeps its Debug ceiling and argument set.
 ## @uses subprocess.run, sys.executable, re.search, test_package_contract._show
-## @io Input: caplog fixture; runs the real helper with -B and reads the workflow. Output: None. Side effects: child processes without
-##   project arguments, so no run state or target file is written. Guarantees: exact operation set, exit 2 and empty stdout for each
-##   refused operation. Raises: AssertionError on drift; subprocess.TimeoutExpired past 60 seconds. System importance: 9.
-##   Example: a helper that gains `continue` fails until its carriers and this oracle change together.
-## @complexity 4
-def test_capability_claim_matches_the_shipped_helper(caplog):
+## @io Input: tmp_path and caplog fixtures; runs the real helper with -B and reads the workflow. Output: None. Side effects: child processes
+##   whose only file target is one owned tmp_path ledger, which they must leave byte-identical. Guarantees: exact usage line, exit 2 and empty
+##   stdout for each refused operation and for the foreign ledger, exact Workflow ceiling and arguments, no unexpected error record.
+##   Raises: AssertionError on drift; subprocess.TimeoutExpired past 60 seconds. System importance: 9.
+##   Example: a helper that gains `continue` or a top-level `--capabilities` flag fails until its carriers and this oracle change together.
+## @complexity 5
+def test_capability_claim_matches_the_shipped_helper(tmp_path, caplog):
+    # START_BLOCK_Observe
     caplog.set_level(logging.INFO, logger=LOGGER.name)
     helper = PACKAGE / "skills/feature-dev/scripts/run_state.py"
     def run(*arguments):
         return subprocess.run([sys.executable, "-B", str(helper), *arguments], capture_output=True, text=True, timeout=60)
     shown = run("--help")
-    listed = re.search(r"\{([a-z_,-]+)\}", shown.stdout)
-    refused = {operation: run(operation) for operation in ("capabilities", "continue", "reserve", "released", "recover", "episode")}
+    refused = {operation: run(operation) for operation in REFUSED_OPERATIONS}
+    foreign = tmp_path / "state.json"
+    foreign.write_text(json.dumps({"schema_version": 3, "contract_version": "methodology-codex/2.0.0"}), encoding="utf-8")
+    before = foreign.read_bytes()
+    foreign_show = run("show", "--state", str(foreign))
+    foreign_record = run("record", "--state", str(foreign), "--result", str(foreign))
     workflow = (PACKAGE / "workflows/feature-dev.js").read_text(encoding="utf-8")
-    LOGGER.info("[IMP:9][test_capability_claim_matches_the_shipped_helper][OPERATIONS] listed=%s", listed.group(1) if listed else None)
-    LOGGER.info("[IMP:9][test_capability_claim_matches_the_shipped_helper][REFUSALS] exits=%s", sorted({r.returncode for r in refused.values()}))
+    LOGGER.info("[IMP:9][test_capability_claim_matches_the_shipped_helper][OPERATIONS] usage=%s", shown.stdout.splitlines()[0] if shown.stdout else None)
+    LOGGER.info("[IMP:9][test_capability_claim_matches_the_shipped_helper][REFUSALS] exits=%s foreign=%d,%d", sorted({r.returncode for r in refused.values()}), foreign_show.returncode, foreign_record.returncode)
+    # END_BLOCK_Observe
+    # START_BLOCK_Result
     _show(caplog.records)
-    assert shown.returncode == 0 and listed and sorted(listed.group(1).split(",")) == ["init", "record", "show"]
+    assert shown.returncode == 0 and re.match(r"usage: \S+ \[-h\] \{init,show,record\} \.\.\.\n", shown.stdout)
     assert all(result.returncode == 2 and result.stdout == "" for result in refused.values())
-    assert "const MAX_SUPPORTED_DEBUG = 4" in workflow
+    assert foreign_show.returncode == 2 and foreign_show.stdout == "" and "unsupported state schema" in foreign_show.stderr
+    assert foreign_record.returncode == 2 and foreign_record.stdout == "" and foreign.read_bytes() == before
+    assert re.search(r"const MAX_SUPPORTED_DEBUG = 4\b", workflow) and WORKFLOW_ARGS in workflow
+    assert not [record for record in caplog.records if record.levelno >= logging.ERROR]
+    # END_BLOCK_Result
 # endregion FUNC_test_capability_claim_matches_the_shipped_helper
