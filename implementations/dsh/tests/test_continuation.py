@@ -584,3 +584,52 @@ def test_no_success_trace_before_failed_return(tmp_path,caplog,function,value,ki
     logger.info('[IMP:9][test_no_success_trace_before_failed_return][RESULT] no false success')
 # endregion FUNC_test_no_success_trace_before_failed_return
 
+
+# region FUNC_test_foreign_profile_and_parent_boundary_refusals [DOMAIN(9): Continuation; CONCEPT(9): CausalAccounting; TECH(7): Python]
+## @purpose Refuse foreign wires, unsupported neutral profiles and external parent wallets at the admission boundary.
+## @uses Path, api._digest, cont.historical, copy.deepcopy, json.dumps, logger.error, logger.info, make_fixture, pytest.mark.parametrize, pytest.raises, subprocess.run, sys.executable
+## @io tmp_path and the declared damage case are explicit owned fixtures. None after actual assertions: each mutated terminal refuses with ValueError, bytes stay identical; a valid terminal with a parent_path also refuses; the shipped CLI rejects --parent with exit2 and empty stdout. Expected refusals are caught; no native efficacy claim.
+## @complexity 6
+@pytest.mark.parametrize('damage',['codex-wire','neutral5','external-history'])
+def test_foreign_profile_and_parent_boundary_refusals(tmp_path,damage):
+    logger.info('[IMP:4][test_foreign_profile_and_parent_boundary_refusals][START] owned observation')
+    try:
+        path,state,evidence=make_fixture(tmp_path)
+        old=copy.deepcopy(state);old.pop('lineage');old['schema_version']=2
+        old.update(status='BLOCKED',phase='bootstrap')
+        old['bindings']['neutral_version']='4.0.0'
+        def reseal(value):
+            binding=copy.deepcopy(value['bindings']);binding.pop('digest')
+            value['bindings']['digest']=api._digest(binding)
+            value['input_identity']=api._digest({'bindings':value['bindings']['digest'],'plan':value['plan']})
+        reseal(old)
+        if damage=='codex-wire':
+            old['contract_version']='methodology-codex/2.0.0'
+        elif damage=='neutral5':
+            old['bindings']['neutral_version']='5.0.0';reseal(old)
+        else:
+            old['history'].append({'kind':'external-accounting','debug_delta':0})
+        legacy=Path(state['target'])/'.methodology/runs/legacy/state.json'
+        legacy.parent.mkdir(parents=True);legacy.write_text(json.dumps(old))
+        before=legacy.read_bytes()
+        with pytest.raises(ValueError):cont.historical(api,legacy)
+        assert legacy.read_bytes()==before
+        valid=copy.deepcopy(old)
+        if damage=='codex-wire':
+            valid['contract_version']='methodology-dsh/2.0.0'
+        elif damage=='neutral5':
+            valid['bindings']['neutral_version']='4.0.0';reseal(valid)
+        else:
+            valid['history'].pop()
+        legacy.write_text(json.dumps(valid));before=legacy.read_bytes()
+        with pytest.raises(ValueError):cont.historical(api,legacy,tmp_path/'parent.json')
+        assert legacy.read_bytes()==before
+        helper=Path(__file__).resolve().parents[1]/'skills/feature-dev/scripts/run_state.py'
+        request=tmp_path/'request.json';request.write_text('{}')
+        proc=subprocess.run([sys.executable,str(helper),'continue','--predecessor',str(legacy),'--parent',str(tmp_path/'parent.json'),'--request',str(request)],capture_output=True,text=True)
+        assert proc.returncode==2 and not proc.stdout
+        logger.info('[IMP:9][test_foreign_profile_and_parent_boundary_refusals][RESULT] declared observations completed')
+    except (OSError,ValueError,KeyError,TypeError,AssertionError) as error:
+        logger.error('[IMP:10][test_foreign_profile_and_parent_boundary_refusals][FAIL] kind=%s',type(error).__name__)
+        raise
+# endregion FUNC_test_foreign_profile_and_parent_boundary_refusals

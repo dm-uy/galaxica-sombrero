@@ -6,7 +6,7 @@ This guide maps all ten historical M19 criteria to actual behavior and independe
 
 ## Inputs, isolation and commands
 
-The four package modules import the real run_state and visual_gate_lint through the package pytest.ini's two explicit pythonpath directories. No sys.path mutation or donor import is used. Actual complete package47 and adapter-declared neutral71 source bytes are copied read-only into pytest tmp_path fixtures; only owned fixture target/state/source copies change. Fixture role envelopes are structural cases, never authentic owner approval, independent QA or native execution. CLI cases launch the real shipped helper and retain full argv/cwd/stdout/stderr/exit and saved state. Pure helper logic is tested directly, not through subprocess substitutes.
+The package test modules import the real run_state/continuation and visual_gate_lint through the package pytest.ini's two explicit pythonpath directories. No sys.path mutation or donor import is used. Actual complete package78 and adapter-declared neutral71 source bytes are copied read-only into pytest tmp_path fixtures; only owned fixture target/state/source copies change. Fixture role envelopes are structural cases, never authentic owner approval, independent QA or native execution. CLI cases launch the real shipped helper and retain full argv/cwd/stdout/stderr/exit and saved state. Pure helper logic is tested directly, not through subprocess substitutes.
 
 From the complete canonical source root, use the actual planned command:
 
@@ -33,11 +33,11 @@ Expected trace: successful owning critical decisions emit IMP9 before accepted r
 | AC-M19-9 | Root exact normative-line/pin/population/source38/cache retention and actual neutral1.0.0/package2.0.0/schema2 measurements. Helper tests verify state schema and immutable input mismatch; source/licensing/read/privacy history stays qualified. | NOT_RUN: root preservation/version/source verifier. |
 | AC-M19-10 | Independent SOURCE/CASE/full native QA/cumulative Review/assigned Finalize plus root named local commit/current records/result/HANDOFF and complete committed/current/raw/extracted bytes/modes/privacy seal. | NOT_RUN: no helper or test token supplies final delivery or M20 consent. |
 
-No required test is skipped or implemented as NotImplemented. Numeric populations are measured from actual declarations/source, compared with their precise47/71/28/7/23/6/eight expectations; independent membership and meaningful semantics are separate obligations. Initial NOT_RUN rows are replaced only with actual local pre-freeze measurements; later native/delivery claims stay in the root result record.
+No required test is skipped or implemented as NotImplemented. Numeric populations are measured from actual declarations/source, compared with their precise77declared/78shipped/71/28/7/27/6/eight expectations; independent membership and meaningful semantics are separate obligations. Initial NOT_RUN rows are replaced only with actual local pre-freeze measurements; later native/delivery claims stay in the root result record.
 
 ## Exact helper integration
 
-State interfaces: initialize(project,spec,approval,run_id,max_debug=4,*,framework,adapter,plan), advance(state,result), save(path,state), main(argv=None). Actual state lives in target/.methodology/runs/run_id/state.json. init accepts the plan path before its file exists, recording pending; Architect binds that declared file once and retains old/new input digest history. Immutable full package/adapter/neutral/spec bindings do not drift. Target candidate is mutable on verified scoped Code SUCCESS/Debug FIXED, observed partial Code BUG_REPORT/BLOCKED or Debug BLOCKED, investigated known-effect parent correction, and pending-plan acceptance; every later judged phase/show must match the latest accepted source digest.
+State interfaces: initialize(project,spec,approval,run_id,max_debug=4,*,framework,adapter,plan), advance(state,result), save(path,state), main(argv=None). Current schema3 state lives in target/.methodology/lineages/CAUSAL_ID/state.json; historical schema2 lives in target/.methodology/runs/run_id/state.json. init accepts the plan path before its file exists, recording pending; Architect binds that declared file once and retains old/new input digest history. Immutable full package/adapter/neutral/spec bindings do not drift. Target candidate is mutable on verified scoped Code SUCCESS/Debug FIXED, observed partial Code BUG_REPORT/BLOCKED or Debug BLOCKED, investigated known-effect parent correction, and pending-plan acceptance; every later judged phase/show must match the latest accepted source digest.
 
 The package-local record wrapper preserves the existing canonical role envelope:
 
@@ -181,7 +181,7 @@ Current source 5.0.0 declares 77 members (78 shipped with the map), 27 skills an
 PYTHONDONTWRITEBYTECODE=1 python3.12 -m pytest -c implementations/dsh/pytest.ini implementations/dsh/tests -p no:cacheprovider -s -v --basetemp OWNED
 ```
 
-At this candidate it returns 0 with 199 passed (exposed streams retained privately). Supported historical import is the complete native-only DSH4.0/4.1 schema2 terminal or this contract's own closed schema3 terminal; Codex/Claude ledgers and external parent wallets are not admitted. Native parent reserve/readback/release/record, installation and shared integration are separate proofs, not implied by this suite.
+At this candidate it returns 0 with 202 passed (exposed streams retained privately). Supported historical import is the complete native-only DSH4.0/4.1 schema2 terminal or this contract's own closed schema3 terminal; Codex/Claude ledgers and external parent wallets are not admitted. Native parent reserve/readback/release/record, installation and shared integration are separate proofs, not implied by this suite.
 
 ## RECON-DEC targeted instruction checks
 
