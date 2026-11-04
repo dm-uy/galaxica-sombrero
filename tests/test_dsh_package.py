@@ -82,7 +82,9 @@ EXPECTED_KINDS = {
     'skills/document-protocol/SKILL.md': 'skill',
     'skills/durable-layer/SKILL.md': 'skill',
     'skills/feature-dev/SKILL.md': 'skill',
+    'skills/feature-dev/scripts/continuation.py': 'helper',
     'skills/feature-dev/scripts/run_state.py': 'helper',
+    'tests/test_continuation.py': 'test',
     'skills/graph-protocol/SKILL.md': 'skill',
     'skills/greenfield-bootstrap/SKILL.md': 'skill',
     'skills/hitl-gates/SKILL.md': 'skill',
@@ -156,7 +158,7 @@ def _package_assembly(root):
             raise ValueError("missing substantive neutral core")
         operation = "Layout"
         layout = json.loads((package / MAP).read_text())
-        if not isinstance(layout, dict) or set(layout) != {"package", "version", "profile", "files", "roles"} or layout.get("package") != "methodology-dsh" or layout.get("version") != "4.0.0" or layout.get("profile") != "colocated-explicit-source" or layout.get("roles") != ROLES:
+        if not isinstance(layout, dict) or set(layout) != {"package", "version", "profile", "files", "roles"} or layout.get("package") != "methodology-dsh" or layout.get("version") != "5.0.0" or layout.get("profile") != "colocated-explicit-source" or layout.get("roles") != ROLES:
             raise ValueError("unsupported package profile")
         rows = layout.get("files")
         if not isinstance(rows, list) or not rows:
@@ -195,7 +197,7 @@ def _package_assembly(root):
             raise ValueError("missing or undeclared actual package member")
         operation = "Metadata"
         plugin = json.loads((package / ".dsh-plugin/plugin.json").read_text())
-        if plugin.get("name") != "methodology-dsh" or plugin.get("version") != "4.0.0":
+        if plugin.get("name") != "methodology-dsh" or plugin.get("version") != "5.0.0":
             raise ValueError("native metadata identity mismatch")
         bundle = json.loads((package / "package.json").read_text())
         if bundle.get("name") != "@methodology/dsh" or bundle.get("dsh", {}).get("bundle", {}).get("patch") != "./cordis.patch.yml":
@@ -237,8 +239,8 @@ def test_neutral_boundary_and_complete_package(repo_root, repo_copy, caplog, run
     expected = {p.relative_to(repo_root).as_posix() for p in repo_root.rglob("*.md") if p.relative_to(repo_root).parts[0] not in {".git", "tests", "examples", "implementations", "doxygen_output", "__pycache__", ".pytest_cache"} and p.relative_to(repo_root).as_posix() not in {"README.md", "CHANGELOG.md"}}
     _show_trace(caplog.records)
     assert produced == expected and len(produced) == 71
-    assert len(declared) == 75 and sum(p.startswith("skills/") and p.endswith("/SKILL.md") for p in declared) == 27
-    assert sum(p.startswith("roles/") for p in declared) == 6 and sum("/scripts/" in p and p.endswith(".py") for p in declared) == 6
+    assert len(declared) == 77 and sum(p.startswith("skills/") and p.endswith("/SKILL.md") for p in declared) == 27
+    assert sum(p.startswith("roles/") for p in declared) == 6 and sum("/scripts/" in p and p.endswith(".py") for p in declared) == 7
     assert any("[VALIDATION_SUCCESS]" in r.getMessage() for r in caplog.records)
     assert not [r for r in caplog.records if r.levelno >= logging.ERROR]
     statuses = [(repo_root / p).read_text().split("status: ", 1)[1].split("\n", 1)[0] for p in expected]
