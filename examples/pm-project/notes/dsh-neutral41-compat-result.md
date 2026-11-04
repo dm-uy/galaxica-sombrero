@@ -35,4 +35,4 @@ The root selector update on the combined source, combined sibling regressions an
 
 ## Private evidence index
 
-Ignored `.methodology/dsh-neutral41-compat/evidence/` in this worktree holds `package-suite.log`, `gitfree-suite-final.log`, `ordinary-proof-01.json`, `ordinary-proof-01.summary.log`, `ordinary_probe.py`, both Doxygen streams and `SHA256SUMS`; `/private/tmp/dsh-compat-evidence/` is the same live home. Public locators are logical; the streams are not tracked artifacts.
+Ignored `.methodology/dsh-neutral41-compat/evidence/` in this worktree holds `package-suite.log`, `gitfree-suite-final.log`, `ordinary-proof-01.json`, `ordinary-proof-01.summary.log`, `summary.log` (second-tree probe), `ordinary_probe.py`, both Doxygen streams and a self-excluding `SHA256SUMS`; `/private/tmp/dsh-compat-evidence/` is the same live home. Public locators are logical; the streams are not tracked artifacts.
