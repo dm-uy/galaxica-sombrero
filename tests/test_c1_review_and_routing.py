@@ -232,12 +232,18 @@ def _algorithm_identity(text, engine):
 def test_release_bridge_keeps_wire_and_helper_algorithms(repo_root, caplog):
     # START_BLOCK_BusinessLogic
     caplog.set_level(logging.INFO, logger=LOGGER.name)
-    assert _read(repo_root, "SPEC_VERSION") == "4.0.0\n"
-    for engine, version in (("codex", "4.0.0"), ("claude", "3.0.0")):
+    assert _read(repo_root, "SPEC_VERSION") == "4.1.0\n"
+    for engine, version in (("codex", "5.0.0"), ("claude", "3.0.0")):
         base = "implementations/" + engine
         layout = json.loads(_read(repo_root, base + "/references/package-layout.json"))
         adapter = json.loads(_read(repo_root, base + "/adapter.json"))
-        assert layout["version"] == version and adapter["spec_version"] == "4.0.0"
+        assert layout["version"] == version
+        if engine=="codex":
+            assert adapter["spec_version"]=="4.1.0"
+            assert _codex_boundary_identity(_read(repo_root,base+"/skills/feature-dev/scripts/run_state.py"))
+            continue
+        # This remains an explicit external compatibility failure until accepted sibling work.
+        assert adapter["spec_version"] == "4.1.0"
         text = _read(repo_root, base + "/skills/feature-dev/scripts/run_state.py")
         # BUG_FIX_CONTEXT: Successful normalizations were captured then cleared before exposure.
         # Expose each actual owning VALID/RESULT pair and verify its order/cardinality before the pin.
@@ -517,3 +523,46 @@ def test_brownfield_source_correspondence_contract(repo_root, caplog):
         caplog.clear()
     # END_BLOCK_BusinessLogic
 # endregion FUNC_test_brownfield_source_correspondence_contract
+
+
+# Approved CONT-BOUND exception: only Codex controller/storage changes. Unaffected
+# canonical payload, candidate delta, Git observation and numeric guards stay frozen.
+CODEX_UNCHANGED = {'_plain_integer': '92763014633132b7b42154c9d3648c70b9630e044d5aa38e929da5d1530240ce', '_decimal_cap': '9753c71547f746a1853f2b3ef17aaa6d72155403afb2f23049da037a44425c82', 'read_json': '2d38522d56df039c42fb6c78ea0306877308512c692263bdfe4b072cf0eab44f', '_file': '30c4e460f1a7d3d9b202289ff1eb4b947aecc0c2a3b02bc8efbe615c61d50d91', '_relative': '559fbd5afd8d36bc3082eacd162df92d9a08646748ceda16cea3b9d695fce80e', '_git_run': 'ae00bb899931425b72db30f4583459bb153fdb2c1b6707a9e0172706da66b5c9', '_git_sources': '307f168e659158b38cebcc20afb50cc867bb3831578bd3bbed27aa5286a6ab54', 'inventory': '4039c49d7b7f8d1c5a1091d701e43df5a45a649fed9721a29e45dabe744869a1', '_artifact': 'c6f5d932c12d0aee9a6cf794fcd2567983889b56709e0493fed28d4eb9d92485', '_evidence': '1be4cc0b043ab158e8ceca9b5825f070872471e6e13ad11205835f8f9ed33a9d', '_typed_fields': '0cbc199339748bb9286dc22feffee5b8a58a4556f14115be97f2db96a1c966d6', '_doxygen': 'c77e85872ef13f0094e4513e3dfe9fa2cc86cbc1568306995b681f5c018a8433', '_payload': '2e0e7c7993cbe35a491a8e5c36410368db6d1281a64c767f4d46e55ee5184496', '_source_change': '21db5d58b50e6c74e271b94e1a41aa6cbad26524920e35177e7d8dbf3b36ddb8'}
+# region FUNC__codex_boundary_identity [DOMAIN(9): Continuation; CONCEPT(9): CausalAccounting; TECH(7): Python]
+
+## @purpose  codex boundary identity
+## @uses CODEX_UNCHANGED.items, ast.dump, ast.dump(functions[name], include_attributes=False).encode, ast.parse, ast.unparse, hashlib.sha256, hashlib.sha256(ast.dump(functions[name], include_attributes=False).encode()).hexdigest, isinstance
+## @io Explicit owned inputs; validates named source/control invariant. Returns declared evidence/result, or raises/refuses unavailable, malformed or contradictory inputs. No credentials/provider/consumer effects.
+## @complexity 5
+def _codex_boundary_identity(text):
+    tree=ast.parse(text)
+    functions={n.name:n for n in tree.body if isinstance(n,ast.FunctionDef)}
+    for name,pin in CODEX_UNCHANGED.items():
+        assert hashlib.sha256(ast.dump(functions[name],include_attributes=False).encode()).hexdigest()==pin, name
+    init=functions['initialize']
+    assert isinstance(init.args.defaults[0],ast.Constant) and init.args.defaults[0].value==4
+    assert "'contract_version': 'methodology-codex/2.0.0'" in text
+    assert "'schema_version': 3" in text and "profile_cap <= 4" in text
+    assert "layout.get('version') == '5.0.0'" in text
+    assert "binding.get('spec_version') == '4.1.0'" in text
+    assert "'neutral_version': '4.1.0'" in text
+    assert 'continuation.committed' in ast.unparse(functions['main'])
+    assert 'continuation.persist' in ast.unparse(functions['save'])
+    assert "'lineage'" in text
+    return True
+# endregion FUNC__codex_boundary_identity
+# region FUNC_test_codex_continuation_boundaries [DOMAIN(9): Continuation; CONCEPT(9): CausalAccounting; TECH(7): Python]
+
+
+## @purpose test codex continuation boundaries
+## @uses _codex_boundary_identity, _read, pytest.raises, text.replace
+## @io Explicit owned inputs; validates named source/control invariant. Returns declared evidence/result, or raises/refuses unavailable, malformed or contradictory inputs. No credentials/provider/consumer effects.
+## @complexity 5
+def test_codex_continuation_boundaries(repo_root):
+    text=_read(repo_root,'implementations/codex/skills/feature-dev/scripts/run_state.py')
+    assert _codex_boundary_identity(text)
+    for old,new in [("max_debug=4","max_debug=3"),("'schema_version': 3","'schema_version': 2"),("methodology-codex/2.0.0","methodology-codex/3.0.0"),("profile_cap <= 4","profile_cap < 4"),("layout.get('version') == '5.0.0'","layout.get('version') == '4.0.0'"),("'neutral_version': '4.1.0'","'neutral_version': '4.0.0'"),("def _payload(state, result):","def _payload(state, result):\n    return None")]:
+        mutated=text.replace(old,new,1)
+        assert mutated!=text
+        with pytest.raises(AssertionError):_codex_boundary_identity(mutated)
+# endregion FUNC_test_codex_continuation_boundaries

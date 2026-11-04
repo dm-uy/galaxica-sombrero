@@ -1,7 +1,7 @@
 # region MODULE_CONTRACT [DOMAIN(9): NativeMethodology; CONCEPT(9): SourceIdentity, BoundedVerification; TECH(8): Python, StandardLibrary]
 ## @modulecontract
-## @purpose Preserve one parent-owned schema2 run with actual current source identity and honest authority limits.
-## @scope Actual co-located bindings, canonical returns, causal Debug, separate response controls, atomic checkpoint and init/show/record CLI.
+## @purpose Preserve one parent-owned schema3 lineage with actual current source identity and honest authority limits.
+## @scope Current co-located bindings, unchanged canonical returns, causal repair/retry accounting and the schema3 lineage CLI. continuation.py owns enrollment, immutable history, reservations and conservative recovery; parent owns consent/dispatch.
 ## @input Explicit owned source/target paths and current canonical records; pytest fixtures supply owned temporary paths for tests. No credentials or provider state.
 ## @output Importable declared functions, actual CLI answer/diagnostic/exit where applicable, and meaningful test outcomes with actual trace. No fabricated native acceptance.
 ## @links [USES_API(8): pathlib.Path; USES_API(8): logging; READS_DATA_FROM(9): explicit path inputs; no environment secrets]
@@ -38,9 +38,9 @@
 ## FUNC 9[Pin actual complete co-located package, adapter, neutral and spec identities.] => run_state._bindings
 ## FUNC 8[Acquire real target repository observations without optional Git locks.] => run_state._baseline
 ## FUNC 9[Refuse incomplete, unsupported or wrongly typed local ledger data before storage or replay.] => run_state._state_shape
-## FUNC 9[Permit refusal chronology only on a complete correctly located existing schema2 ledger.] => run_state._diagnostic_ready
+## FUNC 9[Permit refusal chronology only on a complete correctly located existing schema3 authority.] => run_state._diagnostic_ready
 ## FUNC 9[Refuse unsupported schema or stale locked inputs/target before continuation.] => run_state.validate_state
-## FUNC 9[Create one owned source-bound schema2 run without overwrite or budget reset.] => run_state.initialize
+## FUNC 9[Create one owned source-bound schema3 lineage without overwrite or budget reset.] => run_state.initialize
 ## FUNC 9[Require real readable evidence contained by the assigned target.] => run_state._artifact
 ## FUNC 9[Validate every actual nonempty contained evidence reference.] => run_state._evidence
 ## FUNC 9[Refuse missing or wrong plain types in declared required payload fields.] => run_state._typed_fields
@@ -74,6 +74,7 @@ import stat
 import subprocess
 import sys
 import uuid
+import continuation
 
 logger = logging.getLogger(__name__)
 SCANS = ('green-test-trap', 'quantitative-ac', 'semantic-trace', 'infra-dod', 'side-effect-channel', 'secret-leak', 'real-path-shape', 'discriminating-test')
@@ -427,7 +428,7 @@ def inventory(root, excluded=None):
 # region FUNC__bindings [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Pin actual complete co-located package, adapter, neutral and spec identities.
 ## @uses run_state.read_json, run_state.inventory, run_state._file, run_state._relative, run_state._digest, run_state._expect
-## @io framework directory, adapter exact framework/adapter.json, spec actual file. Returns resolved path records, full73 package rows,71 neutral rows, six core names, layout/adapter/spec byte identities and binding digest. Requires package2.4.0, co-located2.0.0 profile, exact roles/kinds/sorted membership; missing/stub/basic malformed core refuses. Full-content meaning/initial truncation authenticity remains parent judgment; later drift changes locked digest. Raises OSError/ValueError/KeyError/TypeError on unavailable or invalid binding. Reads only; no provider/Git writes. Example: relocated complete co-located tree binds independently of cwd. Importance:9.
+## @io framework directory, adapter exact framework/adapter.json, spec actual file. Returns resolved path records, full75 package rows,71 neutral rows, six core names, layout/adapter/spec byte identities and binding digest. Requires package5.0.0, co-located neutral4.1.0 profile, exact roles/kinds/sorted membership; missing/stub/basic malformed core refuses. Full-content meaning/initial truncation authenticity remains parent judgment; later drift changes locked digest. Raises OSError/ValueError/KeyError/TypeError on unavailable or invalid binding. Reads only; no provider/Git writes. Example: relocated complete co-located tree binds independently of cwd. Importance:9.
 ## @complexity 9
 def _bindings(framework, adapter, spec):
     framework, adapter, spec = Path(framework).resolve(), Path(adapter).resolve(), Path(spec).resolve()
@@ -436,20 +437,20 @@ def _bindings(framework, adapter, spec):
         _expect(framework.is_dir() and adapter == framework / 'adapter.json', 'framework/adapter binding mismatch')
         layout_path = framework / 'references/package-layout.json'
         layout = read_json(layout_path)
-        _expect(layout.get('package') == 'methodology-codex' and layout.get('version') == '4.0.0', 'package identity mismatch')
+        _expect(layout.get('package') == 'methodology-codex' and layout.get('version') == '5.0.0', 'package identity mismatch')
         _expect(set(layout) == {'package', 'version', 'profile', 'files', 'roles'} and layout.get('profile') == 'colocated-explicit-source', 'unsupported package profile')
         _expect(layout.get('roles') == {role: 'roles/'+role+'.md' for role in ('architect','coder','debugger','qa','reviewer','searcher')}, 'package role locations mismatch')
         declarations = layout.get('files')
         _expect(type(declarations) is list and bool(declarations), 'package file population missing')
         expected = [_relative(row['path']) for row in declarations if type(row) is dict and set(row) == {'path', 'kind'}]
-        _expect(len(expected) == len(declarations) and len(set(expected)) == len(expected) == 73 and expected == sorted(expected) and all(row['kind'] in KINDS for row in declarations), 'invalid package member declarations')
+        _expect(len(expected) == len(declarations) and len(set(expected)) == len(expected) == 75 and expected == sorted(expected) and all(row['kind'] in KINDS for row in declarations), 'invalid package member declarations')
         package = inventory(framework, PACKAGE_GENERATED)
         _expect(set(expected) == {row['path'] for row in package['files']}, 'package membership mismatch')
         binding = read_json(adapter)
         _expect(binding.get('spec_root') == '../../', 'co-located spec_root must be ../../')
         neutral = (adapter.parent / _text(binding.get('spec_root'), 'neutral binding missing')).resolve()
         _expect(neutral.is_dir() and neutral == framework.parents[1], 'unsupported detached neutral binding')
-        _expect((neutral / 'SPEC_VERSION').read_text().strip() == binding.get('spec_version') == '4.0.0', 'neutral version mismatch')
+        _expect((neutral / 'SPEC_VERSION').read_text().strip() == binding.get('spec_version') == '4.1.0', 'neutral version mismatch')
         profile_cap = _decimal_cap(binding['parameters']['debug-entry-cap'])
         _expect(profile_cap <= 4, 'BLOCKED: adapter Debug extension unsupported')
         declared = binding.get('files')
@@ -470,7 +471,7 @@ def _bindings(framework, adapter, spec):
         neutral_rows = [_file(neutral / _relative(relative)) for relative in sorted(declared)]
         for row, relative in zip(neutral_rows, sorted(declared)):
             row['path'] = relative
-        result = {'framework': str(framework), 'adapter': _file(adapter), 'package': package, 'neutral_root': str(neutral), 'neutral_version': '4.0.0', 'neutral': neutral_rows, 'spec': _file(spec), 'core': list(CORE), 'debug_cap_profile': profile_cap, 'layout': _file(layout_path)}
+        result = {'framework': str(framework), 'adapter': _file(adapter), 'package': package, 'neutral_root': str(neutral), 'neutral_version': '4.1.0', 'neutral': neutral_rows, 'spec': _file(spec), 'core': list(CORE), 'debug_cap_profile': profile_cap, 'layout': _file(layout_path)}
         result['digest'] = _digest(result)
         logger.info('[IMP:9][_bindings][RESULT] package=%d neutral=%d', len(expected), len(neutral_rows))
         return result
@@ -508,14 +509,14 @@ def _baseline(project):
 # region FUNC__state_shape [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Refuse incomplete, unsupported or wrongly typed local ledger data before storage or replay.
 ## @uses run_state._expect, run_state._text, run_state._plain_integer
-## @io state object. Returns None for the complete declared schema2 field surface, exact phase/status, plain nonnegative cap/spend and distinct supported retry units/profile. Unknown/missing fields or invalid types raise ValueError/KeyError/TypeError after owning safe failure trace. No live filesystem/authority authentication or writes; stale accepted bindings can still be retained diagnostically. Example: absent history refuses without fabricated replacement. Importance:9.
+## @io state object. Returns None for the complete declared schema3 run field surface, exact phase/status, plain nonnegative aggregate cap/spend and distinct retry units/profile; validate_state and persist additionally validate the lineage/accounting surface. Unknown/missing fields or invalid types raise ValueError/KeyError/TypeError after owning safe failure trace. No live filesystem/authority authentication or writes; eligibility alone permits no diagnostic write without committed-current checks. Example: absent history refuses without fabricated replacement. Importance:9.
 ## @complexity 5
 def _state_shape(state):
     logger.info('[IMP:4][_state_shape][START] complete ledger structure')
     try:
-        _expect(type(state) is dict and type(state.get('schema_version')) is int and state.get('schema_version')==2, 'unsupported state schema; historical records are read-only')
-        _expect(STATE_FIELDS <= set(state) <= STATE_FIELDS | {'debug_origin'}, 'incomplete or unknown state fields')
-        _expect(type(state['schema_version']) is int and state['schema_version']==2, 'unsupported state schema; historical records are read-only')
+        _expect(type(state) is dict and type(state.get('schema_version')) is int and state.get('schema_version')==3, 'unsupported state schema; historical records are read-only')
+        _expect(STATE_FIELDS <= set(state) <= STATE_FIELDS | {'debug_origin','lineage'}, 'incomplete or unknown state fields')
+        _expect(type(state['schema_version']) is int and state['schema_version']==3, 'unsupported state schema; historical records are read-only')
         _expect(state['phase'] in PHASE_ROLES and state['status'] in TERMINAL | {'RUNNING'}, 'invalid state phase/status')
         for key in ('target','framework','adapter_path','spec_path','run_id','input_identity','contract_version'):
             _text(state[key], 'state logical identity missing')
@@ -524,7 +525,7 @@ def _state_shape(state):
         _expect(type(state['history']) is list and type(state['approved_scope']) is list, 'invalid state chronology/scope')
         _plain_integer(state['debug_cap'], 'invalid Debug cap')
         _plain_integer(state['debug_spent'], 'invalid Debug spent')
-        _expect(0 <= state['debug_spent'] <= state['debug_cap'] <= 4, 'invalid or unsupported Debug allowance')
+        _expect(0 <= state['debug_spent'] <= state['debug_cap'], 'invalid or unsupported Debug allowance')
         units={'response-correction','extraction','transport','test-session'}
         _expect(set(state['retry_episodes']) == set(state['retry_limits']) == units, 'retry unit population mismatch')
         for unit in units:
@@ -538,14 +539,14 @@ def _state_shape(state):
 # endregion FUNC__state_shape
 
 # region FUNC__diagnostic_ready [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
-## @purpose Permit refusal chronology only on a complete correctly located existing schema2 ledger.
+## @purpose Permit refusal chronology only on a complete correctly located existing schema3 authority.
 ## @uses run_state._state_shape, pathlib.Path, logging.Logger.info, logging.Logger.error
-## @io state object and resolved CLI state Path. Returns bool; true requires complete structural state and exact owned target/run destination. Invalid/old/incomplete shape emits safe own failure and returns False, never fabricates a replacement. No writes or human-authenticity claim. Example: historical schema1 returns False. Importance:9.
+## @io state object and resolved CLI state Path. Returns bool; true requires complete structural RUNNING state and exact canonical lineage destination. The caller must separately check current committed identity before diagnostics. Invalid/old/incomplete shape emits safe own failure and returns False, never fabricates a replacement. No writes or human-authenticity claim. Example: historical schema1 returns False. Importance:9.
 ## @complexity 5
 def _diagnostic_ready(state,path):
     try:
         _state_shape(state)
-        eligible=path == Path(state['target'])/'.methodology/runs'/state['run_id']/'state.json'
+        eligible=state['status']=='RUNNING' and path == continuation.authority(state)
         logger.info('[IMP:9][_diagnostic_ready][RESULT] eligible=%s',eligible)
         return eligible
     except (ValueError,KeyError,TypeError) as error:
@@ -556,17 +557,17 @@ def _diagnostic_ready(state,path):
 # region FUNC_validate_state [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Refuse unsupported schema or stale locked inputs/target before continuation.
 ## @uses run_state._bindings, run_state._file, run_state.inventory, run_state._digest, run_state._text, run_state._plain_integer, run_state._expect
-## @io state schema2 dict; allow_source_change bool defaultFalse reserved for controlled Architect/Code/Debug acceptance. Returns actual target inventory. Requires current immutable bindings, approval shape/action/spec/scope, bound plan identity and nonnegative cap/spend; unexpected target drift refuses unless caller controls change. No state mutation/writes. OSError/ValueError/KeyError/TypeError signal unavailable/malformed/stale state. Example: schema1 raises read-only historical diagnostic. Importance:9.
+## @io state schema3 dict; allow_source_change bool defaultFalse reserved for controlled Architect/Code/Debug acceptance. Returns actual target inventory. Requires current immutable bindings, approval shape/action/spec/scope, bound plan identity and lineage-reconciled original allowance/grants/spend; unexpected target drift refuses unless caller controls change. No state mutation/writes. OSError/ValueError/KeyError/TypeError signal unavailable/malformed/stale state. Example: schema1 raises read-only historical diagnostic. Importance:9.
 ## @complexity 5
 def validate_state(state, *, allow_source_change=False):
     logger.info('[IMP:4][validate_state][START] current schema and identity')
     try:
         _state_shape(state)
-        _expect(type(state) is dict and state.get('schema_version') == 2 and type(state.get('schema_version')) is int, 'unsupported state schema; historical records are read-only')
+        _expect(type(state) is dict and state.get('schema_version') == 3 and type(state.get('schema_version')) is int, 'unsupported state schema; historical records are read-only')
         _expect(state.get('phase') in PHASE_ROLES and state.get('status') in TERMINAL | {'RUNNING'}, 'invalid state phase/status')
         _text(state['run_id'], 'run identity missing')
         _plain_integer(state['debug_cap'], 'invalid Debug cap')
-        _expect(state['debug_cap'] <= 4, 'BLOCKED: above-default Debug extensions unsupported')
+        continuation.shape(state)
         _plain_integer(state['debug_spent'], 'invalid Debug spent')
         _expect(state['debug_spent'] <= state['debug_cap'], 'Debug spend exceeds allowance')
         _expect(type(state['history']) is list and type(state['accepted']) is dict, 'state chronology missing')
@@ -592,9 +593,9 @@ def validate_state(state, *, allow_source_change=False):
 # endregion FUNC_validate_state
 
 # region FUNC_initialize [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
-## @purpose Create one owned source-bound schema2 run without overwrite or budget reset.
+## @purpose Create one owned source-bound schema3 lineage without overwrite or budget reset.
 ## @uses run_state._bindings, run_state.inventory, run_state._baseline, run_state._file, run_state._digest, run_state.save, pathlib.Path.mkdir
-## @io project existing directory, spec real file, approval nonblank parent provenance reference, safe alphanumeric/underscore/hyphen run_id, max_debug plain int0..4 default4; keyword-only framework/adapter actual co-located binding and plan declared contained path. Returns (absolute state Path, schema2 dict). Pins full immutable inputs and original target inventory; binds existing plan or records pending exactly once; creates only .methodology/runs/run_id and checkpoint after validation. Raises ValueError for invalid scope/types/extension/duplicate run; OSError on unavailable input/checkpoint. Authentic human consent is parent judgment. Example: max_debug0 initializes with debug_spent0 and cannot enter repair. Importance:9.
+## @io project existing directory, spec real file, approval nonblank parent provenance reference, safe alphanumeric/underscore/hyphen run_id, max_debug plain int0..4 default4; keyword-only framework/adapter actual co-located binding and plan declared contained path. Returns (absolute state Path, schema3 dict). Pins full immutable inputs and original target inventory; binds existing plan or records pending exactly once; exclusively enrolls .methodology/lineages/causal-id plus its admissions, first reservation, revision journal and checkpoint after validation. Raises ValueError for invalid scope/types/extension/duplicate run; OSError on unavailable input/checkpoint. Authentic human consent is parent judgment. Example: max_debug0 initializes with debug_spent0 and cannot enter repair. Importance:9.
 ## @complexity 5
 def initialize(project, spec, approval, run_id, max_debug=4, *, framework, adapter, plan):
     logger.info('[IMP:4][initialize][START] bind owned run')
@@ -607,22 +608,29 @@ def initialize(project, spec, approval, run_id, max_debug=4, *, framework, adapt
         _plain_integer(max_debug, 'invalid Debug cap')
         _expect(max_debug <= 4, 'BLOCKED: above-default Debug extensions unsupported')
         _text(approval, 'authentic parent approval reference required')
+        for registered in (project/'.methodology/lineages').glob('*/state.json'):
+            enrolled=read_json(registered)
+            _state_shape(enrolled)
+            _expect(str(spec) not in enrolled['lineage']['admissions'],'specification already enrolled; no replacement wallet')
+        for predecessor in (project/'.methodology/runs').glob('*/state.json'):
+            historical=read_json(predecessor)
+            _expect(historical.get('spec_path')!=str(spec), 'historical causal input exists; use supported continuation, never fresh init')
         bindings = _bindings(framework, adapter, spec)
         _expect(max_debug <= bindings['debug_cap_profile'], 'requested Debug cap exceeds declared adapter allowance')
         candidate = inventory(project)
         logger.info('[IMP:9][initialize][VALIDATION_SUCCESS] cap=%d', max_debug)
         # END_BLOCK_Validation
         # START_BLOCK_BusinessLogic
-        state = {'schema_version': 2, 'contract_version': 'methodology-codex/2.0.0', 'run_id': run_id, 'status': 'RUNNING', 'phase': 'bootstrap', 'target': str(project), 'framework': str(Path(framework).resolve()), 'adapter_path': str(Path(adapter).resolve()), 'spec_path': str(spec), 'approval': {'reference': approval, 'action': 'execute approved specification', 'spec': bindings['spec']['sha256'], 'scope': str(project)}, 'bindings': bindings, 'input_identity': '', 'plan': {'path': str(plan), 'status': 'bound' if plan.exists() else 'pending'}, 'baseline': _baseline(project), 'baseline_candidate': copy.deepcopy(candidate), 'candidate': candidate, 'debug_cap': max_debug, 'debug_spent': 0, 'retry_episodes': {'response-correction': 0, 'extraction': 0, 'transport': 0, 'test-session': 0}, 'accepted': {}, 'approved_scope': [], 'retry_limits': {'response-correction': 1, 'extraction': 0, 'transport': 0, 'test-session': 0}, 'history': [{'kind': 'initialized', 'time': _stamp(), 'plan': 'bound' if plan.exists() else 'pending', 'debug_delta': 0}]}
+        state = {'schema_version': 3, 'contract_version': 'methodology-codex/2.0.0', 'run_id': run_id, 'status': 'RUNNING', 'phase': 'bootstrap', 'target': str(project), 'framework': str(Path(framework).resolve()), 'adapter_path': str(Path(adapter).resolve()), 'spec_path': str(spec), 'approval': {'reference': approval, 'action': 'execute approved specification', 'spec': bindings['spec']['sha256'], 'scope': str(project)}, 'bindings': bindings, 'input_identity': '', 'plan': {'path': str(plan), 'status': 'bound' if plan.exists() else 'pending'}, 'baseline': _baseline(project), 'baseline_candidate': copy.deepcopy(candidate), 'candidate': candidate, 'debug_cap': max_debug, 'debug_spent': 0, 'retry_episodes': {'response-correction': 0, 'extraction': 0, 'transport': 0, 'test-session': 0}, 'accepted': {}, 'approved_scope': [], 'retry_limits': {'response-correction': 1, 'extraction': 0, 'transport': 0, 'test-session': 0}, 'history': [{'kind': 'initialized', 'time': _stamp(), 'plan': 'bound' if plan.exists() else 'pending', 'debug_delta': 0}]}
         if plan.exists():
             state['plan']['identity'] = _file(plan)
         state['input_identity'] = _digest({'bindings': bindings['digest'], 'plan': state['plan']})
-        folder = project / '.methodology' / 'runs' / run_id
-        _expect(folder.resolve().is_relative_to(project) and not folder.exists(), 'run exists or escapes target; no overwrite/reset')
-        folder.mkdir(parents=True, exist_ok=False)
-        path = folder / 'state.json'
-        save(path, state)
-        logger.info('[IMP:9][initialize][RESULT] initialized schema2')
+        continuation.new_lineage(state)
+        continuation.prepare(state)
+        continuation.enroll(sys.modules[__name__],state)
+        path=continuation.authority(state)
+        save(path,state)
+        logger.info('[IMP:9][initialize][RESULT] initialized schema3')
         return path, state
         # END_BLOCK_BusinessLogic
     except (OSError, ValueError, KeyError, TypeError) as exc:
@@ -893,7 +901,7 @@ def _source_change(state, actual, context, result):
 # region FUNC_advance [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Accept one parent event without partial input mutation and charge repair before dispatch.
 ## @uses copy.deepcopy, run_state.validate_state, run_state._payload, run_state._source_change, run_state._digest, run_state._file
-## @io state schema2 dict and role wrapper {kind:role,result:canonical envelope,context:optional sourceChange} or declared response-correction control. Returns new state only. Normal route includes accepted Review; Code SUCCESS, parent-scoped partial BUG_REPORT/BLOCKED and investigated known-effect response controls, plus Debug FIXED/BLOCKED, can retain actual authorized target bytes without falsely accepting phase completion; partial Code failure never marks Code accepted; pending Architect binds declared plan once into input digest. Shared Code/QA/Review repair spend is pre-entry; cap0/exhaustion refuses repair, retries are distinct; terminal and old/stale/malformed input refuses. ValueError/KeyError/TypeError/OSError leave original state byte-equivalent. No direct writes; owning success/failure/entry trace. Example: valid QA moves to Review, never directly Finalize. Importance:9. Complexity9 is explicit phase/status/identity/counter routing rather than a permissive generic switch.
+## @io state schema3 dict and role wrapper {kind:role,result:canonical envelope,context:optional sourceChange} or declared response-correction control. Returns new state only. Normal route includes accepted Review; Code SUCCESS, parent-scoped partial BUG_REPORT/BLOCKED and investigated known-effect response controls, plus Debug FIXED/BLOCKED, can retain actual authorized target bytes without falsely accepting phase completion; partial Code failure never marks Code accepted; pending Architect binds declared plan once into input digest. Shared Code/QA/Review repair spend is pre-entry; cap0/exhaustion refuses repair, retries are distinct; terminal and old/stale/malformed input refuses. ValueError/KeyError/TypeError/OSError leave original state byte-equivalent. No direct writes; owning success/failure/entry trace. Example: valid QA moves to Review, never directly Finalize. Importance:9. Complexity9 is explicit phase/status/identity/counter routing rather than a permissive generic switch.
 ## @complexity 9
 def advance(state, result):
     logger.info('[IMP:4][advance][START] validate one parent-owned event')
@@ -926,10 +934,13 @@ def advance(state, result):
             else:
                 _expect(not result.get('context'), 'sourceChange only valid for authored phase control')
             updated['retry_episodes']['response-correction'] += 1
+            updated['lineage']['episodes']['response-correction'][-1]['used'] += 1
             event.update(control=copy.deepcopy(result))
             if updated['retry_episodes']['response-correction'] > 1:
                 updated['status'] = 'ESCALATED_FINALIZE' if state['phase'] == 'finalize' else 'BLOCKED'
             updated['history'].append(event)
+            if updated['status'] != 'RUNNING':
+                continuation.complete(updated,result['evidence'])
             logger.info('[IMP:9][advance][CONTROL_RESULT] response attempt=%d', updated['retry_episodes']['response-correction'])
             return updated
         _expect(set(result) <= {'kind', 'result', 'context'} and type(role) is dict, 'malformed role wrapper')
@@ -964,6 +975,7 @@ def advance(state, result):
         # END_BLOCK_Validation
         # START_BLOCK_BusinessLogic
         event['result'] = copy.deepcopy(role)
+        continuation.complete(updated,role['evidence'])
         if status in {'BLOCKED', 'ESCALATED_FINALIZE'}:
             updated['status'] = status
         elif status == 'BUG_REPORT':
@@ -974,10 +986,9 @@ def advance(state, result):
             if updated['debug_spent'] >= updated['debug_cap']:
                 updated['status'] = 'ESCALATED'
             else:
-                updated['debug_spent'] += 1
                 updated['phase'] = 'debug'
                 event['debug_delta'] = 1
-                event['attempt'] = updated['debug_spent']
+                event['attempt'] = updated['debug_spent']+1
                 logger.info('[IMP:9][advance][DEBUG_ENTRY] origin=%s spent=%d cap=%d', phase, updated['debug_spent'], updated['debug_cap'])
         else:
             if phase == 'architect':
@@ -988,7 +999,7 @@ def advance(state, result):
                     scope.append(_relative(relative))
                 _expect(bool(scope), 'Architect approved scope missing')
                 updated['approved_scope'] = scope
-            updated['accepted'][phase] = {'candidate': updated['candidate']['digest'], 'evidence': copy.deepcopy(role['evidence']), 'role': role['role']}
+            updated['accepted'][phase] = {'candidate': updated['candidate']['digest'], 'evidence': copy.deepcopy(role['evidence']), 'role': role['role'],'input':updated['input_identity'],'scope':copy.deepcopy(updated['approved_scope']),'identities':_evidence(updated,role['evidence'])}
             if phase=='code':
                 updated['accepted']['code']['doxygen']=copy.deepcopy(role['doxygen'])
                 if role['doxygen'].get('status')=='NOT_APPLICABLE':
@@ -997,6 +1008,15 @@ def advance(state, result):
             if phase == 'finalize':
                 updated['status'] = 'SUCCESS'
         updated['retry_episodes']['response-correction'] = 0
+        if updated['status']=='RUNNING':
+            causal_code=updated['phase']=='code' and any(e.get('kind')=='continued' for e in updated['history'])
+            if not continuation.costs_within(updated):
+                updated['status']='BLOCKED'
+                event['withheld_next']='observed grant cost ceiling exceeded'
+            elif causal_code and updated['debug_spent']>=updated['debug_cap']:
+                updated['status']='ESCALATED'
+            else:
+                continuation.prepare(updated,charge=event['debug_delta']==1 or causal_code)
         updated['history'].append(event)
         logger.info('[IMP:9][advance][RESULT] next=%s terminal=%s', updated['phase'], updated['status'])
         return updated
@@ -1011,94 +1031,87 @@ def advance(state, result):
 # region FUNC_save [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Checkpoint a complete owned state atomically and clean only its temporary file.
 ## @uses json.dumps, pathlib.Path.write_text, pathlib.Path.replace, pathlib.Path.unlink, uuid.uuid4, run_state._expect
-## @io path exact existing target/.methodology/runs/run_id/state.json; state schema2 JSON-compatible dict. Returns None after UTF8 complete temp sibling write/replace. Wrong destination/schema or nonfinite/unserializable data raises ValueError/TypeError; I/O raises OSError; existing checkpoint is retained until replacement. No Git or target source writes. Separately constructed safe refusal events retain accepted fields. Example: state write round-trips complete history/counters. Importance:9.
+## @io path exact existing target/.methodology/lineages/causal-id/state.json; state schema3 JSON-compatible dict. Returns None after schema3 lineage validation, single-writer revision check, immutable terminal publication if closed, exclusive revision journal and complete temporary sibling replacement. Wrong destination/schema or nonfinite/unserializable data raises ValueError/TypeError; I/O raises OSError; existing checkpoint is retained until replacement. No Git or target source writes. Separately constructed safe refusal events retain accepted fields. Example: state write round-trips complete history/counters. Importance:9.
 ## @complexity 5
 def save(path, state):
     logger.info('[IMP:4][save][START] atomic checkpoint')
-    temporary = None
-    try:
-        # START_BLOCK_Validation
-        path = Path(path).resolve()
-        _state_shape(state)
-        expected = Path(state['target']) / '.methodology/runs' / state['run_id'] / 'state.json'
-        _expect(path == expected and path.parent.is_dir(), 'unsafe checkpoint destination')
-        data = json.dumps(state, indent=2, ensure_ascii=False, allow_nan=False)+'\n'
-        logger.info('[IMP:9][save][VALIDATION_SUCCESS] complete JSON encoded')
-        # END_BLOCK_Validation
-        # START_BLOCK_BusinessLogic
-        temporary = path.with_name(path.name+'.'+uuid.uuid4().hex+'.tmp')
-        logger.info('[IMP:7][save][WRITE] temporary sibling then replace')
-        temporary.write_text(data, encoding='utf-8')
-        temporary.replace(path)
-        logger.info('[IMP:9][save][RESULT] complete checkpoint persisted')
-        # END_BLOCK_BusinessLogic
-    except (OSError, ValueError, KeyError, TypeError) as exc:
-        # START_BLOCK_ErrorHandling
-        logger.error('[IMP:10][save][FAIL] kind=%s', type(exc).__name__)
-        raise
-        # END_BLOCK_ErrorHandling
-    finally:
-        if temporary is not None and temporary.exists():
-            temporary.unlink()
+    _state_shape(state)
+    continuation.persist(sys.modules[__name__],path,state)
+    logger.info('[IMP:9][save][RESULT] complete checkpoint persisted')
 # endregion FUNC_save
 
 # region FUNC_main [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Deliver the helper real CLI answer and honest diagnostics through their own channels.
 ## @uses argparse.ArgumentParser, logging.basicConfig, json.dumps, run_state.initialize, run_state.advance, run_state.save, run_state.read_json, run_state.validate_state
-## @io argv optional list[str], defaults process arguments. State CLI init/show/record returns int0 for accepted operation and2 for refusal. stdout contains only declared answer/report; stderr contains safe owning INFO/ERROR diagnostics. State show validates without writes; record may append a safe cause event only to an initialized correctly located schema2 ledger, preserving progress/counters. No agent/Git dispatch. CLI catches documented input/I/O errors, argparse invalid arguments exits2. Example: show --state owned_state verifies same-run identity without resetting counters. Importance:9.
+## @io argv optional list[str], defaults process arguments. CLI capabilities/init/show/record/continue/reserve/released/recover/episode returns int0 for an accepted declared operation and2 for input/prerequisite refusal. stdout contains only declared answer/report; stderr contains safe owning INFO/ERROR diagnostics. State show validates without writes; record may append a safe cause event only to an initialized correctly located schema3 authority, preserving progress/counters. No agent/Git dispatch. CLI catches documented input/I/O errors, argparse invalid arguments exits2. Example: show --state owned_state verifies same-run identity without resetting counters. Importance:9.
 ## @complexity 9
 def main(argv=None):
     logging.basicConfig(level=logging.INFO, stream=sys.stderr, format='%(message)s')
     logger.info('[IMP:4][main][START] state CLI')
-    parser = argparse.ArgumentParser(description='Validate source-bound schema2 state; parent owns authority and transitions.')
-    commands = parser.add_subparsers(dest='action', required=True)
-    init = commands.add_parser('init')
-    for key in ('project', 'spec', 'approval', 'framework', 'adapter', 'plan', 'run-id'):
-        init.add_argument('--'+key, required=True)
-    init.add_argument('--max-debug', type=_decimal_cap, default=4)
-    for action in ('show', 'record'):
-        command = commands.add_parser(action)
-        command.add_argument('--state', required=True)
-        if action == 'record':
-            command.add_argument('--result', required=True)
+    parser=argparse.ArgumentParser(description='Source-bound schema3 authority; parent authenticates consent and owns dispatch.')
+    commands=parser.add_subparsers(dest='action',required=True)
+    commands.add_parser('capabilities')
+    init=commands.add_parser('init')
+    for key in ('project','spec','approval','framework','adapter','plan','run-id'):
+        init.add_argument('--'+key,required=True)
+    init.add_argument('--max-debug',type=_decimal_cap,default=4)
+    cont=commands.add_parser('continue')
+    cont.add_argument('--predecessor',required=True)
+    cont.add_argument('--parent')
+    cont.add_argument('--request',required=True)
+    for action in ('show','record','reserve','released','recover','episode'):
+        command=commands.add_parser(action)
+        command.add_argument('--state',required=True)
+        if action=='record':
+            command.add_argument('--result',required=True)
+        elif action!='show':
+            command.add_argument('--request',required=True)
     try:
-        args = parser.parse_args(argv)
-    except SystemExit as error:
-        if error.code == 0:
-            logger.info('[IMP:9][main][HELP] declared usage delivered')
-        else:
-            logger.error('[IMP:10][main][ARGUMENT_REFUSAL] invalid CLI arguments')
-        return error.code
-    path, original = None, None
+        args=parser.parse_args(argv)
+    except SystemExit as exc:
+        return exc.code
+    path,original=None,None
     try:
-        if args.action == 'init':
-            path, state = initialize(args.project, args.spec, args.approval, args.run_id, args.max_debug, framework=args.framework, adapter=args.adapter, plan=args.plan)
+        if args.action=='capabilities':
+            print(json.dumps(continuation.capabilities(),allow_nan=False))
+            return 0
+        if args.action=='init':
+            path,state=initialize(args.project,args.spec,args.approval,args.run_id,args.max_debug,framework=args.framework,adapter=args.adapter,plan=args.plan)
+        elif args.action=='continue':
+            path,state=continuation.continue_run(sys.modules[__name__],args.predecessor,read_json(args.request),parent_path=args.parent)
         else:
-            path = Path(args.state).resolve()
-            original = read_json(path)
+            path=Path(args.state).resolve()
+            original=read_json(path)
             _state_shape(original)
-            expected = Path(original.get('target', '')) / '.methodology/runs' / original.get('run_id', '') / 'state.json'
-            _expect(path == expected, 'state file ownership/containment mismatch')
-            if args.action == 'show':
-                validate_state(original)
-                state = original
+            _expect(path==continuation.authority(original),'state file is not canonical authority; exports are read-only')
+            if args.action=='record':
+                wrapper=read_json(args.result)
+                # Output may change approved source; advance validates the exact delta.
+                continuation.committed(sys.modules[__name__],original,allow_source_change=True)
+                _expect(continuation.active(original)['state']=='released','parent must record actual worker/session release before output')
+                state=advance(original,wrapper)
+                save(path,state)
+            elif args.action=='show':
+                continuation.committed(sys.modules[__name__],original)
+                state=original
+            elif args.action=='episode':
+                state=continuation.episode(sys.modules[__name__],original,read_json(args.request))
             else:
-                state = advance(original, read_json(args.result))
-                save(path, state)
-        logger.info('[IMP:9][main][RESULT] accepted action=%s', args.action)
-        print(json.dumps({'state_file': str(path), 'state': state}, ensure_ascii=False, allow_nan=False))
+                state=continuation.reservation_operation(sys.modules[__name__],original,args.action,read_json(args.request))
+        logger.info('[IMP:9][main][RESULT] accepted action=%s',args.action)
+        print(json.dumps({'state_file':str(path),'state':state},ensure_ascii=False,allow_nan=False))
         return 0
-    except (OSError, ValueError, KeyError, TypeError) as exc:
-        logger.error('[IMP:10][main][REFUSAL] action=%s kind=%s', args.action, type(exc).__name__)
-        # Only append a safe diagnostic to the actual already initialized schema2 ledger.
-        if args.action == 'record' and _diagnostic_ready(original,path):
-            diagnostic = copy.deepcopy(original)
-            diagnostic['history'].append({'time': _stamp(), 'kind': 'refused', 'phase': original.get('phase'), 'cause': type(exc).__name__, 'reason': str(exc), 'debug_delta': 0})
+    except (OSError,ValueError,KeyError,TypeError) as exc:
+        logger.error('[IMP:10][main][REFUSAL] action=%s kind=%s',args.action,type(exc).__name__)
+        if args.action=='record' and _diagnostic_ready(original,path):
             try:
-                save(path, diagnostic)
-            except (OSError, ValueError, KeyError, TypeError) as failure:
-                logger.error('[IMP:10][main][DIAGNOSTIC_FAILURE] kind=%s', type(failure).__name__)
-        print('methodology state: '+str(exc), file=sys.stderr)
+                continuation.committed(sys.modules[__name__],original,allow_source_change=True)
+                diagnostic=copy.deepcopy(original)
+                diagnostic['history'].append({'time':_stamp(),'kind':'refused','phase':original['phase'],'cause':type(exc).__name__,'reason':str(exc),'debug_delta':0})
+                save(path,diagnostic)
+            except (OSError,ValueError,KeyError,TypeError) as failure:
+                logger.error('[IMP:10][main][DIAGNOSTIC_FAILURE] kind=%s',type(failure).__name__)
+        print('methodology state: '+str(exc),file=sys.stderr)
         return 2
 # endregion FUNC_main
 

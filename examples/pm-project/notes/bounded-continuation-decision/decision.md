@@ -29,3 +29,7 @@ Full spec includes enrollment identity/ordinary-path refusal, retry episode scop
 ## Next action
 
 Draft [specification](../../specs/bounded-continuation.md), update transfer instructions, independently verify original-source correspondence and readiness. Owner still reviews the actual specification; no Code, install, consumer execution or integration is authorized by this drafting choice.
+
+## Owner adoption and implementation — 2026-11-04
+
+The owner approved the specification selecting A, then explicitly selected the lighter short-plan/implementation/checks/one-review procedure. [Authentic approval](../../specs/bounded-continuation.md#owner-implementation-and-procedure-decision--2026-11-04), [checked Codex source/result](../bounded-continuation-result.md), [final independent judgment](../bounded-continuation-review-final.md). Earlier proposed-only statements are retained as original decision history. Shared integration/installation and sibling executable work remain separately held; no human source/result approval is inferred from the evaluator's scores.

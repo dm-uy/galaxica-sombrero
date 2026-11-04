@@ -7,7 +7,16 @@ Owner request, 2026-11-03: «Давай подготовим специфика�
 | Task | State | Finish / next action |
 |---|---|---|
 | CONT-BOUND-T1 — source/data/decision reconnaissance | Complete locally | [RECON](notes/RECON_2026-11-03_bounded-continuation.md), independent source lanes and fresh completeness check; all four findings reconciled and bounded delta verified. Source unchanged. |
-| CONT-BOUND-T2 — resolve spec-affecting questions and draft specification | Complete locally; owner specification review pending | ONE bounded packet for Q-REPRESENTATION/Q-ROLLOUT: successor/accounting/recovery contract plus nonbreaking shared-neutral delivery for deferred adapters. [Preliminary transfer briefs](notes/bounded-continuation-transfer-briefs.md). Owner answered «Разрешить один пакет по обоим вопросам» to the named structured question; [authorized brief](notes/bounded-continuation-decision/brief.md). [Packet, evaluation and proposed drafting choice](notes/bounded-continuation-decision/decision.md) are complete; [draft specification](specs/bounded-continuation.md) and transfer instructions passed independent source/document review after the exact release-consumer scope correction; [final delta](notes/bounded-continuation-spec-review-delta.md). Proposed schema3/native5.0/neutral4.1 and coordinated compatibility hold are for owner review only. No implementation or integration is authorized. |
+| CONT-BOUND-T2 — resolve spec-affecting questions and draft specification | Complete; owner approved2026-11-04 | ONE authorized Q-REPRESENTATION/Q-ROLLOUT packet, preserved originals/HOLD/evaluation and root A choice; [approved specification](specs/bounded-continuation.md) passed original independent document review. Later authentic approval and lighter procedure supersede its preparation-only stage; implementation/result is recorded below. |
+
+### Implementation approval — 2026-11-04
+
+Owner approved the exact specification and then the lighter procedure: short plan, root Codex implementation, checks and one independent review. Merge/installation remain separate; sibling code belongs to other agents. Earlier pending statements above are historical preparation receipts.
+
+| Task | State | Finish / next action |
+|---|---|---|
+| CONT-BOUND-T3 — Codex candidate | Checked locally | [Result](notes/bounded-continuation-result.md): schema3/helper/callers/rules, full Codex200 passed, root614+2 known held/baseline failures, maps and real CLI/native proofs. |
+| CONT-BOUND-T4 — independent review and owner result | Review complete; owner result pending | Same reviewer closed F1–F6; [final judgment](notes/bounded-continuation-review-final.md). Shared rollout/merge/install held for exact external compatibility and combined validation; no overall acceptance claimed. |
 
 ## RECON-DEC — reviewed RECON forks and owner-authorized brainstorm
 

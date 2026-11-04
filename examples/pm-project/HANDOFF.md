@@ -1,3 +1,23 @@
+# Current: CONT-BOUND Codex checked locally; rollout held
+
+Owner approved the specification and lighter procedure on 2026-11-04: short plan, root implementation/checks, one independent cumulative reviewer. Codex source5.0 / neutral4.1 / schema3 is complete and checked in codex/continuation-recon. [Result and evidence](notes/bounded-continuation-result.md), [final independent judgment](notes/bounded-continuation-review-final.md), [short plan](plans/bounded-continuation.md), [actual owner approval](specs/bounded-continuation.md#owner-implementation-and-procedure-decision--2026-11-04).
+
+## Verified result and next action
+
+All F1–F6 are closed by the same independent reviewer; original BUG_REPORT/delta remain preserved. Exact Git-free check-05/exposed commands: Codex200 passed; root614 passed / same2 failed, zero skipped. Both maps build with silent streams; substantive source/location associations431 root /263 Codex. Real3.2+parent import retains aggregate4/native0; actual owned native worker follows persisted/readback5/5 before marker-only dispatch, canonical closure and exhaustion refusal. Actual archived4.0 native terminal uses remaining allowance1/4 without new grant or worker dispatch. Unknown host USD remains null. No Jeni/product execution.
+
+Next: owner considers the concrete isolated result. [Updated Claude/DSH agent instructions](notes/bounded-continuation-transfer-briefs.md) name actual helper/caller/contracts and ordinary compatibility first. Shared main integration is held until their separately authorized accepted compatibility contributions, the independently reproduced out-of-scope baseline test_recon_decision_checkpoint.py markup defect and exact combined common/sibling/native checks are resolved. These two known root failures are retained, never skipped/PASS. Merge, push, installation/profile changes and Jeni continuation are not authorized here. No automatic full-flow role sequence is needed to repeat this completed task.
+
+## Storage and continuation
+
+Only root wrote repository source; native inert worker/reviewer writes stayed within named owned temporary grants, with status/hash checks and behavioral (not hard sandbox) limits. Scope includes the disclosed exact norm-count selectors test_format/test_report1250→1254, independently accepted as a consequence of the four approved additions; no unrelated test algorithms or sibling package bytes changed. Canonical main stays clean; local branch commit is authorized under REPO-103.
+
+Complete private source/maps/streams/probes/original reviews are in ignored `.methodology/continuations/cont-bound-implementation/evidence/` archives and index. Preserve them before worktree archive. Exact earlier raw brief/completeness report remain under ignored cont-bound-docs. Public reviews are labeled local-path projections with original hashes. Full private deny-list publication proof remains unavailable; no release/publish action is claimed.
+
+## Historical preparation handoff
+
+The following is dated preparation history. Its pending-approval and future full-flow directions are superseded by the authentic owner approval and lighter procedure above; retain original reasoning, traps and prior unrelated project obligations.
+
 # Current: CONT-BOUND specification checked; owner review pending
 
 ## Owner decisions

@@ -4,7 +4,7 @@
 
 A harness-neutral methodology for managing projects and delivering software with AI agents. Shared rules live in Markdown; native adaptations bring them to Codex and Claude Code.
 
-Version: `4.0.0` · License: [MIT](LICENSE)
+Version: `4.1.0` · License: [MIT](LICENSE)
 
 **Installing for personal use in Codex? Install the `methodology-codex` plugin.** Start with the [new-machine installation steps](implementations/codex/README.md#personal-plugin-installation). Cloning this repository alone does not install it.
 
@@ -173,7 +173,7 @@ Run each package's Doxygen map from its own directory when applicable. Commands 
 
 ## Scope and evidence
 
-The current source contains **69 drafts and 2 stubs**. Native packages are versioned separately: Codex **4.0.0**, Claude **3.0.0**, over neutral **4.0.0**.
+The current source contains **69 drafts and 2 stubs**. Native packages are versioned separately: Codex **5.0.0**, Claude **3.0.0** (compatibility pending), over neutral **4.1.0**.
 
 Current limitations include deferred native Claude behavioral acceptance, broader consumer/autonomy proof and systematic comparative evaluation. The unaccepted safeguard work is outside the integrated source. Installation and source-test results do not establish whole-methodology effectiveness. [Current maintainer state](examples/pm-project/HANDOFF.md) · [Acceptance and test evidence](tests/test_guide.md)
 
@@ -225,3 +225,5 @@ The packages read neutral owners and package files from disk. Claude loads the c
 5. Before switching a user-level configuration to a package, save the previous configuration and the links it replaces, so the switch can be undone in one step.
 
 </details>
+
+Codex continuation candidate: native5.0.0 / neutral4.1.0, schema3, unchanged role wire2.0/default4. Shared integration is held until separately accepted Claude/DSH ordinary-operation compatibility; branch source is not installed delivery.

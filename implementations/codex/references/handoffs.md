@@ -1,4 +1,4 @@
-# Canonical native handoffs — schema2 carrier
+# Canonical native handoffs — schema3 persistence / wire2.0
 
 Read full current `protocols/role-returns.md`, `flow/phases.md`, `flow/run-state.md` and this runtime before dispatch/acceptance. These owners define the unmodified canonical return fields, statuses and conditional payloads; this document declares only package-local transport context. No copied reduced schema, ordinal scan map, new RETRY role status or worker control fields are accepted.
 
@@ -57,9 +57,9 @@ python3 FRAMEWORK_ROOT/skills/feature-dev/scripts/run_state.py show --state STAT
 python3 FRAMEWORK_ROOT/skills/feature-dev/scripts/run_state.py record --state STATE --result VERIFIED_PHASE_JSON
 ```
 
-Resolve placeholders to actual authorized paths before execution; proposals are NOT_RUN. State `.methodology/runs/RUN_ID/state.json`, schema2. show validates current locks/resume without writes. Success0 JSON stdout, refusal2 with safe diagnostics stderr; record may retain refusal chronology while accepted progress/counters stay unchanged. No unreadable ledger replacement. Debug cap plain nonnegative int/strict decimal CLI default4, zero valid, bool/negative/fraction/unsupported extension refuse. Root persists spend before each Code/QA/Review-origin entry, retained once on failure/resume. Retry units separate; terminal/schema1/stale/malformed/unsafe artifacts refuse, never reset. The helper cannot authenticate an arbitrary approval string or judge mental reading/isolation; actual parent evidence remains required.
+Resolve placeholders to actual authorized paths before execution; proposals are NOT_RUN. Canonical state `.methodology/lineages/CAUSAL_ID/state.json`, schema3. show validates current locks/resume without writes. Success0 JSON stdout, refusal2 with safe diagnostics stderr; record refuses without rewriting historical or closed artifacts; accepted progress/counters stay unchanged. No unreadable ledger replacement. Debug cap plain nonnegative int/strict decimal CLI default4, zero valid, bool/negative/fraction/ungranted extension refuse. Root persists spend before each Code/QA/Review-origin entry, retained once on failure/resume. Retry units separate; terminal/schema1/stale/malformed/unsafe artifacts refuse, never reset. The helper cannot authenticate an arbitrary approval string or judge mental reading/isolation; actual parent evidence remains required.
 
-Source release is package4.0.0 over neutral4.0.0; contractVersion remains methodology-codex/2.0.0 and schema2. Source release and wire identity are separate; old input locks are not migrated.
+Source candidate is package5.0.0 over neutral4.1.0; contractVersion remains methodology-codex/2.0.0, persistent schema3. Source release and wire identity are separate; old input locks are not migrated.
 
 ## Historical C2 consumer route (retained scope)
 
@@ -69,4 +69,8 @@ Source2.2 adds the opt-in methodology-consumer-pm/1.0.0 carrier at references/co
 
 At the consequential-open trigger load full `prompting/brainstorm.md` through the current adapter binding. The authorized root coordinates its independent packet using the actual native collaboration mechanism; inner roles request it. Carry existing evidence references in the brief/plan/DEC/task, never a new canonical field or phase. Missing required proof holds dependent readiness; preserve reasoned routine/settled/forced exclusions and actual actor/source limits.
 
-Current M30 binding: neutral2.0.0/source2.4.0; wire2.0/schema2 and C2 consumer mechanisms remain unchanged. The historical C2 paragraph above describes its accepted1.1/2.2 release, not current version acceptance. Consequential decisions load the current full brainstorm owner.
+Historical M30 binding: neutral2.0.0/source2.4.0; wire2.0/schema2 and C2 consumer mechanisms remain unchanged. The historical C2 paragraph above describes its accepted1.1/2.2 release, not current version acceptance. Consequential decisions load the current full brainstorm owner.
+
+## Bounded continuation (Codex5.0 / schema3)
+
+New operations use the enrolled schema3 lineage authority and immutable closed artifacts. Read the complete schema3 continuation and pre-dispatch control section in codex-runtime.md before execution; older schema2/no-extension descriptions in this document describe the historical profile and are superseded for Codex5 operations. Native role wire/default allowance remain unchanged. Shared-neutral rollout requires separate Claude/DSH compatibility; no installed snapshot is changed by this source candidate.

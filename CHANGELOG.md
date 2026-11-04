@@ -214,3 +214,7 @@ Complete the neutral LDD and testing/Anti-Loop/test-guide bodies beside the thre
 ## 0.12.0
 
 Complete code/exoskeleton.md, code/navigation.md and code/doxygen.md as substantive neutral core bodies. Preserve rich contract content, invoked rich versus donor logical-step encoding, edit locality, optional comment/AST migration safety, provenance-aware read-only navigation and mandatory actual XML/source association. Qualify only connected false completion disclosures and finite support catalogs. Add bounded full-file/behavior/map controls and adjacent guide; remaining F3 LDD/tests/AX/data/lints and F4/F5/F8 bodies and runtime engines retain their homes. Added norms use MINOR; existing authority and substantive forces are preserved, with no harness adoption or integration claim.
+
+## 4.1.0 — bounded continuation candidate
+
+Add PREFLIGHT-204, PLAN-405, TST-1003 and LIFE-108 without rewriting existing duties. Codex5.0.0 introduces schema3 causal authority, immutable historical import, bounded continuation/grants and reserved-entry recovery; role wire2.0/default4 remain. Shared integration is held for separately accepted Claude/DSH ordinary compatibility. No installation is part of this source change.

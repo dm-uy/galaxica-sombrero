@@ -193,6 +193,7 @@ For a real-entrypoint scenario, make the guide's existing ownership and preparat
 ## Discriminating values and call boundaries
 
 - **TST-1002** MUST: Use inputs that distinguish the claimed property: for summation choose multiple values whose sum differs from first, last and maximum. When a call/lifecycle boundary is the property, preserve actual arguments, order and cleanup observations at call time, even for constructed but abandoned streams. This testing lesson grants no scheduler, worker, cost-engine or port implementation authority.
+- **TST-1003** MUST: For resource lifecycles and observations claiming completeness, select applicable early-consumer-exit, partial/malformed/mismatched-result, timeout and unconditional-cleanup controls. Justify false triggers and observe actual resource/response outcomes at the relevant boundary. Preserve direct-logic and actual-boundary requirements; this adds neither a universal every-case matrix nor another scan.
 
 <!-- anchor: code.tests.worker-lineage -->
 

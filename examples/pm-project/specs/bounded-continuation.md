@@ -1,17 +1,17 @@
 ---
 type: Specification
 title: Bounded terminal continuation and earlier verification
-status: draft
+status: approved
 input_recon: ../notes/RECON_2026-11-03_bounded-continuation.md
 baseline: 388c94495d86a771da6fa5e8514249976dc8c8a1
-approval: pending; preparation and named decision packet only
+approval: owner chat 2026-11-04; Codex implementation; lighter procedure; merge and installation separate
 ---
 
 # Bounded terminal continuation and earlier verification
 
 <!-- $START_CHANGE_SPEC -->
 PURPOSE: Support bounded history-preserving Codex continuation and prevent late discovery of unsupported execution paths.
-SCOPE: A+B as one bounded Codex change; В–Д as existing-rule clarifications with explicit deferred-adapter compatibility. No implementation grant.
+SCOPE: A+B as one bounded Codex change; В–Д as existing-rule clarifications with explicit deferred-adapter compatibility. Owner approved Codex implementation on 2026-11-04; merge and installation separate.
 KEYWORDS: continuation, cumulative budget, historical import, preflight, risky premise, failure transitions, product progress
 <!-- $START_DOCUMENT_PLAN -->
 $DOCUMENT_PLAN
@@ -273,3 +273,11 @@ REQUIRES: GOAL_CONT
 <!-- $END_SECTION_VALIDATION -->
 
 <!-- $END_CHANGE_SPEC -->
+
+## Owner implementation and procedure decision — 2026-11-04
+
+Owner: «Хорошо, спецификацию утверждаю. Запускай реализацию для Codex. Claude и DSH оставляем другим агентам по подготовленным инструкциям; слияние и установку согласуем после проверки результата.»
+
+Procedure amendment: «Да, делаем облегчённым порядком: короткий план, реализация Codex по утверждённой спеке, проверки и одно независимое ревью. Слияние и установку согласуем по результату.»
+
+This authentic approval supersedes draft/pending-authority statements above and the separate-role procedural requirements for this task only. Root writes a short technical plan, implements and checks the bounded Codex candidate; one independent cumulative review covers code and evidence, with findings fixed. No synthetic full feature-dev run or separate Architect/QA/Finalize actors are required. Behavioral acceptance requirements, immutable history, external compatibility dependency and separate integration/installation decisions remain. Earlier preparation/review receipts remain historical.

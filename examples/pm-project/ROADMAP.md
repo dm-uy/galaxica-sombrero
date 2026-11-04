@@ -1,12 +1,15 @@
 # Methodology project route
 
-## Current: CONT-BOUND specification checked locally; owner review pending
+## Current: CONT-BOUND Codex checked; shared rollout held
+
+Codex implementation/checks and the same single independent review are complete locally: [result](notes/bounded-continuation-result.md), [final judgment](notes/bounded-continuation-review-final.md). Owner result is pending. Shared rollout/merge/install are held for separate Claude/DSH ordinary compatibility, retained baseline markup correction and exact combined common/sibling/native validation. The approved lighter procedure remains controlling; no synthetic full-flow actors are required. Earlier preparation history follows.
 
 Owner-selected on 2026-11-03: recon before the specification for A+B (bounded history-preserving continuation and early capability checks), with V–D as clarifications of existing rules. [RECON](notes/RECON_2026-11-03_bounded-continuation.md), [tasks](TASKS.md#cont-bound--bounded-continuation-and-earlier-verification). Recon and independent completeness/delta checks are complete locally. Owner settled Codex executable scope with separate Claude/DSH transfer instructions. Owner authorized ONE Q-REPRESENTATION/Q-ROLLOUT packet through the matching structured answer; [brief and grant](notes/bounded-continuation-decision/brief.md). Independent generation/HOLD/evaluation and root proposed A choice are complete; the [draft specification](specs/bounded-continuation.md) passed independent document/source review and bounded delta; owner review remains pending, with implementation excluded. No implementation, Jeni continuation, migration or release is authorized.
 
 ```mermaid
 flowchart LR
-  CB1["CONT-BOUND-T1 checked: measured recon and completeness"] --> CB2["CONT-BOUND-T2 checked: draft spec awaits owner review"]
+  CB1["CONT-BOUND-T1 checked: measured recon and completeness"] --> CB2["CONT-BOUND-T2 approved specification"] --> CB3["CONT-BOUND-T3/T4 checked: Codex + same independent review"]
+  CB3 --> CB4["HELD: external compatibility + baseline correction + combined validation"] --> CB5["Separate owner integration / installation decision"]
 ```
 
 ## Previous: RECON-DEC integrated locally and installed
