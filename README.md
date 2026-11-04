@@ -173,7 +173,7 @@ Run each package's Doxygen map from its own directory when applicable. Commands 
 
 ## Scope and evidence
 
-The current source contains **69 drafts and 2 stubs**. Native packages are versioned separately: Codex **5.0.0** and Claude **3.1.0** over neutral **4.1.0**; DSH **4.0.0** compatibility is pending.
+The current source contains **69 drafts and 2 stubs**. Native packages are versioned separately: Codex **5.0.0** and Claude **3.1.0** over neutral **4.1.0**; DSH **5.0.0** is compatible with the same neutral contract.
 
 Current limitations include deferred native Claude behavioral acceptance, broader consumer/autonomy proof and systematic comparative evaluation. The unaccepted safeguard work is outside the integrated source. Installation and source-test results do not establish whole-methodology effectiveness. [Current maintainer state](examples/pm-project/HANDOFF.md) · [Acceptance and test evidence](tests/test_guide.md)
 
@@ -226,4 +226,4 @@ The packages read neutral owners and package files from disk. Claude loads the c
 
 </details>
 
-Codex continuation candidate: native5.0.0 / neutral4.1.0, schema3, unchanged role wire2.0/default4. Shared integration is held until separately accepted Claude/DSH ordinary-operation compatibility; branch source is not installed delivery.
+Bounded continuation is integrated: Codex5.0.0 and DSH5.0.0 use schema3 over neutral4.1.0, with unchanged role wire2.0/default4; Claude3.1.0 supplies ordinary-operation compatibility on schema2. [Integration and checks](examples/pm-project/notes/bounded-continuation-integration.md). Source integration and installed activation are distinct.
