@@ -8,7 +8,7 @@ Owner, 2026-11-04: «надо доработать наш плагин с мет
 
 The owner was told before starting that the base defect in `tests/test_recon_decision_checkpoint.py` would be fixed here unless they objected. That file is outside the Codex specification's MAY EDIT list, which governed that task. Only its module contract changed. The Claude selectors in `tests/test_claude_package.py` and `tests/test_c1_review_and_routing.py` are conditional in that specification on an accepted receipt for the exact source, so they can reach main only with the owner's acceptance.
 
-Owner, 2026-11-04, asked whether to correct the stale Codex version stamps on this branch or leave them to a Codex agent: «Да, поправь здесь». This covers stale release, schema, member-count and path statements in the Codex package and the guard against their return. Codex carrier wording stays with its owner, and no executable Codex line changes.
+Owner, 2026-11-04, asked whether to correct the stale Codex version stamps on this branch or leave them to a Codex agent: «Да, поправь здесь». This covers stale release, schema, member-count and path statements in the Codex package and the guard against their return. Codex carrier wording stays with its owner. No shipped Codex helper or script changes; one Codex test gains the guard.
 
 ## Identities
 
@@ -18,7 +18,7 @@ Owner, 2026-11-04, asked whether to correct the stale Codex version stamps on th
 | Claude package | 3.0.0 → 3.1.0: MINOR, as FMT-24 and the precedent of 3.1.0/2.2.0 and 3.2.0/2.3.0 give for additive neutral releases |
 | Run-state contract and schema | `methodology-claude/1.0.0`, schema 2, unchanged |
 | Default Debug cap | 4, zero valid, unchanged |
-| Codex and DSH | Codex stays 5.0.0, stale statements only; DSH 4.0.0, zero bytes changed |
+| Codex and DSH | Codex stays 5.0.0: stale statements and one test, no shipped helper or script change; DSH 4.0.0, zero bytes changed |
 
 ## Touched paths
 
@@ -46,7 +46,7 @@ The table is from a Git-free `git archive` of that commit with Python 3.12, expo
 | Root suite | 616 passed |
 | Codex package suite | 201 passed |
 | DSH package suite | 83 failed, 63 passed; held, see below |
-| `bin/conform adapter` | Claude and Codex pass 76, fail 0; DSH, on `e5d292d`, pass 75, warn 1 (adapter targets 4.0.0), fail 0 |
+| `bin/conform adapter` | Claude and Codex pass 76, fail 0; DSH, on `eba2905` with no DSH or neutral delta since, pass 75, warn 1 (adapter targets 4.0.0), fail 0 |
 | `doxygen Doxyfile`, root, Claude and Codex | exit 0, empty stdout and stderr |
 
 **Why replacing the version alone was not enough.** On a scratch copy of `a3ecb5c`, replacing `4.0.0` with `4.1.0` throughout the Claude package, including its tests and stamps, took the package suite from 167 failed to 545 passed and bound the hook, with none of the four duties carried. The suite could not see them. `test_additive_duties_reach_their_carriers` now catches removal of each listed statement or a change inside it, across 43 controls. It is a finite recognizer, not a prose solver. The root AST guard, already red at the adapter version, then refused at `wrong release comparison`, which is why its selectors moved and its pins did not.
@@ -63,7 +63,7 @@ The Codex 5.0 candidate raised its constants and left free-text identity behind:
 
 Replacing the number alone would have been wrong: "Wire methodology-codex/2.0.0/schema2 remains unchanged" became "Wire methodology-codex/2.0.0 remains unchanged; persistence is schema3", because at Codex 4.0 the wire was the same and the schema was 2. The bridge pin moved to `fd0e0dde…` with a dated reason, as its module requires.
 
-The cause is free-text stamps no test reads, so each package suite gains `test_release_stamps_match_package_identity`: 19 statements in eight Codex carriers plus the adapter row with 38 controls, and eight Claude statements with 12 controls. The Codex guard failed on the old bytes, naming five statements, before the correction. Blinding either predicate fails its test. Both are finite recognizers: they detect a lost statement, not a contrary sentence added beside it, and cannot prove other text current. The Claude stamps were already correct; two helper comments and one hook comment there were not, and they are fixed.
+The cause is free-text identity outside any check: in Codex no test read these stamps, and in Claude a consumer-profile test read only three version stamps, not the neutral tokens or five other carriers. So each package suite gains `test_release_stamps_match_package_identity`: 19 statements in eight Codex carriers plus the adapter row with 38 controls, and eight Claude statements with 12 controls. The Codex guard failed on the old bytes, naming five statements, before the correction. Blinding either predicate fails its test. Both are finite recognizers: they detect a lost statement, not a contrary sentence added beside it, and cannot prove other text current. The Claude stamps were already correct; two helper comments and one hook comment there were not, and they are fixed.
 
 ### Other evidence
 
@@ -120,7 +120,9 @@ Round 1 on `fbf0fd0`, CHANGES REQUESTED, dispositioned in `3a5ae50`:
 | N2 Guards covered three carriers, and a stale runtime heading stayed green | Eight carriers per package; wire read from the helper; limit stated in the guides |
 | N3, N4, N5 Comment, contract details, smoke-spec path and count | Corrected |
 
-Round 2 on `3a5ae50`, APPROVED with two low findings, F1 a stale manifest label and F2 stale smoke-spec counts, applied in `985795b` with the note N-d. These last corrections were not returned to the reviewer; the guard covers F1. N-a is left: controls read only literal `{field}` placeholders, and no stamp uses a conversion.
+Round 2 on `3a5ae50`, APPROVED with two low findings, F1 a stale manifest label and F2 stale smoke-spec counts, applied in `985795b` with the note N-d. The pin reason's two checks were still pending when `fbf0fd0` was committed; this review and the 548 passed on the later commits make both true. Two notes are left: N-a, controls read only literal `{field}` placeholders and no stamp uses a conversion; and N-c, listed under findings for the Codex owner.
+
+Round 3 on `a47bf6a`, a narrow check of these corrections and of this record's figures, line references and links against their logs. It confirmed the suite, adapter, map, scope, AST and count claims and that the guard names the F1 label. Its five low wording remarks are applied in the closing record commit without a further round.
 
 ## Known failures and unsupported routes
 
@@ -131,8 +133,8 @@ Round 2 on `3a5ae50`, APPROVED with two low findings, F1 a stale manifest label 
 
 ## Findings for other owners
 
-- **DSH agent.** The cause of the stale Codex stamps, free-text identity no test reads, was present in both packages checked here. DSH was not inspected; its packet should measure its own stamps and add the same guard.
-- **Codex owner.** `references/source-disposition.md` counts seven helpers but has no row for `continuation.py`, a gap from the Codex candidate.
+- **DSH agent.** The cause of the stale Codex stamps, free-text identity outside any check, was present in both packages checked here, in Claude only partly. DSH was not inspected; its packet should measure its own stamps and add the same guard.
+- **Codex owner.** `references/source-disposition.md` counts seven helpers but has no row for `continuation.py`, a gap from the Codex candidate. `examples/smoke-spec.md` lists the lineages path among its generated effects but not `.methodology/admissions/<digest>.json`, which `init` also writes under the same excluded `.methodology` tree.
 - **Codex owner, wording.** The Codex carriers narrow the same norms that were corrected here: PLAN-405 to missing authority, TST-1003 without timeout and partial or mismatched results, and PM's PREFLIGHT-204 trigger.
 - **Neutral, later release.** The transfer note says: "Do not port a Codex historical ledger into another engine without its own measured approved bridge". No neutral owner carries this. As a process rule it belongs in `flow/run-state.md` so DSH is bound too. It was left out of the Claude carriers, which state only what the helper accepts.
 - **Neutral, later release.** STATE-301 and STATE-303 do not list a repair made by a successor's Code in the counted Debug unit. This package counts it as its conservative reading of STATE-702 and STATE-305, following the Codex specification. `flow/run-state.md` should decide this for every package.

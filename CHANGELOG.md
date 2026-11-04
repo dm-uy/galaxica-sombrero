@@ -221,4 +221,4 @@ Add PREFLIGHT-204, PLAN-405, TST-1003 and LIFE-108 without rewriting existing du
 
 Claude3.1.0 adds ordinary compatibility with neutral4.1.0: exact release constants, the four duties in its carriers and an honest statement of its helper's limits. Its helper algorithms, schema2, role wire and default4 are unchanged, and it gains no continuation route. DSH compatibility remains pending.
 
-The Codex5.0.0 candidate's stale free-text identity is corrected with no executable change, and the Codex and Claude suites now compare their release stamps with the actual package identity.
+The Codex5.0.0 candidate's stale free-text identity is corrected with no shipped helper or script change, and the Codex and Claude suites now compare their release stamps with the actual package identity.
