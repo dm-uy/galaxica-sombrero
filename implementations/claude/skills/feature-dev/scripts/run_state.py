@@ -8,7 +8,7 @@
 ## @links_to_spec M22 specification section 2 Mechanics; requirements BR-3 and BR-4; flow/run-state.md STATE-102 and STATE-501; code/tests.md TST-501
 ## @invariants
 ## - Current neutral role/phase/scan/gate owners remain controlling; structural checks never prove human authority or role independence.
-## - The package identity is methodology-claude 1.1.0 with the colocated-in-place profile and the run contract methodology-claude/1.0.0; the state contract is schema2 and matches the sibling package helper except that the candidate record carries one added key, exclusion_mode, which candidate comparison ignores.
+## - The package identity is PACKAGE_NAME at PACKAGE_VERSION with the colocated-in-place profile and the run contract methodology-claude/1.0.0; the state contract is schema2 and matches the sibling package helper except that the candidate record carries one added key, exclusion_mode, which candidate comparison ignores.
 ## - The package member count is whatever the declared layout lists and must equal the actual package inventory; no literal count is trusted.
 ## - Debug allowance is a nonnegative plain integer, zero is valid, the default is four, and an adapter extension above four is BLOCKED.
 ## - For a target that is the top level of its own git work tree the candidate is tracked plus untracked non-ignored content (STATE-102) minus the generated directory names: what git reports as ignored is excluded, and an ignored directory is skipped wholesale, with no descent and no link refusal inside it.

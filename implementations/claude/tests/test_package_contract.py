@@ -24,7 +24,7 @@
 ## Q: Why a line parser for frontmatter instead of PyYAML?
 ## A: The package is stdlib-only; carrier and skill frontmatter is deliberately flat, and the parser refuses nesting.
 ## @changes
-## LAST_CHANGE: [3.1.0 - CONT-BOUND ordinary compatibility: the four neutral 4.1.0 duties must reach their carriers and the capability claim must match the shipped helper; Claude 3.1.0 identity. Earlier: 2.4.0 - PM-INVOKE: no skill may carry the disable-model-invocation key in any spelling, each lifecycle command must state that its invocation is never consent; Claude 2.4.0 identity; earlier 2.1.0 - M37 Claude 2.1.0 identity and membership 64 with 7 helpers; earlier 2.0.0 - M30 exact current release/census coupling; all prior cases/assertions/refusals retained.]
+## LAST_CHANGE: [3.1.0 - CONT-BOUND ordinary compatibility: the four neutral 4.1.0 duties must reach their carriers and the capability claim must match the shipped helper; free-text release stamps must equal the package identity; Claude 3.1.0 identity. Earlier: 2.4.0 - PM-INVOKE: no skill may carry the disable-model-invocation key in any spelling, each lifecycle command must state that its invocation is never consent; Claude 2.4.0 identity; earlier 2.1.0 - M37 Claude 2.1.0 identity and membership 64 with 7 helpers; earlier 2.0.0 - M30 exact current release/census coupling; all prior cases/assertions/refusals retained.]
 ## Earlier: [2.0.0 - Initial M22 package contract oracle.]
 ## @modulemap
 ## FUNC 6[Read flat frontmatter and body of a Markdown carrier] => _frontmatter
@@ -39,12 +39,14 @@
 ## FUNC 7[List lost statements of the four additive duties and helper limits] => _carrier_problems
 ## FUNC 9[Additive duties reach their carriers; removal and inversion refused] => test_additive_duties_reach_their_carriers
 ## FUNC 9[Capability claim matches the shipped helper CLI] => test_capability_claim_matches_the_shipped_helper
+## FUNC 8[Stale free-text release stamps refused] => test_release_stamps_match_package_identity
 ## @usecases
 ## - [test_layout_matches_members]: QA → compare declared and real package members → missing or undeclared member refused
 ## - [test_agent_carriers]: QA → check each role's model and tools → a judge with Edit or a delegating role refused
 ## - [test_skill_entries]: QA → resolve every owner reference → a broken neutral pointer refused
 ## - [test_additive_duties_reach_their_carriers]: QA → remove or invert a listed statement in memory → the change refused although every other test stays green
 ## - [test_capability_claim_matches_the_shipped_helper]: QA → run the real helper CLI → an undeclared operation or a foreign ledger refused
+## - [test_release_stamps_match_package_identity]: Release author → bump the package and miss a free-text stamp → the stale statement named
 ## @GREP_SUMMARY package contract, layout, adapter coverage, agents frontmatter, skills, CLAUDE_PLUGIN_ROOT, hooks, workflow, oracle
 ## @STRUCTURE ▶ package+neutral roots → ◇ layout ≡ members → ◇ adapter ≡ registries → ○ agents ∋ model/tools/owners → ○ skills ∋ frontmatter/owners → ◇ hooks/workflow → ⎋ assertions
 def _module_contract():
@@ -343,6 +345,12 @@ INVERSIONS = (
 )
 REFUSED_OPERATIONS = ("capabilities", "continue", "reserve", "released", "recover", "episode")
 WORKFLOW_ARGS = "const KNOWN_ARGS = ['spec', 'target', 'plan', 'approval', 'runId', 'framework', 'scratch', 'maxDebug', 'dialogLang', 'recordState']"
+# Free-text release stamps no other check reads. Their expected text is built from the layout and adapter identity.
+STAMPS = {
+    "skills/semantic-exoskeleton/SKILL.md": "METHODOLOGY_VERSION: {neutral}. Package binding: methodology-claude {version}, run-state contract methodology-claude/1.0.0, schema 2, colocated-in-place.",
+    "skills/devplan-protocol/SKILL.md": "Stamp the neutral METHODOLOGY_VERSION ({neutral}) and the identities in play: package methodology-claude {version},",
+    "references/consumer-pm-profile.md": "# Consumer PM profile for Claude Code — methodology-claude {version}\n",
+}
 
 
 # region FUNC__carrier_problems [DOMAIN(9): AdditiveDuties; CONCEPT(9): CarrierCoverage; TECH(5): str]
@@ -450,3 +458,32 @@ def test_capability_claim_matches_the_shipped_helper(tmp_path, caplog):
     assert not [record for record in caplog.records if record.levelno >= logging.ERROR]
     # END_BLOCK_Result
 # endregion FUNC_test_capability_claim_matches_the_shipped_helper
+
+
+# region FUNC_test_release_stamps_match_package_identity [DOMAIN(8): ClaudePackage; CONCEPT(9): Identity, Verification; TECH(7): Python, pytest]
+## @purpose Refuse a stale free-text release stamp that every other package check leaves green.
+## @uses _show, json.loads
+## @io caplog -> None after every STAMPS statement, built from the layout version and the adapter spec_version, is in its carrier and each carrier holding an older identity in memory loses it.
+##   Side effects: reads package files only. Guarantees: a finite exact recognizer under TST-1001; it never proves other text current. Raises: AssertionError naming the lost statement. System importance: 8.
+## @complexity 3
+def test_release_stamps_match_package_identity(caplog):
+    # START_BLOCK_Validation
+    caplog.set_level(logging.INFO, logger=LOGGER.name)
+    version = json.loads((PACKAGE / "references/package-layout.json").read_text(encoding="utf-8"))["version"]
+    neutral = json.loads((PACKAGE / "adapter.json").read_text(encoding="utf-8"))["spec_version"]
+    statements = {path: stamp.format(version=version, neutral=neutral) for path, stamp in STAMPS.items()}
+    texts = {path: (PACKAGE / path).read_text(encoding="utf-8") for path in STAMPS}
+    # END_BLOCK_Validation
+    # START_BLOCK_BusinessLogic
+    lost = sorted(path + ": " + statement.strip() for path, statement in statements.items() if statement not in texts[path])
+    undetected = sorted(path for path, statement in statements.items()
+                        if statement in texts[path].replace(version, "0.0.0").replace(neutral, "0.0.0"))
+    LOGGER.info("[IMP:9][test_release_stamps_match_package_identity][COMPARE] stamps=%d lost=%d undetected=%d", len(statements), len(lost), len(undetected))
+    _show(caplog.records)
+    # END_BLOCK_BusinessLogic
+    # START_BLOCK_Result
+    assert lost == []
+    assert undetected == []
+    assert not [record for record in caplog.records if record.levelno >= logging.ERROR]
+    # END_BLOCK_Result
+# endregion FUNC_test_release_stamps_match_package_identity

@@ -4,7 +4,7 @@
 ## @scope Exact27entry/sixrole/75member/71owner/28capability/sevenparameter structural coverage; full independent SOURCE and native smoke remain required.
 ## @input Explicit owned source/target paths and current canonical records; pytest fixtures supply owned temporary paths for tests. No credentials or provider state.
 ## @output Importable declared functions, actual CLI answer/diagnostic/exit where applicable, and meaningful test outcomes with actual trace. No fabricated native acceptance.
-## @links [USES_API(8): pathlib.Path; USES_API(8): logging; READS_DATA_FROM(9): explicit path inputs; no environment secrets]
+## @links [USES_API(8): pathlib.Path; USES_API(8): logging; USES_API(8): continuation.capabilities; READS_DATA_FROM(9): explicit path inputs; no environment secrets]
 ## @invariants
 ## - Current neutral role/phase/scan/gate owners remain controlling; structural checks never prove human authority or role independence.
 ## - Test fixtures are isolated, deterministic and order-independent; real package sources remain read-only.
@@ -15,15 +15,19 @@
 ## Q: Why preserve unavailable/unsupported limits?
 ## A: Same-author fixtures and bounded recognizers cannot replace independent source meaning, current maps or actual native smoke.
 ## @changes
-## LAST_CHANGE: [2.0.0 - M30 exact current release/census coupling; all prior cases/assertions/refusals retained.]
+## LAST_CHANGE: [5.0.0 - CONT-BOUND stale-stamp repair: free-text release stamps must equal the actual identity; all prior cases/assertions/refusals retained.]
+## Earlier: [2.0.0 - M30 exact current release/census coupling; all prior cases/assertions/refusals retained.]
 ## Earlier: [2.2.0 - Current bounded source package and permanent behavioral refusal controls.]
 ## @modulemap
 ## FUNC 2[Attach full module documentation with no runtime effects] => test_native_contract._module_contract
 ## FUNC 9[Verify shipped native contracts] => test_native_contract.test_shipped_native_contracts
 ## FUNC 9[Verify actual layout and adapter contract] => test_native_contract.test_actual_layout_and_adapter_contract
+## FUNC 7[List free-text release stamps that differ from the actual identity] => test_native_contract._stamp_problems
+## FUNC 9[Stale free-text release stamps refused] => test_native_contract.test_release_stamps_match_package_identity
 ## @usecases
 ## - Parent/test: inspect real current inputs -> accept scoped current outcome or refuse unsafe/malformed/stale input.
 ## - Independent judge: compare actual assertions/source/CLI receipts -> bounded evidence; native acceptance remains separately owned.
+## - Release author: bump the package and miss a free-text stamp -> test_release_stamps_match_package_identity names the stale statement.
 ## @GREP_SUMMARY native package, actual source identity, current canonical returns, owned fixtures,
 ##   real CLI streams, causal budget, refusal and no inferred consent
 ## @STRUCTURE ▶ explicit owned inputs → ◇ validate actual shape and identity → ○ bounded operation
@@ -37,8 +41,13 @@ import logging
 from pathlib import Path
 import re
 
+import continuation
+
 logger=logging.getLogger(__name__)
 PACKAGE=Path(__file__).resolve().parents[1]
+EXOSKELETON='skills/semantic-exoskeleton/SKILL.md'
+CONSUMER_PROFILE='references/consumer-pm-profile.md'
+ADOPTION='references/adoption.md'
 TOPICS={'pm-bootstrap','pm-plan-batch','pm-run-batch','pm-handoff','analyzer','ax-ui-contract','brainstorm','brownfield-spec-template','code-review','data-transform','devplan-protocol','document-protocol','durable-layer','feature-dev','graph-protocol','greenfield-bootstrap','hitl-gates','pm','prod-log-vacuum','prompting','prompting-agent-design','prompting-decompose','prompting-markup','prompting-verify','roadmap','semantic-exoskeleton','spec-recon'}
 
 
@@ -104,3 +113,52 @@ def test_actual_layout_and_adapter_contract(caplog):
     # END_BLOCK_BusinessLogic
 # endregion FUNC_test_actual_layout_and_adapter_contract
 
+
+# region FUNC__stamp_problems [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
+## @purpose List free-text release stamps that differ from the given actual identity.
+## @uses none
+## @io texts dict of package-relative path to text; mechanism str, the adapter run-state-persist row; version and neutral str; schema int. Returns the list of lost statements, empty when every stamp agrees. No side effects. A finite exact recognizer under TST-1001: it never proves other text current.
+## @complexity 3
+def _stamp_problems(texts,mechanism,version,neutral,schema):
+    # START_BLOCK_BusinessLogic
+    persist=f'Single root writer candidate run_state.py schema{schema} atomic UTF8 .methodology/lineages with complete accepted/refused history/current locks.'
+    expected={EXOSKELETON:(f'METHODOLOGY_VERSION: {neutral}\n',f'Package binding: methodology-codex{version}, schema{schema}, colocated-explicit-source.'),
+              CONSUMER_PROFILE:(f'source package{version} over neutral{neutral}.',f'Wire methodology-codex/2.0.0 remains unchanged; persistence is schema{schema}.'),
+              ADOPTION:(persist,)}
+    problems=[f'{path}: {statement.strip()}' for path,statements in expected.items() for statement in statements if statement not in texts[path]]
+    if mechanism!=persist:problems.append(f'adapter.json: {persist}')
+    return problems
+    # END_BLOCK_BusinessLogic
+# endregion FUNC__stamp_problems
+
+# region FUNC_test_release_stamps_match_package_identity [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
+## @purpose Refuse a stale free-text release stamp that every other package check leaves green.
+## @uses test_native_contract._stamp_problems, continuation.capabilities, json.loads
+## @io Input: caplog: pytest.LogCaptureFixture. Output: None after the helper's capabilities answer equals the layout and adapter identity, the actual carriers have no problem against that identity, and each of the eight stamp controls in memory is refused. Reads package files only. Raises AssertionError on any difference.
+## @complexity 4
+def test_release_stamps_match_package_identity(caplog):
+    # START_BLOCK_Validation
+    caplog.set_level(logging.INFO)
+    layout=json.loads((PACKAGE/'references/package-layout.json').read_text());adapter=json.loads((PACKAGE/'adapter.json').read_text())
+    answer=continuation.capabilities();version,neutral,schema=layout['version'],adapter['spec_version'],answer['schema']
+    assert (answer['version'],answer['neutral'])==(version,neutral)
+    mechanism=adapter['capabilities']['run-state-persist']['mechanism']
+    texts={path:(PACKAGE/path).read_text(encoding='utf-8') for path in (EXOSKELETON,CONSUMER_PROFILE,ADOPTION)}
+    # END_BLOCK_Validation
+    # START_BLOCK_BusinessLogic
+    real=_stamp_problems(texts,mechanism,version,neutral,schema)
+    logger.info('[IMP:9][test_release_stamps_match_package_identity][COMPARE] problems=%d',len(real))
+    print('Actual stamp problems:',real)
+    assert real==[]
+    controls=((EXOSKELETON,f'METHODOLOGY_VERSION: {neutral}','METHODOLOGY_VERSION: 0.0.0'),(EXOSKELETON,f'methodology-codex{version},','methodology-codex0.0.0,'),
+              (EXOSKELETON,f', schema{schema},',', schema0,'),(CONSUMER_PROFILE,f'package{version} over','package0.0.0 over'),(CONSUMER_PROFILE,f'over neutral{neutral}.','over neutral0.0.0.'),
+              (CONSUMER_PROFILE,f'persistence is schema{schema}.','persistence is schema0.'),(ADOPTION,f'run_state.py schema{schema} atomic','run_state.py schema0 atomic'))
+    undetected=[old for path,old,new in controls if old not in texts[path] or not _stamp_problems({**texts,path:texts[path].replace(old,new)},mechanism,version,neutral,schema)]
+    if not _stamp_problems(texts,mechanism.replace(f'schema{schema}','schema0'),version,neutral,schema):undetected.append('adapter mechanism')
+    logger.info('[IMP:9][test_release_stamps_match_package_identity][CONTROLS] controls=%d undetected=%d',len(controls)+1,len(undetected))
+    # END_BLOCK_BusinessLogic
+    # START_BLOCK_Result
+    assert undetected==[]
+    assert not any(r.levelno>=logging.ERROR for r in caplog.records)
+    # END_BLOCK_Result
+# endregion FUNC_test_release_stamps_match_package_identity
