@@ -2,7 +2,7 @@
 
 Owner-authorized compatibility analysis and integration completed2026-11-04. PR22 merged first, then PR21; exact remote main tree matched the checked combined candidate. Source identities: neutral4.1.0, Codex5.0.0/schema3, Claude3.1.0/schema2, DSH5.0.0/schema3. Combined root616/Codex201/Claude548/DSH202 all passed; all three adapters and four maps passed. One independent compatibility reviewer closed both premerge metadata/smoke-scope findings. [Integration receipt and limits](notes/bounded-continuation-integration.md).
 
-The seven-path postmerge documentary closure is local only: automatic review rejected an additional direct main push outside the two-PR grant. Remote/canonical main stay at PR21 merge `d37d884`; ask only for separate documentary delivery, never re-request the completed PR integrations.
+Owner explicitly authorized creating and merging a separate PR for this seven-path documentary closure on2026-11-04. The earlier direct-push rejection is retained in the integration receipt; it does not hold the newly authorized PR route. Preserve the completed PR21/PR22 integrations and the separate installation boundary.
 
 No installation/profile change in this task; the canonical in-place Claude source advances with main. Next action, if selected by the owner: separately scoped installed-snapshot update or one of the retained follow-ups. Codex admissions/disposition omissions are closed; carrier wording and other unimplemented follow-ups remain open. Preserve ignored evidence in all participating worktrees before archival.
 
