@@ -468,7 +468,7 @@ def test_capability_claim_matches_the_shipped_helper(tmp_path, caplog):
 
 # region FUNC__stamp_problems [DOMAIN(8): ClaudePackage; CONCEPT(9): Identity, Verification; TECH(7): Python, pytest]
 ## @purpose List the free-text release stamps lost from their carriers for one identity.
-## @uses test_package_contract.LOGGER
+## @uses logging.Logger.info
 ## @io texts dict of package-relative path to str; identity dict of version and neutral str. Output: sorted list of "path: statement" for every STAMPS statement absent from its carrier, empty when all agree.
 ##   Side effects: logs the count only. Guarantees: a finite exact recognizer under TST-1001; it detects a lost statement, not a contrary sentence beside it, and never proves other text current. System importance: 7.
 ##   Example: a runtime heading saying methodology-claude 3.0.0 under identity version 3.1.0 yields that carrier's statement.

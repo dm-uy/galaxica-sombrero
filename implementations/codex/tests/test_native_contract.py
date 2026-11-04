@@ -52,7 +52,7 @@ STAMPS={'README.md':('Native Codex implementation package{version} for neutral m
         'references/codex-runtime.md':('# Native Codex runtime — package{version}\n','with current neutral{neutral}.','Codex{version} uses neutral{neutral} and persistent schema{schema}; canonical role-return wire remains {wire}.'),
         'references/consumer-pm-profile.md':('source package{version} over neutral{neutral}.','Wire {wire} remains unchanged; persistence is schema{schema}.'),
         'references/handoffs.md':('Source candidate is package{version} over neutral{neutral}; contractVersion remains {wire}, persistent schema{schema}.',),
-        'references/source-disposition.md':('Current source{version} has{members} members,','current schema{schema} immutable inputs','current neutral{neutral}.','Layout contains all{members} exact paths/kinds'),
+        'references/source-disposition.md':('Current source{version} has{members} members,','current schema{schema} immutable inputs','current neutral{neutral}.','Layout contains all{members} exact paths/kinds','Same manifest, methodology-codex{version} generic interface'),
         'skills/feature-dev/SKILL.md':('Codex{version} uses neutral{neutral} and persistent schema{schema}; canonical role-return wire remains {wire}.',),
         'skills/semantic-exoskeleton/SKILL.md':('METHODOLOGY_VERSION: {neutral}\n','Package binding: methodology-codex{version}, schema{schema}, colocated-explicit-source.')}
 TOPICS={'pm-bootstrap','pm-plan-batch','pm-run-batch','pm-handoff','analyzer','ax-ui-contract','brainstorm','brownfield-spec-template','code-review','data-transform','devplan-protocol','document-protocol','durable-layer','feature-dev','graph-protocol','greenfield-bootstrap','hitl-gates','pm','prod-log-vacuum','prompting','prompting-agent-design','prompting-decompose','prompting-markup','prompting-verify','roadmap','semantic-exoskeleton','spec-recon'}
@@ -138,7 +138,7 @@ def _stamp_problems(texts,mechanism,identity):
 # region FUNC_test_release_stamps_match_package_identity [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Refuse a stale free-text release stamp that every other package check leaves green.
 ## @uses test_native_contract._stamp_problems, continuation.capabilities, json.loads
-## @io Input: caplog: pytest.LogCaptureFixture. Output: None after the helper's capabilities answer equals the layout and adapter identity, the actual carriers have no problem against that identity, and each of the 36 per-field stamp controls and the one adapter control is named by the same predicate. Reads package files only. Raises AssertionError on any difference. Example: restoring schema2 in the exoskeleton stamp names that statement.
+## @io Input: caplog: pytest.LogCaptureFixture. Output: None after the helper's capabilities answer equals the layout and adapter identity, the actual carriers have no problem against that identity, and each of the 37 per-field stamp controls and the one adapter control is named by the same predicate. Reads package files only. Raises AssertionError on any difference. Example: restoring schema2 in the exoskeleton stamp names that statement.
 ## @complexity 5
 def test_release_stamps_match_package_identity(caplog):
     # START_BLOCK_Validation
@@ -167,7 +167,7 @@ def test_release_stamps_match_package_identity(caplog):
     print('Undetected controls:',undetected)
     # END_BLOCK_BusinessLogic
     # START_BLOCK_Result
-    assert len(controls)==36
+    assert len(controls)==37
     assert undetected==[]
     assert not any(r.levelno>=logging.ERROR for r in caplog.records)
     # END_BLOCK_Result
