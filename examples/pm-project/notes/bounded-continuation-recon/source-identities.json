@@ -1,0 +1,166 @@
+{
+  "baseline": "388c94495d86a771da6fa5e8514249976dc8c8a1",
+  "meaning": "Observed source byte identities, not read/adoption or behavior certification. Root or named independent lane read relevant scope; full core/owners read where required. No semantic overrides.",
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "68efe35946de371879dbd7ee6f1a823da0b28828d33ddc7472f4ae948eecfecc"
+    },
+    {
+      "path": "FORMAT.md",
+      "sha256": "c73aa72e99f50f7bce35d4ccec7a3dd6031af5cac7ee5c1ef96d6bbd122350c6"
+    },
+    {
+      "path": "SPEC_VERSION",
+      "sha256": "e1d49c569ae09b2ede16e2d83820a3809b35eb6c44c13ba9b5330598d6b8f43c"
+    },
+    {
+      "path": "concepts/principles.md",
+      "sha256": "444ed63a2d6ed31533d7588b804598ef37387bc478cffc1e56aaf7949a296737"
+    },
+    {
+      "path": "concepts/glossary.md",
+      "sha256": "ab1daf4f0225730fa4e69d9110068334f0c7fc4bb89243cb118364618456a82a"
+    },
+    {
+      "path": "roles/_base.md",
+      "sha256": "7178c8d54fb2c545c6022c21191f98cf2cd69c5e433dffce3ada492b51045023"
+    },
+    {
+      "path": "roles/searcher.md",
+      "sha256": "79c0191494ee2cb28a7368c3851834b59f2e0849e563154b45b388a704fe633c"
+    },
+    {
+      "path": "roles/pm.md",
+      "sha256": "8d95214adf498b6c297f24d085381a1adf603253bf085c5cc31fc74fef3ed076"
+    },
+    {
+      "path": "process/reconnaissance.md",
+      "sha256": "764d74b84d9dadfae1738b8ec62336943400299566b27f95cb859a9793e0de2b"
+    },
+    {
+      "path": "process/session.md",
+      "sha256": "d2be22e26089216f843cabd93e1928719dccb7ab6fb885aa12071374d3c527d9"
+    },
+    {
+      "path": "process/lifecycle.md",
+      "sha256": "dccbdf552d346bc2bb1ff671e06b659eb01f9202f908e04337b75faf44a56219"
+    },
+    {
+      "path": "process/batch.md",
+      "sha256": "23ab1b41c3f717c320aa8aabca41347ae90eb05ffa79d1971d03848ea4885b6b"
+    },
+    {
+      "path": "process/gates.md",
+      "sha256": "e52f0929630fc2b3d9a7305da0004d0ab4f9a6515b328ed1115a6cd79c6d56c4"
+    },
+    {
+      "path": "process/safety.md",
+      "sha256": "9cebc8fc1dd39f58045d108cff24dec6c31f734a394904dc97db7ae297a7032e"
+    },
+    {
+      "path": "checks/orient.md",
+      "sha256": "1371d52651c6398a0e568ff2269676c6335bb9d7ef6d0140859053f81f6100cf"
+    },
+    {
+      "path": "checks/preflight.md",
+      "sha256": "085fd1b9144c8fb3d93fb34cd5892cb40dbb3c2792874bf74ad30c30f2e899f6"
+    },
+    {
+      "path": "checks/run-audit.md",
+      "sha256": "cdca839e5296a42e2c49773d3373750c8afad6967a4714391cd137ce7db8d509"
+    },
+    {
+      "path": "code/exoskeleton.md",
+      "sha256": "6734869b2480330470e5d927c3aeeef54e881be758c82346f0b665478bdae999"
+    },
+    {
+      "path": "code/ldd.md",
+      "sha256": "a754409c5056694ec19ea6517568f961db4ffdf89f72157cbbfb5a394ce59ded"
+    },
+    {
+      "path": "code/doxygen.md",
+      "sha256": "73cfc67e3205ec3da995e2fdbe3d625875cc6c5bafbcb64ec3df9ab73cbb2af5"
+    },
+    {
+      "path": "code/tests.md",
+      "sha256": "09642f1a201f1d5d666672d1382502335cf2ca539990eb48aeeaa3d793bc3ee2"
+    },
+    {
+      "path": "prompting/brainstorm.md",
+      "sha256": "49f1fb474e5aea0a4b99365169dc4fb9d45dacde33169ec2aa7e82408ecbfe67"
+    },
+    {
+      "path": "protocols/document.md",
+      "sha256": "3fd3af1e8d20ffecec0ada2b6f6b020dcf1ba548699db6e53211488202ec67f6"
+    },
+    {
+      "path": "documents/conventions.md",
+      "sha256": "240ca7fdc21df878c3542815826ff95d299353cd81d2ae0ea59feddf50eafe2d"
+    },
+    {
+      "path": "protocols/dev-plan.md",
+      "sha256": "eefb7bfac3213a7b942eed0dd974d64258ac41200f736fdca4fc3ba6b98133c6"
+    },
+    {
+      "path": "implementations/codex/adapter.json",
+      "sha256": "673a6b3db4bd3fc17dc8c963c7d155f91026e820ea4dd1cb3c20b6ad99b44aa5"
+    },
+    {
+      "path": "implementations/codex/references/adoption.md",
+      "sha256": "1db7ddaf4141ec3e4ee1b8ec05e9932523e11e67ee53e260d1f8dc0884fba691"
+    },
+    {
+      "path": "implementations/codex/references/codex-runtime.md",
+      "sha256": "467215903edfaff4b7e1f6874a17541aaa22863c0a12187330fe714b935b1758"
+    },
+    {
+      "path": "implementations/codex/skills/pm/SKILL.md",
+      "sha256": "ef7f4ea86b819d25ea942730905060f789b674fe12003cfeee22e08a29ab4c76"
+    },
+    {
+      "path": "implementations/codex/skills/spec-recon/SKILL.md",
+      "sha256": "0a898fad6413e0c42c22a01afb57458a9c72d29c3e40338bc4c4eaa29f649af9"
+    },
+    {
+      "path": "implementations/codex/skills/document-protocol/SKILL.md",
+      "sha256": "57bc189ea0dfa3267199bba3bd1b2de83c95defb3d3cac9418dbbd41b48a136e"
+    },
+    {
+      "path": "implementations/codex/Doxyfile",
+      "sha256": "51c0bca4a3ca9a6f27009a8aee745a53f1de4bbda47e05062bccd6227560b453"
+    },
+    {
+      "path": "implementations/codex/skills/feature-dev/scripts/run_state.py",
+      "sha256": "de69a4ce116391728d77df0ecac3d5c4ae6ef20b8c5d295998b2f82f3519ece9"
+    },
+    {
+      "path": "implementations/codex/tests/test_run_state.py",
+      "sha256": "f115868b94bfba51d68df18ab0de38feefec6409cc0bad9322114189e0a72836"
+    },
+    {
+      "path": "implementations/claude/skills/feature-dev/scripts/run_state.py",
+      "sha256": "280c79256d3701862c72f7c92bfe222b4e35dfb3a44f388859174b3cc30fb6f6"
+    },
+    {
+      "path": "implementations/claude/workflows/feature-dev.js",
+      "sha256": "fb161f69a5ebbd818e06ad9a433c0a618fee75625ff68e330aee92c3e6108af4"
+    },
+    {
+      "path": "implementations/dsh/skills/feature-dev/scripts/run_state.py",
+      "sha256": "3b06e67f6dcccfafb9af333dab7ae348dda445e0af593a74cd50dd29b4ca65f1"
+    },
+    {
+      "path": "implementations/claude/adapter.json",
+      "sha256": "e95647286a86ca3b57489b15edee11c54c66c5d843697584db39b5a4198ed2b3"
+    },
+    {
+      "path": "implementations/dsh/adapter.json",
+      "sha256": "d40e9c0b0dc95f66991673f45bbec7fed2ff396ce4e79c2bc4275f017785c7d5"
+    },
+    {
+      "path": "flow/run-state.md",
+      "sha256": "1da78a3a86356dcb8a6cdd5d652aee0bc639ab626368af9bbffce31f67ef984e"
+    }
+  ]
+}

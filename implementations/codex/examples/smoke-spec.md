@@ -8,7 +8,7 @@ This is a reusable specification template. Before launch, root binds actual abso
 
 ## Context and required behavior
 
-Create a local console utility with importable `build_inventory` and actual CLI. Inputs are the real candidate `references/package-layout.json` and actual package-root regular file bytes. Do not copy assumed hashes/counts into code/tests or substitute a fixtures-only package. Read complete actual layout, validate declared profile/name/version/path/kind structure and every member before producing an accepted output. All47 currently declared rows, including layout and plugin manifest themselves, have derived size and SHA256 of actual bytes, sorted unique relative paths and source-derived file/skill/role/helper counts. Output records the actual input identities/profile; no embedded layout selfhash is required or introduced.
+Create a local console utility with importable `build_inventory` and actual CLI. Inputs are the real candidate `references/package-layout.json` and actual package-root regular file bytes. Do not copy assumed hashes/counts into code/tests or substitute a fixtures-only package. Read complete actual layout, validate declared profile/name/version/path/kind structure and every member before producing an accepted output. All currently declared rows, including layout and plugin manifest themselves, have derived size and SHA256 of actual bytes, sorted unique relative paths and source-derived file/skill/role/helper counts. Output records the actual input identities/profile; no embedded layout selfhash is required or introduced.
 
 Actual entry:
 `python3 inventory_report.py --layout CANDIDATE_LAYOUT --package-root CANDIDATE_PACKAGE --output output/inventory.json`
@@ -34,7 +34,7 @@ Only these12 exact target-relative source paths may be created/changed:
 11. Doxyfile
 12. .gitignore
 
-Generated effects are `.methodology/runs/<same-run-id>/`, `output/inventory.json`, `doxygen_output/` and explicitly assigned owned private receipts/basetemp. Root owns state; candidate package, neutral subjects, approved spec and foreign trees are read-only. No Git/index/ref mutation by inner actors, source additions outside12, third helper, install/hooks/MCP/marketplace/server/credentials/provider changes. Preserve exact source scope and actual generated exclusions in state without hiding source changes.
+Generated effects are `.methodology/lineages/<same-causal-id>/`, `.methodology/admissions/`, `output/inventory.json`, `doxygen_output/` and explicitly assigned owned private receipts/basetemp. Root owns state; candidate package, neutral subjects, approved spec and foreign trees are read-only. No Git/index/ref mutation by inner actors, source additions outside12, third helper, install/hooks/MCP/marketplace/server/credentials/provider changes. Preserve exact source scope and actual generated exclusions in state without hiding source changes.
 
 ## Requirements and acceptance
 
@@ -42,7 +42,7 @@ BR-1: Produce useful complete actual package membership/byte inventory through i
 BR-2: Validate all declared members and reject malformed/missing/unsafe input without an accepted partial report or changed valid prior output.
 BR-3: Carry full current source-bound native role/core/protocol/grant/identity/independence and retained state through actual phases, not a simulated ledger.
 
-- AC-1: Actual independent source oracle confirms sorted47 rows, unique exact membership, derived counts23skills/sixroles/twohelpers and every size/SHA including real manifest/layout bytes. Do not use these thresholds as precomputed implementation results; measure actual input population and report NOT-met drift.
+- AC-1: Actual independent source oracle confirms sorted75 rows, unique exact membership, derived counts27skills/sixroles/sevenhelpers and every size/SHA including real manifest/layout bytes. Do not use these thresholds as precomputed implementation results; measure actual input population and report NOT-met drift.
 - AC-2: Actual direct function and child CLI success0 complete sink; negative malformed/missing/unsafe cases exit2 and preserve complete prior valid bytes/no partial new sink. Assert genuine outcomes, actual owning critical operation order/cardinality and only expected errors.
 - AC-3: Real native Bootstrap(Searcher)→Architect→Code→fresh independent QA→Review→separately assigned Architect Finalize with full six-core/assigned owner/target/spec/plan/runtime reads and identities. Root authenticates original grant and returns; helper only structures. Independent all8 named scans account trigger/status/reason/evidence. infra-dod may be N/A because no service endpoint/container is promised; child/file side-effect-channel and real-path/real-shape apply. Full map/config/source/location/XML/log/test evidence is required.
 - AC-4: Exactly one deliberate real phase-boundary checkpoint after actual Code SUCCESS is persisted before next dispatch. Stop dispatch; later `show --state` and actual artifact/current package/adapter/neutral/spec/plan/target readback precede same-run fresh QA. Preserve baseline/history/spent entries; no new run or simulated stop, no new-chat requirement. Default4 cumulative Debug entries, zero valid in controlled tests; no engineered live failure to spend allowance.

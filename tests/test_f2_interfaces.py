@@ -6774,3 +6774,25 @@ def test_f2_fixture_delivery_and_restoration(repo_root, tmp_path):
 # endregion FUNC_test_f2_fixture_delivery_and_restoration
 
 
+
+# region FUNC_test_bounded_continuation_additive_duties [DOMAIN(9): Methodology; CONCEPT(9): AdditiveRules; TECH(7): pytest]
+## @purpose Preserve original owner bytes while adding exactly the four approved duties; omission controls discriminate each addition.
+## @uses hashlib.sha256, pathlib.Path.read_text
+## @io Read-only repo_root; in-memory omission controls. Returns None after exact source and bounded-clause assertions; no runtime efficacy claim.
+## @complexity 5
+def test_bounded_continuation_additive_duties(repo_root):
+    import hashlib
+    rows={'checks/preflight.md': ('PREFLIGHT-204', '085fd1b9144c8fb3d93fb34cd5892cb40dbb3c2792874bf74ad30c30f2e899f6'), 'protocols/dev-plan.md': ('PLAN-405', 'eefb7bfac3213a7b942eed0dd974d64258ac41200f736fdca4fc3ba6b98133c6'), 'code/tests.md': ('TST-1003', '09642f1a201f1d5d666672d1382502335cf2ca539990eb48aeeaa3d793bc3ee2'), 'process/lifecycle.md': ('LIFE-108', 'dccbdf552d346bc2bb1ff671e06b659eb01f9202f908e04337b75faf44a56219')}
+    clauses={'PREFLIGHT-204':('actual helper/version capabilities','Unsupported prerequisites','independent safe work'),
+             'PLAN-405':('minimal real check','before the construction','Routine, settled'),
+             'TST-1003':('early-consumer-exit','unconditional-cleanup','actual resource/response outcomes'),
+             'LIFE-108':('before adding another preparation packet','next observable product result/exit','No fixed stage-count')}
+    for relative,(identity,pin) in rows.items():
+        text=(repo_root/relative).read_text()
+        lines=[line for line in text.splitlines(keepends=True) if '**'+identity+'**' in line]
+        assert len(lines)==1
+        assert all(clause in lines[0] for clause in clauses[identity])
+        restored=text.replace(lines[0],'',1)
+        assert hashlib.sha256(restored.encode()).hexdigest()==pin
+        assert not any('**'+identity+'**' in line for line in restored.splitlines())
+# endregion FUNC_test_bounded_continuation_additive_duties

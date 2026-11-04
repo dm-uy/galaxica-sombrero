@@ -30,7 +30,7 @@
 ## Q: Why does the visible-runner probe start a child pytest instead of inspecting the source?
 ## A: TST-301 is about what the documented visible runner shows; only a child process under -s -v shows what a reader of the test run sees, and a source scan would pass a print that never executes.
 ## @changes
-## LAST_CHANGE: [1.1.0 - Port of the sibling package suite to the Claude Code package: pending-member placeholders, member completeness check, package identity and layout refusals, adapter Debug allowance refusals. Debug repair of independent Review round 2: candidate exclusion follows git ignore rules with a declared fallback list and keeps the generated build and cache names excluded by name in git targets; 19 cases over real git repositories. Debug repair of independent Review and QA round 3: hermetic git probes (marker core.fsmonitor program never runs during init, show, record, inventory and baseline; foreign GIT_DIR, GIT_INDEX_FILE and GIT_WORK_TREE leave the candidate and baseline unchanged), the ambient .DS_Store file in the package, literal membership diagnostics naming offending paths, and the printed trace of test_real_package_complete with its child-runner probe.]
+## LAST_CHANGE: [3.1.0 - Neutral 4.1.0 binding literal; all cases retained. Earlier: 1.1.0 - Port of the sibling package suite to the Claude Code package: pending-member placeholders, member completeness check, package identity and layout refusals, adapter Debug allowance refusals. Debug repair of independent Review round 2: candidate exclusion follows git ignore rules with a declared fallback list and keeps the generated build and cache names excluded by name in git targets; 19 cases over real git repositories. Debug repair of independent Review and QA round 3: hermetic git probes (marker core.fsmonitor program never runs during init, show, record, inventory and baseline; foreign GIT_DIR, GIT_INDEX_FILE and GIT_WORK_TREE leave the candidate and baseline unchanged), the ambient .DS_Store file in the package, literal membership diagnostics naming offending paths, and the printed trace of test_real_package_complete with its child-runner probe.]
 ## @modulemap
 ## FUNC 2[Attach full module documentation with no runtime effects] => test_run_state._module_contract
 ## FUNC 8[List the member paths the real layout declares] => test_run_state.layout_declared
@@ -571,7 +571,7 @@ def test_layout_driven_count_and_identity(tmp_path, caplog):
     assert state['schema_version'] == 2 and state['contract_version'] == 'methodology-claude/1.0.0'
     assert len(rows) == len(layout['files']) and dropped not in {row['path'] for row in rows}
     assert {'hook-config', 'workflow'} <= kinds
-    assert len(state['bindings']['neutral']) == 71 and state['bindings']['neutral_version'] == '4.0.0'
+    assert len(state['bindings']['neutral']) == 71 and state['bindings']['neutral_version'] == '4.1.0'
     assert state['bindings']['core'] == list(run_state.CORE) and path.is_file()
     logger.info('[IMP:9][test_layout_driven_count_and_identity][RESULT] behavioral assertions completed')
     # END_BLOCK_BusinessLogic

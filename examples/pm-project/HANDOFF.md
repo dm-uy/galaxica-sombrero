@@ -1,18 +1,75 @@
-# Current: RECON-DEC integrated locally and installed
+# Current: CONT-BOUND Claude compatibility proposed to main; owner result and merge order pending
+
+Owner, 2026-11-04: «Сначала совместимость», then «Да, поправь здесь» for the stale Codex stamps, then «А сделай pull request в main». Claude 3.1.0 binds neutral 4.1.0 for ordinary operation on `claude/cont-bound-compat`, based on Codex candidate `a3ecb5c`. No continuation port. [Result, evidence and limits](notes/bounded-continuation-claude-compat.md), [tasks](TASKS.md#cont-bound--bounded-continuation-and-earlier-verification).
 
 ## Owner decisions
 
-Nothing remains for the bounded requested merge/install task. The owner accepted the concrete result and explicitly granted local main merge and installed Codex/Claude/DSH updates; [decision, execution and limits](notes/spec-recon-decision-checkpoint-result.md#accepted-merge-and-installed-updates--2026-11-03). The owner then authorized remote delivery; [main push and readback](notes/spec-recon-decision-checkpoint-result.md#remote-main-delivery--2026-11-03) completed. No unrelated consumer migration is included.
+The concrete result of this candidate and of the Codex candidate beneath it; merging this branch also merges Codex 5.0. Merge and installation are not granted. Draft PR 21 on `dsh/continuation` carries DSH 5.0.0 from the same base and changes no path this branch changes. Merge order: this branch first, because PR 21 alone blocks every Claude session, then PR 21. Porting continuation to Claude is a separate choice.
 
-## Current result
+## Verified result and next action
 
-Canonical main fast-forwarded to `40328d0b9e67df6f4848b04750f68d5957563103`. Installed Codex4.0.0 uses a complete immutable snapshot of that commit; native install/list, fresh app-server skill discovery and full tracked-byte/executable-mode comparison passed. Previous release/config/catalog backups are retained. Claude3.0.0 reads canonical main in place; native discovery, manifest and actual SessionStart binding to neutral4.0.0 pass. Both registered DSH profiles resolve4.0.0 and their actual filesystem providers discover/load27skills; fresh web composition passes. Desktop full composition remains Electron-only, so active desktop runtime/catalog refresh is unverified.
+On `985795b`: Claude 548 passed, root 616 passed, Codex 201 passed, zero skips, three maps silent. The live native session, on `eba2905`, bound 3.1.0 to 4.1.0, ran `init` and `show` and dispatched a role. One independent reviewer ran three rounds with no blocker; its last two remarks were applied without a further round. The stale Codex stamps are corrected and guarded in both package suites; a second reviewer found one blocker in the first guard, approved its correction and rechecked the record's figures against their logs; its last wording remarks were applied without a further round. The two root failures the Codex checkpoint below retained are resolved on this branch: the Claude release bridge passes with its pins unchanged, and the base markup defect in `test_recon_decision_checkpoint.py`, also red on main at `388c944`, is fixed with no logic change.
 
-Source implementation/affected checks/independent review and bounded synthetic behavior remain in [the result receipt](notes/spec-recon-decision-checkpoint-result.md). This closure changes project records only; it does not repackage the installed Codex source snapshot. No active client/session was restarted; use fresh sessions and client restart guidance to load the refreshed catalog. This chat's original catalog is not hot-reload evidence. No model efficacy, hard enforcement or deferred whole-flow acceptance is inferred.
+On this branch alone DSH fails 83 of 146 on `neutral version mismatch`, which PR 21 resolves: a trial merge with `37d8e2b` is clean and passes Claude 548, Codex 201, DSH 202 and root 616. A live Claude session on the merged tree loaded the plugin, ran `init` and `show` and dispatched a role. A full native flow on that tree is not done. Claude 3.1.0 must enter main together with neutral 4.1.0, because the plugin loads in place from main and either one alone blocks every Claude session.
 
-## Continuation
+## Storage
 
-[Tasks](TASKS.md#recon-dec--reviewed-recon-forks-and-owner-authorized-brainstorm). Any later source update, remote publication or consumer migration needs its matching task/action grant. Reuse the completed result decision; do not ask to merge/install this same source again. Current record closure is performed under that existing grant. Preserve the retained obligations below.
+Worktree `.claude/worktrees/cont-bound-compat`; main stays clean. Private evidence is in that worktree's ignored `.methodology/continuations/cont-bound-claude-compat/evidence/`: preserve it before archiving. In this environment the shell's working directory can reset between calls, so use absolute paths; one run copied main instead of the candidate that way, as the result note records.
+
+# Preceding checkpoint: CONT-BOUND Codex checked locally; rollout held
+
+Owner approved the specification and lighter procedure on 2026-11-04: short plan, root implementation/checks, one independent cumulative reviewer. Codex source5.0 / neutral4.1 / schema3 is complete and checked in codex/continuation-recon. [Result and evidence](notes/bounded-continuation-result.md), [final independent judgment](notes/bounded-continuation-review-final.md), [short plan](plans/bounded-continuation.md), [actual owner approval](specs/bounded-continuation.md#owner-implementation-and-procedure-decision--2026-11-04).
+
+## Verified result and next action
+
+All F1–F6 are closed by the same independent reviewer; original BUG_REPORT/delta remain preserved. Exact Git-free check-05/exposed commands: Codex200 passed; root614 passed / same2 failed, zero skipped. Both maps build with silent streams; substantive source/location associations431 root /263 Codex. Real3.2+parent import retains aggregate4/native0; actual owned native worker follows persisted/readback5/5 before marker-only dispatch, canonical closure and exhaustion refusal. Actual archived4.0 native terminal uses remaining allowance1/4 without new grant or worker dispatch. Unknown host USD remains null. No Jeni/product execution.
+
+Next: owner considers the concrete isolated result. [Updated Claude/DSH agent instructions](notes/bounded-continuation-transfer-briefs.md) name actual helper/caller/contracts and ordinary compatibility first. Shared main integration is held until their separately authorized accepted compatibility contributions, the independently reproduced out-of-scope baseline test_recon_decision_checkpoint.py markup defect and exact combined common/sibling/native checks are resolved. These two known root failures are retained, never skipped/PASS. Merge, push, installation/profile changes and Jeni continuation are not authorized here. No automatic full-flow role sequence is needed to repeat this completed task.
+
+## Storage and continuation
+
+Only root wrote repository source; native inert worker/reviewer writes stayed within named owned temporary grants, with status/hash checks and behavioral (not hard sandbox) limits. Scope includes the disclosed exact norm-count selectors test_format/test_report1250→1254, independently accepted as a consequence of the four approved additions; no unrelated test algorithms or sibling package bytes changed. Canonical main stays clean; local branch commit is authorized under REPO-103.
+
+Complete private source/maps/streams/probes/original reviews are in ignored `.methodology/continuations/cont-bound-implementation/evidence/` archives and index. Preserve them before worktree archive. Exact earlier raw brief/completeness report remain under ignored cont-bound-docs. Public reviews are labeled local-path projections with original hashes. Full private deny-list publication proof remains unavailable; no release/publish action is claimed.
+
+## Historical preparation handoff
+
+The following is dated preparation history. Its pending-approval and future full-flow directions are superseded by the authentic owner approval and lighter procedure above; retain original reasoning, traps and prior unrelated project obligations.
+
+# Current: CONT-BOUND specification checked; owner review pending
+
+## Owner decisions
+
+Review the concrete [draft specification](specs/bounded-continuation.md). The owner approved preparation and ONE named independent packet, not the unseen schema3 design, implementation, source integration or installation. No code starts from this handoff. Preserve the already settled Codex-only executable scope and external Claude/DSH agents; do not re-ask launch permission.
+
+## Current checked result
+
+Two fresh independent generators, saved unranked HOLD and distinct evaluation are complete; [originals, evaluation and root proposed drafting choice](notes/bounded-continuation-decision/decision.md). Root proposes A: one schema3 operational authority, original historical schema2/parent reconciliation, closed immutable run artifacts and conservative reserved-entry recovery. Native5.0/neutral4.1/rolewire2.0 are proposed separate version domains, not delivered versions. B remains a credible recorded alternative with reopening evidence.
+
+[Original source/document review](notes/bounded-continuation-spec-review.md) found missing neutral release consumers. Root accepted and fixed the exact identity-only scope/correspondence; [final independent delta](notes/bounded-continuation-spec-review-delta.md) says READY FOR OWNER REVIEW. Root document contracts/IDs/links, source identities, whitespace and bounded home-path/email checks passed. Software tests/builds/helper/probes/consumer execution and full private deny-list publication scan were not performed or claimed.
+
+[Claude/DSH transfer instructions](notes/bounded-continuation-transfer-briefs.md) distinguish required ordinary-operation compatibility from later optional continuation parity. Full common/sibling/overall Finalize and shared-neutral main integration remain held until separately authorized accepted compatibility contributions pass against the exact combined source. Do not fix their native code locally or silently repoint installed profiles.
+
+## Storage and next action
+
+Branch `codex/continuation-recon`; source baseline `388c94495d86a771da6fa5e8514249976dc8c8a1`, prior documentation checkpoint `5b499d2`. Current changes are root-owned project documents/evidence only, stored by named-file local commit under REPO-103; recover its exact revision from this branch. Canonical main remains clean. No source/package/version/configuration change, merge, push, installation or Jeni budget/continuation action.
+
+Next: present the checked draft for owner review; incorporate requested changes without restarting recon or repeating settled permissions. A later matching implementation grant would activate the scoped Architect/Code/independent QA route, using a distinct read-only governing framework binding and candidate source as the plan requires. No automatic implementation is granted now.
+
+Complete original brief and earlier completeness report with local paths remain unchanged in ignored `.methodology/continuations/cont-bound-docs/evidence/raw/`; tracked projections are labeled and retain original hashes. Preserve those private originals before any worktree archive. No subagent writes outside the assigned empty write scopes were reported.
+
+## Current traps
+
+- Jeni aggregate4/4 is outside native0/0; no native-only import, reset or free repair5.
+- Original3.2 locks and all legacy predecessor bytes remain historical, including diagnostic refusal paths.
+- Immutable terminal artifacts differ from the mutable lineage authority; no snapshot may authorize dispatch.
+- Retry episodes, no-repair verification, remaining allowance and new-grant repairs retain distinct accounting/predicates; release-stamp absence does not prove nonrelease.
+- Shared neutral4.1 with old sibling hard pins would break ordinary paths; compatibility evidence is required before main integration.
+- Coupled neutral/root metadata guards and exact Codex AST exceptions are in the specification; never globally replace versions or merely repin algorithms.
+
+## Previous completed delivery
+
+RECON-DEC local merge/installed updates and subsequent owner-authorized remote delivery remain complete. [Original receipt and runtime limits](notes/spec-recon-decision-checkpoint-result.md). This task neither changes installed snapshots nor reopens those decisions.
 
 ## Relevant previous state
 

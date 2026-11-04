@@ -1,6 +1,24 @@
 # Methodology project route
 
-## Current: RECON-DEC integrated locally and installed
+## Current: CONT-BOUND Codex and Claude checked; shared rollout held
+
+Claude 3.1.0 ordinary compatibility with neutral 4.1.0 is checked locally on `claude/cont-bound-compat` and resolves both root failures the Codex receipt retained; [result](notes/bounded-continuation-claude-compat.md). DSH 5.0.0 is on draft PR 21; a trial merge of both passes all suites and a live Claude session. The owner's result holds shared rollout. Porting continuation to Claude remains a separate decision.
+
+Codex implementation/checks and the same single independent review are complete locally: [result](notes/bounded-continuation-result.md), [final judgment](notes/bounded-continuation-review-final.md). Owner result is pending. Shared rollout/merge/install are held for separate Claude/DSH ordinary compatibility, retained baseline markup correction and exact combined common/sibling/native validation. The approved lighter procedure remains controlling; no synthetic full-flow actors are required. Earlier preparation history follows.
+
+Owner-selected on 2026-11-03: recon before the specification for A+B (bounded history-preserving continuation and early capability checks), with V–D as clarifications of existing rules. [RECON](notes/RECON_2026-11-03_bounded-continuation.md), [tasks](TASKS.md#cont-bound--bounded-continuation-and-earlier-verification). Recon and independent completeness/delta checks are complete locally. Owner settled Codex executable scope with separate Claude/DSH transfer instructions. Owner authorized ONE Q-REPRESENTATION/Q-ROLLOUT packet through the matching structured answer; [brief and grant](notes/bounded-continuation-decision/brief.md). Independent generation/HOLD/evaluation and root proposed A choice are complete; the [draft specification](specs/bounded-continuation.md) passed independent document/source review and bounded delta; owner review remains pending, with implementation excluded. No implementation, Jeni continuation, migration or release is authorized.
+
+```mermaid
+flowchart LR
+  CB1["CONT-BOUND-T1 checked: measured recon and completeness"] --> CB2["CONT-BOUND-T2 approved specification"] --> CB3["CONT-BOUND-T3/T4 checked: Codex + same independent review"]
+  CB3 --> CB5C["CONT-BOUND-T5 checked: Claude3.1.0 ordinary compatibility"]
+  CB3 --> CB6D["CONT-BOUND-T6 on draft PR 21: DSH compatibility"]
+  CB5C --> CB4["HELD: combined common/sibling/native validation"]
+  CB6D --> CB4
+  CB4 --> CB5["Separate owner integration / installation decision"]
+```
+
+## Previous: RECON-DEC integrated locally and installed
 
 Owner-selected on 2026-11-03: the [specification](specs/spec-recon-decision-checkpoint.md) for reviewed RECON forks and owner authorization before brainstorm is prepared and independently checked locally. The owner subsequently approved targeted implementation without full feature-dev. The source changes, affected checks, independent review and bounded behavioral probe are complete locally; [result and limits](notes/spec-recon-decision-checkpoint-result.md). The owner accepted the result and granted local main merge plus installed Codex/Claude/DSH updates; [completed receipt and runtime limits](notes/spec-recon-decision-checkpoint-result.md#accepted-merge-and-installed-updates--2026-11-03). Owner-authorized [remote main delivery](notes/spec-recon-decision-checkpoint-result.md#remote-main-delivery--2026-11-03) is complete. Previous delivered and held outcomes below retain their state. [Tasks](TASKS.md#recon-dec--reviewed-recon-forks-and-owner-authorized-brainstorm).
 

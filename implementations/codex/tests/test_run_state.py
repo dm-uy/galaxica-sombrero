@@ -1,6 +1,6 @@
 # region MODULE_CONTRACT [DOMAIN(9): NativeMethodology; CONCEPT(9): SourceIdentity, BoundedVerification; TECH(8): Python, StandardLibrary]
 ## @modulecontract
-## @purpose Discriminate schema2 identity, candidate lifecycle, canonical scans, causal budgets, retry and actual CLI regressions.
+## @purpose Discriminate schema3 identity, candidate lifecycle, canonical scans, causal budgets, retry and actual CLI regressions.
 ## @scope Direct real helper logic plus actual process channels over owned copied actual package/neutral fixtures; no simulated native acceptance.
 ## @input Explicit owned source/target paths and current canonical records; pytest fixtures supply owned temporary paths for tests. No credentials or provider state.
 ## @output Importable declared functions, actual CLI answer/diagnostic/exit where applicable, and meaningful test outcomes with actual trace. No fabricated native acceptance.
@@ -96,7 +96,7 @@ NAMES = ('green-test-trap', 'quantitative-ac', 'semantic-trace', 'infra-dod', 's
 # region FUNC_make_fixture [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Create an owned realistic copied package/neutral corpus for structural helper tests.
 ## @uses shutil.copytree, shutil.copyfile, pathlib.Path.write_text, run_state.initialize
-## @io tmp_path owned Path, cap object deliberately exercised as valid/invalid Debug input, pending/initial_source bool flags and optional prohibition str create actual controlled fixture rules before initialization. Returns (state Path,state dict,evidence Path) using actual complete package73 and neutral71 bytes. Writes only test-owned source/target and ledger; no donor/real tree writes. OSError for unavailable source; ValueError/TypeError from helper input refusal. Example: cap0 yields an initialized owned zero-budget fixture. Importance:9.
+## @io tmp_path owned Path, cap object deliberately exercised as valid/invalid Debug input, pending/initial_source bool flags and optional prohibition str create actual controlled fixture rules before initialization. Returns (state Path,state dict,evidence Path) using actual complete package75 and neutral71 bytes. Writes only test-owned source/target and ledger; no donor/real tree writes. OSError for unavailable source; ValueError/TypeError from helper input refusal. Example: cap0 yields an initialized owned zero-budget fixture. Importance:9.
 ## @complexity 5
 def make_fixture(tmp_path, cap=4, pending=False, initial_source=False, prohibition=None):
     logger.info('[IMP:4][make_fixture][START] owned behavioral verification')
@@ -138,7 +138,7 @@ def make_fixture(tmp_path, cap=4, pending=False, initial_source=False, prohibiti
 # region FUNC_envelope [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Prepare the unmodified current canonical fixture role envelope.
 ## @uses run_state.inventory, logging.Logger.info
-## @io state schema2 dict, evidence owned Path, status str defaultSUCCESS. Returns dict phase/role/status/summary/runId/inputIdentity/candidateIdentity/contractVersion/evidence, with current real fixture digest. No state writes; reads actual target inventory. ValueError/OSError for invalid inventory. Example: QA envelope uses role qa and current target hash. Importance:8.
+## @io state schema3 dict, evidence owned Path, status str defaultSUCCESS. Returns dict phase/role/status/summary/runId/inputIdentity/candidateIdentity/contractVersion/evidence, with current real fixture digest. No state writes; reads actual target inventory. ValueError/OSError for invalid inventory. Example: QA envelope uses role qa and current target hash. Importance:8.
 ## @complexity 5
 def envelope(state, evidence, status='SUCCESS'):
     logger.info('[IMP:4][envelope][START] owned behavioral verification')
@@ -156,7 +156,7 @@ def envelope(state, evidence, status='SUCCESS'):
 # region FUNC_success [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Supply phase-specific structural fixture evidence without claiming real native execution.
 ## @uses test_run_state.envelope, run_state.inventory, pathlib.Path.write_text
-## @io state schema2 and actual owned evidence Path. Returns wrapper with canonical successful phase fields; Code creates only fixture source.py then fresh candidate and scoped sourceChange, other phases read/build values. No authentic consent/native QA claim. OSError/ValueError on fixture access. Example: QA yields eight named list rows, not ordinal dict. Importance:9.
+## @io state schema3 and actual owned evidence Path. Returns wrapper with canonical successful phase fields; Code creates only fixture source.py then fresh candidate and scoped sourceChange, other phases read/build values. No authentic consent/native QA claim. OSError/ValueError on fixture access. Example: QA yields eight named list rows, not ordinal dict. Importance:9.
 ## @complexity 5
 def success(state, evidence):
     logger.info('[IMP:4][success][START] owned behavioral verification')
@@ -189,13 +189,16 @@ def success(state, evidence):
 # region FUNC_to_phase [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Reach an explicitly requested phase in the owned structural fixture.
 ## @uses run_state.advance, test_run_state.success
-## @io state schema2 fixture, evidence real owned Path, phase known canonical phase str. Returns new state after normal fixture transitions; no direct source writes except declared fixture Code source through success. ValueError/OSError from real helper refusal; unsupported requested phase is caller error, tests supply valid phases. Example: to_phase(state,evidence,"qa") returns QA with no charged repair. Importance:9.
+## @io state schema3 fixture, evidence real owned Path, phase known canonical phase str. Returns new state after normal fixture transitions; no direct source writes except declared fixture Code source through success. ValueError/OSError from real helper refusal; unsupported requested phase is caller error, tests supply valid phases. Example: to_phase(state,evidence,"qa") returns QA with no charged repair. Importance:9.
 ## @complexity 5
 def to_phase(state,evidence,phase):
     logger.info('[IMP:4][to_phase][START] owned behavioral verification')
     # START_BLOCK_BusinessLogic
     while state['phase']!=phase:
         state=run_state.advance(state,success(state,evidence))
+    import continuation
+    entry=continuation.active(state)
+    entry.update(state='released',worker='structural-fixture-parent-session')
     logger.info('[IMP:9][to_phase][RESULT] desired fixture phase=%s',phase)
     return state
 
@@ -254,6 +257,20 @@ def cli(*args, cwd):
     logger.info('[IMP:4][cli][START] owned behavioral verification')
     # START_BLOCK_BusinessLogic
     environment=dict(os.environ,PYTHONDONTWRITEBYTECODE='1')
+    if args and args[0]=='record':
+        checkpoint=Path(args[args.index('--state')+1])
+        try:
+            current=run_state.read_json(checkpoint)
+            if run_state.STATE_FIELDS<=set(current) and current.get('schema_version')==3 and current.get('status')=='RUNNING' and current['lineage']['active_entry']:
+                import continuation
+                entry=continuation.active(current)
+                if entry['state']=='reserved':
+                    release=checkpoint.parent/'fixture-release.json'
+                    release.write_text(json.dumps({'entry':entry['id'],'worker':'structural-fixture-parent-session'}))
+                    released=subprocess.run([sys.executable,str(PACKAGE/'skills/feature-dev/scripts/run_state.py'),'released','--state',str(checkpoint),'--request',str(release)],cwd=cwd,env=environment,text=True,capture_output=True)
+                    assert released.returncode==0, released.stderr
+        except (ValueError,KeyError,TypeError):
+            pass  # malformed-state negative tests reach the real CLI unchanged
     proc=subprocess.run([sys.executable,str(PACKAGE/'skills/feature-dev/scripts/run_state.py'),*map(str,args)],cwd=cwd,env=environment,text=True,capture_output=True)
     print('Actual helper invocation:',proc.args,'exit',proc.returncode)
     print('stdout:',proc.stdout);print('stderr:',proc.stderr)
@@ -635,7 +652,7 @@ def test_zero_repair_refusal_and_default_allowance(tmp_path,caplog):
     # START_BLOCK_BusinessLogic
     caplog.set_level(logging.INFO);_,state,evidence=make_fixture(tmp_path,cap=0)
     target=Path(state['target'])
-    _,default=run_state.initialize(target,state['spec_path'],'structural fixture parent reference','default',framework=state['framework'],adapter=state['adapter_path'],plan=state['plan']['path'])
+    _,default,_=make_fixture(tmp_path/'independent-default')
     assert default['debug_cap']==4 and default['debug_spent']==0
     state=to_phase(state,evidence,'code');result=envelope(state,evidence,'BUG_REPORT');result['bugReport']={key:'Owned fixture actionable failure evidence' for key in ('goal','actual','logAnalysis','dataAnalysis','hypothesis','recommendation')}
     refused=run_state.advance(state,{'kind':'role','result':result})
@@ -651,17 +668,18 @@ def test_zero_repair_refusal_and_default_allowance(tmp_path,caplog):
 # region FUNC_test_real_cli_initialization_and_nonoverwrite [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Verify real cli initialization and nonoverwrite over actual owned inputs.
 ## @uses json.loads, pytest.mark.parametrize, test_run_state.cli, test_run_state.expose, test_run_state.make_fixture
-## @io Input: tmp_path: owned pathlib.Path, caplog: pytest.LogCaptureFixture, cap: case value from the exact parametrization below. Cases: pytest.mark.parametrize('cap', ['0', '4']). Output: None after these concrete checks: first.returncode == 0; actual['state']['schema_version'] == 2 and actual['state']['debug_cap'] == int(cap) and (actual['state']['debug_spent'] == 0); duplicate.returncode == 2 and (not duplicate.stdout) and (p.read_bytes() == before); '[IMP:9][initialize][RESULT]' in first.stderr and '[IMP:10][initialize][FAIL]' in duplicate.stderr. AssertionError denotes a failed promised check; expected refusals are explicitly caught in this test body. Side effects: only the actual owned fixture writes/child processes in this body; shared package and neutral corpus reads stay read-only. No native acceptance is inferred. Example: python3 -m pytest tests/test_run_state.py::test_real_cli_initialization_and_nonoverwrite executes these exact cases. Importance:9.
+## @io Input: tmp_path: owned pathlib.Path, caplog: pytest.LogCaptureFixture, cap: case value from the exact parametrization below. Cases: pytest.mark.parametrize('cap', ['0', '4']). Output: None after these concrete checks: first.returncode == 0; actual['state']['schema_version'] == 3 and actual['state']['debug_cap'] == int(cap) and (actual['state']['debug_spent'] == 0); duplicate.returncode == 2 and (not duplicate.stdout) and (p.read_bytes() == before); '[IMP:9][initialize][RESULT]' in first.stderr and '[IMP:10][initialize][FAIL]' in duplicate.stderr. AssertionError denotes a failed promised check; expected refusals are explicitly caught in this test body. Side effects: only the actual owned fixture writes/child processes in this body; shared package and neutral corpus reads stay read-only. No native acceptance is inferred. Example: python3 -m pytest tests/test_run_state.py::test_real_cli_initialization_and_nonoverwrite executes these exact cases. Importance:9.
 ## @complexity 5
 @pytest.mark.parametrize('cap',['0','4'])
 def test_real_cli_initialization_and_nonoverwrite(tmp_path,caplog,cap):
     logger.info('[IMP:4][test_real_cli_initialization_and_nonoverwrite][START] owned behavioral verification')
     # START_BLOCK_BusinessLogic
     caplog.set_level(logging.INFO);_,state,_=make_fixture(tmp_path)
-    args=['init','--project',state['target'],'--spec',state['spec_path'],'--approval','structural fixture reference','--framework',state['framework'],'--adapter',state['adapter_path'],'--plan',state['plan']['path'],'--run-id','cli-init','--max-debug',cap]
+    cli_spec=Path(state['target'])/'cli-spec.md';cli_spec.write_text('Independent CLI initialization fixture')
+    args=['init','--project',state['target'],'--spec',str(cli_spec),'--approval','structural fixture reference','--framework',state['framework'],'--adapter',state['adapter_path'],'--plan',state['plan']['path'],'--run-id','cli-init','--max-debug',cap]
     first=cli(*args,cwd=tmp_path);assert first.returncode==0
     actual=json.loads(first.stdout);p=Path(actual['state_file']);before=p.read_bytes()
-    assert actual['state']['schema_version']==2 and actual['state']['debug_cap']==int(cap) and actual['state']['debug_spent']==0
+    assert actual['state']['schema_version']==3 and actual['state']['debug_cap']==int(cap) and actual['state']['debug_spent']==0
     duplicate=cli(*args,cwd=tmp_path);assert duplicate.returncode==2 and not duplicate.stdout and p.read_bytes()==before
     assert '[IMP:9][initialize][RESULT]' in first.stderr and '[IMP:10][initialize][FAIL]' in duplicate.stderr
     expose(caplog,'cli')
@@ -833,7 +851,7 @@ def test_partial_code_blocked_and_effect_controls(tmp_path,caplog,kind):
     saved=json.loads(path.read_text())
     if kind=='unknown-correction':
         assert proc.returncode==2 and saved['phase']=='code' and saved['debug_spent']==0 and saved['retry_episodes']['response-correction']==0
-        assert saved['candidate']==before['candidate'] and 'investigation' in saved['history'][-1]['reason']
+        assert saved['candidate']==before['candidate'] and 'investigation' in proc.stderr
     else:
         assert proc.returncode==0 and saved['candidate']['digest']==run_state.inventory(state['target'])['digest'] and saved['debug_spent']==0
     expose(caplog,'advance',kind=='unknown-correction',expected_errors=expected_errors)
@@ -979,7 +997,9 @@ def make_git_target(tmp_path, monkeypatch):
         cause='git_commit'
         git_fixture(target,'-c','user.name=Fixture','-c','user.email=fixture','-c','commit.gpgsign=false','commit','-q','-m','fixture')
         cause='state_init'
-        path,state=run_state.initialize(target,target/'spec.md','structural fixture reference, not authentic consent','gitfixture',framework=state['framework'],adapter=state['adapter_path'],plan=target/'plan.md')
+        git_spec=target/'git-spec.md';git_spec.write_text('Independent Git target observer fixture')
+        git_fixture(target,'add','git-spec.md');git_fixture(target,'-c','user.name=Fixture','-c','user.email=fixture','-c','commit.gpgsign=false','commit','-q','-m','git observer spec')
+        path,state=run_state.initialize(target,git_spec,'structural fixture reference, not authentic consent','gitfixture',framework=state['framework'],adapter=state['adapter_path'],plan=target/'plan.md')
         logger.info('[IMP:9][make_git_target][RESULT] owned tracked source and Git baseline initialized')
         return path,state,evidence
         # END_BLOCK_CriticalTrajectory
@@ -1201,12 +1221,13 @@ def test_git_observation_fsmonitor_positive_and_never_executes(tmp_path,monkeypa
     # START_BLOCK_BusinessLogic
     logger.info('[IMP:7][test_git_observation_fsmonitor_positive_and_never_executes][START] owned real verification')
     caplog.set_level(logging.INFO);path,state,evidence=make_git_target(tmp_path,monkeypatch);target=Path(state['target'])
+    monitor_spec=target/'monitor-spec.md';monitor_spec.write_text('Independent monitor init fixture')
     marker,program=arm_git_monitor(target,tmp_path)
     config=(target/'.git/config').read_bytes();index=(target/'.git/index').read_bytes()
     flags={}
-    init=cli('init','--project',target,'--spec',target/'spec.md','--approval','structural fixture reference','--framework',state['framework'],'--adapter',state['adapter_path'],'--plan',target/'plan.md','--run-id','monitor',cwd=tmp_path)
+    init=cli('init','--project',target,'--spec',monitor_spec,'--approval','structural fixture reference','--framework',state['framework'],'--adapter',state['adapter_path'],'--plan',target/'plan.md','--run-id','monitor',cwd=tmp_path)
     assert init.returncode==0;flags['init']=marker.exists()
-    ledger=target/'.methodology/runs/monitor/state.json';answer=json.loads(init.stdout)
+    answer=json.loads(init.stdout);ledger=Path(answer['state_file'])
     assert set(answer)=={'state_file','state'} and Path(answer['state_file'])==ledger
     current=answer['state'];assert current==json.loads(ledger.read_text())
     shown=cli('show','--state',ledger,cwd=tmp_path);assert shown.returncode==0;flags['show']=marker.exists()
@@ -1281,8 +1302,9 @@ def test_real_git_inventory_cli_checkpoint(tmp_path,monkeypatch,caplog):
     # START_BLOCK_BusinessLogic
     logger.info('[IMP:7][test_real_git_inventory_cli_checkpoint][START] owned real verification')
     caplog.set_level(logging.INFO);path,state,evidence=make_git_target(tmp_path,monkeypatch);target=Path(state['target'])
-    initialized=cli('init','--project',target,'--spec',target/'spec.md','--approval','structural fixture reference','--framework',state['framework'],'--adapter',state['adapter_path'],'--plan',target/'plan.md','--run-id','realgit',cwd=tmp_path)
-    assert initialized.returncode==0;ledger=target/'.methodology/runs/realgit/state.json';answer=json.loads(initialized.stdout)
+    real_spec=target/'real-spec.md';real_spec.write_text('Independent real CLI fixture')
+    initialized=cli('init','--project',target,'--spec',real_spec,'--approval','structural fixture reference','--framework',state['framework'],'--adapter',state['adapter_path'],'--plan',target/'plan.md','--run-id','realgit',cwd=tmp_path)
+    assert initialized.returncode==0;answer=json.loads(initialized.stdout);ledger=Path(answer['state_file'])
     assert set(answer)=={'state_file','state'} and Path(answer['state_file'])==ledger
     current=answer['state'];assert current==json.loads(ledger.read_text())
     (target/'.venv').mkdir();(target/'.venv/dependency.py').write_text('ignored\n');(target/'tests/.test_counter.json').write_text('{}')

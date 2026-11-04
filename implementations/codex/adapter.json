@@ -1,7 +1,7 @@
 {
   "harness": "methodology-codex",
   "owner": "Methodology Codex package maintainers",
-  "spec_version": "4.0.0",
+  "spec_version": "4.1.0",
   "spec_root": "../../",
   "parameters": {
     "dialog-language": "Russian unless controlling owner/project instructions select otherwise",
@@ -38,7 +38,7 @@
       "fallback": "No new executable hook shipped; behavioral tripwire/manual audit cannot claim hard interception."
     },
     "run-state-persist": {
-      "mechanism": "Single root writer candidate run_state.py schema2 atomic UTF8 .methodology/runs with complete accepted/refused history/current locks.",
+      "mechanism": "Single root writer candidate run_state.py schema3 atomic UTF8 .methodology/lineages with complete accepted/refused history/current locks.",
       "fallback": "Unreadable/corrupt/old schema ledger blocks dependent continuation; no fabricated replacement/reset."
     },
     "workflow-orchestration": {

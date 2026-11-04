@@ -1,4 +1,4 @@
-# Pointwise source adoption — neutral4.0.0 / package4.0.0
+# Pointwise source adoption — neutral4.1.0 / package5.0.0
 
 ## Operative loading procedure
 
@@ -94,7 +94,7 @@ These28 rows match adapter declarations. Each actor discovers actual exposed too
 | `model-tier` | Classify hardest necessary step; use inherited current owner-configured model/effort, leave overrides unset without selection authority; record requested/exposed observed facts. | Unavailable observation/control stays unknown; no settings/provider mutation or claimed model savings. |
 | `role-permissions` | Use actual host filesystem/tool sandbox where exposed plus explicit exact role paths; judges original source/Git readonly and owned scratch without .git. | Behavioral role restrictions and root scope audit where hard per-role denial absent; disclose gaps rather than claim enforcement. |
 | `pre-tool-guard` | Parent checks scope, authority/effects and denied commands before operations. | No new executable hook shipped; behavioral tripwire/manual audit cannot claim hard interception. |
-| `run-state-persist` | Single root writer candidate run_state.py schema2 atomic UTF8 .methodology/runs with complete accepted/refused history/current locks. | Unreadable/corrupt/old schema ledger blocks dependent continuation; no fabricated replacement/reset. |
+| `run-state-persist` | Single root writer candidate run_state.py schema3 atomic UTF8 .methodology/lineages with complete accepted/refused history/current locks. | Unreadable/corrupt/old schema ledger blocks dependent continuation; no fabricated replacement/reset. |
 | `workflow-orchestration` | Explicitly authorized root PM/feature-dev dispatches and validates native phases; helper deterministic guards before accepted record. | No hidden daemon/model launcher; missing required orchestration evidence BLOCKED; inner roles never dispatch. |
 | `structured-output` | Role returns one full current canonical object; parent extraction/type/conditional/semantic checks, package wrapper preserves result unchanged. | If no schema tool, actual JSON extraction/manual validation with one bounded correction; JSON-looking prose alone not enforcement. |
 | `skill-loading` | Explicit full reads of candidate entries and adapter-resolved current owner subjects, complete injection accepted. | Path reads allowed when skill API absent; missing/truncated/stale/stub/unread required content blocks; no old-cache substitution. |
@@ -129,7 +129,7 @@ These28 rows match adapter declarations. Each actor discovers actual exposed too
 | `gate-cadence` | per-change exact specification; authentic approved batch scope where expressly granted; result gate separate |
 | `debug-entry-cap` | 4 |
 
-Debug text parses as strict decimal nonnegative plain integer; default4, zero valid. Boolean, fraction, negative or ambiguous coercion refuses. Candidate supports lowering through actual granted initialization; extension above4 is explicitly unsupported/BLOCKED and arbitrary human-looking text grants none. Spend before causal Debug entry, failure/resume retains it; response/transport/test counters are separate. Model values point to actual inherited configuration, not promises of a dynamic selector or hidden observed provider. Classify adequate strength/context per hardest step; missing required capability blocks rather than changing settings silently.
+Debug text parses as strict decimal nonnegative plain integer; default4, zero valid. Boolean, fraction, negative or ambiguous coercion refuses. Candidate supports lowering through actual granted initialization; extension above4 requires the supported finite schema3 grant and arbitrary human-looking text grants none. Spend before causal Debug entry, failure/resume retains it; response/transport/test counters are separate. Model values point to actual inherited configuration, not promises of a dynamic selector or hidden observed provider. Classify adequate strength/context per hardest step; missing required capability blocks rather than changing settings silently.
 
 Structural conform adapter validates membership/reference spelling and declared fields; independent source/converse/full-current ordinary meaning review and actual native smoke are separate required proofs. No full-source transfer percentage, installed enforcement, sandbox efficacy, model resilience/savings, license or publication acceptance is inferred.
 
@@ -137,6 +137,10 @@ Structural conform adapter validates membership/reference spelling and declared 
 
 Source2.2 adds the opt-in methodology-consumer-pm/1.0.0 carrier at references/consumer-pm-profile.md,13 seeds/four entries/shared consumer_files + orient/codemap/markup_migrate (six total helpers,27skills/73members/sixroles). Read full current owners and selected profile before native effects. Historical47/23/two input capacity remains historical; no input-lock migration. Explicit commands/grammars/authority/receipt/unknown-effect contracts live in the profile and package README. C3 automatic hooks/trust, C4 SDK/import/ingest/ledger comparison, C5 autonomous/resume proof and C6 loader activation remain held. Wire2.0/schema2/neutral1.1 remain unchanged. Claude runtime/version and the other58 of its59 package files remain unchanged; the sole source exception is the exact owner-approved one-line parity predicate in implementations/claude/tests/test_package_contract.py. Its shared23/Claude28 and all29 assertions are retained.
 
-Current M30 binding: neutral2.0.0/source2.4.0; wire2.0/schema2 and C2 consumer mechanisms remain unchanged. The historical C2 paragraph above describes its accepted1.1/2.2 release, not current version acceptance. Consequential decisions load the current full brainstorm owner.
+Historical M30 binding: neutral2.0.0/source2.4.0; wire2.0/schema2 and C2 consumer mechanisms remain unchanged. The historical C2 paragraph above describes its accepted1.1/2.2 release, not current version acceptance. Consequential decisions load the current full brainstorm owner.
 
 Specification-producing reconnaissance also adopts RECON-307–311 and SP-206 in full: one Questions and forks section, a distinct completeness challenge including empty/excluded cases, root reconciliation, matching human launch permission and resolution traceability before dependent specification readiness. This qualifies BRAIN-104 launch order only at that checkpoint; it adds no role, schema or automated enforcement.
+
+## Bounded continuation (Codex5.0 / schema3)
+
+New operations use the enrolled schema3 lineage authority and immutable closed artifacts. Read the complete schema3 continuation and pre-dispatch control section in codex-runtime.md before execution; older schema2/no-extension descriptions in this document describe the historical profile and are superseded for Codex5 operations. Native role wire/default allowance remain unchanged. Shared-neutral rollout requires separate Claude/DSH compatibility; no installed snapshot is changed by this source candidate.

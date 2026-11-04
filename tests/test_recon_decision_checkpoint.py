@@ -4,16 +4,26 @@
 ## @scope Actual neutral norm bodies, the operative specification receipt and three native packages' entry texts.
 ## @input Read-only repo_root; in-memory omission controls. No model or native dispatch runs here.
 ## @output Finite source-contract assertions; actual fresh-context behavior is separate recorded evidence.
+## @links [READS_DATA_FROM(9): process/reconnaissance.md, process/specification.md, prompting/brainstorm.md; READS_DATA_FROM(8): implementations/codex, implementations/claude and implementations/dsh entry texts; USES_API(6): pytest, re]
 ## @invariants Original files, helper algorithms, schemas and authorization remain unchanged by these checks.
+## @rationale
+## Q: Why check source clauses instead of an agent's behavior?
+## A: These are finite contract checks against drift; actual fresh-context behavior is separate recorded evidence and is not claimed here.
 ## @changes
-## LAST_CHANGE: [4.0.0 - Introduce bounded reviewed-fork, empty-list and scoped-launch omission controls.]
+## LAST_CHANGE: [Claude 3.1.0 delivery - Complete the module contract the code-layer check requires; test logic unchanged. Earlier: 4.0.0 - Introduce bounded reviewed-fork, empty-list and scoped-launch omission controls.]
 ## @modulemap
 ## FUNC 8[Read one actual norm body] => test_recon_decision_checkpoint._norm
 ## FUNC 9[Reject missing checkpoint clauses] => test_recon_decision_checkpoint.test_checkpoint_norms_reject_omission
 ## FUNC 9[Verify receipt and native routes] => test_recon_decision_checkpoint.test_receipt_and_native_routes_reject_omission
+## @usecases
+## - [test_checkpoint_norms_reject_omission]: Maintainer → remove one required clause in memory → the missing obligation is refused
+## - [test_receipt_and_native_routes_reject_omission]: Maintainer → remove the receipt row or one native checkpoint clause in memory → the omission is detected
 ## @GREP_SUMMARY recon questions, missing forks, false exclusions, empty list, human launch consent, source checks only
 ## @STRUCTURE actual norm and native text → finite required clauses → in-memory missing-clause controls → assertions
+def _module_contract():
+    pass
 # endregion MODULE_CONTRACT
+
 
 import re
 

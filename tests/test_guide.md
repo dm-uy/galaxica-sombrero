@@ -804,3 +804,13 @@ SessionStart pin serialization: authentic pre-Code bytes give Python3.9 AST4ee9d
 ## RECON-DEC targeted instruction checks
 
 Source versions: neutral/Codex/DSH4.0.0, Claude3.0.0. Root `tests/test_recon_decision_checkpoint.py` checks exact RECON-307–311, BRAIN-104, SP-206, the operative receipt row and all named native callers, with in-memory missing-clause controls. `tests/test_c1_review_and_routing.py` retains original algorithm pins and existing consequential/authority/correspondence controls; current-version assertions alone change. These are finite source checks, not proof of live classification, consent or independent actor execution. The current result note records affected binding checks, independent review and a small fresh-context behavioral probe, separately from historical full-flow or package-suite evidence. No full feature-dev flow is required for this owner-approved instruction change.
+
+## CONT-BOUND additive owners and Codex release boundary
+
+Native5.0/neutral4.1 is a branch candidate, not an installed rollout. `test_bounded_continuation_additive_duties` checks exactly PREFLIGHT-204, PLAN-405, TST-1003 and LIFE-108, their removal controls and byte-identical restored original owner bodies. Four additions yield1254 norms; test_format/test_report update only that coupled population selector. `test_codex_continuation_boundaries` retains unaffected canonical/Git/delta/numeric AST functions plus default/wire/schema/member mutation controls; no broad algorithm re-pin.
+
+See `implementations/codex/tests/test_guide.md` CONT-BOUND AC table for all actual helper/CLI/native-path mechanisms. Full root tests remain meaningful: the unmodified preceding test_recon_decision_checkpoint.py markup defect is independently reproduced on baseline51906f4, and the Claude shared release bridge fails until separately accepted ordinary compatibility. Neither is skipped or called PASS; exact combined common/sibling acceptance remains owed before main integration.
+
+## CONT-BOUND Claude ordinary compatibility
+
+Claude 3.1.0 binds neutral 4.1.0, so `test_release_bridge_keeps_wire_and_helper_algorithms` passes again with the frozen Claude helper and hook pins unchanged; only its release selectors moved. The module contract of `test_recon_decision_checkpoint.py` is now complete, which clears the earlier `test_every_python_module_has_the_exoskeleton_before_imports` failure with no test logic changed. That defect was also present on main at 388c944. The DSH package suite still fails on its own version pin until its separate compatibility work; the root suite does not exercise that path. See `implementations/claude/tests/test_guide.md` for the package table.

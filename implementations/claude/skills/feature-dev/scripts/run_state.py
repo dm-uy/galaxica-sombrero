@@ -8,7 +8,7 @@
 ## @links_to_spec M22 specification section 2 Mechanics; requirements BR-3 and BR-4; flow/run-state.md STATE-102 and STATE-501; code/tests.md TST-501
 ## @invariants
 ## - Current neutral role/phase/scan/gate owners remain controlling; structural checks never prove human authority or role independence.
-## - The package identity is methodology-claude 1.1.0 with the colocated-in-place profile and the run contract methodology-claude/1.0.0; the state contract is schema2 and matches the sibling package helper except that the candidate record carries one added key, exclusion_mode, which candidate comparison ignores.
+## - The package identity is PACKAGE_NAME at PACKAGE_VERSION with the colocated-in-place profile and the run contract methodology-claude/1.0.0; the state contract is schema2, derived from the sibling package's schema2 helper with one added candidate key, exclusion_mode, which candidate comparison ignores; the sibling's later schema3 ledger is refused here.
 ## - The package member count is whatever the declared layout lists and must equal the actual package inventory; no literal count is trusted.
 ## - Debug allowance is a nonnegative plain integer, zero is valid, the default is four, and an adapter extension above four is BLOCKED.
 ## - For a target that is the top level of its own git work tree the candidate is tracked plus untracked non-ignored content (STATE-102) minus the generated directory names: what git reports as ignored is excluded, and an ignored directory is skipped wholesale, with no descent and no link refusal inside it.
@@ -22,7 +22,7 @@
 ## - Private locators/payloads/credentials are absent from source; logs use safe logical classes/counts.
 ## @rationale
 ## Q: Why a second copy of the state helper rather than a shared one?
-## A: The sibling package helper is outside this package's scope; a shared extraction would change that package and is a separate decision. This copy binds its own identity and keeps the state contract unchanged apart from the recorded exclusion mode, so either runtime reads the same ledger shape.
+## A: The sibling package helper is outside this package's scope; a shared extraction would change that package and is a separate decision. This copy binds its own identity and keeps its own schema2 state contract with the recorded exclusion mode; each helper accepts only its own ledgers.
 ## Q: Why take the member count from the declared layout?
 ## A: The layout already declares the exact member list and the helper compares it with the real inventory in both directions; a second literal count could only drift from it.
 ## Q: Why preserve unavailable/unsupported limits?
@@ -36,7 +36,7 @@
 ## Q: Why does every git call force core.fsmonitor off and drop the caller's repository-redirecting environment?
 ## A: Round 3 reproduced two failures. git ls-files --others --ignored and git status run the program a target repository configures as core.fsmonitor, so observing a repository executed code it owns; and an inherited GIT_DIR or GIT_INDEX_FILE made the enumeration read a foreign index, which silently dropped a tracked file from the candidate (fail open). A command-line -c value outranks repository, environment and global configuration, and removing the redirecting variables makes git discover the repository of the target path itself.
 ## @changes
-## LAST_CHANGE: [1.1.0 - Exact M30 source/neutral constants; algorithms preserved. Earlier:1.0.0 - Neutral1.1.0 compatibility; Claude Code package binding of the schema2 helper: package methodology-claude, profile colocated-in-place, roles under agents, hook-config and workflow member kinds, member count from the declared layout. Debug repair of independent Review round 2: the target candidate follows git ignore rules (STATE-102) with a declared fallback list otherwise, the candidate records exclusion_mode, ignored trees are skipped before any link check, candidate comparison uses files and digest, and the generated directory names stay excluded by name in git mode as a deliberate superset. Debug repair of independent Review and QA round 3: every git call is hermetic (core.fsmonitor off, repository-redirecting environment dropped), the package exclusion covers the ambient .DS_Store file, and the package membership refusal names the offending paths.]
+## LAST_CHANGE: [3.1.0 - Exact neutral 4.1.0 / package 3.1.0 constants; algorithms preserved; no continuation here. Earlier: 1.1.0 - Exact M30 source/neutral constants; algorithms preserved. Earlier:1.0.0 - Neutral1.1.0 compatibility; Claude Code package binding of the schema2 helper: package methodology-claude, profile colocated-in-place, roles under agents, hook-config and workflow member kinds, member count from the declared layout. Debug repair of independent Review round 2: the target candidate follows git ignore rules (STATE-102) with a declared fallback list otherwise, the candidate records exclusion_mode, ignored trees are skipped before any link check, candidate comparison uses files and digest, and the generated directory names stay excluded by name in git mode as a deliberate superset. Debug repair of independent Review and QA round 3: every git call is hermetic (core.fsmonitor off, repository-redirecting environment dropped), the package exclusion covers the ambient .DS_Store file, and the package membership refusal names the offending paths.]
 ## @modulemap
 ## FUNC 2[Attach full module documentation with no runtime effects] => run_state._module_contract
 ## FUNC 4[Stamp a chronological observation in UTC.] => run_state._stamp
@@ -109,7 +109,7 @@ GIT_PROGRAMLESS = ('--no-optional-locks', '-c', 'core.fsmonitor=false')
 # GIT_PROGRAMLESS is the fixed argument prefix of every git call: no optional locks, and the repository-configured core.fsmonitor program is switched off (a command-line value outranks repository, environment and global configuration).
 KINDS = {'skill', 'role', 'helper', 'test', 'test-guide', 'config', 'plugin-manifest', 'adapter', 'layout', 'example', 'documentation', 'hook-config', 'workflow'}
 PACKAGE_NAME = 'methodology-claude'
-PACKAGE_VERSION = '3.0.0'
+PACKAGE_VERSION = '3.1.0'
 PACKAGE_PROFILE = 'colocated-in-place'
 CONTRACT_VERSION = 'methodology-claude/1.0.0'
 ROLES = ('architect', 'coder', 'debugger', 'qa', 'reviewer', 'searcher')
@@ -483,7 +483,7 @@ def _bindings(framework, adapter, spec):
         _expect(binding.get('spec_root') == '../../', 'co-located spec_root must be ../../')
         neutral = (adapter.parent / _text(binding.get('spec_root'), 'neutral binding missing')).resolve()
         _expect(neutral.is_dir() and neutral == framework.parents[1], 'unsupported detached neutral binding')
-        _expect((neutral / 'SPEC_VERSION').read_text().strip() == binding.get('spec_version') == '4.0.0', 'neutral version mismatch')
+        _expect((neutral / 'SPEC_VERSION').read_text().strip() == binding.get('spec_version') == '4.1.0', 'neutral version mismatch')
         profile_cap = _decimal_cap(binding['parameters']['debug-entry-cap'])
         _expect(profile_cap <= 4, 'BLOCKED: adapter Debug extension unsupported')
         declared = binding.get('files')
@@ -504,7 +504,7 @@ def _bindings(framework, adapter, spec):
         neutral_rows = [_file(neutral / _relative(relative)) for relative in sorted(declared)]
         for row, relative in zip(neutral_rows, sorted(declared)):
             row['path'] = relative
-        result = {'framework': str(framework), 'adapter': _file(adapter), 'package': package, 'neutral_root': str(neutral), 'neutral_version': '4.0.0', 'neutral': neutral_rows, 'spec': _file(spec), 'core': list(CORE), 'debug_cap_profile': profile_cap, 'layout': _file(layout_path)}
+        result = {'framework': str(framework), 'adapter': _file(adapter), 'package': package, 'neutral_root': str(neutral), 'neutral_version': '4.1.0', 'neutral': neutral_rows, 'spec': _file(spec), 'core': list(CORE), 'debug_cap_profile': profile_cap, 'layout': _file(layout_path)}
         result['digest'] = _digest(result)
         logger.info('[IMP:9][_bindings][RESULT] package=%d neutral=%d', len(expected), len(neutral_rows))
         return result

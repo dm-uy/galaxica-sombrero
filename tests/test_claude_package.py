@@ -23,7 +23,7 @@
 ## A: The scanner and its canaries are the shipped privacy contract; running the real CLI proves the new carrier families
 ##    are in the same traversal without a second scanner.
 ## @changes
-## LAST_CHANGE: [2.1.0 - M37 consumer-profile membership 64 (three bin launchers, carrier, package test) and Claude 2.1.0 selectors; earlier 2.0.0 - M30 exact current release/census coupling; all prior cases/assertions/refusals retained.]
+## LAST_CHANGE: [3.1.0 - Claude 3.1.0 release selectors only; all cases and refusals retained. Earlier: 2.1.0 - M37 consumer-profile membership 64 (three bin launchers, carrier, package test) and Claude 2.1.0 selectors; earlier 2.0.0 - M30 exact current release/census coupling; all prior cases/assertions/refusals retained.]
 ## Earlier: [1.1.0 - M22 Claude package assembly oracle, refusals and publication-channel coverage.]
 ## @modulemap
 ## FUNC 7[Run the shipped conform self launcher on a copy] => test_claude_package._publication_process
@@ -128,14 +128,14 @@ def _package_assembly(root):
             raise ValueError("regular owned co-located package directory required")
         if set(p.name for p in package.parent.iterdir() if p.name != ".DS_Store") != DECLARED_PACKAGES:
             raise ValueError("unknown sibling package")
-        if not (root / "SPEC_VERSION").is_file() or (root / "SPEC_VERSION").read_text() != "4.0.0\n":
+        if not (root / "SPEC_VERSION").is_file() or (root / "SPEC_VERSION").read_text() != "4.1.0\n":
             raise ValueError("unsupported detached neutral dependency")
         if not all((root / rel).is_file() and "status: draft\n" in (root / rel).read_text() for rel in CORE):
             raise ValueError("missing substantive neutral core")
         operation = "Layout"
         layout = json.loads((package / "references/package-layout.json").read_text())
         if (not isinstance(layout, dict) or set(layout) != {"package", "version", "profile", "files", "roles"}
-                or layout.get("package") != "methodology-claude" or layout.get("version") != "3.0.0"
+                or layout.get("package") != "methodology-claude" or layout.get("version") != "3.1.0"
                 or layout.get("profile") != "colocated-in-place" or layout.get("roles") != ROLES):
             raise ValueError("unsupported package profile")
         rows = layout.get("files")
@@ -178,7 +178,7 @@ def _package_assembly(root):
             raise ValueError("missing or undeclared actual package member")
         operation = "Metadata"
         plugin = json.loads((package / ".claude-plugin/plugin.json").read_text())
-        if plugin.get("name") != "methodology-claude" or plugin.get("version") != "3.0.0":
+        if plugin.get("name") != "methodology-claude" or plugin.get("version") != "3.1.0":
             raise ValueError("native metadata identity mismatch")
         LOGGER.info("[IMP:9][_package_assembly][VALIDATION_SUCCESS] members=%d", len(actual))
         return declared

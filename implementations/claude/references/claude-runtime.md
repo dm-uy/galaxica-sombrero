@@ -1,6 +1,6 @@
-# Claude Code runtime — methodology-claude 3.0.0
+# Claude Code runtime — methodology-claude 3.1.0
 
-This is the runtime procedure of the native Claude Code package for neutral methodology 4.0.0. It says how Claude Code carries the neutral rules; it restates none of them. Where this file and a neutral owner seem to differ, the neutral owner wins and the difference is a package defect.
+This is the runtime procedure of the native Claude Code package for neutral methodology 4.1.0. It says how Claude Code carries the neutral rules; it restates none of them. Where this file and a neutral owner seem to differ, the neutral owner wins and the difference is a package defect.
 
 ## 1. Profile and binding
 
@@ -65,6 +65,10 @@ python3 ${CLAUDE_PLUGIN_ROOT}/skills/feature-dev/scripts/run_state.py record --s
 ```
 
 State lives at `<target>/.methodology/runs/<run-id>/state.json` (schema 2, atomic UTF-8). The ordinary route is Bootstrap → Architect → Code → QA → Review → separately assigned Architect Finalize → SUCCESS. Code, QA and Review defects share one cumulative Debug allowance: default 4, lowered to any nonnegative integer (0 valid); an extension above 4 is BLOCKED because the package has no supported bounded grant mechanism yet. The spend is recorded before each entry and never refunded. Debug FIXED renews full independent QA and the affected Review. Each phase attempt gets at most one response correction; a second unusable return ends BLOCKED, or ESCALATED_FINALIZE in Finalize. An unknown side-effect outcome is investigated before any replay. Terminal statuses are SUCCESS, SPEC_BLOCKED, VISUAL_GATE_FAIL, ESCALATED, BLOCKED, ERROR and ESCALATED_FINALIZE; a terminal run never resumes automatically. Before resuming, run `show`, inspect the real artifacts and keep every counter and history entry. The helper checks structure and order; it proves neither the truth of a return, nor independence, nor consent.
+
+Helper limits, for the comparison `checks/preflight.md` PREFLIGHT-204 requires: `run_state.py --help` lists its only operations, `init`, `show` and `record`, and there is no capability command. The helper and the Workflow spine have no continuation operation, no historical import, no Debug extension above 4 and no dispatch reservation record. The resume of a RUNNING run described above stays. Owner-approved continuation under `flow/run-state.md` STATE-702 can start only as a fresh `init` from Bootstrap: the helper inherits no spend or history and does not charge a repair made by the successor's Code. As this package's conservative reading of STATE-702 and STATE-305, the root records the authorization and causal link and decides before `init` whether the successor's Code will repair the inherited cause; if so, that repair counts as one entry. It passes `--max-debug` equal to the allowance minus prior spend minus that counted repair. The helper cannot check this count, and a cap cannot change after `init`, so a repair found later, or a result below zero, has no supported route here and stays with the owner.
+
+The helper accepts only its own ledgers under its current binding. A run started under an earlier package stays bound to that package: `show` and `record` refuse here. A refused `record` still appends its diagnostic to any shape-valid schema 2 ledger, including another package's; a schema 3 ledger stays byte-identical.
 
 ## 7. QA scans and delivery evidence
 

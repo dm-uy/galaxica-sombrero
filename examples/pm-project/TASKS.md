@@ -1,5 +1,34 @@
 # Current maintainer tasks
 
+## CONT-BOUND — bounded continuation and earlier verification
+
+Owner request, 2026-11-03: «Давай подготовим спецификацию доработок методологии: А и Б — одним ограниченным изменением, В–Д — уточнениями существующих правил. Сначала проведи необходимый recon, без реализации.» Preparation only. The later owner clarification selects Codex executable work and explanatory transfer instructions for separate Claude/DSH agents; it does not authorize implementation, consumer repair, main merge, push or installation.
+
+| Task | State | Finish / next action |
+|---|---|---|
+| CONT-BOUND-T1 — source/data/decision reconnaissance | Complete locally | [RECON](notes/RECON_2026-11-03_bounded-continuation.md), independent source lanes and fresh completeness check; all four findings reconciled and bounded delta verified. Source unchanged. |
+| CONT-BOUND-T2 — resolve spec-affecting questions and draft specification | Complete; owner approved2026-11-04 | ONE authorized Q-REPRESENTATION/Q-ROLLOUT packet, preserved originals/HOLD/evaluation and root A choice; [approved specification](specs/bounded-continuation.md) passed original independent document review. Later authentic approval and lighter procedure supersede its preparation-only stage; implementation/result is recorded below. |
+
+### Implementation approval — 2026-11-04
+
+Owner approved the exact specification and then the lighter procedure: short plan, root Codex implementation, checks and one independent review. Merge/installation remain separate; sibling code belongs to other agents. Earlier pending statements above are historical preparation receipts.
+
+| Task | State | Finish / next action |
+|---|---|---|
+| CONT-BOUND-T3 — Codex candidate | Checked locally | [Result](notes/bounded-continuation-result.md): schema3/helper/callers/rules, full Codex200 passed, root614+2 known held/baseline failures, maps and real CLI/native proofs. |
+| CONT-BOUND-T4 — independent review and owner result | Review complete; owner result pending | Same reviewer closed F1–F6; [final judgment](notes/bounded-continuation-review-final.md). Shared rollout/merge/install held for exact external compatibility and combined validation; no overall acceptance claimed. |
+
+### Claude ordinary compatibility — 2026-11-04
+
+Owner: «надо доработать наш плагин с методологией», pointing at the transfer briefs, then «Сначала совместимость». Ordinary compatibility only, on a lighter procedure with one independent reviewer. Merge, push and installation remain separate.
+
+| Task | State | Finish / next action |
+|---|---|---|
+| CONT-BOUND-T5 — Claude 3.1.0 ordinary compatibility | Checked locally; owner result pending | [Result](notes/bounded-continuation-claude-compat.md) on `claude/cont-bound-compat`: Claude 548, root 616 and Codex 201 passed; live native session and real helper route observed; review findings dispositioned, with the notes left open stated in the result. |
+| CONT-BOUND-T6 — DSH compatibility | On draft PR 21; owner result pending | Branch `dsh/continuation`, by a separate agent, carries DSH 5.0.0 from the same base. On the Claude branch alone its package suite fails 83 of 146 on the version pin; a trial merge of both passes all four suites and a live Claude session. |
+| CONT-BOUND-T7 — findings outside the Claude package | Open | Stale Codex stamps corrected and guarded at the owner's word on 2026-11-04. Still open: Codex carrier wording, the missing `continuation.py` disposition row and the smoke specification's admissions path; the same stamp guard for DSH; neutral homes for the ledger rule and for counting a successor's Code repair; stranding of in-flight runs by in-place releases. [Details](notes/bounded-continuation-claude-compat.md#findings-for-other-owners). |
+| CONT-BOUND-T8 — continuation port to Claude | Not selected | Separate owner decision; the ledger that motivated continuation is Codex's, so this port would not serve it. |
+
 ## RECON-DEC — reviewed RECON forks and owner-authorized brainstorm
 
 Owner request, 2026-11-03: prepare a specification for explicit forks in RECON, independent completeness verification, and owner agreement before launching brainstorm so downstream project specifications contain worked-through decisions. Initial grant: preparation only. On 2026-11-03 the owner approved removing the full feature-dev procedure and implementing the bounded change with affected checks, independent review and a small behavioral probe. Merge, push and installation remain separate.

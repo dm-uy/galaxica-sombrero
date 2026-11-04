@@ -19,7 +19,7 @@
 ## Q: Why presence only for project records?
 ## A: Orientation needs to know which records exist so the root can read them deliberately under the orient check; copying private content into every session start context would be unrequested disclosure.
 ## @changes
-## LAST_CHANGE: [1.1.0 - Exact M30 package source constant; executable functions unchanged. Earlier:1.0.0 - Initial in-place binding check and project record presence for the first native Claude Code package.]
+## LAST_CHANGE: [3.1.0 - Exact package source constant; executable functions unchanged. Earlier: 1.1.0 - Exact M30 package source constant; executable functions unchanged. Earlier:1.0.0 - Initial in-place binding check and project record presence for the first native Claude Code package.]
 ## @modulemap
 ## FUNC 2[Attach full module documentation with no runtime effects] => session_start._module_contract
 ## FUNC 6[Resolve the package root from the environment or the script location] => session_start.resolve_package_root
@@ -56,7 +56,7 @@ logger = logging.getLogger("session_start")
 logger.addHandler(logging.NullHandler())
 
 PACKAGE_NAME = "methodology-claude"
-PACKAGE_VERSION = "3.0.0"
+PACKAGE_VERSION = "3.1.0"
 PACKAGE_PROFILE = "colocated-in-place"
 SPEC_ROOT = "../../"
 CORE_OWNERS = ("concepts/principles.md", "roles/_base.md", "code/exoskeleton.md", "code/ldd.md", "code/doxygen.md", "code/tests.md")
@@ -417,7 +417,7 @@ def _clip(text, limit):
 ## @purpose Compose the one bounded text the session receives, either the bound statement with the reading duty or the BLOCKED statement with every reason.
 ## @uses session_start._record_line, session_start._clip
 ## @io Input: ok bool; reasons list of str; facts dict as returned by session_start.check_binding (may be empty); orientation dict or None. Output: str of at most 1500 characters.
-##   Side effects: none. Guarantees: the bound text holds the sentence methodology-claude 1.0.0 bound in place to neutral methodology and the neutral version at the absolute neutral root, the duty to read references/claude-runtime.md and the six core owners in full, and the orient pointer; the BLOCKED text holds the reasons and the instruction never to fall back to another installed copy, with reasons clipped before the instruction is.
+##   Side effects: none. Guarantees: the bound text holds the sentence methodology-claude and its package version bound in place to neutral methodology and the neutral version at the absolute neutral root, the duty to read references/claude-runtime.md and the six core owners in full, and the orient pointer; the BLOCKED text holds the reasons and the instruction never to fall back to another installed copy, with reasons clipped before the instruction is.
 ##   Raises: KeyError for ok True with facts lacking package_root, neutral_root or spec_version. System importance: 9. Example: ok False with reasons naming a missing SPEC_VERSION returns a text starting methodology-claude binding BLOCKED.
 ## @complexity 5
 def render_context(ok, reasons, facts, orientation):
