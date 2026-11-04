@@ -1,7 +1,7 @@
 {
   "harness": "methodology-dsh",
   "owner": "Methodology DSH package maintainers",
-  "spec_version": "4.0.0",
+  "spec_version": "4.1.0",
   "spec_root": "../../",
   "parameters": {
     "dialog-language": "Russian unless controlling owner/project instructions select otherwise",
@@ -38,7 +38,7 @@
       "fallback": "No executable hook is shipped by this package; a behavioural tripwire or manual audit cannot claim hard interception."
     },
     "run-state-persist": {
-      "mechanism": "A single root writer uses `skills/feature-dev/scripts/run_state.py` schema 2, atomic UTF-8, under the target's `.methodology/runs/<run-id>/`, preserving accepted and refused history and current locks.",
+      "mechanism": "A single root writer uses `skills/feature-dev/scripts/run_state.py` schema 3, atomic UTF-8 authority at the target's `.methodology/lineages/<causal-id>/state.json` with specification admissions under `.methodology/admissions/`, preserving accepted and refused history and current locks. Historical schema2 runs are read-only inputs to the explicitly supported continuation bridge.",
       "fallback": "An unreadable, corrupt or old-schema ledger blocks dependent continuation; no fabricated replacement and no silent reset or migration."
     },
     "workflow-orchestration": {

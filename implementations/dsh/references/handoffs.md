@@ -57,9 +57,27 @@ python3 FRAMEWORK_ROOT/skills/feature-dev/scripts/run_state.py show --state STAT
 python3 FRAMEWORK_ROOT/skills/feature-dev/scripts/run_state.py record --state STATE --result VERIFIED_PHASE_JSON
 ```
 
-Resolve placeholders to actual authorized paths before execution; proposals are NOT_RUN. State `.methodology/runs/RUN_ID/state.json`, schema2. show validates current locks/resume without writes. Success0 JSON stdout, refusal2 with safe diagnostics stderr; record may retain refusal chronology while accepted progress/counters stay unchanged. No unreadable ledger replacement. Debug cap plain nonnegative int/strict decimal CLI default4, zero valid, bool/negative/fraction/unsupported extension refuse. Root persists spend before each Code/QA/Review-origin entry, retained once on failure/resume. Retry units separate; terminal/schema1/stale/malformed/unsafe artifacts refuse, never reset. The helper cannot authenticate an arbitrary approval string or judge mental reading/isolation; actual parent evidence remains required.
+Resolve placeholders to actual authorized paths before execution; proposals are NOT_RUN. Canonical state `.methodology/lineages/CAUSAL_ID/state.json`, schema3; `.methodology/runs/` is historical-only. show validates current locks/resume without writes. Success0 JSON stdout, refusal2 with safe diagnostics stderr; record may retain refusal chronology while accepted progress/counters stay unchanged. No unreadable ledger replacement. Debug cap plain nonnegative int/strict decimal CLI default4, zero valid, bool/negative/fraction/unsupported extension refuse. Root persists spend before each Code/QA/Review-origin entry, retained once on failure/resume. Retry units separate; terminal/schema1/stale/malformed/unsafe artifacts refuse, never reset. The helper cannot authenticate an arbitrary approval string or judge mental reading/isolation; actual parent evidence remains required.
 
-Source release is package4.0.0 over neutral4.0.0; contractVersion remains methodology-dsh/2.0.0 and schema2. Source release and wire identity are separate; old input locks are not migrated.
+Source release is package5.0.0 over neutral4.1.0; contractVersion remains methodology-dsh/2.0.0, persistent schema3 is current and schema2 is historical-only. Source release and wire identity are separate; old input locks are not migrated.
+
+## Bounded continuation (DSH5.0 / schema3)
+
+New operations use the enrolled schema3 lineage authority and immutable closed artifacts. Read the complete schema3 continuation and pre-dispatch section in [dsh-runtime.md](dsh-runtime.md) before execution; older schema2/no-extension descriptions in this document describe the historical profile and are superseded for DSH5 operations. Native role wire/default allowance remain unchanged.
+
+```text
+python3 FRAMEWORK_ROOT/skills/feature-dev/scripts/run_state.py capabilities
+python3 FRAMEWORK_ROOT/skills/feature-dev/scripts/run_state.py init --project TARGET --spec SPEC --approval AUTHENTIC_APPROVAL_REFERENCE --framework FRAMEWORK_ROOT --adapter ADAPTER --plan PLAN --run-id RUN_ID [--max-debug 4]
+python3 FRAMEWORK_ROOT/skills/feature-dev/scripts/run_state.py show --state AUTHORITY
+python3 FRAMEWORK_ROOT/skills/feature-dev/scripts/run_state.py continue --predecessor TERMINAL --request PARENT_JSON
+python3 FRAMEWORK_ROOT/skills/feature-dev/scripts/run_state.py reserve --state AUTHORITY --request RESERVATION_JSON
+python3 FRAMEWORK_ROOT/skills/feature-dev/scripts/run_state.py released --state AUTHORITY --request RELEASE_JSON
+python3 FRAMEWORK_ROOT/skills/feature-dev/scripts/run_state.py record --state AUTHORITY --result VERIFIED_PHASE_JSON
+python3 FRAMEWORK_ROOT/skills/feature-dev/scripts/run_state.py recover --state AUTHORITY --request RECOVERY_JSON
+python3 FRAMEWORK_ROOT/skills/feature-dev/scripts/run_state.py episode --state AUTHORITY --request EPISODE_JSON
+```
+
+Supported historical profiles are the complete native-only DSH4.0/4.1 schema2 terminal and this contract's own schema3 terminal. No Codex/Claude ledger, external parent wallet or active schema2 migration is admitted. Shared integration, installation and any consumer migration remain separate matching decisions.
 
 ## Historical C2 consumer route (retained scope)
 
@@ -69,4 +87,4 @@ Source2.2 adds the opt-in methodology-consumer-pm/1.0.0 carrier at references/co
 
 At the consequential-open trigger load full `prompting/brainstorm.md` through the current adapter binding. The authorized root coordinates its independent packet using the actual native collaboration mechanism; inner roles request it. Carry existing evidence references in the brief/plan/DEC/task, never a new canonical field or phase. Missing required proof holds dependent readiness; preserve reasoned routine/settled/forced exclusions and actual actor/source limits.
 
-Current M30 binding: neutral2.0.0/source2.4.0; wire2.0/schema2 and C2 consumer mechanisms remain unchanged. The historical C2 paragraph above describes its accepted1.1/2.2 release, not current version acceptance. Consequential decisions load the current full brainstorm owner.
+M30 checkpoint binding (historical): neutral2.0.0/source2.4.0; wire2.0/schema2 and C2 consumer mechanisms remain unchanged. The historical C2 paragraph above describes its accepted1.1/2.2 release, not current version acceptance. Consequential decisions load the current full brainstorm owner.
