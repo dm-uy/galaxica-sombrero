@@ -8,7 +8,7 @@ This is a reusable specification template. Before launch, root binds actual abso
 
 ## Context and required behavior
 
-Create a local console utility with importable `build_inventory` and actual CLI. Inputs are the real candidate `references/package-layout.json` and actual package-root regular file bytes. Do not copy assumed hashes/counts into code/tests or substitute a fixtures-only package. Read complete actual layout, validate declared profile/name/version/path/kind structure and every member before producing an accepted output. All47 currently declared rows, including layout and plugin manifest themselves, have derived size and SHA256 of actual bytes, sorted unique relative paths and source-derived file/skill/role/helper counts. Output records the actual input identities/profile; no embedded layout selfhash is required or introduced.
+Create a local console utility with importable `build_inventory` and actual CLI. Inputs are the real candidate `references/package-layout.json` and actual package-root regular file bytes. Do not copy assumed hashes/counts into code/tests or substitute a fixtures-only package. Read complete actual layout, validate declared profile/name/version/path/kind structure and every member before producing an accepted output. All currently declared rows, including layout and plugin manifest themselves, have derived size and SHA256 of actual bytes, sorted unique relative paths and source-derived file/skill/role/helper counts. Output records the actual input identities/profile; no embedded layout selfhash is required or introduced.
 
 Actual entry:
 `python3 inventory_report.py --layout CANDIDATE_LAYOUT --package-root CANDIDATE_PACKAGE --output output/inventory.json`
@@ -34,7 +34,7 @@ Only these12 exact target-relative source paths may be created/changed:
 11. Doxyfile
 12. .gitignore
 
-Generated effects are `.methodology/runs/<same-run-id>/`, `output/inventory.json`, `doxygen_output/` and explicitly assigned owned private receipts/basetemp. Root owns state; candidate package, neutral subjects, approved spec and foreign trees are read-only. No Git/index/ref mutation by inner actors, source additions outside12, third helper, install/hooks/MCP/marketplace/server/credentials/provider changes. Preserve exact source scope and actual generated exclusions in state without hiding source changes.
+Generated effects are `.methodology/lineages/<same-causal-id>/`, `output/inventory.json`, `doxygen_output/` and explicitly assigned owned private receipts/basetemp. Root owns state; candidate package, neutral subjects, approved spec and foreign trees are read-only. No Git/index/ref mutation by inner actors, source additions outside12, third helper, install/hooks/MCP/marketplace/server/credentials/provider changes. Preserve exact source scope and actual generated exclusions in state without hiding source changes.
 
 ## Requirements and acceptance
 

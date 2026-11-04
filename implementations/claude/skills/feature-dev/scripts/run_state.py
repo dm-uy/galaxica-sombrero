@@ -8,7 +8,7 @@
 ## @links_to_spec M22 specification section 2 Mechanics; requirements BR-3 and BR-4; flow/run-state.md STATE-102 and STATE-501; code/tests.md TST-501
 ## @invariants
 ## - Current neutral role/phase/scan/gate owners remain controlling; structural checks never prove human authority or role independence.
-## - The package identity is PACKAGE_NAME at PACKAGE_VERSION with the colocated-in-place profile and the run contract methodology-claude/1.0.0; the state contract is schema2 and matches the sibling package helper except that the candidate record carries one added key, exclusion_mode, which candidate comparison ignores.
+## - The package identity is PACKAGE_NAME at PACKAGE_VERSION with the colocated-in-place profile and the run contract methodology-claude/1.0.0; the state contract is schema2, derived from the sibling package's schema2 helper with one added candidate key, exclusion_mode, which candidate comparison ignores; the sibling's later schema3 ledger is refused here.
 ## - The package member count is whatever the declared layout lists and must equal the actual package inventory; no literal count is trusted.
 ## - Debug allowance is a nonnegative plain integer, zero is valid, the default is four, and an adapter extension above four is BLOCKED.
 ## - For a target that is the top level of its own git work tree the candidate is tracked plus untracked non-ignored content (STATE-102) minus the generated directory names: what git reports as ignored is excluded, and an ignored directory is skipped wholesale, with no descent and no link refusal inside it.
@@ -22,7 +22,7 @@
 ## - Private locators/payloads/credentials are absent from source; logs use safe logical classes/counts.
 ## @rationale
 ## Q: Why a second copy of the state helper rather than a shared one?
-## A: The sibling package helper is outside this package's scope; a shared extraction would change that package and is a separate decision. This copy binds its own identity and keeps the state contract unchanged apart from the recorded exclusion mode, so either runtime reads the same ledger shape.
+## A: The sibling package helper is outside this package's scope; a shared extraction would change that package and is a separate decision. This copy binds its own identity and keeps its own schema2 state contract with the recorded exclusion mode; each helper accepts only its own ledgers.
 ## Q: Why take the member count from the declared layout?
 ## A: The layout already declares the exact member list and the helper compares it with the real inventory in both directions; a second literal count could only drift from it.
 ## Q: Why preserve unavailable/unsupported limits?

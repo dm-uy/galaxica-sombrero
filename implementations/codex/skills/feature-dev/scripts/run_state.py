@@ -667,7 +667,7 @@ def _artifact(state, value):
 # region FUNC__evidence [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Validate every actual nonempty contained evidence reference.
 ## @uses run_state._artifact, run_state._expect
-## @io state schema2 target binding; values nonempty list of artifact path strings. Returns ordered list of full file identities. ValueError for empty/non-list/unsafe/absent artifacts; OSError on read error. Reads only, does not mutate list. Example: [owned evidence path] returns one verified identity. Importance:9.
+## @io state schema3 target binding; values nonempty list of artifact path strings. Returns ordered list of full file identities. ValueError for empty/non-list/unsafe/absent artifacts; OSError on read error. Reads only, does not mutate list. Example: [owned evidence path] returns one verified identity. Importance:9.
 ## @complexity 5
 def _evidence(state, values):
     # START_BLOCK_Validation
@@ -755,7 +755,7 @@ def _doxygen(state, value):
 # region FUNC__payload [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Validate canonical phase-dependent return evidence and all eight named QA rows.
 ## @uses run_state._typed_fields, run_state._evidence, run_state._artifact, run_state._doxygen, run_state._expect, run_state._text
-## @io state current schema2; result existing canonical role dict. Returns None after exact known-field/status-dependent validation; QA scans is exactly eight id/status/reason/evidence list rows, findings structured; SUCCESS cannot contain FAIL/BLOCKED. All phase payloads retain actual defined types/artifacts. Accepted Code prohibition is revalidated using unchanged whole-rule identity and current candidate; Finalize may omit doxygenPath only under that valid conditional exception. ValueError/KeyError/TypeError on malformed fields and OSError on evidence access. Reads only, no input mutation; semantic applicability/consent/native independence is parent-owned. Example: ordinal "1" scan refuses. Importance:9. Complexity9 reflects distinct required payload and applicability branches, kept explicit to prevent permissive dispatch.
+## @io state current schema3; result existing canonical role dict. Returns None after exact known-field/status-dependent validation; QA scans is exactly eight id/status/reason/evidence list rows, findings structured; SUCCESS cannot contain FAIL/BLOCKED. All phase payloads retain actual defined types/artifacts. Accepted Code prohibition is revalidated using unchanged whole-rule identity and current candidate; Finalize may omit doxygenPath only under that valid conditional exception. ValueError/KeyError/TypeError on malformed fields and OSError on evidence access. Reads only, no input mutation; semantic applicability/consent/native independence is parent-owned. Example: ordinal "1" scan refuses. Importance:9. Complexity9 reflects distinct required payload and applicability branches, kept explicit to prevent permissive dispatch.
 ## @complexity 9
 def _payload(state, result):
     phase, status = result['phase'], result['status']

@@ -39,6 +39,7 @@
 ## FUNC 7[List lost statements of the four additive duties and helper limits] => _carrier_problems
 ## FUNC 9[Additive duties reach their carriers; removal and inversion refused] => test_additive_duties_reach_their_carriers
 ## FUNC 9[Capability claim matches the shipped helper CLI] => test_capability_claim_matches_the_shipped_helper
+## FUNC 7[List free-text release stamps lost from their carriers] => _stamp_problems
 ## FUNC 8[Stale free-text release stamps refused] => test_release_stamps_match_package_identity
 ## @usecases
 ## - [test_layout_matches_members]: QA → compare declared and real package members → missing or undeclared member refused
@@ -345,11 +346,16 @@ INVERSIONS = (
 )
 REFUSED_OPERATIONS = ("capabilities", "continue", "reserve", "released", "recover", "episode")
 WORKFLOW_ARGS = "const KNOWN_ARGS = ['spec', 'target', 'plan', 'approval', 'runId', 'framework', 'scratch', 'maxDebug', 'dialogLang', 'recordState']"
-# Free-text release stamps no other check reads. Their expected text is built from the layout and adapter identity.
+# Free-text release stamps. Their expected text is built from the layout and adapter identity.
 STAMPS = {
-    "skills/semantic-exoskeleton/SKILL.md": "METHODOLOGY_VERSION: {neutral}. Package binding: methodology-claude {version}, run-state contract methodology-claude/1.0.0, schema 2, colocated-in-place.",
-    "skills/devplan-protocol/SKILL.md": "Stamp the neutral METHODOLOGY_VERSION ({neutral}) and the identities in play: package methodology-claude {version},",
+    "README.md": "Native Claude Code package {version} for the neutral methodology {neutral} of this repository.",
+    "references/adoption.md": "# Pointwise adoption — neutral {neutral} / methodology-claude {version}\n",
+    "references/claude-runtime.md": "# Claude Code runtime — methodology-claude {version}\n",
     "references/consumer-pm-profile.md": "# Consumer PM profile for Claude Code — methodology-claude {version}\n",
+    "references/handoffs.md": "The helper binds the package identity (`methodology-claude` {version}, profile `colocated-in-place`,",
+    "references/source-disposition.md": "# Source disposition — methodology-claude {version}\n",
+    "skills/devplan-protocol/SKILL.md": "Stamp the neutral METHODOLOGY_VERSION ({neutral}) and the identities in play: package methodology-claude {version},",
+    "skills/semantic-exoskeleton/SKILL.md": "METHODOLOGY_VERSION: {neutral}. Package binding: methodology-claude {version}, run-state contract methodology-claude/1.0.0, schema 2, colocated-in-place.",
 }
 
 
@@ -460,29 +466,52 @@ def test_capability_claim_matches_the_shipped_helper(tmp_path, caplog):
 # endregion FUNC_test_capability_claim_matches_the_shipped_helper
 
 
+# region FUNC__stamp_problems [DOMAIN(8): ClaudePackage; CONCEPT(9): Identity, Verification; TECH(7): Python, pytest]
+## @purpose List the free-text release stamps lost from their carriers for one identity.
+## @uses test_package_contract.LOGGER
+## @io texts dict of package-relative path to str; identity dict of version and neutral str. Output: sorted list of "path: statement" for every STAMPS statement absent from its carrier, empty when all agree.
+##   Side effects: logs the count only. Guarantees: a finite exact recognizer under TST-1001; it detects a lost statement, not a contrary sentence beside it, and never proves other text current. System importance: 7.
+##   Example: a runtime heading saying methodology-claude 3.0.0 under identity version 3.1.0 yields that carrier's statement.
+## @complexity 3
+def _stamp_problems(texts, identity):
+    # START_BLOCK_BusinessLogic
+    statements = {path: stamp.format(**identity) for path, stamp in STAMPS.items()}
+    problems = sorted(path + ": " + statement.strip() for path, statement in statements.items() if statement not in texts[path])
+    LOGGER.info("[IMP:7][_stamp_problems][RESULT] problems=%d", len(problems))
+    return problems
+    # END_BLOCK_BusinessLogic
+# endregion FUNC__stamp_problems
+
+
 # region FUNC_test_release_stamps_match_package_identity [DOMAIN(8): ClaudePackage; CONCEPT(9): Identity, Verification; TECH(7): Python, pytest]
 ## @purpose Refuse a stale free-text release stamp that every other package check leaves green.
-## @uses _show, json.loads
-## @io caplog -> None after every STAMPS statement, built from the layout version and the adapter spec_version, is in its carrier and each carrier holding an older identity in memory loses it.
-##   Side effects: reads package files only. Guarantees: a finite exact recognizer under TST-1001; it never proves other text current. Raises: AssertionError naming the lost statement. System importance: 8.
-## @complexity 3
+## @uses test_package_contract._stamp_problems, test_package_contract._show, json.loads
+## @io caplog -> None after every STAMPS statement, built from the layout version and the adapter spec_version, is in its carrier and each of the 12 per-field controls in memory is named by the same predicate.
+##   Side effects: reads package files only. Guarantees: controls reach the predicate that judges the real text, so a blinded predicate fails here. Raises: AssertionError naming the lost statement. System importance: 8.
+##   Example: restoring methodology-claude 3.0.0 in the exoskeleton stamp names that statement.
+## @complexity 4
 def test_release_stamps_match_package_identity(caplog):
     # START_BLOCK_Validation
     caplog.set_level(logging.INFO, logger=LOGGER.name)
-    version = json.loads((PACKAGE / "references/package-layout.json").read_text(encoding="utf-8"))["version"]
-    neutral = json.loads((PACKAGE / "adapter.json").read_text(encoding="utf-8"))["spec_version"]
-    statements = {path: stamp.format(version=version, neutral=neutral) for path, stamp in STAMPS.items()}
+    identity = {"version": json.loads((PACKAGE / "references/package-layout.json").read_text(encoding="utf-8"))["version"],
+                "neutral": json.loads((PACKAGE / "adapter.json").read_text(encoding="utf-8"))["spec_version"]}
     texts = {path: (PACKAGE / path).read_text(encoding="utf-8") for path in STAMPS}
     # END_BLOCK_Validation
     # START_BLOCK_BusinessLogic
-    lost = sorted(path + ": " + statement.strip() for path, statement in statements.items() if statement not in texts[path])
-    undetected = sorted(path for path, statement in statements.items()
-                        if statement in texts[path].replace(version, "0.0.0").replace(neutral, "0.0.0"))
-    LOGGER.info("[IMP:9][test_release_stamps_match_package_identity][COMPARE] stamps=%d lost=%d undetected=%d", len(statements), len(lost), len(undetected))
+    lost = _stamp_problems(texts, identity)
+    controls = [(path, field) for path, stamp in STAMPS.items() for field in identity if "{%s}" % field in stamp]
+    undetected = []
+    for path, field in controls:
+        statement = STAMPS[path].format(**identity)
+        stale = texts[path].replace(statement, STAMPS[path].format(**{**identity, field: "0.0.0"}))
+        if path + ": " + statement.strip() not in _stamp_problems({**texts, path: stale}, identity):
+            undetected.append((path, field))
+    LOGGER.info("[IMP:9][test_release_stamps_match_package_identity][COMPARE] stamps=%d lost=%d controls=%d undetected=%d", len(STAMPS), len(lost), len(controls), len(undetected))
     _show(caplog.records)
     # END_BLOCK_BusinessLogic
     # START_BLOCK_Result
     assert lost == []
+    assert len(controls) == 12
     assert undetected == []
     assert not [record for record in caplog.records if record.levelno >= logging.ERROR]
     # END_BLOCK_Result

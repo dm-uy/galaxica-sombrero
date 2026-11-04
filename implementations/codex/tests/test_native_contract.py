@@ -45,9 +45,16 @@ import continuation
 
 logger=logging.getLogger(__name__)
 PACKAGE=Path(__file__).resolve().parents[1]
-EXOSKELETON='skills/semantic-exoskeleton/SKILL.md'
-CONSUMER_PROFILE='references/consumer-pm-profile.md'
-ADOPTION='references/adoption.md'
+PERSIST='Single root writer candidate run_state.py schema{schema} atomic UTF8 .methodology/lineages with complete accepted/refused history/current locks.'
+# Free-text release stamps. Expected text is built from the actual layout, adapter and helper identity; historical bindings elsewhere keep their stated release.
+STAMPS={'README.md':('Native Codex implementation package{version} for neutral methodology{neutral}.','Current source candidate is{version} over neutral{neutral}. Wire {wire} remains unchanged; persistence is schema{schema};','Package{members} members,'),
+        'references/adoption.md':('# Pointwise source adoption — neutral{neutral} / package{version}\n',PERSIST),
+        'references/codex-runtime.md':('# Native Codex runtime — package{version}\n','with current neutral{neutral}.','Codex{version} uses neutral{neutral} and persistent schema{schema}; canonical role-return wire remains {wire}.'),
+        'references/consumer-pm-profile.md':('source package{version} over neutral{neutral}.','Wire {wire} remains unchanged; persistence is schema{schema}.'),
+        'references/handoffs.md':('Source candidate is package{version} over neutral{neutral}; contractVersion remains {wire}, persistent schema{schema}.',),
+        'references/source-disposition.md':('Current source{version} has{members} members,','current schema{schema} immutable inputs','current neutral{neutral}.','Layout contains all{members} exact paths/kinds'),
+        'skills/feature-dev/SKILL.md':('Codex{version} uses neutral{neutral} and persistent schema{schema}; canonical role-return wire remains {wire}.',),
+        'skills/semantic-exoskeleton/SKILL.md':('METHODOLOGY_VERSION: {neutral}\n','Package binding: methodology-codex{version}, schema{schema}, colocated-explicit-source.')}
 TOPICS={'pm-bootstrap','pm-plan-batch','pm-run-batch','pm-handoff','analyzer','ax-ui-contract','brainstorm','brownfield-spec-template','code-review','data-transform','devplan-protocol','document-protocol','durable-layer','feature-dev','graph-protocol','greenfield-bootstrap','hitl-gates','pm','prod-log-vacuum','prompting','prompting-agent-design','prompting-decompose','prompting-markup','prompting-verify','roadmap','semantic-exoskeleton','spec-recon'}
 
 
@@ -116,17 +123,14 @@ def test_actual_layout_and_adapter_contract(caplog):
 
 # region FUNC__stamp_problems [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose List free-text release stamps that differ from the given actual identity.
-## @uses none
-## @io texts dict of package-relative path to text; mechanism str, the adapter run-state-persist row; version and neutral str; schema int. Returns the list of lost statements, empty when every stamp agrees. No side effects. A finite exact recognizer under TST-1001: it never proves other text current.
+## @uses logger.info
+## @io texts dict of package-relative path to text; mechanism str, the adapter run-state-persist row; identity dict of version, neutral, schema, wire and members. Returns the list of lost statements, empty when every stamp agrees. Logs the count only. A finite exact recognizer under TST-1001: it detects a lost statement, not a contrary sentence beside it, and never proves other text current. Example: a consumer profile saying package4.0.0 under identity version 5.0.0 yields its statement.
 ## @complexity 3
-def _stamp_problems(texts,mechanism,version,neutral,schema):
+def _stamp_problems(texts,mechanism,identity):
     # START_BLOCK_BusinessLogic
-    persist=f'Single root writer candidate run_state.py schema{schema} atomic UTF8 .methodology/lineages with complete accepted/refused history/current locks.'
-    expected={EXOSKELETON:(f'METHODOLOGY_VERSION: {neutral}\n',f'Package binding: methodology-codex{version}, schema{schema}, colocated-explicit-source.'),
-              CONSUMER_PROFILE:(f'source package{version} over neutral{neutral}.',f'Wire methodology-codex/2.0.0 remains unchanged; persistence is schema{schema}.'),
-              ADOPTION:(persist,)}
-    problems=[f'{path}: {statement.strip()}' for path,statements in expected.items() for statement in statements if statement not in texts[path]]
-    if mechanism!=persist:problems.append(f'adapter.json: {persist}')
+    problems=[f'{path}: {statement.strip()}' for path,stamps in STAMPS.items() for statement in (stamp.format(**identity) for stamp in stamps) if statement not in texts[path]]
+    if mechanism!=PERSIST.format(**identity):problems.append(f'adapter.json: {PERSIST.format(**identity)}')
+    logger.info('[IMP:7][_stamp_problems][RESULT] problems=%d',len(problems))
     return problems
     # END_BLOCK_BusinessLogic
 # endregion FUNC__stamp_problems
@@ -134,30 +138,36 @@ def _stamp_problems(texts,mechanism,version,neutral,schema):
 # region FUNC_test_release_stamps_match_package_identity [DOMAIN(8): NativeMethodology; CONCEPT(9): Identity, Verification; TECH(7): Python]
 ## @purpose Refuse a stale free-text release stamp that every other package check leaves green.
 ## @uses test_native_contract._stamp_problems, continuation.capabilities, json.loads
-## @io Input: caplog: pytest.LogCaptureFixture. Output: None after the helper's capabilities answer equals the layout and adapter identity, the actual carriers have no problem against that identity, and each of the eight stamp controls in memory is refused. Reads package files only. Raises AssertionError on any difference.
-## @complexity 4
+## @io Input: caplog: pytest.LogCaptureFixture. Output: None after the helper's capabilities answer equals the layout and adapter identity, the actual carriers have no problem against that identity, and each of the 36 per-field stamp controls and the one adapter control is named by the same predicate. Reads package files only. Raises AssertionError on any difference. Example: restoring schema2 in the exoskeleton stamp names that statement.
+## @complexity 5
 def test_release_stamps_match_package_identity(caplog):
     # START_BLOCK_Validation
     caplog.set_level(logging.INFO)
-    layout=json.loads((PACKAGE/'references/package-layout.json').read_text());adapter=json.loads((PACKAGE/'adapter.json').read_text())
-    answer=continuation.capabilities();version,neutral,schema=layout['version'],adapter['spec_version'],answer['schema']
-    assert (answer['version'],answer['neutral'])==(version,neutral)
+    layout=json.loads((PACKAGE/'references/package-layout.json').read_text());adapter=json.loads((PACKAGE/'adapter.json').read_text());answer=continuation.capabilities()
+    identity={'version':layout['version'],'neutral':adapter['spec_version'],'schema':answer['schema'],'wire':answer['role_wire'],'members':len(layout['files'])}
+    logger.info('[IMP:9][test_release_stamps_match_package_identity][IDENTITY] layout=%s adapter=%s helper=%s/%s',identity['version'],identity['neutral'],answer['version'],answer['neutral'])
+    print('Actual identity:',identity,'helper:',answer['version'],answer['neutral'])
+    assert (answer['version'],answer['neutral'])==(identity['version'],identity['neutral'])
     mechanism=adapter['capabilities']['run-state-persist']['mechanism']
-    texts={path:(PACKAGE/path).read_text(encoding='utf-8') for path in (EXOSKELETON,CONSUMER_PROFILE,ADOPTION)}
+    texts={path:(PACKAGE/path).read_text(encoding='utf-8') for path in STAMPS}
     # END_BLOCK_Validation
     # START_BLOCK_BusinessLogic
-    real=_stamp_problems(texts,mechanism,version,neutral,schema)
+    real=_stamp_problems(texts,mechanism,identity)
     logger.info('[IMP:9][test_release_stamps_match_package_identity][COMPARE] problems=%d',len(real))
     print('Actual stamp problems:',real)
     assert real==[]
-    controls=((EXOSKELETON,f'METHODOLOGY_VERSION: {neutral}','METHODOLOGY_VERSION: 0.0.0'),(EXOSKELETON,f'methodology-codex{version},','methodology-codex0.0.0,'),
-              (EXOSKELETON,f', schema{schema},',', schema0,'),(CONSUMER_PROFILE,f'package{version} over','package0.0.0 over'),(CONSUMER_PROFILE,f'over neutral{neutral}.','over neutral0.0.0.'),
-              (CONSUMER_PROFILE,f'persistence is schema{schema}.','persistence is schema0.'),(ADOPTION,f'run_state.py schema{schema} atomic','run_state.py schema0 atomic'))
-    undetected=[old for path,old,new in controls if old not in texts[path] or not _stamp_problems({**texts,path:texts[path].replace(old,new)},mechanism,version,neutral,schema)]
-    if not _stamp_problems(texts,mechanism.replace(f'schema{schema}','schema0'),version,neutral,schema):undetected.append('adapter mechanism')
+    controls=[(path,stamp,field) for path,stamps in STAMPS.items() for stamp in stamps for field in identity if '{'+field+'}' in stamp]
+    undetected=[]
+    for path,stamp,field in controls:
+        statement=stamp.format(**identity)
+        stale=texts[path].replace(statement,stamp.format(**{**identity,field:'0.0.0'}))
+        if f'{path}: {statement.strip()}' not in _stamp_problems({**texts,path:stale},mechanism,identity):undetected.append((path,field))
+    if not _stamp_problems(texts,PERSIST.format(**{**identity,'schema':'0.0.0'}),identity):undetected.append(('adapter.json','schema'))
     logger.info('[IMP:9][test_release_stamps_match_package_identity][CONTROLS] controls=%d undetected=%d',len(controls)+1,len(undetected))
+    print('Undetected controls:',undetected)
     # END_BLOCK_BusinessLogic
     # START_BLOCK_Result
+    assert len(controls)==36
     assert undetected==[]
     assert not any(r.levelno>=logging.ERROR for r in caplog.records)
     # END_BLOCK_Result
