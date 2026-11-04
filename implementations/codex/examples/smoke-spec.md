@@ -34,7 +34,7 @@ Only these12 exact target-relative source paths may be created/changed:
 11. Doxyfile
 12. .gitignore
 
-Generated effects are `.methodology/lineages/<same-causal-id>/`, `output/inventory.json`, `doxygen_output/` and explicitly assigned owned private receipts/basetemp. Root owns state; candidate package, neutral subjects, approved spec and foreign trees are read-only. No Git/index/ref mutation by inner actors, source additions outside12, third helper, install/hooks/MCP/marketplace/server/credentials/provider changes. Preserve exact source scope and actual generated exclusions in state without hiding source changes.
+Generated effects are `.methodology/lineages/<same-causal-id>/`, `.methodology/admissions/`, `output/inventory.json`, `doxygen_output/` and explicitly assigned owned private receipts/basetemp. Root owns state; candidate package, neutral subjects, approved spec and foreign trees are read-only. No Git/index/ref mutation by inner actors, source additions outside12, third helper, install/hooks/MCP/marketplace/server/credentials/provider changes. Preserve exact source scope and actual generated exclusions in state without hiding source changes.
 
 ## Requirements and acceptance
 
