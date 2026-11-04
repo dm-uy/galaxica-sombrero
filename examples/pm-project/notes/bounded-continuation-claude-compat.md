@@ -73,6 +73,19 @@ The cause is free-text identity outside any check: in Codex no test read these s
 
 **Retained run mistake.** The first parallel root, Codex, DSH and conform run lost its working directory and copied `main` instead of the candidate. Its `spec-version=4.0.0` and 146 Codex tests exposed this; it was discarded as candidate evidence and kept as the `main` baseline: root 613 passed and 1 failed, Codex 146, DSH 146. `main` itself was only read. The first version of this record also failed the publication scan through a home-relative path, 40 root failures on `scan.home-relative` and its dependents; the check was right and the text was corrected.
 
+## Trial merge with PR 21
+
+`git merge-tree` of this branch at `e97a2ed` with `dsh/continuation` at `37d8e2b` gives a clean tree, `17e2697`: beyond their shared base the two change no path in common. On a Git-free copy of that tree with Python 3.12, no skips:
+
+| Check | Result |
+|---|---|
+| Package suites | Claude 548, Codex 201, DSH 202 passed |
+| Root suite | 616 passed |
+| `bin/conform adapter` | Claude, Codex and DSH pass 76, fail 0 |
+| `doxygen Doxyfile`, root and three packages | exit 0, empty stdout and stderr |
+
+This resolves both root failures PR 21 retains. It is a common and sibling check only: no native session or Workflow ran on the merged tree, so native combined validation stays open, and PR 21's own evidence and review belong to that branch and were not rechecked here.
+
 ## Independent review
 
 Compatibility reviewer: `methodology-claude:reviewer` on Opus 5.5, read-only with one scratch write root; no write outside it in any round. All three rounds found no blocker and independently confirmed the functional compatibility and all protections, including a structural AST diff, identical pin digests and file mutations that fail the pins. The originals are in the private evidence home.
@@ -148,6 +161,6 @@ Round 3 on `a47bf6a`, a narrow check of these corrections and of this record's f
 2. Merge order with PR 21: this branch first, because PR 21 alone raises the neutral release under Claude 3.0.0 and blocks every Claude session. The root `README.md` line naming DSH 4.0.0 then needs its DSH 5.0.0 value, because neither branch can state the combined result alone.
 3. Exact combined common/sibling/native validation.
 4. Only after those: main merge, push and installed updates, each by its own grant. Because the plugin loads in place from main, Claude 3.1.0 must enter main together with neutral 4.1.0, never apart from it.
-5. Whether to port continuation to Claude at all. The motivating Jeni ledger is Codex's, so this port would not serve it.
+5. Whether to port continuation to Claude at all. The ledger that motivated continuation is Codex's, so this port would not serve it.
 
 Private evidence is under ignored `.methodology/continuations/cont-bound-claude-compat/evidence/` in this worktree: suite logs, conform and Doxygen streams, probe scripts and reports, the native stream, the `main` baseline run, the reviewers' original transcripts and, under `stamps/`, the failing guard run and the closing runs of the stamp correction. Preserve it before archiving the worktree. It is not tracked or a release artifact.
