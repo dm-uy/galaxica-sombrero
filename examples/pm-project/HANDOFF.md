@@ -8,7 +8,7 @@ The concrete result of this candidate and of the Codex candidate beneath it; mer
 
 ## Verified result and next action
 
-On `eba2905`: Claude 547 passed, root 616 passed, Codex 200 passed, zero skips, both maps silent. The live native session bound 3.1.0 to 4.1.0, ran `init` and `show` and dispatched a role. The two root failures the Codex checkpoint below retained are resolved on this branch: the Claude release bridge passes with its pins unchanged, and the base markup defect in `test_recon_decision_checkpoint.py`, also red on main at `388c944`, is fixed with no logic change.
+On `e5d292d`: Claude 547 passed, root 616 passed, Codex 200 passed, zero skips, both maps silent. The live native session, on `eba2905`, bound 3.1.0 to 4.1.0, ran `init` and `show` and dispatched a role. One independent reviewer ran three rounds with no blocker; its last two remarks were applied without a further round. The two root failures the Codex checkpoint below retained are resolved on this branch: the Claude release bridge passes with its pins unchanged, and the base markup defect in `test_recon_decision_checkpoint.py`, also red on main at `388c944`, is fixed with no logic change.
 
 Still blocking shared integration: DSH fails 83 of 146 on `neutral version mismatch`; stale Codex version stamps listed in the result note; exact combined common/sibling/native validation. Claude 3.1.0 must enter main together with neutral 4.1.0, because the plugin loads in place from main and either one alone blocks every Claude session.
 

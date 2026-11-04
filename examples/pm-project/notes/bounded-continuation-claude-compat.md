@@ -1,6 +1,6 @@
 # CONT-BOUND Claude ordinary compatibility — checked locally
 
-Status: Claude 3.1.0 candidate on branch `claude/cont-bound-compat`, based on the Codex candidate `a3ecb5c`. Source commits `5e68c96`, `de6b91b` and `eba2905`; recover the closing record commit from the branch. Owner result is pending. Main, installed plugins and every sibling package are unchanged. This is the return the [transfer briefs](bounded-continuation-transfer-briefs.md) require from the Claude agent's first bounded packet.
+Status: Claude 3.1.0 candidate on branch `claude/cont-bound-compat`, based on the Codex candidate `a3ecb5c`. Source commits `5e68c96`, `de6b91b`, `eba2905` and `e5d292d`; recover the closing record commit from the branch. Owner result is pending. Main, installed plugins and every sibling package are unchanged. This is the return the [transfer briefs](bounded-continuation-transfer-briefs.md) require from the Claude agent's first bounded packet.
 
 ## Authority and scope
 
@@ -28,13 +28,13 @@ The owner was told before starting that the base defect in `tests/test_recon_dec
 
 ## What did not change
 
-Between `a3ecb5c` and `eba2905` there is no delta in `implementations/claude/workflows`, `agents`, `hooks/guard_destructive.py`, `hooks/hooks.json`, `implementations/codex`, `implementations/dsh`, the neutral `checks`, `protocols`, `code`, `process`, `flow`, `roles` or `SPEC_VERSION`. The executable lines changed in the helper are exactly its three release constants, and in the hook its one. The frozen Claude helper and hook AST pins in `tests/test_c1_review_and_routing.py` pass with their values unchanged.
+Between `a3ecb5c` and `e5d292d` there is no delta in `implementations/claude/workflows`, `agents`, `hooks/guard_destructive.py`, `hooks/hooks.json`, `implementations/codex`, `implementations/dsh`, the neutral `checks`, `protocols`, `code`, `process`, `flow`, `roles` or `SPEC_VERSION`. The executable lines changed in the helper are exactly its three release constants, and in the hook its one. The frozen Claude helper and hook AST pins in `tests/test_c1_review_and_routing.py` pass with their values unchanged.
 
 `workflows/feature-dev.js` needs no change for ordinary operation: it holds no package or neutral release literal, and its harness scenarios, which drive the real helper with scripted agents, pass.
 
-## Evidence on `eba2905`
+## Evidence on `e5d292d`
 
-All from a Git-free `git archive` of that commit with Python 3.12, exposed streams, no skips.
+The table is from a Git-free `git archive` of that commit with Python 3.12, exposed streams, no skips. The helper CLI probe, boundary refusals, hook runs and live session below ran on `eba2905`; the only source difference since is one runtime paragraph and one test.
 
 | Check | Result |
 |---|---|
@@ -45,7 +45,7 @@ All from a Git-free `git archive` of that commit with Python 3.12, exposed strea
 | `bin/conform adapter` | Claude and Codex pass 76, fail 0; DSH pass 75, warn 1 (adapter targets 4.0.0), fail 0 |
 | `doxygen Doxyfile`, root and Claude | exit 0, empty stdout and stderr |
 
-**Why replacing the version alone was not enough.** On a scratch copy of `a3ecb5c`, replacing `4.0.0` with `4.1.0` throughout the Claude package, including its tests and stamps, took the package suite from 167 failed to 545 passed and bound the hook, with none of the four duties carried. The suite could not see them. `test_additive_duties_reach_their_carriers` now catches removal of each listed statement or a change inside it, across 44 controls. It is a finite recognizer, not a prose solver. The root AST guard, already red at the adapter version, then refused at `wrong release comparison`, which is why its selectors moved and its pins did not.
+**Why replacing the version alone was not enough.** On a scratch copy of `a3ecb5c`, replacing `4.0.0` with `4.1.0` throughout the Claude package, including its tests and stamps, took the package suite from 167 failed to 545 passed and bound the hook, with none of the four duties carried. The suite could not see them. `test_additive_duties_reach_their_carriers` now catches removal of each listed statement or a change inside it, across 43 controls. It is a finite recognizer, not a prose solver. The root AST guard, already red at the adapter version, then refused at `wrong release comparison`, which is why its selectors moved and its pins did not.
 
 **Real helper CLI.** An owned inert probe drove the full ordinary route through the shipped CLI under Python 3.15.0, 3.12.13 and 3.9.6: Bootstrap → Architect → Code → QA → Review → Finalize, then SUCCESS at spend 0 of cap 4, bound to neutral 4.1.0, schema 2. A malformed record exits 2 with progress and counters unchanged. Records are structural fixtures, not role acceptance.
 
@@ -74,7 +74,7 @@ Round 1 on `5e68c96`, CHANGES REQUESTED, dispositioned in `de6b91b`:
 | N1–N5 Module facts, harness wording, narrowed norms, restated norm, carrier column | Fixed in this package |
 | N6 Stale Codex stamps | Outside this scope; see below |
 
-Round 2 on `a071849`, CHANGES REQUESTED, dispositioned in `eba2905` and this record:
+Round 2 on `a071849`, CHANGES REQUESTED, dispositioned in `eba2905` and `4e078c8`:
 
 | Finding | Disposition |
 |---|---|
@@ -84,12 +84,19 @@ Round 2 on `a071849`, CHANGES REQUESTED, dispositioned in `eba2905` and this rec
 | D4 Clauses inside the statements were unguarded | Pinned; ten further mutations from that review each detected by a separate check |
 | R1–R3 Module facts, unsourced consumer claim, evidence outside its home | Fixed |
 
-Return of round 2's corrections to the same reviewer is pending at this checkpoint.
+Round 3 on `4e078c8`, CHANGES REQUESTED, narrow check. It confirmed D2, D3, R1, R2 and R3 closed and the changed record claims true. It ran the formula against the real helper across prior spend 2, 3 and 4 with and without a counted repair: cumulative spend stayed at or below 4 of 4, and a result below zero exits 2 at `init`.
+
+| Finding | Disposition in `e5d292d` |
+|---|---|
+| F1 The sentence gave no formula and placed the count after `init`, so a root could silently reach 5 of 4 | Count decided before `init`, formula stated, a later repair has no supported route |
+| F2 Words deciding that sentence's meaning sat outside the pinned strings | Sentences pinned whole; ten mutations from this round each detected by a separate check |
+
+These last two corrections were not returned to the reviewer. They apply the reviewer's own formula and fix direction to one paragraph and one test, and no further round was run. Whether a real root follows the sentence is a behavioral question no check here answers.
 
 ## Known failures and unsupported routes
 
 - **DSH blocks shared integration.** Its package suite fails 83 tests, each on `neutral version mismatch`. Its own agent owns this. The root suite stays green regardless and says nothing about DSH.
-- **No continuation here.** The helper has no continuation operation, historical import, Debug extension above 4 or dispatch reservation record. An owner-approved successor is a fresh `init` from Bootstrap, and the root must lower the cap and count a repair made by its Code.
+- **No continuation here.** The helper has no continuation operation, historical import, Debug extension above 4 or dispatch reservation record. An owner-approved successor is a fresh `init` from Bootstrap, and its accounting is unenforced: the helper holds only the cap, the root's count lives outside the ledger, and no suite or native run exercises this route, only the reviewer's fixtures. This matters only if a Claude successor is relied on.
 - **Runs do not cross an upgrade.** A run bound to an earlier package refuses after any in-place update. A read-only scan of the owner's development directory found 20 RUNNING Claude ledgers, and all 20 already refuse under the current main helper, so 3.1.0 strands none of them newly. This is the established effect of each earlier in-place release, not a new one.
 - **Not run:** a native Workflow run or a whole feature-dev flow under 3.1.0, `bin/conform self` for lack of the private deny list, and the suites under Python 3.9 or 3.15, where only the CLI probe and hook ran. PM-INVOKE's live probe stays open.
 
