@@ -1,4 +1,22 @@
-# Current: CONT-BOUND Codex checked locally; rollout held
+# Current: CONT-BOUND Claude compatibility checked locally; DSH and owner result pending
+
+Owner, 2026-11-04: «Сначала совместимость». Claude 3.1.0 binds neutral 4.1.0 for ordinary operation on `claude/cont-bound-compat`, based on Codex candidate `a3ecb5c`. No continuation port. [Result, evidence and limits](notes/bounded-continuation-claude-compat.md), [tasks](TASKS.md#cont-bound--bounded-continuation-and-earlier-verification).
+
+## Owner decisions
+
+The concrete result of this candidate and of the Codex candidate beneath it. Merge, push and installation are not granted. Assign a DSH agent for its first bounded packet. Porting continuation to Claude is a separate choice.
+
+## Verified result and next action
+
+On `de6b91b`: Claude 547 passed, root 616 passed, Codex 200 passed, zero skips, both maps silent. The live native session bound 3.1.0 to 4.1.0, ran `init` and `show` and dispatched a role. The two root failures the Codex checkpoint below retained are resolved on this branch: the Claude release bridge passes with its pins unchanged, and the base markup defect in `test_recon_decision_checkpoint.py`, also red on main at `388c944`, is fixed with no logic change.
+
+Still blocking shared integration: DSH fails 83 of 146 on `neutral version mismatch`; stale Codex version stamps listed in the result note; exact combined common/sibling/native validation. Claude 3.1.0 must enter main together with neutral 4.1.0, because the plugin loads in place from main and either one alone blocks every Claude session.
+
+## Storage
+
+Worktree `.claude/worktrees/cont-bound-compat`; main stays clean. Private evidence is in that worktree's ignored `.methodology/continuations/cont-bound-claude-compat/evidence/`: preserve it before archiving. In this environment the shell's working directory can reset between calls, so use absolute paths; one run copied main instead of the candidate that way, as the result note records.
+
+# Preceding checkpoint: CONT-BOUND Codex checked locally; rollout held
 
 Owner approved the specification and lighter procedure on 2026-11-04: short plan, root implementation/checks, one independent cumulative reviewer. Codex source5.0 / neutral4.1 / schema3 is complete and checked in codex/continuation-recon. [Result and evidence](notes/bounded-continuation-result.md), [final independent judgment](notes/bounded-continuation-review-final.md), [short plan](plans/bounded-continuation.md), [actual owner approval](specs/bounded-continuation.md#owner-implementation-and-procedure-decision--2026-11-04).
 

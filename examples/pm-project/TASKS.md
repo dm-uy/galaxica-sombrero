@@ -18,6 +18,17 @@ Owner approved the exact specification and then the lighter procedure: short pla
 | CONT-BOUND-T3 — Codex candidate | Checked locally | [Result](notes/bounded-continuation-result.md): schema3/helper/callers/rules, full Codex200 passed, root614+2 known held/baseline failures, maps and real CLI/native proofs. |
 | CONT-BOUND-T4 — independent review and owner result | Review complete; owner result pending | Same reviewer closed F1–F6; [final judgment](notes/bounded-continuation-review-final.md). Shared rollout/merge/install held for exact external compatibility and combined validation; no overall acceptance claimed. |
 
+### Claude ordinary compatibility — 2026-11-04
+
+Owner: «надо доработать наш плагин с методологией», pointing at the transfer briefs, then «Сначала совместимость». Ordinary compatibility only, on a lighter procedure with one independent reviewer. Merge, push and installation remain separate.
+
+| Task | State | Finish / next action |
+|---|---|---|
+| CONT-BOUND-T5 — Claude 3.1.0 ordinary compatibility | Checked locally; owner result pending | [Result](notes/bounded-continuation-claude-compat.md) on `claude/cont-bound-compat`: Claude 547, root 616 and Codex 200 passed; live native session and real helper route observed; first review's findings dispositioned. |
+| CONT-BOUND-T6 — DSH ordinary compatibility | Not started; needs a separately assigned DSH agent | Its package suite fails 83 of 146 on the version pin. Blocks shared integration. |
+| CONT-BOUND-T7 — findings outside the Claude package | Open | Stale Codex stamps before integration; Codex carrier wording; neutral home for the ledger rule; stranding of in-flight runs by in-place releases. [Details](notes/bounded-continuation-claude-compat.md#findings-for-other-owners). |
+| CONT-BOUND-T8 — continuation port to Claude | Not selected | Separate owner decision; Jeni does not need it. |
+
 ## RECON-DEC — reviewed RECON forks and owner-authorized brainstorm
 
 Owner request, 2026-11-03: prepare a specification for explicit forks in RECON, independent completeness verification, and owner agreement before launching brainstorm so downstream project specifications contain worked-through decisions. Initial grant: preparation only. On 2026-11-03 the owner approved removing the full feature-dev procedure and implementing the bounded change with affected checks, independent review and a small behavioral probe. Merge, push and installation remain separate.

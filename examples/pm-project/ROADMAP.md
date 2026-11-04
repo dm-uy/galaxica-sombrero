@@ -1,6 +1,8 @@
 # Methodology project route
 
-## Current: CONT-BOUND Codex checked; shared rollout held
+## Current: CONT-BOUND Codex and Claude checked; shared rollout held
+
+Claude 3.1.0 ordinary compatibility with neutral 4.1.0 is checked locally on `claude/cont-bound-compat` and resolves both root failures the Codex receipt retained; [result](notes/bounded-continuation-claude-compat.md). DSH compatibility, stale Codex stamps and combined validation still hold shared rollout. Porting continuation to Claude remains a separate decision.
 
 Codex implementation/checks and the same single independent review are complete locally: [result](notes/bounded-continuation-result.md), [final judgment](notes/bounded-continuation-review-final.md). Owner result is pending. Shared rollout/merge/install are held for separate Claude/DSH ordinary compatibility, retained baseline markup correction and exact combined common/sibling/native validation. The approved lighter procedure remains controlling; no synthetic full-flow actors are required. Earlier preparation history follows.
 
@@ -9,7 +11,11 @@ Owner-selected on 2026-11-03: recon before the specification for A+B (bounded hi
 ```mermaid
 flowchart LR
   CB1["CONT-BOUND-T1 checked: measured recon and completeness"] --> CB2["CONT-BOUND-T2 approved specification"] --> CB3["CONT-BOUND-T3/T4 checked: Codex + same independent review"]
-  CB3 --> CB4["HELD: external compatibility + baseline correction + combined validation"] --> CB5["Separate owner integration / installation decision"]
+  CB3 --> CB5C["CONT-BOUND-T5 checked: Claude3.1.0 ordinary compatibility"]
+  CB3 --> CB6D["CONT-BOUND-T6 pending: DSH ordinary compatibility"]
+  CB5C --> CB4["HELD: combined common/sibling/native validation"]
+  CB6D --> CB4
+  CB4 --> CB5["Separate owner integration / installation decision"]
 ```
 
 ## Previous: RECON-DEC integrated locally and installed
