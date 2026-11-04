@@ -36,15 +36,15 @@
 ## FUNC 9[Agent carriers frontmatter, tools and owners] => test_agent_carriers
 ## FUNC 9[Skill entries topic set, frontmatter and owners] => test_skill_entries
 ## FUNC 7[Hooks wiring and workflow identity] => test_hooks_and_workflow
-## FUNC 7[List carrier omissions of the four additive duties] => _carrier_problems
-## FUNC 9[Additive duties reach their carriers; omissions refused] => test_additive_duties_reach_their_carriers
+## FUNC 7[List lost statements of the four additive duties and helper limits] => _carrier_problems
+## FUNC 9[Additive duties reach their carriers; removal and inversion refused] => test_additive_duties_reach_their_carriers
 ## FUNC 9[Capability claim matches the shipped helper CLI] => test_capability_claim_matches_the_shipped_helper
 ## @usecases
 ## - [test_layout_matches_members]: QA → compare declared and real package members → missing or undeclared member refused
 ## - [test_agent_carriers]: QA → check each role's model and tools → a judge with Edit or a delegating role refused
 ## - [test_skill_entries]: QA → resolve every owner reference → a broken neutral pointer refused
-## - [test_additive_duties_reach_their_carriers]: QA → remove a duty or capability clause in memory → the omission refused although every other test stays green
-## - [test_capability_claim_matches_the_shipped_helper]: QA → run the real helper CLI → an operation the carriers do not declare refused
+## - [test_additive_duties_reach_their_carriers]: QA → remove or invert a listed statement in memory → the change refused although every other test stays green
+## - [test_capability_claim_matches_the_shipped_helper]: QA → run the real helper CLI → an undeclared operation or a foreign ledger refused
 ## @GREP_SUMMARY package contract, layout, adapter coverage, agents frontmatter, skills, CLAUDE_PLUGIN_ROOT, hooks, workflow, oracle
 ## @STRUCTURE ▶ package+neutral roots → ◇ layout ≡ members → ◇ adapter ≡ registries → ○ agents ∋ model/tools/owners → ○ skills ∋ frontmatter/owners → ◇ hooks/workflow → ⎋ assertions
 def _module_contract():
@@ -302,24 +302,40 @@ def test_hooks_and_workflow(caplog):
 
 
 # Fixed expected statements, from the approved neutral 4.1.0 norms and this package's actual helper limits. This is a finite
-# recognizer under TST-1001: it catches removal or inversion of these exact statements, never a contrary sentence added elsewhere.
+# recognizer under TST-1001: it catches removal or a change inside these exact statements, never changed text outside them.
 DUTY_OWNERS = {"PREFLIGHT-204": "checks/preflight.md", "PLAN-405": "protocols/dev-plan.md", "TST-1003": "code/tests.md", "LIFE-108": "process/lifecycle.md"}
-HELPER_LIMITS = ("lists its only operations, `init`, `show` and `record`", "no continuation operation", "no historical import", "no Debug extension above 4", "no dispatch reservation record")
+HELPER_LIMITS = "The helper and the Workflow spine have no continuation operation, no historical import, no Debug extension above 4 and no dispatch reservation record."
 CARRIER_STATEMENTS = {
-    "skills/pm/SKILL.md": ("Apply PREFLIGHT-204 from `checks/preflight.md`", "the helper has no continuation operation", "Apply LIFE-108 from `process/lifecycle.md`"),
-    "skills/devplan-protocol/SKILL.md": ("Apply PLAN-405 from `protocols/dev-plan.md`", "TST-1003 from `code/tests.md`"),
-    "skills/feature-dev/SKILL.md": ("PREFLIGHT-204 in `checks/preflight.md`",) + HELPER_LIMITS + (
-        "applies PLAN-405 through devplan-protocol", "apply TST-1003 from the core `code/tests.md`", "applies LIFE-108 from `process/lifecycle.md`"),
-    "references/claude-runtime.md": ("`checks/preflight.md` PREFLIGHT-204",) + HELPER_LIMITS + (
-        "The resume of a RUNNING run described above stays", "`flow/run-state.md` STATE-702 can start only as a fresh `init` from Bootstrap",
-        "does not charge a repair made by the successor's Code", "counts such a repair itself", "has no supported route here", "reads only its own schema 2 ledgers"),
+    "skills/pm/SKILL.md": ("Apply PREFLIGHT-204 from `checks/preflight.md` before relying on the run-state helper", "the helper has no continuation operation",
+                           "Apply LIFE-108 from `process/lifecycle.md` when blocking preparation dependencies materially grow."),
+    "skills/devplan-protocol/SKILL.md": ("Apply PLAN-405 from `protocols/dev-plan.md` to a material uncertain premise before dependent construction",
+                                         "TST-1003 from `code/tests.md` when selecting lifecycle or completeness controls."),
+    "skills/feature-dev/SKILL.md": ("PREFLIGHT-204 in `checks/preflight.md`", "lists its only operations, `init`, `show` and `record`.", HELPER_LIMITS,
+                                    "compare the work's requirements with it before relying on the helper.", "applies PLAN-405 through devplan-protocol",
+                                    "apply TST-1003 from the core `code/tests.md`", "applies LIFE-108 from `process/lifecycle.md`"),
+    "references/claude-runtime.md": ("`checks/preflight.md` PREFLIGHT-204", "lists its only operations, `init`, `show` and `record`, and there is no capability command.", HELPER_LIMITS,
+                                     "The resume of a RUNNING run described above stays.", "`flow/run-state.md` STATE-702 can start only as a fresh `init` from Bootstrap",
+                                     "the helper inherits no spend or history and does not charge a repair made by the successor's Code.",
+                                     "this package's conservative reading of STATE-702 and STATE-305", "the root counts that repair as one entry before dispatching it",
+                                     "records the authorization and causal link", "`--max-debug` that leaves cumulative spend within the allowance.",
+                                     "With no allowance left, a further repair has no supported route here and stays with the owner.", "The helper accepts only its own ledgers under its current binding.",
+                                     "`show` and `record` refuse here.", "A refused `record` still appends its diagnostic to any shape-valid schema 2 ledger, including another package's;",
+                                     "a schema 3 ledger stays byte-identical."),
 }
 INVERSIONS = (
     ("skills/pm/SKILL.md", "has no continuation operation", "has a continuation operation"),
+    ("skills/pm/SKILL.md", "before relying on the run-state helper", "after relying on the run-state helper"),
     ("skills/devplan-protocol/SKILL.md", "Apply PLAN-405", "Skip PLAN-405"),
-    ("skills/feature-dev/SKILL.md", "no Debug extension above 4", "a Debug extension above 4"),
-    ("references/claude-runtime.md", "no continuation operation", "a continuation operation"),
-    ("references/claude-runtime.md", "counts such a repair itself", "never counts such a repair"),
+    ("skills/devplan-protocol/SKILL.md", "before dependent construction", "after dependent construction"),
+    ("skills/feature-dev/SKILL.md", "no Debug extension above 4 and", "a Debug extension above 4 and"),
+    ("skills/feature-dev/SKILL.md", "before relying on the helper.", "after relying on the helper."),
+    ("references/claude-runtime.md", "no continuation operation,", "a continuation operation,"),
+    ("references/claude-runtime.md", "no dispatch reservation record.", "no dispatch reservation record, except by owner approval."),
+    ("references/claude-runtime.md", "inherits no spend or history", "inherits its spend and history"),
+    ("references/claude-runtime.md", "counts that repair as one entry before dispatching it", "never counts that repair"),
+    ("references/claude-runtime.md", "stays with the owner.", "stays with the owner unless the owner grants more entries."),
+    ("references/claude-runtime.md", "`show` and `record` refuse here.", "`show` and `record` still work here."),
+    ("references/claude-runtime.md", "still appends its diagnostic", "leaves unchanged"),
 )
 REFUSED_OPERATIONS = ("capabilities", "continue", "reserve", "released", "recover", "episode")
 WORKFLOW_ARGS = "const KNOWN_ARGS = ['spec', 'target', 'plan', 'approval', 'runId', 'framework', 'scratch', 'maxDebug', 'dialogLang', 'recordState']"
