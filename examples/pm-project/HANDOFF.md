@@ -1,16 +1,16 @@
-# Current: CONT-BOUND Claude compatibility checked locally; DSH and owner result pending
+# Current: CONT-BOUND Claude compatibility proposed to main; owner result and merge order pending
 
-Owner, 2026-11-04: «Сначала совместимость», then «Да, поправь здесь» for the stale Codex stamps. Claude 3.1.0 binds neutral 4.1.0 for ordinary operation on `claude/cont-bound-compat`, based on Codex candidate `a3ecb5c`. No continuation port. [Result, evidence and limits](notes/bounded-continuation-claude-compat.md), [tasks](TASKS.md#cont-bound--bounded-continuation-and-earlier-verification).
+Owner, 2026-11-04: «Сначала совместимость», then «Да, поправь здесь» for the stale Codex stamps, then «А сделай pull request в main». Claude 3.1.0 binds neutral 4.1.0 for ordinary operation on `claude/cont-bound-compat`, based on Codex candidate `a3ecb5c`. No continuation port. [Result, evidence and limits](notes/bounded-continuation-claude-compat.md), [tasks](TASKS.md#cont-bound--bounded-continuation-and-earlier-verification).
 
 ## Owner decisions
 
-The concrete result of this candidate and of the Codex candidate beneath it; merging this branch also merges Codex 5.0. Merge, push and installation are not granted. Assign a DSH agent for its first bounded packet. Porting continuation to Claude is a separate choice.
+The concrete result of this candidate and of the Codex candidate beneath it; merging this branch also merges Codex 5.0. Merge and installation are not granted. Draft PR 21 on `dsh/continuation` carries DSH 5.0.0 from the same base and changes no path this branch changes. Merge order: this branch first, because PR 21 alone blocks every Claude session, then PR 21. Porting continuation to Claude is a separate choice.
 
 ## Verified result and next action
 
 On `985795b`: Claude 548 passed, root 616 passed, Codex 201 passed, zero skips, three maps silent. The live native session, on `eba2905`, bound 3.1.0 to 4.1.0, ran `init` and `show` and dispatched a role. One independent reviewer ran three rounds with no blocker; its last two remarks were applied without a further round. The stale Codex stamps are corrected and guarded in both package suites; a second reviewer found one blocker in the first guard, approved its correction and rechecked the record's figures against their logs; its last wording remarks were applied without a further round. The two root failures the Codex checkpoint below retained are resolved on this branch: the Claude release bridge passes with its pins unchanged, and the base markup defect in `test_recon_decision_checkpoint.py`, also red on main at `388c944`, is fixed with no logic change.
 
-Still blocking shared integration: DSH fails 83 of 146 on `neutral version mismatch`; exact combined common/sibling/native validation. Claude 3.1.0 must enter main together with neutral 4.1.0, because the plugin loads in place from main and either one alone blocks every Claude session.
+On this branch alone DSH fails 83 of 146 on `neutral version mismatch`, which PR 21 resolves. Native combined validation is not done. Claude 3.1.0 must enter main together with neutral 4.1.0, because the plugin loads in place from main and either one alone blocks every Claude session.
 
 ## Storage
 

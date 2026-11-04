@@ -1,6 +1,6 @@
 # CONT-BOUND Claude ordinary compatibility — checked locally
 
-Status: Claude 3.1.0 candidate on branch `claude/cont-bound-compat`, based on the Codex candidate `a3ecb5c`. Source commits `5e68c96`, `de6b91b`, `eba2905`, `e5d292d`, `fbf0fd0`, `3a5ae50` and `985795b`; recover the closing record commit from the branch. Owner result is pending. Main, installed plugins and the DSH package are unchanged; the Codex package changes on this branch only as stated under [stale Codex stamps](#stale-codex-stamps). This is the return the [transfer briefs](bounded-continuation-transfer-briefs.md) require from the Claude agent's first bounded packet.
+Status: Claude 3.1.0 candidate on branch `claude/cont-bound-compat`, based on the Codex candidate `a3ecb5c`. Source commits `5e68c96`, `de6b91b`, `eba2905`, `e5d292d`, `fbf0fd0`, `3a5ae50` and `985795b`; recover the closing record commit from the branch. Proposed to main through a pull request at the owner's word; owner result and merge are pending. Main, installed plugins and the DSH package are unchanged by this branch; the Codex package changes on this branch only as stated under [stale Codex stamps](#stale-codex-stamps). This is the return the [transfer briefs](bounded-continuation-transfer-briefs.md) require from the Claude agent's first bounded packet.
 
 ## Authority and scope
 
@@ -9,6 +9,8 @@ Owner, 2026-11-04: «надо доработать наш плагин с мет
 The owner was told before starting that the base defect in `tests/test_recon_decision_checkpoint.py` would be fixed here unless they objected. That file is outside the Codex specification's MAY EDIT list, which governed that task. Only its module contract changed. The Claude selectors in `tests/test_claude_package.py` and `tests/test_c1_review_and_routing.py` are conditional in that specification on an accepted receipt for the exact source, so they can reach main only with the owner's acceptance.
 
 Owner, 2026-11-04, asked whether to correct the stale Codex version stamps on this branch or leave them to a Codex agent: «Да, поправь здесь». This covers stale release, schema, member-count and path statements in the Codex package and the guard against their return. Codex carrier wording stays with its owner. No shipped Codex helper or script changes; one Codex test gains the guard.
+
+Owner, 2026-11-04: «А сделай pull request в main». This grants pushing this branch and opening the pull request, not its merge or any installation.
 
 ## Identities
 
@@ -126,14 +128,14 @@ Round 3 on `a47bf6a`, a narrow check of these corrections and of this record's f
 
 ## Known failures and unsupported routes
 
-- **DSH blocks shared integration.** Its package suite fails 83 tests, each on `neutral version mismatch`. Its own agent owns this. The root suite stays green regardless and says nothing about DSH.
+- **DSH on this branch alone.** Its package suite fails 83 tests, each on `neutral version mismatch`, and this branch does not change it. Draft PR 21 on branch `dsh/continuation`, by a separate agent from the same base `a3ecb5c`, carries DSH 5.0.0 and changes no path this branch changes. Earlier versions of this record said no DSH agent had started, because the remote had not been read. The root suite on this branch says nothing about DSH.
 - **No continuation here.** The helper has no continuation operation, historical import, Debug extension above 4 or dispatch reservation record. An owner-approved successor is a fresh `init` from Bootstrap, and its accounting is unenforced: the helper holds only the cap, the root's count lives outside the ledger, and no suite or native run exercises this route, only the reviewer's fixtures. This matters only if a Claude successor is relied on.
 - **Runs do not cross an upgrade.** A run bound to an earlier package refuses after any in-place update. A read-only scan of the owner's development directory found 20 RUNNING Claude ledgers, and all 20 already refuse under the current main helper, so 3.1.0 strands none of them newly. This is the established effect of each earlier in-place release, not a new one.
 - **Not run:** a native Workflow run or a whole feature-dev flow under 3.1.0, `bin/conform self` for lack of the private deny list, and the suites under Python 3.9 or 3.15, where only the CLI probe and hook ran. PM-INVOKE's live probe stays open.
 
 ## Findings for other owners
 
-- **DSH agent.** The cause of the stale Codex stamps, free-text identity outside any check, was present in both packages checked here, in Claude only partly. DSH was not inspected; its packet should measure its own stamps and add the same guard.
+- **DSH owner.** The cause of the stale Codex stamps, free-text identity outside any check, was present in both packages checked here, in Claude only partly. DSH's stamps were not inspected for this; they should be measured and given the same guard.
 - **Codex owner.** `references/source-disposition.md` counts seven helpers but has no row for `continuation.py`, a gap from the Codex candidate. `examples/smoke-spec.md` lists the lineages path among its generated effects but not `.methodology/admissions/<digest>.json`, which `init` also writes under the same excluded `.methodology` tree.
 - **Codex owner, wording.** The Codex carriers narrow the same norms that were corrected here: PLAN-405 to missing authority, TST-1003 without timeout and partial or mismatched results, and PM's PREFLIGHT-204 trigger.
 - **Neutral, later release.** The transfer note says: "Do not port a Codex historical ledger into another engine without its own measured approved bridge". No neutral owner carries this. As a process rule it belongs in `flow/run-state.md` so DSH is bound too. It was left out of the Claude carriers, which state only what the helper accepts.
@@ -143,7 +145,7 @@ Round 3 on `a47bf6a`, a narrow check of these corrections and of this record's f
 ## Remaining decisions
 
 1. Owner's concrete-result decision on this candidate and on the Codex candidate beneath it: merging this branch also merges Codex 5.0.
-2. A separately assigned DSH agent for its first bounded packet.
+2. Merge order with PR 21: this branch first, because PR 21 alone raises the neutral release under Claude 3.0.0 and blocks every Claude session. The root `README.md` line naming DSH 4.0.0 then needs its DSH 5.0.0 value, because neither branch can state the combined result alone.
 3. Exact combined common/sibling/native validation.
 4. Only after those: main merge, push and installed updates, each by its own grant. Because the plugin loads in place from main, Claude 3.1.0 must enter main together with neutral 4.1.0, never apart from it.
 5. Whether to port continuation to Claude at all. The motivating Jeni ledger is Codex's, so this port would not serve it.
