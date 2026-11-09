@@ -336,7 +336,7 @@ def test_consequential_owner_and_call_sites(repo_root, caplog):
               "before giving it to the evaluator", "a distinct evaluation actor who authored none",
               "criteria, priority, weights, direction and tie-breaker before scoring", "evidence and uncertainty",
               "Actual root/owner collapses only within its grant", "one bounded generation/evaluation pass",
-              "Group the saved population into mechanism families", "does not add, drop or re-merge candidates",
+              "the saved population is grouped into mechanism families", "does not add, drop or re-merge candidates",
               "verified, refuted or unverifiable", "Recompute the ranking at least once under an alternative weighting",
               "keep the dependent choice held/unproven and continue unrelated authorized work")
     assert _operating(owner, fields)
