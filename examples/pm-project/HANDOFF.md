@@ -1,3 +1,11 @@
+# Current: HOOK-DUTY correction; owner authorized the merge of PR25
+
+Owner, 2026-11-10: «чини хук». The Claude SessionStart hook now scopes the six-core reading duty to software roles, as its own owners state it; before, it told every session to read all six before any skill work. One string constant, its exact-sentence test and the re-based whole-AST pin changed on `claude/hook-reading-duty`. Claude 548 and root 616 passed; a real hook process returns the new sentence. Versions unchanged: Claude 3.1.0 over neutral 4.1.0. [Result, checks and limits](notes/hook-reading-duty.md).
+
+Owner, 2026-11-10, on the concrete result in PR25: «Да, вливай». This block was written on the branch before that merge, so the merge commit is read from `git log`, not from here. The package loads in place from `main`: the first session start after the merge is the live check, and its context must carry the sentence "before any software role acts, read the six core owners in full". Not authorized and not done: a package version stamp and every other candidate of the lightening decision packet the note links. Next action, if the owner selects it: the cold start in the consumer project and a section-binding pilot named in the note.
+
+The previous current-state blocks below are retained dated history.
+
 # Current: CONT-BOUND integrated through PR22 and PR21
 
 Owner-authorized compatibility analysis and integration completed2026-11-04. PR22 merged first, then PR21; exact remote main tree matched the checked combined candidate. Source identities: neutral4.1.0, Codex5.0.0/schema3, Claude3.1.0/schema2, DSH5.0.0/schema3. Combined root616/Codex201/Claude548/DSH202 all passed; all three adapters and four maps passed. One independent compatibility reviewer closed both premerge metadata/smoke-scope findings. [Integration receipt and limits](notes/bounded-continuation-integration.md).

@@ -452,7 +452,10 @@ def test_session_start_source_bridge_preserves_ast(repo_root, caplog):
         "[IMP:9][test_session_start_source_bridge_preserves_ast][SERIALIZER_VALID] empty_fields=%d" % len(introduced),
     ]
     assert not [r for r in caplog.records if r.levelno >= logging.ERROR]
-    original = "4ee9d7d15655f3a05622ecf0902f0afb8a9b2e9b84d95fc5819b54c2298c1e25"
+    # Re-based 2026-11-10 after the owner-authorized correction of one render_context string constant:
+    # the six-core reading duty is scoped to software roles, as references/adoption.md step 2 states it.
+    # Pre-correction pin, same serializer: 4ee9d7d15655f3a05622ecf0902f0afb8a9b2e9b84d95fc5819b54c2298c1e25.
+    original = "50cc2c5458ac1dc39c540f58766afd27e238fad555bf7ad07db6cbe677daf649"
     assert hashlib.sha256(ast.dump(tree, include_attributes=False).encode()).hexdigest() == original
     # END_BLOCK_Validation
     # START_BLOCK_BusinessLogic
