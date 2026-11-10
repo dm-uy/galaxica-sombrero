@@ -19,7 +19,7 @@
 ## Q: Why presence only for project records?
 ## A: Orientation needs to know which records exist so the root can read them deliberately under the orient check; copying private content into every session start context would be unrequested disclosure.
 ## @changes
-## LAST_CHANGE: [3.1.0 - Exact package source constant; executable functions unchanged. Earlier: 1.1.0 - Exact M30 package source constant; executable functions unchanged. Earlier:1.0.0 - Initial in-place binding check and project record presence for the first native Claude Code package.]
+## LAST_CHANGE: [3.1.0 (2026-11-10) - The bound text scopes the six-core reading duty to software roles, as references/adoption.md step 2 and PRIN-101 state it; one string constant of render_context changed, nothing else. Earlier: 3.1.0 - Exact package source constant; executable functions unchanged. Earlier: 1.1.0 - Exact M30 package source constant; executable functions unchanged. Earlier:1.0.0 - Initial in-place binding check and project record presence for the first native Claude Code package.]
 ## @modulemap
 ## FUNC 2[Attach full module documentation with no runtime effects] => session_start._module_contract
 ## FUNC 6[Resolve the package root from the environment or the script location] => session_start.resolve_package_root
@@ -258,7 +258,7 @@ def _check_layout(package_root):
 
 
 # region FUNC__check_core_owners [DOMAIN(9): ToolBinding; CONCEPT(9): CoreOwners, DraftCard; TECH(6): pathlib, front matter]
-## @purpose Confirm that the six core owners every role must read in full exist as complete (draft) cards at the neutral root, so no role starts on a missing or stub owner.
+## @purpose Confirm that the six core owners every software role must read in full exist as complete (draft) cards at the neutral root, so no role starts on a missing or stub owner.
 ## @uses session_start._card_status
 ## @io Input: neutral_root Path. Output: list of reason str; empty exactly when each of the six core owner paths is a regular file whose card status is draft.
 ##   Side effects: six bounded reads and trace records. Guarantees: every missing or non-draft owner contributes its own reason that names the relative path (and the found status); the check never reads past the card head.
@@ -417,7 +417,7 @@ def _clip(text, limit):
 ## @purpose Compose the one bounded text the session receives, either the bound statement with the reading duty or the BLOCKED statement with every reason.
 ## @uses session_start._record_line, session_start._clip
 ## @io Input: ok bool; reasons list of str; facts dict as returned by session_start.check_binding (may be empty); orientation dict or None. Output: str of at most 1500 characters.
-##   Side effects: none. Guarantees: the bound text holds the sentence methodology-claude and its package version bound in place to neutral methodology and the neutral version at the absolute neutral root, the duty to read references/claude-runtime.md and the six core owners in full, and the orient pointer; the BLOCKED text holds the reasons and the instruction never to fall back to another installed copy, with reasons clipped before the instruction is.
+##   Side effects: none. Guarantees: the bound text holds the sentence methodology-claude and its package version bound in place to neutral methodology and the neutral version at the absolute neutral root, the duty to read references/claude-runtime.md in full, the duty to read the six core owners in full before any software role acts (references/adoption.md step 2), and the orient pointer; the BLOCKED text holds the reasons and the instruction never to fall back to another installed copy, with reasons clipped before the instruction is.
 ##   Raises: KeyError for ok True with facts lacking package_root, neutral_root or spec_version. System importance: 9. Example: ok False with reasons naming a missing SPEC_VERSION returns a text starting methodology-claude binding BLOCKED.
 ## @complexity 5
 def render_context(ok, reasons, facts, orientation):
@@ -425,7 +425,7 @@ def render_context(ok, reasons, facts, orientation):
     records = _record_line(orientation)
     if ok:
         text = ("%s %s bound in place to neutral methodology %s at %s. "
-                "Before any methodology role or skill work, read %s/references/claude-runtime.md and the six core owners in full; Orient by checks/orient.md. "
+                "Before any methodology role or skill work, read %s/references/claude-runtime.md in full; before any software role acts, read the six core owners in full; Orient by checks/orient.md. "
                 "The core owners under the neutral root: %s."
                 % (PACKAGE_NAME, facts.get("package_version", PACKAGE_VERSION), facts["spec_version"], facts["neutral_root"],
                    facts["package_root"], ", ".join(CORE_OWNERS)))

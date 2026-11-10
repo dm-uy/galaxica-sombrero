@@ -254,7 +254,8 @@ def test_real_package_binds_and_states_duty(tmp_path):
     assert code == 0
     sentence = "methodology-claude 3.1.0 bound in place to neutral methodology 4.1.0 at %s" % os.path.realpath(NEUTRAL)
     assert context.startswith(sentence)
-    assert "Before any methodology role or skill work, read %s/references/claude-runtime.md and the six core owners in full; Orient by checks/orient.md" % os.path.realpath(PACKAGE) in context
+    assert "Before any methodology role or skill work, read %s/references/claude-runtime.md in full; before any software role acts, read the six core owners in full; Orient by checks/orient.md" % os.path.realpath(PACKAGE) in context
+    assert "claude-runtime.md and the six core owners" not in context
     for owner in CORE:
         assert owner in context
     assert "BLOCKED" not in context
