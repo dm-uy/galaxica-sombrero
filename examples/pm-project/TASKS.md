@@ -1,8 +1,8 @@
-# Current: HOOK-DUTY correction proposed to main; owner merge decision pending
+# Current: HOOK-DUTY correction; owner authorized the merge of PR25
 
 Owner, 2026-11-10: «чини хук». The Claude SessionStart hook now scopes the six-core reading duty to software roles, as its own owners state it; before, it told every session to read all six before any skill work. One string constant, its exact-sentence test and the re-based whole-AST pin changed on `claude/hook-reading-duty`. Claude 548 and root 616 passed; a real hook process returns the new sentence. Versions unchanged: Claude 3.1.0 over neutral 4.1.0. [Result, checks and limits](notes/hook-reading-duty.md), [task rows](#hook-duty--sessionstart-reading-duty).
 
-Not authorized and not done: merge to `main`, a package version stamp, and every other candidate of the lightening decision packet the note links. The package loads in place from `main`, so the first session start after a merge is the live check. Next action: the owner decides on the pull request; then, if wanted, the cold start in the consumer project and a section-binding pilot named in the note.
+Owner, 2026-11-10, on the concrete result in PR25: «Да, вливай». This block was written on the branch before that merge, so the merge commit is read from `git log`, not from here. The package loads in place from `main`: the first session start after the merge is the live check, and its context must carry the sentence "before any software role acts, read the six core owners in full". Not authorized and not done: a package version stamp and every other candidate of the lightening decision packet the note links. Next action, if the owner selects it: the cold start in the consumer project and a section-binding pilot named in the note.
 
 The previous current-state blocks below are retained dated history.
 
@@ -23,7 +23,7 @@ Owner question, 2026-11-10, after a consumer project moved to light records: whe
 | Task | State | Finish / next action |
 |---|---|---|
 | HOOK-DUTY-T1 — measure mandatory reading and obtain the decision packet | Done | Two fresh generators, one separate evaluator; ten candidates in five families; private packet with digests in the [note](notes/hook-reading-duty.md). |
-| HOOK-DUTY-T2 — correct the hook sentence and its pins | Done on `claude/hook-reading-duty`; pull request open | Claude 548 / root 616 passed; real hook process checked. Merge awaits the owner. |
+| HOOK-DUTY-T2 — correct the hook sentence and its pins | Done on `claude/hook-reading-duty`; merge of PR25 authorized by the owner, «Да, вливай» | Claude 548 / root 616 passed; real hook process checked. Live check: the first session start after the merge. |
 | HOOK-DUTY-T3 — remaining forks of the packet | Held for the owner | Section-level binding, light records profile, kernel, enforcement: none authorized. Evidence that would reopen them is named in the note. |
 | HOOK-DUTY-T4 — stale pin sentence in the Codex and DSH test guides | Open; sibling writers | Line 174 of each guide still says the original pin is retained. |
 

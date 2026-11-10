@@ -4,7 +4,9 @@
 
 The owner asked whether the methodology could be made lighter after a consumer project replaced the five record forms with self-contained light records. The root measured the mandatory reading and obtained an independent decision packet (below). Its leading candidate was a defect correction, and the owner authorized it with the words «чини хук» on 2026-11-10.
 
-Scope of that authorization: the SessionStart hook sentence of the Claude package and the test pins that hold it, on a separate branch with a pull request. It does not authorize a merge to `main`, a package version change, any other candidate of the packet, or any change to a neutral owner.
+Scope of that authorization: the SessionStart hook sentence of the Claude package and the test pins that hold it, on a separate branch with a pull request. It does not authorize a package version change, any other candidate of the packet, or any change to a neutral owner.
+
+Result decision, 2026-11-10, on the concrete pull request 25 after the checks below were reported: «Да, вливай». It authorizes merging that pull request to `main` and nothing else. This note was written on the branch before the merge; the merge commit is read from `git log`.
 
 ## The defect
 
